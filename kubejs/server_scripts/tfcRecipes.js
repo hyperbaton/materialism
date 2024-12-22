@@ -22,5 +22,22 @@ ServerEvents.recipes(event => {
         ]
     ).transitionalItem('tfc:metal/rod/copper')
     .loops(2);
+
+    // Early game rose quartz recipes
+    event.recipes.tfc.quern('kubejs:certus_quartz_powder', 'tfc_metallurgy:ore/certus_quartz')
+    event.shapeless('1x kubejs:redstone_imbued_quartz_powder',[
+        'kubejs:certus_quartz_powder',
+        'minecraft:redstone',
+        'minecraft:redstone',
+        'minecraft:redstone',
+        'minecraft:redstone',
+        'minecraft:redstone',
+        'minecraft:redstone',
+        'firmalife:beeswax'
+      ])
+    // Consider replacing this with a compressor recipe
+    event.recipes.tfc.heating('kubejs:redstone_imbued_quartz_powder', 1800)
+        .resultItem('create:rose_quartz')
+        .chance(0.4)
 }
 )

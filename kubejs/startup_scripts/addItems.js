@@ -1,0 +1,5 @@
+StartupEvents.registry('item', event => {
+    // Items for getting early game rose quartz
+    event.create('certus_quartz_powder').maxStackSize(16)
+    event.create('redstone_imbued_quartz_powder').maxStackSize(16)
+  })

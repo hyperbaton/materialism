@@ -44,6 +44,26 @@ JEIEvents.hideItems(event => {
     event.hide('tfmg:lignite');
     event.hide('tfmg:fireclay');
     event.hide('create_new_age:thorium_ore');
+    event.hide('vintageimprovements:sulfur_block');
+    event.hide('vintageimprovements:sulfur');
+    event.hide('vintageimprovements:sulfur_chunk');
+    event.hide(/.vintageimprovements:(?!vanadium).*rod/);
+    event.hide('tfmg:copper_wire');
+    event.hide('tfmg:aluminum_wire');
+    event.hide(/createaddition:.*rod/);
+    event.hide('createaddition:diamond_grit_sandpaper')
+    event.hide('createaddition:diamond_grit')
+    event.hide('createaddition:electric_motor')
+    event.hide('createaddition:alternator')
+    event.hide('createaddition:capacitor')
+    event.hide('tfmg:copper_sulfate')
+    event.hide('tfmg:sulfur_dust')
+
+    // Hide Minecraft unreachable items
+    event.hide(/minecraft:(?!leather).*helm/);
+    event.hide(/minecraft:(?!leather).*chestplate/);
+    event.hide(/minecraft:(?!leather).*leggings/);
+    event.hide(/minecraft:(?!leather).*boots/);
 });
 
 JEIEvents.hideFluids(event => {
@@ -57,4 +77,5 @@ JEIEvents.hideFluids(event => {
     event.hide(/.*pink_slime.*/);
     event.hide(/.*refined_glowstone.*/);
     event.hide(/.*refined_obsidian.*/);
+    event.hide('vintageimprovements:sulfuric_acid');
 });

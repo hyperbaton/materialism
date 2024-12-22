@@ -415,11 +415,11 @@ ServerEvents.recipes(event => {
       'minecraft:iron_nugget',            // Arg 2: the item to replace
       'tfc:metal/rod/wrought_iron'         // Arg 3: the item to replace it with
     )
-    event.replaceInput( // TODO: doesn't work
+    /*event.replaceInput( // TODO: doesn't work; substituted by custom seq assembly, delete
       { id: 'create:sequenced_assembly/track' }, // Arg 1: the filter
       'minecraft:iron_nugget',            // Arg 2: the item to replace
       'tfc:metal/rod/steel'         // Arg 3: the item to replace it with
-    )
+    )*/
     event.replaceInput(
       { id: 'create:crafting/kinetics/encased_chain_drive' }, // Arg 1: the filter
       'minecraft:iron_nugget',            // Arg 2: the item to replace
@@ -483,11 +483,12 @@ ServerEvents.recipes(event => {
     )
 
     // Recipes with quartz
-    event.replaceInput(
+    // TODO: This is overriden by new recipes for rosequartz. DELETE
+    /*event.replaceInput(
       { id: 'create:crafting/materials/rose_quartz' }, // Arg 1: the filter
       'minecraft:quartz',            // Arg 2: the item to replace
       'tfc_metallurgy:ore/certus_quartz'         // Arg 3: the item to replace it with
-    )
+    )*/
 
     // Recipes with wool 
     event.remove({id: 'create:milling/wool'})
@@ -567,10 +568,10 @@ ServerEvents.recipes(event => {
         'tfc:metal/sheet/gold'         // Arg 3: the item to replace it with
       )
 
-      // TODO: Check why this doesn't work and, if needed, create custom recipes for grinder belt. Remove create sandpaper from modpack
+    // TODO: Remove create sandpaper from modpack
     event.replaceInput(
         { input: 'create:sand_paper' }, // Arg 1: the filter
-        'create:sandpaper',            // Arg 2: the item to replace
+        'create:sand_paper',            // Arg 2: the item to replace
         'tfc:sandpaper'         // Arg 3: the item to replace it with
       )
     event.recipes.tfc.anvil('create:brass_hand', 'tfc:metal/double_sheet/brass', ['hit_not_last', 'upset_any'])
@@ -702,6 +703,17 @@ ServerEvents.recipes(event => {
       event.recipes.createDeploying('minecraft:paper', ['minecraft:paper', '#tfc:gem_powders']),
       event.recipes.createPressing('minecraft:paper', 'minecraft:paper')
     ]).transitionalItem('minecraft:paper').loops(1) // set the transitional item and the number of loops
+    // Add a custom recipe for rose quartz
+    event.remove({output: 'create:rose_quartz'})
+    event.recipes.create.sequenced_assembly([
+      Item.of('create:rose_quartz').withChance(95.0), // this is the item that will appear in JEI as the result
+      Item.of('tfc_metallurgy:ore/certus_quartz').withChance(5.0)
+    ], 'tfc_metallurgy:ore/certus_quartz', [ // input
+      // the transitional item set by `transitionalItem('create:incomplete_large_cogwheel')` is the item used during the intermediate stages of the assembly
+      event.recipes.createDeploying('tfc_metallurgy:ore/certus_quartz', ['tfc_metallurgy:ore/certus_quartz', 'minecraft:redstone']),
+      event.recipes.vintageimprovements.vibrating('tfc_metallurgy:ore/certus_quartz', 'tfc_metallurgy:ore/certus_quartz'),
+      event.recipes.create_optical.focusing('tfc_metallurgy:ore/certus_quartz', 'tfc_metallurgy:ore/certus_quartz')
+    ]).transitionalItem('tfc_metallurgy:ore/certus_quartz').loops(6) // set the transitional item and the number of loops
 
     // Gunpowder recipes
     event.recipes.remove("tfc:crafting/gunpowder")

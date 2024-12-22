@@ -1,4 +1,6 @@
 ServerEvents.recipes(event => {
+    event.remove({id: 'createbigcannons:mixing/alloy_nethersteel_steel'})
+
     event.replaceInput(
         { id: 'createbigcannons:wrought_iron_cannon_end' }, // Arg 1: the filter
         'minecraft:iron_ingot',            // Arg 2: the item to replace

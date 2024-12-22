@@ -1,10 +1,14 @@
-#Whether to log the dirt block on common setup
-logDirtBlock = true
-#A magic number
-#Range: > 0
-magicNumber = 42
-#What you want the introduction message to be for the magic number
-magicNumberIntroduction = "The magic number is... "
-#A list of items to log on common setup.
-items = ["minecraft:iron_ingot"]
+#Time for a Xoonglin to mate again, in ticks.
+#Range: 0 ~ 24000
+xoonglinMatingCooldown = 6000
+#This will force loading the chunks where a Xoonglin is present. ATTENTION: This can highly damage the performance.
+keepXoonglinsLoaded = false
+
+[homeDetection]
+	#Maximum height of a block that is part of a Xoonglin house.
+	#Range: -64 ~ 319
+	maxHouseSize = 319
+	#Maximum amount of blocks that the floor of a Xoonglin house can have.
+	#Range: 9 ~ 1000
+	maxFloorSize = 100
 
