@@ -94,32 +94,194 @@ ServerEvents.recipes(event => {
     'tfc:ore/bituminous_coal'         // Arg 3: the item to replace it with
   )
   // Use TFC firebricks instead of TFMG ones
+  // Using fire_bricks instead of fire_brick increases the cost
+  // at a point where you can automatize most of the process.
   event.replaceInput(
     { input: 'tfmg:fireproof_brick' }, // Arg 1: the filter
     'tfmg:fireproof_brick',            // Arg 2: the item to replace
     'tfc:fire_bricks'         // Arg 3: the item to replace it with
   )
-  // Add recipe for rolling aluminum wires
-  // TODO: Doesn't work!!
-  event.custom({
-    type: 'createaddition:rolling',
-    ingredients: [
-      { item: 'tfc:metal/sheet/aluminum' },
-    ],
-    results: [
-      { item: 'tfmg:aluminum_wire' },
-    ],
-  })
-    /*event.custom({
-        type: 'tfmg:casting',
-        ingredients: [
-          { Fluid.of('tfc_metallurgy:metal/solder', 10)},
-          { item: 'minecraft:lightning_rod' },
-        ],
-        results: [
-          { item: 'create_new_age:energiser_t1' },
-        ],
-      })*/
+  // Replace vanilla string requirements
+  event.replaceInput(
+    { id: 'tfmg:mechanical_crafting/pumpjack_crank' }, // Arg 1: the filter
+    'minecraft:string',            // Arg 2: the item to replace
+    'firmaciv:rope_coil'         // Arg 3: the item to replace it with
+  )
+  event.replaceInput(
+    { id: 'tfmg:mechanical_crafting/pumpjack_base' }, // Arg 1: the filter
+    'minecraft:string',            // Arg 2: the item to replace
+    'firmaciv:rope_coil'         // Arg 3: the item to replace it with
+  )
+  event.replaceInput(
+    { id: 'tfmg:crafting/polarizer' }, // Arg 1: the filter
+    'minecraft:copper_ingot',            // Arg 2: the item to replace
+    'tfc:metal/ingot/copper' // Arg 3: the item to replace it with
+  )
+  // Use TFC ores for steel
+  event.replaceInput(
+    { id: 'tfmg:mixing/blasting_mixture' }, // Arg 1: the filter
+    'create:crushed_raw_iron',            // Arg 2: the item to replace
+    '#tfc:powders/iron'         // Arg 3: the item to replace it with
+  )
+  // Use TFC steel as product of TFMG blast furnace and casting
+  event.replaceOutput(
+    { id: 'tfmg:casting/steel'},
+    'tfmg:steel_ingot',
+    'tfc:metal/ingot/steel'
+  )
+  event.remove({id: 'tfmg:casting/amogus'})
+  // Galvanic cell proper recipe
+  event.replaceInput(
+    { id: 'tfmg:crafting/galvanic_cell' }, // Arg 1: the filter
+    'minecraft:copper_ingot',            // Arg 2: the item to replace
+    'tfc:metal/ingot/copper'         // Arg 3: the item to replace it with
+  )
+  event.replaceInput(
+    { id: 'tfmg:crafting/galvanic_cell' }, // Arg 1: the filter
+    'tfmg:electric_casing',            // Arg 2: the item to replace
+    'tfmg:steel_casing'         // Arg 3: the item to replace it with
+  )
+  event.replaceInput(
+    { id: 'tfmg:crafting/galvanic_cell' }, // Arg 1: the filter
+    '#forge:ingots/zinc',            // Arg 2: the item to replace
+    'tfc:metal/ingot/zinc'         // Arg 3: the item to replace it with
+  )
+  // Use TFC gravel for concrete
+  event.replaceInput(
+    { id: 'tfmg:mixing/liquid_concrete_from_slag' }, // Arg 1: the filter
+    'minecraft:gravel',            // Arg 2: the item to replace
+    '#tfc:rock/gravel'    // Arg 3: the item to replace it with
+  )
+  event.replaceInput(
+    { id: 'tfmg:mixing/concrete_mixture' }, // Arg 1: the filter
+    'minecraft:gravel',            // Arg 2: the item to replace
+    '#tfc:rock/gravel'    // Arg 3: the item to replace it with
+  )
+  event.replaceInput(
+    { id: 'tfmg:mixing/concrete_mixture' }, // Arg 1: the filter
+    'minecraft:sand',            // Arg 2: the item to replace
+    '#tfc:silica_sand' // Arg 3: the item to replace it with
+  )
+  event.replaceInput(
+    { id: 'tfmg:mixing/liquid_concrete' }, // Arg 1: the filter
+    'minecraft:gravel',            // Arg 2: the item to replace
+    '#tfc:rock/gravel'    // Arg 3: the item to replace it with
+  )
+  event.replaceInput(
+    { id: 'tfmg:mixing/liquid_concrete' }, // Arg 1: the filter
+    'minecraft:sand',            // Arg 2: the item to replace
+    '#tfc:silica_sand' // Arg 3: the item to replace it with
+  )
+
+  // Electrical components
+  event.remove({id: 'tfmg:crafting/resistor_item'})
+  event.recipes.create.sequenced_assembly([
+    Item.of('tfmg:resistor_').withChance(90.0), // this is the item that will appear in JEI as the result
+    Item.of('createaddition:copper_wire').withChance(5.0),
+    Item.of('vintageimprovements:lead_wire').withChance(5.0)
+  ], 'createaddition:copper_wire', [ // input
+    // the transitional item set by `transitionalItem('create:incomplete_large_cogwheel')` is the item used during the intermediate stages of the assembly
+    event.recipes.createDeploying('createaddition:copper_wire', ['createaddition:copper_wire', 'tfc:glue']),
+    event.recipes.createDeploying('createaddition:copper_wire', ['createaddition:copper_wire', 'vintageimprovements:lead_wire']),
+    event.recipes.createDeploying('createaddition:copper_wire', ['createaddition:copper_wire', 'vintageimprovements:lead_wire']),
+    event.recipes.createFilling(
+      'createaddition:copper_wire',
+      ['createaddition:copper_wire', Fluid.of('tfmg:liquid_plastic', 100)]
+    ),
+    event.recipes.createPressing('createaddition:copper_wire', 'createaddition:copper_wire'),
+    event.custom({
+      type: 'create_new_age:energising',
+      energy_needed: 500,
+      ingredients: [
+        { item: 'createaddition:copper_wire'},
+      ],
+      results: [
+        { item: 'createaddition:copper_wire'},
+      ]
+    })
+  ]).transitionalItem('createaddition:copper_wire').loops(1)
+  event.remove({id: 'tfmg:crafting/capacitor_item'})
+  event.recipes.create.sequenced_assembly([
+    Item.of('tfmg:capacitor_', 2).withChance(90.0), // this is the item that will appear in JEI as the result
+    Item.of('tfc_metallurgy:metal/sheet/aluminum').withChance(5.0),
+    Item.of('minecraft:paper').withChance(5.0)
+  ], 'tfc_metallurgy:metal/sheet/aluminum', [ // input
+    // the transitional item set by `transitionalItem('create:incomplete_large_cogwheel')` is the item used during the intermediate stages of the assembly
+    event.recipes.createDeploying('tfc_metallurgy:metal/sheet/aluminum', ['tfc_metallurgy:metal/sheet/aluminum', 'minecraft:paper']),
+    event.recipes.createDeploying('tfc_metallurgy:metal/sheet/aluminum', ['tfc_metallurgy:metal/sheet/aluminum', 'tfc_metallurgy:metal/sheet/aluminum']),
+    event.recipes.createDeploying('tfc_metallurgy:metal/sheet/aluminum', ['tfc_metallurgy:metal/sheet/aluminum', 'createaddition:copper_wire']),
+    event.recipes.createFilling(
+      'tfc_metallurgy:metal/sheet/aluminum',
+      ['tfc_metallurgy:metal/sheet/aluminum', Fluid.of('tfmg:liquid_plastic', 100)]
+    ),
+    event.recipes.createPressing('tfc_metallurgy:metal/sheet/aluminum', 'tfc_metallurgy:metal/sheet/aluminum'),
+    event.custom({
+      type: 'create_new_age:energising',
+      energy_needed: 500,
+      ingredients: [
+        { item: 'tfc_metallurgy:metal/sheet/aluminum'},
+      ],
+      results: [
+        { item: 'tfc_metallurgy:metal/sheet/aluminum'},
+      ]
+    })
+  ]).transitionalItem('tfc_metallurgy:metal/sheet/aluminum').loops(1)
+  event.remove({id: 'tfmg:crafting/electric_casing'})
+  event.recipes.create.sequenced_assembly([
+    Item.of('tfmg:electric_casing').withChance(90.0), // this is the item that will appear in JEI as the result
+    Item.of('tfmg:heavy_machinery_casing').withChance(5.0),
+    Item.of('tfmg:capacitor_').withChance(3.0),
+    Item.of('tfmg:resistor_').withChance(2.0)
+  ], 'tfmg:heavy_machinery_casing', [ // input
+    event.recipes.createDeploying('tfmg:heavy_machinery_casing', ['tfmg:heavy_machinery_casing', 'tfmg:copper_cable']),
+    event.recipes.createDeploying('tfmg:heavy_machinery_casing', ['tfmg:heavy_machinery_casing', 'tfmg:resistor_']),
+    event.recipes.createDeploying('tfmg:heavy_machinery_casing', ['tfmg:heavy_machinery_casing', 'tfmg:capacitor_']),
+    event.recipes.createDeploying('tfmg:heavy_machinery_casing', ['tfmg:heavy_machinery_casing', 'create:electron_tube']),
+    event.recipes.createPressing('tfmg:heavy_machinery_casing', 'tfmg:heavy_machinery_casing'),
+    event.custom({
+      type: 'create_new_age:energising',
+      energy_needed: 1500,
+      ingredients: [
+        { item: 'tfmg:heavy_machinery_casing'},
+      ],
+      results: [
+        { item: 'tfmg:heavy_machinery_casing'},
+      ]
+    })
+  ]).transitionalItem('tfmg:heavy_machinery_casing').loops(2)
+  event.remove({id: 'tfmg:crafting/light_bulb'})
+  event.recipes.create.sequenced_assembly([
+    Item.of('tfmg:light_bulb', 4)
+  ], 'tfc_metallurgy:metal/sheet/nickel_silver', [ // input
+    event.recipes.createDeploying('tfc_metallurgy:metal/sheet/nickel_silver', ['tfc_metallurgy:metal/sheet/nickel_silver', 'kubejs:tungsten_wire']),
+    event.recipes.createFilling(
+      'tfc_metallurgy:metal/sheet/nickel_silver',
+      ['tfc_metallurgy:metal/sheet/nickel_silver', Fluid.of('tfc_metallurgy:metal/solder', 20)]
+    ),
+    event.recipes.createDeploying('tfc_metallurgy:metal/sheet/nickel_silver', ['tfc_metallurgy:metal/sheet/nickel_silver', 'tfc:lamp_glass']),
+    event.recipes.vintageimprovements.vacuumizing('tfc_metallurgy:metal/sheet/nickel_silver', ['tfc_metallurgy:metal/sheet/nickel_silver']),
+    event.custom({
+      type: 'create_new_age:energising',
+      energy_needed: 500,
+      ingredients: [
+        { item: 'tfc_metallurgy:metal/sheet/nickel_silver'},
+      ],
+      results: [
+        { item: 'tfc_metallurgy:metal/sheet/nickel_silver'},
+      ]
+    })
+  ]).transitionalItem('tfc_metallurgy:metal/sheet/nickel_silver').loops(1)
+  event.remove({id: 'tfmg:crafting/turbine_blade'})
+  event.recipes.create.sequenced_assembly([
+    Item.of('tfmg:turbine_blade', 1)
+  ], 'create:propeller', [ // input
+    event.recipes.createDeploying('create:propeller', ['create:propeller', 'create:propeller']),
+    event.recipes.createFilling(
+      'create:propeller',
+      ['create:propeller', Fluid.of('tfc_metallurgy:metal/solder', 20)]
+    ),
+    event.recipes.create.pressing('create:propeller', 'create:propeller')
+  ]).transitionalItem('create:propeller').loops(1)
 
     //event.recipes.tfmg.casting(Fluid.of("tfc_metallurgy:metal/solder", 1), ["tfc_metallurgy:metal/ingot/solder"], 100)
 

@@ -16,7 +16,7 @@ ServerEvents.recipes(event => {
         'bronze',
         'cast_iron',
         'nickel',
-        'pig_iron',
+        //'pig_iron', // Doesn't have rods
         'rose_gold',
         'silver',
         'tin',
@@ -87,6 +87,24 @@ ServerEvents.recipes(event => {
       results: [
         { item: 'createaddition:electrum_wire', count: 2
          }
+      ],
+    })
+    event.custom({
+      type: 'createaddition:rolling',
+      ingredients: [
+        { item: 'tfc_metallurgy:metal/rod/tungsten' }
+      ],
+      results: [
+        { item: 'kubejs:tungsten_wire' },
+      ],
+    })
+    event.custom({
+      type: 'createaddition:rolling',
+      ingredients: [
+        { item: 'tfc_metallurgy:metal/rod/tungsten_steel' }
+      ],
+      results: [
+        { item: 'kubejs:tungsten_steel_wire' },
       ],
     })
 

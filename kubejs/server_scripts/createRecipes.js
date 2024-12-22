@@ -432,6 +432,11 @@ ServerEvents.recipes(event => {
       'minecraft:iron_bars',            // Arg 2: the item to replace
       'tfc:metal/bars/wrought_iron'         // Arg 3: the item to replace it with
     )
+    event.replaceInput(
+      { input: 'create:andesite_bars' }, // Arg 1: the filter
+      'create:andesite_bars',            // Arg 2: the item to replace
+      'tfc:metal/bars/steel'         // Arg 3: the item to replace it with
+    )
 
     // Recipes with metal blocks
     event.replaceInput(
@@ -510,8 +515,6 @@ ServerEvents.recipes(event => {
       'minecraft:dried_kelp_block',            // Arg 2: the item to replace
       'firmaciv:rope_coil'         // Arg 3: the item to replace it with
     )
-    event.remove('create:crafting/kinetics/belt_connector')
-    event.recipes.vintageimprovements.coiling('create:belt_connector', 'afc:rubber_bar').springColor("121211")
 
     // Recipes with slime balls
     event.replaceInput(

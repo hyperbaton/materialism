@@ -49,6 +49,8 @@ ServerEvents.recipes(event => {
     event.recipes.vintageimprovements.turning('2x tfmg:plastic_pipe', 'tfmg:plastic_sheet').processingTime(300)
     event.remove({output: 'createaddition:crafting/spool'})
     event.recipes.vintageimprovements.turning('4x createaddition:spool', '#tfc:lumber').processingTime(150)
+    event.remove({output: 'tfmg:stonecutting/industrial_pipe'})
+    event.recipes.vintageimprovements.turning('4x tfmg:industrial_pipe', 'tfc:metal/rod/steel').processingTime(300)
 
     // Curving recipes
     event.remove({id: 'vintageimprovements:curving/iron_sheet'})
@@ -60,10 +62,38 @@ ServerEvents.recipes(event => {
     event.recipes.vintageimprovements.curving('createdeco:andesite_support_wedge', 'tfc_metallurgy:metal/sheet/aluminum').head("vintageimprovements:v_shaped_curving_head")
 
     // Vacuum recipes
-    event.recipes.vintageimprovements.vacuumizing(
+
+    // Presurizing recipes
+    // Use TFMG sulfuric acid with vintage recipe
+    event.recipes.vintageimprovements.pressurizing(
       'tfmg:zinc_sulfate',
       ['tfc:powder/sphalerite', Fluid.of('tfmg:sulfuric_acid', 200), Fluid.of('minecraft:water', 200)]
     )
+    event.remove({id: 'vintageimprovements:pressurizing/sulfur_trioxide_alt'})  // Why use iron powder?
+    event.remove({id: 'vintageimprovements:pressurizing/copper_sulfate'}) // Remove recipe with vintage sulfuric acid
+    event.remove({id: 'vintageimprovements:pressurizing/sulfuric_acid'}) // Remove recipe for vintage sulfuric acid
+    event.remove({id: 'tfmg:mixing/sulfuric_acid'})
+    event.recipes.vintageimprovements.pressurizing(
+      Fluid.of('tfmg:sulfuric_acid', 1000),
+      [Fluid.of('vintageimprovements:sulfur_trioxide', 1000), Fluid.of('minecraft:water', 1000)]
+    ).secondaryFluidInput(1)
+    event.recipes.vintageimprovements.pressurizing(
+      'vintageimprovements:copper_sulfate',
+      ['#tfc:powders/copper', Fluid.of('tfmg:sulfuric_acid', 200), Fluid.of('minecraft:water', 200)]
+    )
+    // Introduce a way of obtaining vanadium
+    event.remove({id: 'create:crushing/crimsite_recycling'})  // Remove standard vanadium source
+    event.remove({id: 'vintageimprovements:crushing/basalt_recycling'})
+    event.remove({id: 'create:crushing/crimsite'})
+    event.remove({id: 'vintageimprovements:crushing/basalt'})
+    event.recipes.vintageimprovements.pressurizing(
+      Item.of('vintageimprovements:vanadium_nugget').withChance(0.1),
+      ['tfmg:slag', 'tfc:powder/salt',  'tfc:powder/saltpeter', Fluid.of('minecraft:water', 200)]
+    ).secondaryFluidInput(0).heated()
+    event.recipes.vintageimprovements.pressurizing(
+      Item.of('vintageimprovements:vanadium_nugget').withChance(0.3),
+      ['tfmg:slag', 'tfc:powder/salt',  'tfc:powder/saltpeter', Fluid.of('tfmg:sulfuric_acid', 200)]
+    ).secondaryFluidInput(0).heated()
 
     event.replaceInput(
       { id: 'vintageimprovements:turning/convex_curving_head' }, // Arg 1: the filter
@@ -105,16 +135,13 @@ ServerEvents.recipes(event => {
       'minecraft:iron_block',            // Arg 2: the item to replace
       'tfc:metal/block/steel'         // Arg 3: the item to replace it with
     )
-    // Replace vintageimprovements sulfuric acid by TFMG one:
-    event.replaceOutput(
-      { output: 'vintageimprovements:sulfuric_acid' }, // Arg 1: the filter
-      'vintageimprovements:sulfuric_acid',            // Arg 2: the item to replace
-      'tfmg:sulfuric_acid'         // Arg 3: the item to replace it with
-    )
+    // Replace TFMG lime by TFC lime
+    event.remove({id: 'tfmg:crushing/limesand'})
+    event.remove({id: 'tfmg:milling/limesand'})
     event.replaceInput(
-      { input: 'vintageimprovements:sulfuric_acid' }, // Arg 1: the filter
-      'vintageimprovements:sulfuric_acid',            // Arg 2: the item to replace
-      'tfmg:sulfuric_acid'         // Arg 3: the item to replace it with
+      { input: 'tfmg:limesand' }, // Arg 1: the filter
+      'tfmg:limesand',            // Arg 2: the item to replace
+      'tfc:powder/lime'         // Arg 3: the item to replace it with
     )
 
     event.recipes.create.sequenced_assembly(

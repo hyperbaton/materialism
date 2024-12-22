@@ -58,6 +58,8 @@ JEIEvents.hideItems(event => {
     event.hide('createaddition:capacitor')
     event.hide('tfmg:copper_sulfate')
     event.hide('tfmg:sulfur_dust')
+    event.hide('vintageimprovements:sulfuric_acid_bucket')
+    event.hide('tfmg:limesand')
 
     // Hide Minecraft unreachable items
     event.hide(/minecraft:(?!leather).*helm/);
