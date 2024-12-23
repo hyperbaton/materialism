@@ -60,12 +60,21 @@ JEIEvents.hideItems(event => {
     event.hide('tfmg:sulfur_dust')
     event.hide('vintageimprovements:sulfuric_acid_bucket')
     event.hide('tfmg:limesand')
+    event.hide('createaddition:electrum_ingot')
+    event.hide('tfc_metallurgy:metal/graphite')
+    event.hide('tfc_metallurgy:bucket/metal/graphite')
+    event.hide('createaddition:modular_accumulator')
+    event.hide('createaddition:connector')
+    event.hide('createaddition:small_light_connector')
+    event.hide('createaddition:large_connector')
+    event.hide('createaddition:redstone_relay')
 
     // Hide Minecraft unreachable items
     event.hide(/minecraft:(?!leather).*helm/);
     event.hide(/minecraft:(?!leather).*chestplate/);
     event.hide(/minecraft:(?!leather).*leggings/);
     event.hide(/minecraft:(?!leather).*boots/);
+    event.hide('minecraft:enchanted_book');
 });
 
 JEIEvents.hideFluids(event => {

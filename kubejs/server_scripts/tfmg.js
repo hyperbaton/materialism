@@ -118,10 +118,10 @@ ServerEvents.recipes(event => {
     'tfc:metal/ingot/copper' // Arg 3: the item to replace it with
   )
   // Use TFC ores for steel
-  event.replaceInput(
-    { id: 'tfmg:mixing/blasting_mixture' }, // Arg 1: the filter
-    'create:crushed_raw_iron',            // Arg 2: the item to replace
-    '#tfc:powders/iron'         // Arg 3: the item to replace it with
+  event.remove({id: 'tfmg:mixing/blasting_mixture'})
+  event.recipes.create.mixing(
+    'tfmg:blasting_mixture',
+    ['tfc:powder/lime', '20x #tfc:powders/iron']
   )
   // Use TFC steel as product of TFMG blast furnace and casting
   event.replaceOutput(
@@ -172,8 +172,20 @@ ServerEvents.recipes(event => {
     'minecraft:sand',            // Arg 2: the item to replace
     '#tfc:silica_sand' // Arg 3: the item to replace it with
   )
+  // Use TFC gravel and sand for asphalt
+  event.replaceInput(
+    { id: 'tfmg:mixing/liquid_asphalt' }, // Arg 1: the filter
+    'minecraft:sand',            // Arg 2: the item to replace
+    '#tfc:silica_sand' // Arg 3: the item to replace it with
+  )
+  event.replaceInput(
+    { id: 'tfmg:mixing/liquid_asphalt' }, // Arg 1: the filter
+    'minecraft:gravel',            // Arg 2: the item to replace
+    '#tfc:rock/gravel'    // Arg 3: the item to replace it with
+  )
 
   // Electrical components
+  // Resistor item
   event.remove({id: 'tfmg:crafting/resistor_item'})
   event.recipes.create.sequenced_assembly([
     Item.of('tfmg:resistor_').withChance(90.0), // this is the item that will appear in JEI as the result
@@ -200,6 +212,7 @@ ServerEvents.recipes(event => {
       ]
     })
   ]).transitionalItem('createaddition:copper_wire').loops(1)
+  // Capacitor item
   event.remove({id: 'tfmg:crafting/capacitor_item'})
   event.recipes.create.sequenced_assembly([
     Item.of('tfmg:capacitor_', 2).withChance(90.0), // this is the item that will appear in JEI as the result
@@ -226,6 +239,7 @@ ServerEvents.recipes(event => {
       ]
     })
   ]).transitionalItem('tfc_metallurgy:metal/sheet/aluminum').loops(1)
+  // Electric casing
   event.remove({id: 'tfmg:crafting/electric_casing'})
   event.recipes.create.sequenced_assembly([
     Item.of('tfmg:electric_casing').withChance(90.0), // this is the item that will appear in JEI as the result
@@ -249,6 +263,7 @@ ServerEvents.recipes(event => {
       ]
     })
   ]).transitionalItem('tfmg:heavy_machinery_casing').loops(2)
+  // Lightbulb
   event.remove({id: 'tfmg:crafting/light_bulb'})
   event.recipes.create.sequenced_assembly([
     Item.of('tfmg:light_bulb', 4)
@@ -271,6 +286,75 @@ ServerEvents.recipes(event => {
       ]
     })
   ]).transitionalItem('tfc_metallurgy:metal/sheet/nickel_silver').loops(1)
+  // Lead-acid battery
+  event.remove({id: 'tfmg:crafting/capacitor'})
+  event.recipes.create.sequenced_assembly([
+    Item.of('tfmg:capacitor', 1)
+  ], 'create:basin', [ // input
+    event.recipes.createDeploying('create:basin', ['create:basin', 'tfc_metallurgy:metal/double_sheet/lead']),
+    event.recipes.createDeploying('create:basin', ['create:basin', 'tfc_metallurgy:metal/double_sheet/lead']),
+    event.recipes.createFilling(
+      'create:basin',
+      ['create:basin', Fluid.of('tfmg:sulfuric_acid', 1000)]
+    ),
+    event.recipes.createDeploying('create:basin', ['create:basin', 'createaddition:copper_wire']),
+    event.recipes.createDeploying('create:basin', ['create:basin', 'tfc_metallurgy:metal/sheet/cobalt']),
+    event.recipes.create.pressing('create:basin', 'create:basin'),
+    event.custom({
+      type: 'create_new_age:energising',
+      energy_needed: 1000,
+      ingredients: [
+        { item: 'create:basin'},
+      ],
+      results: [
+        { item: 'create:basin'},
+      ]
+    })
+  ]).transitionalItem('create:basin').loops(1)
+  // Lithium battery
+  event.remove({id: 'tfmg:crafting/accumulator'})
+  event.recipes.create.sequenced_assembly([
+    Item.of('kubejs:lithium_battery_core', 1)
+  ], 'tfmg:electric_casing', [ // input
+    event.recipes.createDeploying('tfmg:electric_casing', ['tfmg:electric_casing', 'tfc_metallurgy:metal/sheet/manganese']),
+    event.recipes.createDeploying('tfmg:electric_casing', ['tfmg:electric_casing', 'tfmg:plastic_sheet']),
+    event.recipes.createFilling(
+      'tfmg:electric_casing',
+      ['tfmg:electric_casing', Fluid.of('tfmg:propylene', 100)]
+    ),
+    event.recipes.createFilling(
+      'tfmg:electric_casing',
+      ['tfmg:electric_casing', Fluid.of('tfmg:ethylene', 100)]
+    ),
+    event.recipes.createFilling(
+      'tfmg:electric_casing',
+      ['tfmg:electric_casing', Fluid.of('tfc_metallurgy:metal/lithium', 200)]
+    ),
+    event.recipes.createDeploying('tfmg:electric_casing', ['tfmg:electric_casing', 'tfc_metallurgy:metal/rod/graphite']),
+    event.recipes.create.pressing('tfmg:electric_casing', 'tfmg:electric_casing')
+  ]).transitionalItem('tfmg:electric_casing').loops(5)
+
+  event.recipes.create.sequenced_assembly([
+    Item.of('tfmg:accumulator', 1)
+  ], 'kubejs:lithium_battery_core', [ // input
+    event.recipes.createDeploying('kubejs:lithium_battery_core', ['kubejs:lithium_battery_core', 'tfc_metallurgy:metal/sheet/aluminum']),
+    event.recipes.createDeploying('kubejs:lithium_battery_core', ['kubejs:lithium_battery_core', 'tfc_metallurgy:metal/sheet/titanium']),
+    event.recipes.vintageimprovements.vacuumizing('kubejs:lithium_battery_core', 'kubejs:lithium_battery_core'),
+    event.recipes.createDeploying('kubejs:lithium_battery_core', ['kubejs:lithium_battery_core', 'firmalife:metal/double_sheet/stainless_steel']),
+    event.recipes.createDeploying('kubejs:lithium_battery_core', ['kubejs:lithium_battery_core', 'createaddition:copper_wire']),
+    event.custom({
+      type: 'create_new_age:energising',
+      energy_needed: 1000,
+      ingredients: [
+        { item: 'kubejs:lithium_battery_core'},
+      ],
+      results: [
+        { item: 'kubejs:lithium_battery_core'},
+      ]
+    })
+  ]).transitionalItem('kubejs:lithium_battery_core').loops(1)
+
+
   event.remove({id: 'tfmg:crafting/turbine_blade'})
   event.recipes.create.sequenced_assembly([
     Item.of('tfmg:turbine_blade', 1)

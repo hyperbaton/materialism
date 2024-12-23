@@ -32,6 +32,32 @@ ServerEvents.recipes(event => {
     // Remove recipes for motor and alternator (use the ones from New Age and TFMG)
     event.remove({output: 'createaddition:electric_motor'})
     event.remove({output: 'createaddition:alternator'})
+    // Remove recipes for accumulator (use TFMG batteries)
+    event.remove({output: 'createaddition:modular_accumulator'})
+    
+    // Modify Tesla coil recipe
+    event.replaceInput(
+      {id: 'createaddition:mechanical_crafting/tesla_coil'},
+      'create:andesite_alloy',
+      'tfc_metallurgy:metal/rod/aluminum'
+    )
+    event.replaceInput(
+      {id: 'createaddition:mechanical_crafting/tesla_coil'},
+      'createaddition:copper_spool',
+      'tfmg:copper_coil'
+    )
+
+    event.replaceInput(
+      {id: 'createaddition:crafting/portable_energy_interface'},
+      'createaddition:copper_spool',
+      'tfmg:copper_cable'
+    )
+
+    // Remove recipes for connectors
+    event.remove({output: 'createaddition:connector'})
+    event.remove({output: 'createaddition:small_light_connector'})
+    event.remove({output: 'createaddition:large_connector'})
+    event.remove({output: 'createaddition:redstone_relay'})
 
     // Improve recipe for rolling mill
     event.replaceInput(
@@ -47,6 +73,16 @@ ServerEvents.recipes(event => {
         'createaddition:capacitor',
         'tfmg:capacitor_'
     )
+
+    // Remove C&A electrum
+    event.remove({id: 'createaddition:mixing/electrum'})
+    event.remove({id: 'createaddition:crafting/electrum_ingot'})
+    // Change electrum nugget recipe
+    event.remove({output: 'createaddition:electrum_nugget'})
+    event.shapeless('9x createaddition:electrum_nugget',[
+      'tfc_metallurgy:metal/ingot/electrum',
+      '#tfc:chisels'
+    ]).damageIngredient(Ingredient.of('#tfc:chisels'))
 
     event.remove({id: /createaddition:pressing\/\w+_ingot/})
     event.remove({id: 'createaddition:rolling/gold_plate'})

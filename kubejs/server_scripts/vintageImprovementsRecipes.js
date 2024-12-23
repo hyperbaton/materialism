@@ -47,7 +47,7 @@ ServerEvents.recipes(event => {
     event.recipes.vintageimprovements.turning('2x tfmg:cast_iron_pipe', 'tfc:metal/rod/cast_iron').processingTime(300)
     event.recipes.vintageimprovements.turning('2x tfmg:aluminum_pipe', 'tfc_metallurgy:metal/rod/aluminum').processingTime(300)
     event.recipes.vintageimprovements.turning('2x tfmg:plastic_pipe', 'tfmg:plastic_sheet').processingTime(300)
-    event.remove({output: 'createaddition:crafting/spool'})
+    event.remove({output: 'createaddition:spool'})
     event.recipes.vintageimprovements.turning('4x createaddition:spool', '#tfc:lumber').processingTime(150)
     event.remove({output: 'tfmg:stonecutting/industrial_pipe'})
     event.recipes.vintageimprovements.turning('4x tfmg:industrial_pipe', 'tfc:metal/rod/steel').processingTime(300)
@@ -81,6 +81,15 @@ ServerEvents.recipes(event => {
       'vintageimprovements:copper_sulfate',
       ['#tfc:powders/copper', Fluid.of('tfmg:sulfuric_acid', 200), Fluid.of('minecraft:water', 200)]
     )
+
+    // Centrifugation recipes
+    event.recipes.vintageimprovements.centrifugation(
+      [Item.of('kubejs:powder/neodymium').withChance(0.2)],
+      ['tfcthermaldeposits:mineral/powder/bastnasite',
+        Fluid.of('tfmg:sulfuric_acid', 100)
+      ]
+    ).processingTime(300).minimalRPM(216)
+
     // Introduce a way of obtaining vanadium
     event.remove({id: 'create:crushing/crimsite_recycling'})  // Remove standard vanadium source
     event.remove({id: 'vintageimprovements:crushing/basalt_recycling'})
