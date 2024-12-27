@@ -39,5 +39,14 @@ ServerEvents.recipes(event => {
     event.recipes.tfc.heating('kubejs:redstone_imbued_quartz_powder', 1800)
         .resultItem('create:rose_quartz')
         .chance(0.4)
+
+    // Replace powderkeg recipe's planks for a less accesible item
+    event.remove('tfc:crafting/powderkeg_from_barrel')
+    event.replaceInput(
+        { id: 'tfc:crafting/powderkeg' }, // Arg 1: the filter
+        '#tfc:lumber',            // Arg 2: the item to replace
+        'tfmg:hardened_planks_slab'         // Arg 3: the item to replace it with
+    )
+    
 }
 )

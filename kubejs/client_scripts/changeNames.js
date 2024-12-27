@@ -7,5 +7,6 @@ ClientEvents.lang("en_us", event => {
     event.renameItem('create_new_age:netherite_magnet', 'Neodymium Magnet')
     event.renameItem('tfmg:capacitor', 'Lead-Acid Battery')
     event.renameItem('tfmg:accumulator', 'Lithium Battery')
+    event.renameItem('create_new_age:radioactive_thorium', 'Fissible Material')
     
 });

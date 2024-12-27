@@ -8,4 +8,7 @@ ServerEvents.recipes(event => {
     event.remove({ output: /.*pink_slime.*/ });
     event.remove({ output: /.*refined_glowstone.*/ });
     event.remove({ output: /.*refined_obsidian.*/ });
+
+    // Disable Vanilla recipes
+    event.remove('minecraft:leather')
 });

@@ -9,5 +9,7 @@ StartupEvents.registry('item', event => {
     event.create('polarized_alnico_core').maxStackSize(16)
     event.create('powder/neodymium').maxStackSize(16)
     event.create('lithium_battery_core').maxStackSize(16)
+    event.create('powder/monazite').maxStackSize(16)
+    event.create('powder/uraninite').maxStackSize(16)
   })
   

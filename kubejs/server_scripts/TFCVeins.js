@@ -64,6 +64,15 @@ ServerEvents.tags('worldgen/placed_feature', event => {
     event.remove('tfc:in_biome/veins', 'tfc_metallurgy:vein/surface_rutile')
     event.remove('tfc:in_biome/veins', 'tfc_metallurgy:vein/surface_uraninite')
     event.remove('tfc:in_biome/veins', 'tfc_metallurgy:vein/surface_wolframite')
+    
+    event.remove('tfc:in_biome/veins', 'tfc_metallurgy:vein/surface_magnesite')
+    event.remove('tfc:in_biome/veins', 'tfc_metallurgy:vein/surface_pyrolusite')
+    event.remove('tfc:in_biome/veins', 'tfc_metallurgy:vein/surface_spodumene')
+    event.remove('tfc:in_biome/veins', 'tfc_metallurgy:vein/surface_zircon')
+    event.remove('tfc:in_biome/veins', 'tfc_metallurgy:vein/normal_magnesite')
+    event.remove('tfc:in_biome/veins', 'tfc_metallurgy:vein/normal_pyrolusite')
+    event.remove('tfc:in_biome/veins', 'tfc_metallurgy:vein/deep_spodumene')
+    event.remove('tfc:in_biome/veins', 'tfc_metallurgy:vein/deep_zircon')
     // Add my custom Metallurgy veins
     /*event.add('tfc:in_biome/veins', 'kubejs_tfc:vein/certus_quartz')
     event.add('tfc:in_biome/veins', 'kubejs_tfc:vein/deep_bertrandite')

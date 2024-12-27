@@ -90,6 +90,11 @@ ServerEvents.recipes(event => {
       ]
     ).processingTime(300).minimalRPM(216)
 
+    // Polishing recipes
+    event.recipes.vintageimprovements.polishing('tfc:large_scraped_hide', 'tfc:large_soaked_hide')
+    event.recipes.vintageimprovements.polishing('tfc:medium_scraped_hide', 'tfc:medium_soaked_hide')
+    event.recipes.vintageimprovements.polishing('tfc:small_scraped_hide', 'tfc:small_soaked_hide')
+
     // Introduce a way of obtaining vanadium
     event.remove({id: 'create:crushing/crimsite_recycling'})  // Remove standard vanadium source
     event.remove({id: 'vintageimprovements:crushing/basalt_recycling'})

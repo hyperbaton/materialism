@@ -14,6 +14,8 @@ ServerEvents.recipes(event => {
   // Remove parts cutting (done with lathe)
   event.remove('tfmg:stonecutting/screw')
   event.remove('tfmg:stonecutting/rebar')
+  // Remove fire clay from TFMG
+  event.remove({input: 'tfmg:fireclay_ball'})
 
   event.custom({
     type: 'create:item_application',
@@ -367,10 +369,8 @@ ServerEvents.recipes(event => {
     event.recipes.create.pressing('create:propeller', 'create:propeller')
   ]).transitionalItem('create:propeller').loops(1)
 
-    //event.recipes.tfmg.casting(Fluid.of("tfc_metallurgy:metal/solder", 1), ["tfc_metallurgy:metal/ingot/solder"], 100)
-
-    //event.recipes.createMechanicalExtruderExtruding(Item.of('minecraft:obsidian'),[Fluid.of('minecraft:water'),Fluid.of('minecraft:lava')]).withCatalyst('minecraft:obsidian')
-    //event.recipes.createMechanicalExtruderExtruding(Item.of('minecraft:dirt'),[Fluid.of('minecraft:lava'),Item.of('minecraft:stone')]).withCatalyst('minecraft:clay').requiredBonks(10)
+  event.recipes.tfmg.coking('minecraft:charcoal', [Item.of('tfmg:coal_coke').withChance(0.4), Fluid.of('createbb:methanol', 1)], 2000)
+  event.recipes.tfmg.coking('#minecraft:logs', [Item.of('minecraft:charcoal').withChance(0.8), Fluid.of('minecraft:water', 1)], 5000)
 
 }
 )

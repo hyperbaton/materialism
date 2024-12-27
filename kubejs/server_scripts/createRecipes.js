@@ -610,6 +610,7 @@ ServerEvents.recipes(event => {
     event.remove({id: "woodencog:crafting/kinetics/encased_chain_drive"})
     event.remove({id: "woodencog:crafting/kinetics/windmill_bearing"})
     event.remove({id: "woodencog:crafting/logistics/redstone_contact"})
+    event.remove({id: "woodencog:crafting/appliances/copper_backtank"})
     event.remove({id: "create:crafting/kinetics/brass_hand"})
     event.remove({id: "create:crafting/kinetics/propeller"})
     event.remove({id: "woodencog:crafting/sequenced_assembly/precision_mechanism"})
@@ -617,12 +618,16 @@ ServerEvents.recipes(event => {
     event.remove({id: "create:pressing/iron_ingot"})
     event.remove({id: "create:pressing/brass_ingot"})
     event.remove({id: "create:pressing/gold_ingot"})
+    event.remove({id: "create:cutting/andesite_alloy"})
 
     // Remove unwanted contraptions
     event.remove({id: "create:crafting/kinetics/cart_assembler"})
     event.remove({id: "woodencog:crafting/kinetics/empty_blaze_burner"})
     event.remove({id: "create:conversion_2"}) // Blaze burner
     event.remove({id: "create:crafting/kinetics/controller_rail"})
+
+    // Remove all crushed ores
+    event.remove({output: /create:crushed_raw.*/})
 
     // Cutting recipes
     event.recipes.create.cutting('4x create:shaft', 'tfc:metal/rod/steel')

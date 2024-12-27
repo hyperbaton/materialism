@@ -115,6 +115,5 @@ ServerEvents.recipes(event => {
   event.shapeless('9x createdeco:industrial_iron_nugget',[
     'createdeco:industrial_iron_ingot',
     '#tfc:chisels'
-]).damageIngredient(Ingredient.of('#tfc:chisels'))
-  }
-)
+  ]).damageIngredient(Ingredient.of('#tfc:chisels'))
+})
