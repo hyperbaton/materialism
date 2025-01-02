@@ -94,6 +94,7 @@ ServerEvents.recipes(event => {
     event.recipes.vintageimprovements.polishing('tfc:large_scraped_hide', 'tfc:large_soaked_hide')
     event.recipes.vintageimprovements.polishing('tfc:medium_scraped_hide', 'tfc:medium_soaked_hide')
     event.recipes.vintageimprovements.polishing('tfc:small_scraped_hide', 'tfc:small_soaked_hide')
+    event.recipes.vintageimprovements.polishing('minecraft:paper', 'tfc:unrefined_paper')
 
     // Introduce a way of obtaining vanadium
     event.remove({id: 'create:crushing/crimsite_recycling'})  // Remove standard vanadium source
