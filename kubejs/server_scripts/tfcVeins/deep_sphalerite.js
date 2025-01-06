@@ -14,8 +14,8 @@ TFCEvents.worldgenData(event => {
         
         vein => {
             vein.indicator(
-                10, // Rarity
-                35, // Depth
+                200, // Depth
+                500, // Rarity
                 1, // UndergroundRarity
                 5, // UndergroundCount
                 ["tfc:ore/small_sphalerite"]

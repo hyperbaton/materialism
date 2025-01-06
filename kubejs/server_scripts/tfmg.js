@@ -270,7 +270,7 @@ ServerEvents.recipes(event => {
   event.recipes.create.sequenced_assembly([
     Item.of('tfmg:light_bulb', 4)
   ], 'tfc_metallurgy:metal/sheet/nickel_silver', [ // input
-    event.recipes.createDeploying('tfc_metallurgy:metal/sheet/nickel_silver', ['tfc_metallurgy:metal/sheet/nickel_silver', 'kubejs:tungsten_wire']),
+    event.recipes.createDeploying('tfc_metallurgy:metal/sheet/nickel_silver', ['tfc_metallurgy:metal/sheet/nickel_silver', 'kubejs:wire/tungsten_wire']),
     event.recipes.createFilling(
       'tfc_metallurgy:metal/sheet/nickel_silver',
       ['tfc_metallurgy:metal/sheet/nickel_silver', Fluid.of('tfc_metallurgy:metal/solder', 20)]

@@ -3,8 +3,10 @@ TFCEvents.worldgenData(event => {
         'materialism:vein/deep_zircon', // Name
         [ // Replacement of blocks
             event.blockToWeightedBlockState(['tfc:rock/raw/granite'], ["5 tfc_metallurgy:ore/poor_zircon/granite", "20 tfc_metallurgy:ore/normal_zircon/granite", "75 tfc_metallurgy:ore/rich_zircon/granite"]),
+            event.blockToWeightedBlockState(['tfc:rock/raw/dacite'], ["5 tfc_metallurgy:ore/poor_zircon/dacite", "20 tfc_metallurgy:ore/normal_zircon/dacite", "75 tfc_metallurgy:ore/rich_zircon/dacite"]),
             event.blockToWeightedBlockState(['tfc:rock/raw/rhyolite'], ["5 tfc_metallurgy:ore/poor_zircon/rhyolite", "20 tfc_metallurgy:ore/normal_zircon/rhyolite", "75 tfc_metallurgy:ore/rich_zircon/rhyolite"]),
-            event.blockToWeightedBlockState(['tfc:rock/raw/quartzite'], ["5 tfc_metallurgy:ore/poor_zircon/quartzite", "20 tfc_metallurgy:ore/normal_zircon/quartzite", "75 tfc_metallurgy:ore/rich_zircon/quartzite"])
+            event.blockToWeightedBlockState(['tfc:rock/raw/quartzite'], ["5 tfc_metallurgy:ore/poor_zircon/quartzite", "20 tfc_metallurgy:ore/normal_zircon/quartzite", "75 tfc_metallurgy:ore/rich_zircon/quartzite"]),
+            event.blockToWeightedBlockState(['tfc:rock/raw/conglomerate'], ["5 tfc_metallurgy:ore/poor_zircon/conglomerate", "20 tfc_metallurgy:ore/normal_zircon/conglomerate", "75 tfc_metallurgy:ore/rich_zircon/conglomerate"])
         ],
         2000, // Rarity
         0.5, // Density
@@ -14,10 +16,10 @@ TFCEvents.worldgenData(event => {
         
         vein => {
             vein.indicator(
-                12, // Rarity
-                150, // Depth
+                200, // Depth
+                500, // Rarity
                 1, // UndergroundRarity
-                0, // UndergroundCount
+                5, // UndergroundCount
                 ["tfc_metallurgy:ore/small_zircon"]
             ).project(true).projectOffset(true)
         },

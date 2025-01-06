@@ -14,10 +14,10 @@ TFCEvents.worldgenData(event => {
         
         vein => {
             vein.indicator(
-                6, // Rarity
-                150, // Depth
+                200, // Depth
+                500, // Rarity
                 1, // UndergroundRarity
-                0, // UndergroundCount
+                5, // UndergroundCount
                 ["firmalife:ore/small_chromite"]
             ).project(true).projectOffset(true)
         },

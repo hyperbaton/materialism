@@ -131,7 +131,7 @@ ServerEvents.recipes(event => {
         { item: 'tfc_metallurgy:metal/rod/tungsten' }
       ],
       results: [
-        { item: 'kubejs:tungsten_wire' },
+        { item: 'kubejs:wire/tungsten_wire' },
       ],
     })
     event.custom({
@@ -140,7 +140,7 @@ ServerEvents.recipes(event => {
         { item: 'tfc_metallurgy:metal/rod/tungsten_steel' }
       ],
       results: [
-        { item: 'kubejs:tungsten_steel_wire' },
+        { item: 'kubejs:wire/tungsten_steel_wire' },
       ],
     })
 

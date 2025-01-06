@@ -5,7 +5,8 @@ TFCEvents.worldgenData(event => {
             event.blockToWeightedBlockState(['tfc:rock/raw/granite'], ["5 tfc_metallurgy:ore/poor_bauxite/granite", "10 tfc_metallurgy:ore/normal_bauxite/granite", "85 tfc_metallurgy:ore/rich_bauxite/granite"]),
             event.blockToWeightedBlockState(['tfc:rock/raw/gneiss'], ["5 tfc_metallurgy:ore/poor_bauxite/gneiss", "10 tfc_metallurgy:ore/normal_bauxite/gneiss", "85 tfc_metallurgy:ore/rich_bauxite/gneiss"]),
             event.blockToWeightedBlockState(['tfc:rock/raw/basalt'], ["5 tfc_metallurgy:ore/poor_bauxite/basalt", "10 tfc_metallurgy:ore/normal_bauxite/basalt", "85 tfc_metallurgy:ore/rich_bauxite/basalt"]),
-            event.blockToWeightedBlockState(['tfc:rock/raw/shale'], ["5 tfc_metallurgy:ore/poor_bauxite/shale", "10 tfc_metallurgy:ore/normal_bauxite/shale", "85 tfc_metallurgy:ore/rich_bauxite/shale"])
+            event.blockToWeightedBlockState(['tfc:rock/raw/shale'], ["5 tfc_metallurgy:ore/poor_bauxite/shale", "10 tfc_metallurgy:ore/normal_bauxite/shale", "85 tfc_metallurgy:ore/rich_bauxite/shale"]),
+            event.blockToWeightedBlockState(['tfc:rock/raw/claystone'], ["5 tfc_metallurgy:ore/poor_bauxite/claystone", "10 tfc_metallurgy:ore/normal_bauxite/claystone", "85 tfc_metallurgy:ore/rich_bauxite/claystone"])
         ],
         2000, // Rarity
         0.5, // Density
@@ -15,10 +16,10 @@ TFCEvents.worldgenData(event => {
         
         vein => {
             vein.indicator(
-                6, // Rarity
-                35, // Depth
+                200, // Depth
+                500, // Rarity
                 1, // UndergroundRarity
-                0, // UndergroundCount
+                5, // UndergroundCount
                 ["tfc_metallurgy:ore/small_bauxite"]
             ).project(true).projectOffset(true)
         },

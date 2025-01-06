@@ -14,10 +14,10 @@ TFCEvents.worldgenData(event => {
         
         vein => {
             vein.indicator(
-                12, // Rarity
-                35, // Depth
+                200, // Depth
+                500, // Rarity
                 1, // UndergroundRarity
-                0, // UndergroundCount
+                5, // UndergroundCount
                 ["tfc:ore/small_cassiterite"]
             ).project(true).projectOffset(true)
         },

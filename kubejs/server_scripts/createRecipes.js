@@ -405,21 +405,11 @@ ServerEvents.recipes(event => {
     )
 
     // Recipes with nuggets
-    /*event.replaceInput(   // Wooden cog replaces this already
-      { id: 'create:sequenced_assembly/precision_mechanism' }, // Arg 1: the filter
-      'minecraft:iron_nugget',            // Arg 2: the item to replace
-      'tfc:metal/rod/steel'         // Arg 3: the item to replace it with
-    )*/
     event.replaceInput(
       { id: 'create:crafting/kinetics/metal_bracket' }, // Arg 1: the filter
       'minecraft:iron_nugget',            // Arg 2: the item to replace
       'tfc:metal/rod/wrought_iron'         // Arg 3: the item to replace it with
     )
-    /*event.replaceInput( // TODO: doesn't work; substituted by custom seq assembly, delete
-      { id: 'create:sequenced_assembly/track' }, // Arg 1: the filter
-      'minecraft:iron_nugget',            // Arg 2: the item to replace
-      'tfc:metal/rod/steel'         // Arg 3: the item to replace it with
-    )*/
     event.replaceInput(
       { id: 'create:crafting/kinetics/encased_chain_drive' }, // Arg 1: the filter
       'minecraft:iron_nugget',            // Arg 2: the item to replace
@@ -480,7 +470,6 @@ ServerEvents.recipes(event => {
     )
 
     // Recipes with glass
-    // TODO: Find a better, more convoluted way of processing quartz into glass?
     event.replaceInput(
       { id: 'create:crafting/kinetics/goggles' }, // Arg 1: the filter
       '#forge:glass',            // Arg 2: the item to replace
@@ -488,12 +477,6 @@ ServerEvents.recipes(event => {
     )
 
     // Recipes with quartz
-    // TODO: This is overriden by new recipes for rosequartz. DELETE
-    /*event.replaceInput(
-      { id: 'create:crafting/materials/rose_quartz' }, // Arg 1: the filter
-      'minecraft:quartz',            // Arg 2: the item to replace
-      'tfc_metallurgy:ore/certus_quartz'         // Arg 3: the item to replace it with
-    )*/
 
     // Recipes with wool 
     event.remove({id: 'create:milling/wool'})

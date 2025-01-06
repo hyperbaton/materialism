@@ -8,5 +8,7 @@ ClientEvents.lang("en_us", event => {
     event.renameItem('tfmg:capacitor', 'Lead-Acid Battery')
     event.renameItem('tfmg:accumulator', 'Lithium Battery')
     event.renameItem('create_new_age:radioactive_thorium', 'Fissible Material')
+    event.renameItem('createsifter:andesite_mesh', 'Stainless Steel Mesh')
+    event.renameItem('createsifter:custom_mesh', 'Titanium Mesh')
     
 });

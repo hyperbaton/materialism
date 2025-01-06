@@ -14,10 +14,10 @@ TFCEvents.worldgenData(event => {
         
         vein => {
             vein.indicator(
-                10, // Rarity
-                35, // Depth
+                200, // Depth
+                500, // Rarity
                 1, // UndergroundRarity
-                4, // UndergroundCount
+                5, // UndergroundCount
                 ["tfc:ore/small_native_gold"]
             ).project(true).projectOffset(true)
         },

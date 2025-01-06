@@ -14,10 +14,10 @@ TFCEvents.worldgenData(event => {
         
         vein => {
             vein.indicator(
-                12, // Rarity
-                150, // Depth
+                200, // Depth
+                500, // Rarity
                 1, // UndergroundRarity
-                0, // UndergroundCount
+                5, // UndergroundCount
                 ["tfc_metallurgy:ore/small_spodumene"]
             ).project(true).projectOffset(true)
         },
