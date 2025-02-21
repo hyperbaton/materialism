@@ -81,6 +81,12 @@ JEIEvents.hideItems(event => {
     event.hide('create:deepslate_zinc_ore')
     event.hide('create:golden_sheet')
 
+    // Hide Weather 2 items
+    event.hide(/.*weather2.*/)
+
+    // Hide boats (there are aleki ships)
+    event.hide(/.*boat.*/)
+
     removeToolsAndArmor('thorium')
     removeToolsAndArmor('uranium')
 
@@ -101,6 +107,132 @@ JEIEvents.hideItems(event => {
     event.hide(/minecraft:.*axe.*/);
     event.hide(/minecraft:.*hoe.*/);
     event.hide(/minecraft:.*sword.*/);
+    event.hide('minecraft:barrel');
+    event.hide(/minecraft:.*andesite.*/);
+    event.hide(/minecraft:.*amethyst.*/);
+    event.hide(/minecraft:.*spawn_egg.*/);
+    event.hide('minecraft:bee_nest');
+    event.hide('minecraft:beehive');
+    event.hide(/minecraft:.*oak.*/);
+    event.hide(/minecraft:.*spruce.*/);
+    event.hide(/minecraft:.*birch.*/);
+    event.hide(/minecraft:.*jungle.*/);
+    event.hide(/minecraft:.*acacia.*/);
+    event.hide(/minecraft:.*mangrove.*/);
+    event.hide(/minecraft:.*cherry.*/);
+    event.hide(/minecraft:.*crimson.*/);
+    event.hide(/minecraft:.*warped.*/);
+    event.hide(/minecraft:.*candle.*/);
+    event.hide(/minecraft:.*quartz.*/);
+    event.hide(/minecraft:.*prismarine.*/);
+    event.hide(/minecraft:.*deepslate.*/);
+    event.hide(/minecraft:.*blackstone.*/);
+    event.hide(/minecraft:.*smooth_stone.*/);
+    event.hide(/minecraft:.*basalt.*/);
+    event.hide(/minecraft:.*granite.*/);
+    event.hide(/minecraft:.*diorite.*/);
+    event.hide('minecraft:tuff');
+    event.hide(/minecraft:.*sand.*/);
+    event.hide(/minecraft:.*concrete.*/);
+    event.hide('minecraft:coal');
+    event.hide('minecraft:coal_block');
+    event.hide(/minecraft:.*end.*/);
+    event.hide(/minecraft:.*pottery.*/);
+    event.hide('minecraft:sugar_cane');
+    event.hide(/minecraft:.*stone_brick.*/);
+    event.hide(/minecraft:.*cobblestone.*/);
+    event.hide(/minecraft:.*purpur.*/);
+    event.hide('minecraft:ancient_debris');
+    event.hide('minecraft:chain');
+    event.hide(/minecraft:.*cook.*/);
+    event.hide('minecraft:beef');
+    event.hide('minecraft:porkchop');
+    event.hide('minecraft:mutton');
+    event.hide('minecraft:chicken');
+    event.hide('minecraft:rabbit');
+    event.hide('minecraft:cod');
+    event.hide('minecraft:salmon');
+    event.hide('minecraft:beacon');
+    event.hide('minecraft:ghast_tear');
+    event.hide(/minecraft:.*dragon.*/);
+    event.hide(/minecraft:.*chorus.*/);
+    event.hide('minecraft:trident');
+    event.hide('minecraft:echo_shard');
+    event.hide('minecraft:recovery_compass');
+    event.hide(/minecraft:.*diamond.*/);
+    event.hide('minecraft:torch');
+    event.hide('minecraft:soul_torch');
+    event.hide('minecraft:torchflower_seeds');
+    event.hide('minecraft:torchflower');
+    event.hide(/minecraft:.*azalea.*/);
+    event.hide('minecraft:iron_bars');
+    event.hide('minecraft:iron_block');
+    event.hide('minecraft:iron_ingot');
+    event.hide('minecraft:iron_nugget');
+    event.hide('minecraft:iron_horse_armor');
+    event.hide('minecraft:golden_horse_armor');
+    event.hide(/minecraft:.*apple.*/);
+    event.hide(/minecraft:.*carrot.*/);
+    event.hide(/minecraft:.*potato.*/);
+    event.hide(/minecraft:.*beet.*/);
+    event.hide(/minecraft:.*melon.*/);
+    event.hide('minecraft:conduit');
+    event.hide('minecraft:lodestone');
+    event.hide('minecraft:dandelion');
+    event.hide('minecraft:dandelion');
+    event.hide('minecraft:poppy');
+    event.hide('minecraft:blue_orchid');
+    event.hide('minecraft:allium');
+    event.hide('minecraft:azure_bluet');
+    event.hide('minecraft:red_tulip');
+    event.hide('minecraft:orange_tulip');
+    event.hide('minecraft:white_tulip');
+    event.hide('minecraft:pink_tulip');
+    event.hide('minecraft:oxeye_daisy');
+    event.hide('minecraft:cornflower');
+    event.hide('minecraft:lily_of_the_valley');
+    event.hide('minecraft:wither_rose');
+    event.hide('minecraft:lilac');
+    event.hide('minecraft:rose_bush');
+    event.hide('minecraft:peony');
+    event.hide('minecraft:sunflower');
+    event.hide('minecraft:grass');
+    event.hide('minecraft:fern');
+    event.hide('minecraft:tall_grass');
+    event.hide('minecraft:big_fern');
+    event.hide('minecraft:dead_bush');
+    event.hide(/minecraft:.*drip.*/);
+    event.hide(/minecraft:.*pitch.*/);
+    event.hide('minecraft:heart_of_the_sea');
+    event.hide(/minecraft:.*dirt.*/);
+    event.hide('minecraft:podzol');
+    event.hide('minecraft:mycelium');
+    event.hide('minecraft:farmland');
+    event.hide('minecraft:mud');
+    event.hide('minecraft:grass_block');
+    event.hide('minecraft:gravel');
+    event.hide('minecraft:calcite');
+    event.hide('minecraft:torch');
+    event.hide(/minecraft:.*froglight.*/);
+    event.hide(/minecraft:.*soul.*/);
+    event.hide(/minecraft:.*shulker.*/);
+    event.hide(/minecraft:.*vine.*/);
+    event.hide('minecraft:redstone_lamp');
+    event.hide(/minecraft:.*furnace.*/);
+    event.hide('minecraft:composter');
+    event.hide('minecraft:smoker');
+    event.hide(/minecraft:.*bucket.*/);
+    event.hide('minecraft:sniffer_egg');
+    event.hide(/minecraft:.*emerald.*/);
+    event.hide(/minecraft:.*rabbit.*/);
+    event.hide(/minecraft:.*glowstone.*/);
+    event.hide('minecraft:glow_berries');
+    event.hide('minecraft:glow_lichen');
+    event.hide('minecraft:bread');
+    event.hide(/minecraft:.*stew.*/);
+
+    // Hide the TFC ores, which just clutter JEI
+    event.hide(/tfc:ore\/.*/);
 
     function removeToolsAndArmor(metal) {
         event.hide('tfc_metallurgy:metal/anvil/' + metal)

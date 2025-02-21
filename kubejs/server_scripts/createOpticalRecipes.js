@@ -1,5 +1,6 @@
 ServerEvents.recipes(event => {
     event.remove('create_optical:sequenced_assembly/optical_device')
+    event.remove('create_optical:sequenced_assembly/optical_device_focusing')
     event.recipes.create.sequenced_assembly(
         [
             Item.of('create_optical:optical_device', 1)
