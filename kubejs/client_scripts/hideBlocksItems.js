@@ -80,6 +80,8 @@ JEIEvents.hideItems(event => {
     event.hide('create:zinc_ore')
     event.hide('create:deepslate_zinc_ore')
     event.hide('create:golden_sheet')
+    event.hide(/tfmg:raw.*/)
+    event.hide(/tfmg:raw.*/)
 
     // Hide Weather 2 items
     event.hide(/.*weather2.*/)
@@ -199,7 +201,7 @@ JEIEvents.hideItems(event => {
     event.hide('minecraft:grass');
     event.hide('minecraft:fern');
     event.hide('minecraft:tall_grass');
-    event.hide('minecraft:big_fern');
+    event.hide('minecraft:large_fern');
     event.hide('minecraft:dead_bush');
     event.hide(/minecraft:.*drip.*/);
     event.hide(/minecraft:.*pitch.*/);
@@ -230,9 +232,16 @@ JEIEvents.hideItems(event => {
     event.hide('minecraft:glow_lichen');
     event.hide('minecraft:bread');
     event.hide(/minecraft:.*stew.*/);
+    event.hide(/minecraft:(?!red).*stone/);
+    event.hide(/minecraft:.*seed.*/);
+    event.hide('minecraft:pink_petals');
+    event.hide(/minecraft:.*sculk.*/);
+    event.hide(/minecraft:.*_raft.*/);
 
     // Hide the TFC ores, which just clutter JEI
-    event.hide(/tfc:ore\/.*/);
+    event.hide(/tfc:ore\/.*\/.*/);
+    event.hide(/tfc_metallurgy:ore\/.*\/.*/);
+    event.hide(/tfc:deposit\/.*/);
 
     function removeToolsAndArmor(metal) {
         event.hide('tfc_metallurgy:metal/anvil/' + metal)

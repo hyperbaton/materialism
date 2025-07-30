@@ -77,6 +77,9 @@ ServerEvents.recipes(event => {
     event.remove({ output: /minecraft:.*glowstone.*/ });
     event.remove({ input: 'minecraft:glow_berries'});
     event.remove({ output: 'minecraft:bread'});
+    event.remove({ output: /minecraft:(?!red).*stone*/ });
+    event.remove({ output: /minecraft:.*seed.*/ });
+    event.remove({ input: 'minecraft:pink_petals'});
 
     // Disable Weather 2 recipes
     event.remove(/.*weather2.*/)
