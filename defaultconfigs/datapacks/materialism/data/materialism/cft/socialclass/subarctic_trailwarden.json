@@ -1,0 +1,38 @@
+{
+  "id": "materialism:subarctic_trailwarden",
+  "maxHappiness": 100.0,
+  "matingHappinessThreshold": 5.0,
+  "spontaneouslySpawnPopulation": 0,
+  "needs": [
+    "materialism:temperature_subarctic",
+    "materialism:rainfall_subarctic",
+    "materialism:home_tier_iii",
+	"materialism:heating_charcoal",
+	"materialism:clothing_wool_torso",
+	"materialism:clothing_wool_legs",
+	"materialism:clothing_wool_head",
+	"materialism:clothing_wool_feet",
+	"materialism:drink_rye_whiskey",
+	"materialism:food_protein_soup",
+	"materialism:food_toast_with_butter"
+  ],
+  "upgrades": [
+    {
+      "nextClass": "materialism:subarctic_elder",
+      "requiredHappiness": 20,
+      "requiredNeeds": [
+        {
+          "need": "cft:temperature_subarctic",
+          "satisfactionThreshold": 0.90
+        },
+        {
+          "need": "cft:rainfall_subarctic",
+          "satisfactionThreshold": 0.90
+        }
+      ],
+      "socialStructureRequirements": [
+      ]
+    }
+  ],
+  "downgrades": []
+}

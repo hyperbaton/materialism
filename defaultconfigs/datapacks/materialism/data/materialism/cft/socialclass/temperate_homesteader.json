@@ -1,0 +1,39 @@
+{
+  "id": "materialism:temperate_homesteader",
+  "maxHappiness": 100.0,
+  "matingHappinessThreshold": 5.0,
+  "spontaneouslySpawnPopulation": 3,
+  "needs": [
+    "materialism:temperature_temperate",
+    "materialism:rainfall_temperate",
+    "materialism:home_tier_i",
+	"materialism:heating_sticks",
+	"materialism:clothing_wool_torso",
+	"materialism:clothing_wool_legs",
+	"materialism:drink_water",
+	"materialism:food_wheat_flatbread"
+  ],
+  "upgrades": [
+    {
+      "nextClass": "materialism:temperate_villager",
+      "requiredHappiness": 20,
+      "requiredNeeds": [
+        {
+          "need": "cft:temperature_temperate",
+          "satisfactionThreshold": 0.90
+        },
+        {
+          "need": "cft:rainfall_temperate",
+          "satisfactionThreshold": 0.90
+        }
+      ],
+      "socialStructureRequirements": [
+        {
+          "socialClass": "materialism:temperate_homesteader",
+          "percentage": 0.30
+        }
+      ]
+    }
+  ],
+  "downgrades": []
+}

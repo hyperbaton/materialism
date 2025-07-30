@@ -1,0 +1,38 @@
+{
+  "id": "materialism:temperate_steward",
+  "maxHappiness": 100.0,
+  "matingHappinessThreshold": 5.0,
+  "spontaneouslySpawnPopulation": 0,
+  "needs": [
+    "materialism:temperature_temperate",
+    "materialism:rainfall_temperate",
+    "materialism:home_tier_iii",
+	"materialism:heating_charcoal",
+	"materialism:clothing_wool_torso",
+	"materialism:clothing_wool_legs",
+	"materialism:clothing_wool_head",
+	"materialism:clothing_wool_feet",
+	"materialism:drink_cider",
+	"materialism:food_grain_soup",
+	"materialism:food_toast_with_jam"
+  ],
+  "upgrades": [
+    {
+      "nextClass": "materialism:temperate_burgher",
+      "requiredHappiness": 20,
+      "requiredNeeds": [
+        {
+          "need": "cft:temperature_temperate",
+          "satisfactionThreshold": 0.90
+        },
+        {
+          "need": "cft:rainfall_temperate",
+          "satisfactionThreshold": 0.90
+        }
+      ],
+      "socialStructureRequirements": [
+      ]
+    }
+  ],
+  "downgrades": []
+}

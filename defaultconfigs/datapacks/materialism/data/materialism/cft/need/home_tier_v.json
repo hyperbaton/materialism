@@ -1,0 +1,66 @@
+{
+  "id": "materialism:home_tier_v",
+  "type": "cft:home",
+  "damage": 0.0,
+  "damage_threshold": 0.0,
+  "provided_happiness": 1,
+  "satisfaction_threshold": 0.5,
+  "frequency": 1.0,
+  "floorBlocks": [
+    {
+      "tagBlock": "rnr:flagstones_blocks",
+      "minQuantity": 25,
+      "maxQuantity": 50,
+      "minPercentage": 0.0,
+      "maxPercentage": 1.0
+    }
+  ],
+  "wallBlocks": [
+    {
+      "tagBlock": "forge:smooth_stone",
+      "minQuantity": 0,
+      "maxQuantity": 30,
+      "minPercentage": 0.0,
+      "maxPercentage": 1.0
+    },
+    {
+      "tagBlock": "forge:stone_bricks",
+      "minQuantity": 10,
+      "maxQuantity": 50,
+      "minPercentage": 0.0,
+      "maxPercentage": 1.0
+    },
+    {
+      "tagBlock": "tfc:chiseled_bricks",
+      "minQuantity": 10,
+      "maxQuantity": 50,
+      "minPercentage": 0.0,
+      "maxPercentage": 1.0
+    }
+  ],
+  "interiorBlocks": [
+    {
+      "block": "minecraft:air",
+      "minQuantity": 0,
+      "maxQuantity": 100,
+      "minPercentage": 0.0,
+      "maxPercentage": 1.0
+    },
+    {
+      "tagBlock": "tfc:barrels",
+      "minQuantity": 1,
+      "maxQuantity": 1,
+      "minPercentage": 0.0,
+      "maxPercentage": 1.0
+    }
+  ],
+  "roofBlocks": [
+    {
+      "block": "rnr:ceramic_roof",
+      "minQuantity": 25,
+      "maxQuantity": 50,
+      "minPercentage": 0.0,
+      "maxPercentage": 1.0
+    }
+  ]
+}

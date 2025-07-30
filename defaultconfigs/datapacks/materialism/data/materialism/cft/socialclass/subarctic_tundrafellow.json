@@ -1,0 +1,39 @@
+{
+  "id": "materialism:subarctic_tundrafellow",
+  "maxHappiness": 100.0,
+  "matingHappinessThreshold": 5.0,
+  "spontaneouslySpawnPopulation": 3,
+  "needs": [
+    "materialism:temperature_subarctic",
+    "materialism:rainfall_subarctic",
+    "materialism:home_tier_i",
+	"materialism:heating_sticks",
+	"materialism:clothing_small_hide",
+	"materialism:clothing_medium_hide"
+	"materialism:drink_water",
+	"materialism:food_rye_flatbread"
+  ],
+  "upgrades": [
+    {
+      "nextClass": "materialism:subarctic_hearthkeeper",
+      "requiredHappiness": 20,
+      "requiredNeeds": [
+        {
+          "need": "cft:temperature_subarctic",
+          "satisfactionThreshold": 0.90
+        },
+        {
+          "need": "cft:rainfall_subarctic",
+          "satisfactionThreshold": 0.90
+        }
+      ],
+      "socialStructureRequirements": [
+        {
+          "socialClass": "materialism:subarctic_tundrafellow",
+          "percentage": 0.30
+        }
+      ]
+    }
+  ],
+  "downgrades": []
+}
