@@ -6,7 +6,7 @@
   "provided_happiness": 1,
   "satisfaction_threshold": 0.5,
   "item": {
-    "item": "#tfc:logs"
+    "tag": "minecraft:logs"
   },
   "frequency": 1,
   "quantity": 1

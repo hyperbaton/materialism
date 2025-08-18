@@ -1,0 +1,94 @@
+{
+  "id": "materialism:home_mountain_stormcaller",
+  "type": "cft:home",
+  "damage": 0.05,
+  "damage_threshold": 0.05,
+  "provided_happiness": 1,
+  "satisfaction_threshold": 0.5,
+  "frequency": 1.0,
+  "floorBlocks": [
+    {
+      "tagBlock": "rnr:rock/flagstones/andesite",
+      "minQuantity": 8,
+      "maxQuantity": 35,
+      "minPercentage": 0.0,
+      "maxPercentage": 1.0
+    },
+    {
+      "block": "tfc:rock/chiseled/andesite",
+      "minQuantity": 16,
+      "maxQuantity": 25,
+      "minPercentage": 0.0,
+      "maxPercentage": 1.0
+    }
+  ],
+  "wallBlocks": [
+    {
+      "tagBlock": "tfc:colored_raw_alabaster",
+      "minQuantity": 0,
+      "maxQuantity": 30,
+      "minPercentage": 0.0,
+      "maxPercentage": 1.0
+    },
+    {
+      "tagBlock": "tfc:colored_bricks_alabaster",
+      "minQuantity": 10,
+      "maxQuantity": 50,
+      "minPercentage": 0.0,
+      "maxPercentage": 1.0
+    },
+    {
+      "tagBlock": "tfc:colored_polished_alabaster",
+      "minQuantity": 10,
+      "maxQuantity": 50,
+      "minPercentage": 0.0,
+      "maxPercentage": 1.0
+    }
+  ],
+  "interiorBlocks": [
+    {
+      "block": "minecraft:air",
+      "minQuantity": 0,
+      "maxQuantity": 100,
+      "minPercentage": 0.0,
+      "maxPercentage": 1.0
+    },
+    {
+      "tagBlock": "tfc:barrels",
+      "minQuantity": 0,
+      "maxQuantity": 1,
+      "minPercentage": 0.0,
+      "maxPercentage": 1.0
+    },
+    {
+      "block": "create:fluid_tank",
+      "minQuantity": 0,
+      "maxQuantity": 1,
+      "minPercentage": 0.0,
+      "maxPercentage": 1.0
+    },
+    {
+      "block": "create:chute",
+      "minQuantity": 0,
+      "maxQuantity": 1,
+      "minPercentage": 0.0,
+      "maxPercentage": 1.0
+    },
+    {
+      "block": "create:portable_storage_interface",
+      "minQuantity": 0,
+      "maxQuantity": 1,
+      "minPercentage": 0.0,
+      "maxPercentage": 1.0
+    }
+  ],
+  "roofBlocks": [
+    {
+      "block": "rnr:terracotta_roof",
+      "minQuantity": 25,
+      "maxQuantity": 50,
+      "minPercentage": 0.0,
+      "maxPercentage": 1.0
+    }
+  ]
+}

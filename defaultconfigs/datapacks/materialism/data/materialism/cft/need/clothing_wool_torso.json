@@ -5,7 +5,7 @@
   "damage_threshold": 0.25,
   "provided_happiness": 1,
   "satisfaction_threshold": 0.5,
-  "item": { "item": "tfcambiental:wool_seater" },
+  "item": { "item": "tfcambiental:wool_sweater" },
   "frequency": 10,
   "quantity": 1
 }

@@ -1,0 +1,87 @@
+{
+  "id": "materialism:home_temperate_homesteader",
+  "type": "cft:home",
+  "damage": 0.05,
+  "damage_threshold": 0.05,
+  "provided_happiness": 1,
+  "satisfaction_threshold": 0.5,
+  "frequency": 1.0,
+  "floorBlocks": [
+    {
+      "block": "rnr:rock/gravel_road/shale",
+      "minQuantity": 5,
+      "maxQuantity": 10,
+      "minPercentage": 0.0,
+      "maxPercentage": 1.0
+    },
+    {
+      "block": "tfc:rock/gravel/shale",
+      "minQuantity": 16,
+      "maxQuantity": 25,
+      "minPercentage": 0.0,
+      "maxPercentage": 1.0
+    }
+  ],
+  "wallBlocks": [
+    {
+      "tagBlock": "materialism:wattle",
+      "minQuantity": 22,
+      "maxQuantity": 30,
+      "minPercentage": 0.0,
+      "maxPercentage": 1.0
+    },
+    {
+      "block": "create:encased_fluid_pipe",
+      "minQuantity": 0,
+      "maxQuantity": 1,
+      "minPercentage": 0.0,
+      "maxPercentage": 1.0
+    }
+  ],
+  "interiorBlocks": [
+    {
+      "block": "minecraft:air",
+      "minQuantity": 0,
+      "maxQuantity": 50,
+      "minPercentage": 0.0,
+      "maxPercentage": 1.0
+    },
+    {
+      "tagBlock": "tfc:barrels",
+      "minQuantity": 0,
+      "maxQuantity": 1,
+      "minPercentage": 0.0,
+      "maxPercentage": 1.0
+    },
+    {
+      "block": "create:fluid_tank",
+      "minQuantity": 0,
+      "maxQuantity": 1,
+      "minPercentage": 0.0,
+      "maxPercentage": 1.0
+    },
+    {
+      "block": "create:chute",
+      "minQuantity": 0,
+      "maxQuantity": 1,
+      "minPercentage": 0.0,
+      "maxPercentage": 1.0
+    },
+    {
+      "block": "create:portable_storage_interface",
+      "minQuantity": 0,
+      "maxQuantity": 1,
+      "minPercentage": 0.0,
+      "maxPercentage": 1.0
+    }
+  ],
+  "roofBlocks": [
+    {
+      "block": "rnr:thatch_roof",
+      "minQuantity": 16,
+      "maxQuantity": 50,
+      "minPercentage": 0.0,
+      "maxPercentage": 1.0
+    }
+  ]
+}

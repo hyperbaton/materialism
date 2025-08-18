@@ -11,7 +11,7 @@
 			"type": "tfc:has_trait",
 			"trait": "tfc:brined",
 			"ingredient": {
-				"item": "tfc:food/grean_bean"
+				"item": "tfc:food/green_bean"
 			}
 		}
 	},
