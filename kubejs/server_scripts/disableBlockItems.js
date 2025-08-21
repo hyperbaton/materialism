@@ -80,10 +80,31 @@ ServerEvents.recipes(event => {
     event.remove({ output: /minecraft:(?!red).*stone*/ });
     event.remove({ output: /minecraft:.*seed.*/ });
     event.remove({ input: 'minecraft:pink_petals'});
+    event.remove({ output: 'minecraft:shears'});
+    event.remove({ output: 'minecraft:gold_ingot'});
+    event.remove({ output: 'minecraft:gold_nugget'});
+    event.remove({ output: 'minecraft:copper_ingot'});
+    event.remove({ output: /minecraft:.*obsidian.*/ });
+    event.remove({ output: 'minecraft:blaze_powder'});
+    event.remove({ output: /minecraft:.*mud.*/ });
+    event.remove({ output: 'tfmh:steel_helmet'});
+    event.remove({ output: 'tfmh:steel_chestplate'});
+    event.remove({ output: 'tfmh:steel_leggings'});
+    event.remove({ output: 'tfmh:steel_boots'});
+    event.remove({ output: 'tfmh:nickel_ingot'});
 
     // Disable Weather 2 recipes
     event.remove(/.*weather2.*/)
 
     // Disable boat recipes (there are aleki ships)
     event.remove(/.*boat.*/)
+
+    // Disable Create recipes
+    event.remove({ output: 'create:andesite_alloy'});
+    event.remove({ output: 'create:zinc_ingot'});
+    event.remove({ output: 'create:brass_ingot'});
+    event.remove({ output: 'create:dough'});
+    event.remove({ input: 'create:dough'});
+    event.remove({ output: 'create:raw_zinc'});
+    event.remove({ output: 'create:raw_zinc_block'});
 });

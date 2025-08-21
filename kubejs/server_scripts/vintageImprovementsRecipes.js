@@ -34,6 +34,7 @@ ServerEvents.recipes(event => {
     event.recipes.vintageimprovements.turning('4x tfmg:screw', 'tfc:metal/rod/steel').processingTime(300)
     event.recipes.vintageimprovements.turning('2x tfmg:rebar', 'tfc:metal/rod/steel').processingTime(300)
     event.recipes.vintageimprovements.turning('2x firmaciv:copper_bolt', 'tfc:metal/rod/copper').processingTime(300)
+    event.recipes.vintageimprovements.turning('firmaciv:cannon_barrel', 'tfc:metal/double_sheet/wrought_iron').processingTime(500)
     // Pipes to be made with the lathe
     event.remove({output: 'create:fluid_pipe'})
     event.remove({output: 'tfmg:steel_pipe'})

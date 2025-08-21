@@ -4,6 +4,7 @@ ServerEvents.recipes(event => {
   event.remove({id: /.*tfmg:.*sword.*/})
   event.remove({id: /.*tfmg:.*hoe.*/})
   event.remove({id: /.*tfmg:.*shovel.*/})
+  event.remove({output: 'tfmg:aluminum_ingot'})
   // Remove wires, using vintageimprovement or carfts and additions ones
   event.remove('tfmg:stonecutting/aluminum_wire')
   event.remove('tfmg:stonecutting/copper_wire')
@@ -185,6 +186,26 @@ ServerEvents.recipes(event => {
     'minecraft:gravel',            // Arg 2: the item to replace
     '#tfc:rock/gravel'    // Arg 3: the item to replace it with
   )
+  event.replaceInput(
+    { id: 'tfmg:crafting/nickel_block' }, // Arg 1: the filter
+    'tfmg:nickel_ingot',            // Arg 2: the item to replace
+    'tfc:metal/ingot/nickel' // Arg 3: the item to replace it with
+  )
+
+  // Bauxite and galena compacting recipes
+  event.recipes.create.compacting('tfmg:bauxite', Ingredient.of('tfc_metallurgy:ore/rich_bauxite', 3))
+  event.recipes.create.compacting('tfmg:bauxite', Ingredient.of('tfc_metallurgy:ore/normal_bauxite', 4))
+  event.recipes.create.compacting('tfmg:bauxite', Ingredient.of('tfc_metallurgy:ore/poor_bauxite', 7))
+  event.recipes.create.compacting('tfmg:bauxite', Ingredient.of('tfc_metallurgy:ore/small_bauxite', 10))
+  event.recipes.create.compacting('tfmg:galena', Ingredient.of('tfc_metallurgy:ore/rich_galena', 3))
+  event.recipes.create.compacting('tfmg:galena', Ingredient.of('tfc_metallurgy:ore/normal_galena', 4))
+  event.recipes.create.compacting('tfmg:galena', Ingredient.of('tfc_metallurgy:ore/poor_galena', 7))
+  event.recipes.create.compacting('tfmg:galena', Ingredient.of('tfc_metallurgy:ore/small_galena', 10))
+  event.recipes.tfc.heating('tfmg:bauxite', 660)
+    .resultFluid(Fluid.of('tfc_metallurgy:metal/aluminum', 100))
+  event.recipes.tfc.heating('tfmg:galena', 328)
+    .resultFluid(Fluid.of('tfc_metallurgy:metal/lead', 100))
+  
 
   // Electrical components
   // Resistor item

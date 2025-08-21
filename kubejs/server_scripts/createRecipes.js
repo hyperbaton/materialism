@@ -186,6 +186,35 @@ ServerEvents.recipes(event => {
           C: 'tfc_metal_items:steel_pressing_head'
       }
       )
+    // Create bells from TFC bells
+    event.remove({id: 'create:crafting/curiosities/peculiar_bell'})
+    event.shaped(
+      Item.of('create:peculiar_bell', 1), // arg 1: output
+      [
+          'BAB',
+          ' C ', // arg 2: the shape (array of strings)
+          '   '
+      ],
+      {
+          A: 'tfc:metal/sheet/brass',
+          B: 'tfc:metal/rod/brass',
+          C: 'tfc:brass_bell'
+      }
+      )
+    event.remove({id: 'create:haunting/haunted_bell'})
+    event.remove({id: 'create:conversion_3'})
+    event.recipes.create.mixing(
+      'create:haunted_bell',
+      [
+        'tfc:brass_bell',
+        'tfc:bronze_bell',
+        'tfc_metallurgy:florentine_bronze_bell',
+        'tfc_metallurgy:beryllium_copper_bell',
+        'tfcchannelcasting:food/white_chocolate_bell',
+        'tfcchannelcasting:food/milk_chocolate_bell',
+        'tfcchannelcasting:food/dark_chocolate_bell'
+      ]
+    ).superheated()
 
     // Add recipes with tools
     event.remove({id: 'create:crafting/kinetics/shaft'})
@@ -206,6 +235,9 @@ ServerEvents.recipes(event => {
     replaceKelpWithRubber('create:crafting/kinetics/spout')
     replaceKelpWithRubber('create:crafting/logistics/andesite_funnel')
     replaceKelpWithRubber('create:crafting/logistics/andesite_tunnel')
+    replaceKelpWithRubber('interiors:kelp_chair')
+    replaceKelpWithRubber('interiors:kelp_floor_chair')
+    replaceKelpWithRubber('interiors:kelp_seat')
     //replaceKelpWithRubber('create:crafting/kinetics/belt_connector')
 
     // Replace andesite alloy in recipes
@@ -233,9 +265,11 @@ ServerEvents.recipes(event => {
     replaceAndesiteAlloyWith('create:crafting/kinetics/wooden_bracket', 'tfc:metal/sheet/steel')
     replaceAndesiteAlloyWith('create:mechanical_crafting/potato_cannon', 'tfc:metal/sheet/steel')
     replaceAndesiteAlloyWith('create:mechanical_crafting/crushing_wheel', 'tfc:metal/sheet/steel')
-    replaceAndesiteAlloyWith('create:andesite_ladder_from_andesite_alloy_stonecutting', 'tfc:metal/rod/aluminum')
-    replaceAndesiteAlloyWith('create:andesite_bars_from_andesite_alloy_stonecutting', 'tfc:metal/ingot/aluminum')
-    replaceAndesiteAlloyWith('create:andesite_scaffolding_from_andesite_alloy_stonecutting', 'tfc:metal/ingot/aluminum')
+    replaceAndesiteAlloyWith('create:andesite_ladder_from_andesite_alloy_stonecutting', 'tfc_metallurgy:metal/rod/aluminum')
+    replaceAndesiteAlloyWith('create:andesite_bars_from_andesite_alloy_stonecutting', 'tfc_metallurgy:metal/ingot/aluminum')
+    replaceAndesiteAlloyWith('create:andesite_scaffolding_from_andesite_alloy_stonecutting', 'tfc_metallurgy:metal/ingot/aluminum')
+    replaceAndesiteAlloyWith('create:crafting/kinetics/hand_crank', 'tfc:metal/rod/steel')
+    replaceAndesiteAlloyWith('woodencog:crafting/kinetics/metal_bracket', 'tfc_metallurgy:metal/sheet/aluminum')
 
     // Item application recipes
     event.remove({type: 'create:item_application'})
@@ -405,6 +439,16 @@ ServerEvents.recipes(event => {
     )
 
     // Recipes with nuggets
+    event.remove({id: 'create:crafting/materials/copper_nugget'})
+    event.shapeless('9x create:copper_nugget',[
+      'tfc:metal/ingot/copper',
+      '#tfc:chisels'
+    ]).damageIngredient(Ingredient.of('#tfc:chisels'))
+    event.remove({id: 'create:crafting/materials/zinc_nugget_from_decompacting'})
+    event.shapeless('9x create:zinc_nugget',[
+      'tfc:metal/ingot/zinc',
+      '#tfc:chisels'
+    ]).damageIngredient(Ingredient.of('#tfc:chisels'))
     event.replaceInput(
       { id: 'create:crafting/kinetics/metal_bracket' }, // Arg 1: the filter
       'minecraft:iron_nugget',            // Arg 2: the item to replace
@@ -468,6 +512,64 @@ ServerEvents.recipes(event => {
       'minecraft:cobblestone',            // Arg 2: the item to replace
       'tfc_metallurgy:metal/sheet/aluminum'         // Arg 3: the item to replace it with
     )
+    // Recipes for making the Create decorative blocks
+    event.recipes.create.sequenced_assembly(
+      'create:cut_granite',
+      'tfc:rock/hardened/granite',
+      [
+        event.recipes.create.cutting('tfc:rock/hardened/granite','tfc:rock/hardened/granite'),
+        event.recipes.vintageimprovements.polishing('tfc:rock/hardened/granite','tfc:rock/hardened/granite')
+      ]
+    ).transitionalItem('tfc:rock/hardened/granite').loops(6)
+    event.recipes.create.sequenced_assembly(
+      'create:cut_diorite',
+      'tfc:rock/hardened/diorite',
+      [
+        event.recipes.create.cutting('tfc:rock/hardened/diorite','tfc:rock/hardened/diorite'),
+        event.recipes.vintageimprovements.polishing('tfc:rock/hardened/diorite','tfc:rock/hardened/diorite')
+      ]
+    ).transitionalItem('tfc:rock/hardened/diorite').loops(6)
+    event.recipes.create.sequenced_assembly(
+      'create:cut_limestone',
+      'tfc:rock/hardened/limestone',
+      [
+        event.recipes.create.cutting('tfc:rock/hardened/limestone','tfc:rock/hardened/limestone'),
+        event.recipes.vintageimprovements.polishing('tfc:rock/hardened/limestone','tfc:rock/hardened/limestone')
+      ]
+    ).transitionalItem('tfc:rock/hardened/limestone').loops(6)
+    event.recipes.create.sequenced_assembly(
+      'create:cut_deepslate',
+      'tfc:rock/hardened/slate',
+      [
+        event.recipes.create.cutting('tfc:rock/hardened/slate','tfc:rock/hardened/slate'),
+        event.recipes.vintageimprovements.polishing('tfc:rock/hardened/slate','tfc:rock/hardened/slate')
+      ]
+    ).transitionalItem('tfc:rock/hardened/slate').loops(6)
+    event.recipes.create.sequenced_assembly(
+      'create:cut_dripstone',
+      'tfc:rock/hardened/claystone',
+      [
+        event.recipes.create.cutting('tfc:rock/hardened/claystone','tfc:rock/hardened/claystone'),
+        event.recipes.vintageimprovements.polishing('tfc:rock/hardened/claystone','tfc:rock/hardened/claystone')
+      ]
+    ).transitionalItem('tfc:rock/hardened/claystone').loops(6)
+    event.recipes.create.sequenced_assembly(
+      'create:cut_tuff',
+      'tfc:rock/hardened/dacite',
+      [
+        event.recipes.create.cutting('tfc:rock/hardened/dacite','tfc:rock/hardened/dacite'),
+        event.recipes.vintageimprovements.polishing('tfc:rock/hardened/dacite','tfc:rock/hardened/dacite')
+      ]
+    ).transitionalItem('tfc:rock/hardened/dacite').loops(6)
+    event.recipes.create.sequenced_assembly(
+      'create:cut_andesite',
+      'tfc:rock/hardened/andesite',
+      [
+        event.recipes.create.cutting('tfc:rock/hardened/andesite','tfc:rock/hardened/andesite'),
+        event.recipes.vintageimprovements.polishing('tfc:rock/hardened/andesite','tfc:rock/hardened/andesite')
+      ]
+    ).transitionalItem('tfc:rock/hardened/andesite').loops(6)
+    // TODO: Make recipes for asurine, crimsite, viridium, ochrum and schroria
 
     // Recipes with glass
     event.replaceInput(
@@ -475,6 +577,50 @@ ServerEvents.recipes(event => {
       '#forge:glass',            // Arg 2: the item to replace
       'tfc:lens'         // Arg 3: the item to replace it with
     )
+    // Windows
+    const woodPairs = [
+        ['oak', 'tfc:wood/lumber/oak'],
+        ['spruce', 'tfc:wood/lumber/spruce'],
+        ['birch', 'tfc:wood/lumber/birch'],
+        ['acacia', 'tfc:wood/lumber/acacia'],
+        ['mangrove', 'tfc:wood/lumber/mangrove'],
+        ['jungle', 'afc:wood/lumber/teak'],
+        ['crimson', 'afc:wood/lumber/mahogany'],
+        ['warped', 'afc:wood/lumber/hevea'],
+        ['dark_oak', 'tfc:wood/lumber/hickory'],
+        ['ornate_iron', 'tfc:metal/rod/wrought_iron']
+    ];
+    addWindowRecipes(event, woodPairs);
+    function addWindowRecipes(event, woodPairs) {
+        woodPairs.forEach(([windowName, lumberName]) => {
+            event.remove({id: `create:${windowName}_window`});
+            event.recipes.create.sequenced_assembly(
+                Item.of(`create:${windowName}_window`, 2),
+                '#forge:glass/colorless',
+                [
+                    event.recipes.create.cutting('minecraft:glass', 'minecraft:glass'),
+                    event.recipes.createDeploying(
+                        'minecraft:glass',
+                        ['minecraft:glass', `${lumberName}`]
+                    ),
+                    event.recipes.createDeploying(
+                        'minecraft:glass',
+                        ['minecraft:glass', `${lumberName}`]
+                    ),
+                    event.recipes.createDeploying(
+                        'minecraft:glass',
+                        ['minecraft:glass', `${lumberName}`]
+                    ),
+                    event.recipes.createDeploying(
+                        'minecraft:glass',
+                        ['minecraft:glass', `${lumberName}`]
+                    ),
+                    event.recipes.createPressing('minecraft:glass', 'minecraft:glass')
+                ]
+            ).transitionalItem('minecraft:glass')
+            .loops(2);
+        });
+    }
 
     // Recipes with quartz
 
@@ -488,6 +634,13 @@ ServerEvents.recipes(event => {
     )*/
 
     // Recipes with rubber
+    event.recipes.vintageimprovements.pressurizing(
+      'afc:rubber_bar',
+      [
+        'tfc:powder/sulfur',
+        Fluid.of('afc:latex', 1000)
+      ]
+    ).heated()
     event.replaceInput(
       { id: 'create:crafting/kinetics/elevator_pulley' }, // Arg 1: the filter
       'minecraft:dried_kelp_block',            // Arg 2: the item to replace
@@ -554,6 +707,24 @@ ServerEvents.recipes(event => {
         'tfc:metal/sheet/gold'         // Arg 3: the item to replace it with
       )
 
+    event.replaceInput(
+        { input: 'create:zinc_ingot' }, // Arg 1: the filter
+        'create:zinc_ingot',            // Arg 2: the item to replace
+        'tfc:metal/ingot/zinc'         // Arg 3: the item to replace it with
+      )
+
+    event.replaceInput(
+        { input: 'createdeco:zinc_sheet' }, // Arg 1: the filter
+        'create:zinc_sheet',            // Arg 2: the item to replace
+        'tfc:metal/sheet/zinc'         // Arg 3: the item to replace it with
+      )
+
+    event.replaceInput(
+        { input: 'minecraft:copper_block' }, // Arg 1: the filter
+        'minecraft:copper_block',            // Arg 2: the item to replace
+        'tfc:metal/block/copper'         // Arg 3: the item to replace it with
+      )
+
     // TODO: Remove create sandpaper from modpack
     event.replaceInput(
         { input: 'create:sand_paper' }, // Arg 1: the filter
@@ -602,6 +773,10 @@ ServerEvents.recipes(event => {
     event.remove({id: "create:pressing/brass_ingot"})
     event.remove({id: "create:pressing/gold_ingot"})
     event.remove({id: "create:cutting/andesite_alloy"})
+    event.remove({id: "woodencog:crafting/mechanical_crafting/potato_cannon"})
+    event.remove({id: "woodencog:crafting/schematics/schematicannon"})
+    event.remove({id: "woodencog:crafting/mechanical_crafting/crushing_wheel"})
+    event.remove({id: "create:crafting/kinetics/basin"})
 
     // Remove unwanted contraptions
     event.remove({id: "create:crafting/kinetics/cart_assembler"})

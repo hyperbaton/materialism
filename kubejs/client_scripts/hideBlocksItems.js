@@ -82,6 +82,42 @@ JEIEvents.hideItems(event => {
     event.hide('create:golden_sheet')
     event.hide(/tfmg:raw.*/)
     event.hide(/tfmg:raw.*/)
+    event.hide('create:wheat_flour');
+    event.hide('create:dough');
+    event.hide('create:iron_sheet');
+    event.hide('create:raw_zinc');
+    event.hide('create:raw_zinc_block');
+    event.hide('create:zinc_ingot');
+    event.hide('create:andesite_alloy_block');
+    event.hide('tfmg:aluminum_ingot');
+    event.hide('createdeco:andesite_sheet');
+    event.hide('createdeco:zinc_sheet');
+    event.hide(/createdeco:.*netherite.*/);
+    event.hide('design_decor:netherite_large_chain');
+    event.hide('bellsandwhistles:headlight');
+    event.hide('design_decor:andesite_large_chain');
+    event.hide('design_decor:strong_bronze_large_chain');
+    event.hide('design_decor:nethersteel_large_chain');
+    event.hide('design_decor:manyullyn_large_chain');
+    event.hide('design_decor:hepatizon_large_chain');
+    event.hide('design_decor:knightslime_large_chain');
+    event.hide('design_decor:queens_lime_large_chain');
+    event.hide('tfmh:lead_axe');
+    event.hide('tfmh:lead_hoe');
+    event.hide('tfmh:lead_shovel');
+    event.hide('tfmh:lead_pickaxe');
+    event.hide('tfmh:lead_sword');
+    event.hide('tfmh:lead_ingot');
+    event.hide('tfmh:steel_axe');
+    event.hide('tfmh:steel_hoe');
+    event.hide('tfmh:steel_shovel');
+    event.hide('tfmh:steel_pickaxe');
+    event.hide('tfmh:steel_sword');
+    event.hide('tfmh:steel_ingot');
+    event.hide('tfmh:steel_helmet');
+    event.hide('tfmh:steel_chestplate');
+    event.hide('tfmh:steel_leggings');
+    event.hide('tfmh:steel_boots');
 
     // Hide Weather 2 items
     event.hide(/.*weather2.*/)
@@ -210,7 +246,7 @@ JEIEvents.hideItems(event => {
     event.hide('minecraft:podzol');
     event.hide('minecraft:mycelium');
     event.hide('minecraft:farmland');
-    event.hide('minecraft:mud');
+    event.hide(/minecraft:.*mud.*/);
     event.hide('minecraft:grass_block');
     event.hide('minecraft:gravel');
     event.hide('minecraft:calcite');
@@ -237,11 +273,38 @@ JEIEvents.hideItems(event => {
     event.hide('minecraft:pink_petals');
     event.hide(/minecraft:.*sculk.*/);
     event.hide(/minecraft:.*_raft.*/);
+    event.hide('minecraft:gold_block');
+    event.hide(/minecraft:.*moss.*/);
+    event.hide('minecraft:cocoa_beans');
+    event.hide('minecraft:pumpkin');
+    event.hide(/minecraft:.*honey.*/);
+    event.hide('minecraft:enchanting_table');
+    event.hide('minecraft:suspicious_gravel');
+    event.hide('minecraft:bookshelf');
+    event.hide('minecraft:chest');
+    event.hide('minecraft:trapped_chest');
+    event.hide('minecraft:respawn_anchor');
+    event.hide(/minecraft:.*fish.*/);
+    event.hide('minecraft:shears');
+    event.hide('minecraft:gold_ingot');
+    event.hide('minecraft:gold_nugget');
+    event.hide('minecraft:copper_ingot');
+    event.hide(/.*obsidian.*/);
+    event.hide('minecraft:magma_block');
+    event.hide(/minecraft:.*mushroom.*/);
+    event.hide(/minecraft:.*blaze.*/);
+    event.hide('minecraft:magma_cream');
+    event.hide('minecraft:phantom_membrane');
+    event.hide('minecraft:fletching_table');
+    event.hide('minecraft:campfire');
 
     // Hide the TFC ores, which just clutter JEI
     event.hide(/tfc:ore\/.*\/.*/);
     event.hide(/tfc_metallurgy:ore\/.*\/.*/);
     event.hide(/tfc:deposit\/.*/);
+
+    // Hide the wild crops, which are unobtainable
+    event.hide(/.*wild_crop.*/);
 
     function removeToolsAndArmor(metal) {
         event.hide('tfc_metallurgy:metal/anvil/' + metal)
