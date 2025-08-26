@@ -63,6 +63,18 @@ ServerEvents.recipes(event => {
         'create_optical:copper_coil',            // Arg 2: the item to replace
         'tfmg:copper_coil'         // Arg 3: the item to replace it with
         )
+    event.shaped(
+        Item.of('create_optical:zinc_coil', 1),
+        [
+            'BAB',
+            'BAB',
+            'BAB'
+        ],
+        {
+          A: 'tfc:metal/rod/wrought_iron',
+          B: 'vintageimprovements:zinc_wire'
+        }
+    )
     // Replace usage of golden coil with something else
     event.remove('create_optical:sequenced_assembly/golden_coil')
     event.remove('create_optical:heavy_optical_receptor')

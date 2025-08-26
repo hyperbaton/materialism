@@ -121,7 +121,7 @@ ServerEvents.recipes(event => {
     // Windows
     const woodPairs = [
         ['copper', 'tfc:metal/rod/copper'],
-        ['andesite', 'tfc:metal/rod/aluminum'],
+        ['andesite', 'tfc_metallurgy:metal/rod/aluminum'],
         ['brass', 'tfc:metal/rod/brass'],
         ['zinc', 'tfc:metal/rod/zinc'],
         ['iron', 'firmalife:metal/rod/stainless_steel'],

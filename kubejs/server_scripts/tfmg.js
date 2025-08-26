@@ -393,5 +393,21 @@ ServerEvents.recipes(event => {
   event.recipes.tfmg.coking('minecraft:charcoal', [Item.of('tfmg:coal_coke').withChance(0.4), Fluid.of('createbb:methanol', 1)], 2000)
   event.recipes.tfmg.coking('#minecraft:logs', [Item.of('minecraft:charcoal').withChance(0.8), Fluid.of('minecraft:water', 1)], 5000)
 
+  event.recipes.create.sequenced_assembly(
+    [
+      Item.of('tfmg:steel_mechanism').withChance(130.0), // this is the item that will appear in JEI as the result
+      Item.of('tfc:metal/sheet/steel').withChance(8.0), // the rest of these items will be part of the scrap
+      Item.of('vintageimprovements:invar_wire').withChance(8.0),
+      Item.of('tfmg:steel_cogwheel').withChance(5.0),
+      Item.of('create:shaft').withChance(2.0)
+    ],
+    'tfc:metal/sheet/steel',
+    [
+      event.recipes.createDeploying('create:incomplete_precision_mechanism', ['create:incomplete_precision_mechanism', 'tfmg:steel_cogwheel']),
+      event.recipes.createDeploying('create:incomplete_precision_mechanism', ['create:incomplete_precision_mechanism', 'tfmg:large_steel_cogwheel']),
+      event.recipes.createDeploying('create:incomplete_precision_mechanism', ['create:incomplete_precision_mechanism', 'vintageimprovements:small_invar_spring']),
+      event.recipes.createDeploying('create:incomplete_precision_mechanism', ['create:incomplete_precision_mechanism', 'tfc_metallurgy:metal/rod/constantan'])
+    ]
+  ).transitionalItem('create:incomplete_precision_mechanism').loops(5)
 }
 )

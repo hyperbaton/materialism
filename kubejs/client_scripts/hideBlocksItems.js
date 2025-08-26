@@ -1,6 +1,5 @@
 JEIEvents.hideItems(event => {
     // Hide unwanted metals
-    // Hide all items, blocks, and fluids with "signalum" in their ID
     event.hide(/.*signalum.*/);
     event.hide(/.*blutonium.*/);
     event.hide(/.*enderium.*/);
@@ -9,6 +8,7 @@ JEIEvents.hideItems(event => {
     event.hide(/.*pink_slime.*/);
     event.hide(/.*refined_glowstone.*/);
     event.hide(/.*refined_obsidian.*/);
+    event.hide(/.*tfc_metallurgy.*andesite.*/);
     // Hide Create items
     event.hide('create:cart_assembler');
     event.hide('create:empty_blaze_burner');
@@ -366,4 +366,5 @@ JEIEvents.hideFluids(event => {
     event.hide(/.*refined_glowstone.*/);
     event.hide(/.*refined_obsidian.*/);
     event.hide('vintageimprovements:sulfuric_acid');
+    event.hide('artisanal:kerosene')
 });

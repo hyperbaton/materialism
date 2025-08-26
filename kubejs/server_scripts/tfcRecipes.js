@@ -190,9 +190,9 @@ ServerEvents.recipes(event => {
     event.recipes.vintageimprovements.pressurizing(Fluid.of('tfcagedalcohol:aged_rum'), Fluid.of('tfc:rum')).processingTime(120000)
     event.recipes.vintageimprovements.pressurizing(Fluid.of('tfcagedalcohol:aged_sake'), Fluid.of('tfc:sake')).processingTime(120000)
     event.recipes.vintageimprovements.pressurizing(Fluid.of('tfcagedalcohol:aged_vodka'), Fluid.of('tfc:vodka')).processingTime(120000)
-    event.recipes.vintageimprovements.pressurizing(Fluid.of('tfcagedalcohol:aged_whyskey'), Fluid.of('tfc:whyskey')).processingTime(120000)
-    event.recipes.vintageimprovements.pressurizing(Fluid.of('tfcagedalcohol:aged_corn_whyskey'), Fluid.of('tfc:corn_whyskey')).processingTime(120000)
-    event.recipes.vintageimprovements.pressurizing(Fluid.of('tfcagedalcohol:aged_rye_whyskey'), Fluid.of('tfc:rye_whyskey')).processingTime(120000)
+    event.recipes.vintageimprovements.pressurizing(Fluid.of('tfcagedalcohol:aged_whiskey'), Fluid.of('tfc:whiskey')).processingTime(120000)
+    event.recipes.vintageimprovements.pressurizing(Fluid.of('tfcagedalcohol:aged_corn_whiskey'), Fluid.of('tfc:corn_whiskey')).processingTime(120000)
+    event.recipes.vintageimprovements.pressurizing(Fluid.of('tfcagedalcohol:aged_rye_whiskey'), Fluid.of('tfc:rye_whiskey')).processingTime(120000)
     event.remove('woodencog:mixing/barrel/rum')
     event.recipes.create.mixing('artisanal:food/cleaned_sugarcane', ['tfc:food/sugarcane', Fluid.of('minecraft:water', 100)]).processingTime(4000)
     event.recipes.create.mixing('artisanal:food/cleaned_sugarcane', ['tfc:food/sugarcane', Fluid.of('artisanal:soapy_water', 100)]).processingTime(100)
@@ -223,5 +223,36 @@ ServerEvents.recipes(event => {
         .processingTime(2000).heated()
     event.recipes.vintageimprovements.pressurizing(Fluid.of('tfc:rum'), Fluid.of('artisanal:molasses')).processingTime(24000)
 
+    // Phosphorus recipes
+    event.recipes.vintageimprovements.pressurizing(Item.of('tfc:pure_phosphorus', 5),
+    ['tfcthermaldeposits:mineral/powder/apatite', 'tfcthermaldeposits:mineral/powder/apatite', 'tfc:powder/charcoal', '#tfc:silica_sand'])
+    .superheated().processingTime(500)
+    event.recipes.vintageimprovements.pressurizing(Item.of('tfc:pure_phosphorus', 5),
+    ['tfc:groundcover/guano', 'tfc:powder/charcoal', '#tfc:silica_sand'])
+    .superheated().processingTime(500)
+    event.remove('createbb:phase1/limestone_tag_crushing')
+    event.recipes.create.crushing('createbb:white_phosphorus', 'tfc:pure_phosphorus')
+
+    // Cut gems with vintageimprovements polishing
+    const gemTypes = [
+        'ruby',
+        'sapphire',
+        'emerald',
+        'diamond',
+        'topaz',
+        'amethyst',
+        'opal',
+        'pyrite',
+        'lapis_lazuli'
+    ]
+    addGemPolishingRecipes(event, gemTypes)
+    function addGemPolishingRecipes(event, gems) {
+        gems.forEach(gem => {
+            event.recipes.vintageimprovements.polishing(
+                `tfc:gem/${gem}`,
+                `tfc:ore/${gem}`
+            )
+        })
+    }
 }
 )

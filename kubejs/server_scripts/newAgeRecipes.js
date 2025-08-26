@@ -720,5 +720,66 @@ ServerEvents.recipes(event => {
       ]
     ).transitionalItem('tfc_metallurgy:metal/double_sheet/zircaloy')
     .loops(1);
+
+    // Circuit fabrication
+    // Wafer
+    event.recipes.create.sequenced_assembly(
+      [
+          Item.of('kubejs:silicon_wafer', 5)
+      ],
+      // Input item
+      Item.of('#tfc:silica_sand', 5),
+      [
+        event.recipes.vintageimprovements.pressurizing('#tfc:silica_sand', 'tfcweather:sand/sand_layer/white').heated().processingTime(10),
+        event.recipes.create.pressing('tfcweather:sand/sand_layer/white', 'tfcweather:sand/sand_layer/white'),
+        event.recipes.vintageimprovements.pressurizing('#tfc:silica_sand', 'tfcweather:sand/sand_layer/white').heated().processingTime(20),
+        event.recipes.create.cutting('tfcweather:sand/sand_layer/white', 'tfcweather:sand/sand_layer/white')
+      ]
+    ).transitionalItem('tfcweather:sand/sand_layer/white')
+    .loops(1);
+    // Blank circuit
+    event.remove('create_new_age:pressing/blank_circuit')
+    event.recipes.create.sequenced_assembly(
+      [
+          Item.of('create_new_age:blank_circuit', 1)
+      ],
+      // Input item
+      'kubejs:silicon_wafer',
+      [
+        event.recipes.create.filling('kubejs:silicon_wafer', ['kubejs:silicon_wafer', Fluid.of('tfc_metallurgy:metal/boron', 50)]),
+        event.recipes.createDeploying('kubejs:silicon_wafer', ['kubejs:silicon_wafer', 'tfc:pure_phosphorus']),
+        event.recipes.create.filling('kubejs:silicon_wafer', ['kubejs:silicon_wafer', Fluid.of('tfmg:liquid_plastic', 100)]),
+        /*event.recipes.create_optical.focusing(
+          ['kubejs:silicon_wafer'],
+          ['kubejs:silicon_wafer'],
+          500,
+          2
+        ),*/
+        event.recipes.vintageimprovements.laser_cutting('kubejs:silicon_wafer', 'kubejs:silicon_wafer').energyCost(1000),
+        event.recipes.create.filling('kubejs:silicon_wafer', ['kubejs:silicon_wafer', Fluid.of('createbb:methanol', 100)]),
+        event.recipes.vintageimprovements.vibrating('kubejs:silicon_wafer','kubejs:silicon_wafer').processingTime(500),
+        event.recipes.create.filling('kubejs:silicon_wafer', ['kubejs:silicon_wafer', Fluid.of('minecraft:water', 100)])
+      ]
+    ).transitionalItem('kubejs:silicon_wafer')
+    .loops(1);
+    event.remove('create_new_age:deploying/copper_circuit')
+    event.recipes.create.sequenced_assembly(
+      [
+          Item.of('create_new_age:copper_circuit', 1).withChance(85.0),
+          Item.of('createaddition:copper_wire', 2).withChance(5.0),
+          Item.of('tfmg:resistor_', 1).withChance(5.0),
+          Item.of('tfmg:capacitor_', 1).withChance(5.0)
+      ],
+      // Input item
+      'create_new_age:blank_circuit',
+      [
+        event.recipes.createDeploying('create_new_age:blank_circuit', ['create_new_age:blank_circuit', 'createaddition:copper_wire']),
+        event.recipes.createDeploying('create_new_age:blank_circuit', ['create_new_age:blank_circuit', 'tfmg:resistor_']),
+        event.recipes.createDeploying('create_new_age:blank_circuit', ['create_new_age:blank_circuit', 'tfmg:capacitor_']),
+        event.recipes.createDeploying('create_new_age:blank_circuit', ['create_new_age:blank_circuit', 'createaddition:copper_wire']),
+        event.recipes.vintageimprovements.polishing('create_new_age:blank_circuit', 'create_new_age:blank_circuit')
+      ]
+    ).transitionalItem('create_new_age:blank_circuit')
+    .loops(3);
 }
 )

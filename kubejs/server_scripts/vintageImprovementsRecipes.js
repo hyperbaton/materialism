@@ -196,4 +196,56 @@ ServerEvents.recipes(event => {
         ]
     ).transitionalItem('tfc:metal/sheet/gold')
     .loops(3);
+
+    // Laser recipes
+    event.recipes.create.sequenced_assembly(
+        [
+            Item.of('vintageimprovements:laser_item', 1)
+        ],
+        // Input item: Smooth stone slab
+        'tfmg:steel_pipe',
+        // Sequence of assembly steps
+        [
+          event.recipes.createDeploying('tfmg:steel_pipe', ['tfmg:steel_pipe', 'create_optical:mirror']),
+          event.recipes.createDeploying('tfmg:steel_pipe', ['tfmg:steel_pipe', 'tfc:gem/ruby']),
+          event.recipes.createDeploying('tfmg:steel_pipe', ['tfmg:steel_pipe', 'create_optical:mirror']),
+          event.recipes.createDeploying('tfmg:steel_pipe', ['tfmg:steel_pipe', 'tfmg:light_bulb']),
+          event.recipes.createDeploying('tfmg:steel_pipe', ['tfmg:steel_pipe', 'createaddition:copper_wire'])
+        ]
+    ).transitionalItem('tfmg:steel_pipe')
+    .loops(1);
+    // Semiconductor laser - simpler but requires access to microchips
+    event.recipes.create.sequenced_assembly(
+        [
+            Item.of('vintageimprovements:laser_item', 1)
+        ],
+        // Input item: Smooth stone slab
+        'tfmg:plastic_pipe',
+        // Sequence of assembly steps
+        [
+          event.recipes.createDeploying('tfmg:plastic_pipe', ['tfmg:plastic_pipe', 'create_optical:mirror']),
+          event.recipes.createDeploying('tfmg:plastic_pipe', ['tfmg:plastic_pipe', 'create_new_age:copper_circuit']),
+          event.recipes.createDeploying('tfmg:plastic_pipe', ['tfmg:plastic_pipe', 'create_optical:mirror']),
+          event.recipes.createDeploying('tfmg:plastic_pipe', ['tfmg:plastic_pipe', 'createaddition:copper_wire'])
+        ]
+    ).transitionalItem('tfmg:plastic_pipe')
+    .loops(1);
+    event.remove('vintageimprovements:craft/laser')
+    event.shaped(
+        Item.of('vintageimprovements:laser', 1), // arg 1: output
+        [
+          'ABA',
+          'CDC', // arg 2: the shape (array of strings)
+          'EFE'
+        ],
+        {
+          A: 'create:cogwheel',
+          B: 'vintageimprovements:laser_item',  //arg 3: the mapping object
+          C: 'create:precision_mechanism',
+          D: 'create:brass_casing',
+          E: 'vintageimprovements:invar_spring',
+          F: 'kubejs:lithium_battery_core'
+        }
+      )
+
   })

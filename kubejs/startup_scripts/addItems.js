@@ -13,5 +13,13 @@ StartupEvents.registry('item', event => {
     event.create('powder/uraninite').maxStackSize(16)
     event.create('wire/titanium_wire').maxStackSize(16)
     event.create('wire/stainless_steel_wire').maxStackSize(16)
+    event.create('silicon_wafer').maxStackSize(16)
+    const dyeColors = [
+      "white", "orange", "magenta", "light_blue", "yellow", "lime", "pink", "gray",
+      "light_gray", "cyan", "purple", "blue", "brown", "green", "red", "black"
+    ];
+    dyeColors.forEach(color => {
+      event.create(`plastic_sheet/${color}`).maxStackSize(16).displayName(`${color.charAt(0).toUpperCase() + color.slice(1)} Plastic Sheet`)
+    });
   })
   
