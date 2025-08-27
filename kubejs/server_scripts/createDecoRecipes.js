@@ -242,4 +242,16 @@ ServerEvents.recipes(event => {
             replacer         // Arg 3: the item to replace it with
           )
     }
+
+    // Trapdoor anvil recipes
+    event.remove('createdeco:andesite_trapdoor')
+    event.recipes.tfc.anvil('createdeco:andesite_trapdoor', 'tfc_metallurgy:metal/sheet/aluminum', ['draw_any', 'hit_any', 'hit_last'])
+    event.remove('createdeco:brass_trapdoor')
+    event.recipes.tfc.anvil('createdeco:brass_trapdoor', 'tfc:metal/sheet/brass', ['draw_any', 'hit_any', 'hit_last'])
+    event.remove('createdeco:copper_trapdoor')
+    event.recipes.tfc.anvil('createdeco:copper_trapdoor', 'tfc:metal/sheet/copper', ['draw_any', 'hit_any', 'hit_last'])
+    event.remove('createdeco:industrial_iron_trapdoor')
+    event.recipes.tfc.anvil('createdeco:industrial_iron_trapdoor', 'createdeco:industrial_iron_sheet', ['draw_any', 'hit_any', 'hit_last'])
+    event.remove('createdeco:zinc_trapdoor')
+    event.recipes.tfc.anvil('createdeco:zinc_trapdoor', 'tfc:metal/sheet/zinc', ['draw_any', 'hit_any', 'hit_last'])
 })

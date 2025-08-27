@@ -88,6 +88,7 @@ JEIEvents.hideItems(event => {
     event.hide('create:raw_zinc');
     event.hide('create:raw_zinc_block');
     event.hide('create:zinc_ingot');
+    event.hide('create:brass_ingot');
     event.hide('create:andesite_alloy_block');
     event.hide('tfmg:aluminum_ingot');
     event.hide('createdeco:andesite_sheet');
@@ -102,22 +103,22 @@ JEIEvents.hideItems(event => {
     event.hide('design_decor:hepatizon_large_chain');
     event.hide('design_decor:knightslime_large_chain');
     event.hide('design_decor:queens_lime_large_chain');
-    event.hide('tfmh:lead_axe');
-    event.hide('tfmh:lead_hoe');
-    event.hide('tfmh:lead_shovel');
-    event.hide('tfmh:lead_pickaxe');
-    event.hide('tfmh:lead_sword');
-    event.hide('tfmh:lead_ingot');
-    event.hide('tfmh:steel_axe');
-    event.hide('tfmh:steel_hoe');
-    event.hide('tfmh:steel_shovel');
-    event.hide('tfmh:steel_pickaxe');
-    event.hide('tfmh:steel_sword');
-    event.hide('tfmh:steel_ingot');
-    event.hide('tfmh:steel_helmet');
-    event.hide('tfmh:steel_chestplate');
-    event.hide('tfmh:steel_leggings');
-    event.hide('tfmh:steel_boots');
+    event.hide('tfmg:lead_axe');
+    event.hide('tfmg:lead_hoe');
+    event.hide('tfmg:lead_shovel');
+    event.hide('tfmg:lead_pickaxe');
+    event.hide('tfmg:lead_sword');
+    event.hide('tfmg:lead_ingot');
+    event.hide('tfmg:steel_axe');
+    event.hide('tfmg:steel_hoe');
+    event.hide('tfmg:steel_shovel');
+    event.hide('tfmg:steel_pickaxe');
+    event.hide('tfmg:steel_sword');
+    event.hide('tfmg:steel_ingot');
+    event.hide('tfmg:steel_helmet');
+    event.hide('tfmg:steel_chestplate');
+    event.hide('tfmg:steel_leggings');
+    event.hide('tfmg:steel_boots');
 
     // Hide Weather 2 items
     event.hide(/.*weather2.*/)
@@ -127,6 +128,29 @@ JEIEvents.hideItems(event => {
 
     removeToolsAndArmor('thorium')
     removeToolsAndArmor('uranium')
+
+    // Hide butcher strange stuff
+    event.hide('butcher:dragonscalearmor_helmet');
+    event.hide('butcher:dragonscalearmor_chestplate');
+    event.hide('butcher:dragonscalearmor_leggings');
+    event.hide('butcher:dragonscalearmor_boots');
+    event.hide('butcher:witcharmor_helmet');
+    event.hide('butcher:witcharmor_chestplate');
+    event.hide('butcher:sulfur');
+    event.hide(/butcher:.*salt.*/);
+    event.hide('butcher:witheredheart');
+    event.hide(/butcher:.*dragon.*/);
+    event.hide(/butcher:.*elder.*/);
+    event.hide(/butcher:.*illager.*/);
+    event.hide(/butcher:.*end.*/);
+    event.hide(/butcher:.*shulker.*/);
+    event.hide(/butcher:.*slime.*/);
+    event.hide(/butcher:.*sniffer.*/);
+    event.hide(/butcher:.*strider.*/);
+    event.hide(/butcher:.*piglin.*/);
+    event.hide(/butcher:.*evoker.*/);
+    event.hide(/butcher:.*hoglin.*/);
+    event.hide(/butcher:.*guardian.*/);
 
     // Hide Minecraft unreachable items
     event.hide(/minecraft:(?!leather).*helm/);
@@ -297,6 +321,18 @@ JEIEvents.hideItems(event => {
     event.hide('minecraft:phantom_membrane');
     event.hide('minecraft:fletching_table');
     event.hide('minecraft:campfire');
+    event.hide('minecraft:iron_trapdoor');
+    event.hide('minecraft:copper_block');
+    event.hide('minecraft:shroomlight');
+    event.hide('minecraft:sweet_berries');
+    event.hide('minecraft:bamboo_hanging_sign');
+    event.hide('minecraft:powered_rail');
+    event.hide('minecraft:tnt');
+    event.hide('minecraft:elytra');
+    event.hide('minecraft:totem_of_undying');
+    event.hide('minecraft:spawner');
+    event.hide('minecraft:frogspawn');
+    event.hide(/minecraft:.*coral.*(?!block)/);
 
     // Hide the TFC ores, which just clutter JEI
     event.hide(/tfc:ore\/.*\/.*/);
@@ -305,6 +341,9 @@ JEIEvents.hideItems(event => {
 
     // Hide the wild crops, which are unobtainable
     event.hide(/.*wild_crop.*/);
+
+    // Hide the spawn eggs, only obtainable in creative
+    event.hide(/.*spawn_egg.*/);
 
     function removeToolsAndArmor(metal) {
         event.hide('tfc_metallurgy:metal/anvil/' + metal)

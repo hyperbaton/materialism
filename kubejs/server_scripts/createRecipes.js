@@ -444,6 +444,11 @@ ServerEvents.recipes(event => {
       'tfc:metal/ingot/copper',
       '#tfc:chisels'
     ]).damageIngredient(Ingredient.of('#tfc:chisels'))
+    event.remove({output: 'create:brass_nugget'})
+    event.shapeless('9x create:brass_nugget',[
+      'tfc:metal/ingot/brass',
+      '#tfc:chisels'
+    ]).damageIngredient(Ingredient.of('#tfc:chisels'))
     event.remove({id: 'create:crafting/materials/zinc_nugget_from_decompacting'})
     event.shapeless('9x create:zinc_nugget',[
       'tfc:metal/ingot/zinc',

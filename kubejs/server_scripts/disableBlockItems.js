@@ -87,11 +87,13 @@ ServerEvents.recipes(event => {
     event.remove({ output: /minecraft:.*obsidian.*/ });
     event.remove({ output: 'minecraft:blaze_powder'});
     event.remove({ output: /minecraft:.*mud.*/ });
-    event.remove({ output: 'tfmh:steel_helmet'});
-    event.remove({ output: 'tfmh:steel_chestplate'});
-    event.remove({ output: 'tfmh:steel_leggings'});
-    event.remove({ output: 'tfmh:steel_boots'});
-    event.remove({ output: 'tfmh:nickel_ingot'});
+    event.remove({ output: 'tfmg:steel_helmet'});
+    event.remove({ output: 'tfmg:steel_chestplate'});
+    event.remove({ output: 'tfmg:steel_leggings'});
+    event.remove({ output: 'tfmg:steel_boots'});
+    event.remove({ output: 'tfmg:nickel_ingot'});
+    event.remove({ output: 'minecraft:bamboo_hanging_sign'});
+    event.remove({ output: 'minecraft:tnt'});
 
     // Disable Weather 2 recipes
     event.remove(/.*weather2.*/)
@@ -107,4 +109,9 @@ ServerEvents.recipes(event => {
     event.remove({ input: 'create:dough'});
     event.remove({ output: 'create:raw_zinc'});
     event.remove({ output: 'create:raw_zinc_block'});
+
+    // Disable Butcher recipes
+    event.remove({ output: 'butcher:sulfur'});
+    event.remove({ input: 'butcher:sulfur'});
+    event.remove({ input: 'butcher:salt'});
 });
