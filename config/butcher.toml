@@ -3,11 +3,9 @@
 	#Only butchery knives cause corpses/carcasses to drop. Disable to allow any tool/weapon to cause them to drop.
 	"Specific Tools Only" = true
 	#Enable/Disable End Dragon armor
-	"Dragon Armor" = true
-	#Enable/Disable the butchers house structure
-	Structures = true
+	"Dragon Armor" = false
 	#Enalbe/Disable guide book on first join
-	"Guide Book" = true
+	"Guide Book" = false
 	#Enable this to use vanilla foods instead of butchery's foods
 	"Vanilla Drops" = false
 	#Enable/Disable blood spreading
@@ -15,23 +13,25 @@
 	#Enable/Disable carcass weight effects
 	"Carcass Weight" = true
 	#Enable/Disable blocks weight effects
-	"Block Weight" = false
+	"Block Weight" = true
 	#Enable/Disable pillager disguise blending affect
 	"Pillager Disguise" = true
 	#Collect salt water from ocean biomes using a bucket
-	"Salt Water" = true
+	"Salt Water" = false
 	#Instantly drain carcasses/corpses
 	"Instant Drain" = false
 	#Enable/Disable sulfur ore generation
-	"Sulfur Ore" = true
+	"Sulfur Ore" = false
 	#Enable/Disable salt generation
-	Salt = true
+	Salt = false
 	#Enable to use a vanilla bucket to collect salt water. Disable to use butchery's own bucket.
-	"Salt Water: Vanilla Bucket" = true
-	#Enable/Disable overlay hints
-	Hints = true
+	"Salt Water: Vanilla Bucket" = false
 	#Enable/Disable organ drops
 	Organs = true
+	#Enable/Disable first join message.
+	"First Join Message" = false
+	#Enable/Disable overlay hints
+	"Hints (Disabled due to bugs)" = false
 
 ["Boss Carcasses"]
 	#Enable/Disable End Dragon carcass
@@ -45,7 +45,7 @@
 	#Enable/Disable farmers delight foods as drops
 	"Farmer's Delight" = false
 	#Enable to make TFC mobs drop carcasses
-	"Terra Firma Craft Carcasses" = false
+	"Terra Firma Craft Carcasses" = true
 	#Enable to use TFC drops instead of Butchery drops
 	"Terra Firma Craft drops" = false
 	#Enable to obtain life essence buckets from blood drain when right clicked with empty bucket
@@ -96,8 +96,40 @@
 	"Wither Skeleton" = true
 	Piglin = true
 	"Zombified Piglin" = true
+	Slime = true
+	Horse = true
+	Wolf = true
+	Axolotl = true
+	Donkey = true
+	Mule = true
+	Ocelot = true
+	Sniffer = true
+	Strider = true
+	Evoker = true
+	Guardian = true
+	Phantom = true
+	"Piglin Brute" = true
+	Shulker = true
+	Silverfish = true
+	Zoglin = true
+	"Zombie Villager" = true
+	Cat = true
 
 [Seasonal]
-	#Enable/Disable the halloween update
+	#Enable/Disable the Halloween update
 	Halloween = true
+	#Enable/Disable the Christmas update
+	Christmas = true
+
+["Block Audio"]
+	#Enable/Disable the grinders sound effect when in use.
+	"Grinder Sound Effect" = true
+	#Enable/Disable the crushers sound effect when in use.
+	"Crusher Sound Effect" = true
+
+[Structures]
+	#Enable/Disable the butchers house structure
+	butchers_house = false
+	#Enable/Disable the salt formation structure
+	salt_formation = false
 
