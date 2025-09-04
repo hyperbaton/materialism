@@ -10,7 +10,7 @@ keepXoonglinsLoaded = true
 	maxHouseSize = 319
 	#Maximum amount of blocks that the floor of a Xoonglin house can have.
 	#Range: 9 ~ 1000
-	maxFloorSize = 100
+	maxFloorSize = 300
 
 [needs]
 	#Minimum distance at which a Xoonglin can interact with containers.

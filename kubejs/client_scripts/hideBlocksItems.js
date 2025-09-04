@@ -11,8 +11,7 @@ JEIEvents.hideItems(event => {
     event.hide(/.*tfc_metallurgy.*andesite.*/);
     // Hide Create items
     event.hide('create:cart_assembler');
-    event.hide('create:empty_blaze_burner');
-    event.hide('create:blaze_burner');
+    event.hide(/create:.*blaze.*/)
     event.hide('create:controller_rail');
     event.hide('vintageimprovements:andesite_rod')
     event.hide('vintageimprovements:blaze_rod')
@@ -119,6 +118,20 @@ JEIEvents.hideItems(event => {
     event.hide('tfmg:steel_chestplate');
     event.hide('tfmg:steel_leggings');
     event.hide('tfmg:steel_boots');
+    event.hide('create:cinder_flour');
+    event.hide('tfmg:nickel_ingot');
+    event.hide('tfmg:lithium_ingot');
+    event.hide('tfmg:aluminum_axe');
+    event.hide('tfmg:aluminum_hoe');
+    event.hide('tfmg:aluminum_shovel');
+    event.hide('tfmg:aluminum_pickaxe');
+    event.hide('tfmg:aluminum_sword');
+    event.hide('design_decor:brass_light');
+    event.hide('design_decor:copper_light');
+    event.hide('design_decor:zinc_light');
+    event.hide('design_decor:brass_lamp');
+    event.hide('design_decor:copper_lamp');
+    event.hide('design_decor:zinc_lamp');
 
     // Hide Weather 2 items
     event.hide(/.*weather2.*/)

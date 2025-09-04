@@ -574,7 +574,60 @@ ServerEvents.recipes(event => {
         event.recipes.vintageimprovements.polishing('tfc:rock/hardened/andesite','tfc:rock/hardened/andesite')
       ]
     ).transitionalItem('tfc:rock/hardened/andesite').loops(6)
-    // TODO: Make recipes for asurine, crimsite, viridium, ochrum and schroria
+    event.recipes.create.sequenced_assembly(
+      'create:cut_calcite',
+      'tfc:rock/hardened/dolomite',
+      [
+        event.recipes.create.cutting('tfc:rock/hardened/dolomite','tfc:rock/hardened/dolomite'),
+        event.recipes.vintageimprovements.polishing('tfc:rock/hardened/dolomite','tfc:rock/hardened/dolomite')
+      ]
+    ).transitionalItem('tfc:rock/hardened/dolomite').loops(6)
+    // Advanced rocks:
+    event.recipes.create.sequenced_assembly(
+      'create:veridium',
+      'tfc:rock/cobble/schist',
+      [
+        event.recipes.createDeploying('tfc:rock/cobble/schist', ['tfc:rock/cobble/schist', 'tfc:powder/emerald']),
+        event.recipes.vintageimprovements.pressurizing('tfc:rock/cobble/schist',
+          ['tfc:rock/cobble/schist', Fluid.of('tfc:metal/bismuth_bronze', 100), Fluid.of('tfc:green_dye', 250)])
+        .secondaryFluidInput(1).heated(),
+        event.recipes.vintageimprovements.polishing('tfc:rock/cobble/schist', 'tfc:rock/cobble/schist')
+      ]
+    ).transitionalItem('tfc:rock/cobble/schist').loops(1)
+    event.recipes.create.sequenced_assembly(
+      'create:crimsite',
+      'tfc:rock/cobble/chert',
+      [
+        event.recipes.createDeploying('tfc:rock/cobble/chert', ['tfc:rock/cobble/chert', 'tfc:powder/ruby']),
+        event.recipes.vintageimprovements.pressurizing('tfc:rock/cobble/chert',
+          ['tfc:rock/cobble/chert', Fluid.of('tfc_metallurgy:metal/beryllium_copper', 100), Fluid.of('tfc:red_dye', 250)])
+        .secondaryFluidInput(1).heated(),
+        event.recipes.vintageimprovements.polishing('tfc:rock/cobble/chert', 'tfc:rock/cobble/chert')
+      ]
+    ).transitionalItem('tfc:rock/cobble/chert').loops(1)
+    event.recipes.create.sequenced_assembly(
+      'create:asurine',
+      'tfc:rock/cobble/phyllite',
+      [
+        event.recipes.createDeploying('tfc:rock/cobble/phyllite', ['tfc:rock/cobble/phyllite', 'tfc:powder/lapis_lazuli']),
+        event.recipes.vintageimprovements.pressurizing('tfc:rock/cobble/phyllite',
+          ['tfc:rock/cobble/phyllite', Fluid.of('tfc_metallurgy:metal/cobalt', 100), Fluid.of('tfc:blue_dye', 250)])
+        .secondaryFluidInput(1).heated(),
+        event.recipes.vintageimprovements.polishing('tfc:rock/cobble/phyllite', 'tfc:rock/cobble/phyllite')
+      ]
+    ).transitionalItem('tfc:rock/cobble/phyllite').loops(1)
+    event.recipes.create.sequenced_assembly(
+      'create:ochrum',
+      'tfc:rock/cobble/claystone',
+      [
+        event.recipes.createDeploying('tfc:rock/cobble/claystone', ['tfc:rock/cobble/claystone', 'tfc:powder/topaz']),
+        event.recipes.vintageimprovements.pressurizing('tfc:rock/cobble/claystone',
+          ['tfc:rock/cobble/claystone', Fluid.of('tfc_metallurgy:metal/constantan', 100), Fluid.of('tfc:brown_dye', 250)])
+        .secondaryFluidInput(1).heated(),
+        event.recipes.vintageimprovements.polishing('tfc:rock/cobble/claystone', 'tfc:rock/cobble/claystone')
+      ]
+    ).transitionalItem('tfc:rock/cobble/claystone').loops(1)
+    // TODO: Make recipes for schoria and schroria, using slag and mechanical extruder
 
     // Recipes with glass
     event.replaceInput(

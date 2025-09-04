@@ -26,5 +26,7 @@ ClientEvents.lang("en_us", event => {
     event.renameItem('interiors:kelp_chair', 'Rubber Chair')
     event.renameItem('interiors:kelp_floor_chair', 'Rubber Floor Chair')
     event.renameItem('interiors:kelp_seat', 'Rubber Seat')
+    event.renameItem('tfmg:cinderflourblock', 'Red Cinderblock')
+    event.renameItem('tfmg:cinderflour_block', 'Red Cinder Block')
     
 });

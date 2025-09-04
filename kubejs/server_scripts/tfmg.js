@@ -409,5 +409,34 @@ ServerEvents.recipes(event => {
       event.recipes.createDeploying('create:incomplete_precision_mechanism', ['create:incomplete_precision_mechanism', 'tfc_metallurgy:metal/rod/constantan'])
     ]
   ).transitionalItem('create:incomplete_precision_mechanism').loops(5)
+  
+  // Make cinder blocks from red concrete
+  event.remove({id: 'tfmg:compacting/cinderflourblock'})
+  event.recipes.create.cutting(
+    'tfmg:cinderflourblock',
+    'tfmg:red_concrete'
+  )
+
+  event.replaceInput(
+    { id: 'tfmg:mechanical_crafting/lithium_blade' }, // Arg 1: the filter
+    'tfmg:steel_sword',            // Arg 2: the item to replace
+    'tfc:metal/sword/steel'         // Arg 3: the item to replace it with
+  )
+
+  event.shaped('tfmg:lead_flywheel', 
+    [ 'III',
+      'ISI',
+      'III'
+    ], 
+    {I: 'tfc_metallurgy:metal/ingot/lead', S: 'create:shaft'}
+  )
+
+  event.shaped('tfmg:nickel_flywheel', 
+    [ 'III',
+      'ISI',
+      'III'
+    ], 
+    {I: 'tfc:metal/ingot/nickel', S: 'create:shaft'}
+  )
 }
 )

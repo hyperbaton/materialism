@@ -109,6 +109,8 @@ ServerEvents.recipes(event => {
     event.remove({ input: 'create:dough'});
     event.remove({ output: 'create:raw_zinc'});
     event.remove({ output: 'create:raw_zinc_block'});
+    event.remove({ output: /create:.*blaze.*/ });
+    event.remove({ output: 'create:cinder_flour'});
 
     // Disable Butcher recipes
     event.remove({ output: 'butcher:sulfur'});
