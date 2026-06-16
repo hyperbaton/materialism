@@ -1,0 +1,32 @@
+ClientEvents.lang("en_us", event => {
+    // Change the display name of a block
+    event.renameItem('create:andesite_casing', 'Aluminum casing')
+    event.renameItem('create_new_age:redstone_magnet', 'Weak Ferrite Magnet')
+    event.renameItem('create_new_age:layered_magnet', 'Strong Ferrite Magnet')
+    event.renameItem('create_new_age:fluxuated_magnetite', 'Alnico Magnet')
+    event.renameItem('create_new_age:netherite_magnet', 'Neodymium Magnet')
+    // event.renameItem('tfmg:capacitor', 'Lead-Acid Battery') // item removed/renamed in TFMG 1.21
+    // event.renameItem('tfmg:accumulator', 'Lithium Battery') // item removed/renamed in TFMG 1.21
+    event.renameItem('create_new_age:radioactive_thorium', 'Fissible Material')
+    event.renameItem('createsifter:andesite_mesh', 'Stainless Steel Mesh')
+    event.renameItem('createsifter:custom_mesh', 'Titanium Mesh')
+    event.renameItem('create:andesite_ladder', 'Aluminum Ladder')
+    event.renameItem('create:andesite_bars', 'Aluminum Bars')
+    event.renameItem('create:andesite_scaffolding', 'Aluminum Scaffolding')
+    event.renameItem('create:andesite_door', 'Aluminum Door')
+    event.renameItem('createdeco:andesite_window', 'Aluminum Window')
+    event.renameItem('createdeco:iron_window', 'Stainless Steel Window')
+    event.renameItem('createdeco:andesite_door', 'Aluminum Door')
+    event.renameItem('createdeco:locked_andesite_door', 'Locked Aluminum Door')
+    event.renameItem('createdeco:andesite_trapdoor', 'Aluminum Trapdoor')
+    event.renameItem('bellsandwhistles:andesite_door_step', 'Aluminum Door Step')
+    event.renameItem('createdeco:andesite_sheet_metal', 'Aluminum Sheet Metal')
+    event.renameItem('createdeco:andesite_support', 'Aluminum Support')
+    event.renameItem('bellsandwhistles:andesite_pilot', 'Aluminum Pilot')
+    // event.renameItem('interiors:kelp_chair', 'Rubber Chair') // item removed/renamed in Interiors 1.21
+    // event.renameItem('interiors:kelp_floor_chair', 'Rubber Floor Chair')
+    // event.renameItem('interiors:kelp_seat', 'Rubber Seat')
+    event.renameItem('tfmg:cinderflourblock', 'Red Cinderblock')
+    event.renameItem('tfmg:cinderflour_block', 'Red Cinder Block')
+    
+});

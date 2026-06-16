@@ -1,0 +1,38 @@
+#Time for a Xoonglin to mate again, in ticks.
+# Default: 6000
+# Range: 0 ~ 24000
+xoonglinMatingCooldown = 6000
+#This will force loading the chunks where a Xoonglin is present. ATTENTION: This can highly damage the performance.
+keepXoonglinsLoaded = false
+#If true, Xoonglins will use the basic humanoid/player model instead of the custom Xoonglin model.
+useHumanoidModel = false
+
+[homeDetection]
+	#Maximum amount of blocks that a Xoonglin house can have.
+	# Default: 1000
+	# Range: 36 ~ 24000
+	maxHouseSize = 1000
+	#Maximum amount of blocks that the floor of a Xoonglin house can have.
+	# Default: 100
+	# Range: 9 ~ 1000
+	maxFloorSize = 100
+	#Maximum height of a block that is part of a Xoonglin house.
+	# Default: 319
+	# Range: -64 ~ 319
+	maxHouseHeight = 319
+
+[needs]
+	#Minimum distance at which a Xoonglin can interact with containers.
+	# Default: 1.25
+	# Range: 0.1 ~ 5.0
+	closeEnoughDistanceToContainer = 1.25
+	#How long to check again if supplies are not present, in ticks.
+	# Default: 200
+	# Range: 40 ~ 5000
+	supplyCooldown = 200
+
+[jobs]
+	#The distance from the home entrance that is considered near enough for working at home.
+	# Default: 3.0
+	# Range: 1.0 ~ 50.0
+	homeWorkRadius = 3.0
