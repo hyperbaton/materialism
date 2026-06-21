@@ -1,12 +1,75 @@
 ServerEvents.recipes(event => {
-    // TODO: Multiple items missing in 1.21: vintageimprovements:laser_item, tfmg:electric_casing
-    // Also create_optical:focusing constructor changed. Commenting out until replacements are found.
+    event.remove('create_power_loader:empty_andesite_chunk_loader')
+    event.recipes.create.mechanical_crafting(
+        Item.of('create_power_loader:empty_andesite_chunk_loader', 1),
+        [
+            'SPOSGSOPS',
+            'SZACGCAZS',
+            'RMCEHECMU',
+            'RMEBLBEMU',
+            'RMEBLBEMU',
+            'TVSMMMSVT',
+            ' TVNNNVT '
+        ],
+        {
+            H: 'create_optical:hologram_source',
+            L: 'vintageimprovements:laser_item',
+            B: 'tfmg:accumulator',
+            M: 'create_new_age:netherite_magnet',
+            // TODO: Find replacement for missing item
+            //E: 'tfmg:electric_casing',
+            E: 'tfmg:electrical_switch',
+            C: 'computercraft:computer_normal',
+            G: 'create_new_age:reactor_glass',
+            S: 'tfmg:heavy_machinery_casing',
+            R: 'tfc:metal/block/red_steel',
+            U: 'tfc:metal/block/blue_steel',
+            V: 'tfc_metallurgy:metal/block/vanadium',
+            T: 'tfc_metallurgy:metal/double_sheet/titanium',
+            P: 'tfc_metallurgy:metal/double_sheet/platinum',
+            O: 'tfc_metallurgy:metal/double_sheet/osmiridium',
+            A: 'create:precision_mechanism',
+            Z: 'tfmg:steel_mechanism',
+            N: 'firmalife:metal/double_sheet/stainless_steel'
+        }
+    )
+    event.remove('create_power_loader:empty_brass_chunk_loader')
+    event.recipes.create.mechanical_crafting(
+        Item.of('create_power_loader:empty_brass_chunk_loader', 1),
+        [
+            'SPOSGSOPS',
+            'SZACGCAZS',
+            'RMCEHECMU',
+            'RMEBLBEMU',
+            'RMEBLBEMU',
+            'TVSMMMSVT',
+            ' TVNNNVT '
+        ],
+        {
+            H: 'create_optical:hologram_source',
+            L: 'vintageimprovements:laser_item',
+            B: 'tfmg:accumulator',
+            M: 'create_new_age:netherite_magnet',
+            // TODO: Find replacement for missing item
+            //E: 'tfmg:electric_casing',
+            E: 'tfmg:electrical_switch',
+            C: 'computercraft:computer_advanced',
+            G: 'create_new_age:reactor_glass',
+            S: 'tfmg:heavy_machinery_casing',
+            R: 'tfc:metal/block/red_steel',
+            U: 'tfc:metal/block/blue_steel',
+            V: 'tfc_metallurgy:metal/block/vanadium',
+            T: 'tfc_metallurgy:metal/double_sheet/titanium',
+            P: 'tfc_metallurgy:metal/double_sheet/platinum',
+            O: 'tfc_metallurgy:metal/double_sheet/osmiridium',
+            A: 'create:precision_mechanism',
+            Z: 'tfmg:steel_mechanism',
+            N: 'firmalife:metal/double_sheet/stainless_steel'
+        }
+    )
 
-    //event.remove('create_power_loader:crafting/empty_andesite_chunk_loader')
-    //event.remove('create_power_loader:crafting/empty_brass_chunk_loader')
-
-    // Sequenced assembly recipes for chunk loaders (these don't use missing items)
-    event.remove('create:conversion_0')
+    // Sequenced assembly recipes for activating chunk loaders
+    event.remove({output: 'create_power_loader:andesite_chunk_loader'})
     event.recipes.create.sequenced_assembly(
         'create_power_loader:andesite_chunk_loader',
         'create_power_loader:empty_andesite_chunk_loader',
@@ -25,6 +88,8 @@ ServerEvents.recipes(event => {
             })
         ]
     ).transitionalItem('create_power_loader:empty_andesite_chunk_loader').loops(1)
+
+    event.remove({output: 'create_power_loader:brass_chunk_loader'})
     event.recipes.create.sequenced_assembly(
         'create_power_loader:brass_chunk_loader',
         'create_power_loader:empty_brass_chunk_loader',
@@ -43,5 +108,4 @@ ServerEvents.recipes(event => {
             })
         ]
     ).transitionalItem('create_power_loader:empty_brass_chunk_loader').loops(1)
-    event.remove('create:conversion_1')
 })

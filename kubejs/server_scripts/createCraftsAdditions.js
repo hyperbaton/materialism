@@ -97,7 +97,7 @@ ServerEvents.recipes(event => {
       ],
     })
     event.remove({id: /createaddition:rolling\/\w+_plate/})
-    event.remove({id: /createvintageneoforged:rolling\/\w+_plate/})
+    event.remove({id: /vintageimprovements:rolling\/\w+_plate/})
     event.custom({
       type: 'createaddition:rolling',
       ingredients: [
@@ -152,7 +152,7 @@ ServerEvents.recipes(event => {
                 { item: `tfc_metallurgy:metal/rod/${metal}` }
             ],
             results: [
-                { id: `createvintageneoforged:${metal}_wire`, count: 2 }
+                { id: `vintageimprovements:${metal}_wire`, count: 2 }
             ],
         });
     });
@@ -163,7 +163,7 @@ ServerEvents.recipes(event => {
                 { item: `tfc:metal/rod/${metal}` }
             ],
             results: [
-                { id: `createvintageneoforged:${metal}_wire`, count: 2 }
+                { id: `vintageimprovements:${metal}_wire`, count: 2 }
             ],
         });
     });

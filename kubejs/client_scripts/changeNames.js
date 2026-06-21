@@ -19,6 +19,8 @@ ClientEvents.lang("en_us", event => {
     event.renameItem('createdeco:andesite_door', 'Aluminum Door')
     event.renameItem('createdeco:locked_andesite_door', 'Locked Aluminum Door')
     event.renameItem('createdeco:andesite_trapdoor', 'Aluminum Trapdoor')
+    event.renameItem('bellsandwhistles:andesite_bogie_steps', 'Aluminum Steps')
+    event.renameItem('bellsandwhistles:andesite_grab_rails', 'Aluminum Grab Bars')
     event.renameItem('bellsandwhistles:andesite_door_step', 'Aluminum Door Step')
     event.renameItem('createdeco:andesite_sheet_metal', 'Aluminum Sheet Metal')
     event.renameItem('createdeco:andesite_support', 'Aluminum Support')

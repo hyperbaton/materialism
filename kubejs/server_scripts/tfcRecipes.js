@@ -115,7 +115,7 @@ ServerEvents.recipes(event => {
     }*/
     function addCuttingCerealRecipes(event, cereals) {
         cereals.forEach(cereal => {
-            event.recipes.createvintageneoforged.vibrating([`tfc:food/${cereal}_grain`, 'tfc:straw'], `tfc:food/${cereal}`)
+            event.recipes.vintageimprovements.vibrating([`tfc:food/${cereal}_grain`, 'tfc:straw'], `tfc:food/${cereal}`)
         });
     }
     event.recipes.create.mixing(
@@ -198,15 +198,15 @@ ServerEvents.recipes(event => {
     event.remove('woodencog:mixing/barrel/cider')
     event.recipes.create.compacting(['artisanal:food/fruit_mash', Fluid.of('artisanal:apple_juice', 200)], TFC.ingredient.notRotten('tfc:food/red_apple'))
     event.recipes.create.compacting(['artisanal:food/fruit_mash', Fluid.of('artisanal:apple_juice', 200)], TFC.ingredient.notRotten('tfc:food/green_apple'))
-    event.recipes.createvintageneoforged.pressurizing(Fluid.of('tfc:cider'), Fluid.of('artisanal:apple_juice')).processingTime(24000)
-    event.recipes.createvintageneoforged.pressurizing(Fluid.of('tfcagedalcohol:aged_cider'), Fluid.of('tfc:cider')).processingTime(120000)
-    event.recipes.createvintageneoforged.pressurizing(Fluid.of('tfcagedalcohol:aged_beer'), Fluid.of('tfc:beer')).processingTime(120000)
-    event.recipes.createvintageneoforged.pressurizing(Fluid.of('tfcagedalcohol:aged_rum'), Fluid.of('tfc:rum')).processingTime(120000)
-    event.recipes.createvintageneoforged.pressurizing(Fluid.of('tfcagedalcohol:aged_sake'), Fluid.of('tfc:sake')).processingTime(120000)
-    event.recipes.createvintageneoforged.pressurizing(Fluid.of('tfcagedalcohol:aged_vodka'), Fluid.of('tfc:vodka')).processingTime(120000)
-    event.recipes.createvintageneoforged.pressurizing(Fluid.of('tfcagedalcohol:aged_whiskey'), Fluid.of('tfc:whiskey')).processingTime(120000)
-    event.recipes.createvintageneoforged.pressurizing(Fluid.of('tfcagedalcohol:aged_corn_whiskey'), Fluid.of('tfc:corn_whiskey')).processingTime(120000)
-    event.recipes.createvintageneoforged.pressurizing(Fluid.of('tfcagedalcohol:aged_rye_whiskey'), Fluid.of('tfc:rye_whiskey')).processingTime(120000)
+    event.recipes.vintageimprovements.pressurizing(Fluid.of('tfc:cider'), Fluid.of('artisanal:apple_juice')).processingTime(24000)
+    event.recipes.vintageimprovements.pressurizing(Fluid.of('tfcagedalcohol:aged_cider'), Fluid.of('tfc:cider')).processingTime(120000)
+    event.recipes.vintageimprovements.pressurizing(Fluid.of('tfcagedalcohol:aged_beer'), Fluid.of('tfc:beer')).processingTime(120000)
+    event.recipes.vintageimprovements.pressurizing(Fluid.of('tfcagedalcohol:aged_rum'), Fluid.of('tfc:rum')).processingTime(120000)
+    event.recipes.vintageimprovements.pressurizing(Fluid.of('tfcagedalcohol:aged_sake'), Fluid.of('tfc:sake')).processingTime(120000)
+    event.recipes.vintageimprovements.pressurizing(Fluid.of('tfcagedalcohol:aged_vodka'), Fluid.of('tfc:vodka')).processingTime(120000)
+    event.recipes.vintageimprovements.pressurizing(Fluid.of('tfcagedalcohol:aged_whiskey'), Fluid.of('tfc:whiskey')).processingTime(120000)
+    event.recipes.vintageimprovements.pressurizing(Fluid.of('tfcagedalcohol:aged_corn_whiskey'), Fluid.of('tfc:corn_whiskey')).processingTime(120000)
+    event.recipes.vintageimprovements.pressurizing(Fluid.of('tfcagedalcohol:aged_rye_whiskey'), Fluid.of('tfc:rye_whiskey')).processingTime(120000)
     event.remove('woodencog:mixing/barrel/rum')
     event.recipes.create.mixing('artisanal:food/cleaned_sugarcane', ['tfc:food/sugarcane', Fluid.of('minecraft:water', 100)]).processingTime(4000)
     event.recipes.create.mixing('artisanal:food/cleaned_sugarcane', ['tfc:food/sugarcane', Fluid.of('artisanal:soapy_water', 100)]).processingTime(100)
@@ -219,7 +219,7 @@ ServerEvents.recipes(event => {
         ['tfc:wool_cloth', Fluid.of('artisanal:sugarcane_juice', 500)]).processingTime(100)
     event.recipes.create.mixing(['tfc:dirty_jute_net', Fluid.of('artisanal:filtered_sugarcane_juice', 500)],
         ['tfc:jute_net', Fluid.of('artisanal:sugarcane_juice', 500)]).processingTime(100)
-    event.recipes.createvintageneoforged.pressurizing(Fluid.of('artisanal:alkalized_sugarcane_juice', 500), [Fluid.of('artisanal:filtered_sugarcane_juice', 500), 'tfc:powder/lime'])
+    event.recipes.vintageimprovements.pressurizing(Fluid.of('artisanal:alkalized_sugarcane_juice', 500), [Fluid.of('artisanal:filtered_sugarcane_juice', 500), 'tfc:powder/lime'])
         .processingTime(4000)
     event.recipes.create.mixing(['artisanal:dirty_burlap_cloth', Fluid.of('artisanal:clarified_sugarcane_juice', 500)],
         ['tfc:burlap_cloth', Fluid.of('artisanal:alkalized_sugarcane_juice', 500)]).processingTime(100)
@@ -229,21 +229,21 @@ ServerEvents.recipes(event => {
         ['tfc:wool_cloth', Fluid.of('artisanal:alkalized_sugarcane_juice', 500)]).processingTime(100)
     event.recipes.create.mixing(['tfc:dirty_jute_net', Fluid.of('artisanal:clarified_sugarcane_juice', 500)],
         ['tfc:jute_net', Fluid.of('artisanal:alkalized_sugarcane_juice', 500)]).processingTime(100)
-    event.recipes.createvintageneoforged.pressurizing([Fluid.of('artisanal:molasses', 20), 'artisanal:perishable_sugar'], Fluid.of('artisanal:filtered_sugarcane_juice', 200))
+    event.recipes.vintageimprovements.pressurizing([Fluid.of('artisanal:molasses', 20), 'artisanal:perishable_sugar'], Fluid.of('artisanal:filtered_sugarcane_juice', 200))
         .processingTime(2000).heated()
-    event.recipes.createvintageneoforged.pressurizing([Fluid.of('artisanal:molasses', 20), 'artisanal:perishable_sugar'], Fluid.of('artisanal:sugarcane_juice', 200))
+    event.recipes.vintageimprovements.pressurizing([Fluid.of('artisanal:molasses', 20), 'artisanal:perishable_sugar'], Fluid.of('artisanal:sugarcane_juice', 200))
         .processingTime(2000).heated()
-    event.recipes.createvintageneoforged.pressurizing([Fluid.of('artisanal:molasses', 20), 'artisanal:non_perishable_sugar'], Fluid.of('artisanal:clarified_sugarcane_juice', 200))
+    event.recipes.vintageimprovements.pressurizing([Fluid.of('artisanal:molasses', 20), 'artisanal:non_perishable_sugar'], Fluid.of('artisanal:clarified_sugarcane_juice', 200))
         .processingTime(2000).heated()
-    event.recipes.createvintageneoforged.pressurizing(Fluid.of('tfc:rum'), Fluid.of('artisanal:molasses')).processingTime(24000)
+    event.recipes.vintageimprovements.pressurizing(Fluid.of('tfc:rum'), Fluid.of('artisanal:molasses')).processingTime(24000)
     */
 
     // Phosphorus recipes
     // TODO: tfcthermaldeposits:mineral/powder/apatite no longer exists in 1.21
-    //event.recipes.createvintageneoforged.pressurizing(Item.of('tfc:pure_phosphorus', 5),
+    //event.recipes.vintageimprovements.pressurizing(Item.of('tfc:pure_phosphorus', 5),
     //['tfcthermaldeposits:mineral/powder/apatite', 'tfcthermaldeposits:mineral/powder/apatite', 'tfc:powder/charcoal', '#tfc:silica_sand'])
     //.superheated().processingTime(500)
-    event.recipes.createvintageneoforged.pressurizing(Item.of('tfc:pure_phosphorus', 5),
+    event.recipes.vintageimprovements.pressurizing(Item.of('tfc:pure_phosphorus', 5),
     ['tfc:groundcover/guano', 'tfc:powder/charcoal', '#tfc:silica_sand'])
     .superheated().processingTime(500)
     // TODO: createbb:white_phosphorus no longer exists in CreateBigCannons 1.21
@@ -265,7 +265,7 @@ ServerEvents.recipes(event => {
     addGemPolishingRecipes(event, gemTypes)
     function addGemPolishingRecipes(event, gems) {
         gems.forEach(gem => {
-            event.recipes.createvintageneoforged.polishing(
+            event.recipes.vintageimprovements.polishing(
                 `tfc:gem/${gem}`,
                 `tfc:ore/${gem}`
             )

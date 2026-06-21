@@ -14,8 +14,10 @@ ServerEvents.recipes(event => {
           B: 'tfc_metallurgy:metal/sheet/aluminum',
           C: 'tfmg:plastic_sheet',
           D: 'railways:smokestack_diesel',
-          E: 'tfmg:copper_cable',
-          F: 'tfmg:electric_casing',
+          E: 'tfmg:cable_tube',
+          // TODO: Find replacement for missing item
+          //E: 'tfmg:electric_casing',
+          F: 'tfmg:electrical_switch',
           G: 'create_optical:optical_source',
           H: 'firmalife:reinforced_glass'
         }
@@ -35,8 +37,10 @@ ServerEvents.recipes(event => {
         B: 'tfc_metallurgy:metal/sheet/aluminum',
         C: 'tfmg:plastic_sheet',
         D: 'railways:smokestack_diesel',
-        E: 'tfmg:copper_cable',
-        F: 'tfmg:electric_casing',
+        E: 'tfmg:cable_tube',
+        // TODO: Find replacement for missing item
+        //E: 'tfmg:electric_casing',
+        F: 'tfmg:electrical_switch',
         G: 'create_optical:optical_source',
         H: 'firmalife:reinforced_glass',
         I: 'createaddition:electrum_wire'
@@ -170,13 +174,13 @@ ServerEvents.recipes(event => {
       E: 'create:electron_tube',
       F: 'minecraft:lightning_rod',
       P: 'tfc_metallurgy:metal/double_sheet/platinum',
-      G: 'tfmg:copper_coil'
+      G: 'tfmg:large_coil'
     }
   )
   event.remove('computercraft:cable')
   event.shapeless('6x computercraft:cable',[
     'tfmg:cable_tube',
-    'tfmg:copper_cable'
+    'tfmg:cable_tube'
   ])
   event.remove('computercraft:monitor_normal')
   event.recipes.create.mechanical_crafting(
@@ -207,7 +211,7 @@ ServerEvents.recipes(event => {
     {
       P: 'tfmg:plastic_sheet',
       G: 'firmalife:reinforced_glass',
-      L: 'tfmg:rgb_light_bulb',
+      L: 'tfmg:light_bulb',
       A: 'tfc_metallurgy:metal/sheet/aluminum',
       E: 'create:electron_tube',
       O: 'create_optical:optical_source'
@@ -226,7 +230,9 @@ ServerEvents.recipes(event => {
         P: 'tfmg:plastic_sheet',
         C: 'create:mechanical_press',
         A: 'tfc_metallurgy:metal/sheet/aluminum',
-        E: 'tfmg:electric_casing',
+        // TODO: Find replacement for missing item
+        //E: 'tfmg:electric_casing',
+        E: 'tfmg:electrical_switch',
         R: 'minecraft:red_dye',
         G: 'minecraft:green_dye',
         B: 'minecraft:blue_dye',
@@ -247,7 +253,9 @@ ServerEvents.recipes(event => {
         C: 'create:turntable',
         D: 'create:precision_mechanism',
         A: 'tfc_metallurgy:metal/sheet/aluminum',
-        E: 'tfmg:electric_casing'
+        // TODO: Find replacement for missing item
+        //E: 'tfmg:electric_casing',
+        E: 'tfmg:electrical_switch',
       }
     )
   event.remove('computercraft:speaker')
@@ -263,7 +271,9 @@ ServerEvents.recipes(event => {
         P: 'tfmg:plastic_sheet',
         C: 'minecraft:note_block',
         A: 'tfc_metallurgy:metal/sheet/aluminum',
-        E: 'tfmg:electric_casing'
+        // TODO: Find replacement for missing item
+        //E: 'tfmg:electric_casing',
+        E: 'tfmg:electrical_switch',
       }
     )
 
@@ -296,7 +306,7 @@ event.remove({ output: 'computercraft:disk' });
   });*/
   dyeColors.forEach(color => {
     event.recipes.create.sequenced_assembly(
-      Item.of('computercraft:disk', 1).withNBT({Color: colorIds[color]}),
+      Item.of(`computercraft:disk[dyed_color={rgb:${colorIds[color]},show_in_tooltip:false}]`),
       'tfmg:plastic_sheet',
       [
         event.recipes.create.deploying(`kubejs:plastic_sheet/${color}`, ['tfmg:plastic_sheet', dyeItems(color)]),

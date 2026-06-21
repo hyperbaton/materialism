@@ -20,8 +20,8 @@ ServerEvents.recipes(event => {
                 'tfc_metallurgy:metal/sheet/invar',
                 ['tfc_metallurgy:metal/sheet/invar', 'tfc_metallurgy:metal/sheet/invar']
             ),
-            event.custom({ type: 'createvintageneoforged:curving_concave', ingredients: [{ item: 'tfc_metallurgy:metal/sheet/invar' }], results: [{ id: 'tfc_metallurgy:metal/sheet/invar' }] }),
-            event.recipes.createvintageneoforged.vacuumizing(
+            event.custom({type: 'vintageimprovements:curving', ingredients: [{item: 'tfc_metallurgy:metal/sheet/invar'}], results: [{id: 'tfc_metallurgy:metal/sheet/invar'}], mode: 2}),
+            event.recipes.vintageimprovements.vacuumizing(
                 'tfc_metallurgy:metal/sheet/invar',
                 ['tfc_metallurgy:metal/sheet/invar', Fluid.of('minecraft:water', 500)]
             )
@@ -40,12 +40,12 @@ ServerEvents.recipes(event => {
             'minecraft:tinted_glass',
             ['minecraft:tinted_glass', 'tfc:powder/charcoal']
             ),
-            event.recipes.createvintageneoforged.vibrating('minecraft:tinted_glass', 'minecraft:tinted_glass'),
+            event.recipes.vintageimprovements.vibrating('minecraft:tinted_glass', 'minecraft:tinted_glass'),
             event.recipes.createDeploying(
                 'minecraft:tinted_glass',
                 ['minecraft:tinted_glass', 'minecraft:tinted_glass']
             ),
-            event.recipes.createvintageneoforged.polishing('minecraft:tinted_glass', 'minecraft:tinted_glass'),
+            event.recipes.vintageimprovements.polishing('minecraft:tinted_glass', 'minecraft:tinted_glass'),
             event.recipes.createDeploying(
             'minecraft:tinted_glass',
             ['minecraft:tinted_glass', 'tfc_metallurgy:metal/rod/aluminum']
@@ -63,7 +63,7 @@ ServerEvents.recipes(event => {
     //    'create_optical:copper_coil',
     //    'tfmg:copper_coil'
     //)
-    // TODO: createvintageneoforged:zinc_wire no longer exists — need replacement wire item
+    // TODO: vintageimprovements:zinc_wire no longer exists — need replacement wire item
     //event.shaped(
     //    Item.of('create_optical:zinc_coil', 1),
     //    [
@@ -73,7 +73,7 @@ ServerEvents.recipes(event => {
     //    ],
     //    {
     //      A: 'tfc:metal/rod/wrought_iron',
-    //      B: 'createvintageneoforged:zinc_wire'
+    //      B: 'vintageimprovements:zinc_wire'
     //    }
     //)
     // TODO: createaddition:golden_wire no longer exists — need replacement wire item
@@ -107,12 +107,12 @@ ServerEvents.recipes(event => {
             'tfc:metal/sheet/silver',
             ['tfc:metal/sheet/silver', Fluid.of('firmalife:metal/chromium', 100)]
             ),
-            event.recipes.createvintageneoforged.vibrating('tfc:metal/sheet/silver', 'tfc:metal/sheet/silver'),
+            event.recipes.vintageimprovements.vibrating('tfc:metal/sheet/silver', 'tfc:metal/sheet/silver'),
             event.recipes.createDeploying(
                 'tfc:metal/sheet/silver',
                 ['tfc:metal/sheet/silver', 'minecraft:glass_pane']
             ),
-            event.recipes.createvintageneoforged.polishing('tfc:metal/sheet/silver', 'tfc:metal/sheet/silver'),
+            event.recipes.vintageimprovements.polishing('tfc:metal/sheet/silver', 'tfc:metal/sheet/silver'),
             event.recipes.createDeploying(
             'tfc:metal/sheet/silver',
             ['tfc:metal/sheet/silver', 'tfc_metallurgy:metal/rod/aluminum']
@@ -129,7 +129,7 @@ ServerEvents.recipes(event => {
         '#c:stones',            // Arg 2: the item to replace
         'tfc:metal/sheet/steel'         // Arg 3: the item to replace it with
         )
-    // TODO: createvintageneoforged:rose_gold_wire no longer exists — need replacement wire item
+    // TODO: vintageimprovements:rose_gold_wire no longer exists — need replacement wire item
     //event.shaped(
     //    Item.of('create_optical:rose_quartz_catalyst_coil', 1),
     //    [
@@ -138,7 +138,7 @@ ServerEvents.recipes(event => {
     //        'ABA'
     //    ],
     //    {
-    //        A: 'createvintageneoforged:rose_gold_wire',
+    //        A: 'vintageimprovements:rose_gold_wire',
     //        B: 'create:polished_rose_quartz'
     //    }
     //)

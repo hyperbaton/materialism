@@ -342,6 +342,16 @@ RecipeViewerEvents.removeEntries('item', event => {
     r('minecraft:spawner');
     r('minecraft:frogspawn');
     event.remove(/minecraft:.*coral.*(?!block)/);
+    event.remove(/minecraft:.*tuff.*/);
+    event.remove(/minecraft:.*tuff.*/);
+    event.remove(/minecraft:.*potion.*/);
+    r('minecraft:ominous_bottle');
+    r('minecraft:cobweb');
+    r('minecraft:wind_charge');
+    r('minecraft:breeze_rod');
+    
+    event.remove(/afc:.*leaves.*/);
+    event.remove(/tfc:.*leaves.*/);
 
     // Hide the TFC ores, which just clutter JEI
     event.remove(/tfc:ore\/.*\/.*/);

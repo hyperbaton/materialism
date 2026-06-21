@@ -134,7 +134,7 @@ ServerEvents.recipes(event => {
     //event.shaped(
     //  Item.of('create:minecart_coupling', 1),
     //  ['  B', ' A ', 'B  '],
-    //  { A: 'createvintageneoforged:nickel_spring', B: 'tfc_metallurgy:metal/rod/titanium' }
+    //  { A: 'vintageimprovements:nickel_spring', B: 'tfc_metallurgy:metal/rod/titanium' }
     //)
     // Change filter recipe
     event.remove('create:crafting/kinetics/filter')
@@ -476,7 +476,7 @@ ServerEvents.recipes(event => {
     event.replaceInput(
       { id: 'create:crafting/kinetics/weighted_ejector' }, // Arg 1: the filter
       'tfc:metal/sheet/gold',            // Arg 2: the item to replace
-      'createvintageneoforged:steel_spring'         // Arg 3: the item to replace it with
+      'vintageimprovements:steel_spring'         // Arg 3: the item to replace it with
     )
 
     // Recipes with rocks
@@ -501,7 +501,7 @@ ServerEvents.recipes(event => {
       'tfc:rock/hardened/granite',
       [
         event.recipes.create.cutting('tfc:rock/hardened/granite','tfc:rock/hardened/granite'),
-        event.recipes.createvintageneoforged.polishing('tfc:rock/hardened/granite','tfc:rock/hardened/granite')
+        event.recipes.vintageimprovements.polishing('tfc:rock/hardened/granite','tfc:rock/hardened/granite')
       ]
     ).transitionalItem('tfc:rock/hardened/granite').loops(6)
     event.recipes.create.sequenced_assembly(
@@ -509,7 +509,7 @@ ServerEvents.recipes(event => {
       'tfc:rock/hardened/diorite',
       [
         event.recipes.create.cutting('tfc:rock/hardened/diorite','tfc:rock/hardened/diorite'),
-        event.recipes.createvintageneoforged.polishing('tfc:rock/hardened/diorite','tfc:rock/hardened/diorite')
+        event.recipes.vintageimprovements.polishing('tfc:rock/hardened/diorite','tfc:rock/hardened/diorite')
       ]
     ).transitionalItem('tfc:rock/hardened/diorite').loops(6)
     event.recipes.create.sequenced_assembly(
@@ -517,7 +517,7 @@ ServerEvents.recipes(event => {
       'tfc:rock/hardened/limestone',
       [
         event.recipes.create.cutting('tfc:rock/hardened/limestone','tfc:rock/hardened/limestone'),
-        event.recipes.createvintageneoforged.polishing('tfc:rock/hardened/limestone','tfc:rock/hardened/limestone')
+        event.recipes.vintageimprovements.polishing('tfc:rock/hardened/limestone','tfc:rock/hardened/limestone')
       ]
     ).transitionalItem('tfc:rock/hardened/limestone').loops(6)
     event.recipes.create.sequenced_assembly(
@@ -525,7 +525,7 @@ ServerEvents.recipes(event => {
       'tfc:rock/hardened/slate',
       [
         event.recipes.create.cutting('tfc:rock/hardened/slate','tfc:rock/hardened/slate'),
-        event.recipes.createvintageneoforged.polishing('tfc:rock/hardened/slate','tfc:rock/hardened/slate')
+        event.recipes.vintageimprovements.polishing('tfc:rock/hardened/slate','tfc:rock/hardened/slate')
       ]
     ).transitionalItem('tfc:rock/hardened/slate').loops(6)
     event.recipes.create.sequenced_assembly(
@@ -533,7 +533,7 @@ ServerEvents.recipes(event => {
       'tfc:rock/hardened/claystone',
       [
         event.recipes.create.cutting('tfc:rock/hardened/claystone','tfc:rock/hardened/claystone'),
-        event.recipes.createvintageneoforged.polishing('tfc:rock/hardened/claystone','tfc:rock/hardened/claystone')
+        event.recipes.vintageimprovements.polishing('tfc:rock/hardened/claystone','tfc:rock/hardened/claystone')
       ]
     ).transitionalItem('tfc:rock/hardened/claystone').loops(6)
     event.recipes.create.sequenced_assembly(
@@ -541,7 +541,7 @@ ServerEvents.recipes(event => {
       'tfc:rock/hardened/dacite',
       [
         event.recipes.create.cutting('tfc:rock/hardened/dacite','tfc:rock/hardened/dacite'),
-        event.recipes.createvintageneoforged.polishing('tfc:rock/hardened/dacite','tfc:rock/hardened/dacite')
+        event.recipes.vintageimprovements.polishing('tfc:rock/hardened/dacite','tfc:rock/hardened/dacite')
       ]
     ).transitionalItem('tfc:rock/hardened/dacite').loops(6)
     event.recipes.create.sequenced_assembly(
@@ -549,7 +549,7 @@ ServerEvents.recipes(event => {
       'tfc:rock/hardened/andesite',
       [
         event.recipes.create.cutting('tfc:rock/hardened/andesite','tfc:rock/hardened/andesite'),
-        event.recipes.createvintageneoforged.polishing('tfc:rock/hardened/andesite','tfc:rock/hardened/andesite')
+        event.recipes.vintageimprovements.polishing('tfc:rock/hardened/andesite','tfc:rock/hardened/andesite')
       ]
     ).transitionalItem('tfc:rock/hardened/andesite').loops(6)
     event.recipes.create.sequenced_assembly(
@@ -557,7 +557,7 @@ ServerEvents.recipes(event => {
       'tfc:rock/hardened/dolomite',
       [
         event.recipes.create.cutting('tfc:rock/hardened/dolomite','tfc:rock/hardened/dolomite'),
-        event.recipes.createvintageneoforged.polishing('tfc:rock/hardened/dolomite','tfc:rock/hardened/dolomite')
+        event.recipes.vintageimprovements.polishing('tfc:rock/hardened/dolomite','tfc:rock/hardened/dolomite')
       ]
     ).transitionalItem('tfc:rock/hardened/dolomite').loops(6)
     // Advanced rocks:
@@ -566,10 +566,8 @@ ServerEvents.recipes(event => {
       'tfc:rock/cobble/schist',
       [
         event.recipes.createDeploying('tfc:rock/cobble/schist', ['tfc:rock/cobble/schist', 'tfc:powder/emerald']),
-        event.recipes.createvintageneoforged.pressurizing('tfc:rock/cobble/schist',
-          ['tfc:rock/cobble/schist', Fluid.of('tfc:metal/bismuth_bronze', 100), Fluid.of('tfc:green_dye', 250)])
-        .heated(),
-        event.recipes.createvintageneoforged.polishing('tfc:rock/cobble/schist', 'tfc:rock/cobble/schist')
+        event.custom({type: 'vintageimprovements:pressurizing', ingredients: [{item: 'tfc:rock/cobble/schist'}, {fluid: 'tfc:metal/bismuth_bronze', amount: 100, type: 'neoforge:single'}, {fluid: 'tfc:green_dye', amount: 250, type: 'neoforge:single'}], results: [{id: 'tfc:rock/cobble/schist'}], secondary_fluid_input: 1, heat_requirement: 'heated'}),
+        event.recipes.vintageimprovements.polishing('tfc:rock/cobble/schist', 'tfc:rock/cobble/schist')
       ]
     ).transitionalItem('tfc:rock/cobble/schist').loops(1)
     event.recipes.create.sequenced_assembly(
@@ -577,10 +575,8 @@ ServerEvents.recipes(event => {
       'tfc:rock/cobble/chert',
       [
         event.recipes.createDeploying('tfc:rock/cobble/chert', ['tfc:rock/cobble/chert', 'tfc:powder/ruby']),
-        event.recipes.createvintageneoforged.pressurizing('tfc:rock/cobble/chert',
-          ['tfc:rock/cobble/chert', Fluid.of('tfc_metallurgy:metal/beryllium_copper', 100), Fluid.of('tfc:red_dye', 250)])
-        .heated(),
-        event.recipes.createvintageneoforged.polishing('tfc:rock/cobble/chert', 'tfc:rock/cobble/chert')
+        event.custom({type: 'vintageimprovements:pressurizing', ingredients: [{item: 'tfc:rock/cobble/chert'}, {fluid: 'tfc_metallurgy:metal/beryllium_copper', amount: 100, type: 'neoforge:single'}, {fluid: 'tfc:red_dye', amount: 250, type: 'neoforge:single'}], results: [{id: 'tfc:rock/cobble/chert'}], secondary_fluid_input: 1, heat_requirement: 'heated'}),
+        event.recipes.vintageimprovements.polishing('tfc:rock/cobble/chert', 'tfc:rock/cobble/chert')
       ]
     ).transitionalItem('tfc:rock/cobble/chert').loops(1)
     event.recipes.create.sequenced_assembly(
@@ -588,10 +584,8 @@ ServerEvents.recipes(event => {
       'tfc:rock/cobble/phyllite',
       [
         event.recipes.createDeploying('tfc:rock/cobble/phyllite', ['tfc:rock/cobble/phyllite', 'tfc:powder/lapis_lazuli']),
-        event.recipes.createvintageneoforged.pressurizing('tfc:rock/cobble/phyllite',
-          ['tfc:rock/cobble/phyllite', Fluid.of('tfc_metallurgy:metal/cobalt', 100), Fluid.of('tfc:blue_dye', 250)])
-        .heated(),
-        event.recipes.createvintageneoforged.polishing('tfc:rock/cobble/phyllite', 'tfc:rock/cobble/phyllite')
+        event.custom({type: 'vintageimprovements:pressurizing', ingredients: [{item: 'tfc:rock/cobble/phyllite'}, {fluid: 'tfc_metallurgy:metal/cobalt', amount: 100, type: 'neoforge:single'}, {fluid: 'tfc:blue_dye', amount: 250, type: 'neoforge:single'}], results: [{id: 'tfc:rock/cobble/phyllite'}], secondary_fluid_input: 1, heat_requirement: 'heated'}),
+        event.recipes.vintageimprovements.polishing('tfc:rock/cobble/phyllite', 'tfc:rock/cobble/phyllite')
       ]
     ).transitionalItem('tfc:rock/cobble/phyllite').loops(1)
     event.recipes.create.sequenced_assembly(
@@ -599,10 +593,8 @@ ServerEvents.recipes(event => {
       'tfc:rock/cobble/claystone',
       [
         event.recipes.createDeploying('tfc:rock/cobble/claystone', ['tfc:rock/cobble/claystone', 'tfc:powder/topaz']),
-        event.recipes.createvintageneoforged.pressurizing('tfc:rock/cobble/claystone',
-          ['tfc:rock/cobble/claystone', Fluid.of('tfc_metallurgy:metal/constantan', 100), Fluid.of('tfc:brown_dye', 250)])
-        .heated(),
-        event.recipes.createvintageneoforged.polishing('tfc:rock/cobble/claystone', 'tfc:rock/cobble/claystone')
+        event.custom({type: 'vintageimprovements:pressurizing', ingredients: [{item: 'tfc:rock/cobble/claystone'}, {fluid: 'tfc_metallurgy:metal/constantan', amount: 100, type: 'neoforge:single'}, {fluid: 'tfc:brown_dye', amount: 250, type: 'neoforge:single'}], results: [{id: 'tfc:rock/cobble/claystone'}], secondary_fluid_input: 1, heat_requirement: 'heated'}),
+        event.recipes.vintageimprovements.polishing('tfc:rock/cobble/claystone', 'tfc:rock/cobble/claystone')
       ]
     ).transitionalItem('tfc:rock/cobble/claystone').loops(1)
     event.remove('create:smelting/scoria')
@@ -612,12 +604,10 @@ ServerEvents.recipes(event => {
       'tfc:rock/cobble/basalt',
       [
         event.recipes.create.filling('tfc:rock/cobble/basalt', ['tfc:rock/cobble/basalt', Fluid.of('tfmg:molten_slag', 100)]),
-        event.recipes.createvintageneoforged.pressurizing('tfc:rock/cobble/basalt',
-          ['tfc:rock/cobble/basalt', Fluid.of('tfc:metal/cast_iron', 100)])
-        .heated(),
-        event.recipes.createvintageneoforged.vacuumizing('tfc:rock/cobble/basalt',
+        event.custom({type: 'vintageimprovements:pressurizing', ingredients: [{item: 'tfc:rock/cobble/basalt'}, {fluid: 'tfc:metal/cast_iron', amount: 100, type: 'neoforge:single'}], results: [{id: 'tfc:rock/cobble/basalt'}], secondary_fluid_input: 1, heat_requirement: 'heated'}),
+        event.recipes.vintageimprovements.vacuumizing('tfc:rock/cobble/basalt',
           ['tfc:rock/cobble/basalt']),
-        event.recipes.createvintageneoforged.polishing('tfc:rock/cobble/basalt', 'tfc:rock/cobble/basalt')
+        event.recipes.vintageimprovements.polishing('tfc:rock/cobble/basalt', 'tfc:rock/cobble/basalt')
       ]
     ).transitionalItem('tfc:rock/cobble/basalt').loops(1)
     // TODO: Make recipes for schoria and schroria, using slag and mechanical extruder
@@ -685,7 +675,7 @@ ServerEvents.recipes(event => {
     )*/
 
     // Recipes with rubber
-    event.recipes.createvintageneoforged.pressurizing(
+    event.recipes.vintageimprovements.pressurizing(
       'afc:rubber_bar',
       [
         'tfc:powder/sulfur',
@@ -895,16 +885,16 @@ ServerEvents.recipes(event => {
             ),
             event.recipes.createPressing('tfc:metal/sheet/steel', 'tfc:metal/sheet/steel'),
             event.recipes.createPressing('tfc:metal/sheet/steel', 'tfc:metal/sheet/steel'),
-            event.recipes.createvintageneoforged.polishing('tfc:metal/sheet/steel', 'tfc:metal/sheet/steel').processingTime(200)
+            event.recipes.vintageimprovements.polishing('tfc:metal/sheet/steel', 'tfc:metal/sheet/steel').processingTime(200)
         ]
     ).transitionalItem('tfc:metal/sheet/steel')
     .loops(1);
-    // TODO: createvintageneoforged:invar_wire no longer exists in 1.21 — need replacement wire item
+    // TODO: vintageimprovements:invar_wire no longer exists in 1.21 — need replacement wire item
     event.remove('create:sequenced_assembly/precision_mechanism');
     //event.recipes.create.sequenced_assembly([
     //  CreateItem.of('create:precision_mechanism', 130.0),
     //  CreateItem.of('tfc:metal/sheet/brass', 8.0),
-    //  CreateItem.of('createvintageneoforged:invar_wire', 8.0),
+    //  CreateItem.of('vintageimprovements:invar_wire', 8.0),
     //  CreateItem.of('create:cogwheel', 5.0),
     //  CreateItem.of('create:shaft', 2.0),
     //  'tfc_metallurgy:metal/rod/constantan',
@@ -912,7 +902,7 @@ ServerEvents.recipes(event => {
     //], 'tfc:metal/sheet/brass', [
     //  event.recipes.createDeploying('create:incomplete_precision_mechanism', ['create:incomplete_precision_mechanism', 'create:cogwheel']),
     //  event.recipes.createDeploying('create:incomplete_precision_mechanism', ['create:incomplete_precision_mechanism', 'create:large_cogwheel']),
-    //  event.recipes.createDeploying('create:incomplete_precision_mechanism', ['create:incomplete_precision_mechanism', 'createvintageneoforged:small_invar_spring']),
+    //  event.recipes.createDeploying('create:incomplete_precision_mechanism', ['create:incomplete_precision_mechanism', 'vintageimprovements:small_invar_spring']),
     //  event.recipes.createDeploying('create:incomplete_precision_mechanism', ['create:incomplete_precision_mechanism', 'tfc_metallurgy:metal/rod/constantan'])
     //]).transitionalItem('create:incomplete_precision_mechanism').loops(5)
     // Add a custom recipe for sandpaper
@@ -936,7 +926,7 @@ ServerEvents.recipes(event => {
     //  CreateItem.of('tfc_metallurgy:ore/certus_quartz', 5.0)
     //], 'tfc_metallurgy:ore/certus_quartz', [
     //  event.recipes.createDeploying('tfc_metallurgy:ore/certus_quartz', ['tfc_metallurgy:ore/certus_quartz', 'minecraft:redstone']),
-    //  event.recipes.createvintageneoforged.vibrating('tfc_metallurgy:ore/certus_quartz', 'tfc_metallurgy:ore/certus_quartz'),
+    //  event.recipes.vintageimprovements.vibrating('tfc_metallurgy:ore/certus_quartz', 'tfc_metallurgy:ore/certus_quartz'),
     //  event.recipes.create_optical.focusing('tfc_metallurgy:ore/certus_quartz', 'tfc_metallurgy:ore/certus_quartz')
     //]).transitionalItem('tfc_metallurgy:ore/certus_quartz').loops(6)
 

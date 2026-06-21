@@ -7,12 +7,14 @@
 
 ServerEvents.recipes(event => {
     function curvingConcave(ingredientStr) {
-        const ingredient = ingredientStr.startsWith('#') ? { tag: ingredientStr.substring(1) } : { item: ingredientStr }
-        return event.custom({ type: 'createvintageneoforged:curving_concave', ingredients: [ingredient], results: [{ id: ingredientStr.startsWith('#') ? 'tfc:silica_glass_batch' : ingredientStr }] })
+        let ingObj = ingredientStr.startsWith('#') ? {tag: ingredientStr.substring(1)} : {item: ingredientStr}
+        let resId = ingredientStr.startsWith('#') ? 'minecraft:barrier' : ingredientStr
+        return event.custom({type: 'vintageimprovements:curving', ingredients: [ingObj], results: [{id: resId}], mode: 2})
     }
     function curvingConvex(ingredientStr) {
-        const ingredient = ingredientStr.startsWith('#') ? { tag: ingredientStr.substring(1) } : { item: ingredientStr }
-        return event.custom({ type: 'createvintageneoforged:curving_convex', ingredients: [ingredient], results: [{ id: ingredientStr.startsWith('#') ? 'tfc:silica_glass_batch' : ingredientStr }] })
+        let ingObj = ingredientStr.startsWith('#') ? {tag: ingredientStr.substring(1)} : {item: ingredientStr}
+        let resId = ingredientStr.startsWith('#') ? 'minecraft:barrier' : ingredientStr
+        return event.custom({type: 'vintageimprovements:curving', ingredients: [ingObj], results: [{id: resId}], mode: 1})
     }
     // #1
     event.recipes.create.sequenced_assembly([
@@ -70,8 +72,8 @@ ServerEvents.recipes(event => {
     event.recipes.create.sequenced_assembly([
         Item.of('firmalife:empty_hematitic_wine_bottle', 1)
     ], Ingredient.of('tfc:hematitic_glass_batch'), [ // input
-        event.recipes.createvintageneoforged.turning('tfc:hematitic_glass_batch', 'tfc:hematitic_glass_batch'),
-        event.recipes.createvintageneoforged.turning('tfc:hematitic_glass_batch', 'tfc:hematitic_glass_batch'),
+        event.recipes.vintageimprovements.turning('tfc:hematitic_glass_batch', 'tfc:hematitic_glass_batch'),
+        event.recipes.vintageimprovements.turning('tfc:hematitic_glass_batch', 'tfc:hematitic_glass_batch'),
         curvingConvex('tfc:hematitic_glass_batch'),
         event.recipes.create.cutting('tfc:hematitic_glass_batch', 'tfc:hematitic_glass_batch')
     ]).transitionalItem('tfc:hematitic_glass_batch').loops(1)
@@ -88,21 +90,21 @@ ServerEvents.recipes(event => {
     event.recipes.create.sequenced_assembly([
         Item.of('tfc:lens', 1)
     ], Ingredient.of('tfc:silica_glass_batch'), [ // input
-        event.recipes.createvintageneoforged.turning('tfc:silica_glass_batch', 'tfc:silica_glass_batch'),
-        event.recipes.createvintageneoforged.hammering('tfc:silica_glass_batch', 'tfc:silica_glass_batch').hammerBlows(2).anvilBlock('tfc:metal/anvil/steel'),
-        event.recipes.createvintageneoforged.polishing('tfc:silica_glass_batch', 'tfc:silica_glass_batch'),
+        event.recipes.vintageimprovements.turning('tfc:silica_glass_batch', 'tfc:silica_glass_batch'),
+        event.custom({type: 'vintageimprovements:hammering', ingredients: [{item: 'tfc:silica_glass_batch'}], results: [{id: 'tfc:silica_glass_batch'}], hammer_blows: 2, anvil_block: 'tfc:metal/anvil/steel'}),
+        event.recipes.vintageimprovements.polishing('tfc:silica_glass_batch', 'tfc:silica_glass_batch'),
         event.recipes.create.cutting('tfc:silica_glass_batch', 'tfc:silica_glass_batch')
     ]).transitionalItem('tfc:silica_glass_batch').loops(1)
 
     // #10
-    event.custom({ type: 'createvintageneoforged:curving_concave', ingredients: [{ item: 'tfc:olivine_glass_batch' }], results: [{ id: 'minecraft:green_stained_glass' }] })
+    event.custom({type: 'vintageimprovements:curving', ingredients: [{item: 'tfc:olivine_glass_batch'}], results: [{id: 'minecraft:green_stained_glass'}], mode: 2})
 
     // #11
     event.recipes.create.sequenced_assembly([
         Item.of('firmalife:wine_glass', 2)
     ], Ingredient.of('tfc:silica_glass_batch'), [ // input
-        event.recipes.createvintageneoforged.turning('tfc:silica_glass_batch', 'tfc:silica_glass_batch'),
-        event.recipes.createvintageneoforged.turning('tfc:silica_glass_batch', 'tfc:silica_glass_batch'),
+        event.recipes.vintageimprovements.turning('tfc:silica_glass_batch', 'tfc:silica_glass_batch'),
+        event.recipes.vintageimprovements.turning('tfc:silica_glass_batch', 'tfc:silica_glass_batch'),
         curvingConvex('tfc:silica_glass_batch'),
         event.recipes.create.cutting('tfc:silica_glass_batch', 'tfc:silica_glass_batch')
     ]).transitionalItem('tfc:silica_glass_batch').loops(1)
@@ -118,10 +120,10 @@ ServerEvents.recipes(event => {
     ]).transitionalItem('tfc:silica_glass_batch').loops(1)
 
     // #13
-    event.custom({ type: 'createvintageneoforged:curving_concave', ingredients: [{ item: 'tfc:silica_glass_batch' }], results: [{ id: 'minecraft:glass' }] })
+    event.custom({type: 'vintageimprovements:curving', ingredients: [{item: 'tfc:silica_glass_batch'}], results: [{id: 'minecraft:glass'}], mode: 2})
 
     // #14
-    event.custom({ type: 'createvintageneoforged:curving_concave', ingredients: [{ item: 'tfc:hematitic_glass_batch' }], results: [{ id: 'minecraft:orange_stained_glass' }] })
+    event.custom({type: 'vintageimprovements:curving', ingredients: [{item: 'tfc:hematitic_glass_batch'}], results: [{id: 'minecraft:orange_stained_glass'}], mode: 2})
 
     // #15
     event.recipes.create.sequenced_assembly([
@@ -250,7 +252,7 @@ ServerEvents.recipes(event => {
     event.recipes.create.sequenced_assembly([
         Item.of('tfc:olivine_glass_bottle', 1)
     ], Ingredient.of('tfc:olivine_glass_batch'), [ // input
-        event.recipes.createvintageneoforged.turning('tfc:olivine_glass_batch', 'tfc:olivine_glass_batch'),
+        event.recipes.vintageimprovements.turning('tfc:olivine_glass_batch', 'tfc:olivine_glass_batch'),
         curvingConvex('tfc:olivine_glass_batch'),
         event.recipes.create.cutting('tfc:olivine_glass_batch', 'tfc:olivine_glass_batch')
     ]).transitionalItem('tfc:olivine_glass_batch').loops(1)
@@ -267,14 +269,14 @@ ServerEvents.recipes(event => {
     event.recipes.create.sequenced_assembly([
         Item.of('firmalife:empty_volcanic_wine_bottle', 1)
     ], Ingredient.of('tfc:volcanic_glass_batch'), [ // input
-        event.recipes.createvintageneoforged.turning('tfc:volcanic_glass_batch', 'tfc:volcanic_glass_batch'),
-        event.recipes.createvintageneoforged.turning('tfc:volcanic_glass_batch', 'tfc:volcanic_glass_batch'),
+        event.recipes.vintageimprovements.turning('tfc:volcanic_glass_batch', 'tfc:volcanic_glass_batch'),
+        event.recipes.vintageimprovements.turning('tfc:volcanic_glass_batch', 'tfc:volcanic_glass_batch'),
         curvingConvex('tfc:volcanic_glass_batch'),
         event.recipes.create.cutting('tfc:volcanic_glass_batch', 'tfc:volcanic_glass_batch')
     ]).transitionalItem('tfc:volcanic_glass_batch').loops(1)
     
     // #31
-    event.custom({ type: 'createvintageneoforged:curving_concave', ingredients: [{ item: 'tfc:volcanic_glass_batch' }], results: [{ id: 'minecraft:blue_stained_glass' }] })
+    event.custom({type: 'vintageimprovements:curving', ingredients: [{item: 'tfc:volcanic_glass_batch'}], results: [{id: 'minecraft:blue_stained_glass'}], mode: 2})
     
     // #32
     event.recipes.create.sequenced_assembly([
@@ -317,7 +319,7 @@ ServerEvents.recipes(event => {
     event.recipes.create.sequenced_assembly([
         Item.of('tfc:hematitic_glass_bottle', 1)
     ], Ingredient.of('tfc:hematitic_glass_batch'), [ // input
-        event.recipes.createvintageneoforged.turning('tfc:hematitic_glass_batch', 'tfc:hematitic_glass_batch'),
+        event.recipes.vintageimprovements.turning('tfc:hematitic_glass_batch', 'tfc:hematitic_glass_batch'),
         curvingConvex('tfc:hematitic_glass_batch'),
         event.recipes.create.cutting('tfc:hematitic_glass_batch', 'tfc:hematitic_glass_batch')
     ]).transitionalItem('tfc:hematitic_glass_batch').loops(1)
@@ -365,8 +367,8 @@ ServerEvents.recipes(event => {
     event.recipes.create.sequenced_assembly([
         Item.of('firmalife:empty_olivine_wine_bottle', 1)
     ], Ingredient.of('tfc:olivine_glass_batch'), [ // input
-        event.recipes.createvintageneoforged.turning('tfc:olivine_glass_batch', 'tfc:olivine_glass_batch'),
-        event.recipes.createvintageneoforged.turning('tfc:olivine_glass_batch', 'tfc:olivine_glass_batch'),
+        event.recipes.vintageimprovements.turning('tfc:olivine_glass_batch', 'tfc:olivine_glass_batch'),
+        event.recipes.vintageimprovements.turning('tfc:olivine_glass_batch', 'tfc:olivine_glass_batch'),
         curvingConvex('tfc:olivine_glass_batch'),
         event.recipes.create.cutting('tfc:olivine_glass_batch', 'tfc:olivine_glass_batch')
     ]).transitionalItem('tfc:olivine_glass_batch').loops(1)
@@ -417,7 +419,7 @@ ServerEvents.recipes(event => {
     event.recipes.create.sequenced_assembly([
         Item.of('tfc:silica_glass_bottle', 1)
     ], Ingredient.of('tfc:silica_glass_batch'), [ // input
-        event.recipes.createvintageneoforged.turning('tfc:silica_glass_batch', 'tfc:silica_glass_batch'),
+        event.recipes.vintageimprovements.turning('tfc:silica_glass_batch', 'tfc:silica_glass_batch'),
         curvingConvex('tfc:silica_glass_batch'),
         event.recipes.create.cutting('tfc:silica_glass_batch', 'tfc:silica_glass_batch')
     ]).transitionalItem('tfc:silica_glass_batch').loops(1)
@@ -495,8 +497,8 @@ ServerEvents.recipes(event => {
     event.recipes.create.sequenced_assembly([
         Item.of('minecraft:glass_bottle', 1)
       ], '#tfc:glass_batches_tier_2', [ // input
-        event.recipes.createvintageneoforged.turning('tfc:hematitic_glass_batch', 'tfc:hematitic_glass_batch'),
-        event.recipes.createvintageneoforged.turning('tfc:hematitic_glass_batch', 'tfc:hematitic_glass_batch'),
+        event.recipes.vintageimprovements.turning('tfc:hematitic_glass_batch', 'tfc:hematitic_glass_batch'),
+        event.recipes.vintageimprovements.turning('tfc:hematitic_glass_batch', 'tfc:hematitic_glass_batch'),
         event.recipes.create.pressing('tfc:hematitic_glass_batch', 'tfc:hematitic_glass_batch'),
         curvingConvex('#tfc:glass_batches_tier_2'),
         event.recipes.create.cutting('tfc:hematitic_glass_batch', 'tfc:hematitic_glass_batch')
@@ -560,7 +562,7 @@ ServerEvents.recipes(event => {
     event.recipes.create.sequenced_assembly([
         Item.of('tfc:volcanic_glass_bottle', 1)
     ], Ingredient.of('tfc:volcanic_glass_batch'), [ // input
-        event.recipes.createvintageneoforged.turning('tfc:volcanic_glass_batch', 'tfc:volcanic_glass_batch'),
+        event.recipes.vintageimprovements.turning('tfc:volcanic_glass_batch', 'tfc:volcanic_glass_batch'),
         curvingConvex('tfc:volcanic_glass_batch'),
         event.recipes.create.cutting('tfc:volcanic_glass_batch', 'tfc:volcanic_glass_batch')
     ]).transitionalItem('tfc:volcanic_glass_batch').loops(1)
@@ -569,10 +571,10 @@ ServerEvents.recipes(event => {
     event.recipes.create.sequenced_assembly([
         Item.of('tfc:lamp_glass', 1)
     ], Ingredient.of('#tfc:glass_batches'), [ // input
-        event.recipes.createvintageneoforged.turning('tfc:silica_glass_batch', 'tfc:silica_glass_batch'),
+        event.recipes.vintageimprovements.turning('tfc:silica_glass_batch', 'tfc:silica_glass_batch'),
         curvingConvex('#tfc:glass_batches'),
         event.recipes.create.pressing('tfc:silica_glass_batch', 'tfc:silica_glass_batch'),
-        event.recipes.createvintageneoforged.turning('tfc:silica_glass_batch', 'tfc:silica_glass_batch'),
+        event.recipes.vintageimprovements.turning('tfc:silica_glass_batch', 'tfc:silica_glass_batch'),
         event.recipes.create.cutting('tfc:silica_glass_batch', 'tfc:silica_glass_batch')
     ]).transitionalItem('tfc:silica_glass_batch').loops(1)
 
@@ -589,9 +591,9 @@ ServerEvents.recipes(event => {
     event.recipes.create.sequenced_assembly([
         Item.of('tfc:empty_jar', 1)
     ], Ingredient.of('#tfc:glass_batches_tier_2'), [ // input
-        event.recipes.createvintageneoforged.turning('tfc:hematitic_glass_batch', 'tfc:hematitic_glass_batch'),
+        event.recipes.vintageimprovements.turning('tfc:hematitic_glass_batch', 'tfc:hematitic_glass_batch'),
         curvingConvex('#tfc:glass_batches_tier_2'),
-        event.recipes.createvintageneoforged.polishing('tfc:hematitic_glass_batch', 'tfc:hematitic_glass_batch'),
+        event.recipes.vintageimprovements.polishing('tfc:hematitic_glass_batch', 'tfc:hematitic_glass_batch'),
         event.recipes.create.cutting('tfc:hematitic_glass_batch', 'tfc:hematitic_glass_batch')
     ]).transitionalItem('tfc:hematitic_glass_batch').loops(1)
 

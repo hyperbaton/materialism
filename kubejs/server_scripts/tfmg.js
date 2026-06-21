@@ -64,7 +64,7 @@ ServerEvents.recipes(event => {
   event.replaceInput(
     { id: 'tfmg:crafting/galvanic_cell' }, // Arg 1: the filter
     'tfmg:copper_sulfate',            // Arg 2: the item to replace
-    'createvintageneoforged:copper_sulfate'         // Arg 3: the item to replace it with
+    'vintageimprovements:copper_sulfate'         // Arg 3: the item to replace it with
   )
   // Replace all wires with C&A or vintage ones
   event.replaceInput(
@@ -310,7 +310,7 @@ ServerEvents.recipes(event => {
       ['tfc_metallurgy:metal/sheet/nickel_silver', Fluid.of('tfc_metallurgy:metal/solder', 20)]
     ),
     event.recipes.createDeploying('tfc_metallurgy:metal/sheet/nickel_silver', ['tfc_metallurgy:metal/sheet/nickel_silver', 'tfc:lamp_glass']),
-    event.recipes.createvintageneoforged.vacuumizing('tfc_metallurgy:metal/sheet/nickel_silver', ['tfc_metallurgy:metal/sheet/nickel_silver']),
+    event.recipes.vintageimprovements.vacuumizing('tfc_metallurgy:metal/sheet/nickel_silver', ['tfc_metallurgy:metal/sheet/nickel_silver']),
     event.custom({
       type: 'create_new_age:energising',
       energy_needed: 500,
@@ -375,7 +375,7 @@ ServerEvents.recipes(event => {
   ], 'kubejs:lithium_battery_core', [ // input
     event.recipes.createDeploying('kubejs:lithium_battery_core', ['kubejs:lithium_battery_core', 'tfc_metallurgy:metal/sheet/aluminum']),
     event.recipes.createDeploying('kubejs:lithium_battery_core', ['kubejs:lithium_battery_core', 'tfc_metallurgy:metal/sheet/titanium']),
-    event.recipes.createvintageneoforged.vacuumizing('kubejs:lithium_battery_core', 'kubejs:lithium_battery_core'),
+    event.recipes.vintageimprovements.vacuumizing('kubejs:lithium_battery_core', 'kubejs:lithium_battery_core'),
     event.recipes.createDeploying('kubejs:lithium_battery_core', ['kubejs:lithium_battery_core', 'firmalife:metal/double_sheet/stainless_steel']),
     event.recipes.createDeploying('kubejs:lithium_battery_core', ['kubejs:lithium_battery_core', 'createaddition:copper_wire']),
     event.custom({
@@ -407,12 +407,12 @@ ServerEvents.recipes(event => {
   //event.recipes.tfmg.coking('minecraft:charcoal', [CreateItem.of('tfmg:coal_coke', 0.4), Fluid.of('tfmg:creosote', 1)], 2000)
   //event.recipes.tfmg.coking('#minecraft:logs', [CreateItem.of('minecraft:charcoal', 0.8), Fluid.of('minecraft:water', 1)], 5000)
 
-  // TODO: createvintageneoforged:invar_wire no longer exists in 1.21 — need replacement wire item
+  // TODO: vintageimprovements:invar_wire no longer exists in 1.21 — need replacement wire item
   //event.recipes.create.sequenced_assembly(
   //  [
   //    CreateItem.of('tfmg:steel_mechanism', 130.0),
   //    CreateItem.of('tfc:metal/sheet/steel', 8.0),
-  //    CreateItem.of('createvintageneoforged:invar_wire', 8.0),
+  //    CreateItem.of('vintageimprovements:invar_wire', 8.0),
   //    CreateItem.of('tfmg:steel_cogwheel', 5.0),
   //    CreateItem.of('create:shaft', 2.0)
   //  ],
@@ -420,7 +420,7 @@ ServerEvents.recipes(event => {
   //  [
   //    event.recipes.createDeploying('create:incomplete_precision_mechanism', ['create:incomplete_precision_mechanism', 'tfmg:steel_cogwheel']),
   //    event.recipes.createDeploying('create:incomplete_precision_mechanism', ['create:incomplete_precision_mechanism', 'tfmg:large_steel_cogwheel']),
-  //    event.recipes.createDeploying('create:incomplete_precision_mechanism', ['create:incomplete_precision_mechanism', 'createvintageneoforged:small_invar_spring']),
+  //    event.recipes.createDeploying('create:incomplete_precision_mechanism', ['create:incomplete_precision_mechanism', 'vintageimprovements:small_invar_spring']),
   //    event.recipes.createDeploying('create:incomplete_precision_mechanism', ['create:incomplete_precision_mechanism', 'tfc_metallurgy:metal/rod/constantan'])
   //  ]
   //).transitionalItem('create:incomplete_precision_mechanism').loops(5)

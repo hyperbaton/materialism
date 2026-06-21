@@ -39,7 +39,7 @@ ServerEvents.recipes(event => {
   //event.recipes.create.sequenced_assembly([Item.of('create_new_age:redstone_magnet', 1)],
   //  'create_new_age:magnetite_block', [
   //    event.recipes.createDeploying('create_new_age:magnetite_block', ['create_new_age:magnetite_block', 'createbb:crushed_zinc']),
-  //    event.recipes.createvintageneoforged.vibrating('create_new_age:magnetite_block', 'create_new_age:magnetite_block'),
+  //    event.recipes.vintageimprovements.vibrating('create_new_age:magnetite_block', 'create_new_age:magnetite_block'),
   //    event.recipes.createPressing('create_new_age:magnetite_block', 'create_new_age:magnetite_block'),
   //    event.custom({ type: 'create_new_age:energising', energy_needed: 1000,
   //      ingredients: [{ item: 'create_new_age:magnetite_block'}],
@@ -104,7 +104,7 @@ ServerEvents.recipes(event => {
           'kubejs:alnico_core',
           ['kubejs:alnico_core', Fluid.of('firmalife:metal/chromium', 100)]
         ),
-        event.recipes.createvintageneoforged.vibrating('kubejs:alnico_core',
+        event.recipes.vintageimprovements.vibrating('kubejs:alnico_core',
             'kubejs:alnico_core')
     ]
   ).transitionalItem('kubejs:alnico_core')
@@ -130,12 +130,12 @@ ServerEvents.recipes(event => {
             'tfc_metallurgy:metal/sheet/electrum',
             ['tfc_metallurgy:metal/sheet/electrum', 'kubejs:powder/neodymium']
         ),
-        event.recipes.createvintageneoforged.vacuumizing(
+        event.recipes.vintageimprovements.vacuumizing(
           'tfc_metallurgy:metal/sheet/electrum',
           'tfc_metallurgy:metal/sheet/electrum'
         ).superheated(),
         event.recipes.createPressing('tfc_metallurgy:metal/sheet/electrum', 'tfc_metallurgy:metal/sheet/electrum'),
-        event.recipes.createvintageneoforged.polishing(
+        event.recipes.vintageimprovements.polishing(
           'tfc_metallurgy:metal/sheet/electrum',
           'tfc_metallurgy:metal/sheet/electrum'),
         event.custom({
@@ -220,7 +220,7 @@ ServerEvents.recipes(event => {
               'create_new_age:basic_energiser',
               ['create_new_age:basic_energiser', 'minecraft:lightning_rod']
           ),
-          event.recipes.createvintageneoforged.hammering('create_new_age:basic_energiser','create_new_age:basic_energiser').hammerBlows(1).anvilBlock('tfc:metal/anvil/steel'),
+          event.custom({type: 'vintageimprovements:hammering', ingredients: [{item: 'create_new_age:basic_energiser'}], results: [{id: 'create_new_age:basic_energiser'}], hammer_blows: 1, anvil_block: 'tfc:metal/anvil/steel'}),
           event.custom({
             type: 'create_new_age:energising',
             energy_needed: 1000,
@@ -230,7 +230,7 @@ ServerEvents.recipes(event => {
             results: [
               { id: 'create_new_age:basic_energiser'},
             ]
-          })        
+          })
       ]
     ).transitionalItem('create_new_age:basic_energiser')
     .loops(3);
@@ -251,7 +251,7 @@ ServerEvents.recipes(event => {
     
     // Motor recipes
     // TODO: tfmg:electric_casing, tfmg:magnetic_ingot, tfmg:steel_mechanism no longer exist in TFMG 1.21
-    // TODO: createaddition:copper_wire, createaddition:gold_wire, createvintageneoforged:silver_wire no longer exist
+    // TODO: createaddition:copper_wire, createaddition:gold_wire, vintageimprovements:silver_wire no longer exist
     // T1: Basic motor
     event.remove({id: 'create_new_age:shaped/basic_motor'})
     //event.recipes.create.mechanical_crafting('create_new_age:basic_motor', [
@@ -338,7 +338,7 @@ ServerEvents.recipes(event => {
     //  E: 'tfmg:magnetic_ingot',
     //  F: 'tfmg:steel_mechanism',
     //  G: 'create:shaft',
-    //  H: 'createvintageneoforged:silver_wire'
+    //  H: 'vintageimprovements:silver_wire'
     //})
 
     // Heat transfer elements
@@ -355,8 +355,8 @@ ServerEvents.recipes(event => {
     //          'tfc:metal/sheet/copper',
     //          ['tfc:metal/sheet/copper', 'tfc:metal/sheet/copper']
     //      ),
-    //      event.recipes.createvintageneoforged.curving('tfc:metal/sheet/copper', 'tfc:metal/sheet/copper').head('createvintageneoforged:w_shaped_curving_head'),
-    //      event.recipes.createvintageneoforged.vacuumizing('tfc:metal/sheet/copper', ['tfc:metal/sheet/copper', Fluid.of('tfmg:cooling_fluid', 1000)]).heated(),
+    //      event.recipes.vintageimprovements.curving('tfc:metal/sheet/copper', 'tfc:metal/sheet/copper').head('vintageimprovements:w_shaped_curving_head'),
+    //      event.recipes.vintageimprovements.vacuumizing('tfc:metal/sheet/copper', ['tfc:metal/sheet/copper', Fluid.of('tfmg:cooling_fluid', 1000)]).heated(),
     //      event.recipes.createCutting('tfc:metal/sheet/copper', 'tfc:metal/sheet/copper')
     //  ]
     //).transitionalItem('tfc:metal/sheet/copper')
@@ -381,7 +381,7 @@ ServerEvents.recipes(event => {
     //          'design_decor:copper_gas_tank',
     //          ['design_decor:copper_gas_tank', 'tfmg:screw']
     //      ),
-    //      event.recipes.createvintageneoforged.hammering('design_decor:copper_gas_tank','design_decor:copper_gas_tank').hammerBlows(3).anvilBlock('tfc:metal/anvil/steel'),
+    //      event.recipes.vintageimprovements.hammering('design_decor:copper_gas_tank','design_decor:copper_gas_tank').hammerBlows(3).anvilBlock('tfc:metal/anvil/steel'),
     //      event.recipes.createDeploying(
     //          'design_decor:copper_gas_tank',
     //          ['design_decor:copper_gas_tank', 'create_new_age:heat_pipe']
@@ -410,7 +410,7 @@ ServerEvents.recipes(event => {
     //          'create_new_age:heat_pipe',
     //          ['create_new_age:heat_pipe', 'tfc:fire_clay']
     //      ),
-    //      event.recipes.createvintageneoforged.curving('create_new_age:heat_pipe', 'create_new_age:heat_pipe').head('createvintageneoforged:concave_curving_head')
+    //      event.recipes.vintageimprovements.curving('create_new_age:heat_pipe', 'create_new_age:heat_pipe').head('vintageimprovements:concave_curving_head')
     //  ]
     //).transitionalItem('create_new_age:heat_pipe')
     //.loops(3);
@@ -440,7 +440,7 @@ ServerEvents.recipes(event => {
               'tfc:metal/block/copper_slab',
               ['tfc:metal/block/copper_slab', 'create:shaft']
           ),
-          event.recipes.createvintageneoforged.vacuumizing('tfc:metal/sheet/copper', ['tfc:metal/sheet/copper']),
+          event.recipes.vintageimprovements.vacuumizing('tfc:metal/sheet/copper', ['tfc:metal/sheet/copper']),
       ]
     ).transitionalItem('tfc:metal/block/copper_slab')
     .loops(1);
@@ -537,7 +537,7 @@ ServerEvents.recipes(event => {
     //          'create_new_age:reactor_casing',
     //          ['create_new_age:reactor_casing', 'tfc:fire_clay']
     //      ),
-    //      event.recipes.createvintageneoforged.curving('create_new_age:reactor_casing', 'create_new_age:reactor_casing').head('createvintageneoforged:concave_curving_head')
+    //      event.recipes.vintageimprovements.curving('create_new_age:reactor_casing', 'create_new_age:reactor_casing').head('vintageimprovements:concave_curving_head')
     //  ]
     //).transitionalItem('create_new_age:reactor_casing')
     //.loops(3);
@@ -561,7 +561,7 @@ ServerEvents.recipes(event => {
       G: 'tfc_metallurgy:metal/rod/graphite'
     })
 
-    // TODO: create_optical:focusing and createvintageneoforged:centrifugation constructors changed in 1.21
+    // TODO: create_optical:focusing and vintageimprovements:centrifugation constructors changed in 1.21
     event.remove('create_new_age:thorium/thorium_crushing')
     //event.recipes.create_optical.focusing(
     //  ['create_new_age:radioactive_thorium'],
@@ -569,7 +569,7 @@ ServerEvents.recipes(event => {
     //  100,
     //  3
     //)
-    //event.recipes.createvintageneoforged.centrifugation(CreateItem.of('create_new_age:radioactive_thorium', 0.5),
+    //event.recipes.vintageimprovements.centrifugation(CreateItem.of('create_new_age:radioactive_thorium', 0.5),
     //  ['tfc_metallurgy:metal/ingot/uranium', Fluid.of('tfmg:sulfuric_acid', 500)], 500, 256
     //)
 
@@ -590,7 +590,7 @@ ServerEvents.recipes(event => {
     //          'tfc_metallurgy:metal/double_sheet/zircaloy',
     //          ['tfc_metallurgy:metal/double_sheet/zircaloy', 'tfc_metallurgy:metal/double_sheet/zircaloy']
     //      ),
-    //      event.recipes.createvintageneoforged.curving('tfc_metallurgy:metal/double_sheet/zircaloy', 'tfc_metallurgy:metal/double_sheet/zircaloy').head('createvintageneoforged:w_shaped_curving_head')
+    //      event.recipes.vintageimprovements.curving('tfc_metallurgy:metal/double_sheet/zircaloy', 'tfc_metallurgy:metal/double_sheet/zircaloy').head('vintageimprovements:w_shaped_curving_head')
     //  ]
     //).transitionalItem('tfc_metallurgy:metal/double_sheet/zircaloy')
     //.loops(1);
@@ -603,9 +603,9 @@ ServerEvents.recipes(event => {
     //  ],
     //  Item.of('#tfc:silica_sand', 5),
     //  [
-    //    event.recipes.createvintageneoforged.pressurizing('#tfc:silica_sand', 'tfcweather:sand/sand_layer/white').heated().processingTime(10),
+    //    event.recipes.vintageimprovements.pressurizing('#tfc:silica_sand', 'tfcweather:sand/sand_layer/white').heated().processingTime(10),
     //    event.recipes.create.pressing('tfcweather:sand/sand_layer/white', 'tfcweather:sand/sand_layer/white'),
-    //    event.recipes.createvintageneoforged.pressurizing('#tfc:silica_sand', 'tfcweather:sand/sand_layer/white').heated().processingTime(20),
+    //    event.recipes.vintageimprovements.pressurizing('#tfc:silica_sand', 'tfcweather:sand/sand_layer/white').heated().processingTime(20),
     //    event.recipes.create.cutting('tfcweather:sand/sand_layer/white', 'tfcweather:sand/sand_layer/white')
     //  ]
     //).transitionalItem('tfcweather:sand/sand_layer/white')
@@ -628,9 +628,9 @@ ServerEvents.recipes(event => {
     //       500,
     //       2
     //     ),*/
-    //     event.recipes.createvintageneoforged.laser_cutting('kubejs:silicon_wafer', 'kubejs:silicon_wafer').energyCost(1000),
+    //     event.recipes.vintageimprovements.laser_cutting('kubejs:silicon_wafer', 'kubejs:silicon_wafer').energyCost(1000),
     //     event.recipes.create.filling('kubejs:silicon_wafer', ['kubejs:silicon_wafer', Fluid.of('minecraft:water', 100)]),
-    //     event.recipes.createvintageneoforged.vibrating('kubejs:silicon_wafer','kubejs:silicon_wafer').processingTime(500),
+    //     event.recipes.vintageimprovements.vibrating('kubejs:silicon_wafer','kubejs:silicon_wafer').processingTime(500),
     //     event.recipes.create.filling('kubejs:silicon_wafer', ['kubejs:silicon_wafer', Fluid.of('minecraft:water', 100)])
     //   ]
     // ).transitionalItem('kubejs:silicon_wafer')
@@ -650,7 +650,7 @@ ServerEvents.recipes(event => {
     //     event.recipes.createDeploying('create_new_age:blank_circuit', ['create_new_age:blank_circuit', 'tfmg:resistor']),
     //     event.recipes.createDeploying('create_new_age:blank_circuit', ['create_new_age:blank_circuit', 'tfmg:capacitor_item']),
     //     event.recipes.createDeploying('create_new_age:blank_circuit', ['create_new_age:blank_circuit', 'createaddition:copper_wire']),
-    //     event.recipes.createvintageneoforged.polishing('create_new_age:blank_circuit', 'create_new_age:blank_circuit')
+    //     event.recipes.vintageimprovements.polishing('create_new_age:blank_circuit', 'create_new_age:blank_circuit')
     //   ]
     // ).transitionalItem('create_new_age:blank_circuit')
     // .loops(3);

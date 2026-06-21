@@ -35,10 +35,10 @@
     //    CreateItem.of('createsifter:brass_mesh', 1)
     //], 'tfc:metal/rod/brass', [
     //    event.recipes.create.deploying('tfc:metal/rod/brass', ['tfc:metal/rod/brass', 'tfc:metal/rod/brass']),
-    //    event.recipes.create.deploying('tfc:metal/rod/brass', ['tfc:metal/rod/brass', 'createvintageneoforged:brass_wire']),
-    //    event.recipes.create.deploying('tfc:metal/rod/brass', ['tfc:metal/rod/brass', 'createvintageneoforged:brass_wire']),
+    //    event.recipes.create.deploying('tfc:metal/rod/brass', ['tfc:metal/rod/brass', 'vintageimprovements:brass_wire']),
+    //    event.recipes.create.deploying('tfc:metal/rod/brass', ['tfc:metal/rod/brass', 'vintageimprovements:brass_wire']),
     //    event.recipes.create.pressing('tfc:metal/rod/brass', 'tfc:metal/rod/brass'),
-    //    event.recipes.createvintageneoforged.polishing('tfc:metal/rod/brass', 'tfc:metal/rod/brass')
+    //    event.recipes.vintageimprovements.polishing('tfc:metal/rod/brass', 'tfc:metal/rod/brass')
     //]).transitionalItem('tfc:metal/rod/brass').loops(3);
     // Stainless Steel mesh
     event.remove('createsifter:andesite_mesh')
@@ -49,7 +49,7 @@
             event.recipes.create.deploying('firmalife:metal/rod/stainless_steel', ['firmalife:metal/rod/stainless_steel', 'kubejs:wire/stainless_steel_wire']),
             event.recipes.create.deploying('firmalife:metal/rod/stainless_steel', ['firmalife:metal/rod/stainless_steel', 'kubejs:wire/stainless_steel_wire']),
             event.recipes.create.pressing('firmalife:metal/rod/stainless_steel', 'firmalife:metal/rod/stainless_steel'),
-            event.recipes.createvintageneoforged.polishing('firmalife:metal/rod/stainless_steel', 'firmalife:metal/rod/stainless_steel')
+            event.recipes.vintageimprovements.polishing('firmalife:metal/rod/stainless_steel', 'firmalife:metal/rod/stainless_steel')
     ]).transitionalItem('firmalife:metal/rod/stainless_steel').loops(3)
     // Titanium mesh
     event.recipes.create.sequenced_assembly([
@@ -70,7 +70,7 @@
               { id: 'tfc_metallurgy:metal/rod/titanium'},
             ]
           }),
-        event.recipes.createvintageneoforged.polishing('tfc_metallurgy:metal/rod/titanium', 'tfc_metallurgy:metal/rod/titanium')
+        event.recipes.vintageimprovements.polishing('tfc_metallurgy:metal/rod/titanium', 'tfc_metallurgy:metal/rod/titanium')
     ]).transitionalItem('tfc_metallurgy:metal/rod/titanium').loops(3);
     
 
