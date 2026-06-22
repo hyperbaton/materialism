@@ -27,14 +27,14 @@ ServerEvents.recipes(event => {
     event.remove({id: /vintageimprovements:pressing\/\w+_ingot/})
 
     // Lathe recipes
-    event.remove({id: 'tfc_metal_items:crafting/steel_pressing_head'})
-    event.recipes.vintageimprovements.turning('tfc_metal_items:steel_pressing_head', 'tfc:metal/block/steel').processingTime(300)
+    // tfc_metal_items mod not present in 1.21 — pressing head recipes disabled
+    //event.remove({id: 'tfc_metal_items:crafting/steel_pressing_head'})
+    //event.recipes.vintageimprovements.turning('tfc_metal_items:steel_pressing_head', 'tfc:metal/block/steel').processingTime(300)
     event.recipes.vintageimprovements.turning('vintageimprovements:w_shaped_curving_head', 'tfc:metal/block/steel').processingTime(300)
     event.recipes.vintageimprovements.turning('vintageimprovements:v_shaped_curving_head', 'tfc:metal/block/steel').processingTime(300)
     event.recipes.vintageimprovements.turning('4x tfmg:screw', 'tfc:metal/rod/steel').processingTime(300)
     event.recipes.vintageimprovements.turning('2x tfmg:rebar', 'tfc:metal/rod/steel').processingTime(300)
-    event.recipes.vintageimprovements.turning('2x firmaciv:copper_bolt', 'tfc:metal/rod/copper').processingTime(300)
-    event.recipes.vintageimprovements.turning('firmaciv:cannon_barrel', 'tfc:metal/double_sheet/wrought_iron').processingTime(500)
+    event.recipes.vintageimprovements.turning('2x tfc_items:copper_rivet', 'tfc:metal/rod/copper').processingTime(300)
     // Pipes to be made with the lathe
     event.remove({output: 'create:fluid_pipe'})
     event.remove({output: 'tfmg:steel_pipe'})
@@ -49,47 +49,68 @@ ServerEvents.recipes(event => {
     event.recipes.vintageimprovements.turning('2x tfmg:aluminum_pipe', 'tfc_metallurgy:metal/rod/aluminum').processingTime(300)
     event.recipes.vintageimprovements.turning('2x tfmg:plastic_pipe', 'tfmg:plastic_sheet').processingTime(300)
     event.remove({output: 'createaddition:spool'})
-    event.recipes.vintageimprovements.turning('4x createaddition:spool', '#tfc:lumber').processingTime(150)
-    event.remove({output: 'tfmg:stonecutting/industrial_pipe'})
+    event.custom({type: 'vintageimprovements:turning',
+      ingredients: [{tag: 'tfc:lumber'}],
+      results: [{id: 'createaddition:spool', count: 4}],
+      processing_time: 150
+    })
+    event.remove({id: 'tfmg:stonecutting/industrial_pipe'})
     event.recipes.vintageimprovements.turning('4x tfmg:industrial_pipe', 'tfc:metal/rod/steel').processingTime(300)
 
     // Curving recipes
     event.remove({id: 'vintageimprovements:curving/iron_sheet'})
     event.remove({id: 'vintageimprovements:curving/diamond'})
-    event.recipes.vintageimprovements.curving('createdeco:zinc_support_wedge', 'tfc:metal/sheet/zinc').head("vintageimprovements:v_shaped_curving_head")
-    event.recipes.vintageimprovements.curving('createdeco:brass_support_wedge', 'tfc:metal/sheet/brass').head("vintageimprovements:v_shaped_curving_head")
-    event.recipes.vintageimprovements.curving('createdeco:copper_support_wedge', 'tfc:metal/sheet/copper').head("vintageimprovements:v_shaped_curving_head")
-    event.recipes.vintageimprovements.curving('createdeco:iron_support_wedge', 'tfc:metal/sheet/wrought_iron').head("vintageimprovements:v_shaped_curving_head")
-    event.recipes.vintageimprovements.curving('createdeco:andesite_support_wedge', 'tfc_metallurgy:metal/sheet/aluminum').head("vintageimprovements:v_shaped_curving_head")
+    event.custom({type: 'vintageimprovements:curving', ingredients: [{item: 'tfc:metal/sheet/zinc'}], results: [{id: 'createdeco:zinc_support_wedge'}], mode: 4})
+    event.custom({type: 'vintageimprovements:curving', ingredients: [{item: 'tfc:metal/sheet/brass'}], results: [{id: 'createdeco:brass_support_wedge'}], mode: 4})
+    event.custom({type: 'vintageimprovements:curving', ingredients: [{item: 'tfc:metal/sheet/copper'}], results: [{id: 'createdeco:copper_support_wedge'}], mode: 4})
+    event.custom({type: 'vintageimprovements:curving', ingredients: [{item: 'tfc:metal/sheet/wrought_iron'}], results: [{id: 'createdeco:iron_support_wedge'}], mode: 4})
+    event.custom({type: 'vintageimprovements:curving', ingredients: [{item: 'tfc_metallurgy:metal/sheet/aluminum'}], results: [{id: 'createdeco:andesite_support_wedge'}], mode: 4})
 
     // Vacuum recipes
 
     // Presurizing recipes
     // Use TFMG sulfuric acid with vintage recipe
-    event.recipes.vintageimprovements.pressurizing(
-      'tfmg:zinc_sulfate',
-      ['tfc:powder/sphalerite', Fluid.of('tfmg:sulfuric_acid', 200), Fluid.of('minecraft:water', 200)]
-    )
+    event.custom({type: 'vintageimprovements:pressurizing',
+      ingredients: [
+        {item: 'tfc:powder/sphalerite'},
+        {fluid: 'tfmg:sulfuric_acid', amount: 200, type: 'neoforge:single'},
+        {fluid: 'minecraft:water', amount: 200, type: 'neoforge:single'}
+      ],
+      results: [{id: 'kubejs:zinc_sulfate'}],
+      secondary_fluid_input: 1
+    })
     event.remove({id: 'vintageimprovements:pressurizing/sulfur_trioxide_alt'})  // Why use iron powder?
     event.remove({id: 'vintageimprovements:pressurizing/copper_sulfate'}) // Remove recipe with vintage sulfuric acid
     event.remove({id: 'vintageimprovements:pressurizing/sulfuric_acid'}) // Remove recipe for vintage sulfuric acid
     event.remove({id: 'tfmg:mixing/sulfuric_acid'})
-    event.recipes.vintageimprovements.pressurizing(
-      Fluid.of('tfmg:sulfuric_acid', 1000),
-      [Fluid.of('vintageimprovements:sulfur_trioxide', 1000), Fluid.of('minecraft:water', 1000)]
-    ).secondaryFluidInput(1)
-    event.recipes.vintageimprovements.pressurizing(
-      'vintageimprovements:copper_sulfate',
-      ['#tfc:powders/copper', Fluid.of('tfmg:sulfuric_acid', 200), Fluid.of('minecraft:water', 200)]
-    )
+    event.custom({type: 'vintageimprovements:pressurizing',
+      ingredients: [
+        {fluid: 'vintageimprovements:sulfur_trioxide', amount: 1000, type: 'neoforge:single'},
+        {fluid: 'minecraft:water', amount: 1000, type: 'neoforge:single'}
+      ],
+      results: [{id: 'tfmg:sulfuric_acid', amount: 1000}],
+      secondary_fluid_input: 1
+    })
+    event.custom({type: 'vintageimprovements:pressurizing',
+      ingredients: [
+        {item: 'tfc:powder/native_copper'},
+        {fluid: 'tfmg:sulfuric_acid', amount: 200, type: 'neoforge:single'},
+        {fluid: 'minecraft:water', amount: 200, type: 'neoforge:single'}
+      ],
+      results: [{id: 'vintageimprovements:copper_sulfate'}],
+      secondary_fluid_input: 1
+    })
 
     // Centrifugation recipes
-    event.recipes.vintageimprovements.centrifugation(
-      [Item.of('kubejs:powder/neodymium').withChance(0.2)],
-      ['tfcthermaldeposits:mineral/powder/bastnasite',
-        Fluid.of('tfmg:sulfuric_acid', 100)
-      ]
-    ).processingTime(300).minimalRPM(216)
+    event.custom({type: 'vintageimprovements:centrifugation',
+      ingredients: [
+        {item: 'tfcvolcanoes:mineral/powder/bastnasite'},
+        {fluid: 'tfmg:sulfuric_acid', amount: 100, type: 'neoforge:single'}
+      ],
+      results: [{id: 'kubejs:powder/neodymium', chance: 0.2}],
+      processing_time: 300,
+      minimal_rpm: 216
+    })
 
     // Polishing recipes
     event.recipes.vintageimprovements.polishing('tfc:large_scraped_hide', 'tfc:large_soaked_hide')
@@ -102,14 +123,28 @@ ServerEvents.recipes(event => {
     event.remove({id: 'vintageimprovements:crushing/basalt_recycling'})
     event.remove({id: 'create:crushing/crimsite'})
     event.remove({id: 'vintageimprovements:crushing/basalt'})
-    event.recipes.vintageimprovements.pressurizing(
-      Item.of('vintageimprovements:vanadium_nugget').withChance(0.1),
-      ['tfmg:slag', 'tfc:powder/salt',  'tfc:powder/saltpeter', Fluid.of('minecraft:water', 200)]
-    ).secondaryFluidInput(0).heated()
-    event.recipes.vintageimprovements.pressurizing(
-      Item.of('vintageimprovements:vanadium_nugget').withChance(0.3),
-      ['tfmg:slag', 'tfc:powder/salt',  'tfc:powder/saltpeter', Fluid.of('tfmg:sulfuric_acid', 200)]
-    ).secondaryFluidInput(0).heated()
+    event.custom({type: 'vintageimprovements:pressurizing',
+      ingredients: [
+        {item: 'tfmg:slag'},
+        {item: 'tfc:powder/salt'},
+        {item: 'tfc:powder/saltpeter'},
+        {fluid: 'minecraft:water', amount: 200, type: 'neoforge:single'}
+      ],
+      results: [{id: 'vintageimprovements:vanadium_nugget', chance: 0.1}],
+      secondary_fluid_input: 0,
+      heat_requirement: 'heated'
+    })
+    event.custom({type: 'vintageimprovements:pressurizing',
+      ingredients: [
+        {item: 'tfmg:slag'},
+        {item: 'tfc:powder/salt'},
+        {item: 'tfc:powder/saltpeter'},
+        {fluid: 'tfmg:sulfuric_acid', amount: 200, type: 'neoforge:single'}
+      ],
+      results: [{id: 'vintageimprovements:vanadium_nugget', chance: 0.3}],
+      secondary_fluid_input: 0,
+      heat_requirement: 'heated'
+    })
 
     event.replaceInput(
       { id: 'vintageimprovements:turning/convex_curving_head' }, // Arg 1: the filter

@@ -12,6 +12,17 @@ ServerEvents.recipes(event => {
   // Change sulfuric acid recipes for vintageimprovements ones:
   event.remove('tfmg:mixing/copper_sulfate')
   event.remove('tfmg:mixing/zinc_sulfate')
+  // Zinc sulfate recipe (item reimplemented via KubeJS, mirrors copper sulfate pressurizing)
+  event.custom({
+    type: 'vintageimprovements:pressurizing',
+    ingredients: [
+      {amount: 200, tag: 'c:sulfuric_acid', type: 'neoforge:tag'},
+      {fluid: 'minecraft:water', amount: 200, type: 'neoforge:single'},
+      {item: 'tfc:metal/ingot/zinc'}
+    ],
+    results: [{id: 'kubejs:zinc_sulfate'}],
+    processing_time: 800
+  })
   // Remove parts cutting (done with lathe)
   event.remove('tfmg:stonecutting/screw')
   event.remove('tfmg:stonecutting/rebar')
@@ -61,11 +72,7 @@ ServerEvents.recipes(event => {
     'tfc:powder/sulfur'         // Arg 3: the item to replace it with
   )
   // Replace TFMG copper sulfate for vintageimprovements' (has more uses)
-  event.replaceInput(
-    { id: 'tfmg:crafting/galvanic_cell' }, // Arg 1: the filter
-    'tfmg:copper_sulfate',            // Arg 2: the item to replace
-    'vintageimprovements:copper_sulfate'         // Arg 3: the item to replace it with
-  )
+  // (original galvanic cell recipe no longer exists in TFMG 1.21, replaced below)
   // Replace all wires with C&A or vintage ones
   event.replaceInput(
     { input: 'tfmg:copper_wire' }, // Arg 1: the filter
@@ -133,22 +140,22 @@ ServerEvents.recipes(event => {
     'tfc:metal/ingot/steel'
   )
   event.remove({id: 'tfmg:casting/amogus'})
-  // Galvanic cell proper recipe
-  event.replaceInput(
-    { id: 'tfmg:crafting/galvanic_cell' }, // Arg 1: the filter
-    'minecraft:copper_ingot',            // Arg 2: the item to replace
-    'tfc:metal/ingot/copper'         // Arg 3: the item to replace it with
-  )
-  // TODO: tfmg:electric_casing no longer exists in TFMG 1.21
-  //event.replaceInput(
-  //  { id: 'tfmg:crafting/galvanic_cell' },
-  //  'tfmg:electric_casing',
-  //  'tfmg:steel_casing'
-  //)
-  event.replaceInput(
-    { id: 'tfmg:crafting/galvanic_cell' }, // Arg 1: the filter
-    '#c:ingots/zinc',            // Arg 2: the item to replace
-    'tfc:metal/ingot/zinc'         // Arg 3: the item to replace it with
+  // Galvanic cell recipe (reimplemented in materialismcore, original removed from TFMG 1.21)
+  event.shaped(
+    Item.of('materialismcore:galvanic_cell', 1),
+    [
+      'ABA',
+      'CDE',
+      'AFA'
+    ],
+    {
+      A: 'tfc:metal/ingot/copper',
+      B: 'vintageimprovements:copper_sulfate',
+      C: 'tfmg:steel_pipe',
+      D: 'tfmg:steel_casing',
+      E: 'tfmg:cast_iron_pipe',
+      F: 'kubejs:zinc_sulfate'
+    }
   )
   // Use TFC gravel for concrete
   event.replaceInput(

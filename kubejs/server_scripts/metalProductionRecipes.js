@@ -18,6 +18,7 @@ ServerEvents.recipes(event => {
         'lithium',
         'magnesium',
         'manganese',
+        'neodymium',
         'nickel_silver',
         'osmium',
         'osmiridium',
@@ -30,6 +31,7 @@ ServerEvents.recipes(event => {
         'tungsten_steel',
         'high_carbon_tungsten_steel',
         'uranium',
+        'vanadium',
         'zircaloy',
         'zirconium'
     ];
@@ -120,6 +122,7 @@ ServerEvents.recipes(event => {
     addMetalPartsRecipes('magnesium', 390, 520)
     addMetalPartsRecipes('manganese', 750, 1000)
     addMetalPartsRecipes('mithril', 564, 752)
+    addMetalPartsRecipes('neodymium', 614, 819)
     addMetalPartsRecipes('nickel_silver', 870, 1160)
     addMetalPartsRecipes('osmiridium', 900, 1200)
     addMetalPartsRecipes('osmium', 921, 1228)
@@ -135,6 +138,7 @@ ServerEvents.recipes(event => {
     addMetalPartsRecipes('tungsten', 921, 1228)
     addMetalPartsRecipes('tungsten_steel', 921, 1228)
     addMetalPartsRecipes('uranium', 660, 880)
+    addMetalPartsRecipes('vanadium', 750, 1000)
     addMetalPartsRecipes('zircaloy', 1110, 1480)
     addMetalPartsRecipes('zirconium', 1110, 1480)
 
@@ -154,15 +158,15 @@ ServerEvents.recipes(event => {
         // Sheets
         event.recipes.create.sequenced_assembly(
             `tfc_metallurgy:metal/sheet/${metalName}`,
-            TFC.ingredient.and(Ingredient.of(`tfc_metallurgy:metal/ingot/${metalName}`), TFC.ingredient.heat(forgingTemperature)),
+            TFC.ingredient.and(Ingredient.of(`tfc_metallurgy:metal/double_ingot/${metalName}`), TFC.ingredient.heat(forgingTemperature)),
             [
-                event.recipes.create.pressing(`tfc_metallurgy:metal/ingot/${metalName}`, `tfc_metallurgy:metal/ingot/${metalName}`),
-                event.recipes.create.pressing(`tfc_metallurgy:metal/ingot/${metalName}`, `tfc_metallurgy:metal/ingot/${metalName}`),
-                event.recipes.create.pressing(`tfc_metallurgy:metal/ingot/${metalName}`, `tfc_metallurgy:metal/ingot/${metalName}`),
-                event.recipes.create.pressing(`tfc_metallurgy:metal/ingot/${metalName}`, `tfc_metallurgy:metal/ingot/${metalName}`),
-                event.recipes.create.pressing(`tfc_metallurgy:metal/ingot/${metalName}`, `tfc_metallurgy:metal/ingot/${metalName}`)
+                event.recipes.create.pressing(`tfc_metallurgy:metal/double_ingot/${metalName}`, `tfc_metallurgy:metal/double_ingot/${metalName}`),
+                event.recipes.create.pressing(`tfc_metallurgy:metal/double_ingot/${metalName}`, `tfc_metallurgy:metal/double_ingot/${metalName}`),
+                event.recipes.create.pressing(`tfc_metallurgy:metal/double_ingot/${metalName}`, `tfc_metallurgy:metal/double_ingot/${metalName}`),
+                event.recipes.create.pressing(`tfc_metallurgy:metal/double_ingot/${metalName}`, `tfc_metallurgy:metal/double_ingot/${metalName}`),
+                event.recipes.create.pressing(`tfc_metallurgy:metal/double_ingot/${metalName}`, `tfc_metallurgy:metal/double_ingot/${metalName}`)
             ]
-        ).transitionalItem(`tfc_metallurgy:metal/ingot/${metalName}`).loops(1)
+        ).transitionalItem(`tfc_metallurgy:metal/double_ingot/${metalName}`).loops(1)
         // Double sheets
         event.recipes.create.sequenced_assembly(
             `tfc_metallurgy:metal/double_sheet/${metalName}`,

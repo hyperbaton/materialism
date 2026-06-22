@@ -18,21 +18,28 @@ ServerEvents.recipes(event => {
     event.recipes.create.crushing('5x kubejs:powder/monazite', 'tfc_metallurgy:ore/normal_monazite')
     event.recipes.create.crushing('7x kubejs:powder/monazite', 'tfc_metallurgy:ore/rich_monazite')
     // It seems it's not possible to put more than 1 item quantity in the input. For now, let's just reduce how much we get.
-    //event.recipes.tfmg.industrial_blasting(Item.of('kubejs:powder/monazite', 20), [Fluid.of('tfc_metallurgy:metal/thorium', 5), Fluid.of('tfmg:molten_slag', 1)], 100)
-    event.recipes.tfmg.industrial_blasting('kubejs:powder/monazite', [Fluid.of('tfc_metallurgy:metal/thorium', 5), Fluid.of('tfmg:molten_slag', 1)], 500)
+    event.custom({type: 'tfmg:industrial_blasting',
+      ingredients: [{item: 'kubejs:powder/monazite'}],
+      results: [{id: 'tfc_metallurgy:metal/thorium', amount: 5}, {id: 'tfmg:molten_slag', amount: 1}],
+      processing_time: 500
+    })
     event.remove({id: /tfc_metallurgy:heating\/ore.*uraninite/})
     event.recipes.create.crushing('2x kubejs:powder/uraninite', 'tfc_metallurgy:ore/small_uraninite')
     event.recipes.create.crushing('3x kubejs:powder/uraninite', 'tfc_metallurgy:ore/poor_uraninite')
     event.recipes.create.crushing('5x kubejs:powder/uraninite', 'tfc_metallurgy:ore/normal_uraninite')
     event.recipes.create.crushing('7x kubejs:powder/uraninite', 'tfc_metallurgy:ore/rich_uraninite')
-    event.recipes.tfmg.industrial_blasting('kubejs:powder/uraninite', [Fluid.of('tfc_metallurgy:metal/uranium', 5), Fluid.of('tfmg:molten_slag', 1)], 2000)
+    event.custom({type: 'tfmg:industrial_blasting',
+      ingredients: [{item: 'kubejs:powder/uraninite'}],
+      results: [{id: 'tfc_metallurgy:metal/uranium', amount: 5}, {id: 'tfmg:molten_slag', amount: 1}],
+      processing_time: 2000
+    })
     
     // Crushing magnesite
-    event.recipes.create.crushing('1x tfcthermaldeposits:mineral/powder/magnesite', 'tfcthermaldeposits:mineral/magnesite')
-    event.recipes.create.crushing('2x tfcthermaldeposits:mineral/powder/magnesite', 'tfc_metallurgy:ore/small_magnesite')
-    event.recipes.create.crushing('3x tfcthermaldeposits:mineral/powder/magnesite', 'tfc_metallurgy:ore/poor_magnesite')
-    event.recipes.create.crushing('5x tfcthermaldeposits:mineral/powder/magnesite', 'tfc_metallurgy:ore/normal_magnesite')
-    event.recipes.create.crushing('7x tfcthermaldeposits:mineral/powder/magnesite', 'tfc_metallurgy:ore/rich_magnesite')
+    event.recipes.create.crushing('1x tfcvolcanoes:mineral/powder/magnesite', 'tfcvolcanoes:mineral/magnesite')
+    event.recipes.create.crushing('2x tfcvolcanoes:mineral/powder/magnesite', 'tfc_metallurgy:ore/small_magnesite')
+    event.recipes.create.crushing('3x tfcvolcanoes:mineral/powder/magnesite', 'tfc_metallurgy:ore/poor_magnesite')
+    event.recipes.create.crushing('5x tfcvolcanoes:mineral/powder/magnesite', 'tfc_metallurgy:ore/normal_magnesite')
+    event.recipes.create.crushing('7x tfcvolcanoes:mineral/powder/magnesite', 'tfc_metallurgy:ore/rich_magnesite')
 
     function removeToolsAndArmor(metal) {
         event.remove({output: 'tfc_metallurgy:metal/anvil/' + metal})
