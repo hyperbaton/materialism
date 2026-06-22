@@ -9,7 +9,7 @@ ServerEvents.recipes(event => {
   event.remove({id: 'create_new_age:thorium_multiplication'})
   event.remove({output: /create_new_age:overcharged.*/})
 
-  event.remove({id: 'create_new_age:shapeless/energiser_t1'})
+  event.remove({id: 'create_new_age:shapeless/basic_energiser'})
   event.custom({
       type: 'create:item_application',
       ingredients: [
@@ -21,33 +21,68 @@ ServerEvents.recipes(event => {
       ],
     })
 
-  // TODO: tfmg:copper_coil no longer exists in TFMG 1.21
-  //event.remove({id: 'create_new_age:shaped/generator_coil'})
-  //event.recipes.create.mechanical_crafting('create_new_age:generator_coil', [
-  //  '  C C  ', ' SWSWS ', 'CWM MWC', ' S A S ', 'CWM MWC', ' SWSWS ', '  C C  ',
-  //], {
-  //  A: 'create:shaft', M: 'tfc_metallurgy:metal/rod/manganese',
-  //  W: 'tfc_metallurgy:metal/sheet/tungsten_steel', C: 'tfmg:electromagnetic_coil',
-  //  S: 'firmalife:metal/sheet/stainless_steel'
-  //})
+  event.remove({id: 'create_new_age:shaped/generator_coil'})
+  event.recipes.create.mechanical_crafting('create_new_age:generator_coil', [
+    '  C C  ', ' SWSWS ', 'CWM MWC', ' S A S ', 'CWM MWC', ' SWSWS ', '  C C  ',
+  ], {
+    A: 'create:shaft', M: 'tfc_metallurgy:metal/rod/manganese',
+    W: 'tfc_metallurgy:metal/sheet/tungsten_steel', C: 'tfmg:electromagnetic_coil',
+    S: 'firmalife:metal/sheet/stainless_steel'
+  })
 
   // Magnet recipes
   // Tier 1: Magnetite magnet
   event.recipes.create.compacting('create_new_age:magnetite_block', '40x tfc:powder/magnetite')
-  // TODO: createbb:crushed_zinc no longer exists in 1.21
-  //event.remove({ id: 'create_new_age:shaped/redstone_magnet' });
-  //event.recipes.create.sequenced_assembly([Item.of('create_new_age:redstone_magnet', 1)],
-  //  'create_new_age:magnetite_block', [
-  //    event.recipes.createDeploying('create_new_age:magnetite_block', ['create_new_age:magnetite_block', 'createbb:crushed_zinc']),
-  //    event.recipes.vintageimprovements.vibrating('create_new_age:magnetite_block', 'create_new_age:magnetite_block'),
-  //    event.recipes.createPressing('create_new_age:magnetite_block', 'create_new_age:magnetite_block'),
-  //    event.custom({ type: 'create_new_age:energising', energy_needed: 1000,
-  //      ingredients: [{ item: 'create_new_age:magnetite_block'}],
-  //      results: [{ id: 'create_new_age:magnetite_block'}] })
-  //]).transitionalItem('create_new_age:magnetite_block').loops(4);
-  // TODO: tfmg:magnetic_ingot no longer exists in TFMG 1.21
+  event.remove({ id: 'create_new_age:shaped/redstone_magnet' });
+  event.recipes.create.sequenced_assembly([Item.of('create_new_age:redstone_magnet', 1)],
+    'create_new_age:magnetite_block', [
+      event.recipes.createDeploying('create_new_age:magnetite_block', ['create_new_age:magnetite_block', 'kubejs:powder/zinc']),
+      event.recipes.vintageimprovements.vibrating('create_new_age:magnetite_block', 'create_new_age:magnetite_block'),
+      event.recipes.createPressing('create_new_age:magnetite_block', 'create_new_age:magnetite_block'),
+      event.custom({ type: 'create_new_age:energising', energy_needed: 1000,
+        ingredients: [{ item: 'create_new_age:magnetite_block'}],
+        results: [{ id: 'create_new_age:magnetite_block'}] })
+  ]).transitionalItem('create_new_age:magnetite_block').loops(4);
   // Tier 3: Layered magnet -> Strong Ferrite Magnet (DISABLED)
-  //event.remove({ id: 'create_new_age:shaped/layered_magnet' });
+  event.remove({ id: 'create_new_age:shaped/layered_magnet' });
+  event.recipes.create.sequenced_assembly(
+    [
+        Item.of('create_new_age:layered_magnet', 1)
+    ],
+    // Input item
+    'tfmg:magnetic_alloy_ingot',
+    [
+        event.recipes.createDeploying(
+            'tfmg:magnetic_alloy_ingot',
+            ['tfmg:magnetic_alloy_ingot', 'tfc:powder/hematite']
+        ),
+        event.recipes.createDeploying(
+            'tfmg:magnetic_alloy_ingot',
+            ['tfmg:magnetic_alloy_ingot', 'kubejs:powder/zinc']
+        ),
+        event.recipes.vintageimprovements.vibrating('tfmg:magnetic_alloy_ingot',
+            'tfmg:magnetic_alloy_ingot'),
+        event.recipes.createFilling(
+          'tfmg:magnetic_alloy_ingot',
+          ['tfmg:magnetic_alloy_ingot', Fluid.of('tfc_metallurgy:metal/manganese', 50)]
+        ),
+        event.recipes.vintageimprovements.pressurizing(
+          'tfmg:magnetic_alloy_ingot',
+          ['tfmg:magnetic_alloy_ingot', 'tfc:powder/hematite']
+        ).heated(),
+        event.custom({
+          type: 'create_new_age:energising',
+          energy_needed: 10000,
+          ingredients: [
+            { item: 'tfmg:magnetic_alloy_ingot'},
+          ],
+          results: [
+            { id: 'tfmg:magnetic_alloy_ingot'},
+          ]
+        })
+    ]
+  ).transitionalItem('tfmg:magnetic_alloy_ingot')
+  .loops(5);
   // Tier 4: Fluxuated Magnetite -> Alnico Magnet
   event.remove({id: 'create_new_age:shaped/fluxuated_magnetite'})
   // First step: alnico core
@@ -199,10 +234,10 @@ ServerEvents.recipes(event => {
 
     // Advanced energizer recipes
     // T2
-    event.remove({ id: 'create_new_age:shaped/energiser_t2' });
+    event.remove({ id: 'create_new_age:shaped/advanced_energiser' });
     event.recipes.create.sequenced_assembly(
       [
-          Item.of('create_new_age:reinforced_energiser', 1)
+          Item.of('create_new_age:advanced_energiser', 1)
       ],
       // Input item
       'create_new_age:basic_energiser',
@@ -235,185 +270,188 @@ ServerEvents.recipes(event => {
     ).transitionalItem('create_new_age:basic_energiser')
     .loops(3);
     // T3
-    // TODO: tfmg:capacitor and tfmg:circuit_casing no longer exist in TFMG 1.21
-    event.remove({id: 'create_new_age:shaped/energiser_t3'})
-    //event.recipes.create.mechanical_crafting('create_new_age:advanced_energiser', [
-    //  'ABA',
-    //  'CDC',
-    //  'AEA'
-    //], {
-    //  A: 'create_new_age:layered_magnet',
-    //  B: 'tfmg:capacitor',
-    //  C: 'tfmg:electromagnetic_coil',
-    //  D: 'create_new_age:reinforced_energiser',
-    //  E: 'tfmg:circuit_casing'
-    //})
+    event.remove({id: 'create_new_age:shaped/reinforced_energiser'})
+    event.recipes.create.mechanical_crafting('create_new_age:reinforced_energiser', [
+      'ABA',
+      'CDC',
+      'AEA'
+    ], {
+      A: 'create_new_age:layered_magnet',
+      B: 'tfmg:capacitor_item',
+      C: 'tfmg:electromagnetic_coil',
+      D: 'create_new_age:advanced_energiser',
+      E: 'tfmg:circuit_board'
+    })
     
     // Motor recipes
-    // TODO: tfmg:electric_casing, tfmg:magnetic_ingot, tfmg:steel_mechanism no longer exist in TFMG 1.21
-    // TODO: createaddition:copper_wire, createaddition:gold_wire, vintageimprovements:silver_wire no longer exist
     // T1: Basic motor
     event.remove({id: 'create_new_age:shaped/basic_motor'})
-    //event.recipes.create.mechanical_crafting('create_new_age:basic_motor', [
-    //  'B H B',
-    //  ' CDF ',
-    //  ' EAGG',
-    //  ' CDF ',
-    //  'B   B'
-    //], {
-    //  A: 'tfmg:electric_casing',
-    //  B: 'tfc:metal/rod/steel',
-    //  C: 'tfmg:electromagnetic_coil',
-    //  D: 'create_new_age:magnetite_block',
-    //  E: 'tfmg:magnetic_ingot',
-    //  F: 'tfmg:steel_mechanism',
-    //  G: 'create:shaft',
-    //  H: 'createaddition:copper_wire'
-    //})
+    event.recipes.create.mechanical_crafting('create_new_age:basic_motor', [
+      'B H B',
+      ' CDF ',
+      ' EAGG',
+      ' CDF ',
+      'B   B'
+    ], {
+      A: 'tfmg:electrical_switch',
+      B: 'tfc:metal/rod/steel',
+      C: 'tfmg:electromagnetic_coil',
+      D: 'create_new_age:magnetite_block',
+      E: 'tfmg:magnetic_alloy_ingot',
+      F: 'tfmg:steel_mechanism',
+      G: 'create:shaft',
+      H: 'createaddition:copper_wire'
+    })
     // T1.5: Basic motor extension
     event.remove({id: 'create_new_age:shaped/basic_motor_extension'})
-    //event.recipes.create.mechanical_crafting('create_new_age:basic_motor_extension', [
-    //  'B   B',
-    //  ' CDF ',
-    //  'IDCA ',
-    //  ' CDF ',
-    //  'B   B'
-    //], {
-    //  A: 'tfmg:electric_casing',
-    //  B: 'tfc:metal/rod/steel',
-    //  C: 'tfmg:electromagnetic_coil',
-    //  D: 'create_new_age:redstone_magnet',
-    //  F: 'create:precision_mechanism',
-    //  I: 'railways:smokestack_diesel'
-    //})
+    event.recipes.create.mechanical_crafting('create_new_age:basic_motor_extension', [
+      'B   B',
+      ' CDF ',
+      'IDCA ',
+      ' CDF ',
+      'B   B'
+    ], {
+      A: 'tfmg:electrical_switch',
+      B: 'tfc:metal/rod/steel',
+      C: 'tfmg:electromagnetic_coil',
+      D: 'create_new_age:redstone_magnet',
+      F: 'create:precision_mechanism',
+      I: 'railways:smokestack_diesel'
+    })
     // T2: Advanced motor
     event.remove({id: 'create_new_age:shaped/advanced_motor'})
-    //event.recipes.create.mechanical_crafting('create_new_age:advanced_motor', [
-    //  'B H B',
-    //  ' CDF ',
-    //  ' EAGG',
-    //  ' CDF ',
-    //  'B   B'
-    //], {
-    //  A: 'tfmg:electric_casing',
-    //  B: 'tfc_metallurgy:metal/rod/manganese',
-    //  C: 'tfmg:electromagnetic_coil',
-    //  D: 'create_new_age:layered_magnet',
-    //  E: 'tfmg:magnetic_ingot',
-    //  F: 'tfmg:steel_mechanism',
-    //  G: 'create:shaft',
-    //  H: 'createaddition:gold_wire'
-    //})
+    event.recipes.create.mechanical_crafting('create_new_age:advanced_motor', [
+      'B H B',
+      ' CDF ',
+      ' EAGG',
+      ' CDF ',
+      'B   B'
+    ], {
+      A: 'tfmg:electrical_switch',
+      B: 'tfc_metallurgy:metal/rod/manganese',
+      C: 'tfmg:electromagnetic_coil',
+      D: 'create_new_age:layered_magnet',
+      E: 'tfmg:magnetic_alloy_ingot',
+      F: 'tfmg:steel_mechanism',
+      G: 'create:shaft',
+      H: 'createaddition:gold_wire'
+    })
 
     // T2.5: Advanced motor extension
     event.remove({id: 'create_new_age:advanced_motor_extension'})
-    //event.recipes.create.mechanical_crafting('create_new_age:advanced_motor_extension', [
-    //  'B   B',
-    //  ' CDF ',
-    //  'IDCA ',
-    //  ' CDF ',
-    //  'B   B'
-    //], {
-    //  A: 'tfmg:electric_casing',
-    //  B: 'tfc_metallurgy:metal/rod/tungsten_steel',
-    //  C: 'tfmg:electromagnetic_coil',
-    //  D: 'create_new_age:fluxuated_magnetite',
-    //  F: 'create:precision_mechanism',
-    //  I: 'railways:smokestack_diesel'
-    //})
+    event.recipes.create.mechanical_crafting('create_new_age:advanced_motor_extension', [
+      'B   B',
+      ' CDF ',
+      'IDCA ',
+      ' CDF ',
+      'B   B'
+    ], {
+      A: 'tfmg:electrical_switch',
+      B: 'tfc_metallurgy:metal/rod/tungsten_steel',
+      C: 'tfmg:electromagnetic_coil',
+      D: 'create_new_age:fluxuated_magnetite',
+      F: 'create:precision_mechanism',
+      I: 'railways:smokestack_diesel'
+    })
 
     // T3: Reinforced motor
     event.remove({id: 'create_new_age:reinforced_motor'})
-    //event.recipes.create.mechanical_crafting('create_new_age:reinforced_motor', [
-    //  'B H B',
-    //  ' CDF ',
-    //  ' EAGG',
-    //  ' CDF ',
-    //  'B   B'
-    //], {
-    //  A: 'tfmg:electric_casing',
-    //  B: 'tfc_metallurgy:metal/rod/tungsten_steel',
-    //  C: 'tfmg:electromagnetic_coil',
-    //  D: 'create_new_age:netherite_magnet',
-    //  E: 'tfmg:magnetic_ingot',
-    //  F: 'tfmg:steel_mechanism',
-    //  G: 'create:shaft',
-    //  H: 'vintageimprovements:silver_wire'
-    //})
+    event.recipes.create.mechanical_crafting('create_new_age:reinforced_motor', [
+      'B H B',
+      ' CDF ',
+      ' EAGG',
+      ' CDF ',
+      'B   B'
+    ], {
+      A: 'tfmg:electrical_switch',
+      B: 'tfc_metallurgy:metal/rod/tungsten_steel',
+      C: 'tfmg:electromagnetic_coil',
+      D: 'create_new_age:netherite_magnet',
+      E: 'tfmg:magnetic_alloy_ingot',
+      F: 'tfmg:steel_mechanism',
+      G: 'create:shaft',
+      H: 'vintageimprovements:silver_wire'
+    })
 
     // Heat transfer elements
-    // TODO: This recipe causes "Cannot find default value for object" — likely curving .head() or vacuumizing .heated() incompatible with sequenced assembly in 1.21
     event.remove({ output: 'create_new_age:heat_pipe' });
-    //event.recipes.create.sequenced_assembly(
-    //  [
-    //      Item.of('create_new_age:heat_pipe', 4)
-    //  ],
-    //  'tfc:metal/sheet/copper',
-    //  [
-    //      event.recipes.createPressing('tfc:metal/sheet/copper', 'tfc:metal/sheet/copper'),
-    //      event.recipes.createDeploying(
-    //          'tfc:metal/sheet/copper',
-    //          ['tfc:metal/sheet/copper', 'tfc:metal/sheet/copper']
-    //      ),
-    //      event.recipes.vintageimprovements.curving('tfc:metal/sheet/copper', 'tfc:metal/sheet/copper').head('vintageimprovements:w_shaped_curving_head'),
-    //      event.recipes.vintageimprovements.vacuumizing('tfc:metal/sheet/copper', ['tfc:metal/sheet/copper', Fluid.of('tfmg:cooling_fluid', 1000)]).heated(),
-    //      event.recipes.createCutting('tfc:metal/sheet/copper', 'tfc:metal/sheet/copper')
-    //  ]
-    //).transitionalItem('tfc:metal/sheet/copper')
-    //.loops(1);
-    // TODO: design_decor:copper_gas_tank no longer exists in 1.21
+    event.recipes.create.sequenced_assembly(
+      [
+          Item.of('create_new_age:heat_pipe', 4)
+      ],
+      'tfc:metal/sheet/copper',
+      [
+          event.recipes.createPressing('tfc:metal/sheet/copper', 'tfc:metal/sheet/copper'),
+          event.recipes.createDeploying(
+              'tfc:metal/sheet/copper',
+              ['tfc:metal/sheet/copper', 'tfc:metal/sheet/copper']
+          ),
+          event.custom({type: 'vintageimprovements:curving', ingredients: [{item: 'tfc:metal/sheet/copper'}], results: [{id: 'tfc:metal/sheet/copper'}], mode: 3}),
+          event.custom({type: 'vintageimprovements:vacuumizing',
+            ingredients: [{item: 'tfc:metal/sheet/copper'}, {fluid: 'tfmg:cooling_fluid', amount: 1000, type: 'neoforge:single'}],
+            results: [{id: 'tfc:metal/sheet/copper'}],
+            heat_requirement: 'heated'
+          }),
+          event.recipes.createCutting('tfc:metal/sheet/copper', 'tfc:metal/sheet/copper')
+      ]
+    ).transitionalItem('tfc:metal/sheet/copper')
+    .loops(1);
+    // TODO: revisit base item if Design n Decor copper_gas_tank is added later
     event.remove({ id: 'create_new_age:shaped/heat_pump' });
-    //event.recipes.create.sequenced_assembly(
-    //  [
-    //      Item.of('create_new_age:heat_pump', 1)
-    //  ],
-    //  'design_decor:copper_gas_tank',
-    //  [
-    //      event.recipes.createFilling(
-    //          'design_decor:copper_gas_tank',
-    //          ['design_decor:copper_gas_tank', Fluid.of('tfmg:cooling_fluid', 1000)]
-    //      ),
-    //      event.recipes.createDeploying(
-    //          'design_decor:copper_gas_tank',
-    //          ['design_decor:copper_gas_tank', 'create:mechanical_pump']
-    //      ),
-    //      event.recipes.createDeploying(
-    //          'design_decor:copper_gas_tank',
-    //          ['design_decor:copper_gas_tank', 'tfmg:screw']
-    //      ),
-    //      event.recipes.vintageimprovements.hammering('design_decor:copper_gas_tank','design_decor:copper_gas_tank').hammerBlows(3).anvilBlock('tfc:metal/anvil/steel'),
-    //      event.recipes.createDeploying(
-    //          'design_decor:copper_gas_tank',
-    //          ['design_decor:copper_gas_tank', 'create_new_age:heat_pipe']
-    //      ),
-    //      event.recipes.createDeploying(
-    //          'design_decor:copper_gas_tank',
-    //          ['design_decor:copper_gas_tank', 'create_new_age:heat_pipe']
-    //      )
-    //  ]
-    //).transitionalItem('design_decor:copper_gas_tank')
-    //.loops(1);
-    // TODO: This recipe causes "Cannot find default value for object" — likely curving .head() incompatible with sequenced assembly in 1.21
-    event.remove({ id: 'create_new_age:shaped/boiler_heater' });
-    //event.recipes.create.sequenced_assembly(
-    //  [
-    //      Item.of('create_new_age:heater', 1)
-    //  ],
-    //  'create_new_age:heat_pipe',
-    //  [
-    //      event.recipes.create.pressing('create_new_age:heat_pipe', 'create_new_age:heat_pipe'),
-    //      event.recipes.createDeploying(
-    //        'create_new_age:heat_pipe',
-    //        ['create_new_age:heat_pipe', 'tfc_metallurgy:metal/sheet/tungsten']
-    //      ),
-    //      event.recipes.createDeploying(
-    //          'create_new_age:heat_pipe',
-    //          ['create_new_age:heat_pipe', 'tfc:fire_clay']
-    //      ),
-    //      event.recipes.vintageimprovements.curving('create_new_age:heat_pipe', 'create_new_age:heat_pipe').head('vintageimprovements:concave_curving_head')
-    //  ]
-    //).transitionalItem('create_new_age:heat_pipe')
-    //.loops(3);
+    event.recipes.create.sequenced_assembly(
+      [
+          Item.of('create_new_age:heat_pump', 1)
+      ],
+      'create:fluid_tank',
+      [
+          event.recipes.createFilling(
+              'create:fluid_tank',
+              ['create:fluid_tank', Fluid.of('tfmg:cooling_fluid', 1000)]
+          ),
+          event.recipes.createDeploying(
+              'create:fluid_tank',
+              ['create:fluid_tank', 'create:mechanical_pump']
+          ),
+          event.recipes.createDeploying(
+              'create:fluid_tank',
+              ['create:fluid_tank', 'tfmg:screw']
+          ),
+          event.custom({type: 'vintageimprovements:hammering',
+            ingredients: [{item: 'create:fluid_tank'}],
+            results: [{id: 'create:fluid_tank'}],
+            hammer_blows: 3, anvil_block: 'tfc:metal/anvil/steel'
+          }),
+          event.recipes.createDeploying(
+              'create:fluid_tank',
+              ['create:fluid_tank', 'create_new_age:heat_pipe']
+          ),
+          event.recipes.createDeploying(
+              'create:fluid_tank',
+              ['create:fluid_tank', 'create_new_age:heat_pipe']
+          )
+      ]
+    ).transitionalItem('create:fluid_tank')
+    .loops(1);
+    event.remove({ id: 'create_new_age:shaped/heater' });
+    event.recipes.create.sequenced_assembly(
+      [
+          Item.of('create_new_age:heater', 1)
+      ],
+      'create_new_age:heat_pipe',
+      [
+          event.recipes.create.pressing('create_new_age:heat_pipe', 'create_new_age:heat_pipe'),
+          event.recipes.createDeploying(
+            'create_new_age:heat_pipe',
+            ['create_new_age:heat_pipe', 'tfc_metallurgy:metal/sheet/tungsten']
+          ),
+          event.recipes.createDeploying(
+              'create_new_age:heat_pipe',
+              ['create_new_age:heat_pipe', 'tfc:fire_clay']
+          ),
+          event.custom({type: 'vintageimprovements:curving', ingredients: [{item: 'create_new_age:heat_pipe'}], results: [{id: 'create_new_age:heat_pipe'}], mode: 2})
+      ]
+    ).transitionalItem('create_new_age:heat_pipe')
+    .loops(3);
     // Stirling engine
     event.remove({ id: 'create_new_age:shaped/stirling_engine' });
     event.recipes.create.sequenced_assembly(
@@ -445,7 +483,7 @@ ServerEvents.recipes(event => {
     ).transitionalItem('tfc:metal/block/copper_slab')
     .loops(1);
     // Basic solar plate
-    event.remove({ id: 'create_new_age:shaped/basic_solar_plate' });
+    event.remove({ id: 'create_new_age:shaped/basic_solar_heating_plate' });
     event.recipes.create.sequenced_assembly(
       [
           Item.of('create_new_age:basic_solar_heating_plate', 1)
@@ -473,7 +511,7 @@ ServerEvents.recipes(event => {
     ).transitionalItem('tfmg:steel_casing')
     .loops(1);
     // Advanced solar plate
-    event.remove({ id: 'create_new_age:shaped/advanced_solar_plate' });
+    event.remove({ id: 'create_new_age:shaped/advanced_solar_heating_plate' });
     event.recipes.create.sequenced_assembly(
       [
           Item.of('create_new_age:advanced_solar_heating_plate', 1)
@@ -510,7 +548,7 @@ ServerEvents.recipes(event => {
     .loops(1);
 
     // Reactor parts
-    event.remove('create_new_age:reactor/reactor_casing')
+    event.remove('create_new_age:sequenced_assembly/reactor_casing')
     event.custom({
       type: 'create:item_application',
       ingredients: [
@@ -521,26 +559,25 @@ ServerEvents.recipes(event => {
         { id: 'create_new_age:reactor_casing' },
       ],
     })
-    // TODO: curving .head() incompatible with sequenced assembly in 1.21 — causes "Cannot find default value for object"
-    event.remove({ id: 'create_new_age:reactor/reactor_heat_vent' });
-    //event.recipes.create.sequenced_assembly(
-    //  [
-    //      Item.of('create_new_age:reactor_heat_vent', 1)
-    //  ],
-    //  'create_new_age:reactor_casing',
-    //  [
-    //      event.recipes.createDeploying(
-    //        'create_new_age:reactor_casing',
-    //        ['create_new_age:reactor_casing', 'tfc_metallurgy:metal/sheet/tungsten']
-    //      ),
-    //      event.recipes.createDeploying(
-    //          'create_new_age:reactor_casing',
-    //          ['create_new_age:reactor_casing', 'tfc:fire_clay']
-    //      ),
-    //      event.recipes.vintageimprovements.curving('create_new_age:reactor_casing', 'create_new_age:reactor_casing').head('vintageimprovements:concave_curving_head')
-    //  ]
-    //).transitionalItem('create_new_age:reactor_casing')
-    //.loops(3);
+    event.remove({ id: 'create_new_age:shapeless/reactor_heat_vent' });
+    event.recipes.create.sequenced_assembly(
+      [
+          Item.of('create_new_age:reactor_heat_vent', 1)
+      ],
+      'create_new_age:reactor_casing',
+      [
+          event.recipes.createDeploying(
+            'create_new_age:reactor_casing',
+            ['create_new_age:reactor_casing', 'tfc_metallurgy:metal/sheet/tungsten']
+          ),
+          event.recipes.createDeploying(
+              'create_new_age:reactor_casing',
+              ['create_new_age:reactor_casing', 'tfc:fire_clay']
+          ),
+          event.custom({type: 'vintageimprovements:curving', ingredients: [{item: 'create_new_age:reactor_casing'}], results: [{id: 'create_new_age:reactor_casing'}], mode: 2})
+      ]
+    ).transitionalItem('create_new_age:reactor_casing')
+    .loops(3);
     // Reactor rods
     event.remove({id: 'create_new_age:reactor/reactor_rod'})
     event.recipes.create.mechanical_crafting('create_new_age:reactor_rod', [
@@ -561,39 +598,43 @@ ServerEvents.recipes(event => {
       G: 'tfc_metallurgy:metal/rod/graphite'
     })
 
-    // TODO: create_optical:focusing and vintageimprovements:centrifugation constructors changed in 1.21
     event.remove('create_new_age:thorium/thorium_crushing')
-    //event.recipes.create_optical.focusing(
-    //  ['create_new_age:radioactive_thorium'],
-    //  ['tfc_metallurgy:metal/ingot/thorium'],
-    //  100,
-    //  3
-    //)
-    //event.recipes.vintageimprovements.centrifugation(CreateItem.of('create_new_age:radioactive_thorium', 0.5),
-    //  ['tfc_metallurgy:metal/ingot/uranium', Fluid.of('tfmg:sulfuric_acid', 500)], 500, 256
-    //)
+    event.custom({type: 'create_optical:focusing',
+      ingredients: [{item: 'tfc_metallurgy:metal/ingot/thorium'}],
+      results: [{id: 'create_new_age:radioactive_thorium'}],
+      processing_time: 100,
+      heat_level: 3
+    })
+    event.custom({type: 'vintageimprovements:centrifugation',
+      ingredients: [
+        {item: 'tfc_metallurgy:metal/ingot/uranium'},
+        {fluid: 'tfmg:sulfuric_acid', amount: 500, type: 'neoforge:single'}
+      ],
+      results: [{id: 'create_new_age:radioactive_thorium', chance: 0.5}],
+      processing_time: 500,
+      minimal_rpm: 256
+    })
 
-    // TODO: curving .head() incompatible with sequenced assembly in 1.21
-    event.remove('create_new_age:thorium/nuclear_fuel')
-    //event.recipes.create.sequenced_assembly(
-    //  [
-    //      Item.of('create_new_age:nuclear_fuel', 1)
-    //  ],
-    //  'tfc_metallurgy:metal/double_sheet/zircaloy',
-    //  [
-    //      event.recipes.createDeploying(
-    //        'tfc_metallurgy:metal/double_sheet/zircaloy',
-    //        ['tfc_metallurgy:metal/double_sheet/zircaloy', 'create_new_age:radioactive_thorium']
-    //      ),
-    //      event.recipes.create.pressing('tfc_metallurgy:metal/double_sheet/zircaloy', 'tfc_metallurgy:metal/double_sheet/zircaloy'),
-    //      event.recipes.createDeploying(
-    //          'tfc_metallurgy:metal/double_sheet/zircaloy',
-    //          ['tfc_metallurgy:metal/double_sheet/zircaloy', 'tfc_metallurgy:metal/double_sheet/zircaloy']
-    //      ),
-    //      event.recipes.vintageimprovements.curving('tfc_metallurgy:metal/double_sheet/zircaloy', 'tfc_metallurgy:metal/double_sheet/zircaloy').head('vintageimprovements:w_shaped_curving_head')
-    //  ]
-    //).transitionalItem('tfc_metallurgy:metal/double_sheet/zircaloy')
-    //.loops(1);
+    event.remove('create_new_age:sequenced_assembly/nuclear_fuel')
+    event.recipes.create.sequenced_assembly(
+      [
+          Item.of('create_new_age:nuclear_fuel', 1)
+      ],
+      'tfc_metallurgy:metal/double_sheet/zircaloy',
+      [
+          event.recipes.createDeploying(
+            'tfc_metallurgy:metal/double_sheet/zircaloy',
+            ['tfc_metallurgy:metal/double_sheet/zircaloy', 'create_new_age:radioactive_thorium']
+          ),
+          event.recipes.create.pressing('tfc_metallurgy:metal/double_sheet/zircaloy', 'tfc_metallurgy:metal/double_sheet/zircaloy'),
+          event.recipes.createDeploying(
+              'tfc_metallurgy:metal/double_sheet/zircaloy',
+              ['tfc_metallurgy:metal/double_sheet/zircaloy', 'tfc_metallurgy:metal/double_sheet/zircaloy']
+          ),
+          event.custom({type: 'vintageimprovements:curving', ingredients: [{item: 'tfc_metallurgy:metal/double_sheet/zircaloy'}], results: [{id: 'tfc_metallurgy:metal/double_sheet/zircaloy'}], mode: 3})
+      ]
+    ).transitionalItem('tfc_metallurgy:metal/double_sheet/zircaloy')
+    .loops(1);
 
     // Circuit fabrication
     // TODO: Item.of('#tfc:silica_sand') doesn't work — tags need Ingredient format, not Item.of. Also #tfc:silica_sand may be empty.

@@ -10,6 +10,7 @@ StartupEvents.registry('item', event => {
     event.create('powder/neodymium').maxStackSize(16)
     event.create('lithium_battery_core').maxStackSize(16)
     event.create('zinc_sulfate').maxStackSize(16).displayName('Zinc Sulfate')
+    event.create('powder/zinc').maxStackSize(16)
     event.create('powder/monazite').maxStackSize(16)
     event.create('powder/uraninite').maxStackSize(16)
     event.create('wire/titanium_wire').maxStackSize(16)

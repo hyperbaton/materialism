@@ -7,6 +7,9 @@ ServerEvents.recipes(event => {
     event.recipes.create.compacting('tfc_metallurgy:metal/ingot/graphite', '20x tfc:powder/graphite')
     event.recipes.create.cutting('2x tfc_metallurgy:metal/rod/graphite', 'tfc_metallurgy:metal/ingot/graphite')
 
+    // Zinc powder from sphalerite powder
+    event.recipes.create.milling('kubejs:powder/zinc', 'tfc:powder/sphalerite')
+
     // Remove thorium recipes
     removeToolsAndArmor('thorium')
     removeToolsAndArmor('uranium')
