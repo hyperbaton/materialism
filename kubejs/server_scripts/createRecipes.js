@@ -129,13 +129,12 @@ ServerEvents.recipes(event => {
           C: 'tfc:metal/sheet/nickel'
       }
       )
-    // TODO: vintageimprovements:nickel_spring no longer exists in 1.21
-    //event.remove('create:crafting/curiosities/minecart_coupling')
-    //event.shaped(
-    //  Item.of('create:minecart_coupling', 1),
-    //  ['  B', ' A ', 'B  '],
-    //  { A: 'vintageimprovements:nickel_spring', B: 'tfc_metallurgy:metal/rod/titanium' }
-    //)
+    event.remove('create:crafting/curiosities/minecart_coupling')
+    event.shaped(
+     Item.of('create:minecart_coupling', 1),
+     ['  B', ' A ', 'B  '],
+     { A: 'vintageimprovements:nickel_spring', B: 'tfc_metallurgy:metal/rod/titanium' }
+    )
     // Change filter recipe
     event.remove('create:crafting/kinetics/filter')
     event.shaped(
@@ -150,20 +149,18 @@ ServerEvents.recipes(event => {
           B: 'tfc:burlap_cloth'
       }
       )
-    // TODO: tfc_metallurgy:metal/rod/brass no longer exists in 1.21
-    //event.remove('create:crafting/kinetics/attribute_filter')
-    //event.shaped(
-    //  Item.of('create:attribute_filter', 1),
-    //  ['   ', 'ABA', '   '],
-    //  { A: 'tfc_metallurgy:metal/rod/brass', B: 'create:filter' }
-    //)
-    // TODO: firmaciv:rope_coil and tfc_metal_items:steel_pressing_head no longer exist in 1.21
-    //event.remove({id: 'create:crafting/kinetics/rope_pulley'})
-    //event.shaped(
-    //  Item.of('create:rope_pulley', 1),
-    //  [' A ', ' B ', ' C '],
-    //  { A: 'create:andesite_casing', B: 'firmaciv:rope_coil', C: 'tfc_metal_items:steel_pressing_head' }
-    //)
+    event.remove('create:crafting/kinetics/attribute_filter')
+    event.shaped(
+     Item.of('create:attribute_filter', 1),
+     ['   ', 'ABA', '   '],
+     { A: 'tfc:metal/rod/brass', B: 'create:filter' }
+    )
+    event.remove({id: 'create:crafting/kinetics/rope_pulley'})
+    event.shaped(
+     Item.of('create:rope_pulley', 1),
+     [' A ', ' B ', ' C '],
+     { A: 'create:andesite_casing', B: 'tfc:rope', C: 'vintageimprovements:concave_curving_head' }
+    )
     // Create bells from TFC bells
     event.remove({id: 'create:crafting/curiosities/peculiar_bell'})
     event.shaped(
@@ -377,12 +374,11 @@ ServerEvents.recipes(event => {
       'minecraft:iron_ingot',            // Arg 2: the item to replace
       'tfc:metal/ingot/steel'         // Arg 3: the item to replace it with
     )
-    // TODO: tfc_metal_items:steel_pressing_head no longer exists in 1.21
-    //event.replaceInput(
-    //  { id: 'create:crafting/kinetics/mechanical_press' },
-    //  'minecraft:iron_block',
-    //  'tfc_metal_items:steel_pressing_head'
-    //)
+    event.replaceInput(
+     { id: 'create:crafting/kinetics/mechanical_press' },
+     'minecraft:iron_block',
+     'vintageimprovements:concave_curving_head'
+    )
     event.replaceInput(
       { id: 'create:crafting/appliances/copper_backtank' }, // Arg 1: the filter
       'minecraft:copper_block',            // Arg 2: the item to replace
@@ -398,23 +394,11 @@ ServerEvents.recipes(event => {
       'tfc:metal/ingot/brass',            // Arg 2: the item to replace
       'tfc:metal/rod/brass'         // Arg 3: the item to replace it with
     )
-    // TODO: create:brass no longer exists in Create 6.0 (now create:brass_ingot)
-    //event.replaceInput(
-    //  { id: 'create:brass_ladder_from_ingots_brass_stonecutting' },
-    //  'create:brass',
-    //  'tfc:metal/rod/brass'
-    //)
     event.replaceInput(
       { id: 'create:copper_ladder_from_ingots_copper_stonecutting' }, // Arg 1: the filter
       'tfc:metal/ingot/copper',            // Arg 2: the item to replace
       'tfc:metal/rod/copper'         // Arg 3: the item to replace it with
     )
-    // TODO: create:copper_ingot no longer exists in Create 6.0 (vanilla minecraft:copper_ingot is used)
-    //event.replaceInput(
-    //  { id: 'create:copper_ladder_from_ingots_copper_stonecutting' },
-    //  'create:copper_ingot',
-    //  'tfc:metal/rod/copper'
-    //)
 
     // Recipes with nuggets
     event.remove({id: 'create:crafting/materials/copper_nugget'})
@@ -668,32 +652,26 @@ ServerEvents.recipes(event => {
     // Recipes with wool 
     event.remove({id: 'create:milling/wool'})
     event.recipes.create.milling('8x tfc:wool_yarn', {'tag': 'minecraft:wool'})
-    /*event.replaceInput(
-      { id: 'create:crafting/kinetics/rope_pulley' }, // Arg 1: the filter
-      '#minecraft:wool',            // Arg 2: the item to replace
-      'firmaciv:crafting/rope_coil'         // Arg 3: the item to replace it with
-    )*/
 
     // Recipes with rubber
-    event.recipes.vintageimprovements.pressurizing(
-      'afc:rubber_bar',
-      [
-        'tfc:powder/sulfur',
-        Fluid.of('afc:latex', 1000)
-      ]
-    ).heated()
-    // TODO: firmaciv:crafting/rope_coil no longer exists in 1.21
-    //event.replaceInput(
-    //  { id: 'create:crafting/kinetics/elevator_pulley' },
-    //  'minecraft:dried_kelp_block',
-    //  'firmaciv:crafting/rope_coil'
-    //)
-    // TODO: firmaciv:rope_coil no longer exists in 1.21
-    //event.replaceInput(
-    //  { id: 'create:crafting/kinetics/hose_pulley' },
-    //  'minecraft:dried_kelp_block',
-    //  'firmaciv:rope_coil'
-    //)
+    event.custom({type: 'vintageimprovements:pressurizing',
+      ingredients: [
+        {item: 'tfc:powder/sulfur'},
+        {fluid: 'afc:latex', amount: 1000, type: 'neoforge:single'}
+      ],
+      results: [{id: 'afc:rubber_bar'}],
+      heat_requirement: 'heated'
+    })
+    event.replaceInput(
+     { id: 'create:crafting/kinetics/elevator_pulley' },
+     'minecraft:dried_kelp_block',
+      'tfc:rope'         // Arg 3: the item to replace it with
+    )
+    event.replaceInput(
+     { id: 'create:crafting/kinetics/hose_pulley' },
+     'minecraft:dried_kelp_block',
+      'tfc:rope'         // Arg 3: the item to replace it with
+    )
 
     // Recipes with slime balls
     event.replaceInput(
@@ -755,13 +733,6 @@ ServerEvents.recipes(event => {
         'create:zinc_ingot',            // Arg 2: the item to replace
         'tfc:metal/ingot/zinc'         // Arg 3: the item to replace it with
       )
-
-    // TODO: create:zinc_sheet no longer exists in Create 1.21
-    //event.replaceInput(
-    //    { input: 'createdeco:zinc_sheet' },
-    //    'create:zinc_sheet',
-    //    'tfc:metal/sheet/zinc'
-    //)
 
     event.replaceInput(
         { input: 'minecraft:copper_block' }, // Arg 1: the filter
@@ -847,27 +818,27 @@ ServerEvents.recipes(event => {
 
     // Create sequenced assembly recipes
 
-    // TODO: #tfc:rock/smooth tag is empty in 1.21 — need to find correct tag or use specific item
-    event.remove({ output: 'create:track' });
-    //event.recipes.create.sequenced_assembly(
-    //    [
-    //        Item.of('create:track', 32)
-    //    ],
-    //    '#tfc:rock/smooth',
-    //    [
-    //        event.recipes.createDeploying(
-    //            'create:track',
-    //            ['create:track', 'tfc:metal/rod/steel']
-    //        ),
-    //        event.recipes.createDeploying(
-    //            'create:track',
-    //            ['create:track', 'tfc:metal/rod/steel']
-    //        ),
-    //        event.recipes.createPressing('create:track', 'create:track')
-    //    ]
-    //).transitionalItem('create:track')
-    //.loops(4);
     // Remove the existing recipe for train tracks
+    event.remove({ output: 'create:track' });
+    event.recipes.create.sequenced_assembly(
+       [
+           Item.of('create:track', 32)
+       ],
+       '#c:stones/smooth',
+       [
+           event.recipes.createDeploying(
+               'create:track',
+               ['create:track', 'tfc:metal/rod/steel']
+           ),
+           event.recipes.createDeploying(
+               'create:track',
+               ['create:track', 'tfc:metal/rod/steel']
+           ),
+           event.recipes.createPressing('create:track', 'create:track')
+       ]
+    ).transitionalItem('create:track')
+    .loops(4);
+    // Remove the existing recipe for sturdy sheets
     event.remove({ output: 'create:sturdy_sheet' });
     // Add a custom recipe for sturdy sheets
     event.recipes.create.sequenced_assembly(
@@ -889,46 +860,46 @@ ServerEvents.recipes(event => {
         ]
     ).transitionalItem('tfc:metal/sheet/steel')
     .loops(1);
-    // TODO: vintageimprovements:invar_wire no longer exists in 1.21 — need replacement wire item
+
     event.remove('create:sequenced_assembly/precision_mechanism');
-    //event.recipes.create.sequenced_assembly([
-    //  CreateItem.of('create:precision_mechanism', 130.0),
-    //  CreateItem.of('tfc:metal/sheet/brass', 8.0),
-    //  CreateItem.of('vintageimprovements:invar_wire', 8.0),
-    //  CreateItem.of('create:cogwheel', 5.0),
-    //  CreateItem.of('create:shaft', 2.0),
-    //  'tfc_metallurgy:metal/rod/constantan',
-    //  'minecraft:clock'
-    //], 'tfc:metal/sheet/brass', [
-    //  event.recipes.createDeploying('create:incomplete_precision_mechanism', ['create:incomplete_precision_mechanism', 'create:cogwheel']),
-    //  event.recipes.createDeploying('create:incomplete_precision_mechanism', ['create:incomplete_precision_mechanism', 'create:large_cogwheel']),
-    //  event.recipes.createDeploying('create:incomplete_precision_mechanism', ['create:incomplete_precision_mechanism', 'vintageimprovements:small_invar_spring']),
-    //  event.recipes.createDeploying('create:incomplete_precision_mechanism', ['create:incomplete_precision_mechanism', 'tfc_metallurgy:metal/rod/constantan'])
-    //]).transitionalItem('create:incomplete_precision_mechanism').loops(5)
+    event.recipes.create.sequenced_assembly([
+      CreateItem.of('create:precision_mechanism', 0.85),
+      CreateItem.of('tfc:metal/sheet/brass', 0.05),
+      CreateItem.of('vintageimprovements:invar_wire', 0.04),
+      CreateItem.of('create:cogwheel', 0.02),
+      CreateItem.of('create:shaft', 0.02),
+      CreateItem.of('tfc_metallurgy:metal/rod/constantan', 0.01),
+      CreateItem.of('minecraft:clock', 0.01)
+    ], 'tfc:metal/sheet/brass', [
+      event.recipes.createDeploying('create:incomplete_precision_mechanism', ['create:incomplete_precision_mechanism', 'create:cogwheel']),
+      event.recipes.createDeploying('create:incomplete_precision_mechanism', ['create:incomplete_precision_mechanism', 'create:large_cogwheel']),
+      event.recipes.createDeploying('create:incomplete_precision_mechanism', ['create:incomplete_precision_mechanism', 'vintageimprovements:small_invar_spring']),
+      event.recipes.createDeploying('create:incomplete_precision_mechanism', ['create:incomplete_precision_mechanism', 'tfc_metallurgy:metal/rod/constantan'])
+    ]).transitionalItem('create:incomplete_precision_mechanism').loops(5)
+
     // Add a custom recipe for sandpaper
     event.remove({id: 'tfc:crafting/sandpaper'})
-    event.recipes.create.sequenced_assembly([
-      CreateItem.of('tfc:sandpaper', 95.0),
-      CreateItem.of('minecraft:paper', 5.0)
-    ], 'minecraft:paper', [ // input
-      // the transitional item set by `transitionalItem('create:incomplete_large_cogwheel')` is the item used during the intermediate stages of the assembly
-      event.recipes.createDeploying('minecraft:paper', ['minecraft:paper', 'tfc:glue']),
-      event.recipes.createDeploying('minecraft:paper', ['minecraft:paper', 'tfc:powder/flux']),
-      // TODO: tags in deploying recipes serialize incorrectly in NeoForge 1.21 — need specific items or custom JSON
-      //event.recipes.createDeploying('minecraft:paper', ['minecraft:paper', '#tfc:volcanic_sand']),
-      //event.recipes.createDeploying('minecraft:paper', ['minecraft:paper', '#tfc:gem_powders']),
-      event.recipes.createPressing('minecraft:paper', 'minecraft:paper')
-    ]).transitionalItem('minecraft:paper').loops(1) // set the transitional item and the number of loops
-    // TODO: create_optical:focusing 2-arg constructor doesn't exist in 1.21 — need to find new API
+event.recipes.create.sequenced_assembly([
+    CreateItem.of('tfc:sandpaper', 0.95),
+    CreateItem.of('minecraft:paper', 0.05)
+], 'minecraft:paper', [ 
+    event.recipes.createDeploying('minecraft:paper', ['minecraft:paper', 'tfc:glue']),
+    event.recipes.createDeploying('minecraft:paper', ['minecraft:paper', 'tfc:powder/flux']),
+    // Wrap the tags here:
+    event.recipes.createDeploying('minecraft:paper', ['minecraft:paper', Ingredient.of('#c:sands/volcanic')]),
+    event.recipes.createDeploying('minecraft:paper', ['minecraft:paper', Ingredient.of('#tfc:gem_powders')]),
+    event.recipes.createPressing('minecraft:paper', 'minecraft:paper')
+]).transitionalItem('minecraft:paper').loops(1)
+
     event.remove({output: 'create:rose_quartz'})
-    //event.recipes.create.sequenced_assembly([
-    //  CreateItem.of('create:rose_quartz', 95.0),
-    //  CreateItem.of('tfc_metallurgy:ore/certus_quartz', 5.0)
-    //], 'tfc_metallurgy:ore/certus_quartz', [
-    //  event.recipes.createDeploying('tfc_metallurgy:ore/certus_quartz', ['tfc_metallurgy:ore/certus_quartz', 'minecraft:redstone']),
-    //  event.recipes.vintageimprovements.vibrating('tfc_metallurgy:ore/certus_quartz', 'tfc_metallurgy:ore/certus_quartz'),
-    //  event.recipes.create_optical.focusing('tfc_metallurgy:ore/certus_quartz', 'tfc_metallurgy:ore/certus_quartz')
-    //]).transitionalItem('tfc_metallurgy:ore/certus_quartz').loops(6)
+    event.recipes.create.sequenced_assembly([
+     CreateItem.of('create:rose_quartz', 0.95),
+     CreateItem.of('tfc_metallurgy:ore/certus_quartz', 0.05)
+    ], 'tfc_metallurgy:ore/certus_quartz', [
+     event.recipes.createDeploying('tfc_metallurgy:ore/certus_quartz', ['tfc_metallurgy:ore/certus_quartz', 'minecraft:redstone']),
+     event.recipes.vintageimprovements.vibrating('tfc_metallurgy:ore/certus_quartz', 'tfc_metallurgy:ore/certus_quartz'),
+     event.custom({type: 'create_optical:focusing', ingredients: [{item: 'tfc_metallurgy:ore/certus_quartz'}], results: [{id: 'tfc_metallurgy:ore/certus_quartz'}]})
+    ]).transitionalItem('tfc_metallurgy:ore/certus_quartz').loops(6)
 
     // Gunpowder recipes
     event.recipes.remove("tfc:crafting/gunpowder")

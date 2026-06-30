@@ -179,3 +179,9 @@ ServerEvents.tags('block', event => {
     addClassWoods(event, 'mountain_stormcaller', ['sequoia', 'rosewood', 'mahogany'])
 
 })
+
+ServerEvents.tags('enchantment', event => {
+    event.removeAll('minecraft:in_enchanting_table')
+    event.removeAll('minecraft:tradeable')
+    event.removeAll('minecraft:on_random_loot')
+})

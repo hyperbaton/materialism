@@ -349,7 +349,10 @@ RecipeViewerEvents.removeEntries('item', event => {
     r('minecraft:cobweb');
     r('minecraft:wind_charge');
     r('minecraft:breeze_rod');
-    
+    event.remove('minecraft:anvil');
+    event.remove('minecraft:chipped_anvil');
+    event.remove('minecraft:damaged_anvil');
+
     event.remove(/afc:.*leaves.*/);
     event.remove(/tfc:.*leaves.*/);
 

@@ -1,5 +1,5 @@
 ServerEvents.recipes(event => {
-    event.remove({id: 'tfc:heating/kaolin_clay'})
+    event.remove({id: 'tfc:heating/powder/kaolinite'})
     event.custom({
         type: 'tfc:heating',
         ingredient: { item: 'tfc:kaolin_clay' },

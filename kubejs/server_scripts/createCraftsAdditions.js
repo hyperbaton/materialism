@@ -41,17 +41,16 @@ ServerEvents.recipes(event => {
       'create:andesite_alloy',
       'tfc_metallurgy:metal/rod/aluminum'
     )
-    // TODO: tfmg:copper_coil and tfmg:copper_cable no longer exist in TFMG 1.21
-    //event.replaceInput(
-    //  {id: 'createaddition:mechanical_crafting/tesla_coil'},
-    //  'createaddition:copper_spool',
-    //  'tfmg:copper_coil'
-    //)
-    //event.replaceInput(
-    //  {id: 'createaddition:crafting/portable_energy_interface'},
-    //  'createaddition:copper_spool',
-    //  'tfmg:copper_cable'
-    //)
+    event.replaceInput(
+     {id: 'createaddition:mechanical_crafting/tesla_coil'},
+     'createaddition:copper_spool',
+     'tfmg:large_coil'
+    )
+    event.replaceInput(
+     {id: 'createaddition:crafting/portable_energy_interface'},
+     'createaddition:copper_spool',
+     'tfmg:cable_tube'
+    )
 
     // Remove recipes for connectors
     event.remove({output: 'createaddition:connector'})
@@ -68,12 +67,11 @@ ServerEvents.recipes(event => {
 
     // Remove C&A capacitors
     event.remove({output: 'createaddition:capacitor'})
-    // TODO: tfmg:capacitor item name may have changed in 1.21
-    //event.replaceInput(
-    //    {input: 'createaddition:capacitor'},
-    //    'createaddition:capacitor',
-    //    'tfmg:capacitor_'
-    //)
+    event.replaceInput(
+       {input: 'createaddition:capacitor'},
+       'createaddition:capacitor',
+       'tfmg:capacitor_item'
+    )
 
     // Remove C&A electrum
     event.remove({id: 'createaddition:mixing/electrum'})

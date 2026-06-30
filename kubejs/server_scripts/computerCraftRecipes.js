@@ -290,20 +290,6 @@ const colorIds = {
 
 event.remove({ output: 'computercraft:disk' });
 
-/*dyeColors.forEach(color => {
-    event.recipes.create.sequenced_assembly(
-      Item.of('computercraft:disk', 1, { color: colorIds[color] }),
-      'tfmg:plastic_sheet',
-      [
-        event.recipes.create.deploying('tfmg:plastic_sheet', ['tfmg:plastic_sheet', dyeItems(color)]),
-        event.recipes.create.pressing('tfmg:plastic_sheet', 'tfmg:plastic_sheet'),
-        event.recipes.create.deploying('tfmg:plastic_sheet', ['tfmg:plastic_sheet', 'tfc:powder/magnetite']),
-        event.recipes.create.pressing('tfmg:plastic_sheet', 'tfmg:plastic_sheet'),
-        //event.recipes.tfmg.polarizing('tfmg:plastic_sheet', 'tfmg:plastic_sheet', 500),
-        event.recipes.create.deploying('tfmg:plastic_sheet', ['tfmg:plastic_sheet', 'minecraft:paper'])
-      ]
-    ).transitionalItem('tfmg:plastic_sheet').loops(1);
-  });*/
   dyeColors.forEach(color => {
     event.recipes.create.sequenced_assembly(
       Item.of(`computercraft:disk[dyed_color={rgb:${colorIds[color]},show_in_tooltip:false}]`),
@@ -313,7 +299,7 @@ event.remove({ output: 'computercraft:disk' });
         event.recipes.create.pressing(`kubejs:plastic_sheet/${color}`, `kubejs:plastic_sheet/${color}`),
         event.recipes.create.deploying(`kubejs:plastic_sheet/${color}`, [`kubejs:plastic_sheet/${color}`, 'tfc:powder/magnetite']),
         event.recipes.create.pressing(`kubejs:plastic_sheet/${color}`, `kubejs:plastic_sheet/${color}`),
-        //event.recipes.tfmg.polarizing(`plastic_sheet/${color}`, `plastic_sheet/${color}`, 500),
+        //event.recipes.tfmg.polarizing(`kubejs:plastic_sheet/${color}`, `kubejs:plastic_sheet/${color}`, 500),
         event.recipes.create.deploying(`kubejs:plastic_sheet/${color}`, [`kubejs:plastic_sheet/${color}`, 'minecraft:paper'])
       ]
     ).transitionalItem(`kubejs:plastic_sheet/${color}`).loops(1);

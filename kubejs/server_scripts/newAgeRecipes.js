@@ -66,10 +66,11 @@ ServerEvents.recipes(event => {
           'tfmg:magnetic_alloy_ingot',
           ['tfmg:magnetic_alloy_ingot', Fluid.of('tfc_metallurgy:metal/manganese', 50)]
         ),
-        event.recipes.vintageimprovements.pressurizing(
-          'tfmg:magnetic_alloy_ingot',
-          ['tfmg:magnetic_alloy_ingot', 'tfc:powder/hematite']
-        ).heated(),
+        event.custom({type: 'vintageimprovements:pressurizing',
+          ingredients: [{item: 'tfmg:magnetic_alloy_ingot'}, {item: 'tfc:powder/hematite'}],
+          results: [{id: 'tfmg:magnetic_alloy_ingot'}],
+          heat_requirement: 'heated'
+        }),
         event.custom({
           type: 'create_new_age:energising',
           energy_needed: 10000,
@@ -165,10 +166,11 @@ ServerEvents.recipes(event => {
             'tfc_metallurgy:metal/sheet/electrum',
             ['tfc_metallurgy:metal/sheet/electrum', 'kubejs:powder/neodymium']
         ),
-        event.recipes.vintageimprovements.vacuumizing(
-          'tfc_metallurgy:metal/sheet/electrum',
-          'tfc_metallurgy:metal/sheet/electrum'
-        ).superheated(),
+        event.custom({type: 'vintageimprovements:vacuumizing',
+          ingredients: [{item: 'tfc_metallurgy:metal/sheet/electrum'}],
+          results: [{id: 'tfc_metallurgy:metal/sheet/electrum'}],
+          heat_requirement: 'superheated'
+        }),
         event.recipes.createPressing('tfc_metallurgy:metal/sheet/electrum', 'tfc_metallurgy:metal/sheet/electrum'),
         event.recipes.vintageimprovements.polishing(
           'tfc_metallurgy:metal/sheet/electrum',
@@ -603,7 +605,7 @@ ServerEvents.recipes(event => {
       ingredients: [{item: 'tfc_metallurgy:metal/ingot/thorium'}],
       results: [{id: 'create_new_age:radioactive_thorium'}],
       processing_time: 100,
-      heat_level: 3
+      mode: 3
     })
     event.custom({type: 'vintageimprovements:centrifugation',
       ingredients: [

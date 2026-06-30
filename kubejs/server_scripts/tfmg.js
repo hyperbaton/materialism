@@ -113,14 +113,14 @@ ServerEvents.recipes(event => {
   )
   // Replace vanilla string requirements
   event.replaceInput(
-    { id: 'tfmg:mechanical_crafting/pumpjack_crank' }, // Arg 1: the filter
+    { id: 'tfmg:crafting/materials/pumpjack_crank' }, // Arg 1: the filter
     'minecraft:string',            // Arg 2: the item to replace
-    'firmaciv:rope_coil'         // Arg 3: the item to replace it with
+    'tfc:rope'         // Arg 3: the item to replace it with
   )
   event.replaceInput(
-    { id: 'tfmg:mechanical_crafting/pumpjack_base' }, // Arg 1: the filter
+    { id: 'tfmg:crafting/materials/pumpjack_base' }, // Arg 1: the filter
     'minecraft:string',            // Arg 2: the item to replace
-    'firmaciv:rope_coil'         // Arg 3: the item to replace it with
+    'tfc:rope'         // Arg 3: the item to replace it with
   )
   event.replaceInput(
     { id: 'tfmg:crafting/polarizer' }, // Arg 1: the filter
@@ -229,11 +229,11 @@ ServerEvents.recipes(event => {
 
   // Electrical components
   // Resistor item
-  event.remove({id: 'tfmg:crafting/resistor_item'})
+  event.remove({output: 'tfmg:unfinished_resistor'})
   event.recipes.create.sequenced_assembly([
-    CreateItem.of('tfmg:resistor', 90.0),
-    CreateItem.of('createaddition:copper_wire', 5.0),
-    CreateItem.of('createaddition:gold_wire', 5.0)
+    CreateItem.of('tfmg:unfinished_resistor', 0.9),
+    CreateItem.of('createaddition:copper_wire', 0.05),
+    CreateItem.of('createaddition:gold_wire', 0.05)
   ], 'createaddition:copper_wire', [ // input
     // the transitional item set by `transitionalItem('create:incomplete_large_cogwheel')` is the item used during the intermediate stages of the assembly
     event.recipes.createDeploying('createaddition:copper_wire', ['createaddition:copper_wire', 'tfc:glue']),
@@ -256,11 +256,11 @@ ServerEvents.recipes(event => {
     })
   ]).transitionalItem('createaddition:copper_wire').loops(1)
   // Capacitor item
-  event.remove({id: 'tfmg:crafting/capacitor_item'})
+  event.remove({id: 'tfmg:sequenced_assembly/capacitor'})
   event.recipes.create.sequenced_assembly([
-    CreateItem.of(Item.of('tfmg:capacitor_item', 2), 90.0),
-    CreateItem.of('tfc_metallurgy:metal/sheet/aluminum', 5.0),
-    CreateItem.of('minecraft:paper', 5.0)
+    CreateItem.of(Item.of('tfmg:capacitor_item', 2), 0.9),
+    CreateItem.of('tfc_metallurgy:metal/sheet/aluminum', 0.05),
+    CreateItem.of('minecraft:paper', 0.05)
   ], 'tfc_metallurgy:metal/sheet/aluminum', [ // input
     // the transitional item set by `transitionalItem('create:incomplete_large_cogwheel')` is the item used during the intermediate stages of the assembly
     event.recipes.createDeploying('tfc_metallurgy:metal/sheet/aluminum', ['tfc_metallurgy:metal/sheet/aluminum', 'minecraft:paper']),

@@ -243,9 +243,16 @@ ServerEvents.recipes(event => {
     //event.recipes.vintageimprovements.pressurizing(Item.of('tfc:pure_phosphorus', 5),
     //['tfcthermaldeposits:mineral/powder/apatite', 'tfcthermaldeposits:mineral/powder/apatite', 'tfc:powder/charcoal', '#tfc:silica_sand'])
     //.superheated().processingTime(500)
-    event.recipes.vintageimprovements.pressurizing(Item.of('tfc:pure_phosphorus', 5),
-    ['tfc:groundcover/guano', 'tfc:powder/charcoal', '#tfc:silica_sand'])
-    .superheated().processingTime(500)
+    event.custom({type: 'vintageimprovements:pressurizing',
+      ingredients: [
+        {item: 'tfc:groundcover/guano'},
+        {item: 'tfc:powder/charcoal'},
+        {tag: 'tfc:silica_sand'}
+      ],
+      results: [{id: 'tfc:pure_phosphorus', count: 5}],
+      heat_requirement: 'superheated',
+      processing_time: 500
+    })
     // TODO: createbb:white_phosphorus no longer exists in CreateBigCannons 1.21
     //event.remove('createbb:phase1/limestone_tag_crushing')
     //event.recipes.create.crushing('createbb:white_phosphorus', 'tfc:pure_phosphorus')

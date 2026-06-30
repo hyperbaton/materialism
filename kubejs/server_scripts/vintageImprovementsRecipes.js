@@ -22,19 +22,14 @@ ServerEvents.recipes(event => {
     event.remove({id: 'vintageimprovements:coiling/nethersteel_wire'})
     event.remove({id: 'vintageimprovements:coiling/nethersteel_wire'})
     event.remove({id: 'vintageimprovements:coiling/nethersteel_wire'})
-    event.remove({id: 'tfc_metal_items:seq_pressing/sheets/pig_iron'})
 
     event.remove({id: /vintageimprovements:pressing\/\w+_ingot/})
 
     // Lathe recipes
-    // tfc_metal_items mod not present in 1.21 — pressing head recipes disabled
-    //event.remove({id: 'tfc_metal_items:crafting/steel_pressing_head'})
-    //event.recipes.vintageimprovements.turning('tfc_metal_items:steel_pressing_head', 'tfc:metal/block/steel').processingTime(300)
     event.recipes.vintageimprovements.turning('vintageimprovements:w_shaped_curving_head', 'tfc:metal/block/steel').processingTime(300)
     event.recipes.vintageimprovements.turning('vintageimprovements:v_shaped_curving_head', 'tfc:metal/block/steel').processingTime(300)
     event.recipes.vintageimprovements.turning('4x tfmg:screw', 'tfc:metal/rod/steel').processingTime(300)
     event.recipes.vintageimprovements.turning('2x tfmg:rebar', 'tfc:metal/rod/steel').processingTime(300)
-    event.recipes.vintageimprovements.turning('2x tfc_items:copper_rivet', 'tfc:metal/rod/copper').processingTime(300)
     // Pipes to be made with the lathe
     event.remove({output: 'create:fluid_pipe'})
     event.remove({output: 'tfmg:steel_pipe'})
@@ -93,7 +88,7 @@ ServerEvents.recipes(event => {
     })
     event.custom({type: 'vintageimprovements:pressurizing',
       ingredients: [
-        {item: 'tfc:powder/native_copper'},
+        {tag: 'tfc:powders/copper'},
         {fluid: 'tfmg:sulfuric_acid', amount: 200, type: 'neoforge:single'},
         {fluid: 'minecraft:water', amount: 200, type: 'neoforge:single'}
       ],

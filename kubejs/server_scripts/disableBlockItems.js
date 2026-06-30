@@ -95,6 +95,9 @@ ServerEvents.recipes(event => {
     event.remove({ output: 'tfmg:nickel_ingot'});
     event.remove({ output: 'minecraft:bamboo_hanging_sign'});
     event.remove({ output: 'minecraft:tnt'});
+    event.remove({output: 'minecraft:anvil'});
+    event.remove({output: 'minecraft:chipped_anvil'});
+    event.remove({output: 'minecraft:damaged_anvil'});
 
     // Disable Weather 2 recipes
     event.remove(/.*weather2.*/)

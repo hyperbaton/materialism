@@ -57,43 +57,40 @@ ServerEvents.recipes(event => {
         ]
     ).transitionalItem('create_optical:incomplete_polarizing_filter')
     .loops(1);
-    // TODO: tfmg:copper_coil no longer exists in TFMG 1.21
-    //event.replaceInput(
-    //    { input: 'create_optical:copper_coil' },
-    //    'create_optical:copper_coil',
-    //    'tfmg:copper_coil'
-    //)
-    // TODO: vintageimprovements:zinc_wire no longer exists — need replacement wire item
-    //event.shaped(
-    //    Item.of('create_optical:zinc_coil', 1),
-    //    [
-    //        'BAB',
-    //        'BAB',
-    //        'BAB'
-    //    ],
-    //    {
-    //      A: 'tfc:metal/rod/wrought_iron',
-    //      B: 'vintageimprovements:zinc_wire'
-    //    }
-    //)
-    // TODO: createaddition:golden_wire no longer exists — need replacement wire item
+    event.replaceInput(
+       { input: 'create_optical:copper_coil' },
+       'create_optical:copper_coil',
+       'tfmg:large_coil'
+    )
+    event.shaped(
+       Item.of('create_optical:zinc_coil', 1),
+       [
+           'BAB',
+           'BAB',
+           'BAB'
+       ],
+       {
+         A: 'tfc:metal/rod/wrought_iron',
+         B: 'vintageimprovements:zinc_wire'
+       }
+    )
     event.remove('create_optical:sequenced_assembly/golden_coil')
     event.remove('create_optical:heavy_optical_receptor')
-    //event.shaped(
-    //    Item.of('create_optical:heavy_optical_receptor', 1),
-    //    [
-    //        'EAE',
-    //        'BCB',
-    //        'EDE'
-    //    ],
-    //    {
-    //      A: 'create_optical:optical_device',
-    //      B: 'create:shaft',
-    //      C: 'create_optical:optical_receptor',
-    //      D: 'tfmg:heavy_machinery_casing',
-    //      E: 'createaddition:golden_wire'
-    //    }
-    //)
+    event.shaped(
+       Item.of('create_optical:heavy_optical_receptor', 1),
+       [
+           'EAE',
+           'BCB',
+           'EDE'
+       ],
+       {
+         A: 'create_optical:optical_device',
+         B: 'create:shaft',
+         C: 'create_optical:optical_receptor',
+         D: 'tfmg:heavy_machinery_casing',
+         E: 'createaddition:gold_wire'
+       }
+    )
     event.remove('create_optical:sequenced_assembly/mirror_item')
     event.remove('create_optical:focusing/mirror')
     event.recipes.create.sequenced_assembly(
@@ -129,17 +126,16 @@ ServerEvents.recipes(event => {
         '#c:stones',            // Arg 2: the item to replace
         'tfc:metal/sheet/steel'         // Arg 3: the item to replace it with
         )
-    // TODO: vintageimprovements:rose_gold_wire no longer exists — need replacement wire item
-    //event.shaped(
-    //    Item.of('create_optical:rose_quartz_catalyst_coil', 1),
-    //    [
-    //        'ABA',
-    //        'ABA',
-    //        'ABA'
-    //    ],
-    //    {
-    //        A: 'vintageimprovements:rose_gold_wire',
-    //        B: 'create:polished_rose_quartz'
-    //    }
-    //)
+    event.shaped(
+       Item.of('create_optical:rose_quartz_catalyst_coil', 1),
+       [
+           'ABA',
+           'ABA',
+           'ABA'
+       ],
+       {
+           A: 'vintageimprovements:rose_gold_wire',
+           B: 'create:polished_rose_quartz'
+       }
+    )
 })

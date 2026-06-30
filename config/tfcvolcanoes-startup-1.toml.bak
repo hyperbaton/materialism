@@ -183,11 +183,3 @@
 	tickDelayMafic = 5
 	#Toggle finite water for salt-, fresh-, river- and spring water? Setting this to true will prevent water from creating source blocks when spreading.
 	toggleFiniteWater = false
-	#Controls how frequently fire blocks are placed during a pyroclastic flow.
-	#Higher values increase the number of fire placement attempts per tick,
-	#resulting in more widespread ignition along the flow path.
-	#Lower values reduce fire density and spread.
-	#To disable fire placement entirely, set this to 0.
-	# Default: 0.2
-	# Range: 0.0 ~ 1.7976931348623157E308
-	pyroclasticFlowFirePlacementFactor = 0.2
