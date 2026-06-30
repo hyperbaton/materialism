@@ -29,17 +29,16 @@
         event.recipes.create.crushing(`tfc:rock/gravel/${rock}`, `tfc:rock/cobble/${rock}`)
     )
 
-    // TODO: vintageimprovements:brass_wire no longer exists in 1.21
-    //event.remove('createsifter:brass_mesh')
-    //event.recipes.create.sequenced_assembly([
-    //    CreateItem.of('createsifter:brass_mesh', 1)
-    //], 'tfc:metal/rod/brass', [
-    //    event.recipes.create.deploying('tfc:metal/rod/brass', ['tfc:metal/rod/brass', 'tfc:metal/rod/brass']),
-    //    event.recipes.create.deploying('tfc:metal/rod/brass', ['tfc:metal/rod/brass', 'vintageimprovements:brass_wire']),
-    //    event.recipes.create.deploying('tfc:metal/rod/brass', ['tfc:metal/rod/brass', 'vintageimprovements:brass_wire']),
-    //    event.recipes.create.pressing('tfc:metal/rod/brass', 'tfc:metal/rod/brass'),
-    //    event.recipes.vintageimprovements.polishing('tfc:metal/rod/brass', 'tfc:metal/rod/brass')
-    //]).transitionalItem('tfc:metal/rod/brass').loops(3);
+    event.remove('createsifter:brass_mesh')
+    event.recipes.create.sequenced_assembly([
+       CreateItem.of('createsifter:brass_mesh', 1)
+    ], 'tfc:metal/rod/brass', [
+       event.recipes.create.deploying('tfc:metal/rod/brass', ['tfc:metal/rod/brass', 'tfc:metal/rod/brass']),
+       event.recipes.create.deploying('tfc:metal/rod/brass', ['tfc:metal/rod/brass', 'vintageimprovements:brass_wire']),
+       event.recipes.create.deploying('tfc:metal/rod/brass', ['tfc:metal/rod/brass', 'vintageimprovements:brass_wire']),
+       event.recipes.create.pressing('tfc:metal/rod/brass', 'tfc:metal/rod/brass'),
+       event.recipes.vintageimprovements.polishing('tfc:metal/rod/brass', 'tfc:metal/rod/brass')
+    ]).transitionalItem('tfc:metal/rod/brass').loops(3);
     // Stainless Steel mesh
     event.remove('createsifter:andesite_mesh')
     event.recipes.create.sequenced_assembly([
