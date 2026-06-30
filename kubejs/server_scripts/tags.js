@@ -187,6 +187,10 @@ ServerEvents.tags('item', event => {
     event.add('materialism:powders/iron', 'tfc:powder/hematite')
     event.add('materialism:powders/iron', 'tfc:powder/magnetite')
     event.add('materialism:powders/iron', 'tfc:powder/limonite')
+    // Add TFC sheets to c:plates tags so TFMG recipes using tags pick them up
+    event.add('c:plates/nickel', 'tfc:metal/sheet/nickel')
+    event.add('c:plates/lead', 'tfc_metallurgy:metal/sheet/lead')
+    event.add('c:plates/cast_iron', 'tfc:metal/sheet/cast_iron')
 })
 
 ServerEvents.tags('enchantment', event => {

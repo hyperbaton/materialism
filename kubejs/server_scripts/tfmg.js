@@ -49,28 +49,42 @@ ServerEvents.recipes(event => {
       { id: 'tfmg:heavy_machinery_casing' },
     ],
   })
+  // Replace tfmg bars
+  event.replaceInput(
+    { input: 'tfmg:aluminum_bars' }, // Arg 1: the filter
+    'tfmg:aluminum_bars',            // Arg 2: the item to replace
+    'create:andesite_bars'         // Arg 3: the item to replace it with
+  )
   // Replace tfmg steel ingot for tfc steel ingot
   event.replaceInput(
     { input: 'tfmg:steel_ingot' }, // Arg 1: the filter
     'tfmg:steel_ingot',            // Arg 2: the item to replace
     'tfc:metal/ingot/steel'         // Arg 3: the item to replace it with
   )
-  // Replace tfmg sulfur dust for tfc sulfur powder
+  // Replace all tfmg sulfur dust with tfc sulfur powder
   event.replaceInput(
-    { id: 'tfmg:crafting/zinc_grenade' }, // Arg 1: the filter
-    'tfmg:sulfur_dust',            // Arg 2: the item to replace
-    'tfc:powder/sulfur'         // Arg 3: the item to replace it with
-  )
-  event.replaceInput(
-    { id: 'tfmg:mixing/sulfuric_acid' }, // Arg 1: the filter
-    'tfmg:sulfur_dust',            // Arg 2: the item to replace
-    'tfc:powder/sulfur'         // Arg 3: the item to replace it with
+    { input: 'tfmg:sulfur_dust' },
+    'tfmg:sulfur_dust',
+    'tfc:powder/sulfur'
   )
   event.replaceOutput(
-    { id: 'tfmg:compacting/bitumen' }, // Arg 1: the filter
-    'tfmg:sulfur_dust',            // Arg 2: the item to replace
-    'tfc:powder/sulfur'         // Arg 3: the item to replace it with
+    { output: 'tfmg:sulfur_dust' },
+    'tfmg:sulfur_dust',
+    'tfc:powder/sulfur'
   )
+  // Replace vintageimprovements sulfur items with tfc equivalents
+  event.replaceInput(
+    { input: 'vintageimprovements:sulfur' },
+    'vintageimprovements:sulfur',
+    'tfc:powder/sulfur'
+  )
+  event.replaceInput(
+    { input: 'vintageimprovements:sulfur_chunk' },
+    'vintageimprovements:sulfur_chunk',
+    'tfc:powder/sulfur'
+  )
+  event.remove({output: 'vintageimprovements:sulfur'})
+  event.remove({output: 'vintageimprovements:sulfur_chunk'})
   // Replace TFMG copper sulfate for vintageimprovements' (has more uses)
   // (original galvanic cell recipe no longer exists in TFMG 1.21, replaced below)
   // Replace all wires with C&A or vintage ones
@@ -90,18 +104,135 @@ ServerEvents.recipes(event => {
     'minecraft:leather',            // Arg 2: the item to replace
     'afc:rubber_bar'         // Arg 3: the item to replace it with
   )
+  // Replace TFMG constantan with TFC Metallurgy constantan
+  event.remove({id: 'tfmg:mixing/constantan'})
+  event.remove({output: 'tfmg:constantan_ingot'})
+  event.remove({output: 'tfmg:constantan_nugget'})
+  event.remove({output: 'tfmg:constantan_block'})
+  event.replaceInput(
+    { input: 'tfmg:constantan_ingot' },
+    'tfmg:constantan_ingot',
+    'tfc_metallurgy:metal/ingot/constantan'
+  )
+  // Replace vanilla copper ingot in remaining TFMG recipes
+  event.replaceInput(
+    { id: 'tfmg:crafting/materials/cable_connector' },
+    'minecraft:copper_ingot',
+    'tfc:metal/ingot/copper'
+  )
+  // Replace steel nuggets with tfc_items steel rivets
+  event.replaceInput(
+    { id: 'tfmg:crafting/materials/cable_connector' },
+    '#c:nuggets/steel',
+    'tfc_items:steel_rivet'
+  )
+  event.replaceInput(
+    { id: 'tfmg:crafting/materials/cable_tube' },
+    '#c:nuggets/steel',
+    'tfc_items:steel_rivet'
+  )
+  event.replaceInput(
+    { id: 'tfmg:crafting/materials/fire_extinguisher' },
+    '#c:nuggets/steel',
+    'tfc_items:steel_rivet'
+  )
+  event.replaceInput(
+    { id: 'tfmg:crafting/materials/glass_insulator_segment' },
+    '#c:nuggets/steel',
+    'tfc_items:steel_rivet'
+  )
+  event.replaceInput(
+    { id: 'tfmg:crafting/materials/oil_can' },
+    '#c:nuggets/steel',
+    'tfc_items:steel_rivet'
+  )
+  // Replace kelp in concrete hose with rubber
+  event.replaceInput(
+    { id: 'tfmg:crafting/materials/concrete_hose' },
+    'minecraft:dried_kelp_block',
+    'afc:rubber_bar'
+  )
+  // Remove TFMG gunpowder recipe (replaced elsewhere)
+  event.remove({id: 'tfmg:mixing/gunpowder'})
+
+  // Remove bauxite powder recipe and replace usage with bauxite block
+  event.remove({id: 'create:crushing/bauxite'})
+  event.replaceInput(
+    { input: 'tfmg:bauxite_powder' },
+    'tfmg:bauxite_powder',
+    'tfmg:bauxite'
+  )
+
+  // Replace gravel and sand in asphalt mixture recipes with TFC tags
+  event.replaceInput(
+    { id: 'tfmg:mixing/asphalt_mixture' },
+    'minecraft:gravel',
+    '#c:gravels'
+  )
+  event.replaceInput(
+    { id: 'tfmg:mixing/asphalt_mixture' },
+    'minecraft:sand',
+    '#c:sands/silica'
+  )
+  event.replaceInput(
+    { id: 'tfmg:mixing/asphalt_mixture_from_slag' },
+    'minecraft:gravel',
+    '#c:gravels'
+  )
+
+  // Replace tfmg:screw with tfc_items:steel_screw globally
+  event.replaceInput(
+    { input: 'tfmg:screw' },
+    'tfmg:screw',
+    'tfc_items:steel_screw'
+  )
+
+  // Replace tfmg:aluminum_bars with create:andesite_bars (renamed to "Aluminum Bars")
+  event.remove({id: 'tfmg:aluminum_bars_from_ingots_aluminum_stonecutting'})
+  event.replaceInput(
+    { input: 'tfmg:aluminum_bars' },
+    'tfmg:aluminum_bars',
+    'create:andesite_bars'
+  )
+
+  // Replace tfmg:steel_bars with tfc:metal/bars/steel
+  event.remove({id: 'tfmg:steel_bars_from_ingots_steel_stonecutting'})
+  event.replaceInput(
+    { input: 'tfmg:steel_bars' },
+    'tfmg:steel_bars',
+    'tfc:metal/bars/steel'
+  )
+
+  // Replace tfmg:nickel_sheet with tfc:metal/sheet/nickel
+  event.remove({id: 'tfmg:pressing/nickel_ingot'})
+  event.replaceInput(
+    { input: 'tfmg:nickel_sheet' },
+    'tfmg:nickel_sheet',
+    'tfc:metal/sheet/nickel'
+  )
+  event.replaceOutput(
+    { output: 'tfmg:nickel_sheet' },
+    'tfmg:nickel_sheet',
+    'tfc:metal/sheet/nickel'
+  )
+
+  // Replace tfmg:lead_ingot with tfc_metallurgy lead
+  event.replaceInput(
+    { input: 'tfmg:lead_ingot' },
+    'tfmg:lead_ingot',
+    'tfc_metallurgy:metal/ingot/lead'
+  )
+
+  // Remove create_new_age blank and copper circuit items/recipes
+  event.remove({output: 'create_new_age:blank_circuit'})
+  event.remove({output: 'create_new_age:copper_circuit'})
+
   // Make heavy plates out of tungsten steel (heavily used on TFMG recipes)
   // TODO: Consider adding heating requisite to make it harder :P
   event.replaceInput(
     { id: 'tfmg:sequenced_assembly/heavy_plate' }, // Arg 1: the filter
     '#createbigcannons:ingot_steel',            // Arg 2: the item to replace
     'tfc_metallurgy:metal/ingot/tungsten_steel'         // Arg 3: the item to replace it with
-  )
-  // Allow for coking of TFC coal
-  event.replaceInput(
-    { id: 'tfmg:coking/coal_coke' }, // Arg 1: the filter
-    'minecraft:coal',            // Arg 2: the item to replace
-    'tfc:ore/bituminous_coal'         // Arg 3: the item to replace it with
   )
   // Use TFC firebricks instead of TFMG ones
   // Using fire_bricks instead of fire_brick increases the cost
@@ -127,12 +258,6 @@ ServerEvents.recipes(event => {
     'minecraft:copper_ingot',            // Arg 2: the item to replace
     'tfc:metal/ingot/copper' // Arg 3: the item to replace it with
   )
-  // TODO: tfmg:blasting_mixture no longer exists in TFMG 1.21
-  //event.remove({id: 'tfmg:mixing/blasting_mixture'})
-  //event.recipes.create.mixing(
-  //  'tfmg:blasting_mixture',
-  //  ['tfc:powder/lime', '20x #tfc:powders/iron']
-  //)
   // Use TFC steel as product of TFMG blast furnace and casting
   event.replaceOutput(
     { id: 'tfmg:casting/steel'},
@@ -161,38 +286,38 @@ ServerEvents.recipes(event => {
   event.replaceInput(
     { id: 'tfmg:mixing/liquid_concrete_from_slag' }, // Arg 1: the filter
     'minecraft:gravel',            // Arg 2: the item to replace
-    '#tfc:rock/gravel'    // Arg 3: the item to replace it with
+    '#c:gravels'    // Arg 3: the item to replace it with
   )
   event.replaceInput(
     { id: 'tfmg:mixing/concrete_mixture' }, // Arg 1: the filter
     'minecraft:gravel',            // Arg 2: the item to replace
-    '#tfc:rock/gravel'    // Arg 3: the item to replace it with
+    '#c:gravels'    // Arg 3: the item to replace it with
   )
   event.replaceInput(
     { id: 'tfmg:mixing/concrete_mixture' }, // Arg 1: the filter
     'minecraft:sand',            // Arg 2: the item to replace
-    '#tfc:silica_sand' // Arg 3: the item to replace it with
+    '#c:sands/silica' // Arg 3: the item to replace it with
   )
   event.replaceInput(
     { id: 'tfmg:mixing/liquid_concrete' }, // Arg 1: the filter
     'minecraft:gravel',            // Arg 2: the item to replace
-    '#tfc:rock/gravel'    // Arg 3: the item to replace it with
+    '#c:gravels'    // Arg 3: the item to replace it with
   )
   event.replaceInput(
     { id: 'tfmg:mixing/liquid_concrete' }, // Arg 1: the filter
     'minecraft:sand',            // Arg 2: the item to replace
-    '#tfc:silica_sand' // Arg 3: the item to replace it with
+    '#c:sands/silica' // Arg 3: the item to replace it with
   )
   // Use TFC gravel and sand for asphalt
   event.replaceInput(
     { id: 'tfmg:mixing/liquid_asphalt' }, // Arg 1: the filter
     'minecraft:sand',            // Arg 2: the item to replace
-    '#tfc:silica_sand' // Arg 3: the item to replace it with
+    '#c:sands/silica' // Arg 3: the item to replace it with
   )
   event.replaceInput(
     { id: 'tfmg:mixing/liquid_asphalt' }, // Arg 1: the filter
     'minecraft:gravel',            // Arg 2: the item to replace
-    '#tfc:rock/gravel'    // Arg 3: the item to replace it with
+    '#c:gravels'    // Arg 3: the item to replace it with
   )
   event.replaceInput(
     { id: 'tfmg:crafting/nickel_block' }, // Arg 1: the filter
@@ -329,56 +454,57 @@ ServerEvents.recipes(event => {
       ]
     })
   ]).transitionalItem('tfc_metallurgy:metal/sheet/nickel_silver').loops(1)
-  // TODO: tfmg:capacitor no longer exists in TFMG 1.21 — also createaddition:copper_wire missing
-  //event.remove({id: 'tfmg:crafting/capacitor'})
-  //event.recipes.create.sequenced_assembly([
-  //  Item.of('tfmg:capacitor', 1)
-  //], 'create:basin', [ // input
-  //  event.recipes.createDeploying('create:basin', ['create:basin', 'tfc_metallurgy:metal/double_sheet/lead']),
-  //  event.recipes.createDeploying('create:basin', ['create:basin', 'tfc_metallurgy:metal/double_sheet/lead']),
-  //  event.recipes.createFilling(
-  //    'create:basin',
-  //    ['create:basin', Fluid.of('tfmg:sulfuric_acid', 1000)]
-  //  ),
-  //  event.recipes.createDeploying('create:basin', ['create:basin', 'createaddition:copper_wire']),
-  //  event.recipes.createDeploying('create:basin', ['create:basin', 'tfc_metallurgy:metal/sheet/cobalt']),
-  //  event.recipes.create.pressing('create:basin', 'create:basin'),
-  //  event.custom({
-  //    type: 'create_new_age:energising',
-  //    energy_needed: 1000,
-  //    ingredients: [
-  //      { item: 'create:basin'},
-  //    ],
-  //    results: [
-  //      { id: 'create:basin'},
-  //    ]
-  //  })
-  //]).transitionalItem('create:basin').loops(1)
-  // TODO: tfmg:electric_casing no longer exists in TFMG 1.21
-  //event.remove({id: 'tfmg:crafting/accumulator'})
-  //event.recipes.create.sequenced_assembly([
-  //  Item.of('kubejs:lithium_battery_core', 1)
-  //], 'tfmg:electric_casing', [ // input
-  //  event.recipes.createDeploying('tfmg:electric_casing', ['tfmg:electric_casing', 'tfc_metallurgy:metal/sheet/manganese']),
-  //  event.recipes.createDeploying('tfmg:electric_casing', ['tfmg:electric_casing', 'tfmg:plastic_sheet']),
-  //  event.recipes.createFilling(
-  //    'tfmg:electric_casing',
-  //    ['tfmg:electric_casing', Fluid.of('tfmg:propylene', 100)]
-  //  ),
-  //  event.recipes.createFilling(
-  //    'tfmg:electric_casing',
-  //    ['tfmg:electric_casing', Fluid.of('tfmg:ethylene', 100)]
-  //  ),
-  //  event.recipes.createFilling(
-  //    'tfmg:electric_casing',
-  //    ['tfmg:electric_casing', Fluid.of('tfc_metallurgy:metal/lithium', 200)]
-  //  ),
-  //  event.recipes.createDeploying('tfmg:electric_casing', ['tfmg:electric_casing', 'tfc_metallurgy:metal/rod/graphite']),
-  //  event.recipes.create.pressing('tfmg:electric_casing', 'tfmg:electric_casing')
-  //]).transitionalItem('tfmg:electric_casing').loops(5)
+  // tfmg:capacitor removed in 1.21 - lead acid batteries will also produce accumulator
+  event.recipes.create.sequenced_assembly([
+   Item.of('tfmg:accumulator', 1)
+  ], 'create:basin', [ // input
+   event.recipes.createDeploying('create:basin', ['create:basin', 'tfc_metallurgy:metal/double_sheet/lead']),
+   event.recipes.createDeploying('create:basin', ['create:basin', 'tfc_metallurgy:metal/double_sheet/lead']),
+   event.recipes.createFilling(
+     'create:basin',
+     ['create:basin', Fluid.of('tfmg:sulfuric_acid', 1000)]
+   ),
+   event.recipes.createDeploying('create:basin', ['create:basin', 'createaddition:copper_wire']),
+   event.recipes.createDeploying('create:basin', ['create:basin', 'tfc_metallurgy:metal/sheet/cobalt']),
+   event.recipes.create.pressing('create:basin', 'create:basin'),
+   event.custom({
+     type: 'create_new_age:energising',
+     energy_needed: 1000,
+     ingredients: [
+       { item: 'create:basin'},
+     ],
+     results: [
+       { id: 'create:basin'},
+     ]
+   })
+  ]).transitionalItem('create:basin').loops(1)
+  event.recipes.create.sequenced_assembly([
+   Item.of('kubejs:lithium_battery_core', 1)
+  ], 'tfmg:heavy_machinery_casing', [ // input
+   event.recipes.createDeploying('tfmg:heavy_machinery_casing', ['tfmg:heavy_machinery_casing', 'tfc_metallurgy:metal/sheet/manganese']),
+   event.recipes.createDeploying('tfmg:heavy_machinery_casing', ['tfmg:heavy_machinery_casing', 'tfmg:plastic_sheet']),
+   event.recipes.createFilling(
+     'tfmg:heavy_machinery_casing',
+     ['tfmg:heavy_machinery_casing', Fluid.of('tfmg:propylene', 100)]
+   ),
+   event.recipes.createFilling(
+     'tfmg:heavy_machinery_casing',
+     ['tfmg:heavy_machinery_casing', Fluid.of('tfmg:ethylene', 100)]
+   ),
+   event.recipes.createFilling(
+     'tfmg:heavy_machinery_casing',
+     ['tfmg:heavy_machinery_casing', Fluid.of('tfc_metallurgy:metal/lithium', 200)]
+   ),
+   event.recipes.createDeploying('tfmg:heavy_machinery_casing', ['tfmg:heavy_machinery_casing', 'tfc_metallurgy:metal/rod/graphite']),
+   event.recipes.create.pressing('tfmg:heavy_machinery_casing', 'tfmg:heavy_machinery_casing')
+  ]).transitionalItem('tfmg:heavy_machinery_casing').loops(5)
+
+  // Remove base TFMG accumulator recipes (replaced by custom lithium battery core path)
+  event.remove({id: 'tfmg:crafting/materials/accumulator'})
+  event.remove({id: 'tfmg:crafting/materials/accumulatorfrom_lithium'})
 
   event.recipes.create.sequenced_assembly([
-    Item.of('tfmg:accumulator', 1)
+    Item.of('tfmg:accumulator', 5)
   ], 'kubejs:lithium_battery_core', [ // input
     event.recipes.createDeploying('kubejs:lithium_battery_core', ['kubejs:lithium_battery_core', 'tfc_metallurgy:metal/sheet/aluminum']),
     event.recipes.createDeploying('kubejs:lithium_battery_core', ['kubejs:lithium_battery_core', 'tfc_metallurgy:metal/sheet/titanium']),
@@ -410,27 +536,23 @@ ServerEvents.recipes(event => {
     event.recipes.create.pressing('create:propeller', 'create:propeller')
   ]).transitionalItem('create:propeller').loops(1)
 
-  // TODO: tfmg:coking recipe constructor changed in TFMG 1.21 — 3-arg form no longer exists
-  //event.recipes.tfmg.coking('minecraft:charcoal', [CreateItem.of('tfmg:coal_coke', 0.4), Fluid.of('tfmg:creosote', 1)], 2000)
-  //event.recipes.tfmg.coking('#minecraft:logs', [CreateItem.of('minecraft:charcoal', 0.8), Fluid.of('minecraft:water', 1)], 5000)
-
-  // TODO: vintageimprovements:invar_wire no longer exists in 1.21 — need replacement wire item
-  //event.recipes.create.sequenced_assembly(
-  //  [
-  //    CreateItem.of('tfmg:steel_mechanism', 130.0),
-  //    CreateItem.of('tfc:metal/sheet/steel', 8.0),
-  //    CreateItem.of('vintageimprovements:invar_wire', 8.0),
-  //    CreateItem.of('tfmg:steel_cogwheel', 5.0),
-  //    CreateItem.of('create:shaft', 2.0)
-  //  ],
-  //  'tfc:metal/sheet/steel',
-  //  [
-  //    event.recipes.createDeploying('create:incomplete_precision_mechanism', ['create:incomplete_precision_mechanism', 'tfmg:steel_cogwheel']),
-  //    event.recipes.createDeploying('create:incomplete_precision_mechanism', ['create:incomplete_precision_mechanism', 'tfmg:large_steel_cogwheel']),
-  //    event.recipes.createDeploying('create:incomplete_precision_mechanism', ['create:incomplete_precision_mechanism', 'vintageimprovements:small_invar_spring']),
-  //    event.recipes.createDeploying('create:incomplete_precision_mechanism', ['create:incomplete_precision_mechanism', 'tfc_metallurgy:metal/rod/constantan'])
-  //  ]
-  //).transitionalItem('create:incomplete_precision_mechanism').loops(5)
+  event.remove({id: 'tfmg:sequenced_assembly/steel_mechanism'})
+  event.recipes.create.sequenced_assembly(
+   [
+     CreateItem.of('tfmg:steel_mechanism', 0.85),
+     CreateItem.of('tfc:metal/sheet/steel', 0.05),
+     CreateItem.of('vintageimprovements:invar_wire', 0.05),
+     CreateItem.of('tfmg:steel_cogwheel', 0.03),
+     CreateItem.of('create:shaft', 0.02)
+   ],
+   'tfc:metal/sheet/steel',
+   [
+     event.recipes.createDeploying('create:incomplete_precision_mechanism', ['create:incomplete_precision_mechanism', 'tfmg:steel_cogwheel']),
+     event.recipes.createDeploying('create:incomplete_precision_mechanism', ['create:incomplete_precision_mechanism', 'tfmg:large_steel_cogwheel']),
+     event.recipes.createDeploying('create:incomplete_precision_mechanism', ['create:incomplete_precision_mechanism', 'vintageimprovements:small_invar_spring']),
+     event.recipes.createDeploying('create:incomplete_precision_mechanism', ['create:incomplete_precision_mechanism', 'tfc_metallurgy:metal/rod/constantan'])
+   ]
+  ).transitionalItem('create:incomplete_precision_mechanism').loops(5)
   
   // Make cinder blocks from red concrete
   event.remove({id: 'tfmg:compacting/cinderflourblock'})
@@ -453,12 +575,207 @@ ServerEvents.recipes(event => {
     {I: 'tfc_metallurgy:metal/ingot/lead', S: 'create:shaft'}
   )
 
-  event.shaped('tfmg:nickel_flywheel', 
+  event.shaped('tfmg:nickel_flywheel',
     [ 'III',
       'ISI',
       'III'
-    ], 
+    ],
     {I: 'tfc:metal/ingot/nickel', S: 'create:shaft'}
   )
+
+  // Semiconductor recipes using TFC materials
+  event.remove({id: 'tfmg:mixing/n_semiconductor'})
+  event.remove({id: 'tfmg:mixing/p_semiconductor'})
+  event.recipes.create.mixing(
+    'tfmg:n_semiconductor',
+    ['tfmg:silicon_ingot', 'tfc:pure_phosphorus']
+  )
+  event.custom({
+    type: 'create:mixing',
+    ingredients: [
+      {item: 'tfmg:silicon_ingot'},
+      {type: 'neoforge:single', fluid: 'tfc_metallurgy:metal/boron', amount: 50}
+    ],
+    results: [{id: 'tfmg:p_semiconductor'}],
+    heat_requirement: 'heated'
+  })
+
+  // Thermite using TFC iron oxide and aluminum
+  event.remove({id: 'tfmg:mixing/thermite'})
+  event.custom({
+    type: 'create:mixing',
+    ingredients: [
+      {item: 'tfc:powder/hematite'},
+      {item: 'tfc:powder/hematite'},
+      {item: 'tfc_metallurgy:metal/ingot/aluminum'},
+      {item: 'tfc_metallurgy:metal/ingot/aluminum'}
+    ],
+    results: [{id: 'tfmg:thermite_powder'}],
+    heat_requirement: 'heated'
+  })
+
+  // Weapon recipes — replace simple crafting with sequenced assembly
+  event.remove({id: 'tfmg:crafting/materials/pipe_bomb'})
+  event.remove({id: 'tfmg:crafting/materials/thermite_grenade'})
+  event.remove({id: 'tfmg:crafting/materials/zinc_grenade'})
+  event.remove({id: 'tfmg:crafting/materials/copper_grenade'})
+  event.remove({id: 'tfmg:crafting/materials/napalm_bomb'})
+
+  // Pipe bomb: steel pipe → deploy saltpeter + charcoal + screw → press
+  event.recipes.create.sequenced_assembly([
+    Item.of('tfmg:pipe_bomb', 2)
+  ], 'tfmg:steel_pipe', [
+    event.recipes.createDeploying('tfmg:steel_pipe', ['tfmg:steel_pipe', 'tfc:powder/saltpeter']),
+    event.recipes.createDeploying('tfmg:steel_pipe', ['tfmg:steel_pipe', 'tfc:powder/charcoal']),
+    event.recipes.createDeploying('tfmg:steel_pipe', ['tfmg:steel_pipe', 'tfc_items:steel_screw']),
+    event.recipes.createPressing('tfmg:steel_pipe', 'tfmg:steel_pipe')
+  ]).transitionalItem('tfmg:steel_pipe').loops(1)
+
+  // Thermite grenade: aluminum sheet → deploy thermite + rivets → press + curving
+  event.recipes.create.sequenced_assembly([
+    Item.of('tfmg:thermite_grenade', 1)
+  ], 'tfc_metallurgy:metal/sheet/aluminum', [
+    event.recipes.createDeploying('tfc_metallurgy:metal/sheet/aluminum', ['tfc_metallurgy:metal/sheet/aluminum', 'tfmg:thermite_powder']),
+    event.recipes.createDeploying('tfc_metallurgy:metal/sheet/aluminum', ['tfc_metallurgy:metal/sheet/aluminum', 'tfmg:thermite_powder']),
+    event.recipes.createDeploying('tfc_metallurgy:metal/sheet/aluminum', ['tfc_metallurgy:metal/sheet/aluminum', 'tfc_items:aluminum_rivet']),
+    event.recipes.createPressing('tfc_metallurgy:metal/sheet/aluminum', 'tfc_metallurgy:metal/sheet/aluminum'),
+    event.custom({
+      type: 'vintageimprovements:curving',
+      ingredients: [{item: 'tfc_metallurgy:metal/sheet/aluminum'}],
+      results: [{id: 'tfc_metallurgy:metal/sheet/aluminum'}],
+      mode: 2
+    })
+  ]).transitionalItem('tfc_metallurgy:metal/sheet/aluminum').loops(1)
+
+  // Zinc grenade: thermite grenade + zinc + sulfur → press
+  event.recipes.create.sequenced_assembly([
+    Item.of('tfmg:zinc_grenade', 1)
+  ], 'tfmg:thermite_grenade', [
+    event.recipes.createDeploying('tfmg:thermite_grenade', ['tfmg:thermite_grenade', 'tfc:metal/ingot/zinc']),
+    event.recipes.createDeploying('tfmg:thermite_grenade', ['tfmg:thermite_grenade', 'tfc:powder/sulfur']),
+    event.recipes.createPressing('tfmg:thermite_grenade', 'tfmg:thermite_grenade')
+  ]).transitionalItem('tfmg:thermite_grenade').loops(1)
+
+  // Copper grenade: thermite grenade + copper + sulfur → press
+  event.recipes.create.sequenced_assembly([
+    Item.of('tfmg:copper_grenade', 1)
+  ], 'tfmg:thermite_grenade', [
+    event.recipes.createDeploying('tfmg:thermite_grenade', ['tfmg:thermite_grenade', 'tfc:metal/ingot/copper']),
+    event.recipes.createDeploying('tfmg:thermite_grenade', ['tfmg:thermite_grenade', 'tfc:powder/sulfur']),
+    event.recipes.createPressing('tfmg:thermite_grenade', 'tfmg:thermite_grenade')
+  ]).transitionalItem('tfmg:thermite_grenade').loops(1)
+
+  // Napalm bomb: plastic sheet → fill napalm → seal with plastic + rivets → press
+  event.recipes.create.sequenced_assembly([
+    Item.of('tfmg:napalm_bomb', 1)
+  ], 'tfmg:plastic_sheet', [
+    event.recipes.createFilling(
+      'tfmg:plastic_sheet',
+      ['tfmg:plastic_sheet', Fluid.of('tfmg:napalm', 1000)]
+    ),
+    event.recipes.createDeploying('tfmg:plastic_sheet', ['tfmg:plastic_sheet', 'tfmg:plastic_sheet']),
+    event.recipes.createDeploying('tfmg:plastic_sheet', ['tfmg:plastic_sheet', 'tfc_items:steel_rivet']),
+    event.recipes.createPressing('tfmg:plastic_sheet', 'tfmg:plastic_sheet'),
+    event.recipes.createPressing('tfmg:plastic_sheet', 'tfmg:plastic_sheet')
+  ]).transitionalItem('tfmg:plastic_sheet').loops(1)
+
+  // Coking recipes
+
+  // Allow for coking of TFC coal
+  event.remove({id: 'tfmg:coking/coal'})
+  event.custom({
+    type: 'tfmg:coking',
+    ingredients: [{item: 'tfc:ore/bituminous_coal'}],
+    processing_time: 1200,
+    results: [
+      {id: 'tfmg:coal_coke'},
+      {amount: 2, id: 'tfmg:creosote'},
+      {amount: 30, id: 'tfmg:carbon_dioxide'}
+    ]
+  })
+  // Charcoal → coal coke (slower, less creosote than coal path)
+  event.remove({id: 'tfmg:coking/charcoal'})
+  event.custom({
+    type: 'tfmg:coking',
+    ingredients: [{item: 'minecraft:charcoal'}],
+    processing_time: 3000,
+    results: [
+      {id: 'tfmg:coal_coke'},
+      {amount: 1, id: 'tfmg:creosote'},
+      {amount: 50, id: 'tfmg:carbon_dioxide'}
+    ]
+  })
+
+  //Blasting recipes
+
+  // Replace silicon industrial blasting input with silica sand
+  event.remove({id: 'tfmg:industrial_blasting/silicon'})
+  event.custom({
+    type: 'tfmg:industrial_blasting',
+    ingredients: [{tag: 'c:sands/silica'}],
+    processing_time: 5,
+    results: [{amount: 40, id: 'tfmg:liquid_silicon'}]
+  })
+
+  // Industrial blasting for boron (kernite ore pieces → molten boron)
+  event.custom({
+    type: 'tfmg:industrial_blasting',
+    hot_air_usage: 30,
+    ingredients: [{item: 'tfc_metallurgy:ore/small_kernite'}],
+    processing_time: 15,
+    results: [
+      {amount: 10, id: 'tfc_metallurgy:metal/boron'},
+      {amount: 50, id: 'tfmg:molten_slag'}
+    ]
+  })
+  event.custom({
+    type: 'tfmg:industrial_blasting',
+    hot_air_usage: 30,
+    ingredients: [{item: 'tfc_metallurgy:ore/poor_kernite'}],
+    processing_time: 15,
+    results: [
+      {amount: 15, id: 'tfc_metallurgy:metal/boron'},
+      {amount: 50, id: 'tfmg:molten_slag'}
+    ]
+  })
+  event.custom({
+    type: 'tfmg:industrial_blasting',
+    hot_air_usage: 30,
+    ingredients: [{item: 'tfc_metallurgy:ore/normal_kernite'}],
+    processing_time: 15,
+    results: [
+      {amount: 25, id: 'tfc_metallurgy:metal/boron'},
+      {amount: 50, id: 'tfmg:molten_slag'}
+    ]
+  })
+  event.custom({
+    type: 'tfmg:industrial_blasting',
+    hot_air_usage: 30,
+    ingredients: [{item: 'tfc_metallurgy:ore/rich_kernite'}],
+    processing_time: 15,
+    results: [
+      {amount: 35, id: 'tfc_metallurgy:metal/boron'},
+      {amount: 50, id: 'tfmg:molten_slag'}
+    ]
+  })
+
+  // Industrial blasting for steel (iron powder + flux → molten steel)
+  event.remove({id: 'tfmg:industrial_blasting/steel'})
+  event.remove({id: 'tfmg:industrial_blasting/steel_from_dust'})
+  event.remove({id: 'tfmg:industrial_blasting/steel_from_raw_iron'})
+  event.custom({
+    type: 'tfmg:industrial_blasting',
+    hot_air_usage: 5,
+    ingredients: [
+      {tag: 'materialism:powders/iron'},
+      {item: 'tfc:powder/flux'}
+    ],
+    processing_time: 5,
+    results: [
+      {amount: 5, id: 'tfc:metal/pig_iron'},
+      {amount: 5, id: 'tfmg:molten_slag'},
+      {amount: 10, id: 'tfmg:furnace_gas'}
+    ]
+  })
 }
 )

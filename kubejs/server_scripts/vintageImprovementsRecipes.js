@@ -25,10 +25,17 @@ ServerEvents.recipes(event => {
 
     event.remove({id: /vintageimprovements:pressing\/\w+_ingot/})
 
+    event.replaceInput(
+      { input: 'vintageimprovements:iron_spring' }, // Arg 1: the filter
+      'vintageimprovements:iron_spring',            // Arg 2: the item to replace
+      'vintageimprovements:steel_spring'         // Arg 3: the item to replace it with
+    )
+
     // Lathe recipes
     event.recipes.vintageimprovements.turning('vintageimprovements:w_shaped_curving_head', 'tfc:metal/block/steel').processingTime(300)
     event.recipes.vintageimprovements.turning('vintageimprovements:v_shaped_curving_head', 'tfc:metal/block/steel').processingTime(300)
-    event.recipes.vintageimprovements.turning('4x tfmg:screw', 'tfc:metal/rod/steel').processingTime(300)
+    // Screw from tfmg removed in favour of tfc_items screws
+    //event.recipes.vintageimprovements.turning('4x tfmg:screw', 'tfc:metal/rod/steel').processingTime(300)
     event.recipes.vintageimprovements.turning('2x tfmg:rebar', 'tfc:metal/rod/steel').processingTime(300)
     // Pipes to be made with the lathe
     event.remove({output: 'create:fluid_pipe'})
@@ -167,11 +174,6 @@ ServerEvents.recipes(event => {
       'tfc:metal/sheet/steel'         // Arg 3: the item to replace it with
     )
     event.replaceInput(
-      { id: 'vintageimprovements:craft/vacuum_chamber' }, // Arg 1: the filter
-      'vintageimprovements:iron_spring',            // Arg 2: the item to replace
-      'vintageimprovements:steel_spring'         // Arg 3: the item to replace it with
-    )
-    event.replaceInput(
       { id: 'vintageimprovements:mechanical_crafting/lathe' }, // Arg 1: the filter
       'create:andesite_alloy',            // Arg 2: the item to replace
       'tfc_metallurgy:metal/sheet/tungsten_steel'         // Arg 3: the item to replace it with
@@ -254,7 +256,7 @@ ServerEvents.recipes(event => {
         // Sequence of assembly steps
         [
           event.recipes.createDeploying('tfmg:plastic_pipe', ['tfmg:plastic_pipe', 'create_optical:mirror']),
-          event.recipes.createDeploying('tfmg:plastic_pipe', ['tfmg:plastic_pipe', 'create_new_age:copper_circuit']),
+          event.recipes.createDeploying('tfmg:plastic_pipe', ['tfmg:plastic_pipe', 'tfmg:circuit_board']),
           event.recipes.createDeploying('tfmg:plastic_pipe', ['tfmg:plastic_pipe', 'create_optical:mirror']),
           event.recipes.createDeploying('tfmg:plastic_pipe', ['tfmg:plastic_pipe', 'createaddition:copper_wire'])
         ]

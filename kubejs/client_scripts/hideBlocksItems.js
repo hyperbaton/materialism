@@ -15,6 +15,7 @@ RecipeViewerEvents.removeEntries('item', event => {
     event.remove(/.*pink_slime.*/);
     event.remove(/.*refined_glowstone.*/);
     event.remove(/.*refined_obsidian.*/);
+    event.remove(/.*compressed_iron.*/);
     event.remove(/.*tfc_metallurgy.*andesite.*/);
 
     // Hide Create items
@@ -57,6 +58,22 @@ RecipeViewerEvents.removeEntries('item', event => {
     r('createaddition:capacitor')
     r('tfmg:copper_sulfate')
     r('tfmg:sulfur_dust')
+    r('vintageimprovements:sulfur')
+    r('vintageimprovements:sulfur_chunk')
+    r('vintageimprovements:sulfur_block')
+    r('tfmg:steel_nugget')
+    r('tfmg:constantan_ingot')
+    r('tfmg:constantan_nugget')
+    r('tfmg:constantan_block')
+    r('tfmg:bauxite_powder')
+    r('createbigcannons:steel_scrap')
+    r('tfmg:screw')
+    r('tfmg:aluminum_bars')
+    r('tfmg:steel_bars')
+    r('tfmg:nickel_sheet')
+    r('tfmg:lead_ingot')
+    r('create_new_age:blank_circuit')
+    r('create_new_age:copper_circuit')
     event.remove(/createvintageneoforged:sulfuric_acid_bucket/)
     r('tfmg:limesand')
     r('createaddition:electrum_ingot')
@@ -366,6 +383,11 @@ RecipeViewerEvents.removeEntries('item', event => {
 
     // Hide the spawn eggs, only obtainable in creative
     event.remove(/.*spawn_egg.*/);
+
+    // Hide TFC and others blocks which don't need to be consulted
+    event.remove(/.*grass.*/);
+    event.remove(/.*rooted.*/);
+    event.remove(/.*roots.*/);
 
     function removeToolsAndArmor(metal) {
         r('tfc_metallurgy:metal/anvil/' + metal)

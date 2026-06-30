@@ -340,7 +340,7 @@ ServerEvents.recipes(event => {
     })
 
     // T2.5: Advanced motor extension
-    event.remove({id: 'create_new_age:advanced_motor_extension'})
+    event.remove({id: 'create_new_age:mechanical_crafting/advanced_motor_extension'})
     event.recipes.create.mechanical_crafting('create_new_age:advanced_motor_extension', [
       'B   B',
       ' CDF ',
@@ -357,7 +357,7 @@ ServerEvents.recipes(event => {
     })
 
     // T3: Reinforced motor
-    event.remove({id: 'create_new_age:reinforced_motor'})
+    event.remove({id: 'create_new_age:mechanical_crafting/reinforced_motor'})
     event.recipes.create.mechanical_crafting('create_new_age:reinforced_motor', [
       'B H B',
       ' CDF ',
@@ -416,7 +416,7 @@ ServerEvents.recipes(event => {
           ),
           event.recipes.createDeploying(
               'create:fluid_tank',
-              ['create:fluid_tank', 'tfmg:screw']
+              ['create:fluid_tank', 'tfc_items:handful_steel_screws']
           ),
           event.custom({type: 'vintageimprovements:hammering',
             ingredients: [{item: 'create:fluid_tank'}],

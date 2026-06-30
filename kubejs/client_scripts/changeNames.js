@@ -6,7 +6,7 @@ ClientEvents.lang("en_us", event => {
     event.renameItem('create_new_age:fluxuated_magnetite', 'Alnico Magnet')
     event.renameItem('create_new_age:netherite_magnet', 'Neodymium Magnet')
     // event.renameItem('tfmg:capacitor', 'Lead-Acid Battery') // item removed/renamed in TFMG 1.21
-    // event.renameItem('tfmg:accumulator', 'Lithium Battery') // item removed/renamed in TFMG 1.21
+    // event.renameItem('tfmg:accumulator', 'Lithium Battery') // Let's use accumulators for both battery types
     event.renameItem('create_new_age:radioactive_thorium', 'Fissible Material')
     event.renameItem('createsifter:andesite_mesh', 'Stainless Steel Mesh')
     event.renameItem('createsifter:custom_mesh', 'Titanium Mesh')

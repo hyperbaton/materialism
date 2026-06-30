@@ -10,13 +10,13 @@ ServerEvents.recipes(event => {
           ' CDC '
         ],
         {
-          A: 'create_new_age:copper_circuit',
+          A: 'tfmg:circuit_board',
           B: 'tfc_metallurgy:metal/sheet/aluminum',
           C: 'tfmg:plastic_sheet',
           D: 'railways:smokestack_diesel',
           E: 'tfmg:cable_tube',
           // TODO: Find replacement for missing item
-          //E: 'tfmg:electric_casing',
+          //F: 'tfmg:electric_casing',
           F: 'tfmg:electrical_switch',
           G: 'create_optical:optical_source',
           H: 'firmalife:reinforced_glass'
@@ -33,7 +33,7 @@ ServerEvents.recipes(event => {
         ' CDDDC ' 
       ],
       {
-        A: 'create_new_age:copper_circuit',
+        A: 'tfmg:circuit_board',
         B: 'tfc_metallurgy:metal/sheet/aluminum',
         C: 'tfmg:plastic_sheet',
         D: 'railways:smokestack_diesel',
@@ -136,7 +136,7 @@ ServerEvents.recipes(event => {
         A: 'tfmg:plastic_sheet',
         B: 'computercraft:cable',
         C: 'tfc_metallurgy:metal/sheet/aluminum',
-        D: 'create_new_age:copper_circuit'
+        D: 'tfmg:circuit_board'
       }
     )
     event.remove('computercraft:wireless_modem_normal')
@@ -152,7 +152,7 @@ ServerEvents.recipes(event => {
       A: 'tfmg:plastic_sheet',
       B: 'computercraft:cable',
       C: 'tfc_metallurgy:metal/sheet/aluminum',
-      D: 'create_new_age:copper_circuit',
+      D: 'tfmg:circuit_board',
       E: 'create:electron_tube',
       F: 'minecraft:lightning_rod'
     }
@@ -170,7 +170,7 @@ ServerEvents.recipes(event => {
       A: 'tfmg:plastic_sheet',
       B: 'computercraft:cable',
       C: 'tfc_metallurgy:metal/sheet/aluminum',
-      D: 'create_new_age:copper_circuit',
+      D: 'tfmg:circuit_board',
       E: 'create:electron_tube',
       F: 'minecraft:lightning_rod',
       P: 'tfc_metallurgy:metal/double_sheet/platinum',
