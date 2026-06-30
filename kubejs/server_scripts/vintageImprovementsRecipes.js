@@ -88,7 +88,7 @@ ServerEvents.recipes(event => {
     })
     event.custom({type: 'vintageimprovements:pressurizing',
       ingredients: [
-        {tag: 'tfc:powders/copper'},
+        {tag: 'materialism:powders/copper'},
         {fluid: 'tfmg:sulfuric_acid', amount: 200, type: 'neoforge:single'},
         {fluid: 'minecraft:water', amount: 200, type: 'neoforge:single'}
       ],

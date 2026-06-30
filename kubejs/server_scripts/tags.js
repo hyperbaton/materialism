@@ -180,6 +180,15 @@ ServerEvents.tags('block', event => {
 
 })
 
+ServerEvents.tags('item', event => {
+    event.add('materialism:powders/copper', 'tfc:powder/native_copper')
+    event.add('materialism:powders/copper', 'tfc:powder/malachite')
+    event.add('materialism:powders/copper', 'tfc:powder/tetrahedrite')
+    event.add('materialism:powders/iron', 'tfc:powder/hematite')
+    event.add('materialism:powders/iron', 'tfc:powder/magnetite')
+    event.add('materialism:powders/iron', 'tfc:powder/limonite')
+})
+
 ServerEvents.tags('enchantment', event => {
     event.removeAll('minecraft:in_enchanting_table')
     event.removeAll('minecraft:tradeable')

@@ -46,8 +46,7 @@ ServerEvents.recipes(event => {
         Item.of('minecraft:cyan_stained_glass')
     ], Ingredient.of('#tfc:glass_batches_tier_3'), [ // input
         event.recipes.create.deploying('tfc:volcanic_glass_batch', ['tfc:volcanic_glass_batch', 'tfc:powder/sapphire']),
-        // TODO: tfc:powders/copper tag is empty in 1.21
-        //event.custom({type: 'create:deploying', ingredients: [{item: 'tfc:volcanic_glass_batch'}, {tag: 'tfc:powders/copper'}], results: [{id: 'tfc:volcanic_glass_batch'}]}),
+        event.custom({type: 'create:deploying', ingredients: [{item: 'tfc:volcanic_glass_batch'}, {tag: 'materialism:powders/copper'}], results: [{id: 'tfc:volcanic_glass_batch'}]}),
         curvingConcave('#tfc:glass_batches_tier_3')
     ]).transitionalItem('tfc:volcanic_glass_batch').loops(1)
 
@@ -113,8 +112,7 @@ ServerEvents.recipes(event => {
     event.recipes.create.sequenced_assembly([
         Item.of('minecraft:blue_stained_glass_pane', 16)
       ], Ingredient.of('tfc:silica_glass_batch'), [ // input
-        // TODO: tfc:powders/copper tag is empty in 1.21
-        //event.custom({type: 'create:deploying', ingredients: [{item: 'tfc:silica_glass_batch'}, {tag: 'tfc:powders/copper'}], results: [{id: 'tfc:silica_glass_batch'}]}),
+        event.custom({type: 'create:deploying', ingredients: [{item: 'tfc:silica_glass_batch'}, {tag: 'materialism:powders/copper'}], results: [{id: 'tfc:silica_glass_batch'}]}),
         event.recipes.create.pressing('tfc:silica_glass_batch', 'tfc:silica_glass_batch'),
         event.recipes.create.cutting('tfc:silica_glass_batch', 'tfc:silica_glass_batch')
     ]).transitionalItem('tfc:silica_glass_batch').loops(1)
@@ -129,8 +127,7 @@ ServerEvents.recipes(event => {
     event.recipes.create.sequenced_assembly([
         Item.of('minecraft:lime_stained_glass')
     ], Ingredient.of('#tfc:glass_batches_tier_2'), [ // input
-        // TODO: tfc:powders/iron tag is empty in 1.21
-        //event.custom({type: 'create:deploying', ingredients: [{item: 'tfc:hematitic_glass_batch'}, {tag: 'tfc:powders/iron'}], results: [{id: 'tfc:hematitic_glass_batch'}]}),
+        event.custom({type: 'create:deploying', ingredients: [{item: 'tfc:hematitic_glass_batch'}, {tag: 'materialism:powders/iron'}], results: [{id: 'tfc:hematitic_glass_batch'}]}),
         event.recipes.create.deploying('tfc:hematitic_glass_batch', ['tfc:hematitic_glass_batch', 'tfc:powder/soda_ash']),
         curvingConcave('#tfc:glass_batches_tier_2')
     ]).transitionalItem('tfc:hematitic_glass_batch').loops(1)
@@ -159,8 +156,7 @@ ServerEvents.recipes(event => {
         Item.of('minecraft:lime_stained_glass_pane', 16)
     ], Ingredient.of('#tfc:glass_batches_tier_2'), [ // input
         event.recipes.create.deploying('tfc:hematitic_glass_batch', ['tfc:hematitic_glass_batch', 'tfc:powder/soda_ash']),
-        // TODO: tfc:powders/iron tag is empty in 1.21
-        //event.custom({type: 'create:deploying', ingredients: [{item: 'tfc:hematitic_glass_batch'}, {tag: 'tfc:powders/iron'}], results: [{id: 'tfc:hematitic_glass_batch'}]}),
+        event.custom({type: 'create:deploying', ingredients: [{item: 'tfc:hematitic_glass_batch'}, {tag: 'materialism:powders/iron'}], results: [{id: 'tfc:hematitic_glass_batch'}]}),
         event.recipes.create.pressing('tfc:hematitic_glass_batch', 'tfc:hematitic_glass_batch'),
         event.recipes.create.cutting('tfc:hematitic_glass_batch', 'tfc:hematitic_glass_batch')
     ]).transitionalItem('tfc:hematitic_glass_batch').loops(1)
@@ -187,8 +183,7 @@ ServerEvents.recipes(event => {
     event.recipes.create.sequenced_assembly([
         Item.of('minecraft:cyan_stained_glass', 1)
     ], Ingredient.of('#tfc:glass_batches_tier_2'), [ // input
-        // TODO: tfc:powders/copper tag is empty in 1.21
-        //event.custom({type: 'create:deploying', ingredients: [{item: 'tfc:hematitic_glass_batch'}, {tag: 'tfc:powders/copper'}], results: [{id: 'tfc:hematitic_glass_batch'}]}),
+        event.custom({type: 'create:deploying', ingredients: [{item: 'tfc:hematitic_glass_batch'}, {tag: 'materialism:powders/copper'}], results: [{id: 'tfc:hematitic_glass_batch'}]}),
         event.recipes.create.deploying('tfc:hematitic_glass_batch', ['tfc:hematitic_glass_batch', 'tfc:powder/sapphire']),
         curvingConcave('#tfc:glass_batches_tier_2')
     ]).transitionalItem('tfc:hematitic_glass_batch').loops(1)
@@ -208,8 +203,7 @@ ServerEvents.recipes(event => {
         Item.of('minecraft:cyan_stained_glass_pane', 16)
     ], Ingredient.of('#tfc:glass_batches_tier_3'), [ // input
         event.recipes.create.deploying('tfc:volcanic_glass_batch', ['tfc:volcanic_glass_batch', 'tfc:powder/sapphire']),
-        // TODO: tfc:powders/copper tag is empty in 1.21
-        //event.custom({type: 'create:deploying', ingredients: [{item: 'tfc:volcanic_glass_batch'}, {tag: 'tfc:powders/copper'}], results: [{id: 'tfc:volcanic_glass_batch'}]}),
+        event.custom({type: 'create:deploying', ingredients: [{item: 'tfc:volcanic_glass_batch'}, {tag: 'materialism:powders/copper'}], results: [{id: 'tfc:volcanic_glass_batch'}]}),
         event.recipes.create.pressing('tfc:volcanic_glass_batch', 'tfc:volcanic_glass_batch'),
         event.recipes.create.cutting('tfc:volcanic_glass_batch', 'tfc:volcanic_glass_batch')
     ]).transitionalItem('tfc:volcanic_glass_batch').loops(1)
@@ -310,8 +304,7 @@ ServerEvents.recipes(event => {
         Item.of('minecraft:lime_stained_glass', 1)
     ], Ingredient.of('#tfc:glass_batches_tier_2'), [ // input
         event.recipes.create.deploying('tfc:hematitic_glass_batch', ['tfc:hematitic_glass_batch', 'tfc:powder/soda_ash']),
-        // TODO: tfc:powders/iron tag is empty in 1.21
-        //event.custom({type: 'create:deploying', ingredients: [{item: 'tfc:hematitic_glass_batch'}, {tag: 'tfc:powders/iron'}], results: [{id: 'tfc:hematitic_glass_batch'}]}),
+        event.custom({type: 'create:deploying', ingredients: [{item: 'tfc:hematitic_glass_batch'}, {tag: 'materialism:powders/iron'}], results: [{id: 'tfc:hematitic_glass_batch'}]}),
         curvingConcave('#tfc:glass_batches_tier_2')
     ]).transitionalItem('tfc:hematitic_glass_batch').loops(1)
 
@@ -336,8 +329,7 @@ ServerEvents.recipes(event => {
     event.recipes.create.sequenced_assembly([
         Item.of('minecraft:green_stained_glass', 1)
     ], Ingredient.of('#tfc:glass_batches_tier_2'), [ // input
-        // TODO: tfc:powders/iron tag is empty in 1.21
-        //event.custom({type: 'create:deploying', ingredients: [{item: 'tfc:hematitic_glass_batch'}, {tag: 'tfc:powders/iron'}], results: [{id: 'tfc:hematitic_glass_batch'}]}),
+        event.custom({type: 'create:deploying', ingredients: [{item: 'tfc:hematitic_glass_batch'}, {tag: 'materialism:powders/iron'}], results: [{id: 'tfc:hematitic_glass_batch'}]}),
         curvingConcave('#tfc:glass_batches_tier_2')
     ]).transitionalItem('tfc:hematitic_glass_batch').loops(1)
     
@@ -377,8 +369,7 @@ ServerEvents.recipes(event => {
     event.recipes.create.sequenced_assembly([
         Item.of('minecraft:lime_stained_glass_pane', 16)
     ], Ingredient.of('#tfc:glass_batches_tier_2'), [ // input
-        // TODO: tfc:powders/iron tag is empty in 1.21
-        //event.custom({type: 'create:deploying', ingredients: [{item: 'tfc:hematitic_glass_batch'}, {tag: 'tfc:powders/iron'}], results: [{id: 'tfc:hematitic_glass_batch'}]}),
+        event.custom({type: 'create:deploying', ingredients: [{item: 'tfc:hematitic_glass_batch'}, {tag: 'materialism:powders/iron'}], results: [{id: 'tfc:hematitic_glass_batch'}]}),
         event.recipes.create.deploying('tfc:hematitic_glass_batch', ['tfc:hematitic_glass_batch', 'tfc:powder/soda_ash']),
         event.recipes.create.pressing('tfc:hematitic_glass_batch', 'tfc:hematitic_glass_batch'),
         event.recipes.create.cutting('tfc:hematitic_glass_batch', 'tfc:hematitic_glass_batch')
@@ -399,8 +390,7 @@ ServerEvents.recipes(event => {
     event.recipes.create.sequenced_assembly([
         Item.of('minecraft:cyan_stained_glass_pane', 16)
     ], Ingredient.of('#tfc:glass_batches_tier_3'), [ // input
-        // TODO: tfc:powders/copper tag is empty in 1.21
-        //event.custom({type: 'create:deploying', ingredients: [{item: 'tfc:volcanic_glass_batch'}, {tag: 'tfc:powders/copper'}], results: [{id: 'tfc:volcanic_glass_batch'}]}),
+        event.custom({type: 'create:deploying', ingredients: [{item: 'tfc:volcanic_glass_batch'}, {tag: 'materialism:powders/copper'}], results: [{id: 'tfc:volcanic_glass_batch'}]}),
         event.recipes.create.deploying('tfc:volcanic_glass_batch', ['tfc:volcanic_glass_batch', 'tfc:powder/sapphire']),
         event.recipes.create.pressing('tfc:volcanic_glass_batch', 'tfc:volcanic_glass_batch'),
         event.recipes.create.cutting('tfc:volcanic_glass_batch', 'tfc:volcanic_glass_batch')
@@ -445,10 +435,8 @@ ServerEvents.recipes(event => {
     event.recipes.create.sequenced_assembly([
         Item.of('minecraft:purple_stained_glass_pane', 16)
     ], Ingredient.of('#tfc:glass_batches'), [ // input
-        // TODO: tfc:powders/iron tag is empty in 1.21
-        //event.custom({type: 'create:deploying', ingredients: [{item: 'tfc:silica_glass_batch'}, {tag: 'tfc:powders/iron'}], results: [{id: 'tfc:silica_glass_batch'}]}),
-        // TODO: tfc:powders/copper tag is empty in 1.21
-        //event.custom({type: 'create:deploying', ingredients: [{item: 'tfc:silica_glass_batch'}, {tag: 'tfc:powders/copper'}], results: [{id: 'tfc:silica_glass_batch'}]}),
+        event.custom({type: 'create:deploying', ingredients: [{item: 'tfc:silica_glass_batch'}, {tag: 'materialism:powders/iron'}], results: [{id: 'tfc:silica_glass_batch'}]}),
+        event.custom({type: 'create:deploying', ingredients: [{item: 'tfc:silica_glass_batch'}, {tag: 'materialism:powders/copper'}], results: [{id: 'tfc:silica_glass_batch'}]}),
         curvingConcave('#tfc:glass_batches'),
         event.recipes.create.pressing('tfc:silica_glass_batch', 'tfc:silica_glass_batch'),
         event.recipes.create.cutting('tfc:silica_glass_batch', 'tfc:silica_glass_batch')
@@ -458,10 +446,8 @@ ServerEvents.recipes(event => {
     event.recipes.create.sequenced_assembly([
         Item.of('minecraft:purple_stained_glass', 1)
     ], Ingredient.of('#tfc:glass_batches'), [ // input
-        // TODO: tfc:powders/iron tag is empty in 1.21
-        //event.custom({type: 'create:deploying', ingredients: [{item: 'tfc:silica_glass_batch'}, {tag: 'tfc:powders/iron'}], results: [{id: 'tfc:silica_glass_batch'}]}),
-        // TODO: tfc:powders/copper tag is empty in 1.21
-        //event.custom({type: 'create:deploying', ingredients: [{item: 'tfc:silica_glass_batch'}, {tag: 'tfc:powders/copper'}], results: [{id: 'tfc:silica_glass_batch'}]}),
+        event.custom({type: 'create:deploying', ingredients: [{item: 'tfc:silica_glass_batch'}, {tag: 'materialism:powders/iron'}], results: [{id: 'tfc:silica_glass_batch'}]}),
+        event.custom({type: 'create:deploying', ingredients: [{item: 'tfc:silica_glass_batch'}, {tag: 'materialism:powders/copper'}], results: [{id: 'tfc:silica_glass_batch'}]}),
         curvingConcave('#tfc:glass_batches')
     ]).transitionalItem('tfc:silica_glass_batch').loops(1)
 
@@ -487,8 +473,7 @@ ServerEvents.recipes(event => {
     event.recipes.create.sequenced_assembly([
         Item.of('minecraft:blue_stained_glass', 1)
     ], Ingredient.of('tfc:silica_glass_batch'), [ // input
-        // TODO: tfc:powders/copper tag is empty in 1.21
-        //event.custom({type: 'create:deploying', ingredients: [{item: 'tfc:silica_glass_batch'}, {tag: 'tfc:powders/copper'}], results: [{id: 'tfc:silica_glass_batch'}]}),
+        event.custom({type: 'create:deploying', ingredients: [{item: 'tfc:silica_glass_batch'}, {tag: 'materialism:powders/copper'}], results: [{id: 'tfc:silica_glass_batch'}]}),
         curvingConcave('tfc:silica_glass_batch')
     ]).transitionalItem('tfc:silica_glass_batch').loops(1)
     
@@ -516,8 +501,7 @@ ServerEvents.recipes(event => {
       event.recipes.create.sequenced_assembly([
           Item.of('minecraft:green_stained_glass_pane', 16)
       ], Ingredient.of('#tfc:glass_batches_tier_2'), [ // input
-          // TODO: tfc:powders/iron tag is empty in 1.21
-        //event.custom({type: 'create:deploying', ingredients: [{item: 'tfc:hematitic_glass_batch'}, {tag: 'tfc:powders/iron'}], results: [{id: 'tfc:hematitic_glass_batch'}]}),
+          event.custom({type: 'create:deploying', ingredients: [{item: 'tfc:hematitic_glass_batch'}, {tag: 'materialism:powders/iron'}], results: [{id: 'tfc:hematitic_glass_batch'}]}),
           event.recipes.create.pressing('tfc:hematitic_glass_batch', 'tfc:hematitic_glass_batch'),
           event.recipes.create.cutting('tfc:hematitic_glass_batch', 'tfc:hematitic_glass_batch')
       ]).transitionalItem('tfc:hematitic_glass_batch').loops(1)

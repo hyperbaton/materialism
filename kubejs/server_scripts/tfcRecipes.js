@@ -58,13 +58,12 @@ ServerEvents.recipes(event => {
         }
     })
 
-    // TODO: tfmg:hardened_planks_slab no longer exists in TFMG 1.21
-    //event.remove('tfc:crafting/powderkeg_from_barrel')
-    //event.replaceInput(
-    //    { id: 'tfc:crafting/powderkeg' },
-    //    '#tfc:lumber',
-    //    'tfmg:hardened_planks_slab'
-    //)
+    event.remove('tfc:crafting/powderkeg_from_barrel')
+    event.replaceInput(
+       { id: 'tfc:crafting/powderkeg' },
+       '#tfc:lumber',
+       'tfmg:hardened_planks'
+    )
 
     // Dough recipes
     addDoughRecipes(event, cereals);
@@ -81,19 +80,19 @@ ServerEvents.recipes(event => {
             )
         });
     }
-    // TODO: tfc:sweetener tag is empty in 1.21 — need to populate tag or replace with specific item
     function addYeastDoughRecipes(event, cereals) {
-        /*cereals.forEach(cereal => {
-            event.recipes.create.mixing(
-                Item.of(`firmalife:food/${cereal}_dough`, 4),
-                [
-                    `tfc:food/${cereal}_flour`,
-                    {'tag': 'tfc:sweetener'},
-                    Fluid.of('firmalife:yeast_starter', 100)
+        cereals.forEach(cereal => {
+            event.custom({
+                type: 'create:mixing',
+                ingredients: [
+                    {item: `tfc:food/${cereal}_flour`},
+                    {tag: 'tfc:foods/sweeteners'},
+                    {type: 'neoforge:single', fluid: 'firmalife:yeast_starter', amount: 100}
                 ],
-                500
-            )
-        });*/
+                results: [{id: `firmalife:food/${cereal}_dough`, count: 4}],
+                processing_time: 500
+            })
+        });
     }
     addCuttingCerealRecipes(event, cereals);
     // TODO: Uncomment this when sliceanddice is fixed
@@ -118,79 +117,83 @@ ServerEvents.recipes(event => {
             event.recipes.vintageimprovements.vibrating([`tfc:food/${cereal}_grain`, 'tfc:straw'], `tfc:food/${cereal}`)
         });
     }
-    event.recipes.create.mixing(
-        Item.of(`firmalife:food/pizza_dough`, 4),
-        [
-            `#tfc:foods/dough`,
-            'tfc:powder/salt',
-            'firmalife:spice/basil_leaves',
-            Fluid.of('firmalife:soybean_oil', 100)
+    event.custom({
+        type: 'create:mixing',
+        ingredients: [
+            {tag: 'c:foods/dough'},
+            {item: 'tfc:powder/salt'},
+            {item: 'firmalife:spice/basil_leaves'},
+            {type: 'neoforge:single', fluid: 'firmalife:soybean_oil', amount: 100}
         ],
-        5000
-    )
-    event.recipes.create.mixing(
-        Item.of(`firmalife:food/pizza_dough`, 4),
-        [
-            `#tfc:foods/dough`,
-            'tfc:powder/salt',
-            'firmalife:spice/basil_leaves',
-            Fluid.of('tfc:olive_oil', 100)
+        results: [{id: 'firmalife:food/pizza_dough', count: 4}],
+        processing_time: 5000
+    })
+    event.custom({
+        type: 'create:mixing',
+        ingredients: [
+            {tag: 'c:foods/dough'},
+            {item: 'tfc:powder/salt'},
+            {item: 'firmalife:spice/basil_leaves'},
+            {type: 'neoforge:single', fluid: 'tfc:olive_oil', amount: 100}
         ],
-        5000
-    )
-    // TODO: firmalife:feeds_yeast and tfc:sweetener tags are empty in 1.21
-    /*event.recipes.create.mixing(
-        Item.of(`firmalife:food/pie_dough`, 1),
-        [
-            `firmalife:food/butter`,
-            {'tag': 'firmalife:feeds_yeast'},
-            {'tag': 'tfc:sweetener'},
-            Fluid.of('minecraft:water', 1000)
+        results: [{id: 'firmalife:food/pizza_dough', count: 4}],
+        processing_time: 5000
+    })
+    event.custom({
+        type: 'create:mixing',
+        ingredients: [
+            {item: 'firmalife:food/butter'},
+            {tag: 'firmalife:feeds_yeast'},
+            {tag: 'tfc:foods/sweeteners'},
+            {type: 'neoforge:single', fluid: 'minecraft:water', amount: 1000}
         ],
-        5000
-    )
-    event.recipes.create.mixing(
-        Item.of(`firmalife:food/pumpkin_pie_dough`, 1),
-        [
-            `minecraft:egg`,
-            'tfc:food/pumpkin_chunks',
-            'tfc:food/pumpkin_chunks',
-            {'tag': 'firmalife:feeds_yeast'},
-            {'tag': 'tfc:sweetener'},
-            Fluid.of('minecraft:water', 1000)
+        results: [{id: 'firmalife:food/pie_dough'}],
+        processing_time: 5000
+    })
+    event.custom({
+        type: 'create:mixing',
+        ingredients: [
+            {item: 'minecraft:egg'},
+            {item: 'tfc:food/pumpkin_chunks'},
+            {item: 'tfc:food/pumpkin_chunks'},
+            {tag: 'firmalife:feeds_yeast'},
+            {tag: 'tfc:foods/sweeteners'},
+            {type: 'neoforge:single', fluid: 'minecraft:water', amount: 1000}
         ],
-        5000
-    )
-    event.recipes.create.mixing(
-        Item.of(`firmalife:food/cookie_dough`, 4),
-        [
-            `minecraft:egg`,
-            'firmalife:spice/vanilla',
-            `firmalife:food/butter`,
-            {'tag': 'firmalife:feeds_yeast'},
-            {'tag': 'tfc:sweetener'},
-            Fluid.of('minecraft:water', 1000)
+        results: [{id: 'firmalife:food/pumpkin_pie_dough'}],
+        processing_time: 5000
+    })
+    event.custom({
+        type: 'create:mixing',
+        ingredients: [
+            {item: 'minecraft:egg'},
+            {item: 'firmalife:spice/vanilla'},
+            {item: 'firmalife:food/butter'},
+            {tag: 'firmalife:feeds_yeast'},
+            {tag: 'tfc:foods/sweeteners'},
+            {type: 'neoforge:single', fluid: 'minecraft:water', amount: 1000}
         ],
-        5000
-    )*/
+        results: [{id: 'firmalife:food/cookie_dough', count: 4}],
+        processing_time: 5000
+    })
     event.recipes.create.mixing(
         Item.of(`firmalife:food/chocolate_chip_cookie_dough`, 4),
         [
             Item.of(`firmalife:food/cookie_dough`, 4),
-            `#firmalife:foods/chocolate`,
+            Ingredient.of(`#firmalife:foods/chocolate`),
         ],
         5000
     )
-    // TODO: firmalife:feeds_yeast tag is empty in 1.21
-    /*event.recipes.create.mixing(
-        Item.of(`firmalife:food/hardtack_dough`, 4),
-        [
-            {'tag': 'firmalife:feeds_yeast'},
-            'tfc:powder/salt',
-            Fluid.of('minecraft:water', 1000)
+    event.custom({
+        type: 'create:mixing',
+        ingredients: [
+            {tag: 'firmalife:feeds_yeast'},
+            {item: 'tfc:powder/salt'},
+            {type: 'neoforge:single', fluid: 'minecraft:water', amount: 1000}
         ],
-        3000
-    )*/
+        results: [{id: 'firmalife:food/hardtack_dough', count: 4}],
+        processing_time: 3000
+    })
 
     // TODO: artisanal mod fluids (apple_juice, sugarcane_juice, etc.) no longer exist in 1.21
     /*
@@ -239,15 +242,22 @@ ServerEvents.recipes(event => {
     */
 
     // Phosphorus recipes
-    // TODO: tfcthermaldeposits:mineral/powder/apatite no longer exists in 1.21
-    //event.recipes.vintageimprovements.pressurizing(Item.of('tfc:pure_phosphorus', 5),
-    //['tfcthermaldeposits:mineral/powder/apatite', 'tfcthermaldeposits:mineral/powder/apatite', 'tfc:powder/charcoal', '#tfc:silica_sand'])
-    //.superheated().processingTime(500)
+    event.custom({type: 'vintageimprovements:pressurizing',
+      ingredients: [
+        {item: 'tfcvolcanoes:mineral/powder/apatite'},
+        {item: 'tfcvolcanoes:mineral/powder/apatite'},
+        {item: 'tfc:powder/charcoal'},
+        {tag: 'c:sands/silica'}
+      ],
+      results: [{id: 'tfc:pure_phosphorus', count: 5}],
+      heat_requirement: 'superheated',
+      processing_time: 500
+    })
     event.custom({type: 'vintageimprovements:pressurizing',
       ingredients: [
         {item: 'tfc:groundcover/guano'},
         {item: 'tfc:powder/charcoal'},
-        {tag: 'tfc:silica_sand'}
+        {tag: 'c:sands/silica'}
       ],
       results: [{id: 'tfc:pure_phosphorus', count: 5}],
       heat_requirement: 'superheated',
