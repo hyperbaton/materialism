@@ -35,5 +35,7 @@ ClientEvents.lang("en_us", event => {
     event.renameItem('butchery:netherite_hacksaw', 'Tungsten Steel Hacksaw')
     event.renameItem('butchery:netherite_hammer', 'Tungsten Steel Hammer')
     event.renameItem('butchery:netherite_skinning_knife', 'Tungsten Steel Skinning Knife')
+    
+    event.renameItem('aeronautics:andesite_propeller', 'Steel Propeller')
 
 });

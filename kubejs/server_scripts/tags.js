@@ -178,6 +178,14 @@ ServerEvents.tags('block', event => {
     addClassWoods(event, 'mountain_skyforged', ['teak', 'ironwood'])
     addClassWoods(event, 'mountain_stormcaller', ['sequoia', 'rosewood', 'mahogany'])
 
+    // Aeronautics levitite catalyzers: add TFC heat sources as substitutes for Nether blocks
+    // levitite_catalyzer (block): campfire, magma_block, torch, fire, lit_blaze_burner
+    // The originals include campfire/torch/fire which exist in TFC, but magma_block doesn't
+    // levitite_adjacent_catalyzer (block): netherrack, c:storage_blocks/coal — coal blocks exist
+    // levitite_soul_catalyzer/adjacent: soul_fire_base_blocks — doesn't exist in TFC
+    // Add TFC charcoal forge as alternative catalyzer
+    event.add('aeronautics:levitite_catalyzer', 'tfc:charcoal_forge')
+    event.add('aeronautics:levitite_adjacent_catalyzer', '#c:storage_blocks/coal')
 })
 
 ServerEvents.tags('item', event => {
@@ -191,6 +199,7 @@ ServerEvents.tags('item', event => {
     event.add('c:plates/nickel', 'tfc:metal/sheet/nickel')
     event.add('c:plates/lead', 'tfc_metallurgy:metal/sheet/lead')
     event.add('c:plates/cast_iron', 'tfc:metal/sheet/cast_iron')
+    event.add('c:plates/gold', 'tfc:metal/sheet/gold')
 })
 
 ServerEvents.tags('enchantment', event => {
