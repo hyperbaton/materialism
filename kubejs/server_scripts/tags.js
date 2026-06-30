@@ -200,6 +200,8 @@ ServerEvents.tags('item', event => {
     event.add('c:plates/lead', 'tfc_metallurgy:metal/sheet/lead')
     event.add('c:plates/cast_iron', 'tfc:metal/sheet/cast_iron')
     event.add('c:plates/gold', 'tfc:metal/sheet/gold')
+    event.add('materialism:rubber', 'afc:rubber_bar')
+    event.add('materialism:rubber', 'tfmg:rubber_sheet')
 })
 
 ServerEvents.tags('enchantment', event => {

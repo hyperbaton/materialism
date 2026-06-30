@@ -131,7 +131,7 @@ ServerEvents.recipes(event => {
         {
             S: 'tfc:metal/sheet/copper',
             R: 'minecraft:redstone',
-            K: 'afc:rubber_bar',
+            K: '#materialism:rubber',
             C: 'create:cogwheel',
             P: 'create:fluid_pipe'
         }
@@ -176,7 +176,7 @@ ServerEvents.recipes(event => {
     event.remove({id: 'offroad:small_tire'})
     event.shapeless('offroad:small_tire', [
         'create:shaft',
-        'afc:rubber_bar',
+        '#materialism:rubber',
         'tfc_metallurgy:metal/rod/aluminum'
     ])
 
@@ -184,7 +184,7 @@ ServerEvents.recipes(event => {
     event.shaped('offroad:tire',
         [' RA', 'RSR', 'AR '],
         {
-            R: 'afc:rubber_bar',
+            R: '#materialism:rubber',
             A: 'tfc_metallurgy:metal/rod/aluminum',
             S: 'create:shaft'
         }
@@ -194,17 +194,18 @@ ServerEvents.recipes(event => {
     event.shaped('offroad:large_tire',
         ['ARA', 'RSR', 'ARA'],
         {
-            R: 'afc:rubber_bar',
+            R: '#materialism:rubber',
             A: 'tfc_metallurgy:metal/rod/magnesium',
             S: 'create:shaft'
         }
     )
 
     event.remove({id: 'offroad:monstrous_tire'})
-    event.shaped('offroad:monstrous_tire',
-        ['RRR', 'RAS', 'RRR'],
+    event.recipes.create.mechanical_crafting(
+        'offroad:monstrous_tire',
+        ['RRRR', 'RAAR', 'RASR', 'RRRR'],
         {
-            R: 'afc:rubber_bar',
+            R: '#materialism:rubber',
             A: 'tfc_metallurgy:metal/rod/magnesium',
             S: 'create:shaft'
         }
@@ -343,7 +344,20 @@ ServerEvents.recipes(event => {
         }
     )
 
-    // Red Portable Engine: TODO - use TFMG engine elements
+    // Engine Assembly: mechanical crafting with TFMG engine parts
+    event.remove({id: 'simulated:sequenced_assembly/engine_assembly'})
+    event.recipes.create.mechanical_crafting(
+        'simulated:engine_assembly',
+        ['SMCMS', ' CEC ', 'SMCMS'],
+        {
+            E: 'tfmg:engine_gearbox',
+            C: 'tfmg:engine_cylinder',
+            M: 'tfc_metallurgy:metal/sheet/magnesium',
+            S: 'tfc_items:stainless_steel_screw'
+        }
+    )
+
+    // Red Portable Engine: uses engine assembly + heavy machinery casing
     event.remove({id: 'simulated:red_portable_engine'})
     event.shaped('simulated:red_portable_engine',
         ['G', 'E', 'B'],
@@ -373,6 +387,7 @@ ServerEvents.recipes(event => {
             C: 'create:andesite_casing'
         }
     )
+    event.replaceInput({id: 'simulated:optical_sensor'}, 'minecraft:amethyst_shard', 'vintageimprovements:laser_item')
 
     // Redstone Magnet: tiered recipes based on New Age magnet tiers
     // Better magnets = fewer blocks needed, more output
@@ -422,16 +437,15 @@ ServerEvents.recipes(event => {
     event.remove({id: 'simulated:sequenced_assembly/gyroscopic_mechanism'})
     event.recipes.create.sequenced_assembly(
         [
-            Item.of('simulated:gyroscopic_mechanism', 1),
-            Item.of('tfc:metal/sheet/brass', 0.08),
-            Item.of('tfc_metallurgy:metal/sheet/invar', 0.05),
-            Item.of('create:brass_nugget', 0.03)
+            CreateItem.of('simulated:gyroscopic_mechanism', 0.90),
+            CreateItem.of('tfc:metal/sheet/brass', 0.05),
+            CreateItem.of('tfc_metallurgy:metal/sheet/invar', 0.05)
         ],
         'tfc:metal/sheet/brass',
         [
             event.recipes.createDeploying(
                 'simulated:incomplete_gyroscopic_mechanism',
-                ['simulated:incomplete_gyroscopic_mechanism', 'tfc_metallurgy:metal/sheet/invar']
+                ['simulated:incomplete_gyroscopic_mechanism', 'tfc_metallurgy:metal/rod/invar']
             ),
             event.recipes.createDeploying(
                 'simulated:incomplete_gyroscopic_mechanism',
@@ -448,8 +462,7 @@ ServerEvents.recipes(event => {
             event.recipes.createDeploying(
                 'simulated:incomplete_gyroscopic_mechanism',
                 ['simulated:incomplete_gyroscopic_mechanism', 'tfc_items:brass_rivet']
-            ),
-            event.recipes.vintageimprovements.turning('simulated:incomplete_gyroscopic_mechanism', 'simulated:incomplete_gyroscopic_mechanism'
+            )
         ]
     ).transitionalItem('simulated:incomplete_gyroscopic_mechanism').loops(5)
 
