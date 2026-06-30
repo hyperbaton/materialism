@@ -22,15 +22,41 @@ ServerEvents.recipes(event => {
         }
     )
 
-    // Steam Vent: copper block + gold plate
-    // copper_block already globally replaced; c:plates/gold needs TFC gold sheet in tag (see tags.js)
-    event.shaped('aeronautics:steam_vent',
-        ['G', 'C'],
-        {
-            G: 'tfc:metal/sheet/gold',
-            C: 'tfc:metal/block/copper'
-        }
-    )
+    // Steam Vent: sequenced assembly — copper block → pipe → 2 brass sheets → 4 steel screws
+    event.recipes.create.sequenced_assembly(
+        [Item.of('aeronautics:steam_vent', 1)],
+        'tfc:metal/block/copper',
+        [
+            event.recipes.createDeploying(
+                'tfc:metal/block/copper',
+                ['tfc:metal/block/copper', 'create:fluid_pipe']
+            ),
+            event.recipes.createDeploying(
+                'tfc:metal/block/copper',
+                ['tfc:metal/block/copper', 'tfc:metal/sheet/brass']
+            ),
+            event.recipes.createDeploying(
+                'tfc:metal/block/copper',
+                ['tfc:metal/block/copper', 'tfc:metal/sheet/brass']
+            ),
+            event.recipes.createDeploying(
+                'tfc:metal/block/copper',
+                ['tfc:metal/block/copper', 'tfc_items:steel_screw']
+            ),
+            event.recipes.createDeploying(
+                'tfc:metal/block/copper',
+                ['tfc:metal/block/copper', 'tfc_items:steel_screw']
+            ),
+            event.recipes.createDeploying(
+                'tfc:metal/block/copper',
+                ['tfc:metal/block/copper', 'tfc_items:steel_screw']
+            ),
+            event.recipes.createDeploying(
+                'tfc:metal/block/copper',
+                ['tfc:metal/block/copper', 'tfc_items:steel_screw']
+            )
+        ]
+    ).transitionalItem('tfc:metal/block/copper').loops(1)
 
     // Propeller Bearings
     event.shaped('aeronautics:propeller_bearing',
@@ -43,7 +69,7 @@ ServerEvents.recipes(event => {
         }
     )
     event.shaped('aeronautics:gyroscopic_propeller_bearing',
-        [' A ', 'TGT', ' B '],
+        [' A ', 'TGT', 'SBS'],
         {
             A: '#minecraft:wooden_slabs',
             T: 'tfc_metallurgy:metal/sheet/titanium',
@@ -97,36 +123,141 @@ ServerEvents.recipes(event => {
         )
     })
 
-    // Mounted Potato Cannon: mechanical crafting
-    // Uses copper_sheet (globally replaced) + redstone + cogwheel + fluid_pipe + dried_kelp_block
-    // dried_kelp_block exists in vanilla/TFC — should be fine
-    // No changes needed if copper_sheet global replacement covers mechanical crafting
+    // Mounted Potato Cannon: replace dried_kelp_block with rubber
+    event.remove({id: 'aeronautics:mechanical_crafting/mounted_potato_cannon'})
+    event.recipes.create.mechanical_crafting(
+        'aeronautics:mounted_potato_cannon',
+        ['SR  ', 'KCPP', 'SR  '],
+        {
+            S: 'tfc:metal/sheet/copper',
+            R: 'minecraft:redstone',
+            K: 'afc:rubber_bar',
+            C: 'create:cogwheel',
+            P: 'create:fluid_pipe'
+        }
+    )
 
-    // Levitite chain: end_stone doesn't exist in TFC
-    // Use hydrogen for levitite.
+    // Levitite: hydrogen-based sequenced assembly with magnesium sheets
+    // Replaces the entire end_stone → end_stone_powder → levitite_blend chain
     event.remove({id: 'aeronautics:crushing/end_stone_powder'})
+    event.remove({id: 'aeronautics:mixing/levitite_blend'})
+    event.recipes.create.sequenced_assembly(
+        [Item.of('aeronautics:levitite', 1)],
+        'tfc_metallurgy:metal/sheet/magnesium',
+        [
+            event.recipes.createFilling(
+                'tfc_metallurgy:metal/sheet/magnesium',
+                ['tfc_metallurgy:metal/sheet/magnesium', Fluid.of('tfmg:hydrogen', 125)]
+            ),
+            event.recipes.createDeploying(
+                'tfc_metallurgy:metal/sheet/magnesium',
+                ['tfc_metallurgy:metal/sheet/magnesium', 'tfc_metallurgy:metal/sheet/magnesium']
+            ),
+            event.recipes.createPressing(
+                'tfc_metallurgy:metal/sheet/magnesium',
+                'tfc_metallurgy:metal/sheet/magnesium'
+            ),
+            event.recipes.createFilling(
+                'tfc_metallurgy:metal/sheet/magnesium',
+                ['tfc_metallurgy:metal/sheet/magnesium', Fluid.of('tfmg:hydrogen', 125)]
+            ),
+            event.recipes.createDeploying(
+                'tfc_metallurgy:metal/sheet/magnesium',
+                ['tfc_metallurgy:metal/sheet/magnesium', 'tfc_items:aluminum_screw']
+            )
+        ]
+    ).transitionalItem('tfc_metallurgy:metal/sheet/magnesium').loops(4)
+
+    // ========================================
+    // OFFROAD recipes
+    // ========================================
+
+    // Tires: rubber + aluminum/magnesium rods
+    event.remove({id: 'offroad:small_tire'})
+    event.shapeless('offroad:small_tire', [
+        'create:shaft',
+        'afc:rubber_bar',
+        'tfc_metallurgy:metal/rod/aluminum'
+    ])
+
+    event.remove({id: 'offroad:tire'})
+    event.shaped('offroad:tire',
+        [' RA', 'RSR', 'AR '],
+        {
+            R: 'afc:rubber_bar',
+            A: 'tfc_metallurgy:metal/rod/aluminum',
+            S: 'create:shaft'
+        }
+    )
+
+    event.remove({id: 'offroad:large_tire'})
+    event.shaped('offroad:large_tire',
+        ['ARA', 'RSR', 'ARA'],
+        {
+            R: 'afc:rubber_bar',
+            A: 'tfc_metallurgy:metal/rod/magnesium',
+            S: 'create:shaft'
+        }
+    )
+
+    event.remove({id: 'offroad:monstrous_tire'})
+    event.shaped('offroad:monstrous_tire',
+        ['RRR', 'RAS', 'RRR'],
+        {
+            R: 'afc:rubber_bar',
+            A: 'tfc_metallurgy:metal/rod/magnesium',
+            S: 'create:shaft'
+        }
+    )
+
+    // Rockcutting Wheel: add tungsten steel sheets (inspired by drill recipe)
+    event.remove({id: 'offroad:rockcutting_wheel'})
+    event.shaped('offroad:rockcutting_wheel',
+        [' T ', 'TCT', ' G '],
+        {
+            T: 'tfc_metallurgy:metal/sheet/tungsten_steel',
+            C: 'create:crushing_wheel',
+            G: 'create:industrial_iron_block'
+        }
+    )
+
+    // Wheel Mount: uses simulated:spring — replace with VI spring
+    event.remove({id: 'offroad:wheel_mount'})
+    event.shaped('offroad:wheel_mount',
+        ['C', 'S', 'P'],
+        {
+            C: 'create:andesite_casing',
+            S: 'vintageimprovements:steel_spring',
+            P: 'tfc:metal/sheet/steel'
+        }
+    )
 
     // ========================================
     // SIMULATED recipes
     // ========================================
 
+    // Replace simulated:spring globally with VI steel spring
+    event.remove({id: 'simulated:spring'})
+    event.replaceInput(
+        {input: 'simulated:spring'},
+        'simulated:spring',
+        'vintageimprovements:steel_spring'
+    )
+
     // Iron Handle
     event.remove({id: 'simulated:iron_handle'})
     event.shaped('simulated:iron_handle',
-        ['SNS', '  '],
+        ['SNS', 'R R'],
         {
             N: 'tfc:metal/rod/wrought_iron',
             S: 'tfc_items:steel_screw',
             R: 'tfc_items:wrought_iron_ring'
         }
     )
-    event.replaceInput('simulated:copper_handle',
+    event.replaceInput({id: 'simulated:copper_handle'},
         'create:copper_nugget',
         'tfc_items:copper_foil'
     )
-
-    // Spring: use VI springs instead
-    event.remove({id: 'simulated:spring'})
 
     // Throttle Lever
     event.remove({id: 'simulated:throttle_lever'})
@@ -146,7 +277,7 @@ ServerEvents.recipes(event => {
         'tfc:metal/sheet/steel'
     ])
 
-    // Velocity Sensor: uses minecraft:barrel — replace with TFC barrel
+    // Velocity Sensor
     event.remove({id: 'simulated:velocity_sensor'})
     event.shaped('simulated:velocity_sensor',
         ['P', 'B', 'A'],
@@ -167,7 +298,52 @@ ServerEvents.recipes(event => {
         }
     )
 
-    // Red Portable Engine: uses minecraft:blast_furnace — replace with TFC equivalent
+    // Rope Winch: add tfc:rope
+    event.remove({id: 'simulated:rope_winch'})
+    event.shaped('simulated:rope_winch',
+        ['I', 'R', 'S'],
+        {
+            I: 'tfc:metal/sheet/steel',
+            R: 'tfc:rope',
+            S: 'create:industrial_iron_block'
+        }
+    )
+
+    // Rope Connector: more complex recipe (inspired by iron handle)
+    event.remove({id: 'simulated:rope_connector'})
+    event.shaped('simulated:rope_connector',
+        ['SIS', ' R ', 'SIS'],
+        {
+            I: 'tfc:metal/sheet/steel',
+            S: 'tfc_items:steel_screw',
+            R: 'tfc_items:steel_ring'
+        }
+    )
+
+    // Physics Assembler: expensive — circuit board + tungsten steel, no andesite alloy
+    event.remove({id: 'simulated:physics_assembler'})
+    event.shaped('simulated:physics_assembler',
+        [' N ', ' C ', 'TST'],
+        {
+            N: 'minecraft:lever',
+            C: 'tfmg:circuit_board',
+            T: 'tfc_metallurgy:metal/sheet/tungsten_steel',
+            S: 'tfmg:heavy_machinery_casing'
+        }
+    )
+
+    // Swivel Bearing: use TFMG steel cog
+    event.remove({id: 'simulated:swivel_bearing'})
+    event.shaped('simulated:swivel_bearing',
+        [' A ', ' B ', ' C '],
+        {
+            A: 'tfc:metal/sheet/steel',
+            B: 'create:industrial_iron_block',
+            C: 'tfmg:steel_cogwheel'
+        }
+    )
+
+    // Red Portable Engine: TODO - use TFMG engine elements
     event.remove({id: 'simulated:red_portable_engine'})
     event.shaped('simulated:red_portable_engine',
         ['G', 'E', 'B'],
@@ -178,23 +354,103 @@ ServerEvents.recipes(event => {
         }
     )
 
-    // Sequenced assembly junk outputs: replace vanilla iron items with TFC equivalents
-    // Engine Assembly junk outputs include iron_nugget, iron_bars, iron_helmet
-    // Gyroscopic Mechanism junk outputs include iron_nugget, compass
-    // These are handled by the global iron_sheet input replacement; junk outputs are cosmetic
+    // Laser Pointer/Sensor: replace amethyst lens tag with VI laser item
+    event.remove({id: 'simulated:laser_pointer'})
+    event.shaped('simulated:laser_pointer',
+        ['A', 'T', 'C'],
+        {
+            A: 'vintageimprovements:laser_item',
+            T: 'minecraft:redstone_torch',
+            C: 'create:andesite_casing'
+        }
+    )
+    event.remove({id: 'simulated:laser_sensor'})
+    event.shaped('simulated:laser_sensor',
+        ['G', 'A', 'C'],
+        {
+            G: 'minecraft:tinted_glass',
+            A: 'vintageimprovements:laser_item',
+            C: 'create:andesite_casing'
+        }
+    )
 
-    // Steering Wheel: large_cogwheel + andesite_casing + shaft — all Create, no changes needed
-    // Altitude Sensor: paper + iron_sheet + andesite_casing — iron_sheet globally replaced
-    // Gimbal Sensor: gyroscopic_mechanism + brass_casing + cogwheel — all Create/simulated
-    // Auger Shaft: chute + shaft + iron_sheet — iron_sheet globally replaced
-    // Analog Transmission: brass_casing + shaft + cogwheel + electron_tube — all Create
-    // Torsion Spring: shaft + spring + andesite_casing — all Create/simulated
-    // Rope Connector/Winch: iron_sheet + industrial_iron_block + shaft — iron_sheet globally replaced
-    // Physics Assembler: andesite_alloy + lever + andesite_casing — all fine
-    // Laser Pointer/Sensor: laser_point_lens + andesite_casing + redstone_torch/tinted_glass — fine
-    // Redstone Accumulator/Inductor/Magnet: brass_sheet + rose_quartz + redstone + stone — fine
-    // Handles: iron_handle + dye — fine (iron_handle fixed above)
-    // Sails: create:white_sail conversions — fine
-    // Nameplates: white_nameplate + dye conversions — fine (base fixed above)
-    // Portable engine dyeing: red_portable_engine + dye — fine (base fixed above)
+    // Redstone Magnet: tiered recipes based on New Age magnet tiers
+    // Better magnets = fewer blocks needed, more output
+    event.remove({id: 'simulated:redstone_magnet'})
+
+    // Tier 1: Redstone Magnet (basic) — 4 magnets + copper sheet + redstone
+    event.shaped('simulated:redstone_magnet',
+        ['MRM', 'MCM', ' R '],
+        {
+            M: 'create_new_age:redstone_magnet',
+            R: 'minecraft:redstone',
+            C: 'tfc_items:copper_heavy_sheet'
+        }
+    )
+
+    // Tier 3: Layered Magnet — 2 magnets, 2x output
+    event.shaped('2x simulated:redstone_magnet',
+        [' R ', 'MCM', ' R '],
+        {
+            M: 'create_new_age:layered_magnet',
+            R: 'minecraft:redstone',
+            C: 'tfc_items:copper_heavy_sheet'
+        }
+    )
+
+    // Tier 4: Fluxuated Magnetite — 1 magnet, 4x output
+    event.shaped('4x simulated:redstone_magnet',
+        [' R ', ' MC'],
+        {
+            M: 'create_new_age:fluxuated_magnetite',
+            R: 'minecraft:redstone',
+            C: 'tfc_items:copper_heavy_sheet'
+        }
+    )
+
+    // Tier 5: Neodymium Magnet — 1 magnet, 8x output
+    event.shaped('8x simulated:redstone_magnet',
+        [' R ', ' MC'],
+        {
+            M: 'create_new_age:netherite_magnet',
+            R: 'minecraft:redstone',
+            C: 'tfc_items:copper_heavy_sheet'
+        }
+    )
+
+    // Gyroscopic Mechanism: complex sequenced assembly with brass and invar
+    event.remove({id: 'simulated:sequenced_assembly/gyroscopic_mechanism'})
+    event.recipes.create.sequenced_assembly(
+        [
+            Item.of('simulated:gyroscopic_mechanism', 1),
+            Item.of('tfc:metal/sheet/brass', 0.08),
+            Item.of('tfc_metallurgy:metal/sheet/invar', 0.05),
+            Item.of('create:brass_nugget', 0.03)
+        ],
+        'tfc:metal/sheet/brass',
+        [
+            event.recipes.createDeploying(
+                'simulated:incomplete_gyroscopic_mechanism',
+                ['simulated:incomplete_gyroscopic_mechanism', 'tfc_metallurgy:metal/sheet/invar']
+            ),
+            event.recipes.createDeploying(
+                'simulated:incomplete_gyroscopic_mechanism',
+                ['simulated:incomplete_gyroscopic_mechanism', 'create:cogwheel']
+            ),
+            event.recipes.createDeploying(
+                'simulated:incomplete_gyroscopic_mechanism',
+                ['simulated:incomplete_gyroscopic_mechanism', 'create:shaft']
+            ),
+            event.recipes.createPressing(
+                'simulated:incomplete_gyroscopic_mechanism',
+                'simulated:incomplete_gyroscopic_mechanism'
+            ),
+            event.recipes.createDeploying(
+                'simulated:incomplete_gyroscopic_mechanism',
+                ['simulated:incomplete_gyroscopic_mechanism', 'tfc_items:brass_rivet']
+            ),
+            event.recipes.vintageimprovements.turning('simulated:incomplete_gyroscopic_mechanism', 'simulated:incomplete_gyroscopic_mechanism'
+        ]
+    ).transitionalItem('simulated:incomplete_gyroscopic_mechanism').loops(5)
+
 })

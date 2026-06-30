@@ -157,6 +157,11 @@ RecipeViewerEvents.removeEntries('item', event => {
     removeToolsAndArmor('thorium')
     removeToolsAndArmor('uranium')
 
+    // Hide aeronautics items bypassed by TFC recipes
+    r('aeronautics:end_stone_powder')
+    r('aeronautics:levitite_blend')
+    r('simulated:spring')
+
     // Hide butcher items for mobs that don't exist in TFC worlds
     event.remove(/butchery:.*salt.*/);
     event.remove(/butchery:.*sulfur.*/);
