@@ -30,5 +30,10 @@ ClientEvents.lang("en_us", event => {
     // event.renameItem('interiors:kelp_seat', 'Rubber Seat')
     event.renameItem('tfmg:cinderflourblock', 'Red Cinderblock')
     event.renameItem('tfmg:cinderflour_block', 'Red Cinder Block')
-    
+    // Rename netherite butchery tools to tungsten steel
+    event.renameItem('butchery:netherite_cleaver', 'Tungsten Steel Cleaver')
+    event.renameItem('butchery:netherite_hacksaw', 'Tungsten Steel Hacksaw')
+    event.renameItem('butchery:netherite_hammer', 'Tungsten Steel Hammer')
+    event.renameItem('butchery:netherite_skinning_knife', 'Tungsten Steel Skinning Knife')
+
 });

@@ -288,5 +288,12 @@ ServerEvents.recipes(event => {
             )
         })
     }
+
+    // Replace minecraft:iron_bars with tfc:metal/bars/wrought_iron
+    event.replaceInput(
+        { input: 'minecraft:iron_bars' },
+        'minecraft:iron_bars',
+        'tfc:metal/bars/wrought_iron'
+    )
 }
 )

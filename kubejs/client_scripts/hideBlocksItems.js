@@ -157,28 +157,90 @@ RecipeViewerEvents.removeEntries('item', event => {
     removeToolsAndArmor('thorium')
     removeToolsAndArmor('uranium')
 
-    // Hide butcher strange stuff
-    r('butcher:dragonscalearmor_helmet');
-    r('butcher:dragonscalearmor_chestplate');
-    r('butcher:dragonscalearmor_leggings');
-    r('butcher:dragonscalearmor_boots');
-    r('butcher:witcharmor_helmet');
-    r('butcher:witcharmor_chestplate');
-    r('butcher:sulfur');
-    event.remove(/butcher:.*salt.*/);
-    r('butcher:witheredheart');
-    event.remove(/butcher:.*dragon.*/);
-    event.remove(/butcher:.*elder.*/);
-    event.remove(/butcher:.*illager.*/);
-    event.remove(/butcher:.*end.*/);
-    event.remove(/butcher:.*shulker.*/);
-    event.remove(/butcher:.*slime.*/);
-    event.remove(/butcher:.*sniffer.*/);
-    event.remove(/butcher:.*strider.*/);
-    event.remove(/butcher:.*piglin.*/);
-    event.remove(/butcher:.*evoker.*/);
-    event.remove(/butcher:.*hoglin.*/);
-    event.remove(/butcher:.*guardian.*/);
+    // Hide butcher items for mobs that don't exist in TFC worlds
+    event.remove(/butchery:.*salt.*/);
+    event.remove(/butchery:.*sulfur.*/);
+    // Nether/End mobs (+ nether wood furniture)
+    event.remove(/butchery:.*dragon.*/);
+    event.remove(/butchery:.*end.*/);
+    event.remove(/butchery:.*shulker.*/);
+    event.remove(/butchery:.*strider.*/);
+    event.remove(/butchery:.*piglin.*/);
+    event.remove(/butchery:.*hoglin.*/);
+    event.remove(/butchery:.*zoglin.*/);
+    event.remove(/butchery:.*wither.*/);
+    event.remove(/butchery:.*magma.*/);
+    event.remove(/butchery:.*blazer.*/);
+    event.remove(/butchery:.*sculk.*/);
+    event.remove(/butchery:.*crimson.*/);
+    event.remove(/butchery:.*warped.*/);
+    // Hostile/fantasy mobs
+    event.remove(/butchery:.*creeper.*/);
+    event.remove(/butchery:.*spider.*/);
+    event.remove(/butchery:.*slime.*/);
+    event.remove(/butchery:.*phantom.*/);
+    event.remove(/butchery:.*silverfish.*/);
+    event.remove(/butchery:.*guardian.*/);
+    event.remove(/butchery:.*elder.*/);
+    event.remove(/butchery:.*ravager.*/);
+    event.remove(/butchery:.*warden.*/);
+    event.remove(/butchery:.*illager.*/);
+    event.remove(/butchery:.*evoker.*/);
+    event.remove(/butchery:.*vindicator.*/);
+    event.remove(/butchery:.*witch.*/);
+    event.remove(/butchery:.*sniffer.*/);
+    // Undead mobs
+    event.remove(/butchery:.*zombie.*/);
+    event.remove(/butchery:.*drowned.*/);
+    event.remove(/butchery:.*husk.*/);
+    event.remove(/butchery:.*stray.*/);
+    event.remove(/butchery:skeleton.*/);
+    event.remove(/butchery:.*iron.?golem.*/);
+    // Passive mobs not in TFC
+    event.remove(/butchery:.*axolotl.*/);
+    event.remove(/butchery:.*bat.*/);
+    event.remove(/butchery:.*bee.*/);
+    event.remove(/butchery:.*camel.*/);
+    event.remove(/butchery:.*dolphin.*/);
+    event.remove(/butchery:.*goat.*/);
+    event.remove(/butchery:.*glow_squid.*/);
+    event.remove(/butchery:.*llama.*/);
+    event.remove(/butchery:.*mooshroom.*/);
+    event.remove(/butchery:.*ocelot.*/);
+    event.remove(/butchery:.*panda.*/);
+    event.remove(/butchery:.*polar.?bear.*/);
+    event.remove(/butchery:.*pufferfish.*/);
+    event.remove(/butchery:.*villager.*/);
+    // Misc non-TFC items
+    event.remove(/butchery:.*humanmeat.*/);
+    event.remove(/butchery:.*playercorpse.*/);
+    event.remove(/butchery:.*diorite.*/);
+    r('butchery:icey_bone');
+    r('butchery:icey_bone_meal');
+    r('butchery:honey_stomach');
+    r('butchery:poison_sac');
+    // Hide diamond butchery tools
+    r('butchery:diamond_cleaver');
+    r('butchery:diamond_hacksaw');
+    r('butchery:diamond_hammer');
+    r('butchery:diamond_skinning_knife');
+
+    // Hide Astikor carts items for AFC tree species without dedicated wood types
+    const afcNoWood = [
+        'acacia_koa', 'atlas_cedar', 'bald_cypress', 'balsam_fir', 'bigleaf_maple',
+        'black_beech', 'black_oak', 'black_spruce', 'chinquapin', 'coast_redwood',
+        'coast_spruce', 'columnar_araucaria', 'dawn_redwood', 'flame_of_the_forest',
+        'giant_rosewood', 'gum_arabic', 'hardy_chestnut', 'horsetail_ironwood',
+        'huangshan_pine', 'iroko_teak', 'jaggery_palm', 'juniper', 'kauri',
+        'lebombo_ironwood', 'live_oak', 'mountain_ash', 'mountain_fir',
+        'mpingo_blackwood', 'parana', 'poplar', 'rainbow_eucalyptus', 'rauli_beech',
+        'red_pine', 'red_silk_cotton', 'redcedar', 'rubber_fig', 'sapele_mahogany',
+        'scrub_hickory', 'sitka_spruce', 'small_leaf_mahogany', 'stone_pine',
+        'tamarack', 'weeping_cypress', 'weeping_maple', 'weeping_willow'
+    ]
+    afcNoWood.forEach(species => {
+        event.remove(new RegExp('tfcastikorcarts:.*' + species + '.*'))
+    })
 
     // Hide Minecraft unreachable items
     event.remove(/minecraft:(?!leather).*helm/);
@@ -388,6 +450,8 @@ RecipeViewerEvents.removeEntries('item', event => {
     event.remove(/.*grass.*/);
     event.remove(/.*rooted.*/);
     event.remove(/.*roots.*/);
+    event.remove(/.*mossy.*/);
+    event.remove(/.*krummholz.*/);
 
     function removeToolsAndArmor(metal) {
         r('tfc_metallurgy:metal/anvil/' + metal)
