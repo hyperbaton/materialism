@@ -13,16 +13,16 @@ ServerEvents.recipes(event => {
   event.remove('tfmg:mixing/copper_sulfate')
   event.remove('tfmg:mixing/zinc_sulfate')
   // Zinc sulfate recipe (item reimplemented via KubeJS, mirrors copper sulfate pressurizing)
-  event.custom({
-    type: 'vintageimprovements:pressurizing',
-    ingredients: [
-      {amount: 200, tag: 'c:sulfuric_acid', type: 'neoforge:tag'},
-      {fluid: 'minecraft:water', amount: 200, type: 'neoforge:single'},
-      {item: 'tfc:metal/ingot/zinc'}
-    ],
-    results: [{id: 'kubejs:zinc_sulfate'}],
-    processing_time: 800
-  })
+  // event.custom({
+  //   type: 'vintageimprovements:pressurizing',
+  //   ingredients: [
+  //     {amount: 200, tag: 'c:sulfuric_acid', type: 'neoforge:tag'},
+  //     {fluid: 'minecraft:water', amount: 200, type: 'neoforge:single'},
+  //     {item: 'tfc:metal/ingot/zinc'}
+  //   ],
+  //   results: [{id: 'kubejs:zinc_sulfate'}],
+  //   processing_time: 800
+  // })
   // Remove parts cutting (done with lathe)
   event.remove('tfmg:stonecutting/screw')
   event.remove('tfmg:stonecutting/rebar')

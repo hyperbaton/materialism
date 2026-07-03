@@ -23,11 +23,15 @@ RecipeViewerEvents.removeEntries('item', event => {
     event.remove(/create:.*blaze.*/)
     r('create:controller_rail');
 
-    // Hide createvintageneoforged rods, wires, springs, sheets
-    event.remove(/createvintageneoforged:.*_rod/)
-    event.remove(/createvintageneoforged:.*_wire/)
-    event.remove(/createvintageneoforged:.*_spring/)
-    event.remove(/createvintageneoforged:.*sheet/);
+    // Hide vintageimprovements rods, wires, springs, sheets
+    event.remove(/vintageimprovements:.*_rod/)
+    event.remove(/vintageimprovements:.*sheet/);
+    event.remove(/vintageimprovements:.*andesite.*/);
+    event.remove(/vintageimprovements:.*netherite.*/);
+    event.remove(/vintageimprovements:.*nethersteel.*/);
+    event.remove(/vintageimprovements:.*blaze.*/);
+    event.remove(/vintageimprovements:.*blaze.*/);
+    event.remove(/vintageimprovements:.*blaze.*/);
     r('create:copper_sheet');
     r('create:brass_sheet');
     r('createaddition:electrum_sheet');
@@ -224,6 +228,13 @@ RecipeViewerEvents.removeEntries('item', event => {
     r('butchery:icey_bone_meal');
     r('butchery:honey_stomach');
     r('butchery:poison_sac');
+    // Hide butchery equipment replaced by / incompatible with TFC
+    r('butchery:skin_rack');
+    r('butchery:freezer');
+    r('butchery:photos');
+    r('butchery:cling_film');
+    r('butchery:coin');
+    r('butchery:deep_smithing_template');
     // Hide diamond butchery tools
     r('butchery:diamond_cleaver');
     r('butchery:diamond_hacksaw');
