@@ -1,0 +1,9 @@
+﻿{
+    "ingredient":  {
+                       "item":  "butchery:cooked_stomach"
+                   },
+    "hunger":  2,
+    "decay_modifier":  2,
+    "protein":  1,
+    "saturation":  1.5
+}

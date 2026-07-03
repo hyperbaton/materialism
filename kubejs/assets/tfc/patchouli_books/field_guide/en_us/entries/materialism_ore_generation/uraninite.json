@@ -7,7 +7,7 @@
   "pages": [
     {
       "type": "patchouli:text",
-      "text": "$(bold)Uraninite$(0)$(br2)$(thing)Rocks:$(0) igneous extrusive (rhyolite, basalt, andesite, dacite); igneous intrusive$(br2)$(li)$(thing)Deep band:$(0) Y -220 to -80, extremely rare"
+      "text": "$(bold)Uraninite$(0)$(br2)$(thing)Rocks:$(0) igneous extrusive (rhyolite, basalt, andesite, dacite); igneous intrusive$(br2)$(li)$(thing)Deep band:$(0) Y -220 to -80, very rare"
     },
     {
       "type": "patchouli:text",

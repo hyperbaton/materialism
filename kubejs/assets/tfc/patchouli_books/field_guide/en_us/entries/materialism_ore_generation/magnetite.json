@@ -7,7 +7,7 @@
   "pages": [
     {
       "type": "patchouli:text",
-      "text": "$(bold)Magnetite$(0)$(br2)$(thing)Rocks:$(0) igneous extrusive (tuff); sedimentary$(br2)$(li)$(thing)Surface band:$(0) Y 10 to 90, uncommon$(br)$(li)$(thing)Deep band:$(0) Y -150 to -40, extremely rare"
+      "text": "$(bold)Magnetite$(0)$(br2)$(thing)Rocks:$(0) igneous extrusive (tuff); sedimentary$(br2)$(li)$(thing)Surface band:$(0) Y 10 to 90, uncommon$(br)$(li)$(thing)Deep band:$(0) Y -45 to 45, very rare"
     },
     {
       "type": "patchouli:text",

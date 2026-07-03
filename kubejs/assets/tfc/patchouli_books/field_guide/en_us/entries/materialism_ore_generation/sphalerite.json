@@ -7,7 +7,7 @@
   "pages": [
     {
       "type": "patchouli:text",
-      "text": "$(bold)Sphalerite$(0)$(br2)$(thing)Rocks:$(0) igneous extrusive (rhyolite, basalt, andesite, dacite); igneous intrusive$(br2)$(li)$(thing)Surface band:$(0) Y 40 to 130, common$(br)$(li)$(thing)Deep band:$(0) Y -170 to -50, extremely rare"
+      "text": "$(bold)Sphalerite$(0)$(br2)$(thing)Rocks:$(0) igneous extrusive (rhyolite, basalt, andesite, dacite); igneous intrusive$(br2)$(li)$(thing)Surface band:$(0) Y 40 to 130, common$(br)$(li)$(thing)Deep band:$(0) Y -170 to -50, very rare"
     },
     {
       "type": "patchouli:text",

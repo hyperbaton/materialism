@@ -7,7 +7,7 @@
   "pages": [
     {
       "type": "patchouli:text",
-      "text": "$(bold)Native Gold$(0)$(br2)$(thing)Rocks:$(0) igneous extrusive (rhyolite, basalt, andesite, dacite); igneous intrusive$(br2)$(li)$(thing)Decoy sample:$(0) Y -50 to 70, common$(br)$(li)$(thing)Deep band:$(0) Y -200 to -70, extremely rare"
+      "text": "$(bold)Native Gold$(0)$(br2)$(thing)Rocks:$(0) igneous extrusive (rhyolite, basalt, andesite, dacite); igneous intrusive$(br2)$(li)$(thing)Decoy sample:$(0) Y -50 to 70, common$(br)$(li)$(thing)Deep band:$(0) Y -200 to -70, very rare"
     },
     {
       "type": "patchouli:text",

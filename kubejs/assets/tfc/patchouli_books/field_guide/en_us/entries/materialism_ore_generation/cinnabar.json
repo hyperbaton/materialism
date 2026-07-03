@@ -7,7 +7,7 @@
   "pages": [
     {
       "type": "patchouli:text",
-      "text": "$(bold)Cinnabar$(0)$(br2)$(thing)Rocks:$(0) metamorphic (quartzite, phyllite, gneiss, schist)$(br2)$(li)$(thing)Vein:$(0) Y -100 to 0, extremely rare"
+      "text": "$(bold)Cinnabar$(0)$(br2)$(thing)Rocks:$(0) metamorphic (quartzite, phyllite, gneiss, schist)$(br2)$(li)$(thing)Vein:$(0) Y -100 to 0, very rare"
     },
     {
       "type": "patchouli:text",

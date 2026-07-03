@@ -1,0 +1,62 @@
+{
+  "type": "tfc:cluster_vein",
+  "config": {
+    "rarity": 9333,
+    "density": 0.6,
+    "min_y": -180,
+    "max_y": -60,
+    "size": 220,
+    "random_name": "deep_cobaltite",
+    "blocks": [
+      {"replace":["tfc:rock/raw/rhyolite"],"with":[
+        {"weight":10,"block":"tfc_metallurgy:ore/poor_cobaltite/rhyolite"},
+        {"weight":25,"block":"tfc_metallurgy:ore/normal_cobaltite/rhyolite"},
+        {"weight":40,"block":"tfc_metallurgy:ore/rich_cobaltite/rhyolite"},
+        {"weight":25,"block":"tfc_metallurgy:ore/normal_kernite/rhyolite"}
+      ]},
+      {"replace":["tfc:rock/raw/basalt"],"with":[
+        {"weight":10,"block":"tfc_metallurgy:ore/poor_cobaltite/basalt"},
+        {"weight":25,"block":"tfc_metallurgy:ore/normal_cobaltite/basalt"},
+        {"weight":40,"block":"tfc_metallurgy:ore/rich_cobaltite/basalt"},
+        {"weight":25,"block":"tfc_metallurgy:ore/normal_kernite/basalt"}
+      ]},
+      {"replace":["tfc:rock/raw/andesite"],"with":[
+        {"weight":10,"block":"tfc_metallurgy:ore/poor_cobaltite/andesite"},
+        {"weight":25,"block":"tfc_metallurgy:ore/normal_cobaltite/andesite"},
+        {"weight":40,"block":"tfc_metallurgy:ore/rich_cobaltite/andesite"},
+        {"weight":25,"block":"tfc_metallurgy:ore/normal_kernite/andesite"}
+      ]},
+      {"replace":["tfc:rock/raw/dacite"],"with":[
+        {"weight":10,"block":"tfc_metallurgy:ore/poor_cobaltite/dacite"},
+        {"weight":25,"block":"tfc_metallurgy:ore/normal_cobaltite/dacite"},
+        {"weight":40,"block":"tfc_metallurgy:ore/rich_cobaltite/dacite"},
+        {"weight":25,"block":"tfc_metallurgy:ore/normal_kernite/dacite"}
+      ]},
+      {"replace":["tfc:rock/raw/granite"],"with":[
+        {"weight":10,"block":"tfc_metallurgy:ore/poor_cobaltite/granite"},
+        {"weight":25,"block":"tfc_metallurgy:ore/normal_cobaltite/granite"},
+        {"weight":40,"block":"tfc_metallurgy:ore/rich_cobaltite/granite"},
+        {"weight":25,"block":"tfc_metallurgy:ore/normal_kernite/granite"}
+      ]},
+      {"replace":["tfc:rock/raw/diorite"],"with":[
+        {"weight":10,"block":"tfc_metallurgy:ore/poor_cobaltite/diorite"},
+        {"weight":25,"block":"tfc_metallurgy:ore/normal_cobaltite/diorite"},
+        {"weight":40,"block":"tfc_metallurgy:ore/rich_cobaltite/diorite"},
+        {"weight":25,"block":"tfc_metallurgy:ore/normal_kernite/diorite"}
+      ]},
+      {"replace":["tfc:rock/raw/gabbro"],"with":[
+        {"weight":10,"block":"tfc_metallurgy:ore/poor_cobaltite/gabbro"},
+        {"weight":25,"block":"tfc_metallurgy:ore/normal_cobaltite/gabbro"},
+        {"weight":40,"block":"tfc_metallurgy:ore/rich_cobaltite/gabbro"},
+        {"weight":25,"block":"tfc_metallurgy:ore/normal_kernite/gabbro"}
+      ]}
+    ],
+    "indicator":{
+      "rarity":200,
+      "depth":250,
+      "underground_rarity":1,
+      "underground_count":5,
+      "blocks":[{"block":"tfc_metallurgy:ore/small_cobaltite"},{"block":"tfc_metallurgy:ore/small_kernite"}]
+    }
+  }
+}

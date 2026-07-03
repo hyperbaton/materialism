@@ -1,0 +1,8 @@
+﻿{
+    "ingredient":  {
+                       "item":  "butchery:raw_sausages"
+                   },
+    "hunger":  4,
+    "decay_modifier":  2,
+    "protein":  1.5
+}

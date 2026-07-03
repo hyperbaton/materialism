@@ -7,7 +7,7 @@
   "pages": [
     {
       "type": "patchouli:text",
-      "text": "$(bold)Tetrahedrite$(0)$(br2)$(thing)Rocks:$(0) metamorphic$(br2)$(li)$(thing)Surface band:$(0) Y 40 to 130, very common$(br)$(li)$(thing)Deep band:$(0) Y -160 to -40, extremely rare"
+      "text": "$(bold)Tetrahedrite$(0)$(br2)$(thing)Rocks:$(0) metamorphic$(br2)$(li)$(thing)Surface band:$(0) Y 40 to 130, very common$(br)$(li)$(thing)Deep band:$(0) Y -160 to -40, very rare"
     },
     {
       "type": "patchouli:text",

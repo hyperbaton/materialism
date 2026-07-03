@@ -1,0 +1,8 @@
+﻿{
+    "ingredient":  {
+                       "item":  "butchery:meat_scraps"
+                   },
+    "hunger":  2,
+    "decay_modifier":  3,
+    "protein":  0.5
+}

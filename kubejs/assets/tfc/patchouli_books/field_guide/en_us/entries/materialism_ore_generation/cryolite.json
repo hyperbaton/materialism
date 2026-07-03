@@ -7,7 +7,7 @@
   "pages": [
     {
       "type": "patchouli:text",
-      "text": "$(bold)Cryolite$(0)$(br2)$(thing)Rocks:$(0) igneous intrusive (granite, diorite)$(br2)$(li)$(thing)Vein:$(0) Y -100 to -10, extremely rare"
+      "text": "$(bold)Cryolite$(0)$(br2)$(thing)Rocks:$(0) igneous intrusive (granite, diorite)$(br2)$(li)$(thing)Vein:$(0) Y -100 to -10, very rare"
     },
     {
       "type": "patchouli:text",

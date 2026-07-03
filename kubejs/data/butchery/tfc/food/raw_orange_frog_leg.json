@@ -1,0 +1,8 @@
+﻿{
+    "ingredient":  {
+                       "item":  "butchery:raw_orange_frog_leg"
+                   },
+    "hunger":  2,
+    "decay_modifier":  4,
+    "protein":  0.5
+}

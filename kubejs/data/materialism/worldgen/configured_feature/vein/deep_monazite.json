@@ -1,0 +1,85 @@
+{
+  "type": "tfc:cluster_vein",
+  "config": {
+    "rarity": 10000,
+    "density": 0.45,
+    "min_y": -200,
+    "max_y": -60,
+    "size": 160,
+    "random_name": "deep_monazite",
+    "blocks": [
+      {"replace":["tfc:rock/raw/rhyolite"],"with":[
+        {"weight":10,"block":"tfc_metallurgy:ore/poor_monazite/rhyolite"},
+        {"weight":25,"block":"tfc_metallurgy:ore/normal_monazite/rhyolite"},
+        {"weight":65,"block":"tfc_metallurgy:ore/rich_monazite/rhyolite"}
+      ]},
+      {"replace":["tfc:rock/raw/basalt"],"with":[
+        {"weight":10,"block":"tfc_metallurgy:ore/poor_monazite/basalt"},
+        {"weight":25,"block":"tfc_metallurgy:ore/normal_monazite/basalt"},
+        {"weight":65,"block":"tfc_metallurgy:ore/rich_monazite/basalt"}
+      ]},
+      {"replace":["tfc:rock/raw/andesite"],"with":[
+        {"weight":10,"block":"tfc_metallurgy:ore/poor_monazite/andesite"},
+        {"weight":25,"block":"tfc_metallurgy:ore/normal_monazite/andesite"},
+        {"weight":65,"block":"tfc_metallurgy:ore/rich_monazite/andesite"}
+      ]},
+      {"replace":["tfc:rock/raw/dacite"],"with":[
+        {"weight":10,"block":"tfc_metallurgy:ore/poor_monazite/dacite"},
+        {"weight":25,"block":"tfc_metallurgy:ore/normal_monazite/dacite"},
+        {"weight":65,"block":"tfc_metallurgy:ore/rich_monazite/dacite"}
+      ]},
+      {"replace":["tfc:rock/raw/granite"],"with":[
+        {"weight":10,"block":"tfc_metallurgy:ore/poor_monazite/granite"},
+        {"weight":25,"block":"tfc_metallurgy:ore/normal_monazite/granite"},
+        {"weight":65,"block":"tfc_metallurgy:ore/rich_monazite/granite"}
+      ]},
+      {"replace":["tfc:rock/raw/diorite"],"with":[
+        {"weight":10,"block":"tfc_metallurgy:ore/poor_monazite/diorite"},
+        {"weight":25,"block":"tfc_metallurgy:ore/normal_monazite/diorite"},
+        {"weight":65,"block":"tfc_metallurgy:ore/rich_monazite/diorite"}
+      ]},
+      {"replace":["tfc:rock/raw/gabbro"],"with":[
+        {"weight":10,"block":"tfc_metallurgy:ore/poor_monazite/gabbro"},
+        {"weight":25,"block":"tfc_metallurgy:ore/normal_monazite/gabbro"},
+        {"weight":65,"block":"tfc_metallurgy:ore/rich_monazite/gabbro"}
+      ]},
+      {"replace":["tfc:rock/raw/quartzite"],"with":[
+        {"weight":10,"block":"tfc_metallurgy:ore/poor_monazite/quartzite"},
+        {"weight":25,"block":"tfc_metallurgy:ore/normal_monazite/quartzite"},
+        {"weight":65,"block":"tfc_metallurgy:ore/rich_monazite/quartzite"}
+      ]},
+      {"replace":["tfc:rock/raw/slate"],"with":[
+        {"weight":10,"block":"tfc_metallurgy:ore/poor_monazite/slate"},
+        {"weight":25,"block":"tfc_metallurgy:ore/normal_monazite/slate"},
+        {"weight":65,"block":"tfc_metallurgy:ore/rich_monazite/slate"}
+      ]},
+      {"replace":["tfc:rock/raw/phyllite"],"with":[
+        {"weight":10,"block":"tfc_metallurgy:ore/poor_monazite/phyllite"},
+        {"weight":25,"block":"tfc_metallurgy:ore/normal_monazite/phyllite"},
+        {"weight":65,"block":"tfc_metallurgy:ore/rich_monazite/phyllite"}
+      ]},
+      {"replace":["tfc:rock/raw/schist"],"with":[
+        {"weight":10,"block":"tfc_metallurgy:ore/poor_monazite/schist"},
+        {"weight":25,"block":"tfc_metallurgy:ore/normal_monazite/schist"},
+        {"weight":65,"block":"tfc_metallurgy:ore/rich_monazite/schist"}
+      ]},
+      {"replace":["tfc:rock/raw/gneiss"],"with":[
+        {"weight":10,"block":"tfc_metallurgy:ore/poor_monazite/gneiss"},
+        {"weight":25,"block":"tfc_metallurgy:ore/normal_monazite/gneiss"},
+        {"weight":65,"block":"tfc_metallurgy:ore/rich_monazite/gneiss"}
+      ]},
+      {"replace":["tfc:rock/raw/marble"],"with":[
+        {"weight":10,"block":"tfc_metallurgy:ore/poor_monazite/marble"},
+        {"weight":25,"block":"tfc_metallurgy:ore/normal_monazite/marble"},
+        {"weight":65,"block":"tfc_metallurgy:ore/rich_monazite/marble"}
+      ]}
+    ],
+    "indicator":{
+      "rarity":200,
+      "depth":250,
+      "underground_rarity":1,
+      "underground_count":5,
+      "blocks":[{"block":"tfc_metallurgy:ore/small_monazite"}]
+    }
+  }
+}

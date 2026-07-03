@@ -1,0 +1,8 @@
+﻿{
+    "ingredient":  {
+                       "item":  "butchery:liver"
+                   },
+    "hunger":  4,
+    "decay_modifier":  4,
+    "protein":  1.5
+}

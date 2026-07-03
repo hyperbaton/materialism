@@ -1,0 +1,9 @@
+﻿{
+    "ingredient":  {
+                       "item":  "butchery:cooked_lamb_sirloin"
+                   },
+    "hunger":  4,
+    "decay_modifier":  2,
+    "protein":  2,
+    "saturation":  2
+}

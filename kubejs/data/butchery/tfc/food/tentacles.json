@@ -1,0 +1,8 @@
+﻿{
+    "ingredient":  {
+                       "item":  "butchery:tentacles"
+                   },
+    "hunger":  4,
+    "decay_modifier":  3,
+    "protein":  1
+}

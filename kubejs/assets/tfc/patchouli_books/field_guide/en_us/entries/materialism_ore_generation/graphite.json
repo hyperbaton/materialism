@@ -7,7 +7,7 @@
   "pages": [
     {
       "type": "patchouli:text",
-      "text": "$(bold)Graphite$(0)$(br2)$(thing)Rocks:$(0) metamorphic (gneiss, marble, quartzite, schist)$(br2)$(li)$(thing)Surface band:$(0) Y -30 to 60, very common$(br)$(li)$(thing)Deep band:$(0) Y -170 to -50, extremely rare"
+      "text": "$(bold)Graphite$(0)$(br2)$(thing)Rocks:$(0) metamorphic (gneiss, marble, quartzite, schist)$(br2)$(li)$(thing)Surface band:$(0) Y -30 to 60, very common$(br)$(li)$(thing)Deep band:$(0) Y -170 to -50, very rare"
     },
     {
       "type": "patchouli:text",

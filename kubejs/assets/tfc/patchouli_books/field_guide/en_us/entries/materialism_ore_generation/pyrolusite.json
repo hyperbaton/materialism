@@ -7,7 +7,7 @@
   "pages": [
     {
       "type": "patchouli:text",
-      "text": "$(bold)Pyrolusite$(0)$(br2)$(thing)Rocks:$(0) sedimentary (shale, claystone); metamorphic (quartzite)$(br2)$(li)$(thing)Deep band:$(0) Y -140 to -20, extremely rare"
+      "text": "$(bold)Pyrolusite$(0)$(br2)$(thing)Rocks:$(0) sedimentary (shale, claystone); metamorphic (quartzite)$(br2)$(li)$(thing)Deep band:$(0) Y -140 to -20, very rare"
     },
     {
       "type": "patchouli:text",

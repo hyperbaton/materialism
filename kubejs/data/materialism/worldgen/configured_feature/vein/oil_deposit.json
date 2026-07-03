@@ -1,0 +1,15 @@
+{
+  "type": "tfc:disc_vein",
+  "config": {
+    "rarity": 10000,
+    "density": 0.04,
+    "min_y": -62,
+    "max_y": -59,
+    "size": 50,
+    "height": 4,
+    "random_name": "oil_deposit",
+    "blocks": [
+      {"replace":["minecraft:bedrock"],"with":[{"block":"tfmg:oil_deposit"}]}
+    ]
+  }
+}

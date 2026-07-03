@@ -1,0 +1,35 @@
+{
+  "type": "tfc:cluster_vein",
+  "config": {
+    "rarity": 7333,
+    "density": 0.5,
+    "min_y": -140,
+    "max_y": -20,
+    "size": 170,
+    "random_name": "deep_magnesite",
+    "blocks": [
+      {"replace":["tfc:rock/raw/marble"],"with":[
+        {"weight":10,"block":"tfc_metallurgy:ore/poor_magnesite/marble"},
+        {"weight":25,"block":"tfc_metallurgy:ore/normal_magnesite/marble"},
+        {"weight":65,"block":"tfc_metallurgy:ore/rich_magnesite/marble"}
+      ]},
+      {"replace":["tfc:rock/raw/dolomite"],"with":[
+        {"weight":10,"block":"tfc_metallurgy:ore/poor_magnesite/dolomite"},
+        {"weight":25,"block":"tfc_metallurgy:ore/normal_magnesite/dolomite"},
+        {"weight":65,"block":"tfc_metallurgy:ore/rich_magnesite/dolomite"}
+      ]},
+      {"replace":["tfc:rock/raw/limestone"],"with":[
+        {"weight":10,"block":"tfc_metallurgy:ore/poor_magnesite/limestone"},
+        {"weight":25,"block":"tfc_metallurgy:ore/normal_magnesite/limestone"},
+        {"weight":65,"block":"tfc_metallurgy:ore/rich_magnesite/limestone"}
+      ]}
+    ],
+    "indicator":{
+      "rarity":200,
+      "depth":250,
+      "underground_rarity":1,
+      "underground_count":5,
+      "blocks":[{"block":"tfc_metallurgy:ore/small_magnesite"}]
+    }
+  }
+}

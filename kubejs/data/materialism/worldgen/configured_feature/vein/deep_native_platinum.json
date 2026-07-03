@@ -1,0 +1,50 @@
+{
+  "type": "tfc:cluster_vein",
+  "config": {
+    "rarity": 11667,
+    "density": 0.5,
+    "min_y": -180,
+    "max_y": -60,
+    "size": 160,
+    "random_name": "deep_native_platinum",
+    "blocks": [
+      {"replace":["tfc:rock/raw/quartzite"],"with":[
+        {"weight":10,"block":"tfc_metallurgy:ore/poor_native_platinum/quartzite"},
+        {"weight":25,"block":"tfc_metallurgy:ore/normal_native_platinum/quartzite"},
+        {"weight":65,"block":"tfc_metallurgy:ore/rich_native_platinum/quartzite"}
+      ]},
+      {"replace":["tfc:rock/raw/slate"],"with":[
+        {"weight":10,"block":"tfc_metallurgy:ore/poor_native_platinum/slate"},
+        {"weight":25,"block":"tfc_metallurgy:ore/normal_native_platinum/slate"},
+        {"weight":65,"block":"tfc_metallurgy:ore/rich_native_platinum/slate"}
+      ]},
+      {"replace":["tfc:rock/raw/phyllite"],"with":[
+        {"weight":10,"block":"tfc_metallurgy:ore/poor_native_platinum/phyllite"},
+        {"weight":25,"block":"tfc_metallurgy:ore/normal_native_platinum/phyllite"},
+        {"weight":65,"block":"tfc_metallurgy:ore/rich_native_platinum/phyllite"}
+      ]},
+      {"replace":["tfc:rock/raw/schist"],"with":[
+        {"weight":10,"block":"tfc_metallurgy:ore/poor_native_platinum/schist"},
+        {"weight":25,"block":"tfc_metallurgy:ore/normal_native_platinum/schist"},
+        {"weight":65,"block":"tfc_metallurgy:ore/rich_native_platinum/schist"}
+      ]},
+      {"replace":["tfc:rock/raw/gneiss"],"with":[
+        {"weight":10,"block":"tfc_metallurgy:ore/poor_native_platinum/gneiss"},
+        {"weight":25,"block":"tfc_metallurgy:ore/normal_native_platinum/gneiss"},
+        {"weight":65,"block":"tfc_metallurgy:ore/rich_native_platinum/gneiss"}
+      ]},
+      {"replace":["tfc:rock/raw/marble"],"with":[
+        {"weight":10,"block":"tfc_metallurgy:ore/poor_native_platinum/marble"},
+        {"weight":25,"block":"tfc_metallurgy:ore/normal_native_platinum/marble"},
+        {"weight":65,"block":"tfc_metallurgy:ore/rich_native_platinum/marble"}
+      ]}
+    ],
+    "indicator":{
+      "rarity":200,
+      "depth":250,
+      "underground_rarity":1,
+      "underground_count":5,
+      "blocks":[{"block":"tfc_metallurgy:ore/small_native_platinum"}]
+    }
+  }
+}

@@ -1,0 +1,8 @@
+﻿{
+    "ingredient":  {
+                       "item":  "butchery:raw_chicken_leg"
+                   },
+    "hunger":  4,
+    "decay_modifier":  3,
+    "protein":  1.5
+}

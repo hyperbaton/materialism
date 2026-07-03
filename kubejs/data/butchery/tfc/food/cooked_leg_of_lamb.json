@@ -1,0 +1,9 @@
+﻿{
+    "ingredient":  {
+                       "item":  "butchery:cooked_leg_of_lamb"
+                   },
+    "hunger":  4,
+    "decay_modifier":  2,
+    "protein":  2,
+    "saturation":  2
+}

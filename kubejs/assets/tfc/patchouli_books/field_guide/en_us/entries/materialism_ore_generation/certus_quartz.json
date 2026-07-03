@@ -7,7 +7,7 @@
   "pages": [
     {
       "type": "patchouli:text",
-      "text": "$(bold)Certus Quartz$(0)$(br2)$(thing)Rocks:$(0) igneous intrusive (granite); sedimentary (shale); metamorphic (quartzite, schist, gneiss)$(br2)$(li)$(thing)Vein:$(0) Y -60 to 80, extremely rare"
+      "text": "$(bold)Certus Quartz$(0)$(br2)$(thing)Rocks:$(0) igneous intrusive (granite); sedimentary (shale); metamorphic (quartzite, schist, gneiss)$(br2)$(li)$(thing)Vein:$(0) Y -60 to 80, very rare"
     },
     {
       "type": "patchouli:text",

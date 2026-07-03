@@ -7,7 +7,7 @@
   "pages": [
     {
       "type": "patchouli:text",
-      "text": "$(bold)Bismuthinite$(0)$(br2)$(thing)Rocks:$(0) igneous extrusive (tuff); sedimentary$(br2)$(li)$(thing)Surface band:$(0) Y 40 to 130, common$(br)$(li)$(thing)Deep band:$(0) Y -180 to -50, extremely rare"
+      "text": "$(bold)Bismuthinite$(0)$(br2)$(thing)Rocks:$(0) igneous extrusive (tuff); sedimentary$(br2)$(li)$(thing)Surface band:$(0) Y 40 to 130, common$(br)$(li)$(thing)Deep band:$(0) Y -45 to 45, very rare"
     },
     {
       "type": "patchouli:text",

@@ -7,7 +7,7 @@
   "pages": [
     {
       "type": "patchouli:text",
-      "text": "$(bold)Native Platinum$(0)$(br2)$(thing)Rocks:$(0) metamorphic$(br2)$(li)$(thing)Deep band:$(0) Y -180 to -60, extremely rare"
+      "text": "$(bold)Native Platinum$(0)$(br2)$(thing)Rocks:$(0) metamorphic$(br2)$(li)$(thing)Deep band:$(0) Y -180 to -60, very rare"
     },
     {
       "type": "patchouli:text",

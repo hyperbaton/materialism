@@ -1,6 +1,6 @@
 {
   "name": "Materialism Guide",
-  "description": "The modpack field manual: ore prospecting, recipe changes, tech progression, and society & settlement.",
+  "description": "The modpack field manual: ore prospecting, recipe changes, tech progression, and society & settlement.$(br2)$(bold)Heads-up for TFC veterans:$(0) ores here are much $(thing)rarer$(0) (but far larger) than in standard TFC. See $(l:tfc:materialism_ore_generation/introduction)Prospecting Basics$(0).",
   "icon": "tfc:metal/ingot/wrought_iron",
   "sortnum": 5
 }

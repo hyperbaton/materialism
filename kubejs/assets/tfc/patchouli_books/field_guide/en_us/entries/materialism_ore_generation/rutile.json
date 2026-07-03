@@ -7,7 +7,7 @@
   "pages": [
     {
       "type": "patchouli:text",
-      "text": "$(bold)Rutile$(0)$(br2)$(thing)Rocks:$(0) sedimentary$(br2)$(li)$(thing)Deep band:$(0) Y -180 to -50, extremely rare"
+      "text": "$(bold)Rutile$(0)$(br2)$(thing)Rocks:$(0) sedimentary$(br2)$(li)$(thing)Deep band:$(0) Y -40 to 40, very rare"
     },
     {
       "type": "patchouli:text",
