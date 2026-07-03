@@ -1,0 +1,17 @@
+{
+  "name": "Monazite",
+  "category": "tfc:materialism_ore_generation",
+  "icon": "tfc_metallurgy:ore/poor_monazite/rhyolite",
+  "sortnum": 260,
+  "read_by_default": true,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Monazite$(0)$(br2)$(thing)Rocks:$(0) igneous extrusive (rhyolite, basalt, andesite, dacite); igneous intrusive; metamorphic$(br2)$(li)$(thing)Deep band:$(0) Y -200 to -60, extremely rare"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(thing)Surface sample:$(0) Yes — small surface samples mark a vein below.$(br2)Strike exposed host rock with a Prospector's Pick to close in on the vein."
+    }
+  ]
+}

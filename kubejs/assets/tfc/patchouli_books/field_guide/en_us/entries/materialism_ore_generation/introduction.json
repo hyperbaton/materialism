@@ -1,0 +1,21 @@
+{
+  "name": "Prospecting Basics",
+  "category": "tfc:materialism_ore_generation",
+  "icon": "tfc:metal/propick/copper",
+  "sortnum": 0,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Every metal and mineral in the world lives inside a particular kind of $(thing)rock$(0), at a particular $(thing)depth$(0). Knowing both is half the work of finding it.$(br2)Rocks come in four families: $(thing)igneous extrusive$(0) (rhyolite, basalt, andesite, dacite), $(thing)igneous intrusive$(0) (granite, diorite, gabbro), $(thing)sedimentary$(0) (limestone, shale, chert, dolomite and more), and $(thing)metamorphic$(0) (marble, slate, gneiss, schist, quartzite, phyllite)."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "The $(item)Prospector's Pick$(0) is your most important tool. Strike exposed stone with it and it reports how much ore is nearby, letting you home in on a vein without blind digging.$(br2)Many ores also drop $(thing)small surface samples$(0) — loose ore pieces lying on the ground directly above a vein. Spotting these tells you what waits below and roughly how deep."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "The entries in this category list, for each ore: the $(thing)rock types$(0) that host it, the $(thing)Y-range$(0) to dig between, its relative $(thing)rarity$(0), and whether it leaves a surface sample.$(br2)Remember that a region only contains a few rock types, so some ores simply will not exist where you are standing — you may have to travel to find the right stone."
+    }
+  ],
+  "read_by_default": true
+}

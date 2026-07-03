@@ -1,0 +1,17 @@
+{
+  "name": "The Road Ahead",
+  "category": "tfc:materialism_tech",
+  "icon": "create:precision_mechanism",
+  "sortnum": 0,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Progress in Materialism is gated by $(thing)eras$(0). Each step unlocks the materials and machines the next one needs, so you cannot skip ahead — you earn each tier.$(br2)$(li)$(thing)Stone & Copper:$(0) knapping, pit kilns, the first tools$(li)$(thing)Bronze Age:$(0) crucibles, alloys, the anvil$(li)$(thing)Iron & Steel:$(0) bloomery, blast furnace, finished steel"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(li)$(thing)Early Mechanical:$(0) Create shafts, cogs and the first kinetic machines$(li)$(thing)Steam & Industry:$(0) engines, boilers and heavy machinery$(li)$(thing)Advanced Alloys:$(0) stainless steel, aluminium and specialist metals for the endgame$(br2)The entries here explain what each era gives you and the key recipe that opens the next door."
+    }
+  ],
+  "read_by_default": true
+}

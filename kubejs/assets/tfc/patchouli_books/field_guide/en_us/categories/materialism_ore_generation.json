@@ -1,0 +1,7 @@
+{
+  "name": "Ore Generation",
+  "description": "Where to find every metal and mineral: host rock, depth, rarity and surface signs.",
+  "icon": "tfc:metal/ingot/copper",
+  "parent": "tfc:materialism",
+  "sortnum": 0
+}

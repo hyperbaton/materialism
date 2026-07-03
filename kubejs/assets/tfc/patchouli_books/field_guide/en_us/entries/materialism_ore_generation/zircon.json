@@ -1,0 +1,17 @@
+{
+  "name": "Zircon",
+  "category": "tfc:materialism_ore_generation",
+  "icon": "tfc_metallurgy:ore/poor_zircon/granite",
+  "sortnum": 440,
+  "read_by_default": true,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Zircon$(0)$(br2)$(thing)Rocks:$(0) igneous extrusive (rhyolite); igneous intrusive (granite); metamorphic (quartzite)$(br2)$(li)$(thing)Deep band:$(0) Y -170 to -50, extremely rare"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(thing)Surface sample:$(0) Yes — small surface samples mark a vein below.$(br2)Strike exposed host rock with a Prospector's Pick to close in on the vein."
+    }
+  ]
+}

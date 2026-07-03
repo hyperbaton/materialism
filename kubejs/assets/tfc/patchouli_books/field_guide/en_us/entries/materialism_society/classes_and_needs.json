@@ -1,0 +1,21 @@
+{
+  "name": "Classes, Needs & Happiness",
+  "category": "tfc:materialism_society",
+  "icon": "minecraft:cake",
+  "sortnum": 10,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Every citizen carries a list of $(thing)needs$(0): a home, heating, clothing, drink and food, on top of the climate they require. The more of its needs a citizen has met, the higher its $(thing)happiness$(0) climbs.$(br2)Sustained happiness is what lets a citizen $(thing)advance$(0) to the next class — and a citizen whose needs go unmet will slide back down again."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Advancement is a $(thing)luxury$(0) axis. Compare a Desert $(thing)Wayfarer$(0) — burlap clothes, plain water, oat flatbread — with a Desert $(thing)Trade Lord$(0): silk garments, rum, fresh feta, and smoked meats.$(br2)Higher classes demand labour-intensive TFC and FirmaLife goods — aged drinks, aged cheeses, elaborate meals — plus ambience like fine lighting and decoration. A few of the very top tiers also want small comforts such as piped water."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Society is a $(thing)pyramid$(0). A class can require that only so much of your population sits at or above it — elites are capped at roughly a tenth, pinnacle classes at a sliver. You cannot make everyone a lord; you must grow a broad base to support a narrow top.$(br2)These are $(thing)ratios$(0) only — citizens do not need to stand near one another, so your city can sprawl as wide as you like."
+    }
+  ],
+  "read_by_default": true
+}

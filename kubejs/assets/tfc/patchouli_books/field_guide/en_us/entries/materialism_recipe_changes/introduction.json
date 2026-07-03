@@ -1,0 +1,17 @@
+{
+  "name": "What Has Changed",
+  "category": "tfc:materialism_recipe_changes",
+  "icon": "tfc:metal/ingot/wrought_iron",
+  "sortnum": 0,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Materialism rewires many recipes so that everything flows through the $(thing)TerraFirmaCraft$(0) material chain. Vanilla shortcuts — crafting-table tools, iron blocks, gold from nuggets — are gone; you build up from ores, the anvil, and machines instead.$(br2)This category records the notable changes and the items that have been $(thing)hidden or removed$(0) so they no longer clutter the recipe book."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Rule of thumb:$(0) if a recipe in JEI shows TFC ingredients (sheets, rods, nails, gears) it is the intended one. Vanilla ingredients that still appear are usually there because TFC provides no equivalent yet.$(br2)The following entries walk through the biggest reworks, mod by mod."
+    }
+  ],
+  "read_by_default": true
+}

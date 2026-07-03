@@ -1,0 +1,7 @@
+{
+  "name": "Society & Settlement",
+  "description": "Cultures, vocations and wealth tiers; founding a society and raising houses.",
+  "icon": "minecraft:emerald",
+  "parent": "tfc:materialism",
+  "sortnum": 3
+}

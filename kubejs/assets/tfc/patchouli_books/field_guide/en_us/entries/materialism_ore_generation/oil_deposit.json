@@ -1,0 +1,17 @@
+{
+  "name": "Oil Deposit",
+  "category": "tfc:materialism_ore_generation",
+  "icon": "tfmg:oil_deposit",
+  "sortnum": 320,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Oil Deposit$(0)$(br2)Unlike metal ores, oil is not hosted in rock. It pools in $(thing)reservoirs$(0) at the very bottom of the world, just above bedrock (around Y -62 to -59), and is $(thing)extremely rare$(0) — expect long searches between finds."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "You cannot prospect oil with a pick. Instead it is reached and drawn up with the appropriate $(thing)industrial machinery$(0) once your tech has advanced far enough.$(br2)See the $(l:tfc:materialism_tech/introduction)Tech Progression$(0) category for where oil fits in the road to industry."
+    }
+  ],
+  "read_by_default": true
+}

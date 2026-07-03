@@ -1,0 +1,21 @@
+{
+  "name": "Building Houses",
+  "category": "tfc:materialism_society",
+  "icon": "tfc:wood/planks/oak",
+  "sortnum": 40,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Every citizen needs a $(thing)home$(0) suited to its class. A newcomer is content with a rough shelter; a higher class expects a larger, better-appointed house before it will call the place home.$(br2)Because homes are per-class, upgrading a citizen means upgrading its housing too — build a little finer each time someone is ready to rise."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "A home only has to meet its class's $(thing)requirements$(0) — the size and comforts that class expects. You can stick to those rules and keep houses as simple as possible if you like.$(br2)But you are always free to $(thing)decorate$(0)! Add any details you please over the required blocks — flourishes never hurt a home, and a lovingly built city is its own reward."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(italic)Housing specifics — exact room sizes and required fittings per class — will be documented here once the structures are finalised.$(0)"
+    }
+  ],
+  "read_by_default": true
+}

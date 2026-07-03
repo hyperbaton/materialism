@@ -1,0 +1,21 @@
+{
+  "name": "Founding & Growing a Society",
+  "category": "tfc:materialism_society",
+  "icon": "minecraft:bell",
+  "sortnum": 20,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "A society begins when a culture's people take root in the right climate. Newcomer citizens arrive on their own where conditions suit them; meet their basic needs — shelter, warmth, water and simple food — and they will settle and, in time, multiply.$(br2)From that base you grow $(thing)outward and upward$(0): a wider population, and citizens climbing into richer classes."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Think at $(thing)city scale$(0). A single player can support dozens to a couple of hundred citizens, so plan for a town, not a hamlet.$(br2)Their $(thing)jobs are flavour$(0), not industry — a citizen at a workbench is there for life and colour, not to fill your chests. Your economy still comes from your own hands and machines; the society is the world those efforts build."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Managing a society is really about $(thing)supply$(0). Each step up the ladder asks for finer goods, so a thriving city needs steady production of aged drinks, cheeses, prepared meals and fine furnishings.$(br2)Keep the pyramid in mind: raise the comforts of your base first, and the caps will let a proportional number rise to the top."
+    }
+  ],
+  "read_by_default": true
+}

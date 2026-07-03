@@ -1,0 +1,21 @@
+{
+  "name": "Butchery & TFC",
+  "category": "tfc:materialism_recipe_changes",
+  "icon": "butchery:iron_cleaver",
+  "sortnum": 10,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "The $(thing)Butchery$(0) mod is fully integrated with TFC animals. Kill a TFC animal with a Butchery knife or cleaver and it drops a $(thing)carcass$(0) instead of the usual loot — hang and process it for cuts, organs and hides.$(br2)Butchery meats are now $(thing)perishable$(0) and carry TFC nutrition, and skinning yields TFC $(thing)raw hides$(0) rather than vanilla skins."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Tools and stations are rebuilt from TFC materials: cleavers and knives from TFC metal parts, tables from TFC lumber, counters and displays from stainless steel sheets, and the meat grinder from a steel gear and a hand crank.$(br2)$(thing)Rennet$(0) comes from a stomach and a knife; $(thing)tallow$(0) is rendered from animal fat in a pot."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Removed / hidden:$(0)$(br)$(li)Freezer, skin rack, photos, cling film$(li)Coin and the deep smithing template$(li)All recipes for mobs that do not exist in a TFC world (Nether, End, hostile and fantasy creatures)"
+    }
+  ],
+  "read_by_default": true
+}

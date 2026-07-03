@@ -1,0 +1,17 @@
+{
+  "name": "Halite",
+  "category": "tfc:materialism_ore_generation",
+  "icon": "tfc:halite",
+  "sortnum": 170,
+  "read_by_default": true,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Halite$(0)$(br2)$(thing)Rocks:$(0) igneous extrusive (tuff); sedimentary$(br2)$(li)$(thing)Vein:$(0) Y -50 to -10, very rare"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(thing)Surface sample:$(0) No surface sample; prospect with a pick.$(br2)Strike exposed host rock with a Prospector's Pick to close in on the vein."
+    }
+  ]
+}

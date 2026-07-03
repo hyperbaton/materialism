@@ -1,0 +1,17 @@
+{
+  "name": "Chromite",
+  "category": "tfc:materialism_ore_generation",
+  "icon": "firmalife:ore/poor_chromite/granite",
+  "sortnum": 90,
+  "read_by_default": true,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Chromite$(0)$(br2)$(thing)Rocks:$(0) igneous intrusive; metamorphic$(br2)$(li)$(thing)Deep band:$(0) Y -170 to -50, extremely rare"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(thing)Surface sample:$(0) Yes — small surface samples mark a vein below.$(br2)Strike exposed host rock with a Prospector's Pick to close in on the vein."
+    }
+  ]
+}

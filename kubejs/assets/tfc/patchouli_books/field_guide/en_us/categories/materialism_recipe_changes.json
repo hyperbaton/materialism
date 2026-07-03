@@ -1,0 +1,7 @@
+{
+  "name": "Recipe & Content Changes",
+  "description": "Recipes reworked for TFC, plus items and blocks hidden or removed.",
+  "icon": "butchery:iron_cleaver",
+  "parent": "tfc:materialism",
+  "sortnum": 1
+}

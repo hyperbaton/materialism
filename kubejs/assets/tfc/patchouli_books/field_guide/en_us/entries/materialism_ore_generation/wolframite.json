@@ -1,0 +1,17 @@
+{
+  "name": "Wolframite",
+  "category": "tfc:materialism_ore_generation",
+  "icon": "tfc_metallurgy:ore/poor_wolframite/quartzite",
+  "sortnum": 430,
+  "read_by_default": true,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Wolframite$(0)$(br2)$(thing)Rocks:$(0) metamorphic$(br2)$(li)$(thing)Deep band:$(0) Y -180 to -70, extremely rare"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(thing)Surface sample:$(0) Yes — small surface samples mark a vein below.$(br2)Strike exposed host rock with a Prospector's Pick to close in on the vein."
+    }
+  ]
+}

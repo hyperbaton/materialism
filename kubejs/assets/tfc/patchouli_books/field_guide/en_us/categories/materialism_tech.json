@@ -1,0 +1,7 @@
+{
+  "name": "Tech Progression",
+  "description": "The road from stone and copper to steam, machines and industry.",
+  "icon": "create:cogwheel",
+  "parent": "tfc:materialism",
+  "sortnum": 2
+}

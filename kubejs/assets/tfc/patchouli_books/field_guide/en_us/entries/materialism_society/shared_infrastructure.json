@@ -1,0 +1,17 @@
+{
+  "name": "Shared Infrastructure",
+  "category": "tfc:materialism_society",
+  "icon": "minecraft:beacon",
+  "sortnum": 30,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Individual homes stay $(thing)simple$(0). The builds that make a city breathe are its $(thing)shared works$(0) — workshops, taverns, bathhouses, monuments — that many citizens draw on at once.$(br2)A shared structure serves up to a set number of $(thing)users$(0), so as your population grows you raise more of them. Infrastructure scales with people, not with any one citizen."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "This is where your effort as a builder pays off. A grand tavern that satisfies a drink need for many citizens, or a monument that lifts the ambience of a whole quarter, does far more for your society than decorating one house.$(br2)Aim for a handful of impressive communal buildings surrounded by modest homes — a real town silhouette, and the most efficient path to a contented, climbing population."
+    }
+  ],
+  "read_by_default": true
+}
