@@ -1,0 +1,17 @@
+#Whether to limit world generation to fit the current map projection. Similar to "Finite continents".
+limitWorldGenerationOutsideMapProjection = true
+#What map/world projection to use.
+#Allowed Values: CRASTER_PARABOLIC, TFC_REAL_WORLD_FULL_WORLD, TFC_REAL_WORLD_NEW_WORLD, TFC_REAL_WORLD_OLD_WORLD
+mapProjection = "CRASTER_PARABOLIC"
+#Crossing 180 meridian teleport: Whether to teleport players crossing the 180° to the other side of the world.
+crossing180MeridianTeleport = true
+#Whether to prevent island and hotspot volcanoes outside the "world".
+keepIslandsAndHotspotVolcanoesInside = true
+#Polar area size: The radius of the special polar area. Only available for CRASTER_PARABOLIC.
+# Default: 100
+# Range: 20 ~ 1000
+polarAreaSize = 100
+#Meridian crossing grace distance: How far you need to pass the 180° meridian to get teleported.
+# Default: 40
+# Range: 1 ~ 500
+meridianCrossingGraceDistance = 40

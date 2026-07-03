@@ -7,35 +7,35 @@
 		#[in Stress Units]
 		#Configure the individual stress impact of mechanical blocks. Note that this cost is doubled for every speed increase it receives.
 		[stressValues.v2.impact]
-			steel_encased_shaft = 0.0
-			heavy_casing_encased_shaft = 0.0
+			steel_encased_shaft = 0.25
+			heavy_casing_encased_shaft = 0.25
 			lead_flywheel = 0.0
 			brass_mechanical_pump = 4.0
-			heavy_casing_encased_aluminum_cogwheel = 0.0
+			heavy_casing_encased_aluminum_cogwheel = 0.25
 			generator = 50.0
 			nickel_flywheel = 0.0
-			heavy_casing_encased_steel_cogwheel = 0.0
+			heavy_casing_encased_steel_cogwheel = 0.25
 			aluminum_flywheel = 0.0
-			steel_encased_large_aluminum_cogwheel = 0.0
+			steel_encased_large_aluminum_cogwheel = 0.5
 			cast_iron_flywheel = 0.0
-			steel_gearbox = 0.0
-			steel_encased_aluminum_cogwheel = 0.0
+			steel_gearbox = 0.5
+			steel_encased_aluminum_cogwheel = 0.25
 			rotor = 240.0
 			steel_mechanical_pump = 4.0
-			large_aluminum_cogwheel = 0.0
+			large_aluminum_cogwheel = 0.5
 			plastic_mechanical_pump = 4.0
 			machine_input = 4.0
 			winding_machine = 4.0
 			steel_flywheel = 0.0
 			cast_iron_mechanical_pump = 4.0
-			heavy_casing_encased_large_aluminum_cogwheel = 0.0
-			large_steel_cogwheel = 0.0
-			heavy_casing_encased_large_steel_cogwheel = 0.0
-			aluminum_cogwheel = 0.0
-			steel_encased_large_steel_cogwheel = 0.0
+			heavy_casing_encased_large_aluminum_cogwheel = 0.5
+			large_steel_cogwheel = 0.5
+			heavy_casing_encased_large_steel_cogwheel = 0.5
+			aluminum_cogwheel = 0.25
+			steel_encased_large_steel_cogwheel = 0.5
 			aluminum_mechanical_pump = 4.0
-			steel_encased_steel_cogwheel = 0.0
-			steel_cogwheel = 0.0
+			steel_encased_steel_cogwheel = 0.25
+			steel_cogwheel = 0.25
 			concrete_hose = 4.0
 
 		#.

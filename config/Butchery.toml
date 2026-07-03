@@ -1,6 +1,6 @@
 [General]
 	#Give the butchers guide on first join.
-	"First Join Book" = true
+	"First Join Book" = false
 	#Show GUI hints when looking at carcasses.
 	"Show Hints" = true
 	#Enable to have carcasses drop with ONLY cleavers. Disable to have carcasses drop no matter what kills the mob.
@@ -14,9 +14,9 @@
 	#Enable looting when butchering carcasses
 	"Looting Enchantment" = true
 	#Enable sulfur ore generation
-	"Sulfur Ore Generation" = true
+	"Sulfur Ore Generation" = false
 	#Enable salt generation
-	"Salt Generation" = true
+	"Salt Generation" = false
 	#Enables blood puddles dropping when no blood grate is below a carcass.
 	"Blood Puddle" = true
 	#Enable blood spread
@@ -178,4 +178,4 @@
 
 ["Butchers Coin Reward"]
 	#The loottable that the butchery coin rewards from.
-	Loottable = "minecraft:chests/end_city_treasure"
+	Loottable = "minecraft:chests/end_city_treasu"

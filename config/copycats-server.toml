@@ -7,6 +7,6 @@
 		#[in Stress Units]
 		#Configure the individual stress impact of mechanical blocks. Note that this cost is doubled for every speed increase it receives.
 		[stressValues.v1.impact]
-			copycat_cogwheel = 0.0
-			copycat_large_cogwheel = 0.0
-			copycat_shaft = 0.0
+			copycat_cogwheel = 0.25
+			copycat_large_cogwheel = 0.5
+			copycat_shaft = 0.25

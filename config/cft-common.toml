@@ -5,7 +5,7 @@ xoonglinMatingCooldown = 6000
 #This will force loading the chunks where a Xoonglin is present. ATTENTION: This can highly damage the performance.
 keepXoonglinsLoaded = false
 #If true, Xoonglins will use the basic humanoid/player model instead of the custom Xoonglin model.
-useHumanoidModel = false
+useHumanoidModel = true
 
 [homeDetection]
 	#Maximum amount of blocks that a Xoonglin house can have.
