@@ -697,5 +697,8 @@ ServerEvents.recipes(event => {
     //   ]
     // ).transitionalItem('create_new_age:blank_circuit')
     // .loops(3);
+
+    // Lamp post: steel rods instead of andesite alloy
+    event.replaceInput({ id: 'create_new_age:shaped/lamp_post' }, 'create:andesite_alloy', 'tfc:metal/rod/steel')
 }
 )

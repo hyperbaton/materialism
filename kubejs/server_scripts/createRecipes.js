@@ -43,6 +43,7 @@ ServerEvents.recipes(event => {
           B: 'tfc:metal/rod/steel',
         }
     )
+    event.remove({id: 'create:crafting/appliances/clipboard'})
     event.shaped(
         Item.of('create:clipboard', 1), // arg 1: output
         [
@@ -51,7 +52,7 @@ ServerEvents.recipes(event => {
             ' C '
         ],
         {
-            A: 'tfc:metal/ingot/wrought_iron',
+            A: 'tfc_metallurgy:metal/sheet/aluminum',
             B: 'minecraft:paper',
             C: '#tfc:lumber',
         }
@@ -238,10 +239,37 @@ ServerEvents.recipes(event => {
     replaceAndesiteAlloyWith('create:mechanical_crafting/potato_cannon', 'tfc:metal/sheet/steel')
     replaceAndesiteAlloyWith('create:mechanical_crafting/crushing_wheel', 'tfc:metal/sheet/steel')
     replaceAndesiteAlloyWith('create:andesite_ladder_from_andesite_alloy_stonecutting', 'tfc_metallurgy:metal/rod/aluminum')
-    replaceAndesiteAlloyWith('create:andesite_bars_from_andesite_alloy_stonecutting', 'tfc_metallurgy:metal/ingot/aluminum')
+    replaceAndesiteAlloyWith('create:andesite_bars_from_andesite_alloy_stonecutting', 'tfc_metallurgy:metal/rod/aluminum')
     replaceAndesiteAlloyWith('create:andesite_scaffolding_from_andesite_alloy_stonecutting', 'tfc_metallurgy:metal/ingot/aluminum')
     replaceAndesiteAlloyWith('create:crafting/kinetics/hand_crank', 'tfc:metal/rod/steel')
     replaceAndesiteAlloyWith('woodencog:crafting/kinetics/metal_bracket', 'tfc_metallurgy:metal/sheet/aluminum')
+
+    // --- De-andesite batch ---
+    // Table cloth (base andesite variant) -> aluminium sheet
+    event.replaceInput({ id: /create:.*table_cloth.*$/ }, 'create:andesite_alloy', 'tfc_metallurgy:metal/sheet/aluminum')
+    replaceAndesiteAlloyWith('create:andesite_table_cloth_from_andesite_alloy_stonecutting', 'tfc_metallurgy:metal/sheet/aluminum')
+    // Postboxes (all colours) -> aluminium sheet
+    event.replaceInput({ id: /create:crafting\/logistics\/[a-z_]*postbox$/ }, 'create:andesite_alloy', 'tfc_metallurgy:metal/sheet/aluminum')
+
+    // Item hatch: steel heavy plate + steel trapdoor
+    event.remove({ id: 'create:crafting/logistics/item_hatch' })
+    event.shapeless('create:item_hatch', ['tfc_items:steel_heavy_sheet', 'tfc:metal/trapdoor/steel'])
+
+    // Package frogport: a spring-loaded, rubber-tongued package launcher
+    event.remove({ id: 'create:crafting/logistics/package_frogport' })
+    event.shaped('create:package_frogport', [
+        'R',
+        'V',
+        'S'
+    ], {
+        R: '#materialism:rubber',
+        V: 'create:item_vault',
+        S: 'vintageimprovements:brass_spring'
+    })
+
+    // Remove the block of andesite alloy (compacting + uncrafting)
+    event.remove({ id: 'create:crafting/materials/andesite_alloy_block' })
+    event.remove({ id: 'create:crafting/materials/andesite_alloy_from_block' })
 
     // Item application recipes
     event.remove({type: 'create:item_application'})
@@ -697,6 +725,8 @@ ServerEvents.recipes(event => {
     // Remove all references to andesite alloy
     //event.remove({input: 'create:andesite_alloy'})
     //event.remove({output: 'create:andesite_alloy'})
+    event.remove({input: 'create:andesite_alloy', type: 'create:stonecutting'})
+    event.remove({input: 'minecraft:copper_ingot', type: 'create:stonecutting'})
 
     event.replaceInput(
         { input: 'create:brass_sheet' }, // Arg 1: the filter

@@ -158,6 +158,19 @@ RecipeViewerEvents.removeEntries('item', event => {
     // Hide boats (there are aleki ships)
     event.remove(/.*boat.*/)
 
+    // Hide TFCHotOrNot tongs / tong parts made from non-base-TFC metals
+    // (tfc_metallurgy, firmalife, etc. are registered dynamically). Keep only the
+    // base TFC metals + wood below.
+    const baseTongMetals = [
+        'wood', 'bismuth', 'bismuth_bronze', 'black_bronze', 'bronze', 'brass',
+        'copper', 'gold', 'nickel', 'rose_gold', 'silver', 'tin', 'zinc',
+        'sterling_silver', 'wrought_iron', 'cast_iron', 'pig_iron', 'steel',
+        'black_steel', 'blue_steel', 'red_steel'
+    ]
+    event.remove(new RegExp(
+        '^tfchotornot:(tongs|tong_part)/(?!(' + baseTongMetals.join('|') + ')$).+$'
+    ))
+
     removeToolsAndArmor('thorium')
     removeToolsAndArmor('uranium')
 

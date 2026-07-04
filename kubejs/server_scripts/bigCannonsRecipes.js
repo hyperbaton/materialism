@@ -66,6 +66,13 @@ ServerEvents.recipes(event => {
         'minecraft:iron_ingot',            // Arg 2: the item to replace
         'tfc_metallurgy:metal/double_sheet/titanium'         // Arg 3: the item to replace it with
       )
-      
+
+      // Basin foundry lid: steel sheets instead of andesite alloy
+      event.replaceInput(
+        { id: 'createbigcannons:basin_foundry_lid' },
+        'create:andesite_alloy',
+        'tfc:metal/sheet/steel'
+      )
+
     }
 )

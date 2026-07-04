@@ -188,4 +188,18 @@ ServerEvents.recipes(event => {
     event.recipes.tfc.anvil('createdeco:industrial_iron_trapdoor', 'createdeco:industrial_iron_sheet', ['draw_any', 'hit_any', 'hit_last'])
     event.remove('createdeco:zinc_trapdoor')
     event.recipes.tfc.anvil('createdeco:zinc_trapdoor', 'tfc:metal/sheet/zinc', ['draw_any', 'hit_any', 'hit_last'])
+
+    // Andesite lamps: aluminium bars on top instead of raw andesite alloy
+    event.replaceInput({ id: 'minecraft:andesite_bars' }, 'create:andesite_alloy', 'tfc_metallurgy:metal/rod/aluminum')
+    event.replaceInput({ id: /createdeco:[a-z_]*andesite_lamp/ }, 'create:andesite_alloy', 'create:andesite_bars')
+
+    // Remaining andesite-alloy forms (as c: tags) used by createdeco andesite blocks
+    // -> aluminium. Covers hull, mesh_fence, sheet_metal, catwalks and the lamp base plate.
+    event.replaceInput({ mod: 'createdeco' }, '#c:plates/andesite_alloy',         'tfc_metallurgy:metal/sheet/aluminum')
+    event.replaceInput({ mod: 'createdeco' }, '#c:ingots/andesite_alloy',         'tfc_metallurgy:metal/ingot/aluminum')
+    event.replaceInput({ mod: 'createdeco' }, '#c:storage_blocks/andesite_alloy', 'tfc_metallurgy:metal/block/aluminum')
+
+    // Catwalk stairs use createdeco's own andesite_bars (which has no recipe) -> use the
+    // craftable aluminium bars instead so the stairs are obtainable.
+    event.replaceInput({ id: 'createdeco:andesite_catwalk_stairs' }, 'createdeco:andesite_bars', 'create:andesite_bars')
 })
