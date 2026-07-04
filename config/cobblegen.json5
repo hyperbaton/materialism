@@ -1,0 +1,30 @@
+{
+	// CobbleGen Format Version, you can leave this alone for now. v2.0 is scheduled to be released in CobbleGen v6.0
+	"formatVersion": "1.0",
+	// Materialism: matter must not be produced infinitely. Empty lists just fall back to
+	// vanilla generation, so instead we OVERRIDE every generator's output with air — the
+	// water+lava contact fires, but nothing (air) is placed, so no cobble/stone/basalt.
+	"cobbleGen": [
+		{
+			"id": "minecraft:air",
+			"weight": 100.0,
+		},
+	],
+	"stoneGen": [
+		{
+			"id": "minecraft:air",
+			"weight": 100.0,
+		},
+	],
+	"basaltGen": [
+		{
+			"id": "minecraft:air",
+			"weight": 100.0,
+		},
+	],
+	"customGen": {
+		"cobbleGen": {},
+		"stoneGen": {},
+		"basaltGen": {},
+	},
+}

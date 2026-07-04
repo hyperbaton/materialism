@@ -22,6 +22,8 @@ RecipeViewerEvents.removeEntries('item', event => {
     r('create:cart_assembler');
     event.remove(/create:.*blaze.*/)
     r('create:controller_rail');
+    // Andesite mechanical extruder disabled (only the brass one is kept)
+    r('create_mechanical_extruder:mechanical_extruder');
 
     // Hide vintageimprovements rods, wires, springs, sheets
     event.remove(/vintageimprovements:.*_rod/)
