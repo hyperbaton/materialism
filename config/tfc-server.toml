@@ -615,6 +615,11 @@
 		# If true, powder bowls will interact with in-world automation such as hoppers on a side-specific basis.
 		powderBowlEnableAutomation = true
 
+	[blocks.crate]
+		#
+		# If true, crates will interact with in-world automation such as hoppers on a side-specific basis.
+		crateEnableAutomation = true
+
 	[items.smallVessel]
 		#
 		# Tank capacity of a small vessel (in mB).
