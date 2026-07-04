@@ -4,7 +4,7 @@
     "rarity": 10000,
     "density": 0.6,
     "min_y": -180,
-    "max_y": -70,
+    "max_y": -50,
     "size": 200,
     "random_name": "deep_wolframite",
     "blocks": [

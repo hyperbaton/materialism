@@ -4,7 +4,7 @@
     "rarity": 6667,
     "density": 0.55,
     "min_y": -170,
-    "max_y": -50,
+    "max_y": 0,
     "size": 200,
     "random_name": "deep_cassiterite",
     "blocks": [
