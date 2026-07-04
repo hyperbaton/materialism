@@ -79,7 +79,6 @@ RecipeViewerEvents.removeEntries('item', event => {
     r('create_new_age:blank_circuit')
     r('create_new_age:copper_circuit')
     event.remove(/createvintageneoforged:sulfuric_acid_bucket/)
-    r('tfmg:limesand')
     r('createaddition:electrum_ingot')
     r('tfc_metallurgy:metal/graphite')
     r('tfc_metallurgy:bucket/metal/graphite')
@@ -140,6 +139,11 @@ RecipeViewerEvents.removeEntries('item', event => {
     r('create:cinder_flour');
     r('tfmg:nickel_ingot');
     r('tfmg:lithium_ingot');
+    r('tfmg:lead_sheet');
+    r('tfmg:limesand')
+    r('tfmg:raw_lithium')
+    r('tfmg:raw_lithium_block')
+    r('tfmg:aluminum_sheet')
     r('tfmg:aluminum_axe');
     r('tfmg:aluminum_hoe');
     r('tfmg:aluminum_shovel');

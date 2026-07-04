@@ -8,6 +8,16 @@ ServerEvents.tags('item', event => {
     // The track recipes take #c:rods/wrought_iron | #c:rods/zinc; adding steel here makes
     // steel rods a valid spike. NOTE: wrought-iron/zinc rods still work (and are cheaper).
     event.add('c:rods/wrought_iron', 'tfc:metal/rod/steel')
+
+    // Cardboard production chain: feed the Create pulp mixer with TFC plant fibre
+    // (straw/papyrus/jute) instead of vanilla saplings/bamboo/sugar cane.
+    // 4x pulpifiable + water -> Mixer -> pulp -> Press -> cardboard.
+    event.add('create:pulpifiable', 'tfc:straw')
+    event.add('create:pulpifiable', 'tfc:papyrus')
+    event.add('create:pulpifiable', 'tfc:papyrus_strip')
+    event.add('create:pulpifiable', 'tfc:jute')
+    event.add('create:pulpifiable', 'tfc:jute_fiber')
+    event.add('create:pulpifiable', 'tfc:thatch') // bulk option once you have a farm
     // Access the tag content and log it
     const tagContent = event.get('create:sandpaper').getObjectIds();
     console.info('Contents of the create:sandpaper tag:' + tagContent);

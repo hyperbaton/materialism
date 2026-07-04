@@ -271,6 +271,63 @@ ServerEvents.recipes(event => {
     event.remove({ id: 'create:crafting/materials/andesite_alloy_block' })
     event.remove({ id: 'create:crafting/materials/andesite_alloy_from_block' })
 
+    // --- Create 6 "Factory"/logistics blocks: TFC material swaps ---
+    // Packager & Redstone Requester: vanilla iron -> steel
+    event.replaceInput({ id: 'create:crafting/logistics/packager' },           '#c:ingots/iron', 'tfc:metal/ingot/steel')
+    event.replaceInput({ id: 'create:crafting/logistics/redstone_requester' },  '#c:ingots/iron', 'tfc:metal/ingot/steel')
+    // Stock Ticker: vanilla gold -> TFC gold
+    event.replaceInput({ id: 'create:crafting/logistics/stock_ticker' }, '#c:ingots/gold',   'tfc:metal/ingot/gold')
+    // Desk Bell: the hidden gold plate -> a TFC brass bell
+    event.replaceInput({ id: 'create:crafting/logistics/desk_bell' }, '#c:plates/gold', 'tfc:brass_bell')
+
+    // Cardboard chain: explicit pulp recipe (4x straw + water in a Mixer) so it's always
+    // craftable and JEI-visible, independent of the #create:pulpifiable tag (which the
+    // vanilla create:pulp recipe relies on, and which only updates on a full relog).
+    event.custom({
+        type: 'create:mixing',
+        ingredients: [
+            { item: 'tfc:straw' }, { item: 'tfc:straw' },
+            { item: 'tfc:straw' }, { item: 'tfc:straw' },
+            { type: 'neoforge:single', amount: 250, fluid: 'minecraft:water' }
+        ],
+        results: [{ id: 'create:pulp' }]
+    })
+    // Flexible version: any #create:pulpifiable fibre (straw/papyrus/jute/thatch/...).
+    // Re-added here because the jar's own create:pulp recipe isn't loading in-pack.
+    event.custom({
+        type: 'create:mixing',
+        ingredients: [
+            { tag: 'create:pulpifiable' }, { tag: 'create:pulpifiable' },
+            { tag: 'create:pulpifiable' }, { tag: 'create:pulpifiable' },
+            { type: 'neoforge:single', amount: 250, fluid: 'minecraft:water' }
+        ],
+        results: [{ id: 'create:pulp' }]
+    })
+
+    // Package filter: zinc rods + burlap cloth (was zinc nuggets + wool)
+    event.remove({ id: 'create:crafting/kinetics/package_filter' })
+    event.shaped('create:package_filter', [
+        'ASA'
+    ], {
+        A: 'tfc:metal/rod/zinc',
+        S: 'tfc:burlap_cloth'
+    })
+
+    // Netherite diving gear: no netherite in TFC -> upgrade copper diving gear with
+    // tungsten steel sheets (removes the smithing-template recipes).
+    event.remove({ output: 'create:netherite_diving_boots' })
+    event.remove({ output: 'create:netherite_diving_helmet' })
+    event.shaped('create:netherite_diving_boots', [
+        ' S ',
+        'SBS',
+        ' S '
+    ], { B: 'create:copper_diving_boots', S: 'tfc_metallurgy:metal/double_sheet/tungsten_steel' })
+    event.shaped('create:netherite_diving_helmet', [
+        ' S ',
+        'SBS',
+        ' S '
+    ], { B: 'create:copper_diving_helmet', S: 'tfc_metallurgy:metal/double_sheet/tungsten_steel' })
+
     // Item application recipes
     event.remove({type: 'create:item_application'})
     event.custom({

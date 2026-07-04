@@ -1,5 +1,14 @@
 ServerEvents.recipes(event => {
 
+  // Raw lithium is cut from the pack: drop every recipe that makes or uses it.
+  event.remove({ output: 'tfmg:raw_lithium' })
+  event.remove({ input: 'tfmg:raw_lithium' })
+
+  // Aluminium sheet: standardise on tfc_metallurgy's. Stop TFMG from producing its own,
+  // and swap it for the tfc_metallurgy sheet wherever it's used as an input.
+  event.remove({ output: 'tfmg:aluminum_sheet' })
+  event.replaceInput({}, 'tfmg:aluminum_sheet', 'tfc_metallurgy:metal/sheet/aluminum')
+
   event.remove({id: /.*tfmg:.*axe.*/})
   event.remove({id: /.*tfmg:.*sword.*/})
   event.remove({id: /.*tfmg:.*hoe.*/})
