@@ -3,6 +3,11 @@ ServerEvents.tags('item', event => {
     // Completely replace the tag with only tfc:sandpaper
     event.removeAll('create:sandpaper');         // Removes everything else
     event.add('create:sandpaper', 'tfc:sandpaper'); // Adds tfc:sandpaper to the tag
+
+    // Let TFC-wood train tracks (Steam 'n' Rails) accept steel rods for their rail spikes.
+    // The track recipes take #c:rods/wrought_iron | #c:rods/zinc; adding steel here makes
+    // steel rods a valid spike. NOTE: wrought-iron/zinc rods still work (and are cheaper).
+    event.add('c:rods/wrought_iron', 'tfc:metal/rod/steel')
     // Access the tag content and log it
     const tagContent = event.get('create:sandpaper').getObjectIds();
     console.info('Contents of the create:sandpaper tag:' + tagContent);

@@ -158,6 +158,18 @@ RecipeViewerEvents.removeEntries('item', event => {
     // Hide boats (there are aleki ships)
     event.remove(/.*boat.*/)
 
+    // Hide railways tracks that can't be crafted in this pack:
+    // vanilla/Nether woods (superseded by the TFC-wood tracks) and Nether/End-themed tracks.
+    // Keeps track_tfc_*, create:track, monorail, tieless, andesite.
+    const hiddenTrackWoods = [
+        'oak', 'birch', 'spruce', 'jungle', 'dark_oak', 'acacia', 'cherry',
+        'mangrove', 'bamboo', 'stripped_bamboo', 'crimson', 'warped',
+        'blackstone', 'ender', 'phantom'
+    ]
+    event.remove(new RegExp(
+        '^railways:track_(incomplete_)?(' + hiddenTrackWoods.join('|') + ')(_narrow|_wide)?$'
+    ))
+
     // Hide TFCHotOrNot tongs / tong parts made from non-base-TFC metals
     // (tfc_metallurgy, firmalife, etc. are registered dynamically). Keep only the
     // base TFC metals + wood below.

@@ -40,6 +40,11 @@ ClientEvents.lang("en_us", event => {
     event.renameItem('createdeco:red_andesite_lamp', 'Red Aluminum Lamp')
     event.renameItem('createdeco:yellow_andesite_lamp', 'Yellow Aluminum Lamp')
     event.renameItem('bellsandwhistles:andesite_pilot', 'Aluminum Pilot')
+    // Andesite gauge tracks are now stone-based -> drop "Andesite" from the name
+    event.renameItem('railways:track_create_andesite_narrow', 'Narrow Train Track')
+    event.renameItem('railways:track_create_andesite_wide', 'Wide Train Track')
+    event.renameItem('railways:track_incomplete_create_andesite_narrow', 'Incomplete Narrow Track')
+    event.renameItem('railways:track_incomplete_create_andesite_wide', 'Incomplete Wide Track')
     // event.renameItem('interiors:kelp_chair', 'Rubber Chair') // item removed/renamed in Interiors 1.21
     // event.renameItem('interiors:kelp_floor_chair', 'Rubber Floor Chair')
     // event.renameItem('interiors:kelp_seat', 'Rubber Seat')
