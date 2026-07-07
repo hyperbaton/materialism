@@ -72,6 +72,19 @@
         event.recipes.vintageimprovements.polishing('tfc_metallurgy:metal/rod/titanium', 'tfc_metallurgy:metal/rod/titanium')
     ]).transitionalItem('tfc_metallurgy:metal/rod/titanium').loops(3);
     
+    // Sifting items
+    event.recipes.remove({input: 'createsifter:dust'})
+    event.recipes.remove({input: 'createsifter:crushed_netherrack'})
+    event.recipes.remove({input: 'createsifter:crushed_end_stone'})
+    event.recipes.remove({input: 'createsifter:crushed_basalt'})
+    event.recipes.remove({input: /createsifter.*pebble/})
+    event.recipes.remove({input: /createsifter.*piece/})
+    event.recipes.remove({output: 'createsifter:dust'})
+    event.recipes.remove({output: 'createsifter:crushed_netherrack'})
+    event.recipes.remove({output: 'createsifter:crushed_end_stone'})
+    event.recipes.remove({output: 'createsifter:crushed_basalt'})
+    event.recipes.remove({output: /createsifter.*pebble/})
+    event.recipes.remove({output: /createsifter.*piece/})
 
     // Sifting recipes
     /*event.recipes.remove('createsifter:sifting/sand_brass_mesh')

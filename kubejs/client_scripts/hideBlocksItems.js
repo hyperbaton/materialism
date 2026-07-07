@@ -120,6 +120,7 @@ RecipeViewerEvents.removeEntries('item', event => {
     r('design_decor:hepatizon_large_chain');
     r('design_decor:knightslime_large_chain');
     r('design_decor:queens_lime_large_chain');
+    event.remove('createbigcannons:bronze_ingot')
 
     // Hide TFMG tools/armor/ingots
     r('tfmg:lead_axe');
@@ -144,6 +145,7 @@ RecipeViewerEvents.removeEntries('item', event => {
     r('tfmg:lead_sheet');
     r('tfmg:limesand')
     r('tfmg:raw_lithium')
+    r('tfmg:crushed_raw_lithium')
     r('tfmg:raw_lithium_block')
     r('tfmg:aluminum_sheet')
     r('tfmg:aluminum_axe');
@@ -157,6 +159,11 @@ RecipeViewerEvents.removeEntries('item', event => {
     r('design_decor:brass_lamp');
     r('design_decor:copper_lamp');
     r('design_decor:zinc_lamp');
+    event.remove('tfmg:cast_iron_ingot')
+    event.remove('tfmg:steel_ingot')
+    event.remove('tfmg:cast_iron_sheet')
+    event.remove('tfmg:heavy_plate')
+    event.remove('tfmg:industrial_aluminum_casing')
 
     // Hide Weather 2 items
     event.remove(/.*weather2.*/)
@@ -288,6 +295,14 @@ RecipeViewerEvents.removeEntries('item', event => {
     afcNoWood.forEach(species => {
         event.remove(new RegExp('tfcastikorcarts:.*' + species + '.*'))
     })
+
+    // Hide items introduced by create sifter
+    event.recipes.remove('createsifter:dust')
+    event.recipes.remove('createsifter:crushed_netherrack')
+    event.recipes.remove('createsifter:crushed_end_stone')
+    event.recipes.remove('createsifter:crushed_basalt')
+    event.recipes.remove(/createsifter.*pebble/)
+    event.recipes.remove(/createsifter.*piece/)
 
     // Hide Minecraft unreachable items
     event.remove(/minecraft:(?!leather).*helm/);
@@ -558,4 +573,8 @@ RecipeViewerEvents.removeEntries('fluid', event => {
     event.remove(/.*refined_glowstone.*/);
     event.remove(/.*refined_obsidian.*/);
     event.remove(/createvintageneoforged:sulfuric_acid/);
+    event.remove('createbigcannons:molten_cast_iron')
+    event.remove('createbigcannons:molten_bronze')
+    event.remove('createbigcannons:molten_steel')
+    event.remove('createbigcannons:molten_nethersteel')
 });

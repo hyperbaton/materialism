@@ -3,6 +3,8 @@ ServerEvents.recipes(event => {
   // Raw lithium is cut from the pack: drop every recipe that makes or uses it.
   event.remove({ output: 'tfmg:raw_lithium' })
   event.remove({ input: 'tfmg:raw_lithium' })
+  event.remove({ input: 'tfmg:crushed_raw_lithium' })
+  event.remove({ input: 'tfmg:crushed_raw_lithium' })
 
   // Aluminium sheet: standardise on tfc_metallurgy's. Stop TFMG from producing its own,
   // and swap it for the tfc_metallurgy sheet wherever it's used as an input.
@@ -14,9 +16,18 @@ ServerEvents.recipes(event => {
   event.remove({id: /.*tfmg:.*hoe.*/})
   event.remove({id: /.*tfmg:.*shovel.*/})
   event.remove({output: 'tfmg:aluminum_ingot'})
+
+  // Remove iron and steel ingots
+  event.remove({ output: 'tfmg:cast_iron_ingot' })
+  event.remove({ output: 'tfmg:steel_ingot' })
+  event.remove({ output: 'tfmg:cast_iron_sheet' })
+  event.replaceInput({}, 'tfmg:heavy_plate', 'tfc:metal/sheet/steel')
+
   // Remove wires, using vintageimprovement or carfts and additions ones
   event.remove('tfmg:stonecutting/aluminum_wire')
   event.remove('tfmg:stonecutting/copper_wire')
+
+  event.replaceInput({}, 'tfmg:industrial_aluminum_casing', 'tfmg:steel_casing')
 
   // Change sulfuric acid recipes for vintageimprovements ones:
   event.remove('tfmg:mixing/copper_sulfate')
@@ -155,6 +166,16 @@ ServerEvents.recipes(event => {
     '#c:nuggets/steel',
     'tfc_items:steel_rivet'
   )
+  event.replaceInput(
+    { id: 'tfmg:crafting/materials/unfinished_electromagnetic_coil' },
+    '#c:nuggets/steel',
+    'tfc_items:steel_ring'
+  )
+  event.replaceInput(
+    { id: /tfmg.*/ },
+    '#c:nuggets/steel',
+    'tfc_items:steel_rivet'
+  )
   // Replace kelp in concrete hose with rubber
   event.replaceInput(
     { id: 'tfmg:crafting/materials/concrete_hose' },
@@ -238,11 +259,12 @@ ServerEvents.recipes(event => {
 
   // Make heavy plates out of tungsten steel (heavily used on TFMG recipes)
   // TODO: Consider adding heating requisite to make it harder :P
-  event.replaceInput(
-    { id: 'tfmg:sequenced_assembly/heavy_plate' }, // Arg 1: the filter
-    '#createbigcannons:ingot_steel',            // Arg 2: the item to replace
-    'tfc_metallurgy:metal/ingot/tungsten_steel'         // Arg 3: the item to replace it with
-  )
+  // Update: decided to remove them
+  // event.replaceInput(
+  //   { id: 'tfmg:sequenced_assembly/heavy_plate' }, // Arg 1: the filter
+  //   '#createbigcannons:ingot_steel',            // Arg 2: the item to replace
+  //   'tfc_metallurgy:metal/ingot/tungsten_steel'         // Arg 3: the item to replace it with
+  // )
   // Use TFC firebricks instead of TFMG ones
   // Using fire_bricks instead of fire_brick increases the cost
   // at a point where you can automatize most of the process.
@@ -562,12 +584,36 @@ ServerEvents.recipes(event => {
      event.recipes.createDeploying('create:incomplete_precision_mechanism', ['create:incomplete_precision_mechanism', 'tfc_metallurgy:metal/rod/constantan'])
    ]
   ).transitionalItem('create:incomplete_precision_mechanism').loops(5)
+
+  // Generator modified recipe
+  event.remove({id: 'tfmg:sequenced_assembly/generator'})
+  event.recipes.create.sequenced_assembly(
+   [
+     CreateItem.of('tfmg:generator', 0.85),
+     CreateItem.of('tfmg:steel_casing', 0.05),
+     CreateItem.of('tfmg:steel_cogwheel', 0.05),
+     CreateItem.of('tfmg:capacitor_item', 0.05)
+   ],
+   'create:shaft',
+   [
+     event.recipes.createDeploying('tfmg:unfinished_generator', ['tfmg:unfinished_generator', 'tfmg:capacitor_item']),
+     event.recipes.createDeploying('tfmg:unfinished_generator', ['tfmg:unfinished_generator', 'tfc_items:steel_heavy_sheet']),
+     event.custom({ type: 'tfmg:winding',     ingredients: [{ item: 'tfmg:unfinished_generator' }, { item: 'tfmg:copper_spool' }],   processing_time: 75, results: [{ id: 'tfmg:unfinished_generator' }] }),
+     event.recipes.createDeploying('tfmg:unfinished_generator', ['tfmg:unfinished_generator', 'tfmg:magnet']),
+     event.recipes.createDeploying('tfmg:unfinished_generator', ['tfmg:unfinished_generator', 'tfmg:steel_mechanism']),
+     event.recipes.createDeploying('tfmg:unfinished_generator', ['tfmg:unfinished_generator', 'tfmg:screwdriver'])
+   ]
+  ).transitionalItem('tfmg:unfinished_generator').loops(3)
   
   // Make cinder blocks from red concrete
   event.remove({id: 'tfmg:compacting/cinderflourblock'})
   event.recipes.create.cutting(
     'tfmg:cinderflourblock',
     'tfmg:red_concrete'
+  )
+  event.replaceInput({id: 'tfmg:crafting/materials/cinderflour_block'},
+    'minecraft:nether_wart_block',
+    'tfmg:liquid_concrete_bucket'
   )
 
   event.replaceInput(

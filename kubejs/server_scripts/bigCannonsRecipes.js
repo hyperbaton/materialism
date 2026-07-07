@@ -1,5 +1,15 @@
 ServerEvents.recipes(event => {
     event.remove({id: 'createbigcannons:mixing/alloy_nethersteel_steel'})
+    event.remove({output: 'createbigcannons:cast_iron_ingot'})
+    event.remove({output: 'createbigcannons:bronze_ingot'})
+    event.remove({output: 'createbigcannons:steel_ingot'})
+    event.remove({output: 'createbigcannons:nethersteel_ingot'})
+
+    // Remove molten metals
+    event.remove({output: 'createbigcannons:molten_cast_iron'})
+    event.remove({output: 'createbigcannons:molten_bronze'})
+    event.remove({output: 'createbigcannons:molten_steel'})
+    event.remove({output: 'createbigcannons:molten_nethersteel'})
 
     event.replaceInput(
         { id: 'createbigcannons:wrought_iron_cannon_end' }, // Arg 1: the filter
@@ -66,6 +76,11 @@ ServerEvents.recipes(event => {
         'minecraft:iron_ingot',            // Arg 2: the item to replace
         'tfc_metallurgy:metal/double_sheet/titanium'         // Arg 3: the item to replace it with
       )
+      event.replaceInput(
+        { input: 'createbigcannons:recoil_spring' }, // Arg 1: the filter
+        'createbigcannons:recoil_spring',            // Arg 2: the item to replace
+        'vintageimprovements:steel_spring'         // Arg 3: the item to replace it with
+      )
 
       // Basin foundry lid: steel sheets instead of andesite alloy
       event.replaceInput(
@@ -73,6 +88,44 @@ ServerEvents.recipes(event => {
         'create:andesite_alloy',
         'tfc:metal/sheet/steel'
       )
+      event.replaceInput(
+        { id: 'createbigcannons:bronze_block' }, // Arg 1: the filter
+        'createbigcannons:bronze_ingot',            // Arg 2: the item to replace
+        'tfc:metal/ingot/bronze'         // Arg 3: the item to replace it with
+      )
+
+      event.replaceInput(
+        { input: 'createbigcannons:nethersteel_ingot' },
+        'createbigcannons:nethersteel_ingot',
+        'tfc_metallurgy:metal/ingot/tungsten_steel'
+      )
+      // TODO: Make proper recipes for casting cannons with tungsten steel
+      // Replace nethersteel with tungsten steel
+      // event.replaceInput(
+      //   { input: 'createbigcannons:molten_nethersteel' },
+      //   'createbigcannons:molten_nethersteel',
+      //   'tfc_metallurgy:metal/tungsten_steel'
+      // )
+      // event.custom({
+      //     type: "createbigcannons:cannon_casting",
+      //     ingredients: [
+      //         {
+      //             fluid: "tfc_metallurgy:metal/tungsten_steel", // Target liquid
+      //             amount: 1000 // Fluid amount in mB
+      //         },
+      //         {
+      //             item: "createbigcannons:very_large_cast_mould" // The mold used
+      //         }
+      //     ],
+      //     results: [
+      //         {
+      //             item: "createbigcannons:unbored_very_large_nethersteel_cannon_layers", // The resulting casted part
+      //             count: 1
+      //         }
+      //     ],
+      //     processingTime: 300
+      // })
+
 
     }
 )

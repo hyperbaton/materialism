@@ -159,14 +159,8 @@ ServerEvents.recipes(event => {
     )
     replaceAndesiteAlloyWith('createdeco:andesite_door', 'tfc_metallurgy:metal/sheet/aluminum')
     replaceAndesiteAlloyWith('createdeco:andesite_trapdoor', 'tfc_metallurgy:metal/sheet/aluminum')
-    // TODO: tfcmg:aluminum_bars no longer exists in 1.21
-    //replaceAndesiteAlloyWith('createdeco:red_andesite_lamp', 'tfcmg:aluminum_bars')
     replaceAndesiteAlloyWith('createdeco:andesite_bars', 'tfc_metallurgy:metal/ingot/aluminum')
     replaceAndesiteAlloyWith('createdeco:andesite_support', 'tfc_metallurgy:metal/rod/aluminum')
-    //replaceAndesiteAlloyWith('createdeco:red_andesite_lamp', 'tfcmg:aluminum_bars')
-    //replaceAndesiteAlloyWith('createdeco:green_andesite_lamp', 'tfcmg:aluminum_bars')
-    //replaceAndesiteAlloyWith('createdeco:blue_andesite_lamp', 'tfcmg:aluminum_bars')
-    //replaceAndesiteAlloyWith('createdeco:yellow_andesite_lamp', 'tfcmg:aluminum_bars')
 
     function replaceAndesiteAlloyWith(recipeId, replacer){
         event.replaceInput(
