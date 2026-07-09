@@ -15,6 +15,7 @@ ServerEvents.recipes(event => {
     // Remove vanilla recipes with TFC alternative
     event.remove('minecraft:minecart')
 
+    event.remove({id: 'minecraft:lightning_rod'})
     event.remove({id: 'tfc:crafting/vanilla/lightning_rod'})
     // Add a custom recipe for lightning rods
     event.recipes.create.sequenced_assembly(

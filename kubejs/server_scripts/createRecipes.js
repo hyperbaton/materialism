@@ -598,6 +598,15 @@ ServerEvents.recipes(event => {
       ]
     ).transitionalItem('tfc:rock/hardened/slate').loops(6)
     event.recipes.create.sequenced_assembly(
+      'create:cut_deepslate',
+      'tfc:rock/hardened/shale',
+      [
+        event.recipes.create.pressing('tfc:rock/hardened/shale','tfc:rock/hardened/shale'),
+        event.recipes.create.cutting('tfc:rock/hardened/shale','tfc:rock/hardened/shale'),
+        event.recipes.vintageimprovements.polishing('tfc:rock/hardened/shale','tfc:rock/hardened/shale')
+      ]
+    ).transitionalItem('tfc:rock/hardened/shale').loops(6)
+    event.recipes.create.sequenced_assembly(
       'create:cut_dripstone',
       'tfc:rock/hardened/claystone',
       [
@@ -607,12 +616,12 @@ ServerEvents.recipes(event => {
     ).transitionalItem('tfc:rock/hardened/claystone').loops(6)
     event.recipes.create.sequenced_assembly(
       'create:cut_tuff',
-      'tfc:rock/hardened/dacite',
+      'tfc:rock/hardened/tuff',
       [
-        event.recipes.create.cutting('tfc:rock/hardened/dacite','tfc:rock/hardened/dacite'),
-        event.recipes.vintageimprovements.polishing('tfc:rock/hardened/dacite','tfc:rock/hardened/dacite')
+        event.recipes.create.cutting('tfc:rock/hardened/tuff','tfc:rock/hardened/tuff'),
+        event.recipes.vintageimprovements.polishing('tfc:rock/hardened/tuff','tfc:rock/hardened/tuff')
       ]
-    ).transitionalItem('tfc:rock/hardened/dacite').loops(6)
+    ).transitionalItem('tfc:rock/hardened/tuff').loops(6)
     event.recipes.create.sequenced_assembly(
       'create:cut_andesite',
       'tfc:rock/hardened/andesite',
@@ -623,12 +632,12 @@ ServerEvents.recipes(event => {
     ).transitionalItem('tfc:rock/hardened/andesite').loops(6)
     event.recipes.create.sequenced_assembly(
       'create:cut_calcite',
-      'tfc:rock/hardened/dolomite',
+      'tfc:rock/hardened/chalk',
       [
-        event.recipes.create.cutting('tfc:rock/hardened/dolomite','tfc:rock/hardened/dolomite'),
-        event.recipes.vintageimprovements.polishing('tfc:rock/hardened/dolomite','tfc:rock/hardened/dolomite')
+        event.recipes.create.cutting('tfc:rock/hardened/chalk','tfc:rock/hardened/chalk'),
+        event.recipes.vintageimprovements.polishing('tfc:rock/hardened/chalk','tfc:rock/hardened/chalk')
       ]
-    ).transitionalItem('tfc:rock/hardened/dolomite').loops(6)
+    ).transitionalItem('tfc:rock/hardened/chalk').loops(6)
     // Advanced rocks:
     event.recipes.create.sequenced_assembly(
       'create:veridium',

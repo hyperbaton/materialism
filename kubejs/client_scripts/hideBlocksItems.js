@@ -297,12 +297,12 @@ RecipeViewerEvents.removeEntries('item', event => {
     })
 
     // Hide items introduced by create sifter
-    event.recipes.remove('createsifter:dust')
-    event.recipes.remove('createsifter:crushed_netherrack')
-    event.recipes.remove('createsifter:crushed_end_stone')
-    event.recipes.remove('createsifter:crushed_basalt')
-    event.recipes.remove(/createsifter.*pebble/)
-    event.recipes.remove(/createsifter.*piece/)
+    event.remove('createsifter:dust')
+    event.remove('createsifter:crushed_netherrack')
+    event.remove('createsifter:crushed_end_stone')
+    event.remove('createsifter:crushed_basalt')
+    event.remove(/createsifter.*pebble/)
+    event.remove(/createsifter.*piece/)
 
     // Hide Minecraft unreachable items
     event.remove(/minecraft:(?!leather).*helm/);
@@ -493,6 +493,15 @@ RecipeViewerEvents.removeEntries('item', event => {
     event.remove('minecraft:anvil');
     event.remove('minecraft:chipped_anvil');
     event.remove('minecraft:damaged_anvil');
+    event.remove(/minecraft:.*trial.*/);
+    event.remove('minecraft:mace');
+    event.remove('minecraft:heavy_core');
+    event.remove('minecraft:lectern');
+    event.remove('minecraft:crafter');
+    event.remove('minecraft:cactus');
+    event.remove('minecraft:lily_pad');
+    event.remove('minecraft:sea_pickle');
+    event.remove(/minecraft:.*kelp.*/);
 
     event.remove(/afc:.*leaves.*/);
     event.remove(/tfc:.*leaves.*/);

@@ -98,6 +98,8 @@ ServerEvents.recipes(event => {
     event.remove({output: 'minecraft:anvil'});
     event.remove({output: 'minecraft:chipped_anvil'});
     event.remove({output: 'minecraft:damaged_anvil'});
+    event.remove({output: 'minecraft:crafter'});
+    event.remove({output: 'minecraft:mace'});
 
     // Disable Weather 2 recipes
     event.remove(/.*weather2.*/)

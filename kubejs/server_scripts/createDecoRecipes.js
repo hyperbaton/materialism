@@ -196,4 +196,74 @@ ServerEvents.recipes(event => {
     // Catwalk stairs use createdeco's own andesite_bars (which has no recipe) -> use the
     // craftable aluminium bars instead so the stairs are obtainable.
     event.replaceInput({ id: 'createdeco:andesite_catwalk_stairs' }, 'createdeco:andesite_bars', 'create:andesite_bars')
+
+
+    // Cut stone recipes
+    event.recipes.create.sequenced_assembly(
+      'dndecor:cut_packed_mud',
+      'tfc:hardened_clay',
+      [
+        event.recipes.create.cutting('tfc:hardened_clay','tfc:hardened_clay'),
+        event.recipes.vintageimprovements.polishing('tfc:hardened_clay','tfc:hardened_clay')
+      ]
+    ).transitionalItem('tfc:hardened_clay').loops(6)
+    event.recipes.create.sequenced_assembly(
+      'dndecor:cut_basalt',
+      'tfc:rock/hardened/basalt',
+      [
+        event.recipes.create.cutting('tfc:rock/hardened/basalt','tfc:rock/hardened/basalt'),
+        event.recipes.vintageimprovements.polishing('tfc:rock/hardened/basalt','tfc:rock/hardened/basalt')
+      ]
+    ).transitionalItem('tfc:rock/hardened/basalt').loops(6)
+    event.recipes.create.sequenced_assembly(
+      'dndecor:cut_blackstone',
+      'tfc:rock/hardened/dolomite',
+      [
+        event.recipes.create.cutting('tfc:rock/hardened/dolomite','tfc:rock/hardened/dolomite'),
+        event.recipes.vintageimprovements.polishing('tfc:rock/hardened/dolomite','tfc:rock/hardened/dolomite')
+      ]
+    ).transitionalItem('tfc:rock/hardened/dolomite').loops(6)
+    event.recipes.create.sequenced_assembly(
+      'dndecor:cut_dolomite',
+      'tfc:rock/hardened/marble',
+      [
+        event.recipes.create.cutting('tfc:rock/hardened/marble','tfc:rock/hardened/marble'),
+        event.recipes.vintageimprovements.polishing('tfc:rock/hardened/marble','tfc:rock/hardened/marble')
+      ]
+    ).transitionalItem('tfc:rock/hardened/marble').loops(6)
+    event.recipes.create.sequenced_assembly(
+      'dndecor:cut_gabbro',
+      'tfc:rock/hardened/chert',
+      [
+        event.recipes.create.cutting('tfc:rock/hardened/chert','tfc:rock/hardened/chert'),
+        event.recipes.vintageimprovements.polishing('tfc:rock/hardened/chert','tfc:rock/hardened/chert')
+      ]
+    ).transitionalItem('tfc:rock/hardened/chert').loops(6)
+    event.recipes.create.sequenced_assembly(
+      'dndecor:cut_stone',
+      'tfc:rock/hardened/gabbro',
+      [
+        event.recipes.create.cutting('tfc:rock/hardened/gabbro','tfc:rock/hardened/gabbro'),
+        event.recipes.vintageimprovements.polishing('tfc:rock/hardened/gabbro','tfc:rock/hardened/gabbro')
+      ]
+    ).transitionalItem('tfc:rock/hardened/gabbro').loops(6)
+    event.recipes.create.sequenced_assembly(
+      'dndecor:cut_weathered_limestone',
+      'create:cut_limestone',
+      [
+        event.recipes.create.filling('create:cut_limestone', ['create:cut_limestone', Fluid.of('minecraft:water', 100)]),
+        event.recipes.create.cutting('create:cut_limestone','create:cut_limestone'),
+        event.recipes.vintageimprovements.polishing('create:cut_limestone','create:cut_limestone')
+      ]
+    ).transitionalItem('create:cut_limestone').loops(6)
+    event.recipes.create.sequenced_assembly(
+      'dndecor:cut_amethyst',
+      'tfc:gem/amethyst',
+      [
+        event.recipes.createDeploying('tfc:gem/amethyst', ['tfc:gem/amethyst', 'tfc:gem/amethyst']),
+        event.recipes.create.cutting('tfc:gem/amethyst','tfc:gem/amethyst'),
+        event.recipes.vintageimprovements.polishing('tfc:gem/amethyst','tfc:gem/amethyst')
+      ]
+    ).transitionalItem('tfc:gem/amethyst').loops(6)
+
 })
