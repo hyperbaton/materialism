@@ -296,5 +296,52 @@ ServerEvents.recipes(event => {
         'minecraft:iron_bars',
         'tfc:metal/bars/wrought_iron'
     )
+
+    // Make reinforced fire bricks by applying sheets
+    event.remove('tfc:crafting/reinforced_fire_bricks_from_iron')
+    event.remove('tfc:crafting/reinforced_fire_bricks_from_steel')
+    event.custom({
+      type: 'create:item_application',
+      ingredients: [
+        { item: 'tfc:fire_bricks' },
+        { item: 'tfc:metal/sheet/wrought_iron' },
+      ],
+      results: [
+        { id: 'tfc:reinforced_fire_bricks', count: 1 },
+      ],
+    })
+    event.custom({
+      type: 'create:item_application',
+      ingredients: [
+        { item: 'tfc:fire_bricks' },
+        { item: 'tfc:metal/sheet/steel' },
+      ],
+      results: [
+        { id: 'tfc:reinforced_fire_bricks', count: 1 },
+      ],
+    })
+    event.recipes.create.compacting(
+        [Item.of('tfc:ceramic/unfired_fire_ingot_mold', 2)], 
+        '5x tfc:fire_clay'
+    )
+    // This kind of recipe can't be done: it can only take 1 input. Maybe it can be done with a create sequenced assembly: deploy and press.
+    // event.custom({
+    //     type: 'vintageimprovements:curving',
+    //     ingredients: [
+    //         { item: 'tfc:fire_clay' },
+    //         { item: 'tfc:fire_clay' },
+    //         { item: 'tfc:fire_clay' },
+    //         { item: 'tfc:fire_clay' },
+    //         { item: 'tfc:fire_clay' }
+    //     ],
+    //     results: [
+    //         { 
+    //             id: 'tfc:ceramic/unfired_mold_table',
+    //             count: 1
+    //         }
+    //     ],
+    //     mode: 4
+    // })
+
 }
 )
