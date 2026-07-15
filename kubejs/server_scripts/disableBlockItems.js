@@ -104,8 +104,9 @@ ServerEvents.recipes(event => {
     // Disable Weather 2 recipes
     event.remove(/.*weather2.*/)
 
+    // TODO: Reenable these recipes when aleki ships is updated to 1.21
     // Disable boat recipes (there are aleki ships)
-    event.remove(/.*boat.*/)
+    //event.remove(/.*boat.*/)
 
     // Disable Create recipes
     event.remove({ output: 'create:andesite_alloy'});

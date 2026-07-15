@@ -168,8 +168,9 @@ RecipeViewerEvents.removeEntries('item', event => {
     // Hide Weather 2 items
     event.remove(/.*weather2.*/)
 
+    // TODO: Reenable these recipes when aleki ships is updated to 1.21
     // Hide boats (there are aleki ships)
-    event.remove(/.*boat.*/)
+    //event.remove(/.*boat.*/)
 
     // Hide railways tracks that can't be crafted in this pack:
     // vanilla/Nether woods (superseded by the TFC-wood tracks) and Nether/End-themed tracks.
