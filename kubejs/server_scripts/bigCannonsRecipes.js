@@ -99,33 +99,19 @@ ServerEvents.recipes(event => {
         'createbigcannons:nethersteel_ingot',
         'tfc_metallurgy:metal/ingot/tungsten_steel'
       )
-      // TODO: Make proper recipes for casting cannons with tungsten steel
-      // Replace nethersteel with tungsten steel
-      // event.replaceInput(
-      //   { input: 'createbigcannons:molten_nethersteel' },
-      //   'createbigcannons:molten_nethersteel',
-      //   'tfc_metallurgy:metal/tungsten_steel'
-      // )
-      // event.custom({
-      //     type: "createbigcannons:cannon_casting",
-      //     ingredients: [
-      //         {
-      //             fluid: "tfc_metallurgy:metal/tungsten_steel", // Target liquid
-      //             amount: 1000 // Fluid amount in mB
-      //         },
-      //         {
-      //             item: "createbigcannons:very_large_cast_mould" // The mold used
-      //         }
-      //     ],
-      //     results: [
-      //         {
-      //             item: "createbigcannons:unbored_very_large_nethersteel_cannon_layers", // The resulting casted part
-      //             count: 1
-      //         }
-      //     ],
-      //     processingTime: 300
-      // })
-
-
     }
 )
+
+// The 6 nethersteel casting recipes (unbored very_small/small/medium/large/very_large cannon
+// layers + the screw breech) are NOT normal RecipeManager recipes -- they live in Big Cannons'
+// own "block_recipes" registry (data/createbigcannons/createbigcannons/block_recipes/*.json,
+// type "createbigcannons:cannon_casting"), which ServerEvents.recipes/event.custom cannot
+// reach (that's why the event.custom attempt above did nothing). Each of those recipes takes
+// its fluid as a TAG match: "fluid": { "tag": "c:molten_nethersteel" }. So instead of touching
+// the recipes at all, we repoint that tag at tungsten steel.
+ServerEvents.tags('fluid', event => {
+    event.remove('c:molten_nethersteel', 'createbigcannons:molten_nethersteel')
+    event.remove('c:molten_nethersteel', 'createbigcannons:flowing_molten_nethersteel')
+    event.add('c:molten_nethersteel', 'tfc_metallurgy:metal/tungsten_steel')
+    event.add('c:molten_nethersteel', 'tfc_metallurgy:metal/flowing_tungsten_steel')
+})
