@@ -30,6 +30,10 @@ useHumanoidModel = true
 	# Default: 200
 	# Range: 40 ~ 5000
 	supplyCooldown = 200
+	#Maximum number of books a leader's writers can have in the world roster at once.
+	# Default: 20
+	# Range: 1 ~ 500
+	maxRosterSize = 20
 
 [jobs]
 	#The distance from the home entrance that is considered near enough for working at home.
