@@ -1,7 +1,6 @@
-#Whether to limit world generation to fit the current map projection. Similar to "Finite Continents".
-limitWorldGenerationOutsideMapProjection = true
-#What map/world projection to use on new worlds.
-#Allowed Values: CRASTER_PARABOLIC
-mapProjection = "CRASTER_PARABOLIC"
 #Whether to prevent island and hotspot volcanoes outside the "world".
 keepIslandsAndHotspotVolcanoesInside = true
+#Whether to limit world generation to fit the Craster Parabolic map projection.
+craterParabolicMapProjection = true
+#Whether to teleport players crossing the 180° to the other side of the world.
+crossing180MeridianTeleport = true
