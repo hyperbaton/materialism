@@ -85,4 +85,20 @@ ServerEvents.recipes(event => {
     tfcMetals.forEach(metal => addTfcItemsRecipes(metal))
     tfcMetallurgyMetals.forEach(metal => addTfcItemsRecipes(metal))
     firmalifeMetals.forEach(metal => addTfcItemsRecipes(metal))
+
+    // tfc_items ships its own tag-based (c:nuggets/<metal>) tfc:heating recipes for nuggets,
+    // which duplicate the item-specific 10mB ones we added for our standardized nuggets.
+    // Remove the overlapping ones so only our recipe applies (also fixes an inconsistency:
+    // tfc_items' own zinc recipe only melts to 5mB, not the 10mB every other metal uses).
+    event.remove({ id: 'tfc_items:heating/copper/nugget' })
+    event.remove({ id: 'tfc_items:heating/zinc/nugget' })
+    event.remove({ id: 'tfc_items:heating/cast_iron/nugget' })
+    event.remove({ id: 'tfc_items:heating/nickel/nugget' })
+
+    event.remove({ id: 'tfc_items:heating/electrum/nugget' })
+    event.remove({ id: 'tfc_items:heating/lead/nugget' })
+
+    // Remove washing (splashing) recipes of raw ore
+    event.remove({ id: 'create:splashing/crushed_raw_copper' })
+    event.remove({ id: 'create:splashing/crushed_raw_zinc' })
 })

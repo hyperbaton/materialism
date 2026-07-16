@@ -73,6 +73,11 @@ RecipeViewerEvents.removeEntries('item', event => {
     r('tfmg:constantan_block')
     r('tfmg:bauxite_powder')
     r('createbigcannons:steel_scrap')
+    r('createbigcannons:cast_iron_ingot')
+    r('createbigcannons:steel_ingot')
+    r('createbigcannons:nethersteel_ingot')
+    r('createbigcannons:cast_iron_nugget');
+    r('vintageimprovements:vanadium_ingot');
     r('tfmg:screw')
     r('tfmg:aluminum_bars')
     r('tfmg:steel_bars')

@@ -485,22 +485,33 @@ ServerEvents.recipes(event => {
       'tfc:metal/rod/copper'         // Arg 3: the item to replace it with
     )
 
-    // Recipes with nuggets
+    // Nuggets: 1 ingot (+ chisel) -> 10 nuggets
     event.remove({id: 'create:crafting/materials/copper_nugget'})
-    event.shapeless('9x create:copper_nugget',[
+    event.remove({id: 'create:crafting/materials/copper_ingot'}) // 9 nuggets -> vanilla copper ingot
+    event.shapeless('10x create:copper_nugget',[
       'tfc:metal/ingot/copper',
       '#tfc:chisels'
     ]).damageIngredient(Ingredient.of('#tfc:chisels'))
+    event.custom({type: 'tfc:heating', ingredient: {item: 'create:copper_nugget'}, result_fluid: {amount: 10, id: 'tfc:metal/copper'}, temperature: 1080})
+    event.custom({type: 'create:deploying', ingredients: [{item: 'tfc:metal/ingot/copper'}, {tag: 'tfc:chisels'}], results: [{id: 'create:copper_nugget', count: 10}]})
+
     event.remove({output: 'create:brass_nugget'})
-    event.shapeless('9x create:brass_nugget',[
+    event.remove({id: 'create:crafting/materials/brass_ingot_from_compacting'})
+    event.shapeless('10x create:brass_nugget',[
       'tfc:metal/ingot/brass',
       '#tfc:chisels'
     ]).damageIngredient(Ingredient.of('#tfc:chisels'))
+    event.custom({type: 'tfc:heating', ingredient: {item: 'create:brass_nugget'}, result_fluid: {amount: 10, id: 'tfc:metal/brass'}, temperature: 930})
+    event.custom({type: 'create:deploying', ingredients: [{item: 'tfc:metal/ingot/brass'}, {tag: 'tfc:chisels'}], results: [{id: 'create:brass_nugget', count: 10}]})
+
     event.remove({id: 'create:crafting/materials/zinc_nugget_from_decompacting'})
-    event.shapeless('9x create:zinc_nugget',[
+    event.remove({id: 'create:crafting/materials/zinc_ingot_from_compacting'})
+    event.shapeless('10x create:zinc_nugget',[
       'tfc:metal/ingot/zinc',
       '#tfc:chisels'
     ]).damageIngredient(Ingredient.of('#tfc:chisels'))
+    event.custom({type: 'tfc:heating', ingredient: {item: 'create:zinc_nugget'}, result_fluid: {amount: 10, id: 'tfc:metal/zinc'}, temperature: 420})
+    event.custom({type: 'create:deploying', ingredients: [{item: 'tfc:metal/ingot/zinc'}, {tag: 'tfc:chisels'}], results: [{id: 'create:zinc_nugget', count: 10}]})
     event.replaceInput(
       { id: 'create:crafting/kinetics/metal_bracket' }, // Arg 1: the filter
       'minecraft:iron_nugget',            // Arg 2: the item to replace

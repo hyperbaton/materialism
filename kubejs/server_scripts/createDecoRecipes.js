@@ -43,12 +43,14 @@ ServerEvents.recipes(event => {
     ]
   ).transitionalItem('tfc:metal/ingot/unknown')
   .loops(2)
-  // Take industrial iron nuggets with chisel
+  // Industrial iron nugget
   event.remove({id: 'createdeco:industrial_iron_nugget_from_industrial_iron_ingot'})
-  event.shapeless('9x createdeco:industrial_iron_nugget',[
+  event.remove({id: 'createdeco:industrial_iron_ingot'})
+  event.shapeless('10x createdeco:industrial_iron_nugget',[
     'createdeco:industrial_iron_ingot',
     '#tfc:chisels'
   ]).damageIngredient(Ingredient.of('#tfc:chisels'))
+  event.custom({type: 'create:deploying', ingredients: [{item: 'createdeco:industrial_iron_ingot'}, {tag: 'tfc:chisels'}], results: [{id: 'createdeco:industrial_iron_nugget', count: 10}]})
   
     // Windows
     const woodPairs = [

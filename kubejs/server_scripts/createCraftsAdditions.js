@@ -76,12 +76,14 @@ ServerEvents.recipes(event => {
     // Remove C&A electrum
     event.remove({id: 'createaddition:mixing/electrum'})
     event.remove({id: 'createaddition:crafting/electrum_ingot'})
-    // Change electrum nugget recipe
     event.remove({output: 'createaddition:electrum_nugget'})
-    event.shapeless('9x createaddition:electrum_nugget',[
+    event.remove({id: 'createaddition:crafting/electrum_ingot_from_nugget'})
+    event.shapeless('10x createaddition:electrum_nugget',[
       'tfc_metallurgy:metal/ingot/electrum',
       '#tfc:chisels'
     ]).damageIngredient(Ingredient.of('#tfc:chisels'))
+    event.custom({type: 'tfc:heating', ingredient: {item: 'createaddition:electrum_nugget'}, result_fluid: {amount: 10, id: 'tfc_metallurgy:metal/electrum'}, temperature: 1200})
+    event.custom({type: 'create:deploying', ingredients: [{item: 'tfc_metallurgy:metal/ingot/electrum'}, {tag: 'tfc:chisels'}], results: [{id: 'createaddition:electrum_nugget', count: 10}]})
 
     event.remove({id: /createaddition:pressing\/\w+_ingot/})
     event.remove({id: 'createaddition:rolling/gold_plate'})

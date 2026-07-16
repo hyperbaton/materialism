@@ -99,6 +99,28 @@ ServerEvents.recipes(event => {
         'createbigcannons:nethersteel_ingot',
         'tfc_metallurgy:metal/ingot/tungsten_steel'
       )
+
+      // Cast iron nugget: duplicates tfmg:cast_iron_nugget (which is kept as canonical).
+      // Its own ingot/fluid are already dead above, so just drop its remaining recipes
+      event.remove({ id: 'createbigcannons:cast_iron_ingot_from_nuggets' })
+      event.remove({ id: 'createbigcannons:cast_iron_nugget' })
+      event.remove({ id: 'createbigcannons:compacting/forge_cast_iron_nugget' })
+      event.remove({ id: 'createbigcannons:melting/melt_cast_iron_nugget' })
+
+      // Nethersteel nugget becomes the canonical tungsten steel nugget
+      event.remove({ id: 'createbigcannons:nethersteel_ingot_from_nuggets' })
+      event.remove({ id: 'createbigcannons:nethersteel_nugget' })
+      event.remove({ id: 'createbigcannons:compacting/forge_nethersteel_nugget' })
+      event.remove({ id: 'createbigcannons:melting/melt_nethersteel_nugget' })
+      event.shapeless('10x createbigcannons:nethersteel_nugget', ['tfc_metallurgy:metal/ingot/tungsten_steel', '#tfc:chisels']).damageIngredient(Ingredient.of('#tfc:chisels'))
+      event.custom({ type: 'tfc:heating', ingredient: { item: 'createbigcannons:nethersteel_nugget' }, result_fluid: { amount: 10, id: 'tfc_metallurgy:metal/tungsten_steel' }, temperature: 1535 })
+      event.custom({ type: 'create:deploying', ingredients: [{ item: 'tfc_metallurgy:metal/ingot/tungsten_steel' }, { tag: 'tfc:chisels' }], results: [{ id: 'createbigcannons:nethersteel_nugget', count: 10 }] })
+
+      // Bronze scrap becomes the canonical bronze nugget
+      event.remove({ id: 'createbigcannons:bronze_ingot_from_nuggets' })
+      event.remove({ id: 'createbigcannons:bronze_scrap' })
+      event.shapeless('10x createbigcannons:bronze_scrap', ['tfc:metal/ingot/bronze', '#tfc:chisels']).damageIngredient(Ingredient.of('#tfc:chisels'))
+      event.custom({ type: 'create:deploying', ingredients: [{ item: 'tfc:metal/ingot/bronze' }, { tag: 'tfc:chisels' }], results: [{ id: 'createbigcannons:bronze_scrap', count: 10 }] })
     }
 )
 

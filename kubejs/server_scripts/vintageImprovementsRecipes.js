@@ -148,6 +148,14 @@ ServerEvents.recipes(event => {
       heat_requirement: 'heated'
     })
 
+    // Vanadium nugget: standardized onto tfc_metallurgy's ingot (the only source of
+    // vanadium ingots, since the metal has no ore)
+    event.remove({ id: 'vintageimprovements:craft/vanadium_ingot_to_nuggets' })
+    event.remove({ id: 'vintageimprovements:craft/vanadium_nuggets_to_ingot' })
+    event.shapeless('10x vintageimprovements:vanadium_nugget', ['tfc_metallurgy:metal/ingot/vanadium', '#tfc:chisels']).damageIngredient(Ingredient.of('#tfc:chisels'))
+    event.custom({ type: 'tfc:heating', ingredient: { item: 'vintageimprovements:vanadium_nugget' }, result_fluid: { amount: 10, id: 'tfc_metallurgy:metal/vanadium' }, temperature: 625 })
+    event.custom({ type: 'create:deploying', ingredients: [{ item: 'tfc_metallurgy:metal/ingot/vanadium' }, { tag: 'tfc:chisels' }], results: [{ id: 'vintageimprovements:vanadium_nugget', count: 10 }] })
+
     event.replaceInput(
       { id: 'vintageimprovements:turning/convex_curving_head' }, // Arg 1: the filter
       'minecraft:iron_block',            // Arg 2: the item to replace
