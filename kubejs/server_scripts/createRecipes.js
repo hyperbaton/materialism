@@ -923,16 +923,6 @@ ServerEvents.recipes(event => {
     event.recipes.create.cutting('4x create:shaft', 'tfc:metal/rod/steel')
     event.recipes.create.cutting('4x tfc:papyrus_strip', 'tfc:papyrus')
 
-    // Mixing recipes
-    event.recipes.create.mixing(
-      'tfc:soaked_papyrus_strip',
-      [
-        'tfc:papyrus_strip',
-        Fluid.of('minecraft:water', 200)
-      ],
-      4000
-    )
-
     // Create sequenced assembly recipes
 
     // Remove the existing recipe for train tracks

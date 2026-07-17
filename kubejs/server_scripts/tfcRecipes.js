@@ -1,5 +1,20 @@
 ServerEvents.recipes(event => {
-    
+
+    // TFC composter: re-registered explicitly. It wasn't showing in-game even given it wasn't removed
+    event.remove({ id: 'tfc:crafting/composter' })
+    event.shaped('tfc:composter', [
+        'L L',
+        'LDL',
+        'LLL'
+    ], {
+        L: '#tfc:lumber',
+        D: '#minecraft:dirt'
+    })
+
+    // minecraft:string is superseded by #c:strings (wool yarn, plant/bamboo string, etc.)
+    event.remove({ output: 'minecraft:string' })
+    event.replaceInput({}, 'minecraft:string', '#c:strings')
+
    const cereals = [
         'wheat',
         'oat',

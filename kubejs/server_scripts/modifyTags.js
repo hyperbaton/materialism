@@ -18,6 +18,27 @@ ServerEvents.tags('item', event => {
     event.add('create:pulpifiable', 'tfc:jute')
     event.add('create:pulpifiable', 'tfc:jute_fiber')
     event.add('create:pulpifiable', 'tfc:thatch') // bulk option once you have a farm
+
+    // c:stripped_logs was completely empty (TFC doesn't tag its stripped logs into it)
+    const strippedLogWoods = [
+        'acacia', 'ash', 'aspen', 'birch', 'blackwood', 'chestnut', 'douglas_fir', 'hickory',
+        'kapok', 'mangrove', 'maple', 'oak', 'palm', 'pine', 'rosewood', 'sequoia', 'spruce',
+        'sycamore', 'white_cedar', 'willow'
+    ]
+    strippedLogWoods.forEach(wood => event.add('c:stripped_logs', `tfc:wood/stripped_log/${wood}`))
+
+    const afcStrippedLogWoods = [
+        'araucaria', 'baobab', 'beech', 'cypress', 'eucalyptus', 'fig', 'ginkgo', 'hevea',
+        'ipe', 'ironwood', 'mahoe', 'mahogany', 'teak', 'tualang'
+    ]
+    afcStrippedLogWoods.forEach(wood => event.add('c:stripped_logs', `afc:wood/stripped_log/${wood}`))
+
+    // Added additional string variants to c:strings tag, used e.g. for fishing rods.
+    event.add('c:strings', 'minecraft:string')
+    event.add('c:strings', 'tfc_items:leather_strap')
+    event.add('c:strings', 'tfc_items:plant_string')
+    event.add('c:strings', 'tfc_items:bamboo_string')
+
     // Access the tag content and log it
     const tagContent = event.get('create:sandpaper').getObjectIds();
     console.info('Contents of the create:sandpaper tag:' + tagContent);

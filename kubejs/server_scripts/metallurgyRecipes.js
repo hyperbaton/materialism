@@ -1,4 +1,19 @@
 ServerEvents.recipes(event => {
+    // Invar alloy used wrought iron, which can't be obtained. Changed it to cast iron instead.
+    event.remove({ id: 'tfc_metallurgy:alloy/invar' })
+    event.custom({
+        type: 'tfc:alloy',
+        result: 'tfc_metallurgy:metal/invar',
+        contents: [
+            { min: 0.6, max: 0.7, fluid: 'tfc:metal/cast_iron' },
+            { min: 0.3, max: 0.4, fluid: 'tfc:metal/nickel' }
+        ]
+    })
+
+    // TFC Metallum's own fishing rod recipes still key off #c:string (singular), unlike
+    // base TFC's #c:strings (plural) -- TODO: transitional fix until the mod itself is updated.
+    event.replaceInput({ id: /^tfc_metallurgy:crafting\/metal\/.*_fishing_rod$/ }, '#c:string', '#c:strings')
+
     // Remove graphite melting recipes
     event.remove({id: /tfc_metallurgy:heating.*graphite.*/})
     event.remove({id: 'tfc_metallurgy:casting/graphite_ingot'})

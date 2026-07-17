@@ -384,6 +384,8 @@ RecipeViewerEvents.removeEntries('item', event => {
     r('minecraft:soul_torch');
     r('minecraft:torchflower_seeds');
     r('minecraft:torchflower');
+    // Superseded by #c:strings (wool yarn, plant/bamboo string, etc.)
+    r('minecraft:string');
     event.remove(/minecraft:.*azalea.*/);
     r('minecraft:iron_bars');
     r('minecraft:iron_block');
