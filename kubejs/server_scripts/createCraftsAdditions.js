@@ -143,6 +143,24 @@ ServerEvents.recipes(event => {
         { id: 'kubejs:wire/tungsten_steel_wire' },
       ],
     })
+    event.custom({
+      type: 'createaddition:rolling',
+      ingredients: [
+        { item: 'tfc_metallurgy:metal/rod/titanium' }
+      ],
+      results: [
+        { id: 'kubejs:wire/titanium_wire' },
+      ],
+    })
+    event.custom({
+      type: 'createaddition:rolling',
+      ingredients: [
+        { item: 'firmalife:metal/rod/stainless_steel' }
+      ],
+      results: [
+        { id: 'kubejs:wire/stainless_steel_wire' },
+      ],
+    })
 
     // Generate rolling wires recipes for all metals
     tfcMetallurgyMetals.forEach(metal => {

@@ -581,7 +581,7 @@ ServerEvents.recipes(event => {
     ).transitionalItem('create_new_age:reactor_casing')
     .loops(3);
     // Reactor rods
-    event.remove({id: 'create_new_age:reactor/reactor_rod'})
+    event.remove({id: 'create_new_age:mechanical_crafting/reactor_rod'})
     event.recipes.create.mechanical_crafting('create_new_age:reactor_rod', [
       'BBBBB',
       'CDDDC',

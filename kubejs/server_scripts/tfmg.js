@@ -59,6 +59,7 @@ ServerEvents.recipes(event => {
   // Remove wires, using vintageimprovement or carfts and additions ones
   event.remove('tfmg:stonecutting/aluminum_wire')
   event.remove('tfmg:stonecutting/copper_wire')
+  event.remove('tfmg:stonecutting/constantan_wire')
 
   event.replaceInput({}, 'tfmg:industrial_aluminum_casing', 'tfmg:steel_casing')
 
@@ -496,7 +497,7 @@ ServerEvents.recipes(event => {
     })
   ]).transitionalItem('tfmg:heavy_machinery_casing').loops(2)*/
   // Lightbulb
-  event.remove({id: 'tfmg:crafting/light_bulb'})
+  event.remove({id: 'tfmg:crafting/materials/light_bulb'})
   event.recipes.create.sequenced_assembly([
     Item.of('tfmg:light_bulb', 4)
   ], 'tfc_metallurgy:metal/sheet/nickel_silver', [ // input

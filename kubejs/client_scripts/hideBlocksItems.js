@@ -56,6 +56,7 @@ RecipeViewerEvents.removeEntries('item', event => {
     event.remove(/createvintageneoforged:sulfur.*/);
     r('tfmg:copper_wire');
     r('tfmg:aluminum_wire');
+    r('tfmg:constantan_wire');
     event.remove(/createaddition:.*rod/);
     r('createaddition:diamond_grit_sandpaper')
     r('createaddition:diamond_grit')
@@ -386,6 +387,19 @@ RecipeViewerEvents.removeEntries('item', event => {
     r('minecraft:torchflower');
     // Superseded by #c:strings (wool yarn, plant/bamboo string, etc.)
     r('minecraft:string');
+    // Duplicates tfc_metallurgy's own double sheet item for these 5 metals
+    r('tfc_items:aluminum_double_sheet');
+    r('tfc_items:constantan_double_sheet');
+    r('tfc_items:electrum_double_sheet');
+    r('tfc_items:lead_double_sheet');
+    r('tfc_items:uranium_double_sheet');
+    // tfc_items wires superseded by vintageimprovements/createaddition wires of the same metal
+    const tfcItemsWiresHidden = [
+        'aluminum', 'brass', 'bronze', 'cast_iron', 'constantan', 'copper', 'electrum',
+        'gold', 'lead', 'nickel', 'rose_gold', 'silver', 'steel', 'tin', 'uranium',
+        'wrought_iron', 'zinc'
+    ]
+    tfcItemsWiresHidden.forEach(metal => r(`tfc_items:${metal}_wire`))
     event.remove(/minecraft:.*azalea.*/);
     r('minecraft:iron_bars');
     r('minecraft:iron_block');
@@ -531,6 +545,7 @@ RecipeViewerEvents.removeEntries('item', event => {
     event.remove(/.*roots.*/);
     event.remove(/.*mossy.*/);
     event.remove(/.*krummholz.*/);
+    event.remove(/.*duff.*/);
 
     function removeToolsAndArmor(metal) {
         r('tfc_metallurgy:metal/anvil/' + metal)
