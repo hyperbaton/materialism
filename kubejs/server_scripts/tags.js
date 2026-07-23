@@ -202,6 +202,11 @@ ServerEvents.tags('item', event => {
     event.add('c:plates/gold', 'tfc:metal/sheet/gold')
     event.add('materialism:rubber', 'afc:rubber_bar')
     event.add('materialism:rubber', 'tfmg:rubber_sheet')
+    // DynamicLights: light up TFC's torch and jack o'lantern when held/worn or dropped
+    event.add('dynamiclights:self', 'tfc:torch')
+    event.add('dynamiclights:dropped', 'tfc:torch')
+    event.add('dynamiclights:self', 'tfc:jack_o_lantern')
+    event.add('dynamiclights:dropped', 'tfc:jack_o_lantern')
 })
 
 ServerEvents.tags('entity_type', event => {

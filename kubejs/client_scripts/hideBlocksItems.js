@@ -524,6 +524,10 @@ RecipeViewerEvents.removeEntries('item', event => {
     event.remove('minecraft:lily_pad');
     event.remove('minecraft:sea_pickle');
     event.remove(/minecraft:.*kelp.*/);
+    event.remove('minecraft:vault');
+    event.remove('minecraft:chiseled_bookshelf');
+    event.remove(/minecraft:.*head.*/);
+    event.remove('minecraft:brewing_stand');
 
     event.remove(/afc:.*leaves.*/);
     event.remove(/tfc:.*leaves.*/);

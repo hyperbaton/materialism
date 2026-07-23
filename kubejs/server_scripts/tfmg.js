@@ -589,7 +589,7 @@ ServerEvents.recipes(event => {
   ]).transitionalItem('kubejs:lithium_battery_core').loops(1)
 
 
-  event.remove({id: 'tfmg:crafting/turbine_blade'})
+  event.remove({id: 'tfmg:turbine_blade'})
   event.recipes.create.sequenced_assembly([
     Item.of('tfmg:turbine_blade', 1)
   ], 'create:propeller', [ // input
