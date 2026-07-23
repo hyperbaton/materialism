@@ -204,9 +204,9 @@ ServerEvents.recipes(event => {
     event.shapeless('8x create:shaft',[
       'tfc:metal/rod/steel',
       'tfc:metal/rod/steel',
-      '#tfc:chisels'
-  ]).damageIngredient(Ingredient.of('#tfc:chisels'))
-      
+      '#c:tools/chisel'
+  ]).damageIngredient(Ingredient.of('#c:tools/chisel'))
+
     event.replaceInput(
       { id: 'create:crafting/materials/electron_tube' }, // Arg 1: the filter
       'create:polished_rose_quartz',            // Arg 2: the item to replace
