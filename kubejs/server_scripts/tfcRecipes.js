@@ -365,5 +365,32 @@ ServerEvents.recipes(event => {
     //     ],
     //     mode: 4
     // })
+
+    // Automated welding for the high-carbon steels
+    function heatedIngredient(item, minTemp, maxTemp) {
+        if (maxTemp === undefined) maxTemp = 3000
+        return { type: 'woodencog:heated', ingredient: { item: item }, min_temp: minTemp, max_temp: maxTemp }
+    }
+    function heatedResult(id) {
+        return { type: 'heated', copy_heat: true, internal: { id: id } }
+    }
+    const steelWelds = [
+        { first: 'tfc:metal/ingot/weak_steel', second: 'tfc:metal/ingot/pig_iron', result: 'tfc:metal/ingot/high_carbon_black_steel', meltTemp: 1540 },
+        { first: 'tfc:metal/ingot/weak_blue_steel', second: 'tfc:metal/ingot/black_steel', result: 'tfc:metal/ingot/high_carbon_blue_steel', meltTemp: 1540 },
+        { first: 'tfc:metal/ingot/weak_red_steel', second: 'tfc:metal/ingot/black_steel', result: 'tfc:metal/ingot/high_carbon_red_steel', meltTemp: 1540 }
+    ]
+    steelWelds.forEach(weld => {
+        let weldingTemperature = Math.round(weld.meltTemp * 0.8)
+        event.custom({
+            type: 'woodencog:heated_compacting',
+            heat_requirement: 0,
+            ingredients: [
+                heatedIngredient(weld.first, weldingTemperature),
+                heatedIngredient(weld.second, weldingTemperature),
+                heatedIngredient('tfc:powder/flux', 0)
+            ],
+            results: [heatedResult(weld.result)]
+        })
+    })
 }
 )
