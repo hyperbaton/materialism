@@ -392,5 +392,23 @@ ServerEvents.recipes(event => {
             results: [heatedResult(weld.result)]
         })
     })
+
+    // Automate the anvil "upgrade" step of the steel chain
+    const steelUpgrades = [
+        ['tfc:metal/ingot/pig_iron', 'tfc:metal/ingot/high_carbon_steel'],
+        ['tfc:metal/ingot/high_carbon_steel', 'tfc:metal/ingot/steel'],
+        ['tfc:metal/ingot/high_carbon_black_steel', 'tfc:metal/ingot/black_steel'],
+        ['tfc:metal/ingot/high_carbon_blue_steel', 'tfc:metal/ingot/blue_steel'],
+        ['tfc:metal/ingot/high_carbon_red_steel', 'tfc:metal/ingot/red_steel']
+    ]
+    let steelForgingTemperature = Math.round(1540 * 0.6)
+    steelUpgrades.forEach(([input, output]) => {
+        event.custom({
+            type: 'vintageimprovements:hammering',
+            hammer_blows: 3,
+            ingredients: [TFC.ingredient.and(Ingredient.of(input), TFC.ingredient.heat(steelForgingTemperature))],
+            results: [{ id: output }]
+        })
+    })
 }
 )
