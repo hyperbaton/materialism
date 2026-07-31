@@ -29,6 +29,29 @@
         event.recipes.create.crushing(`tfc:rock/gravel/${rock}`, `tfc:rock/cobble/${rock}`)
     )
 
+    // Crush fluxstone into flux
+    event.recipes.create.crushing('2x tfc:powder/flux', { tag: 'tfc:fluxstone' })
+
+    // Automate the loose rock -> bricks process
+    rocks.forEach(rock => {
+        event.recipes.create.cutting(`tfc:brick/${rock}`, `tfc:rock/loose/${rock}`)
+        event.custom({
+            type: 'create:mixing',
+            ingredients: [
+                { item: `tfc:brick/${rock}` },
+                { item: `tfc:brick/${rock}` },
+                { item: `tfc:brick/${rock}` },
+                { item: `tfc:brick/${rock}` },
+                { item: `tfc:brick/${rock}` },
+                { item: 'tfc:mortar' },
+                { item: 'tfc:mortar' },
+                { item: 'tfc:mortar' },
+                { item: 'tfc:mortar' }
+            ],
+            results: [{ id: `tfc:rock/bricks/${rock}`, count: 4 }]
+        })
+    })
+
     event.remove('createsifter:brass_mesh')
     event.recipes.create.sequenced_assembly([
        CreateItem.of('createsifter:brass_mesh', 1)
