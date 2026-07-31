@@ -81,6 +81,14 @@ ServerEvents.recipes(event => {
        'tfmg:hardened_planks'
     )
 
+    // Milling grain into flour with Create's millstone
+    cereals.forEach(cereal => {
+        event.recipes.create.milling(
+            `tfc:food/${cereal}_flour`,
+            TFC.ingredient.and(Ingredient.of(`tfc:food/${cereal}_grain`), TFC.ingredient.notRotten())
+        )
+    })
+
     // Dough recipes
     addDoughRecipes(event, cereals);
     addYeastDoughRecipes(event, cereals);
@@ -357,6 +365,5 @@ ServerEvents.recipes(event => {
     //     ],
     //     mode: 4
     // })
-
 }
 )
