@@ -393,6 +393,7 @@ RecipeViewerEvents.removeEntries('item', event => {
     r('tfc_items:electrum_double_sheet');
     r('tfc_items:lead_double_sheet');
     r('tfc_items:uranium_double_sheet');
+    r('tfc_items:constantan_rod');
     // tfc_items wires superseded by vintageimprovements/createaddition wires of the same metal
     const tfcItemsWiresHidden = [
         'aluminum', 'brass', 'bronze', 'cast_iron', 'constantan', 'copper', 'electrum',

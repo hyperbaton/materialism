@@ -14,6 +14,19 @@ ServerEvents.recipes(event => {
     // base TFC's #c:strings (plural) -- TODO: transitional fix until the mod itself is updated.
     event.replaceInput({ id: /^tfc_metallurgy:crafting\/metal\/.*_fishing_rod$/ }, '#c:string', '#c:strings')
 
+    // TFC Metallum's own constantan rod anvil recipe is missing "count": 2 on its result
+    event.remove({ id: 'tfc_metallurgy:anvil/constantan_rod' })
+    event.custom({
+        type: 'tfc:anvil',
+        ingredient: { tag: 'c:ingots/constantan' },
+        result: { count: 2, id: 'tfc_metallurgy:metal/rod/constantan' },
+        tier: 2,
+        rules: ['bend_last', 'draw_second_last', 'draw_third_last']
+    })
+    // Remove tfc items constantan rod recipes
+    event.remove({ id: 'tfc_items:anvil/constantan_rod' })
+    event.remove({ id: 'tfc_items:heating/constantan/rod' })
+
     // Remove graphite melting recipes
     event.remove({id: /tfc_metallurgy:heating.*graphite.*/})
     event.remove({id: 'tfc_metallurgy:casting/graphite_ingot'})
