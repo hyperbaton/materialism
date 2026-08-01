@@ -993,6 +993,18 @@ ServerEvents.recipes(event => {
 
     // Add a custom recipe for sandpaper
     event.remove({id: 'tfc:crafting/sandpaper'})
+
+    // Sandpaper seq assembly recipe requires deployers, which require sandpaper.
+    // So we need a regular crafting recipe, but more expensive
+    event.shapeless('tfc:sandpaper', [
+        'minecraft:paper',
+        'tfc:powder/flux',
+        'tfc:glue',
+        'tfc:glue',
+        '#c:sands',
+        '#tfc:gem_powders',
+        '#tfc:gem_powders'
+    ])
 event.recipes.create.sequenced_assembly([
     CreateItem.of('tfc:sandpaper', 0.95),
     CreateItem.of('minecraft:paper', 0.05)
