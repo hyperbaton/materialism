@@ -128,7 +128,7 @@ ServerEvents.recipes(event => {
     // Mechanical carfter to use TFC workbench
     event.remove({id: 'create:crafting/kinetics/mechanical_crafter'})
     event.shaped(
-      Item.of('create:mechanical_crafter', 1), // arg 1: output
+      Item.of('create:mechanical_crafter', 3), // arg 1: output
       [
           ' A ',
           ' B ', // arg 2: the shape (array of strings)
