@@ -195,6 +195,9 @@ ServerEvents.tags('item', event => {
     event.add('materialism:powders/iron', 'tfc:powder/hematite')
     event.add('materialism:powders/iron', 'tfc:powder/magnetite')
     event.add('materialism:powders/iron', 'tfc:powder/limonite')
+    // TFMG's blast furnace routes items into its ore vs. flux hopper by checking membership in
+    // tfmg:flux
+    event.add('tfmg:flux', 'tfc:powder/flux')
     // Add TFC sheets to c:plates tags so TFMG recipes using tags pick them up
     event.add('c:plates/nickel', 'tfc:metal/sheet/nickel')
     event.add('c:plates/lead', 'tfc_metallurgy:metal/sheet/lead')
