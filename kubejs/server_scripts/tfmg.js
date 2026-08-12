@@ -768,14 +768,13 @@ ServerEvents.recipes(event => {
     event.recipes.createPressing('tfmg:plastic_sheet', 'tfmg:plastic_sheet')
   ]).transitionalItem('tfmg:plastic_sheet').loops(1)
 
-  // Coke oven block: native recipe only gives 2 per industrial iron block, too expensive
   event.remove({id: 'tfmg:crafting/materials/coke_oven'})
   event.recipes.shaped('9x tfmg:coke_oven', [
-    ' C ',
-    'CIC',
-    ' C '
+    'RRR',
+    'RIR',
+    'RRR'
   ], {
-    C: '#c:ingots/cast_iron',
+    R: 'tfc_items:stainless_steel_rivet',
     I: 'create:industrial_iron_block'
   })
 
