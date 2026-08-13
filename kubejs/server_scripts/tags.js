@@ -196,7 +196,7 @@ ServerEvents.tags('item', event => {
     event.add('materialism:powders/iron', 'tfc:powder/magnetite')
     event.add('materialism:powders/iron', 'tfc:powder/limonite')
     // TFMG's blast furnace routes items into its ore vs. flux hopper by checking membership in
-    // tfmg:flux
+    // tfmg:flux    
     event.add('tfmg:flux', 'tfc:powder/flux')
     // Add TFC sheets to c:plates tags so TFMG recipes using tags pick them up
     event.add('c:plates/nickel', 'tfc:metal/sheet/nickel')
@@ -210,6 +210,19 @@ ServerEvents.tags('item', event => {
     event.add('dynamiclights:dropped', 'tfc:torch')
     event.add('dynamiclights:self', 'tfc:jack_o_lantern')
     event.add('dynamiclights:dropped', 'tfc:jack_o_lantern')
+    // VI's helve hammer tag to include TFC anvils
+    const tfcMetalAnvils = [
+        'bismuth_bronze', 'black_bronze', 'black_steel', 'blue_steel', 'bronze', 'copper',
+        'red_steel', 'steel', 'wrought_iron'
+    ]
+    const tfcMetallurgyMetalAnvils = [
+        'aluminum', 'beryllium_copper', 'boron', 'cobalt', 'compressed_iron', 'enderium',
+        'ferroboron', 'florentine_bronze', 'invar', 'lumium', 'mithril', 'nickel_silver',
+        'osmiridium', 'osmium', 'pewter', 'refined_glowstone', 'refined_obsidian', 'signalum',
+        'thorium', 'titanium', 'tungsten', 'tungsten_steel', 'uranium'
+    ]
+    tfcMetalAnvils.forEach(metal => event.add('vintageimprovements:anvils', `tfc:metal/anvil/${metal}`))
+    tfcMetallurgyMetalAnvils.forEach(metal => event.add('vintageimprovements:anvils', `tfc_metallurgy:metal/anvil/${metal}`))
 })
 
 ServerEvents.tags('entity_type', event => {
