@@ -227,4 +227,75 @@ ServerEvents.recipes(event => {
         addDoubleSheet('firmalife', metalName, weldingTemperature)
         addRodRolling('firmalife', metalName, meltTemperature)
     })
+
+    // Plated block recipes:
+    function addMetalPlatedBlockRecipes(base, metal, sheetIngredient) {
+        const transitional = 'kubejs:wood_plating_blank'
+        event.recipes.create.sequenced_assembly(
+            [`8x ${base}:metal/block/${metal}`],
+            Ingredient.of('#minecraft:planks'),
+            [
+                event.recipes.createDeploying(transitional, [transitional, sheetIngredient]),
+                event.recipes.createPressing(transitional, transitional)
+            ]
+        ).transitionalItem(transitional).loops(4)
+    }
+    const tfcBlockMetallurgyMetals = [
+        'aluminum',
+        'alnico',
+        'antimony',
+        'boron',
+        'beryllium',
+        'beryllium_copper',
+        'cobalt',
+        'constantan',
+        'electrum',
+        'ferroboron',
+        'florentine_bronze',
+        'invar',
+        'iridium',
+        'lead',
+        'lithium',
+        'magnesium',
+        'manganese',
+        'neodymium',
+        'nickel_silver',
+        'osmium',
+        'osmiridium',
+        'pewter',
+        'platinum',
+        'solder',
+        'thorium',
+        'titanium',
+        'tungsten',
+        'tungsten_steel',
+        'uranium',
+        'vanadium',
+        'zircaloy',
+        'zirconium'
+    ];
+    const tfcBlockMetals = [
+        'bismuth',
+        'bismuth_bronze',
+        'black_bronze',
+        'brass',
+        'bronze',
+        'cast_iron',
+        'copper',
+        'gold',
+        'nickel',
+        'rose_gold',
+        'silver',
+        'sterling_silver',
+        'tin',
+        'steel',
+        'black_steel',
+        'blue_steel',
+        'red_steel',
+        'zinc'
+    ];
+    
+    tfcBlockMetals.forEach(metal => addMetalPlatedBlockRecipes('tfc', metal, { tag: `c:sheets/${metal}` }))
+    tfcBlockMetallurgyMetals.forEach(metal => addMetalPlatedBlockRecipes('tfc_metallurgy', metal, { tag: `c:sheets/${metal}` }))
+    firmalifeMetals.forEach(metal => addMetalPlatedBlockRecipes('firmalife', metal, { item: `firmalife:metal/sheet/${metal}` }))
 })

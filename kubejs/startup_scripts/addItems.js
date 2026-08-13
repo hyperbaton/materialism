@@ -16,6 +16,7 @@ StartupEvents.registry('item', event => {
     event.create('wire/titanium_wire').maxStackSize(16)
     event.create('wire/stainless_steel_wire').maxStackSize(16)
     event.create('silicon_wafer').maxStackSize(16)
+    event.create('wood_plating_blank').maxStackSize(1).displayName('Wood Plating in Progress')
     const dyeColors = [
       "white", "orange", "magenta", "light_blue", "yellow", "lime", "pink", "gray",
       "light_gray", "cyan", "purple", "blue", "brown", "green", "red", "black"
