@@ -11,6 +11,32 @@ ServerEvents.recipes(event => {
         D: '#minecraft:dirt'
     })
 
+    // Vinegar: native recipe disappears for some reason, so we are readding it.
+    event.remove({ id: 'tfc:barrel/vinegar' })
+    event.custom({
+        type: 'tfc:barrel_sealed',
+        duration: 7200,
+        input_fluid: { tag: 'tfc:alcohols', amount: 250 },
+        input_item: {
+            type: 'tfc:and',
+            children: [
+                { tag: 'c:foods/fruit' },
+                { type: 'tfc:not_rotten' }
+            ],
+            count: 1
+        },
+        output_fluid: { id: 'tfc:vinegar', amount: 250 }
+    })
+
+    // Automate twig -> stick
+    event.custom({
+        type: 'vintageimprovements:polishing',
+        ingredients: [{ tag: 'tfc:twigs' }],
+        results: [{ count: 1, id: 'minecraft:stick' }],
+        processing_time: 20,
+        speed_limits: 1
+    })
+
     // minecraft:string is superseded by #c:strings (wool yarn, plant/bamboo string, etc.)
     event.remove({ output: 'minecraft:string' })
     event.replaceInput({}, 'minecraft:string', '#c:strings')
