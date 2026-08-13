@@ -68,7 +68,7 @@ RecipeViewerEvents.removeEntries('item', event => {
     r('vintageimprovements:sulfur')
     r('vintageimprovements:sulfur_chunk')
     r('vintageimprovements:sulfur_block')
-    r('tfmg:steel_nugget')
+    //r('tfmg:steel_nugget')
     r('tfmg:constantan_ingot')
     r('tfmg:constantan_nugget')
     r('tfmg:constantan_block')

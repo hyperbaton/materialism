@@ -48,6 +48,12 @@ ServerEvents.recipes(event => {
   event.shapeless('10x tfmg:nickel_nugget', ['tfc:metal/ingot/nickel', '#tfc:chisels']).damageIngredient(Ingredient.of('#tfc:chisels'))
   event.custom({ type: 'tfc:heating', ingredient: { item: 'tfmg:nickel_nugget' }, result_fluid: { amount: 10, id: 'tfc:metal/nickel' }, temperature: 1453 })
   event.custom({ type: 'create:deploying', ingredients: [{ item: 'tfc:metal/ingot/nickel' }, { tag: 'tfc:chisels' }], results: [{ id: 'tfmg:nickel_nugget', count: 10 }] })
+  
+  event.remove({ id: 'tfmg:crafting/materials/steel_ingot_from_compacting' })
+  event.remove({ id: 'tfmg:crafting/materials/steel_nugget_from_decompacting' })
+  event.shapeless('10x tfmg:steel_nugget', ['tfc:metal/ingot/steel', '#tfc:chisels']).damageIngredient(Ingredient.of('#tfc:chisels'))
+  event.custom({ type: 'tfc:heating', ingredient: { item: 'tfmg:steel_nugget' }, result_fluid: { amount: 10, id: 'tfc:metal/cast_iron' }, temperature: 1535 })
+  event.custom({ type: 'create:deploying', ingredients: [{ item: 'tfc:metal/ingot/steel' }, { tag: 'tfc:chisels' }], results: [{ id: 'tfmg:steel_nugget', count: 10 }] })
 
   // Cast iron: keep tfmg's nugget as canonical (createbigcannons's duplicate is hidden instead)
   event.remove({ id: 'tfmg:crafting/materials/cast_iron_ingot_from_compacting' })
