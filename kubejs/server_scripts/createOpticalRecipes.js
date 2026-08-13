@@ -126,6 +126,7 @@ ServerEvents.recipes(event => {
         '#c:stones',            // Arg 2: the item to replace
         'tfc:metal/sheet/steel'         // Arg 3: the item to replace it with
         )
+    event.remove('create_optical:sequenced_assembly/rose_quartz_catalyst_coil')
     event.shaped(
        Item.of('create_optical:rose_quartz_catalyst_coil', 1),
        [
