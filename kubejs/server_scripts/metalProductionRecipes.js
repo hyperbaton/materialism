@@ -298,4 +298,44 @@ ServerEvents.recipes(event => {
     tfcBlockMetals.forEach(metal => addMetalPlatedBlockRecipes('tfc', metal, { tag: `c:sheets/${metal}` }))
     tfcBlockMetallurgyMetals.forEach(metal => addMetalPlatedBlockRecipes('tfc_metallurgy', metal, { tag: `c:sheets/${metal}` }))
     firmalifeMetals.forEach(metal => addMetalPlatedBlockRecipes('firmalife', metal, { item: `firmalife:metal/sheet/${metal}` }))
+    
+    // Smelting of ores into metal. Woodencog only adds these recipes for vanilla TFC
+    const GRADE_AMOUNTS = { small: 10, poor: 15, normal: 25, rich: 35 }
+
+    function addOreSmelting(namespace, ore, metal, temperature) {
+        Object.keys(GRADE_AMOUNTS).forEach(grade => {
+            event.custom({
+                type: 'woodencog:heated_mixing',
+                heat_requirement: temperature,
+                ingredients: [
+                    {
+                        type: 'woodencog:heated',
+                        ingredient: { item: `${namespace}:ore/${grade}_${ore}` },
+                        max_temp: 3000,
+                        min_temp: temperature
+                    }
+                ],
+                results: [{ amount: GRADE_AMOUNTS[grade], id: `${namespace}:metal/${metal}` }]
+            }).id(`kubejs:heated_mixing/ore/${grade}_${ore}_to_liquid`)
+        })
+    }
+
+    addOreSmelting('tfc_metallurgy', 'bauxite', 'aluminum', 660)
+    addOreSmelting('tfc_metallurgy', 'bertrandite', 'beryllium', 1200)
+    addOreSmelting('tfc_metallurgy', 'cobaltite', 'cobalt', 1500)
+    addOreSmelting('tfc_metallurgy', 'galena', 'lead', 328)
+    addOreSmelting('tfc_metallurgy', 'kernite', 'boron', 2070)
+    addOreSmelting('tfc_metallurgy', 'magnesite', 'magnesium', 650)
+    addOreSmelting('tfc_metallurgy', 'native_iridium', 'iridium', 2490)
+    addOreSmelting('tfc_metallurgy', 'native_osmium', 'osmium', 3025)
+    addOreSmelting('tfc_metallurgy', 'native_platinum', 'platinum', 1730)
+    addOreSmelting('tfc_metallurgy', 'pyrolusite', 'manganese', 1250)
+    addOreSmelting('tfc_metallurgy', 'rutile', 'titanium', 1700)
+    addOreSmelting('tfc_metallurgy', 'spodumene', 'lithium', 328)
+    addOreSmelting('tfc_metallurgy', 'stibnite', 'antimony', 630)
+    addOreSmelting('tfc_metallurgy', 'wolframite', 'tungsten', 3400)
+    addOreSmelting('tfc_metallurgy', 'zircon', 'zirconium', 1850)
+
+    // Firmalife ores.
+    addOreSmelting('firmalife', 'chromite', 'chromium', 1250)
 })
