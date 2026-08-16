@@ -69,6 +69,16 @@ ServerEvents.recipes(event => {
 
   event.replaceInput({}, 'tfmg:industrial_aluminum_casing', 'tfmg:steel_casing')
 
+  event.remove({id: 'tfmg:crafting/materials/cast_iron_fluid_tank'})
+  event.shaped('tfmg:cast_iron_fluid_tank', [
+        'B',
+        'C',
+        'B'
+    ], {
+        B: 'tfc:metal/sheet/cast_iron',
+        C: '#tfc:barrels'
+    })
+
   // Change sulfuric acid recipes for vintageimprovements ones:
   event.remove('tfmg:mixing/copper_sulfate')
   event.remove('tfmg:mixing/zinc_sulfate')
