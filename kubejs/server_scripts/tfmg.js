@@ -793,6 +793,7 @@ ServerEvents.recipes(event => {
     R: 'tfc_items:stainless_steel_rivet',
     I: 'create:industrial_iron_block'
   })
+  event.replaceInput('tfmg:crafting/materials/air_intake', 'create:industrial_iron_block', 'createdeco:industrial_iron_sheet')
 
   // Coking recipes
 
