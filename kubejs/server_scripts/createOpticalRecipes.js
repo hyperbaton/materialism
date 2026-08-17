@@ -9,22 +9,26 @@ ServerEvents.recipes(event => {
         'tfc_metallurgy:metal/sheet/invar',
         [
             event.recipes.createDeploying(
-              'tfc_metallurgy:metal/sheet/invar',
-              ['tfc_metallurgy:metal/sheet/invar', 'tfc:lens']
+              'create_optical:incomplete_optical_device',
+              ['create_optical:incomplete_optical_device', 'tfc:lens']
             ),
             event.recipes.createDeploying(
-              'tfc_metallurgy:metal/sheet/invar',
-              ['tfc_metallurgy:metal/sheet/invar', 'tfc:lens']
+              'create_optical:incomplete_optical_device',
+              ['create_optical:incomplete_optical_device', 'tfc:lens']
             ),
             event.recipes.createDeploying(
-                'tfc_metallurgy:metal/sheet/invar',
-                ['tfc_metallurgy:metal/sheet/invar', 'tfc_metallurgy:metal/sheet/invar']
+                'create_optical:incomplete_optical_device',
+                ['create_optical:incomplete_optical_device', 'tfc_metallurgy:metal/sheet/invar']
             ),
-            event.custom({type: 'vintageimprovements:curving', ingredients: [{item: 'tfc_metallurgy:metal/sheet/invar'}], results: [{id: 'tfc_metallurgy:metal/sheet/invar'}], mode: 2}),
-            event.recipes.vintageimprovements.vacuumizing(
-                'tfc_metallurgy:metal/sheet/invar',
-                ['tfc_metallurgy:metal/sheet/invar', Fluid.of('minecraft:water', 500)]
-            )
+            event.custom({type: 'vintageimprovements:curving', ingredients: [{item: 'create_optical:incomplete_optical_device'}], results: [{id: 'create_optical:incomplete_optical_device'}], mode: 2}),
+            event.custom({
+                type: 'vintageimprovements:vacuumizing',
+                ingredients: [
+                    { item: 'create_optical:incomplete_optical_device' },
+                    { type: 'neoforge:single', amount: 500, fluid: 'minecraft:water' }
+                ],
+                results: [{ id: 'create_optical:incomplete_optical_device' }]
+            })
         ]
       ).transitionalItem('create_optical:incomplete_optical_device')
       .loops(1);
