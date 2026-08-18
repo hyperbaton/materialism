@@ -61,7 +61,6 @@ ServerEvents.recipes(event => {
         'stainless_steel'
     ]
     const tfcIron = [
-        'pig_iron',
         'wrought_iron'
     ]
 
@@ -97,6 +96,12 @@ ServerEvents.recipes(event => {
             results: [{ id: `tfc:metal/ingot/cast_iron` }]
         })
     )
+    event.custom({
+        type: 'tfmg:casting',
+        ingredients: [{ type: 'neoforge:single', amount: 100, fluid: `tfc:metal/pig_iron` }],
+        processing_time: 100,
+        results: [{ id: `tfc:metal/ingot/pig_iron` }]
+    })
 
     addMetalPartsRecipes('alnico', 900, 1200)
     addMetalPartsRecipes('aluminum', 396, 528)
