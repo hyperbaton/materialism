@@ -1,11 +1,11 @@
 {
   "type": "tfc:disc_vein",
   "config": {
-    "rarity": 12000,
+    "rarity": 8000,
     "density": 0.85,
-    "min_y": -80,
-    "max_y": -10,
-    "size": 140,
+    "min_y": -40,
+    "max_y": 50,
+    "size": 200,
     "height": 8,
     "random_name": "lignite",
     "project": true,

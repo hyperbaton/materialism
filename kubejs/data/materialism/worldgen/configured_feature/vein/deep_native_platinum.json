@@ -3,8 +3,8 @@
   "config": {
     "rarity": 11667,
     "density": 0.5,
-    "min_y": -180,
-    "max_y": -60,
+    "min_y": -100,
+    "max_y": 10,
     "size": 160,
     "random_name": "deep_native_platinum",
     "blocks": [
