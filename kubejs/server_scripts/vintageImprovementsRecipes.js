@@ -191,6 +191,11 @@ ServerEvents.recipes(event => {
       'minecraft:iron_block',            // Arg 2: the item to replace
       'tfc:metal/block/steel'         // Arg 3: the item to replace it with
     )
+    event.replaceInput(
+      { id: 'vintageimprovements:mechanical_crafting/helve_hammer' }, // Arg 1: the filter
+      'minecraft:iron_block',            // Arg 2: the item to replace
+      'tfc:metal/block/steel'         // Arg 3: the item to replace it with
+    )
     // Replace TFMG lime by TFC lime
     event.remove({id: 'tfmg:crushing/limesand'})
     event.remove({id: 'tfmg:milling/limesand'})
