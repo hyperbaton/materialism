@@ -343,4 +343,41 @@ ServerEvents.recipes(event => {
 
     // Firmalife ores.
     addOreSmelting('firmalife', 'chromite', 'chromium', 1250)
+
+    // Smelting metal parts back into liquid metal
+    const METAL_FORM_AMOUNTS = { ingot: 100, double_ingot: 200, sheet: 200, double_sheet: 400, rod: 50 }
+    const ALL_METAL_FORMS = Object.keys(METAL_FORM_AMOUNTS)
+    const METAL_FORMS_WITHOUT_INGOT = ALL_METAL_FORMS.filter(form => form !== 'ingot')
+
+    function addMetalFormSmelting(namespace, metal, meltTemperature, forms) {
+        forms.forEach(form => {
+            event.custom({
+                type: 'woodencog:heated_mixing',
+                heat_requirement: meltTemperature,
+                ingredients: [
+                    {
+                        type: 'woodencog:heated',
+                        ingredient: { item: `${namespace}:metal/${form}/${metal}` },
+                        max_temp: 3000,
+                        min_temp: meltTemperature
+                    }
+                ],
+                results: [{ amount: METAL_FORM_AMOUNTS[form], id: `${namespace}:metal/${metal}` }]
+            }).id(`kubejs:heated_mixing/${form}/${namespace}_${metal}_to_liquid`)
+        })
+    }
+
+    const tfcMetallurgyMeltTemps = [
+        ['aluminum', 660], ['alnico', 1500], ['antimony', 630], ['boron', 2070],
+        ['beryllium', 1200], ['beryllium_copper', 1500], ['cobalt', 1500], ['constantan', 1200],
+        ['electrum', 1200], ['ferroboron', 1540], ['florentine_bronze', 400], ['invar', 1450],
+        ['iridium', 2490], ['lead', 328], ['lithium', 180], ['magnesium', 650],
+        ['manganese', 1250], ['neodymium', 1024], ['nickel_silver', 1450], ['osmium', 3025],
+        ['osmiridium', 1500], ['pewter', 1500], ['platinum', 1730], ['solder', 400],
+        ['thorium', 1750], ['titanium', 1700], ['tungsten', 3400], ['tungsten_steel', 3690],
+        ['uranium', 1100], ['vanadium', 1250], ['zircaloy', 1540], ['zirconium', 1850]
+    ]
+    tfcMetallurgyMeltTemps.forEach(([metal, temp]) => addMetalFormSmelting('tfc_metallurgy', metal, temp, ALL_METAL_FORMS))
+    firmalifeMeltTemps.forEach(([metal, temp]) => addMetalFormSmelting('firmalife', metal, temp, ALL_METAL_FORMS))
+    tfcBaseMetals.forEach(([metal, temp]) => addMetalFormSmelting('tfc', metal, temp, METAL_FORMS_WITHOUT_INGOT))
 })
