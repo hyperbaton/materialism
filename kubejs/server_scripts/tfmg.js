@@ -822,6 +822,41 @@ ServerEvents.recipes(event => {
     ]
   })
 
+  // Blast stove burns creosote twice as fast, so creosote
+  // consumption keeps pace with the coking process producing it
+  event.remove({id: 'tfmg:hot_blast/hot_air'})
+  event.custom({
+    type: 'tfmg:hot_blast',
+    ingredients: [
+      {type: 'neoforge:single', amount: 25, fluid: 'tfmg:air'},
+      {type: 'neoforge:tag', amount: 10, tag: 'tfmg:blast_stove_fuel'}
+    ],
+    processing_time: 200,
+    results: [
+      {amount: 25, id: 'tfmg:hot_air'},
+      {amount: 25, id: 'tfmg:carbon_dioxide'}
+    ]
+  })
+
+  // Blast furnace reinforcement
+  event.remove({id: 'tfmg:crafting/materials/blast_furnace_reinforcement'})
+  {
+    const transitional = 'kubejs:incomplete_blast_furnace_reinforcement'
+    event.recipes.create.sequenced_assembly(
+      ['2x tfmg:blast_furnace_reinforcement'],
+      'tfmg:fireproof_bricks',
+      [
+        event.recipes.createDeploying(transitional, [transitional, 'tfc_items:steel_heavy_sheet']),
+        event.recipes.createDeploying(transitional, [transitional, 'tfc_items:steel_rivet']),
+        event.recipes.createDeploying(transitional, [transitional, 'tfc_items:steel_rivet']),
+        event.recipes.createDeploying(transitional, [transitional, 'tfc_items:steel_rivet']),
+        event.recipes.createDeploying(transitional, [transitional, 'tfc_items:steel_rivet']),
+        event.recipes.createPressing(transitional, transitional),
+        event.recipes.createFilling(transitional, [transitional, Fluid.of('tfmg:creosote', 1000)])
+      ]
+    ).transitionalItem(transitional)
+  }
+
   //Blasting recipes
 
   // Replace silicon industrial blasting input with silica sand
@@ -886,7 +921,7 @@ ServerEvents.recipes(event => {
       {tag: 'materialism:powders/iron'},
       {item: 'tfc:powder/flux'}
     ],
-    processing_time: 5,
+    processing_time: 4,
     results: [
       {amount: 5, id: 'tfc:metal/pig_iron'},
       {amount: 5, id: 'tfmg:molten_slag'},

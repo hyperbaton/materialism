@@ -24,5 +24,7 @@ StartupEvents.registry('item', event => {
     dyeColors.forEach(color => {
       event.create(`plastic_sheet/${color}`).maxStackSize(16).displayName(`${color.charAt(0).toUpperCase() + color.slice(1)} Plastic Sheet`)
     });
+    // Transitional item for the blast furnace reinforcement sequenced assembly (see tfmg.js)
+    event.create('incomplete_blast_furnace_reinforcement').maxStackSize(1).displayName('Blast Furnace Reinforcement in Progress')
   })
   
