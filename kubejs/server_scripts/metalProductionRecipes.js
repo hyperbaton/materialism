@@ -209,6 +209,9 @@ ServerEvents.recipes(event => {
         })
     }
 
+    // Remove tfc_items rods
+    event.remove(/.*tfc_items.*rod.*/)
+
     // Base TFC metals (melting point in degC, from TFC's own ingot heating recipes).
     const tfcBaseMetals = [
         ['bismuth', 270], ['bismuth_bronze', 985], ['black_bronze', 1070], ['black_steel', 1485],

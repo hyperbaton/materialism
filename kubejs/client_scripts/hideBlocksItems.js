@@ -128,6 +128,7 @@ RecipeViewerEvents.removeEntries('item', event => {
     r('design_decor:queens_lime_large_chain');
     event.remove('createbigcannons:bronze_ingot')
     event.remove('createbigcannons:bronze_block')
+    event.remove(/.*tfc_items.*rod.*/)
 
     // Hide TFMG tools/armor/ingots
     r('tfmg:lead_axe');
