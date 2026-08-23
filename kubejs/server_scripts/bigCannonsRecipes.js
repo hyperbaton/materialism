@@ -88,11 +88,9 @@ ServerEvents.recipes(event => {
         'create:andesite_alloy',
         'tfc:metal/sheet/steel'
       )
-      event.replaceInput(
-        { id: 'createbigcannons:bronze_block' }, // Arg 1: the filter
-        'createbigcannons:bronze_ingot',            // Arg 2: the item to replace
-        'tfc:metal/ingot/bronze'         // Arg 3: the item to replace it with
-      )
+
+      event.remove({id: 'createbigcannons:bronze_block'})
+      event.remove({id: 'createbigcannons:compacting/forge_bronze_block'})
 
       event.replaceInput(
         { input: 'createbigcannons:nethersteel_ingot' },
