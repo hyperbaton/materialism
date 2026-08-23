@@ -857,6 +857,19 @@ ServerEvents.recipes(event => {
     ).transitionalItem(transitional)
   }
 
+  // Early/mid-game lubrication oil, so it is available before oil is drilled
+  event.custom({
+    type: 'create:mixing',
+    ingredients: [
+      {type: 'neoforge:single', fluid: 'tfc:tallow', amount: 1000}
+    ],
+    results: [
+      {amount: 100, id: 'tfmg:lubrication_oil'}
+    ],
+    heat_requirement: 'heated',
+    processing_time: 400
+  })
+
   //Blasting recipes
 
   // Replace silicon industrial blasting input with silica sand

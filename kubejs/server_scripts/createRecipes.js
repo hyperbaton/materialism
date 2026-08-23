@@ -240,7 +240,6 @@ ServerEvents.recipes(event => {
 
     // Replace andesite alloy in recipes
     replaceAndesiteAlloyWith('create:crafting/logistics/andesite_funnel', 'tfc:metal/sheet/steel')
-    replaceAndesiteAlloyWith('create:crafting/kinetics/steam_engine', 'tfc:metal/double_sheet/steel')
     replaceAndesiteAlloyWith('create:crafting/kinetics/mechanical_arm', 'tfc:metal/double_sheet/steel')
     replaceAndesiteAlloyWith('create:crafting/kinetics/gantry_shaft', 'tfc:metal/sheet/steel')
     replaceAndesiteAlloyWith('create:crafting/appliances/copper_backtank', 'firmalife:metal/sheet/stainless_steel')
@@ -560,12 +559,44 @@ ServerEvents.recipes(event => {
       'tfc:metal/bars/steel'         // Arg 3: the item to replace it with
     )
 
-    // Recipes with metal blocks
-    event.replaceInput(
-      { id: 'create:crafting/kinetics/steam_engine' }, // Arg 1: the filter
-      'minecraft:copper_block',            // Arg 2: the item to replace
-      'tfc:metal/block/copper'         // Arg 3: the item to replace it with
+    // Steam engine: two recipes. If beryllium copper is used, the resulting machine is more durable, which is modeled by having
+    // the recipe yield two instead of one.
+    event.remove({id: 'create:crafting/kinetics/steam_engine'})
+    event.recipes.create.mechanical_crafting('kubejs:unlubricated_steam_engine', [
+      ' RSR ',
+      ' BSB ',
+      ' LGL ',
+      '  C  ',
+      ' WWW '
+    ], {
+      G: 'tfc_items:brass_gear',
+      B: 'tfc:metal/sheet/brass',
+      C: 'tfc:metal/block/copper',
+      S: 'tfc:metal/rod/steel',
+      L: 'tfc_items:lead_ring',
+      R: 'tfc_items:steel_rivet',
+      W: 'tfc_items:brass_screw'
+    }).id('kubejs:mechanical_crafting/unlubricated_steam_engine')
+    event.recipes.create.mechanical_crafting('2x kubejs:unlubricated_steam_engine', [
+      ' RSR ',
+      ' BSB ',
+      ' LGL ',
+      '  C  ',
+      ' WWW '
+    ], {
+      G: 'tfc_items:brass_gear',
+      B: 'tfc_metallurgy:metal/sheet/beryllium_copper',
+      C: 'tfc:metal/block/copper',
+      S: 'tfc:metal/rod/steel',
+      L: 'tfc_items:lead_ring',
+      R: 'tfc_items:steel_rivet',
+      W: 'tfc_items:brass_screw'
+    }).id('kubejs:mechanical_crafting/unlubricated_steam_engine_beryllium_copper')
+    event.recipes.create.filling(
+      'create:steam_engine',
+      ['kubejs:unlubricated_steam_engine', Fluid.of('tfmg:lubrication_oil', 1000)]
     )
+    
     event.replaceInput(
       { id: 'create:crafting/curiosities/peculiar_bell' }, // Arg 1: the filter
       'create:brass_block',            // Arg 2: the item to replace

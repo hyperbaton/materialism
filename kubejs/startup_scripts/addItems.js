@@ -26,5 +26,7 @@ StartupEvents.registry('item', event => {
     });
     // Transitional item for the blast furnace reinforcement sequenced assembly (see tfmg.js)
     event.create('incomplete_blast_furnace_reinforcement').maxStackSize(1).displayName('Blast Furnace Reinforcement in Progress')
+    // Intermediate item for the steam engine mechanical crafting recipe (see createRecipes.js)
+    event.create('unlubricated_steam_engine').maxStackSize(16).displayName('Unlubricated Steam Engine')
   })
   

@@ -436,5 +436,39 @@ ServerEvents.recipes(event => {
             results: [{ id: output }]
         })
     })
+    
+    // Tallow rendering
+    event.custom({
+        type: 'create:mixing',
+        ingredients: [
+        {item: 'tfc:blubber'},
+        {item: 'tfc:blubber'},
+        {item: 'tfc:blubber'},
+        {item: 'tfc:blubber'},
+        {item: 'tfc:blubber'},
+        {type: 'neoforge:single', fluid: 'minecraft:water', amount: 1000}
+        ],
+        results: [
+        {amount: 1000, id: 'tfc:tallow'}
+        ],
+        heat_requirement: 'heated',
+        processing_time: 400
+    })
+    event.custom({
+        type: 'create:mixing',
+        ingredients: [
+        {item: 'butchery:animal_fat'},
+        {item: 'butchery:animal_fat'},
+        {item: 'butchery:animal_fat'},
+        {item: 'butchery:animal_fat'},
+        {item: 'butchery:animal_fat'},
+        {type: 'neoforge:single', fluid: 'minecraft:water', amount: 1000}
+        ],
+        results: [
+        {amount: 1000, id: 'tfc:tallow'}
+        ],
+        heat_requirement: 'heated',
+        processing_time: 400
+    })
 }
 )
