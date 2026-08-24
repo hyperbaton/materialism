@@ -1,7 +1,7 @@
 {
   "type": "tfc:disc_vein",
   "config": {
-    "rarity": 10000,
+    "rarity": 7000,
     "density": 0.04,
     "min_y": -62,
     "max_y": -59,
@@ -10,6 +10,13 @@
     "random_name": "oil_deposit",
     "blocks": [
       {"replace":["minecraft:bedrock"],"with":[{"block":"tfmg:oil_deposit"}]}
-    ]
+    ],
+    "indicator":{
+      "rarity":5,
+      "depth":250,
+      "underground_rarity":5,
+      "underground_count":5,
+      "blocks":[{"block":"kubejs:oil_seep"}]
+    }
   }
 }

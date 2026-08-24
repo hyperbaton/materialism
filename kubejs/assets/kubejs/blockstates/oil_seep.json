@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "": [
+      {"model": "kubejs:block/oil_seep", "y": 90},
+      {"model": "kubejs:block/oil_seep"},
+      {"model": "kubejs:block/oil_seep", "y": 180},
+      {"model": "kubejs:block/oil_seep", "y": 270}
+    ]
+  }
+}
