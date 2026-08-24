@@ -1,0 +1,21 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "kubejs:block/small_saltpeter",
+        "y": 90
+      },
+      {
+        "model": "kubejs:block/small_saltpeter"
+      },
+      {
+        "model": "kubejs:block/small_saltpeter",
+        "y": 180
+      },
+      {
+        "model": "kubejs:block/small_saltpeter",
+        "y": 270
+      }
+    ]
+  }
+}

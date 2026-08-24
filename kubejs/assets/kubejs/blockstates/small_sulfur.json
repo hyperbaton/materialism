@@ -1,0 +1,21 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "kubejs:block/small_sulfur",
+        "y": 90
+      },
+      {
+        "model": "kubejs:block/small_sulfur"
+      },
+      {
+        "model": "kubejs:block/small_sulfur",
+        "y": 180
+      },
+      {
+        "model": "kubejs:block/small_sulfur",
+        "y": 270
+      }
+    ]
+  }
+}

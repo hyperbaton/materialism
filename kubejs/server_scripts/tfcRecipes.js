@@ -77,6 +77,18 @@ ServerEvents.recipes(event => {
     ).transitionalItem('tfc:metal/rod/copper')
     .loops(2);
 
+    // Small ore vein indicators can be quern-ground too
+    event.recipes.tfc.quern('tfc:powder/graphite', 'kubejs:small_graphite')
+    event.recipes.tfc.quern('tfc:powder/saltpeter', 'kubejs:small_saltpeter')
+    event.recipes.tfc.quern('tfc:powder/sulfur', 'kubejs:small_sulfur')
+    event.recipes.tfc.quern('kubejs:certus_quartz_powder', 'kubejs:small_certus_quartz')
+    event.recipes.tfc.quern('tfc:powder/salt', 'kubejs:small_halite')
+    event.custom({
+      type: 'tfc:quern',
+      ingredient: [{item: 'kubejs:small_cinnabar'}, {item: 'kubejs:small_cryolite'}],
+      result: {count: 1, id: 'minecraft:redstone'}
+    })
+
     // Early game rose quartz recipes
     event.recipes.tfc.quern('kubejs:certus_quartz_powder', 'tfc_metallurgy:ore/certus_quartz')
     event.shapeless('1x kubejs:redstone_imbued_quartz_powder',[

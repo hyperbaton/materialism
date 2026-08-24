@@ -1,0 +1,21 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "kubejs:block/small_cinnabar",
+        "y": 90
+      },
+      {
+        "model": "kubejs:block/small_cinnabar"
+      },
+      {
+        "model": "kubejs:block/small_cinnabar",
+        "y": 180
+      },
+      {
+        "model": "kubejs:block/small_cinnabar",
+        "y": 270
+      }
+    ]
+  }
+}

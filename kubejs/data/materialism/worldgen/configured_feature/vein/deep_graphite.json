@@ -12,6 +12,13 @@
       {"replace":["tfc:rock/raw/marble"],"with":[{"block":"tfc:ore/graphite/marble"}]},
       {"replace":["tfc:rock/raw/quartzite"],"with":[{"block":"tfc:ore/graphite/quartzite"}]},
       {"replace":["tfc:rock/raw/schist"],"with":[{"block":"tfc:ore/graphite/schist"}]}
-    ]
+    ],
+    "indicator":{
+      "rarity":100,
+      "depth":200,
+      "underground_rarity":50,
+      "underground_count":4,
+      "blocks":[{"block":"kubejs:small_graphite"}]
+    }
   }
 }

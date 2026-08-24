@@ -12,6 +12,13 @@
       {"replace":["tfc:rock/raw/phyllite"],"with":[{"block":"tfc:ore/cinnabar/phyllite"}]},
       {"replace":["tfc:rock/raw/gneiss"],"with":[{"block":"tfc:ore/cinnabar/gneiss"}]},
       {"replace":["tfc:rock/raw/schist"],"with":[{"block":"tfc:ore/cinnabar/schist"}]}
-    ]
+    ],
+    "indicator":{
+      "rarity":100,
+      "depth":200,
+      "underground_rarity":50,
+      "underground_count":4,
+      "blocks":[{"block":"kubejs:small_cinnabar"}]
+    }
   }
 }

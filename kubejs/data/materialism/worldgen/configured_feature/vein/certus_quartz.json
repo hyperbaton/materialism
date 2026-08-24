@@ -22,11 +22,11 @@
       {"replace":["tfc:rock/raw/gneiss"],"with":[{"block":"tfc_metallurgy:ore/certus_quartz/gneiss"}]}
     ],
     "indicator":{
-      "rarity":200,
+      "rarity":80,
       "depth":250,
       "underground_rarity":1,
       "underground_count":5,
-      "blocks":[{"block":"tfc:rock/loose/quartzite"}]
+      "blocks":[{"block":"kubejs:small_certus_quartz"}]
     }
   }
 }

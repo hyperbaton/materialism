@@ -19,6 +19,13 @@
       {"replace":["tfc:rock/raw/schist"],"with":[{"block":"tfc:ore/sulfur/schist"}]},
       {"replace":["tfc:rock/raw/gneiss"],"with":[{"block":"tfc:ore/sulfur/gneiss"}]},
       {"replace":["tfc:rock/raw/marble"],"with":[{"block":"tfc:ore/sulfur/marble"}]}
-    ]
+    ],
+    "indicator":{
+      "rarity":100,
+      "depth":200,
+      "underground_rarity":50,
+      "underground_count":4,
+      "blocks":[{"block":"kubejs:small_sulfur"}]
+    }
   }
 }

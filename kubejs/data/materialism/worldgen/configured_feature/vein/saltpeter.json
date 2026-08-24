@@ -17,6 +17,13 @@
       {"replace":["tfc:rock/raw/chert"],"with":[{"block":"tfc:ore/saltpeter/chert"}]},
       {"replace":["tfc:rock/raw/chalk"],"with":[{"block":"tfc:ore/saltpeter/chalk"}]},
       {"replace":["tfc:rock/raw/tuff"],"with":[{"block":"tfc:ore/saltpeter/tuff"}]}
-    ]
+    ],
+    "indicator":{
+      "rarity":100,
+      "depth":100,
+      "underground_rarity":50,
+      "underground_count":4,
+      "blocks":[{"block":"kubejs:small_saltpeter"}]
+    }
   }
 }

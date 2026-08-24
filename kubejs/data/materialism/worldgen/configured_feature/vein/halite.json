@@ -19,6 +19,13 @@
       {"replace":["tfc:rock/raw/chert"],"with":[{"block":"tfc:halite"}]},
       {"replace":["tfc:rock/raw/chalk"],"with":[{"block":"tfc:halite"}]},
       {"replace":["tfc:rock/raw/tuff"],"with":[{"block":"tfc:halite"}]}
-    ]
+    ],
+    "indicator":{
+      "rarity":100,
+      "depth":150,
+      "underground_rarity":50,
+      "underground_count":4,
+      "blocks":[{"block":"kubejs:small_halite"}]
+    }
   }
 }

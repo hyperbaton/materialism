@@ -1,0 +1,21 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "kubejs:block/small_certus_quartz",
+        "y": 90
+      },
+      {
+        "model": "kubejs:block/small_certus_quartz"
+      },
+      {
+        "model": "kubejs:block/small_certus_quartz",
+        "y": 180
+      },
+      {
+        "model": "kubejs:block/small_certus_quartz",
+        "y": 270
+      }
+    ]
+  }
+}

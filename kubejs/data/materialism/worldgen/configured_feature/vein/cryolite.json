@@ -10,6 +10,13 @@
     "blocks": [
       {"replace":["tfc:rock/raw/granite"],"with":[{"block":"tfc:ore/cryolite/granite"}]},
       {"replace":["tfc:rock/raw/diorite"],"with":[{"block":"tfc:ore/cryolite/diorite"}]}
-    ]
+    ],
+    "indicator":{
+      "rarity":100,
+      "depth":250,
+      "underground_rarity":50,
+      "underground_count":4,
+      "blocks":[{"block":"kubejs:small_cryolite"}]
+    }
   }
 }
