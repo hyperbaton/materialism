@@ -12,12 +12,7 @@ StartupEvents.registry('block', event => {
     .noCollision()
     .box(6, 0, 5, 12, 2, 10)
 
-  // Surface/underground indicators for veins that had none: same groundcover pebble geometry as
-  // oil_seep, textured with each mineral's own real ore-item texture (already thematically
-  // correct, no recoloring needed). Unlike oil_seep these drop themselves -- matching TFC's own
-  // native small-ore indicators (e.g. tfc:ore/small_hematite), which give a tiny sample as a
-  // prospecting reward. See kubejs/data/materialism/worldgen/configured_feature/vein/*.json for
-  // where each is wired into its vein's "indicator" block.
+  // Surface/underground indicators for veins that had none
   const smallOreIndicators = {
     graphite: 'Graphite',
     saltpeter: 'Saltpeter',

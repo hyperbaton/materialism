@@ -4,7 +4,7 @@
     "rarity": 7333,
     "density": 0.6,
     "min_y": -20,
-    "max_y": 40,
+    "max_y": 50,
     "size": 230,
     "random_name": "deep_malachite",
     "blocks": [
@@ -30,7 +30,7 @@
       ]}
     ],
     "indicator":{
-      "rarity":200,
+      "rarity":120,
       "depth":250,
       "underground_rarity":1,
       "underground_count":5,

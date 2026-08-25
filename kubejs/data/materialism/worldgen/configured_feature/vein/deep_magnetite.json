@@ -3,8 +3,8 @@
   "config": {
     "rarity": 8333,
     "density": 0.65,
-    "min_y": -45,
-    "max_y": 45,
+    "min_y": -20,
+    "max_y": 50,
     "size": 250,
     "random_name": "deep_magnetite",
     "blocks": [
@@ -50,7 +50,7 @@
       ]}
     ],
     "indicator":{
-      "rarity":200,
+      "rarity":120,
       "depth":250,
       "underground_rarity":1,
       "underground_count":5,

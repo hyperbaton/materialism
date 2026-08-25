@@ -3,8 +3,8 @@
   "config": {
     "rarity": 8333,
     "density": 0.6,
-    "min_y": -60,
-    "max_y": 40,
+    "min_y": -10,
+    "max_y": 60,
     "size": 220,
     "random_name": "deep_limonite",
     "blocks": [
@@ -50,7 +50,7 @@
       ]}
     ],
     "indicator":{
-      "rarity":200,
+      "rarity":120,
       "depth":250,
       "underground_rarity":1,
       "underground_count":5,

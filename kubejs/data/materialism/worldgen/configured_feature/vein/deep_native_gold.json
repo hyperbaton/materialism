@@ -3,7 +3,7 @@
   "config": {
     "rarity": 10000,
     "density": 0.5,
-    "min_y": -100,
+    "min_y": -80,
     "max_y": 0,
     "size": 180,
     "random_name": "deep_native_gold",
@@ -45,7 +45,7 @@
       ]}
     ],
     "indicator":{
-      "rarity":200,
+      "rarity":150,
       "depth":250,
       "underground_rarity":1,
       "underground_count":5,

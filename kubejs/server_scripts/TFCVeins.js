@@ -5,8 +5,26 @@ ServerEvents.tags('worldgen/placed_feature', event => {
     // Remove TFC veins
     event.remove('tfc:in_biome/veins', 'tfc:vein/bituminous_coal')
     event.remove('tfc:in_biome/veins', 'tfc:vein/borax')
-    event.remove('tfc:in_biome/veins', 'tfc:vein/cinnabar')
+    // Native TFC actually splits cinnabar into two tag entries (normal_cinnabar + a
+    // mountain-biome-only montane_cinnabar); 'tfc:vein/cinnabar' was never a real entry, so this
+    // removal was a silent no-op and both native veins kept spawning alongside our own -- that's
+    // the "many small cinnabar veins" showing up on top of the one intended big deep vein.
+    event.remove('tfc:in_biome/veins', 'tfc:vein/normal_cinnabar')
+    event.remove('tfc:in_biome/veins', 'tfc:vein/montane_cinnabar')
     event.remove('tfc:in_biome/veins', 'tfc:vein/cryolite')
+    // Every other metal below also has a native "montane_" (mountain-biome) variant that was
+    // never removed, same bug as cinnabar above -- left spawning as an uncontrolled extra source
+    // alongside our own surface_/deep_ replacements.
+    event.remove('tfc:in_biome/veins', 'tfc:vein/montane_bismuthinite')
+    event.remove('tfc:in_biome/veins', 'tfc:vein/montane_cassiterite')
+    event.remove('tfc:in_biome/veins', 'tfc:vein/montane_hematite')
+    event.remove('tfc:in_biome/veins', 'tfc:vein/montane_limonite')
+    event.remove('tfc:in_biome/veins', 'tfc:vein/montane_magnetite')
+    event.remove('tfc:in_biome/veins', 'tfc:vein/montane_malachite')
+    event.remove('tfc:in_biome/veins', 'tfc:vein/montane_native_copper')
+    event.remove('tfc:in_biome/veins', 'tfc:vein/montane_native_silver')
+    event.remove('tfc:in_biome/veins', 'tfc:vein/montane_sphalerite')
+    event.remove('tfc:in_biome/veins', 'tfc:vein/montane_tetrahedrite')
     event.remove('tfc:in_biome/veins', 'tfc:vein/gabbro_garnierite')
     event.remove('tfc:in_biome/veins', 'tfc:vein/graphite')
     //event.remove('tfc:in_biome/veins', 'tfc:vein/kaolin_disc')
