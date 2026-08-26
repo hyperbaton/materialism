@@ -127,6 +127,26 @@ ServerEvents.recipes(event => {
         )
     })
 
+    // Automation of olive oil processing
+    event.recipes.create.milling(
+        '2x tfc:olive_paste',
+        TFC.ingredient.and(Ingredient.of('tfc:food/olive'), TFC.ingredient.notRotten())
+    )
+    event.custom({
+        type: 'create:mixing',
+        ingredients: [
+            {item: 'tfc:olive_paste'},
+            {item: 'tfc:olive_paste'},
+            {item: 'tfc:olive_paste'},
+            {item: 'tfc:olive_paste'},
+            {item: 'tfc:olive_paste'},
+            {type: 'neoforge:single', fluid: 'minecraft:water', amount: 1000}
+        ],
+        results: [{amount: 1000, id: 'tfc:olive_oil_water'}],
+        heat_requirement: 'heated',
+        processing_time: 400
+    })
+
     // Dough recipes
     addDoughRecipes(event, cereals);
     addYeastDoughRecipes(event, cereals);
