@@ -89,8 +89,36 @@ ServerEvents.recipes(event => {
         'tfc:metal/sheet/steel'
       )
 
-      event.remove({id: 'createbigcannons:bronze_block'})
-      event.remove({id: 'createbigcannons:compacting/forge_bronze_block'})
+      // Replace the metal block recipes with TFC's plated blocks, and add a dedicated 900mB heating recipe for each
+      ;[
+        {metal: 'bronze', block: 'createbigcannons:bronze_block', plated: 'tfc:metal/block/bronze', fluid: 'tfc:metal/bronze', temperature: 950},
+        {metal: 'cast_iron', block: 'createbigcannons:cast_iron_block', plated: 'tfc:metal/block/cast_iron', fluid: 'tfc:metal/cast_iron', temperature: 1535},
+        {metal: 'steel', block: 'createbigcannons:steel_block', plated: 'tfc:metal/block/steel', fluid: 'tfc:metal/steel', temperature: 1540},
+        {metal: 'nethersteel', block: 'createbigcannons:nethersteel_block', plated: 'tfc_metallurgy:metal/block/tungsten_steel', fluid: 'tfc_metallurgy:metal/tungsten_steel', temperature: 3000}
+      ].forEach(entry => {
+        const block = entry.block
+        const plated = entry.plated
+        const fluid = entry.fluid
+        const temperature = entry.temperature
+        event.remove({id: block})
+        event.shaped(block, [
+          '###',
+          '###',
+          '###'
+        ], {'#': plated})
+        event.remove({id: `createbigcannons:compacting/forge_${block.split(':')[1]}`})
+        event.custom({
+          type: 'create:compacting',
+          ingredients: [{type: 'neoforge:single', amount: 900, fluid: fluid}],
+          results: [{id: block}]
+        })
+        event.custom({
+          type: 'tfc:heating',
+          ingredient: {item: block},
+          result_fluid: {amount: 900, id: fluid},
+          temperature: temperature
+        })
+      })
 
       event.replaceInput(
         { input: 'createbigcannons:nethersteel_ingot' },
@@ -134,4 +162,13 @@ ServerEvents.tags('fluid', event => {
     event.remove('c:molten_nethersteel', 'createbigcannons:flowing_molten_nethersteel')
     event.add('c:molten_nethersteel', 'tfc_metallurgy:metal/tungsten_steel')
     event.add('c:molten_nethersteel', 'tfc_metallurgy:metal/flowing_tungsten_steel')
+})
+
+// Detach metal block from the shared c:storage_blocks/<metal> tags so they don't get a
+// standard 100 mB heating recipe
+ServerEvents.tags('item', event => {
+    event.remove('c:storage_blocks/bronze', 'createbigcannons:bronze_block')
+    event.remove('c:storage_blocks/cast_iron', 'createbigcannons:cast_iron_block')
+    event.remove('c:storage_blocks/steel', 'createbigcannons:steel_block')
+    event.remove('c:storage_blocks/nethersteel', 'createbigcannons:nethersteel_block')
 })

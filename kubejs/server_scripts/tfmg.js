@@ -79,6 +79,19 @@ ServerEvents.recipes(event => {
         C: '#tfc:barrels'
     })
 
+  event.remove({id: 'tfmg:crafting/materials/aluminum_block_from_compacting'})
+  event.shaped('tfmg:aluminum_block', [
+    '###',
+    '###',
+    '###'
+  ], {'#': 'tfc_metallurgy:metal/block/aluminum'})
+  event.custom({
+    type: 'tfc:heating',
+    ingredient: {item: 'tfmg:aluminum_block'},
+    result_fluid: {amount: 900, id: 'tfc_metallurgy:metal/aluminum'},
+    temperature: 660
+  })
+
   // Change sulfuric acid recipes for vintageimprovements ones:
   event.remove('tfmg:mixing/copper_sulfate')
   event.remove('tfmg:mixing/zinc_sulfate')
@@ -829,7 +842,7 @@ ServerEvents.recipes(event => {
     type: 'tfmg:hot_blast',
     ingredients: [
       {type: 'neoforge:single', amount: 25, fluid: 'tfmg:air'},
-      {type: 'neoforge:tag', amount: 10, tag: 'tfmg:blast_stove_fuel'}
+      {type: 'neoforge:tag', amount: 20, tag: 'tfmg:blast_stove_fuel'}
     ],
     processing_time: 200,
     results: [
@@ -952,3 +965,9 @@ ServerEvents.recipes(event => {
   })
 }
 )
+
+// Detach aluminum_block from the shared c:storage_blocks/aluminum tag so it can't
+// reveive TFC-Metallurgy's own 100mB heating recipe
+ServerEvents.tags('item', event => {
+  event.remove('c:storage_blocks/aluminum', 'tfmg:aluminum_block')
+})
