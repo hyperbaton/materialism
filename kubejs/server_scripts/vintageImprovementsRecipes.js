@@ -58,6 +58,7 @@ ServerEvents.recipes(event => {
     })
     event.remove({id: 'tfmg:stonecutting/industrial_pipe'})
     event.recipes.vintageimprovements.turning('4x tfmg:industrial_pipe', 'tfc:metal/rod/steel').processingTime(300)
+    event.recipes.vintageimprovements.turning('kubejs:circular_saw', 'tfc:metal/double_sheet/steel').processingTime(500)
 
     // Curving recipes
     event.remove({id: 'vintageimprovements:curving/iron_sheet'})

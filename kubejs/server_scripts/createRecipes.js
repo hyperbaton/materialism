@@ -472,12 +472,23 @@ ServerEvents.recipes(event => {
       ],
     })
 
-    // Recipes with vanilla ingots
-    event.replaceInput(
-      { id: 'create:crafting/kinetics/mechanical_saw' }, // Arg 1: the filter
-      'minecraft:iron_ingot',            // Arg 2: the item to replace
-      'tfc:metal/ingot/steel'         // Arg 3: the item to replace it with
-    )
+    // Mechanical saw using a circular saw component
+    event.recipes.tfc.anvil('kubejs:circular_saw', 'tfc:metal/double_sheet/steel', ['hit_not_last', 'upset_any'])
+        .tier(4)
+    event.remove({id: 'create:crafting/kinetics/mechanical_saw'})
+    event.shaped(
+        Item.of('create:mechanical_saw', 1), // arg 1: output
+        [
+          ' A ',
+          ' B ', // arg 2: the shape (array of strings)
+          ' C '
+        ],
+        {
+          A: 'kubejs:circular_saw',
+          B: 'create:andesite_casing',  //arg 3: the mapping object
+          C: 'create:shaft'
+        }
+      )
     event.replaceInput( // Use casting iron?
       { id: 'create:crafting/kinetics/chute' }, // Arg 1: the filter
       'minecraft:iron_ingot',            // Arg 2: the item to replace
