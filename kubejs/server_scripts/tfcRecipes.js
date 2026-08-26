@@ -147,6 +147,16 @@ ServerEvents.recipes(event => {
         processing_time: 400
     })
 
+    // Automation of feeding a yeast starter
+    event.custom({
+        type: 'create:mixing',
+        ingredients: [
+            {type: 'neoforge:single', fluid: 'firmalife:yeast_starter', amount: 100},
+            {type: 'tfc:and', children: [{tag: 'firmalife:feeds_yeast'}, {type: 'tfc:not_rotten'}]}
+        ],
+        results: [{amount: 600, id: 'firmalife:yeast_starter'}]
+    })
+
     // Dough recipes
     addDoughRecipes(event, cereals);
     addYeastDoughRecipes(event, cereals);
