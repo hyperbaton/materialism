@@ -181,6 +181,16 @@ ServerEvents.recipes(event => {
      ['   ', 'ABA', '   '],
      { A: 'tfc:metal/rod/brass', B: 'create:filter' }
     )
+    event.shaped(
+      Item.of('materialismcore:fluid_scanner', 1), // arg 1: output
+      [
+          'ABA', // arg 2: the shape (array of strings)
+      ],
+      {
+          A: 'tfc_metallurgy:metal/rod/copper',
+          B: 'minecraft:glass_bottle'
+      }
+    )
     event.remove({id: 'create:crafting/kinetics/rope_pulley'})
     event.shaped(
      Item.of('create:rope_pulley', 1),
