@@ -187,7 +187,7 @@ ServerEvents.recipes(event => {
           'ABA', // arg 2: the shape (array of strings)
       ],
       {
-          A: 'tfc_metallurgy:metal/rod/copper',
+          A: 'tfc:metal/rod/copper',
           B: 'minecraft:glass_bottle'
       }
     )
