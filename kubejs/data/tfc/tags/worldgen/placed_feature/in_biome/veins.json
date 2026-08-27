@@ -58,6 +58,8 @@
     "materialism:vein/deep_native_osmium",
     "materialism:vein/certus_quartz",
     "materialism:vein/deep_chromite",
-    "materialism:vein/oil_deposit"
+    "materialism:vein/oil_deposit",
+    "materialism:vein/deep_coltan",
+    "materialism:vein/deep_molybdenite"
   ]
 }

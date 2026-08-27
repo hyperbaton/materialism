@@ -1,0 +1,44 @@
+{
+  "type": "tfc:cluster_vein",
+  "config": {
+    "rarity": 9000,
+    "density": 0.5,
+    "min_y": -170,
+    "max_y": -10,
+    "size": 175,
+    "random_name": "deep_coltan",
+    "blocks": [
+      {"replace":["tfc:rock/raw/granite"],"with":[
+        {"weight":10,"block":"tfc_metallurgy:ore/poor_columbite/granite"},
+        {"weight":25,"block":"tfc_metallurgy:ore/normal_columbite/granite"},
+        {"weight":65,"block":"tfc_metallurgy:ore/rich_columbite/granite"},
+        {"weight":10,"block":"tfc_metallurgy:ore/poor_tantalite/granite"},
+        {"weight":25,"block":"tfc_metallurgy:ore/normal_tantalite/granite"},
+        {"weight":65,"block":"tfc_metallurgy:ore/rich_tantalite/granite"}
+      ]},
+      {"replace":["tfc:rock/raw/schist"],"with":[
+        {"weight":10,"block":"tfc_metallurgy:ore/poor_columbite/schist"},
+        {"weight":25,"block":"tfc_metallurgy:ore/normal_columbite/schist"},
+        {"weight":65,"block":"tfc_metallurgy:ore/rich_columbite/schist"},
+        {"weight":10,"block":"tfc_metallurgy:ore/poor_tantalite/schist"},
+        {"weight":25,"block":"tfc_metallurgy:ore/normal_tantalite/schist"},
+        {"weight":65,"block":"tfc_metallurgy:ore/rich_tantalite/schist"}
+      ]},
+      {"replace":["tfc:rock/raw/gneiss"],"with":[
+        {"weight":10,"block":"tfc_metallurgy:ore/poor_columbite/gneiss"},
+        {"weight":25,"block":"tfc_metallurgy:ore/normal_columbite/gneiss"},
+        {"weight":65,"block":"tfc_metallurgy:ore/rich_columbite/gneiss"},
+        {"weight":10,"block":"tfc_metallurgy:ore/poor_tantalite/gneiss"},
+        {"weight":25,"block":"tfc_metallurgy:ore/normal_tantalite/gneiss"},
+        {"weight":65,"block":"tfc_metallurgy:ore/rich_tantalite/gneiss"}
+      ]}
+    ],
+    "indicator":{
+      "rarity":150,
+      "depth":250,
+      "underground_rarity":1,
+      "underground_count":5,
+      "blocks":[{"block":"tfc_metallurgy:ore/small_columbite"},{"block":"tfc_metallurgy:ore/small_tantalite"}]
+    }
+  }
+}
