@@ -732,6 +732,21 @@ ServerEvents.recipes(event => {
     heat_requirement: 'heated'
   })
 
+  // Tungsten carbide
+  event.custom({
+    type: 'tfmg:vat_machine_recipe',
+    allowed_vat_types: ['tfmg:firebrick_lined_vat'],
+    heat_requirement: 'heated',
+    ingredients: [
+      {item: 'tfc_metallurgy:metal/dust/tungsten'},
+      {item: 'tfc_metallurgy:metal/dust/tungsten'},
+      {item: 'tfc:powder/graphite'},
+      {item: 'tfc_metallurgy:metal/dust/cobalt'}
+    ],
+    processing_time: 400,
+    results: [{count: 2, id: 'kubejs:powder/tungsten_carbide'}]
+  })
+
   // Weapon recipes — replace simple crafting with sequenced assembly
   event.remove({id: 'tfmg:crafting/materials/pipe_bomb'})
   event.remove({id: 'tfmg:crafting/materials/thermite_grenade'})

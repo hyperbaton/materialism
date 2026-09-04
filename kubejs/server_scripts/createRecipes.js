@@ -112,17 +112,43 @@ ServerEvents.recipes(event => {
       )
     // Change mechanical drill recipe
     event.remove({id: 'create:crafting/kinetics/mechanical_drill'})
+    event.recipes.create.sequenced_assembly(
+      'kubejs:drill_bit',
+      'tfc_metallurgy:metal/rod/tungsten_steel',
+      [
+        event.recipes.vintageimprovements.turning('tfc_metallurgy:metal/rod/tungsten_steel', 'tfc_metallurgy:metal/rod/tungsten_steel'),
+        event.recipes.vintageimprovements.pressurizing('tfc_metallurgy:metal/rod/tungsten_steel', [
+          'tfc_metallurgy:metal/rod/tungsten_steel',
+          '5x tfc_metallurgy:metal/dust/cobalt'
+        ]),
+        event.recipes.vintageimprovements.polishing('tfc_metallurgy:metal/rod/tungsten_steel', 'tfc_metallurgy:metal/rod/tungsten_steel')
+      ]
+    ).transitionalItem('tfc_metallurgy:metal/rod/tungsten_steel').loops(1)
+    // Premium drill bit: the higher-quality tip is worth 3 bits per batch instead of 1.
+    event.recipes.create.sequenced_assembly(
+      [Item.of('kubejs:drill_bit', 3)],
+      'tfc_metallurgy:metal/rod/tungsten_steel',
+      [
+        event.recipes.createDeploying('tfc_metallurgy:metal/rod/tungsten_steel', [
+          'tfc_metallurgy:metal/rod/tungsten_steel',
+          'kubejs:powder/tungsten_carbide'
+        ]),
+        event.recipes.vintageimprovements.turning('tfc_metallurgy:metal/rod/tungsten_steel', 'tfc_metallurgy:metal/rod/tungsten_steel'),
+        event.recipes.vintageimprovements.pressurizing('tfc_metallurgy:metal/rod/tungsten_steel', 'tfc_metallurgy:metal/rod/tungsten_steel'),
+        event.recipes.vintageimprovements.polishing('tfc_metallurgy:metal/rod/tungsten_steel', 'tfc_metallurgy:metal/rod/tungsten_steel')
+      ]
+    ).transitionalItem('tfc_metallurgy:metal/rod/tungsten_steel').loops(1)
     event.shaped(
       Item.of('create:mechanical_drill', 1), // arg 1: output
       [
-          ' B ',
-          'BAB', // arg 2: the shape (array of strings)
+          ' A ',
+          ' B ', // arg 2: the shape (array of strings)
           ' C '
       ],
       {
-          A: 'tfc_metallurgy:metal/sheet/cobalt',
-          B: 'tfc_metallurgy:metal/sheet/tungsten_steel',
-          C: 'create:andesite_casing'
+          A: 'kubejs:drill_bit',
+          B: 'create:andesite_casing',
+          C: 'create:shaft'
       }
       )
     // Mechanical carfter to use TFC workbench
@@ -188,7 +214,7 @@ ServerEvents.recipes(event => {
       ],
       {
           A: 'tfc:metal/rod/copper',
-          B: 'minecraft:glass_bottle'
+          B: 'tfc:silica_glass_bottle'
       }
     )
     event.remove({id: 'create:crafting/kinetics/rope_pulley'})
@@ -261,7 +287,6 @@ ServerEvents.recipes(event => {
     replaceAndesiteAlloyWith('create:crafting/kinetics/copper_valve_handle', 'tfc:metal/ingot/steel')
     replaceAndesiteAlloyWith('create:crafting/kinetics/depot', 'tfc:metal/sheet/steel')
     replaceAndesiteAlloyWith('create:crafting/appliances/copper_diving_boots', 'tfc:metal/sheet/steel')
-    replaceAndesiteAlloyWith('create:crafting/kinetics/mechanical_drill', 'tfc:metal/ingot/steel')
     //replaceAndesiteAlloyWith('create:crafting/kinetics/cart_assembler', 'tfc:metal/sheet/steel')
     replaceAndesiteAlloyWith('create:crafting/kinetics/metal_bracket', 'tfc:metal/sheet/steel')
     replaceAndesiteAlloyWith('create:crafting/kinetics/sticker', 'tfc:metal/ingot/steel')

@@ -30,5 +30,8 @@ StartupEvents.registry('item', event => {
     event.create('unlubricated_steam_engine').maxStackSize(16).displayName('Unlubricated Steam Engine')
     // Circular saw blade, used to build the mechanical saw
     event.create('circular_saw').maxStackSize(16).displayName('Circular Saw Blade')
+    // Drill bit, used to build the mechanical drill
+    event.create('drill_bit').maxStackSize(16).displayName('Drill Bit')
+    event.create('powder/tungsten_carbide').maxStackSize(16).displayName('Tungsten Carbide Powder')
   })
   
