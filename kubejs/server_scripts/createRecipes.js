@@ -1033,16 +1033,16 @@ ServerEvents.recipes(event => {
        '#c:stones/smooth',
        [
            event.recipes.createDeploying(
-               'create:track',
-               ['create:track', 'tfc:metal/rod/steel']
+               'create:incomplete_track',
+               ['create:incomplete_track', 'tfc:metal/rod/steel']
            ),
            event.recipes.createDeploying(
-               'create:track',
-               ['create:track', 'tfc:metal/rod/steel']
+               'create:incomplete_track',
+               ['create:incomplete_track', 'tfc:metal/rod/steel']
            ),
-           event.recipes.createPressing('create:track', 'create:track')
+           event.recipes.createPressing('create:incomplete_track', 'create:incomplete_track')
        ]
-    ).transitionalItem('create:track')
+    ).transitionalItem('create:incomplete_track')
     .loops(4);
     // Remove the existing recipe for sturdy sheets
     event.remove({ output: 'create:sturdy_sheet' });
