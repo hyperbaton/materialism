@@ -1,4 +1,5 @@
 {
+  "cft:xoonglin": null,
   "corpse:corpse": null,
   "createsifter:data": null,
   "firmalife:barrel_press": null,
@@ -82,6 +83,7 @@
   "minecraft:zombie_villager": null,
   "tfc:anemometer": null,
   "tfc:animal": null,
+  "tfc:armadillo": null,
   "tfc:axle": null,
   "tfc:barrel": null,
   "tfc:bellows": null,

@@ -6,16 +6,18 @@ xoonglinMatingCooldown = 6000
 keepXoonglinsLoaded = false
 #If true, Xoonglins will use the basic humanoid/player model instead of the custom Xoonglin model.
 useHumanoidModel = true
+#If true, zombies (and husks, drowned and zombie villagers) attack Xoonglins.
+monstersHuntXoonglins = true
 
 [homeDetection]
 	#Maximum amount of blocks that a Xoonglin house can have.
 	# Default: 1000
 	# Range: 36 ~ 24000
-	maxHouseSize = 1000
+	maxHouseSize = 2500
 	#Maximum amount of blocks that the floor of a Xoonglin house can have.
 	# Default: 100
 	# Range: 9 ~ 1000
-	maxFloorSize = 100
+	maxFloorSize = 144
 	#Maximum height of a block that is part of a Xoonglin house.
 	# Default: 319
 	# Range: -64 ~ 319

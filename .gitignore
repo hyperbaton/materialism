@@ -5,7 +5,7 @@
 .mixin.out/
 .sable/
 crash-reports/
-data/
+#data/
 downloads/
 io/
 local/
@@ -16,6 +16,8 @@ saves/
 schematics/
 shaderpacks/
 patchouli_books/
+screenshots/
+debug/
 
 # User-specific files
 options.txt
@@ -32,3 +34,7 @@ minecraftinstance.json
 # defaultconfigs/ - default mod configurations
 # datapacks/      - custom datapacks
 # resourcepacks/  - custom resource packs
+
+# Back up files
+*.bak
+*.old
