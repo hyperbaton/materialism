@@ -305,4 +305,35 @@ ServerEvents.recipes(event => {
         G: 'tfc:rock/smooth/marble_slab'
     })
 
+    // Bloom processing with the helve hammer: raw bloom -> refined bloom -> ingot. Same 3 hits
+    // as TFC's anvil recipes, at the bloom's forging temperature.
+    const blooms = [
+        { name: 'iron', raw: 'tfc:raw_iron_bloom', refined: 'tfc:refined_iron_bloom', ingot: 'tfc:metal/ingot/wrought_iron', forgingTemp: 922 }
+    ]
+    const metallurgyBlooms = [
+        ['boron', 921], ['cobalt', 900], ['iridium', 921], ['osmium', 921],
+        ['platinum', 1038], ['thorium', 921], ['titanium', 921], ['tungsten', 921]
+    ]
+    metallurgyBlooms.forEach(([metal, forgingTemp]) => blooms.push({
+        name: metal,
+        raw: `tfc_metallurgy:raw_${metal}_bloom`,
+        refined: `tfc_metallurgy:refined_${metal}_bloom`,
+        ingot: `tfc_metallurgy:metal/ingot/${metal}`,
+        forgingTemp: forgingTemp
+    }))
+    blooms.forEach(bloom => {
+        event.custom({
+            type: 'vintageimprovements:hammering',
+            hammer_blows: 3,
+            ingredients: [TFC.ingredient.and(Ingredient.of(bloom.raw), TFC.ingredient.heat(bloom.forgingTemp))],
+            results: [{ id: bloom.refined }]
+        }).id(`kubejs:hammering/bloom/refine_${bloom.name}`)
+        event.custom({
+            type: 'vintageimprovements:hammering',
+            hammer_blows: 3,
+            ingredients: [TFC.ingredient.and(Ingredient.of(bloom.refined), TFC.ingredient.heat(bloom.forgingTemp))],
+            results: [{ id: bloom.ingot }]
+        }).id(`kubejs:hammering/bloom/ingot_${bloom.name}`)
+    })
+
   })

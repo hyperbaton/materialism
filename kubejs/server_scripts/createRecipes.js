@@ -904,8 +904,27 @@ ServerEvents.recipes(event => {
     event.replaceInput(
       { id: 'create:crafting/kinetics/item_vault' }, // Arg 1: the filter
       'minecraft:barrel',            // Arg 2: the item to replace
-      '#tfc:barrels'         // Arg 3: the item to replace it with
+      '#c:chests'         // Arg 3: the item to replace it with
     )
+    event.replaceInput(
+      { id: 'create:crafting/kinetics/item_vault' }, // Arg 1: the filter
+      'tfc:metal/sheet/steel',            // Arg 2: the item to replace
+      'tfc_metallurgy:metal/sheet/titanium'         // Arg 3: the item to replace it with
+    )
+    // Item Vault recipe
+    event.remove({output: 'create:item_vault'})
+    event.shaped(
+        Item.of('create:item_vault', 1),
+        [
+          ' A ',
+          ' B ',
+          ' A '
+        ],
+        {
+          A: 'tfc_metallurgy:metal/sheet/titanium',
+          B: '#c:chests',
+        }
+      )
 
     // TODO: Uncomment
     // Remove all references to andesite alloy

@@ -383,4 +383,43 @@ ServerEvents.recipes(event => {
     tfcMetallurgyMeltTemps.forEach(([metal, temp]) => addMetalFormSmelting('tfc_metallurgy', metal, temp, ALL_METAL_FORMS))
     firmalifeMeltTemps.forEach(([metal, temp]) => addMetalFormSmelting('firmalife', metal, temp, ALL_METAL_FORMS))
     tfcBaseMetals.forEach(([metal, temp]) => addMetalFormSmelting('tfc', metal, temp, METAL_FORMS_WITHOUT_INGOT))
+
+    // Cold welding: like the flux welding above, but the two parts stay cold and are joined with
+    // a little liquid solder. Every live tfc:welding recipe gets one (removed ones are skipped).
+    // tfcItemsRecipes.js (loads later) removes tfc_items' duplicate double sheet welds, so skip them here.
+    const SOLDER = 'tfc_metallurgy:metal/solder'
+    function solderAmount(recipeId) {
+        if (recipeId.includes('heavy_sheet')) return 30
+        if (recipeId.includes('chestplate')) return 40
+        if (recipeId.includes('greaves') || recipeId.includes('helmet')) return 30
+        if (recipeId.includes('double_sheet') || recipeId.includes('boots') || recipeId.includes('shears')) return 20
+        return 10
+    }
+
+    // Collect first: adding recipes while iterating them is not safe
+    const welds = []
+    event.forEachRecipe({ type: 'tfc:welding' }, recipe => {
+        let id = String(recipe.getId())
+        if (recipe.removed || /^tfc_items:welding\/\w+_double_sheet$/.test(id)) return
+        let result = JSON.parse(String(recipe.json.get('result')))
+        welds.push({
+            id: id,
+            first: JSON.parse(String(recipe.json.get('first_input'))),
+            second: JSON.parse(String(recipe.json.get('second_input'))),
+            // Some mods' welding results use the old "item" key instead of "id"
+            result: { id: result.id || result.item, count: result.count || 1 }
+        })
+    })
+    welds.forEach(weld => {
+        event.custom({
+            type: 'create:compacting',
+            ingredients: [
+                weld.first,
+                weld.second,
+                { type: 'neoforge:single', fluid: SOLDER, amount: solderAmount(weld.id) }
+            ],
+            results: [weld.result]
+        }).id('kubejs:solder_welding/' + weld.id.replace(':', '/'))
+    })
+    console.info(`Solder welding: added ${welds.length} cold-weld recipes`)
 })
