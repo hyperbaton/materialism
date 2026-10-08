@@ -331,11 +331,57 @@ ServerEvents.recipes(event => {
     event.remove({ id: 'create:crafting/materials/andesite_alloy_from_block' })
 
     // --- Create 6 "Factory"/logistics blocks: TFC material swaps ---
-    // Packager & Redstone Requester: vanilla iron -> steel
-    event.replaceInput({ id: 'create:crafting/logistics/packager' },           '#c:ingots/iron', 'tfc:metal/ingot/steel')
-    event.replaceInput({ id: 'create:crafting/logistics/redstone_requester' },  '#c:ingots/iron', 'tfc:metal/ingot/steel')
-    // Stock Ticker: vanilla gold -> TFC gold
-    event.replaceInput({ id: 'create:crafting/logistics/stock_ticker' }, '#c:ingots/gold',   'tfc:metal/ingot/gold')
+    event.remove({ id: 'create:crafting/materials/transmitter' })
+    event.shaped('create:transmitter', [
+        'N',
+        'F',
+        'R'
+    ], {
+        N: 'minecraft:lightning_rod',
+        F: 'tfc_items:copper_foil',
+        R: '#c:dusts/redstone'
+    })
+
+    event.remove({ id: 'create:crafting/logistics/packager' })
+    event.shaped('create:packager', [
+        ' P ',
+        'SAS',
+        'R R'
+    ], {
+        P: 'vintageimprovements:steel_spring',
+        S: 'tfc_metallurgy:metal/sheet/aluminum',
+        A: 'create:cardboard_block',
+        R: '#c:dusts/redstone'
+    })
+
+    event.remove({ id: 'create:crafting/logistics/redstone_requester' })
+    event.shaped('create:redstone_requester', [
+        ' S ',
+        'RLR',
+        ' M '
+    ], {
+        M: 'vintageimprovements:redstone_module',
+        L: 'create:stock_link',
+        S: 'tfc:metal/sheet/steel',
+        R: 'tfc_items:steel_rivet'
+    })
+
+    event.remove({ id: 'create:crafting/logistics/stock_ticker' })
+    event.recipes.create.sequenced_assembly(
+        [Item.of('create:stock_ticker', 1)],
+        'create:brass_casing',
+        [
+            event.recipes.createDeploying('create:brass_casing', ['create:brass_casing', 'tfc_items:gold_foil']),
+            event.recipes.createDeploying('create:brass_casing', ['create:brass_casing', 'create:stock_link']),
+            event.recipes.createFilling(
+                'create:brass_casing',
+                ['create:brass_casing', Fluid.of('tfc_metallurgy:metal/solder', 20)]
+            ),
+            event.recipes.createDeploying('create:brass_casing', ['create:brass_casing', Ingredient.of('#c:glass_blocks')]),
+            event.recipes.createPressing('create:brass_casing', 'create:brass_casing')
+        ]
+    ).transitionalItem('create:brass_casing').loops(1)
+
     // Desk Bell: the hidden gold plate -> a TFC brass bell
     event.replaceInput({ id: 'create:crafting/logistics/desk_bell' }, '#c:plates/gold', 'tfc:brass_bell')
 
