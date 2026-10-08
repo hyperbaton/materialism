@@ -409,6 +409,12 @@ ServerEvents.recipes(event => {
         results: [{ id: 'create:pulp' }]
     })
 
+    event.custom({
+        type: 'createaddition:rolling',
+        ingredients: [{ item: 'create:pulp' }],
+        results: [{ id: 'tfc:unrefined_paper' }]
+    })
+
     // Package filter: zinc rods + burlap cloth (was zinc nuggets + wool)
     event.remove({ id: 'create:crafting/kinetics/package_filter' })
     event.shaped('create:package_filter', [
