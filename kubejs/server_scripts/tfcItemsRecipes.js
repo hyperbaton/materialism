@@ -51,6 +51,20 @@ ServerEvents.recipes(event => {
         'wrought_iron', 'zinc'
     ]
 
+    // Metals that have both a tfc_items ring and a chain item (the other chain metals have no ring).
+    const chainItems = {
+        bismuth_bronze: 'tfc:metal/chain/bismuth_bronze',
+        black_bronze: 'tfc:metal/chain/black_bronze',
+        black_steel: 'tfc:metal/chain/black_steel',
+        blue_steel: 'tfc:metal/chain/blue_steel',
+        bronze: 'tfc:metal/chain/bronze',
+        copper: 'tfc:metal/chain/copper',
+        red_steel: 'tfc:metal/chain/red_steel',
+        steel: 'tfc:metal/chain/steel',
+        wrought_iron: 'tfc:metal/chain/wrought_iron',
+        aluminum: 'tfc_metallurgy:metal/chain/aluminum'
+    }
+
     function addTfcItemsRecipes(metal) {
         let base = getBasePrefix(metal)
         let ingot = `${base}:metal/ingot/${metal}`
@@ -77,6 +91,21 @@ ServerEvents.recipes(event => {
             results: [{id: `tfc_items:${metal}_ring`, count: 2}],
             mode: 2
         })
+
+        // Chain: link a second ring through the first, then press the link shut.
+        // 2 rings -> 4 chains, so 1 rod (4 rings) -> 8 chains, same as the anvil's 16 per ingot.
+        let chain = chainItems[metal]
+        if (chain) {
+            let ring = `tfc_items:${metal}_ring`
+            event.recipes.create.sequenced_assembly(
+                Item.of(chain, 4),
+                ring,
+                [
+                    event.recipes.createDeploying(ring, [ring, ring]),
+                    event.recipes.createPressing(ring, ring)
+                ]
+            ).transitionalItem(ring).loops(1)
+        }
 
         // Wire: rod → 2x wire (rolling) -- only for metals with no alternative wire item
         // elsewhere; tfc_items' own native anvil recipe for those is removed further down.
