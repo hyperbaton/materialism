@@ -360,22 +360,23 @@ ServerEvents.recipes(event => {
   )
   event.remove({id: 'tfmg:casting/amogus'})
   // Galvanic cell recipe (reimplemented in materialismcore, original removed from TFMG 1.21)
-  event.shaped(
-    Item.of('materialismcore:galvanic_cell', 1),
+  // Daniell cell: porous divider and salt bridge between a zinc and a copper half-cell,
+  // sealed inside a steel casing.
+  event.recipes.create.sequenced_assembly(
+    'materialismcore:galvanic_cell',
+    'tfmg:steel_casing',
     [
-      'ABA',
-      'CDE',
-      'AFA'
-    ],
-    {
-      A: 'tfc:metal/ingot/copper',
-      B: 'vintageimprovements:copper_sulfate',
-      C: 'tfmg:steel_pipe',
-      D: 'tfmg:steel_casing',
-      E: 'tfmg:cast_iron_pipe',
-      F: 'kubejs:zinc_sulfate'
-    }
-  )
+      event.recipes.createDeploying('tfmg:steel_casing', ['tfmg:steel_casing', 'tfc:ceramic/large_vessel']),
+      event.recipes.createFilling('tfmg:steel_casing', ['tfmg:steel_casing', Fluid.of('minecraft:water', 500)]),
+      event.recipes.createDeploying('tfmg:steel_casing', ['tfmg:steel_casing', 'kubejs:zinc_sulfate']),
+      event.recipes.createDeploying('tfmg:steel_casing', ['tfmg:steel_casing', 'vintageimprovements:copper_sulfate']),
+      event.recipes.createDeploying('tfmg:steel_casing', ['tfmg:steel_casing', 'tfc:powder/salt']),
+      event.recipes.createDeploying('tfmg:steel_casing', ['tfmg:steel_casing', 'tfc:metal/rod/zinc']),
+      event.recipes.createDeploying('tfmg:steel_casing', ['tfmg:steel_casing', 'tfc:metal/rod/copper']),
+      event.recipes.createDeploying('tfmg:steel_casing', ['tfmg:steel_casing', 'createaddition:copper_wire']),
+      event.recipes.createPressing('tfmg:steel_casing', 'tfmg:steel_casing')
+    ]
+  ).transitionalItem('tfmg:steel_casing').loops(1)
   // Use TFC gravel for concrete
   event.replaceInput(
     { id: 'tfmg:mixing/liquid_concrete_from_slag' }, // Arg 1: the filter
