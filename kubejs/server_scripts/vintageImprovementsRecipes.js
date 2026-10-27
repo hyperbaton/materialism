@@ -24,6 +24,7 @@ ServerEvents.recipes(event => {
     event.remove({id: 'vintageimprovements:coiling/nethersteel_wire'})
 
     event.remove({id: /vintageimprovements:pressing\/\w+_ingot/})
+    event.remove({id: /vintageimprovements:rolling\/\w+_ingot/})
 
     event.replaceInput(
       { input: 'vintageimprovements:iron_spring' }, // Arg 1: the filter
