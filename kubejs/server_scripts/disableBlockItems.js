@@ -100,6 +100,7 @@ ServerEvents.recipes(event => {
     event.remove({output: 'minecraft:damaged_anvil'});
     event.remove({output: 'minecraft:crafter'});
     event.remove({output: 'minecraft:mace'});
+    event.remove({id: 'minecraft:white_wool_from_string'});
 
     // Disable Weather 2 recipes
     event.remove(/.*weather2.*/)
