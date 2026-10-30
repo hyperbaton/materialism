@@ -87,6 +87,24 @@ ServerEvents.recipes(event => {
     })
   })
 
+  // Trusses: a lattice of rods held together by rivets, instead of nuggets
+  const tfmgTrusses = [
+    ['aluminum', 'tfc_metallurgy'], ['brass', 'tfc'], ['cast_iron', 'tfc'],
+    ['constantan', 'tfc_metallurgy'], ['copper', 'tfc'], ['lead', 'tfc_metallurgy'],
+    ['nickel', 'tfc'], ['steel', 'tfc'], ['zinc', 'tfc']
+  ]
+  tfmgTrusses.forEach(([metal, namespace]) => {
+    event.remove({id: `tfmg:crafting/materials/${metal}_truss`})
+    event.shaped(Item.of(`tfmg:${metal}_truss`, 4), [
+        'RNR',
+        'NRN',
+        'RNR'
+    ], {
+        R: `${namespace}:metal/rod/${metal}`,
+        N: `tfc_items:${metal}_rivet`
+    })
+  })
+
   event.remove({id: 'tfmg:crafting/materials/aluminum_block_from_compacting'})
   event.shaped('tfmg:aluminum_block', [
     '###',
