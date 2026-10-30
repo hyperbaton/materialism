@@ -1047,6 +1047,29 @@ ServerEvents.recipes(event => {
       {amount: 10, id: 'tfmg:furnace_gas'}
     ]
   })
+
+  // Arc furnace (vat): same idea and yield as the blast furnace recipe above, but electric. Pig iron
+  // instead of TFMG's molten steel. It needs no hot air and gives no furnace gas, and it is faster
+  // and easier to automate, not richer.
+  event.remove({id: 'tfmg:vat_machine_recipe/arc_furnace_steel'})
+  event.custom({
+    type: 'tfmg:vat_machine_recipe',
+    allowed_vat_types: ['tfmg:firebrick_lined_vat'],
+    machines: ['tfmg:graphite_electrode', 'tfmg:graphite_electrode', 'tfmg:graphite_electrode'],
+    min_size: 9,
+    ingredients: [
+      {tag: 'materialism:powders/iron'},
+      {tag: 'materialism:powders/iron'},
+      {item: 'tfc:powder/flux'},
+      {item: 'tfmg:coal_coke_dust'}
+    ],
+    processing_time: 4,
+    results: [
+      {amount: 10, id: 'tfc:metal/pig_iron'},
+      {amount: 10, id: 'tfmg:molten_slag'},
+      {chance: 0.9, id: 'tfmg:coal_coke_dust'}
+    ]
+  })
 }
 )
 

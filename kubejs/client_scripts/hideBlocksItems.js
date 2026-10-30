@@ -615,4 +615,5 @@ RecipeViewerEvents.removeEntries('fluid', event => {
     event.remove('createbigcannons:molten_bronze')
     event.remove('createbigcannons:molten_steel')
     event.remove('createbigcannons:molten_nethersteel')
+    event.remove('tfmg:molten_steel')
 });
