@@ -116,3 +116,8 @@ ServerEvents.tags('enchantment', event => {
     event.removeAll('minecraft:tradeable')
     event.removeAll('minecraft:on_random_loot')
 })
+
+ServerEvents.tags('fluid', event => {
+  event.add('materialismcore:exhaustable', 'kubejs:oxygen')
+  event.add('materialismcore:exhaustable', 'kubejs:flowing_oxygen')
+})

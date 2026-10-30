@@ -87,7 +87,7 @@ ServerEvents.recipes(event => {
     })
   })
 
-  // Trusses: a lattice of rods held together by rivets, instead of nuggets
+  // Trusses: a lattice of rods held together by rivets
   const tfmgTrusses = [
     ['aluminum', 'tfc_metallurgy'], ['brass', 'tfc'], ['cast_iron', 'tfc'],
     ['constantan', 'tfc_metallurgy'], ['copper', 'tfc'], ['lead', 'tfc_metallurgy'],
@@ -757,6 +757,50 @@ ServerEvents.recipes(event => {
     ],
     results: [{id: 'tfmg:thermite_powder'}],
     heat_requirement: 'heated'
+  })
+
+  // Air separation: compress and cool air into liquid air, then split it in a distillation tower.
+  event.custom({
+    type: 'vintageimprovements:pressurizing',
+    ingredients: [
+      {type: 'neoforge:single', amount: 1000, fluid: 'tfmg:air'}
+    ],
+    secondary_fluid_input: {id: 'tfmg:cooling_fluid', amount: 100},
+    results: [{id: 'kubejs:liquid_air', amount: 200}],
+    processing_time: 400
+  })
+  // Layers fill bottom to top, from the highest to the lowest boiling point
+  event.custom({
+    type: 'tfmg:distillation',
+    ingredients: [
+      {type: 'neoforge:single', amount: 200, fluid: 'kubejs:liquid_air'}
+    ],
+    results: [
+      {amount: 6, id: 'tfmg:carbon_dioxide'},
+      {amount: 44, id: 'kubejs:oxygen'},
+      {amount: 148, id: 'kubejs:nitrogen'},
+      {amount: 2, id: 'tfmg:neon'}
+    ]
+  })
+
+  // High alloy steel
+  event.custom({
+    type: 'tfmg:vat_machine_recipe',
+    allowed_vat_types: ['tfmg:firebrick_lined_vat'],
+    machines: ['tfmg:graphite_electrode', 'tfmg:graphite_electrode', 'tfmg:graphite_electrode'],
+    min_size: 9,
+    ingredients: [
+      {type: 'neoforge:single', amount: 200, fluid: 'tfc:metal/weak_steel'},
+      {type: 'neoforge:single', amount: 40, fluid: 'firmalife:metal/chromium'},
+      {type: 'neoforge:single', amount: 40, fluid: 'tfc_metallurgy:metal/molybdenum'},
+      {type: 'neoforge:single', amount: 20, fluid: 'kubejs:nitrogen'},
+      {item: 'tfc_metallurgy:metal/dust/vanadium'},
+      {item: 'tfc_metallurgy:metal/dust/manganese'},
+      {item: 'tfc_metallurgy:metal/dust/cobalt'},
+      {item: 'tfc_metallurgy:metal/dust/niobium'}
+    ],
+    processing_time: 600,
+    results: [{amount: 300, id: 'tfc_metallurgy:metal/high_alloy_steel'}]
   })
 
   // Tungsten carbide
