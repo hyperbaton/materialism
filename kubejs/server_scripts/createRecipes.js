@@ -2,15 +2,14 @@ ServerEvents.recipes(event => {
 
     // Remove unnecesary recipes
     event.remove({id: 'create:crafting/kinetics/fluid_tank'})
-    // Re-add fluid tank with TFC materials (needed as an ingredient elsewhere, e.g. locometal
-    // boilers) -- same layout as the original recipe: 2 copper plates + 1 wooden barrel.
+    // Re-add fluid tank with TFC materials
     event.shaped('create:fluid_tank', [
         'B',
         'C',
         'B'
     ], {
         B: 'tfc:metal/sheet/copper',
-        C: '#tfc:barrels'
+        C: 'minecraft:glass_pane'
     })
 
     // Shaped recipes

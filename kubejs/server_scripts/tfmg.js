@@ -69,15 +69,23 @@ ServerEvents.recipes(event => {
 
   event.replaceInput({}, 'tfmg:industrial_aluminum_casing', 'tfmg:steel_casing')
 
-  event.remove({id: 'tfmg:crafting/materials/cast_iron_fluid_tank'})
-  event.shaped('tfmg:cast_iron_fluid_tank', [
+  // Fluid tanks: metal frame with glass sides
+  const tfmgTanks = [
+    ['cast_iron', 'tfc:metal/sheet/cast_iron'],
+    ['aluminum', 'tfc_metallurgy:metal/sheet/aluminum'],
+    ['steel', 'tfc:metal/sheet/steel']
+  ]
+  tfmgTanks.forEach(([metal, sheet]) => {
+    event.remove({id: `tfmg:crafting/materials/${metal}_fluid_tank`})
+    event.shaped(`tfmg:${metal}_fluid_tank`, [
         'B',
         'C',
         'B'
     ], {
-        B: 'tfc:metal/sheet/cast_iron',
-        C: '#tfc:barrels'
+        B: sheet,
+        C: 'minecraft:glass_pane'
     })
+  })
 
   event.remove({id: 'tfmg:crafting/materials/aluminum_block_from_compacting'})
   event.shaped('tfmg:aluminum_block', [
@@ -869,22 +877,20 @@ ServerEvents.recipes(event => {
 
   // Blast furnace reinforcement
   event.remove({id: 'tfmg:crafting/materials/blast_furnace_reinforcement'})
-  {
-    const transitional = 'kubejs:incomplete_blast_furnace_reinforcement'
-    event.recipes.create.sequenced_assembly(
-      ['2x tfmg:blast_furnace_reinforcement'],
-      'tfmg:fireproof_bricks',
-      [
-        event.recipes.createDeploying(transitional, [transitional, 'tfc_items:steel_heavy_sheet']),
-        event.recipes.createDeploying(transitional, [transitional, 'tfc_items:steel_rivet']),
-        event.recipes.createDeploying(transitional, [transitional, 'tfc_items:steel_rivet']),
-        event.recipes.createDeploying(transitional, [transitional, 'tfc_items:steel_rivet']),
-        event.recipes.createDeploying(transitional, [transitional, 'tfc_items:steel_rivet']),
-        event.recipes.createPressing(transitional, transitional),
-        event.recipes.createFilling(transitional, [transitional, Fluid.of('tfmg:creosote', 1000)])
-      ]
-    ).transitionalItem(transitional)
-  }
+  const reinforcementTransitional = 'kubejs:incomplete_blast_furnace_reinforcement'
+  event.recipes.create.sequenced_assembly(
+    ['2x tfmg:blast_furnace_reinforcement'],
+    'tfmg:fireproof_bricks',
+    [
+      event.recipes.createDeploying(reinforcementTransitional, [reinforcementTransitional, 'tfc_items:steel_heavy_sheet']),
+      event.recipes.createDeploying(reinforcementTransitional, [reinforcementTransitional, 'tfc_items:steel_rivet']),
+      event.recipes.createDeploying(reinforcementTransitional, [reinforcementTransitional, 'tfc_items:steel_rivet']),
+      event.recipes.createDeploying(reinforcementTransitional, [reinforcementTransitional, 'tfc_items:steel_rivet']),
+      event.recipes.createDeploying(reinforcementTransitional, [reinforcementTransitional, 'tfc_items:steel_rivet']),
+      event.recipes.createPressing(reinforcementTransitional, reinforcementTransitional),
+      event.recipes.createFilling(reinforcementTransitional, [reinforcementTransitional, Fluid.of('tfmg:creosote', 1000)])
+    ]
+  ).transitionalItem(reinforcementTransitional)
 
   // Early/mid-game lubrication oil, so it is available before oil is drilled
   event.custom({
