@@ -191,47 +191,37 @@ ServerEvents.recipes(event => {
 
   // Remove the existing recipe for carbon brushes
   event.remove({ id: 'create_new_age:shaped/carbon_brushes' });
+  // Carbon brushes, following the real manufacturing process: graphite and copper powder with a
+  // copper shunt wire are pressed in a die (the steel casing) into a green brush, sintered at
+  // ~1200 degrees, then ground to size. The finished brushes are mounted around a rotor coil
+  // with a spring-loaded holder.
   event.recipes.create.sequenced_assembly(
       [
           Item.of('create_new_age:carbon_brushes', 1)
       ],
-      // Input item
-      'tfmg:coal_coke_block',
+      'tfmg:steel_casing',
       [
-          event.recipes.createDeploying(
-              'tfmg:coal_coke_block',
-              ['tfmg:coal_coke_block', 'create:shaft']
-          ),
-          event.recipes.createPressing('tfmg:coal_coke_block', 'tfmg:coal_coke_block'),
+          event.recipes.createDeploying('tfmg:steel_casing', ['tfmg:steel_casing', 'tfc_metallurgy:metal/block/graphite']),
+          event.recipes.createDeploying('tfmg:steel_casing', ['tfmg:steel_casing', 'kubejs:metal/dust/copper']),
+          event.recipes.createDeploying('tfmg:steel_casing', ['tfmg:steel_casing', 'createaddition:copper_wire']),
+          event.recipes.createPressing('tfmg:steel_casing', 'tfmg:steel_casing'),
+          event.recipes.vintageimprovements.pressurizing('tfmg:steel_casing', 'tfmg:steel_casing').superheated(),
+          event.recipes.vintageimprovements.polishing('tfmg:steel_casing', 'tfmg:steel_casing'),
+          event.recipes.createDeploying('tfmg:steel_casing', ['tfmg:steel_casing', 'vintageimprovements:cobalt_spring']),
+          event.recipes.createDeploying('tfmg:steel_casing', ['tfmg:steel_casing', 'tfmg:electromagnetic_coil']),
+          event.recipes.createDeploying('tfmg:steel_casing', ['tfmg:steel_casing', 'create:shaft']),
           event.custom({
             type: 'create_new_age:energising',
             energy_needed: 5000,
             ingredients: [
-              { item: 'tfmg:coal_coke_block'},
+              { item: 'tfmg:steel_casing'},
             ],
             results: [
-              { id: 'tfmg:coal_coke_block'},
+              { id: 'tfmg:steel_casing'},
             ]
-          }),
-          event.recipes.createDeploying(
-              'tfmg:coal_coke_block',
-              ['tfmg:coal_coke_block', 'tfc:metal/sheet/steel']
-          ),
-          event.recipes.createDeploying(
-              'tfmg:coal_coke_block',
-              ['tfmg:coal_coke_block', 'tfc:metal/sheet/steel']
-          ),
-          event.recipes.createDeploying(
-              'tfmg:coal_coke_block',
-              ['tfmg:coal_coke_block', 'tfc:metal/rod/steel']
-          ),
-          event.recipes.createDeploying(
-              'tfmg:coal_coke_block',
-              ['tfmg:coal_coke_block', 'tfc:metal/rod/steel']
-          ),
-          event.recipes.createPressing('tfmg:coal_coke_block', 'tfmg:coal_coke_block')
+          })
       ]
-    ).transitionalItem('tfmg:coal_coke_block')
+    ).transitionalItem('tfmg:steel_casing')
     .loops(1);
 
     // Advanced energizer recipes
