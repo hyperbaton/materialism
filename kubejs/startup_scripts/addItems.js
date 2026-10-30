@@ -10,6 +10,8 @@ StartupEvents.registry('item', event => {
     event.create('powder/neodymium').maxStackSize(16)
     event.create('lithium_battery_core').maxStackSize(16)
     event.create('zinc_sulfate').maxStackSize(16).displayName('Zinc Sulfate')
+    // TFC Metallurgy only adds dusts for its own metals; this one fills the gap for copper
+    event.create('metal/dust/copper').displayName('Copper Dust')
     event.create('powder/zinc').maxStackSize(16)
     event.create('powder/monazite').maxStackSize(16)
     event.create('powder/uraninite').maxStackSize(16)

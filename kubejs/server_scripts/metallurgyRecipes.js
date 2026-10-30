@@ -64,6 +64,44 @@ ServerEvents.recipes(event => {
       results: [{id: 'tfc_metallurgy:metal/uranium', amount: 5}, {id: 'tfmg:molten_slag', amount: 1}],
       processing_time: 2000
     })
+    // Copper dust (TFC Metallurgy only adds dusts for its own metals)
+    event.custom({
+        type: 'tfc:quern',
+        ingredient: { tag: 'c:ingots/copper' },
+        result: { id: 'kubejs:metal/dust/copper', count: 20 }
+    })
+    event.custom({
+        type: 'create:crushing',
+        ingredients: [{ tag: 'c:ingots/copper' }],
+        results: [{ id: 'kubejs:metal/dust/copper', count: 20 }],
+        processing_time: 100
+    })
+    event.custom({
+        type: 'tfc:heating',
+        ingredient: { tag: 'c:dusts/copper' },
+        result_fluid: { id: 'tfc:metal/copper', amount: 5 },
+        temperature: 1080,
+        use_durability: false
+    })
+
+    // Create crushing for TFC Metallurgy's dusts too, mirroring its quern recipes (1 ingot -> 20 dust)
+    const metallurgyDusts = [
+        'alnico', 'aluminum', 'andesite_alloy', 'antimony', 'beryllium', 'beryllium_copper', 'blutonium',
+        'boron', 'cobalt', 'compressed_iron', 'constantan', 'electrum', 'enderium', 'ferroboron',
+        'florentine_bronze', 'graphite', 'high_alloy_steel', 'invar', 'iridium', 'lead', 'lithium', 'lumium',
+        'magnesium', 'manganese', 'mithril', 'molybdenum', 'neodymium', 'nickel_silver', 'niobium',
+        'osmiridium', 'osmium', 'pewter', 'pink_slime', 'platinum', 'refined_glowstone', 'refined_obsidian',
+        'signalum', 'solder', 'tantalum', 'thorium', 'titanium', 'tungsten', 'tungsten_steel', 'uranium',
+        'vanadium', 'zircaloy', 'zirconium'
+    ]
+    metallurgyDusts.forEach(metal => {
+        event.custom({
+            type: 'create:crushing',
+            ingredients: [{ tag: `c:ingots/${metal}` }],
+            results: [{ id: `tfc_metallurgy:metal/dust/${metal}`, count: 20 }],
+            processing_time: 100
+        })
+    })
     
     // Crushing magnesite
     event.recipes.create.crushing('1x tfcvolcanoes:mineral/powder/magnesite', 'tfcvolcanoes:mineral/magnesite')
