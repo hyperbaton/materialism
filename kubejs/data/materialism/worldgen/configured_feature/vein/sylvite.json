@@ -1,7 +1,7 @@
 {
   "type": "tfc:disc_vein",
   "config": {
-    "rarity": 6000,
+    "rarity": 5000,
     "density": 0.45,
     "min_y": 30,
     "max_y": 100,
