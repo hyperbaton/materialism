@@ -1,21 +1,21 @@
 {
-  "name": "Building Houses",
+  "name": "Reading Building Requirements",
   "category": "tfc:materialism_society",
   "icon": "tfc:wood/planks/oak",
   "sortnum": 40,
+  "read_by_default": true,
   "pages": [
     {
       "type": "patchouli:text",
-      "text": "Every citizen needs a $(thing)home$(0) suited to its class. A newcomer is content with a rough shelter; a higher class expects a larger, better-appointed house before it will call the place home.$(br2)Because homes are per-class, upgrading a citizen means upgrading its housing too — build a little finer each time someone is ready to rise."
+      "text": "Every class has its own kind of home, and each culture has shared buildings too. Their entries give a short $(thing)recipe$(0), not a blueprint: there is no fixed design, only a few rules your build has to satisfy.$(br2)$(thing)Marker block$(0): the block that identifies the structure. Place it inside the build.$(br2)$(thing)Interior$(0): the free space needed inside. Sizes are approximate; build bigger if you like."
     },
     {
       "type": "patchouli:text",
-      "text": "A home only has to meet its class's $(thing)requirements$(0) — the size and comforts that class expects. You can stick to those rules and keep houses as simple as possible if you like.$(br2)But you are always free to $(thing)decorate$(0)! Add any details you please over the required blocks — flourishes never hurt a home, and a lovingly built city is its own reward."
+      "text": "$(thing)Floor, Walls, Roof$(0): the materials the build must contain. Where several are listed, include all of them. Woods are listed by the species the culture favours.$(br2)$(thing)Inside$(0): furnishings that must be present, such as a chest, a table or 2+ chairs.$(br2)$(thing)Light$(0): how much of the floor must be lit, and to what level.$(br2)$(thing)Serves$(0): how many citizens can use a shared building at once."
     },
     {
       "type": "patchouli:text",
-      "text": "$(italic)Housing specifics — exact room sizes and required fittings per class — will be documented here once the structures are finalised.$(0)"
+      "text": "Taller homes list $(thing)storeys$(0) and apply their rules to each one. Fenced plots such as farms need a border of fences and a gate. A $(thing)plaza$(0) or similar compound must sit under the open sky and have other buildings close by.$(br2)Beyond the required blocks you are free to $(thing)decorate$(0). Flourishes never hurt a home, and a lovingly built city is its own reward."
     }
-  ],
-  "read_by_default": true
+  ]
 }

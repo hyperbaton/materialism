@@ -2,16 +2,16 @@
   "name": "Kernite",
   "category": "tfc:materialism_ore_generation",
   "icon": "tfc_metallurgy:ore/poor_kernite/shale",
-  "sortnum": 190,
+  "sortnum": 200,
   "read_by_default": true,
   "pages": [
     {
       "type": "patchouli:text",
-      "text": "$(bold)Kernite$(0)$(br2)$(thing)Rocks:$(0) sedimentary$(br2)$(li)$(thing)Deep band:$(0) Y -40 to 40, very rare"
+      "text": "$(bold)Kernite$(0)$(br2)$(thing)Contains:$(0) Kernite$(br2)$(thing)Host rock:$(0) sedimentary"
     },
     {
       "type": "patchouli:text",
-      "text": "$(thing)Surface sample:$(0) Yes — small surface samples mark a vein below.$(br2)Strike exposed host rock with a Prospector's Pick to close in on the vein."
+      "text": "$(thing)Where to dig$(0)$(br2)$(li)$(thing)Deep band:$(0) Y -20 to 50, very rare (1 per 8,000 chunks)$(br)Large vein, moderately dense; marked by surface samples"
     }
   ]
 }

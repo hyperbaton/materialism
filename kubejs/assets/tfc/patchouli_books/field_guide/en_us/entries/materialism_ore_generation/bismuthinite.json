@@ -7,11 +7,11 @@
   "pages": [
     {
       "type": "patchouli:text",
-      "text": "$(bold)Bismuthinite$(0)$(br2)$(thing)Rocks:$(0) igneous extrusive (tuff); sedimentary$(br2)$(li)$(thing)Surface band:$(0) Y 40 to 130, common$(br)$(li)$(thing)Deep band:$(0) Y -45 to 45, very rare"
+      "text": "$(bold)Bismuthinite$(0)$(br2)$(thing)Contains:$(0) Bismuthinite$(br2)$(thing)Host rock:$(0) igneous extrusive (tuff); sedimentary"
     },
     {
       "type": "patchouli:text",
-      "text": "$(thing)Surface sample:$(0) Yes — small surface samples mark a vein below.$(br2)Strike exposed host rock with a Prospector's Pick to close in on the vein."
+      "text": "$(thing)Where to dig$(0)$(br2)$(li)$(thing)Surface band:$(0) Y 40 to 130, very common (1 per 40 chunks)$(br)Tiny vein, moderately dense; marked by surface samples$(br2)$(li)$(thing)Deep band:$(0) Y 0 to 45, very rare (1 per 7,333 chunks)$(br)Very large vein, dense; marked by surface samples"
     }
   ]
 }

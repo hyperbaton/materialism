@@ -1,21 +1,21 @@
 {
-  "name": "Cultures & Vocations",
+  "name": "Cultures & Classes",
   "category": "tfc:materialism_society",
   "icon": "minecraft:emerald",
   "sortnum": 0,
+  "read_by_default": true,
   "pages": [
     {
       "type": "patchouli:text",
-      "text": "Your people belong to $(thing)cultures$(0), each shaped by the climate it calls home. A culture decides the food, dress and comforts its people expect, and the ladder of $(thing)social classes$(0) they climb.$(br2)There are six cultures: $(thing)Desert$(0), $(thing)Steppe$(0), $(thing)Temperate$(0), $(thing)Subarctic$(0), $(thing)Mountain$(0) and $(thing)Tropical$(0).$(br2)$(italic)Design in progress — details may change.$(0)"
+      "text": "Your people belong to $(thing)cultures$(0), each shaped by the climate it calls home: $(thing)Temperate$(0), $(thing)Subarctic$(0), $(thing)Desert$(0), $(thing)Tropical$(0), $(thing)Steppe$(0) and $(thing)Mountain$(0).$(br2)Every culture has its own ladder of eight $(thing)classes$(0), with its own foods, clothes, buildings and rites. Class measures $(thing)wealth and comfort$(0), not your tech era: even a stone-age settlement can raise elites, if you can supply the luxuries."
     },
     {
       "type": "patchouli:text",
-      "text": "Each culture is bound to its $(thing)environment$(0). A citizen has standing needs for the right $(thing)altitude$(0), $(thing)temperature$(0) and $(thing)rainfall$(0) — a Desert people wants heat and dry air; a Subarctic one wants the cold. Settle a culture where it belongs, or its people will never be content.$(br2)Within a culture, citizens follow $(thing)vocations$(0) — the culture-specific trades that colour the middle of the class ladder before it converges on a shared elite."
+      "text": "Each ladder is a $(thing)diamond$(0).$(br2)Everyone starts as a $(thing)newcomer$(0) and becomes a $(thing)worker$(0). Workers branch into three $(thing)specialists$(0): a defender, a maker and a keeper of rites and remedies. Specialists rise into two $(thing)elites$(0), and the elites into a single $(thing)leader$(0).$(br2)Each step up needs the citizen to $(thing)aspire$(0) to that path, which usually means handing it a particular item, such as a sword, a saw or a silver ingot."
     },
     {
       "type": "patchouli:text",
-      "text": "A culture's ladder forms a $(thing)diamond$(0): everyone starts in a common newcomer class, branches into two or three vocations as they prosper, then the most successful reconverge into rare elite and pinnacle classes.$(br2)Crucially, class is $(thing)not$(0) tied to your tech era. It measures $(thing)wealth and comfort$(0), so even a stone-age settlement can raise elites — it just takes patient, labour-intensive luxuries."
+      "text": "Each culture has its own section in this chapter, with an overview, one entry per class and a guide to its community buildings:$(br2)$(li)$(l:tfc:materialism_society_temperate/overview)Temperate$(0)$(br)$(li)$(l:tfc:materialism_society_subarctic/overview)Subarctic$(0)$(br)$(li)$(l:tfc:materialism_society_desert/overview)Desert$(0)$(br)$(li)$(l:tfc:materialism_society_tropical/overview)Tropical$(0)$(br)$(li)$(l:tfc:materialism_society_steppe/overview)Steppe$(0)$(br)$(li)$(l:tfc:materialism_society_mountain/overview)Mountain$(0)"
     }
-  ],
-  "read_by_default": true
+  ]
 }

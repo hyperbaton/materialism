@@ -1,17 +1,17 @@
 {
-  "name": "Shared Infrastructure",
+  "name": "Community Buildings",
   "category": "tfc:materialism_society",
   "icon": "minecraft:beacon",
   "sortnum": 30,
+  "read_by_default": true,
   "pages": [
     {
       "type": "patchouli:text",
-      "text": "Individual homes stay $(thing)simple$(0). The builds that make a city breathe are its $(thing)shared works$(0) — workshops, taverns, bathhouses, monuments — that many citizens draw on at once.$(br2)A shared structure serves up to a set number of $(thing)users$(0), so as your population grows you raise more of them. Infrastructure scales with people, not with any one citizen."
+      "text": "Homes stay simple. The builds that make a city breathe are its $(thing)shared works$(0): halls, taverns, libraries, shrines, plazas, workshops and the yards where jobs are done. Many citizens use them at once, so as your population grows you raise more of them.$(br2)Each culture dresses them in its own materials. Pick your culture to see its buildings:"
     },
     {
       "type": "patchouli:text",
-      "text": "This is where your effort as a builder pays off. A grand tavern that satisfies a drink need for many citizens, or a monument that lifts the ambience of a whole quarter, does far more for your society than decorating one house.$(br2)Aim for a handful of impressive communal buildings surrounded by modest homes — a real town silhouette, and the most efficient path to a contented, climbing population."
+      "text": "$(li)$(l:tfc:materialism_society_temperate/buildings)Temperate$(0)$(br)$(li)$(l:tfc:materialism_society_subarctic/buildings)Subarctic$(0)$(br)$(li)$(l:tfc:materialism_society_desert/buildings)Desert$(0)$(br)$(li)$(l:tfc:materialism_society_tropical/buildings)Tropical$(0)$(br)$(li)$(l:tfc:materialism_society_steppe/buildings)Steppe$(0)$(br)$(li)$(l:tfc:materialism_society_mountain/buildings)Mountain$(0)$(br2)Farms, quarries and pastures are the same everywhere: see $(l:tfc:materialism_society/shared_workplaces)Shared Workplaces$(0)."
     }
-  ],
-  "read_by_default": true
+  ]
 }

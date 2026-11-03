@@ -2,16 +2,16 @@
   "name": "Malachite",
   "category": "tfc:materialism_ore_generation",
   "icon": "tfc:ore/poor_malachite/marble",
-  "sortnum": 250,
+  "sortnum": 260,
   "read_by_default": true,
   "pages": [
     {
       "type": "patchouli:text",
-      "text": "$(bold)Malachite$(0)$(br2)$(thing)Rocks:$(0) sedimentary (limestone, chalk, dolomite); metamorphic (marble)$(br2)$(li)$(thing)Surface band:$(0) Y 40 to 130, common$(br)$(li)$(thing)Deep band:$(0) Y -160 to -50, very rare"
+      "text": "$(bold)Malachite$(0)$(br2)$(thing)Contains:$(0) Malachite$(br2)$(thing)Host rock:$(0) sedimentary (limestone, chalk, dolomite); metamorphic (marble)"
     },
     {
       "type": "patchouli:text",
-      "text": "$(thing)Surface sample:$(0) Yes — small surface samples mark a vein below.$(br2)Strike exposed host rock with a Prospector's Pick to close in on the vein."
+      "text": "$(thing)Where to dig$(0)$(br2)$(li)$(thing)Surface band:$(0) Y 40 to 130, very common (1 per 40 chunks)$(br)Tiny vein, sparse; marked by surface samples$(br2)$(li)$(thing)Deep band:$(0) Y -20 to 50, very rare (1 per 7,333 chunks)$(br)Very large vein, dense; marked by surface samples"
     }
   ]
 }

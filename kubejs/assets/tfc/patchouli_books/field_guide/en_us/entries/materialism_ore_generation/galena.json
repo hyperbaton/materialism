@@ -2,16 +2,16 @@
   "name": "Galena",
   "category": "tfc:materialism_ore_generation",
   "icon": "tfc:ore/normal_native_silver/shale",
-  "sortnum": 130,
+  "sortnum": 140,
   "read_by_default": true,
   "pages": [
     {
       "type": "patchouli:text",
-      "text": "$(bold)Galena$(0)$(br2)$(thing)Rocks:$(0) sedimentary$(br2)$(li)$(thing)Deep band:$(0) Y -40 to 40, very rare"
+      "text": "$(bold)Galena$(0)$(br2)$(thing)Contains:$(0) Native Silver, Galena$(br2)$(thing)Host rock:$(0) sedimentary"
     },
     {
       "type": "patchouli:text",
-      "text": "$(thing)Surface sample:$(0) Yes — small surface samples mark a vein below.$(br2)Strike exposed host rock with a Prospector's Pick to close in on the vein."
+      "text": "$(thing)Where to dig$(0)$(br2)$(li)$(thing)Deep band:$(0) Y -20 to 50, very rare (1 per 8,333 chunks)$(br)Very large vein, dense; marked by surface samples"
     }
   ]
 }

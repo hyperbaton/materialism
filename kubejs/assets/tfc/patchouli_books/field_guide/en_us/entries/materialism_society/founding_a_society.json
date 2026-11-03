@@ -1,21 +1,21 @@
 {
-  "name": "Founding & Growing a Society",
+  "name": "Founding & Growing",
   "category": "tfc:materialism_society",
   "icon": "minecraft:bell",
   "sortnum": 20,
+  "read_by_default": true,
   "pages": [
     {
       "type": "patchouli:text",
-      "text": "A society begins when a culture's people take root in the right climate. Newcomer citizens arrive on their own where conditions suit them; meet their basic needs — shelter, warmth, water and simple food — and they will settle and, in time, multiply.$(br2)From that base you grow $(thing)outward and upward$(0): a wider population, and citizens climbing into richer classes."
+      "text": "A society begins when a culture's people take root in the right climate. Only the $(thing)newcomer$(0) class arrives on its own; every other class is reached by rising through the ladder. Meet their basic needs and they will settle and, in time, have children.$(br2)Elites and leaders never have children of their own. They are $(thing)made, not born$(0): your settlement must keep raising them from below."
     },
     {
       "type": "patchouli:text",
-      "text": "Think at $(thing)city scale$(0). A single player can support dozens to a couple of hundred citizens, so plan for a town, not a hamlet.$(br2)Their $(thing)jobs are flavour$(0), not industry — a citizen at a workbench is there for life and colour, not to fill your chests. Your economy still comes from your own hands and machines; the society is the world those efforts build."
+      "text": "Citizens also $(thing)work$(0). Each class entry lists its jobs and the building each one needs, so a farmer wants a farm, a miller a mill, a guard a weapon. Build the workplaces before you hope to see the jobs filled, and plan your quarter around them.$(br2)Think at $(thing)city scale$(0): dozens to a couple of hundred citizens, with many modest homes and a handful of impressive shared buildings."
     },
     {
       "type": "patchouli:text",
-      "text": "Managing a society is really about $(thing)supply$(0). Each step up the ladder asks for finer goods, so a thriving city needs steady production of aged drinks, cheeses, prepared meals and fine furnishings.$(br2)Keep the pyramid in mind: raise the comforts of your base first, and the caps will let a proportional number rise to the top."
+      "text": "Each culture's officiants hold $(thing)rites$(0): gatherings in a hall, shrine or plaza that citizens want held nearby. A rite consumes offerings that you supply, and the offerings are listed on the culture's overview. The bigger your settlement, the more rites you will want held, and the more you will need to produce."
     }
-  ],
-  "read_by_default": true
+  ]
 }

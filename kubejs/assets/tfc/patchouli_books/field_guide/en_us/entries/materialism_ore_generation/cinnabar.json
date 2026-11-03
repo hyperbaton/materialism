@@ -7,11 +7,11 @@
   "pages": [
     {
       "type": "patchouli:text",
-      "text": "$(bold)Cinnabar$(0)$(br2)$(thing)Rocks:$(0) metamorphic (quartzite, phyllite, gneiss, schist)$(br2)$(li)$(thing)Vein:$(0) Y -100 to 0, very rare"
+      "text": "$(bold)Cinnabar$(0)$(br2)$(thing)Contains:$(0) Cinnabar$(br2)$(thing)Host rock:$(0) metamorphic (quartzite, phyllite, gneiss, schist)"
     },
     {
       "type": "patchouli:text",
-      "text": "$(thing)Surface sample:$(0) No surface sample; prospect with a pick.$(br2)Strike exposed host rock with a Prospector's Pick to close in on the vein."
+      "text": "$(thing)Where to dig$(0)$(br2)$(li)$(thing)Vein:$(0) Y -60 to 30, very rare (1 per 8,333 chunks)$(br)Large vein, dense; marked by surface samples"
     }
   ]
 }

@@ -2,16 +2,16 @@
   "name": "Magnetite",
   "category": "tfc:materialism_ore_generation",
   "icon": "tfc:ore/poor_magnetite/shale",
-  "sortnum": 240,
+  "sortnum": 250,
   "read_by_default": true,
   "pages": [
     {
       "type": "patchouli:text",
-      "text": "$(bold)Magnetite$(0)$(br2)$(thing)Rocks:$(0) igneous extrusive (tuff); sedimentary$(br2)$(li)$(thing)Surface band:$(0) Y 10 to 90, uncommon$(br)$(li)$(thing)Deep band:$(0) Y -45 to 45, very rare"
+      "text": "$(bold)Magnetite$(0)$(br2)$(thing)Contains:$(0) Magnetite$(br2)$(thing)Host rock:$(0) igneous extrusive (tuff); sedimentary"
     },
     {
       "type": "patchouli:text",
-      "text": "$(thing)Surface sample:$(0) Yes — small surface samples mark a vein below.$(br2)Strike exposed host rock with a Prospector's Pick to close in on the vein."
+      "text": "$(thing)Where to dig$(0)$(br2)$(li)$(thing)Surface band:$(0) Y 10 to 90, common (1 per 90 chunks)$(br)Tiny vein, moderately dense; marked by surface samples$(br2)$(li)$(thing)Deep band:$(0) Y -20 to 50, very rare (1 per 8,333 chunks)$(br)Huge vein, dense; marked by surface samples"
     }
   ]
 }

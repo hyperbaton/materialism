@@ -1,21 +1,21 @@
 {
-  "name": "Classes, Needs & Happiness",
+  "name": "Needs & Upkeep",
   "category": "tfc:materialism_society",
   "icon": "minecraft:cake",
   "sortnum": 10,
+  "read_by_default": true,
   "pages": [
     {
       "type": "patchouli:text",
-      "text": "Every citizen carries a list of $(thing)needs$(0): a home, heating, clothing, drink and food, on top of the climate they require. The more of its needs a citizen has met, the higher its $(thing)happiness$(0) climbs.$(br2)Sustained happiness is what lets a citizen $(thing)advance$(0) to the next class — and a citizen whose needs go unmet will slide back down again."
+      "text": "Every citizen has $(thing)needs$(0), and a class entry lists what its members expect: a $(thing)home$(0) built for that class, $(thing)food$(0) and $(thing)drink$(0), $(thing)clothing$(0), a heat source and good light, visits to places like the tavern, and $(thing)rites$(0) held nearby. Higher classes add finer foods, aged drinks, jewels, silk, books, pets and even electricity.$(br2)Most of these are goods $(thing)you$(0) must produce and stock."
     },
     {
       "type": "patchouli:text",
-      "text": "Advancement is a $(thing)luxury$(0) axis. Compare a Desert $(thing)Wayfarer$(0) — burlap clothes, plain water, oat flatbread — with a Desert $(thing)Trade Lord$(0): silk garments, rum, fresh feta, and smoked meats.$(br2)Higher classes demand labour-intensive TFC and FirmaLife goods — aged drinks, aged cheeses, elaborate meals — plus ambience like fine lighting and decoration. A few of the very top tiers also want small comforts such as piped water."
+      "text": "A satisfied citizen is content, and a content citizen can rise when it aspires to the next path. A citizen whose basics go neglected, such as home, drink or food, slides back down a class.$(br2)Raise the comforts of your base first. Elites and leaders ask for a great deal, and they are only worth having if your economy can keep them supplied."
     },
     {
       "type": "patchouli:text",
-      "text": "Society is a $(thing)pyramid$(0). A class can require that only so much of your population sits at or above it — elites are capped at roughly a tenth, pinnacle classes at a sliver. You cannot make everyone a lord; you must grow a broad base to support a narrow top.$(br2)These are $(thing)ratios$(0) only — citizens do not need to stand near one another, so your city can sprawl as wide as you like."
+      "text": "Some things take care of themselves and are not repeated in each class entry: the $(thing)climate$(0) a culture needs (shown on its overview), sleep, chatting with neighbours, and idle pastimes.$(br2)A few pleasures give a lift without ever being required: music, festivals, the sound of bells, a feeling of homeland."
     }
-  ],
-  "read_by_default": true
+  ]
 }

@@ -7,11 +7,11 @@
   "pages": [
     {
       "type": "patchouli:text",
-      "text": "$(bold)Cassiterite$(0)$(br2)$(thing)Rocks:$(0) igneous intrusive$(br2)$(li)$(thing)Surface band:$(0) Y 80 to 180, very common$(br)$(li)$(thing)Deep band:$(0) Y -170 to -50, very rare"
+      "text": "$(bold)Cassiterite$(0)$(br2)$(thing)Contains:$(0) Cassiterite$(br2)$(thing)Host rock:$(0) igneous intrusive"
     },
     {
       "type": "patchouli:text",
-      "text": "$(thing)Surface sample:$(0) Yes — small surface samples mark a vein below.$(br2)Strike exposed host rock with a Prospector's Pick to close in on the vein."
+      "text": "$(thing)Where to dig$(0)$(br2)$(li)$(thing)Surface band:$(0) Y 80 to 180, very common (1 per 30 chunks)$(br)Tiny vein, moderately dense; marked by surface samples$(br2)$(li)$(thing)Deep band:$(0) Y -100 to 0, very rare (1 per 6,667 chunks)$(br)Very large vein, dense; marked by surface samples"
     }
   ]
 }

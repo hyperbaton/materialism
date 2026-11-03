@@ -7,11 +7,11 @@
   "pages": [
     {
       "type": "patchouli:text",
-      "text": "$(bold)Bertrandite$(0)$(br2)$(thing)Rocks:$(0) igneous extrusive (rhyolite, basalt, andesite, dacite); igneous intrusive$(br2)$(li)$(thing)Deep band:$(0) Y -170 to -50, very rare"
+      "text": "$(bold)Bertrandite$(0)$(br2)$(thing)Contains:$(0) Bertrandite$(br2)$(thing)Host rock:$(0) igneous extrusive (rhyolite, basalt, andesite, dacite); igneous intrusive"
     },
     {
       "type": "patchouli:text",
-      "text": "$(thing)Surface sample:$(0) Yes — small surface samples mark a vein below.$(br2)Strike exposed host rock with a Prospector's Pick to close in on the vein."
+      "text": "$(thing)Where to dig$(0)$(br2)$(li)$(thing)Deep band:$(0) Y -170 to -10, very rare (1 per 8,333 chunks)$(br)Large vein, moderately dense; marked by surface samples"
     }
   ]
 }

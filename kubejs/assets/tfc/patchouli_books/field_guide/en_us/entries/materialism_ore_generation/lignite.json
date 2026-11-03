@@ -2,16 +2,16 @@
   "name": "Lignite",
   "category": "tfc:materialism_ore_generation",
   "icon": "tfc:lignite",
-  "sortnum": 210,
+  "sortnum": 220,
   "read_by_default": true,
   "pages": [
     {
       "type": "patchouli:text",
-      "text": "$(bold)Lignite$(0)$(br2)$(thing)Rocks:$(0) igneous extrusive (tuff); sedimentary$(br2)$(li)$(thing)Vein:$(0) Y -80 to -10, extremely rare"
+      "text": "$(bold)Lignite$(0)$(br2)$(thing)Contains:$(0) Lignite$(br2)$(thing)Host rock:$(0) igneous extrusive (tuff); sedimentary"
     },
     {
       "type": "patchouli:text",
-      "text": "$(thing)Surface sample:$(0) No surface sample; prospect with a pick.$(br2)Strike exposed host rock with a Prospector's Pick to close in on the vein."
+      "text": "$(thing)Where to dig$(0)$(br2)$(li)$(thing)Vein:$(0) Y -40 to 50, very rare (1 per 5,000 chunks)$(br)Very large vein, packed; no surface sample"
     }
   ]
 }

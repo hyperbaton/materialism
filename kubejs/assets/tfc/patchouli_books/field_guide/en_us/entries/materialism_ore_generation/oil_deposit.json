@@ -6,7 +6,7 @@
   "pages": [
     {
       "type": "patchouli:text",
-      "text": "$(bold)Oil Deposit$(0)$(br2)Unlike metal ores, oil is not hosted in rock. It pools in $(thing)reservoirs$(0) at the very bottom of the world, just above bedrock (around Y -62 to -59), and is $(thing)extremely rare$(0) — expect long searches between finds."
+      "text": "$(bold)Oil Deposit$(0)$(br2)Unlike metal ores, oil is not hosted in rock. It pools in $(thing)reservoirs$(0) at the very bottom of the world, just above bedrock (around Y -62 to -59), and is $(thing)very rare$(0) (about one reservoir per 7,000 chunks) — expect long searches between finds."
     },
     {
       "type": "patchouli:text",

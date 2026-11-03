@@ -2,16 +2,16 @@
   "name": "Lapis Lazuli",
   "category": "tfc:materialism_ore_generation",
   "icon": "tfc:ore/lapis_lazuli/limestone",
-  "sortnum": 200,
+  "sortnum": 210,
   "read_by_default": true,
   "pages": [
     {
       "type": "patchouli:text",
-      "text": "$(bold)Lapis Lazuli$(0)$(br2)$(thing)Rocks:$(0) sedimentary (limestone); metamorphic (marble)$(br2)$(li)$(thing)Vein:$(0) Y -30 to 80, very rare"
+      "text": "$(bold)Lapis Lazuli$(0)$(br2)$(thing)Contains:$(0) Lapis Lazuli$(br2)$(thing)Host rock:$(0) sedimentary (limestone); metamorphic (marble)"
     },
     {
       "type": "patchouli:text",
-      "text": "$(thing)Surface sample:$(0) No surface sample; prospect with a pick.$(br2)Strike exposed host rock with a Prospector's Pick to close in on the vein."
+      "text": "$(thing)Where to dig$(0)$(br2)$(li)$(thing)Vein:$(0) Y -30 to 80, very rare (1 per 6,000 chunks)$(br)Small vein, sparse; no surface sample"
     }
   ]
 }

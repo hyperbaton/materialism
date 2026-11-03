@@ -10,15 +10,19 @@
     },
     {
       "type": "patchouli:text",
-      "text": "Rarer ore would be a cruel thing if it were also $(italic)hidden$(0) — but it is not. Almost every deposit announces itself with a $(thing)surface indicator$(0): small loose samples of its ore lying on the ground directly above the vein.$(br2)So prospecting here is less about luck and more about $(thing)reading the ground$(0). Cover distance, watch for those tell-tale samples, and you will rarely walk past a vein without knowing it."
+      "text": "Rarer ore would be a cruel thing if it were also $(italic)hidden$(0) — but it is not. Most deposits announce themselves with a $(thing)surface indicator$(0): small loose samples of their ore lying on the ground directly above the vein.$(br2)So prospecting here is less about luck and more about $(thing)reading the ground$(0). Cover distance, watch for those tell-tale samples, and you will rarely walk past a vein without knowing it."
     },
     {
       "type": "patchouli:text",
-      "text": "Where an ore can appear depends on the $(thing)rock$(0) around it. Rocks come in four families: $(thing)igneous extrusive$(0) (rhyolite, basalt, andesite, dacite), $(thing)igneous intrusive$(0) (granite, diorite, gabbro), $(thing)sedimentary$(0) (limestone, shale, chert, dolomite and more), and $(thing)metamorphic$(0) (marble, slate, gneiss, schist, quartzite, phyllite)."
+      "text": "Many metals come in $(thing)two bands$(0). A $(thing)surface band$(0) — tiny, shallow and plentiful — gives early players a first taste. The $(thing)deep band$(0) is the real prize: a huge, extremely rare vein far below, reached once you can dig and haul at scale.$(br2)A few ores share a vein: osmium comes with iridium, cobaltite with kernite, and coltan is columbite and tantalite together. The $(l:tfc:materialism_ore_generation/mineral_finder)Mineral Finder$(0) lists them."
     },
     {
       "type": "patchouli:text",
-      "text": "Each entry in this category lists, for an ore: the $(thing)rock types$(0) that host it, the $(thing)Y-range$(0) to search, its relative $(thing)rarity$(0), and whether it leaves a surface sample.$(br2)Remember that a region holds only a few rock types, so some ores simply will not exist where you stand — if the right stone is not here, you must travel to find it."
+      "text": "Where an ore can appear depends on the $(thing)rock$(0) around it. Rocks come in four families: $(thing)igneous extrusive$(0) (rhyolite, basalt, andesite, dacite), $(thing)igneous intrusive$(0) (granite, diorite, gabbro), $(thing)sedimentary$(0) (limestone, shale, chert, dolomite and more), and $(thing)metamorphic$(0) (marble, slate, gneiss, schist, quartzite, phyllite).$(br2)A region holds only a few rock types, so some ores will not exist where you stand — travel to find the right stone."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Each entry here lists what a vein $(thing)contains$(0), its $(thing)host rock$(0), and for every band its $(thing)Y-range$(0), $(thing)rarity$(0), size and density, and whether it leaves a surface sample.$(br2)$(thing)Rarity$(0) is the average spacing: one vein per N chunks of world, before the host-rock restriction thins it further. Once you are near, strike exposed host rock with a Prospector's Pick and follow the stronger readings down."
     }
   ],
   "read_by_default": true

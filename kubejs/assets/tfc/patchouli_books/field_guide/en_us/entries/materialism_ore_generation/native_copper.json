@@ -2,16 +2,16 @@
   "name": "Native Copper",
   "category": "tfc:materialism_ore_generation",
   "icon": "tfc:ore/poor_native_copper/rhyolite",
-  "sortnum": 270,
+  "sortnum": 290,
   "read_by_default": true,
   "pages": [
     {
       "type": "patchouli:text",
-      "text": "$(bold)Native Copper$(0)$(br2)$(thing)Rocks:$(0) igneous extrusive (rhyolite, basalt, andesite, dacite)$(br2)$(li)$(thing)Surface band:$(0) Y 40 to 130, very common$(br)$(li)$(thing)Deep band:$(0) Y -50 to 50, very rare"
+      "text": "$(bold)Native Copper$(0)$(br2)$(thing)Contains:$(0) Native Copper$(br2)$(thing)Host rock:$(0) igneous extrusive (rhyolite, basalt, andesite, dacite)"
     },
     {
       "type": "patchouli:text",
-      "text": "$(thing)Surface sample:$(0) Yes — small surface samples mark a vein below.$(br2)Strike exposed host rock with a Prospector's Pick to close in on the vein."
+      "text": "$(thing)Where to dig$(0)$(br2)$(li)$(thing)Surface band:$(0) Y 40 to 130, very common (1 per 40 chunks)$(br)Tiny vein, sparse; marked by surface samples$(br2)$(li)$(thing)Deep band:$(0) Y -50 to 50, very rare (1 per 7,333 chunks)$(br)Very large vein, dense; marked by surface samples"
     }
   ]
 }

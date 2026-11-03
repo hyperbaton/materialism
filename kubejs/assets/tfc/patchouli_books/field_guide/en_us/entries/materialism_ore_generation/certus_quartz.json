@@ -7,11 +7,11 @@
   "pages": [
     {
       "type": "patchouli:text",
-      "text": "$(bold)Certus Quartz$(0)$(br2)$(thing)Rocks:$(0) igneous intrusive (granite); sedimentary (shale); metamorphic (quartzite, schist, gneiss)$(br2)$(li)$(thing)Vein:$(0) Y -60 to 80, very rare"
+      "text": "$(bold)Certus Quartz$(0)$(br2)$(thing)Contains:$(0) Certus Quartz$(br2)$(thing)Host rock:$(0) igneous intrusive (granite); sedimentary (shale); metamorphic (quartzite, schist, gneiss)"
     },
     {
       "type": "patchouli:text",
-      "text": "$(thing)Surface sample:$(0) No surface sample; prospect with a pick.$(br2)Strike exposed host rock with a Prospector's Pick to close in on the vein."
+      "text": "$(thing)Where to dig$(0)$(br2)$(li)$(thing)Vein:$(0) Y -60 to 80, very rare (1 per 5,000 chunks)$(br)Medium vein, moderately dense; marked by surface samples"
     }
   ]
 }

@@ -1,6 +1,6 @@
 {
   "name": "Society & Settlement",
-  "description": "Cultures, vocations and wealth tiers; founding a society and raising houses.",
+  "description": "Six cultures, eight classes each: what every class expects, the jobs it can hold, and how to build its homes and community buildings.",
   "icon": "minecraft:emerald",
   "parent": "tfc:materialism",
   "sortnum": 3

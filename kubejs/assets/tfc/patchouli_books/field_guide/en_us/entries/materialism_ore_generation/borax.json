@@ -7,11 +7,11 @@
   "pages": [
     {
       "type": "patchouli:text",
-      "text": "$(bold)Borax$(0)$(br2)$(thing)Rocks:$(0) sedimentary (claystone, limestone, shale)$(br2)$(li)$(thing)Vein:$(0) Y 30 to 100, very rare"
+      "text": "$(bold)Borax$(0)$(br2)$(thing)Contains:$(0) Borax$(br2)$(thing)Host rock:$(0) sedimentary (claystone, limestone, shale)"
     },
     {
       "type": "patchouli:text",
-      "text": "$(thing)Surface sample:$(0) No surface sample; prospect with a pick.$(br2)Strike exposed host rock with a Prospector's Pick to close in on the vein."
+      "text": "$(thing)Where to dig$(0)$(br2)$(li)$(thing)Vein:$(0) Y 30 to 100, very rare (1 per 8,000 chunks)$(br)Small vein, moderately dense; no surface sample"
     }
   ]
 }
