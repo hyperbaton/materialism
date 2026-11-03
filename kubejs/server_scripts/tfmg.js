@@ -385,6 +385,17 @@ ServerEvents.recipes(event => {
     'tfc:metal/ingot/steel'
   )
   event.remove({id: 'tfmg:casting/amogus'})
+  // Casting basin: TFMG's own ingot recipes take 90 mB and its slag block takes 20 mB. Use 100 mB
+  // everywhere, so they line up with the 100 mB ingots of TFC
+  event.forEachRecipe({id: /^tfmg:casting\/.*/}, recipe => {
+    recipe.json.get('ingredients').forEach(ingredient => {
+      let amount = ingredient.getAsJsonObject().get('amount')
+      if (amount && (amount.getAsInt() == 90 || amount.getAsInt() == 20)) {
+        ingredient.getAsJsonObject().addProperty('amount', 100)
+        recipe.save()
+      }
+    })
+  })
   // Galvanic cell recipe (reimplemented in materialismcore, original removed from TFMG 1.21)
   // Daniell cell: porous divider and salt bridge between a zinc and a copper half-cell,
   // sealed inside a steel casing.
