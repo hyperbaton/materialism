@@ -118,6 +118,6 @@ ServerEvents.tags('enchantment', event => {
 })
 
 ServerEvents.tags('fluid', event => {
-  event.add('materialismcore:exhaustable', 'kubejs:oxygen')
-  event.add('materialismcore:exhaustable', 'kubejs:flowing_oxygen')
+  event.add('tfmg:exhaustable', 'kubejs:oxygen')
+  event.add('tfmg:exhaustable', 'kubejs:flowing_oxygen')
 })
