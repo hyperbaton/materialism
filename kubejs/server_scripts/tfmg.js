@@ -69,6 +69,10 @@ ServerEvents.recipes(event => {
 
   event.replaceInput({}, 'tfmg:industrial_aluminum_casing', 'tfmg:steel_casing')
 
+  // Remove vat recipes for deleted outputs
+  event.remove({id: 'tfmg:vat/nethersteel'})
+  event.remove({id: 'tfmg:vat/sulfuric_acid'})
+
   // Fluid tanks: metal frame with glass sides
   const tfmgTanks = [
     ['cast_iron', 'tfc:metal/sheet/cast_iron'],
@@ -437,11 +441,6 @@ ServerEvents.recipes(event => {
   ).transitionalItem('tfmg:steel_casing').loops(1)
   // Use TFC gravel for concrete
   event.replaceInput(
-    { id: 'tfmg:mixing/liquid_concrete_from_slag' }, // Arg 1: the filter
-    'minecraft:gravel',            // Arg 2: the item to replace
-    '#c:gravels'    // Arg 3: the item to replace it with
-  )
-  event.replaceInput(
     { id: 'tfmg:mixing/concrete_mixture' }, // Arg 1: the filter
     'minecraft:gravel',            // Arg 2: the item to replace
     '#c:gravels'    // Arg 3: the item to replace it with
@@ -461,6 +460,44 @@ ServerEvents.recipes(event => {
     'minecraft:sand',            // Arg 2: the item to replace
     '#c:sands/silica' // Arg 3: the item to replace it with
   )
+
+  event.replaceInput(
+    { id: 'tfmg:mixing/concrete_mixture_from_slag' },
+    'minecraft:gravel',
+    '#c:gravels'
+  )
+  // Vat concrete, keeping the proportions of the mixing chain (a mixture batch is 250 mB water -> 1000 mB)
+  const vatConcrete = (ingredients, water, result, minSize) => {
+    event.custom({
+      type: 'tfmg:vat',
+      ingredients: ingredients.concat([{type: 'neoforge:single', amount: water, fluid: 'minecraft:water'}]),
+      machines: ['tfmg:mixer'],
+      min_size: minSize,
+      results: [{amount: result, id: 'tfmg:liquid_concrete'}]
+    })
+  }
+  event.remove({id: 'tfmg:vat/concrete'})
+  // From ready-made mixture
+  vatConcrete([{item: 'tfmg:concrete_mixture'}], 250, 1000, 1)
+  // From base inputs: 1 sand + 1 gravel + 1 cement = 16 mixture
+  vatConcrete([{tag: 'c:sands/silica'}, {tag: 'c:gravels'}, {item: 'tfmg:cement'}], 4000, 16000, 2)
+  // From slag: 1 slag + 1 cement + 1 gravel = 32 mixture
+  vatConcrete([{item: 'tfmg:slag'}, {tag: 'c:gravels'}, {item: 'tfmg:cement'}], 8000, 32000, 4)
+
+  // Rubber vat recipe
+  event.remove({id: 'tfmg:vat/rubber'})
+  event.custom({
+    type: 'tfmg:vat',
+    heat_level: 2,
+    ingredients: [
+      {item: 'tfc:powder/sulfur'},
+      {type: 'neoforge:tag', amount: 250, tag: 'c:heavy_oil'}
+    ],
+    machines: ['tfmg:mixer'],
+    min_size: 1,
+    processing_time: 40,
+    results: [{id: 'tfmg:rubber_sheet'}]
+  })
   // Use TFC gravel and sand for asphalt
   event.replaceInput(
     { id: 'tfmg:mixing/liquid_asphalt' }, // Arg 1: the filter
@@ -817,51 +854,61 @@ ServerEvents.recipes(event => {
 
   // Water electrolysis in a vat: 2 H2O -> 2 H2 + O2 (hydrogen volume is twice the oxygen's).
   // Pure water barely conducts, so the plain recipe is very slow; an electrolyte or a catalyst speeds it up.
-  // Vat recipes can't damage electrodes and fluid outputs have no chance, so the corrosive salt water
-  // just yields less, and the acid is partly consumed.
-  const electrolysis = (ingredients, time, hydrogen, oxygen, extraResults) => {
+  // Corrosive salt water wears the electrodes and yields less, and the acid is partly consumed.
+  // Graphite electrodes are 300 ohm, so current is voltage / 300 and each draws voltage^2 / 300 FE/t. The
+  // 5 A floor (electrolysisMinimumCurrent) means 1500 V, which runs at half speed: full speed takes
+  // electrolysisPower, about 2100 V across the two electrodes.
+  const electrolysisPower = 30000
+  const electrolysis = (ingredients, time, hydrogen, oxygen, options) => {
+    options = options || {}
     event.custom({
-      type: 'tfmg:vat_machine_recipe',
-      allowed_vat_types: ['tfmg:steel_vat', 'tfmg:firebrick_lined_vat'],
+      type: 'tfmg:vat',
+      allowed_vat_types: ['tfmg:steel', 'tfmg:fireproof'],
       machines: ['tfmg:graphite_electrode', 'tfmg:graphite_electrode'],
       min_size: 1,
       ingredients: ingredients,
       processing_time: time,
+      min_current: options.minCurrent || 5,
+      energy: time * electrolysisPower,
+      electrode_wear: options.wear || 0,
       results: [
         {amount: hydrogen, id: 'tfmg:hydrogen'},
         {amount: oxygen, id: 'kubejs:oxygen'}
-      ].concat(extraResults || [])
+      ].concat(options.extraResults || [])
     })
   }
   const water300 = {type: 'neoforge:single', amount: 300, fluid: 'minecraft:water'}
 
-  // Pure water: very slow
-  electrolysis([water300], 1200, 200, 100)
+  // Pure water: very slow, and it takes the highest voltage to drive current through it
+  electrolysis([water300], 1200, 200, 100, {minCurrent: 7})
 
   // Salt water: the dissolved sodium ions make it much faster, but the electrodes corrode, so less gas is collected
-  electrolysis([{type: 'neoforge:single', amount: 300, fluid: 'tfc:salt_water'}], 300, 150, 75)
+  electrolysis([{type: 'neoforge:single', amount: 300, fluid: 'tfc:salt_water'}], 300, 150, 75, {wear: 5})
 
   // Sulfuric acid: even faster at full yield, but a little acid is lost as mist
   electrolysis([water300, {type: 'neoforge:single', amount: 20, fluid: 'tfmg:sulfuric_acid'}], 150, 200, 100,
-    [{amount: 16, id: 'tfmg:sulfuric_acid'}])
+    {extraResults: [{amount: 16, id: 'tfmg:sulfuric_acid'}]})
 
-  // Metal dust catalysts: the cheaper the metal, the slower it is and the likelier it is to be used up
+  // Metal dust catalysts: the cheaper the metal, the slower it is, the more current it needs and
+  // the likelier it is to be used up
   const electrolysisCatalysts = [
-    {dust: 'kubejs:metal/dust/iron', time: 500, keep: 0.85},
-    {dust: 'kubejs:metal/dust/nickel', time: 350, keep: 0.92},
-    {dust: 'tfc_metallurgy:metal/dust/platinum', time: 200, keep: 0.98}
+    {dust: 'kubejs:metal/dust/iron', time: 500, keep: 0.85, minCurrent: 6},
+    {dust: 'kubejs:metal/dust/nickel', time: 350, keep: 0.92, minCurrent: 5},
+    {dust: 'tfc_metallurgy:metal/dust/platinum', time: 200, keep: 0.98, minCurrent: 5}
   ]
   electrolysisCatalysts.forEach(catalyst => {
     electrolysis([water300, {item: catalyst.dust}], catalyst.time, 200, 100,
-      [{chance: catalyst.keep, id: catalyst.dust}])
+      {minCurrent: catalyst.minCurrent, extraResults: [{chance: catalyst.keep, id: catalyst.dust}]})
   })
 
   // High alloy steel
   event.custom({
-    type: 'tfmg:vat_machine_recipe',
-    allowed_vat_types: ['tfmg:firebrick_lined_vat'],
+    type: 'tfmg:vat',
+    allowed_vat_types: ['tfmg:fireproof'],
     machines: ['tfmg:graphite_electrode', 'tfmg:graphite_electrode', 'tfmg:graphite_electrode'],
     min_size: 9,
+    min_current: 7,
+    temperature: 1300,
     ingredients: [
       {type: 'neoforge:single', amount: 200, fluid: 'tfc:metal/weak_steel'},
       {type: 'neoforge:single', amount: 40, fluid: 'firmalife:metal/chromium'},
@@ -878,9 +925,9 @@ ServerEvents.recipes(event => {
 
   // Tungsten carbide
   event.custom({
-    type: 'tfmg:vat_machine_recipe',
-    allowed_vat_types: ['tfmg:firebrick_lined_vat'],
-    heat_requirement: 'heated',
+    type: 'tfmg:vat',
+    allowed_vat_types: ['tfmg:fireproof'],
+    temperature: 1200,
     ingredients: [
       {item: 'tfc_metallurgy:metal/dust/tungsten'},
       {item: 'tfc_metallurgy:metal/dust/tungsten'},
@@ -1123,13 +1170,14 @@ ServerEvents.recipes(event => {
 
   // Arc furnace (vat): same idea and yield as the blast furnace recipe above, but electric. Pig iron
   // instead of TFMG's molten steel. It needs no hot air and gives no furnace gas, and it is faster
-  // and easier to automate, not richer.
-  event.remove({id: 'tfmg:vat_machine_recipe/arc_furnace_steel'})
+  // and easier to automate, not richer. Its three graphite electrodes need 2100 V, which is 44100 FE/t.
+  event.remove({id: 'tfmg:vat/arc_furnace_steel'})
   event.custom({
-    type: 'tfmg:vat_machine_recipe',
-    allowed_vat_types: ['tfmg:firebrick_lined_vat'],
+    type: 'tfmg:vat',
+    allowed_vat_types: ['tfmg:fireproof'],
     machines: ['tfmg:graphite_electrode', 'tfmg:graphite_electrode', 'tfmg:graphite_electrode'],
     min_size: 9,
+    min_current: 7,
     ingredients: [
       {tag: 'materialism:powders/iron'},
       {tag: 'materialism:powders/iron'},
