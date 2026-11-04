@@ -87,6 +87,26 @@ ServerEvents.recipes(event => {
     })
   })
 
+  // Electric gauge (voltmeter): two variants so a polarizer can be built
+  event.remove({id: 'tfmg:crafting/materials/voltmeter'})
+  const voltmeterMagnets = {
+    magnet: 'tfmg:magnet',
+    magnetite_block: 'create_new_age:redstone_magnet'
+  }
+  Object.keys(voltmeterMagnets).forEach(name => {
+    event.shaped('tfmg:voltmeter', [
+        'SCS',
+        'RMR',
+        'SAS'
+    ], {
+        S: 'tfc_items:steel_screw',
+        C: 'minecraft:compass',
+        R: 'tfc_metallurgy:metal/rod/aluminum',
+        M: voltmeterMagnets[name],
+        A: 'tfc_metallurgy:metal/sheet/aluminum'
+    }).id(`kubejs:voltmeter_${name}`)
+  })
+
   // Trusses: a lattice of rods held together by rivets
   const tfmgTrusses = [
     ['aluminum', 'tfc_metallurgy'], ['brass', 'tfc'], ['cast_iron', 'tfc'],
@@ -793,6 +813,47 @@ ServerEvents.recipes(event => {
       {amount: 148, id: 'kubejs:nitrogen'},
       {amount: 2, id: 'tfmg:neon'}
     ]
+  })
+
+  // Water electrolysis in a vat: 2 H2O -> 2 H2 + O2 (hydrogen volume is twice the oxygen's).
+  // Pure water barely conducts, so the plain recipe is very slow; an electrolyte or a catalyst speeds it up.
+  // Vat recipes can't damage electrodes and fluid outputs have no chance, so the corrosive salt water
+  // just yields less, and the acid is partly consumed.
+  const electrolysis = (ingredients, time, hydrogen, oxygen, extraResults) => {
+    event.custom({
+      type: 'tfmg:vat_machine_recipe',
+      allowed_vat_types: ['tfmg:steel_vat', 'tfmg:firebrick_lined_vat'],
+      machines: ['tfmg:graphite_electrode', 'tfmg:graphite_electrode'],
+      min_size: 1,
+      ingredients: ingredients,
+      processing_time: time,
+      results: [
+        {amount: hydrogen, id: 'tfmg:hydrogen'},
+        {amount: oxygen, id: 'kubejs:oxygen'}
+      ].concat(extraResults || [])
+    })
+  }
+  const water300 = {type: 'neoforge:single', amount: 300, fluid: 'minecraft:water'}
+
+  // Pure water: very slow
+  electrolysis([water300], 1200, 200, 100)
+
+  // Salt water: the dissolved sodium ions make it much faster, but the electrodes corrode, so less gas is collected
+  electrolysis([{type: 'neoforge:single', amount: 300, fluid: 'tfc:salt_water'}], 300, 150, 75)
+
+  // Sulfuric acid: even faster at full yield, but a little acid is lost as mist
+  electrolysis([water300, {type: 'neoforge:single', amount: 20, fluid: 'tfmg:sulfuric_acid'}], 150, 200, 100,
+    [{amount: 16, id: 'tfmg:sulfuric_acid'}])
+
+  // Metal dust catalysts: the cheaper the metal, the slower it is and the likelier it is to be used up
+  const electrolysisCatalysts = [
+    {dust: 'kubejs:metal/dust/iron', time: 500, keep: 0.85},
+    {dust: 'kubejs:metal/dust/nickel', time: 350, keep: 0.92},
+    {dust: 'tfc_metallurgy:metal/dust/platinum', time: 200, keep: 0.98}
+  ]
+  electrolysisCatalysts.forEach(catalyst => {
+    electrolysis([water300, {item: catalyst.dust}], catalyst.time, 200, 100,
+      [{chance: catalyst.keep, id: catalyst.dust}])
   })
 
   // High alloy steel
