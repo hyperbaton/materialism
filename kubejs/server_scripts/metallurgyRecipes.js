@@ -64,24 +64,32 @@ ServerEvents.recipes(event => {
       results: [{id: 'tfc_metallurgy:metal/uranium', amount: 5}, {id: 'tfmg:molten_slag', amount: 1}],
       processing_time: 2000
     })
-    // Copper dust (TFC Metallurgy only adds dusts for its own metals)
-    event.custom({
-        type: 'tfc:quern',
-        ingredient: { tag: 'c:ingots/copper' },
-        result: { id: 'kubejs:metal/dust/copper', count: 20 }
-    })
-    event.custom({
-        type: 'create:crushing',
-        ingredients: [{ tag: 'c:ingots/copper' }],
-        results: [{ id: 'kubejs:metal/dust/copper', count: 20 }],
-        processing_time: 100
-    })
-    event.custom({
-        type: 'tfc:heating',
-        ingredient: { tag: 'c:dusts/copper' },
-        result_fluid: { id: 'tfc:metal/copper', amount: 5 },
-        temperature: 1080,
-        use_durability: false
+    // Dusts for the base TFC metals (TFC Metallurgy only adds dusts for its own metals)
+    const baseMetalDusts = {
+        bismuth: 270, bismuth_bronze: 985, black_bronze: 1070, black_steel: 1485, blue_steel: 1540,
+        brass: 930, bronze: 950, cast_iron: 1535, copper: 1080, gold: 1060, iron: 1535, nickel: 1453,
+        red_steel: 1540, rose_gold: 960, silver: 961, sterling_silver: 950, steel: 1540, tin: 230, zinc: 420
+    }
+    Object.keys(baseMetalDusts).forEach(metal => {
+        const ingotMetal = metal === 'iron' ? 'wrought_iron' : metal
+        event.custom({
+            type: 'tfc:quern',
+            ingredient: { tag: `c:ingots/${ingotMetal}` },
+            result: { id: `kubejs:metal/dust/${metal}`, count: 20 }
+        })
+        event.custom({
+            type: 'create:crushing',
+            ingredients: [{ tag: `c:ingots/${ingotMetal}` }],
+            results: [{ id: `kubejs:metal/dust/${metal}`, count: 20 }],
+            processing_time: 100
+        })
+        event.custom({
+            type: 'tfc:heating',
+            ingredient: { tag: `c:dusts/${metal}` },
+            result_fluid: { id: `tfc:metal/${ingotMetal}`, amount: 5 },
+            temperature: baseMetalDusts[metal],
+            use_durability: false
+        })
     })
 
     // Create crushing for TFC Metallurgy's dusts too, mirroring its quern recipes (1 ingot -> 20 dust)

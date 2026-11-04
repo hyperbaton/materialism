@@ -10,8 +10,16 @@ StartupEvents.registry('item', event => {
     event.create('powder/neodymium').maxStackSize(16)
     event.create('lithium_battery_core').maxStackSize(16)
     event.create('zinc_sulfate').maxStackSize(16).displayName('Zinc Sulfate')
-    // TFC Metallurgy only adds dusts for its own metals; this one fills the gap for copper
-    event.create('metal/dust/copper').displayName('Copper Dust')
+    // TFC Metallurgy only adds dusts for its own metals; these fill the gap for the base TFC metals
+    const baseMetalDusts = [
+      'bismuth', 'bismuth_bronze', 'black_bronze', 'black_steel', 'blue_steel', 'brass', 'bronze',
+      'cast_iron', 'copper', 'gold', 'iron', 'nickel', 'red_steel', 'rose_gold', 'silver',
+      'sterling_silver', 'steel', 'tin', 'zinc'
+    ]
+    baseMetalDusts.forEach(metal => {
+      const name = metal.split('_').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ')
+      event.create(`metal/dust/${metal}`).displayName(`${name} Dust`)
+    })
     event.create('powder/zinc').maxStackSize(16)
     event.create('powder/monazite').maxStackSize(16)
     event.create('powder/uraninite').maxStackSize(16)
