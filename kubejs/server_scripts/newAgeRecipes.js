@@ -50,39 +50,39 @@ ServerEvents.recipes(event => {
         Item.of('create_new_age:layered_magnet', 1)
     ],
     // Input item
-    'tfmg:magnetic_alloy_ingot',
+    'tfmg:magnet',
     [
         event.recipes.createDeploying(
-            'tfmg:magnetic_alloy_ingot',
-            ['tfmg:magnetic_alloy_ingot', 'tfc:powder/hematite']
+            'tfmg:magnet',
+            ['tfmg:magnet', 'tfc:powder/hematite']
         ),
         event.recipes.createDeploying(
-            'tfmg:magnetic_alloy_ingot',
-            ['tfmg:magnetic_alloy_ingot', 'kubejs:powder/zinc']
+            'tfmg:magnet',
+            ['tfmg:magnet', 'kubejs:powder/zinc']
         ),
-        event.recipes.vintageimprovements.vibrating('tfmg:magnetic_alloy_ingot',
-            'tfmg:magnetic_alloy_ingot'),
+        event.recipes.vintageimprovements.vibrating('tfmg:magnet',
+            'tfmg:magnet'),
         event.recipes.createFilling(
-          'tfmg:magnetic_alloy_ingot',
-          ['tfmg:magnetic_alloy_ingot', Fluid.of('tfc_metallurgy:metal/manganese', 50)]
+          'tfmg:magnet',
+          ['tfmg:magnet', Fluid.of('tfc_metallurgy:metal/manganese', 50)]
         ),
         event.custom({type: 'vintageimprovements:pressurizing',
-          ingredients: [{item: 'tfmg:magnetic_alloy_ingot'}, {item: 'tfc:powder/hematite'}],
-          results: [{id: 'tfmg:magnetic_alloy_ingot'}],
+          ingredients: [{item: 'tfmg:magnet'}, {item: 'tfc:powder/hematite'}],
+          results: [{id: 'tfmg:magnet'}],
           heat_requirement: 'heated'
         }),
         event.custom({
           type: 'create_new_age:energising',
           energy_needed: 10000,
           ingredients: [
-            { item: 'tfmg:magnetic_alloy_ingot'},
+            { item: 'tfmg:magnet'},
           ],
           results: [
-            { id: 'tfmg:magnetic_alloy_ingot'},
+            { id: 'tfmg:magnet'},
           ]
         })
     ]
-  ).transitionalItem('tfmg:magnetic_alloy_ingot')
+  ).transitionalItem('tfmg:magnet')
   .loops(5);
   // Tier 4: Fluxuated Magnetite -> Alnico Magnet
   event.remove({id: 'create_new_age:shaped/fluxuated_magnetite'})
