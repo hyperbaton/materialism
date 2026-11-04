@@ -1190,8 +1190,8 @@ event.recipes.create.sequenced_assembly([
     ]).transitionalItem('tfc_metallurgy:ore/certus_quartz').loops(6)
 
     // Gunpowder recipes
-    event.recipes.remove("tfc:crafting/gunpowder")
-    event.recipes.remove("tfc:crafting/gunpowder_graphite")
+    event.remove("tfc:crafting/gunpowder")
+    event.remove("tfc:crafting/gunpowder_graphite")
     event.recipes.createMixing(
       Item.of("minecraft:gunpowder", 4),
       [
