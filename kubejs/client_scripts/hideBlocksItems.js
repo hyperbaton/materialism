@@ -53,7 +53,6 @@ RecipeViewerEvents.removeEntries('item', event => {
     r('tfmg:lignite');
     r('tfmg:fireclay');
     r('create_new_age:thorium_ore');
-    event.remove(/createvintageneoforged:sulfur.*/);
     r('tfmg:copper_wire');
     r('tfmg:aluminum_wire');
     r('tfmg:constantan_wire');
@@ -86,7 +85,7 @@ RecipeViewerEvents.removeEntries('item', event => {
     r('tfmg:lead_ingot')
     r('create_new_age:blank_circuit')
     r('create_new_age:copper_circuit')
-    event.remove(/createvintageneoforged:sulfuric_acid_bucket/)
+    event.remove(/vintageimprovements:sulfuric_acid_bucket/)
     r('createaddition:electrum_ingot')
     r('tfc_metallurgy:metal/graphite')
     r('tfc_metallurgy:bucket/metal/graphite')
@@ -610,7 +609,7 @@ RecipeViewerEvents.removeEntries('fluid', event => {
     event.remove(/.*pink_slime.*/);
     event.remove(/.*refined_glowstone.*/);
     event.remove(/.*refined_obsidian.*/);
-    event.remove(/createvintageneoforged:sulfuric_acid/);
+    event.remove('vintageimprovements:sulfuric_acid');
     event.remove('createbigcannons:molten_cast_iron')
     event.remove('createbigcannons:molten_bronze')
     event.remove('createbigcannons:molten_steel')

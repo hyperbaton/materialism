@@ -73,6 +73,14 @@ ServerEvents.recipes(event => {
     // Vacuum recipes
 
     // Presurizing recipes
+    // Produce sulfuric acid
+    event.remove({id: 'vintageimprovements:pressurizing/sulfur_dioxide'})
+    event.remove({id: 'vintageimprovements:pressurizing/compat/sulfur_dioxide_from_dust'})
+    event.remove({id: 'vintageimprovements:milling/sulfur'})
+    event.recipes.vintageimprovements.pressurizing(Fluid.of('vintageimprovements:sulfur_dioxide', 1000),
+      ['tfc:powder/sulfur'])
+      .secondaryFluidOutput(0).heatRequirement('heated').processingTime(200)
+
     // Use TFMG sulfuric acid with vintage recipe
     event.custom({type: 'vintageimprovements:pressurizing',
       ingredients: [

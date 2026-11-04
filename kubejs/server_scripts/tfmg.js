@@ -182,6 +182,7 @@ ServerEvents.recipes(event => {
     'tfc:powder/sulfur'
   )
   // Replace vintageimprovements sulfur items with tfc equivalents
+  event.remove({id: 'tfmg:crushing/sulfur'})
   event.replaceInput(
     { input: 'vintageimprovements:sulfur' },
     'vintageimprovements:sulfur',
