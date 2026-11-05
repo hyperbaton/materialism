@@ -1116,25 +1116,25 @@ ServerEvents.recipes(event => {
     .loops(4);
     // Remove the existing recipe for sturdy sheets
     event.remove({ output: 'create:sturdy_sheet' });
-    // Add a custom recipe for sturdy sheets
+    // Sturdy sheet is terne plate: thick steel coated with a lead-tin alloy
     event.recipes.create.sequenced_assembly(
-        // Final output: 32 train tracks
         [
             Item.of('create:sturdy_sheet', 1)
         ],
-        // Input item: Smooth stone slab
-        'tfc:metal/sheet/steel',
-        // Sequence of assembly steps
+        'tfc_items:steel_heavy_sheet',
         [
             event.recipes.createFilling(
-                'tfc:metal/sheet/steel',
-                ['tfc:metal/sheet/steel', Fluid.of('tfc_metallurgy:metal/tungsten', 100)]
+                'tfc_items:steel_heavy_sheet',
+                ['tfc_items:steel_heavy_sheet', Fluid.of('tfc_metallurgy:metal/lead', 80)]
             ),
-            event.recipes.createPressing('tfc:metal/sheet/steel', 'tfc:metal/sheet/steel'),
-            event.recipes.createPressing('tfc:metal/sheet/steel', 'tfc:metal/sheet/steel'),
-            event.recipes.vintageimprovements.polishing('tfc:metal/sheet/steel', 'tfc:metal/sheet/steel').processingTime(200)
+            event.recipes.createFilling(
+                'tfc_items:steel_heavy_sheet',
+                ['tfc_items:steel_heavy_sheet', Fluid.of('tfc:metal/tin', 20)]
+            ),
+            event.recipes.createPressing('tfc_items:steel_heavy_sheet', 'tfc_items:steel_heavy_sheet'),
+            event.recipes.vintageimprovements.polishing('tfc_items:steel_heavy_sheet', 'tfc_items:steel_heavy_sheet').processingTime(200)
         ]
-    ).transitionalItem('tfc:metal/sheet/steel')
+    ).transitionalItem('tfc_items:steel_heavy_sheet')
     .loops(1);
 
     event.remove('create:sequenced_assembly/precision_mechanism');

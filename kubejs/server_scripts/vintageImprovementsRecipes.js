@@ -303,7 +303,7 @@ ServerEvents.recipes(event => {
         }
       )
 
-    // Spring coiling machine wheel: a toothed steel wheel — steel gear hub + steel rod spokes
+    // Spring coiling machine wheel
     event.remove({ id: 'vintageimprovements:craft/spring_coiling_machine_wheel' })
     event.shaped('vintageimprovements:spring_coiling_machine_wheel', [
         ' R ',
