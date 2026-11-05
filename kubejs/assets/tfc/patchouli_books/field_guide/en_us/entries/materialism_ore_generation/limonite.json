@@ -2,7 +2,7 @@
   "name": "Limonite",
   "category": "tfc:materialism_ore_generation",
   "icon": "tfc:ore/poor_limonite/shale",
-  "sortnum": 230,
+  "sortnum": 240,
   "read_by_default": true,
   "pages": [
     {

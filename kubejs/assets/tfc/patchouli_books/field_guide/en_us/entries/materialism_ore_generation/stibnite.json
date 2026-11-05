@@ -2,7 +2,7 @@
   "name": "Stibnite",
   "category": "tfc:materialism_ore_generation",
   "icon": "tfc_metallurgy:ore/poor_stibnite/rhyolite",
-  "sortnum": 400,
+  "sortnum": 420,
   "read_by_default": true,
   "pages": [
     {

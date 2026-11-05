@@ -341,7 +341,7 @@ ServerEvents.recipes(event => {
         {item: 'tfc:powder/charcoal'},
         {tag: 'c:sands/silica'}
       ],
-      results: [{id: 'tfc:pure_phosphorus', count: 5}],
+      results: [{id: 'chemica:phosphorus_dust', count: 5}],
       heat_requirement: 'superheated',
       processing_time: 500
     })
@@ -351,7 +351,7 @@ ServerEvents.recipes(event => {
         {item: 'tfc:powder/charcoal'},
         {tag: 'c:sands/silica'}
       ],
-      results: [{id: 'tfc:pure_phosphorus', count: 5}],
+      results: [{id: 'chemica:phosphorus_dust', count: 5}],
       heat_requirement: 'superheated',
       processing_time: 500
     })

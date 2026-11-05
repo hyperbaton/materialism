@@ -1,0 +1,21 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "kubejs:block/small_phosphorite",
+        "y": 90
+      },
+      {
+        "model": "kubejs:block/small_phosphorite"
+      },
+      {
+        "model": "kubejs:block/small_phosphorite",
+        "y": 180
+      },
+      {
+        "model": "kubejs:block/small_phosphorite",
+        "y": 270
+      }
+    ]
+  }
+}

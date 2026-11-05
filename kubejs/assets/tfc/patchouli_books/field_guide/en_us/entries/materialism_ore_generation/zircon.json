@@ -2,7 +2,7 @@
   "name": "Zircon",
   "category": "tfc:materialism_ore_generation",
   "icon": "tfc_metallurgy:ore/poor_zircon/granite",
-  "sortnum": 460,
+  "sortnum": 480,
   "read_by_default": true,
   "pages": [
     {

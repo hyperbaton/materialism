@@ -2,7 +2,7 @@
   "name": "Magnetite",
   "category": "tfc:materialism_ore_generation",
   "icon": "tfc:ore/poor_magnetite/shale",
-  "sortnum": 250,
+  "sortnum": 260,
   "read_by_default": true,
   "pages": [
     {

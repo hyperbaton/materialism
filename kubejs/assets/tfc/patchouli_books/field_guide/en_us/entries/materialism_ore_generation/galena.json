@@ -2,7 +2,7 @@
   "name": "Galena",
   "category": "tfc:materialism_ore_generation",
   "icon": "tfc:ore/normal_native_silver/shale",
-  "sortnum": 140,
+  "sortnum": 150,
   "read_by_default": true,
   "pages": [
     {

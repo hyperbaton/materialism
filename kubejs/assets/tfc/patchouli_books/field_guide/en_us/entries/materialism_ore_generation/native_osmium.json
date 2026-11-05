@@ -2,7 +2,7 @@
   "name": "Native Osmium",
   "category": "tfc:materialism_ore_generation",
   "icon": "tfc_metallurgy:ore/poor_native_osmium/claystone",
-  "sortnum": 310,
+  "sortnum": 320,
   "read_by_default": true,
   "pages": [
     {

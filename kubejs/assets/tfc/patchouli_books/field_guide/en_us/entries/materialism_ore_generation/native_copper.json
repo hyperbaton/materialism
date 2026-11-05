@@ -2,7 +2,7 @@
   "name": "Native Copper",
   "category": "tfc:materialism_ore_generation",
   "icon": "tfc:ore/poor_native_copper/rhyolite",
-  "sortnum": 290,
+  "sortnum": 300,
   "read_by_default": true,
   "pages": [
     {

@@ -1,0 +1,21 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "kubejs:block/small_fluorite",
+        "y": 90
+      },
+      {
+        "model": "kubejs:block/small_fluorite"
+      },
+      {
+        "model": "kubejs:block/small_fluorite",
+        "y": 180
+      },
+      {
+        "model": "kubejs:block/small_fluorite",
+        "y": 270
+      }
+    ]
+  }
+}

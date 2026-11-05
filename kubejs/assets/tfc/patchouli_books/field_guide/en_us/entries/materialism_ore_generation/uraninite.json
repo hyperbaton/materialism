@@ -2,7 +2,7 @@
   "name": "Uraninite",
   "category": "tfc:materialism_ore_generation",
   "icon": "tfc_metallurgy:ore/poor_uraninite/rhyolite",
-  "sortnum": 440,
+  "sortnum": 460,
   "read_by_default": true,
   "pages": [
     {

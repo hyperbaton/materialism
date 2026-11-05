@@ -2,7 +2,7 @@
   "name": "Lapis Lazuli",
   "category": "tfc:materialism_ore_generation",
   "icon": "tfc:ore/lapis_lazuli/limestone",
-  "sortnum": 210,
+  "sortnum": 220,
   "read_by_default": true,
   "pages": [
     {

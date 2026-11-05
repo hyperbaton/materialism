@@ -2,7 +2,7 @@
   "name": "Saltpeter",
   "category": "tfc:materialism_ore_generation",
   "icon": "tfc:ore/saltpeter/shale",
-  "sortnum": 370,
+  "sortnum": 390,
   "read_by_default": true,
   "pages": [
     {

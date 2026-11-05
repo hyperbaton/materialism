@@ -8,6 +8,9 @@ StartupEvents.registry('item', event => {
     event.create('alnico_core').maxStackSize(16)
     event.create('polarized_alnico_core').maxStackSize(16)
     event.create('powder/neodymium').maxStackSize(16)
+    // Minerals dropped by the fluorite and phosphorite ores (see addBlocks.js)
+    event.create('ore/fluorite').displayName('Fluorite')
+    event.create('ore/phosphorite').displayName('Phosphorite')
     event.create('lithium_battery_core').maxStackSize(16)
     event.create('zinc_sulfate').maxStackSize(16).displayName('Zinc Sulfate')
     // TFC Metallurgy only adds dusts for its own metals; these fill the gap for the base TFC metals

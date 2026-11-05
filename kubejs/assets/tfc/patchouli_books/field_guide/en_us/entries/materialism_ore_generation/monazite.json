@@ -2,7 +2,7 @@
   "name": "Monazite",
   "category": "tfc:materialism_ore_generation",
   "icon": "tfc_metallurgy:ore/poor_monazite/rhyolite",
-  "sortnum": 280,
+  "sortnum": 290,
   "read_by_default": true,
   "pages": [
     {

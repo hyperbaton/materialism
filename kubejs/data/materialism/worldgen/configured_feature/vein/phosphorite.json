@@ -1,0 +1,95 @@
+{
+  "type": "tfc:disc_vein",
+  "config": {
+    "rarity": 4500,
+    "density": 0.5,
+    "min_y": 30,
+    "max_y": 100,
+    "size": 70,
+    "height": 4,
+    "random_name": "phosphorite",
+    "blocks": [
+      {
+        "replace": [
+          "tfc:rock/raw/limestone"
+        ],
+        "with": [
+          {
+            "block": "kubejs:ore/phosphorite/limestone"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/chalk"
+        ],
+        "with": [
+          {
+            "block": "kubejs:ore/phosphorite/chalk"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/shale"
+        ],
+        "with": [
+          {
+            "block": "kubejs:ore/phosphorite/shale"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/claystone"
+        ],
+        "with": [
+          {
+            "block": "kubejs:ore/phosphorite/claystone"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/chert"
+        ],
+        "with": [
+          {
+            "block": "kubejs:ore/phosphorite/chert"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/dolomite"
+        ],
+        "with": [
+          {
+            "block": "kubejs:ore/phosphorite/dolomite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/conglomerate"
+        ],
+        "with": [
+          {
+            "block": "kubejs:ore/phosphorite/conglomerate"
+          }
+        ]
+      }
+    ],
+    "indicator": {
+      "rarity": 100,
+      "depth": 250,
+      "underground_rarity": 50,
+      "underground_count": 4,
+      "blocks": [
+        {
+          "block": "kubejs:small_phosphorite"
+        }
+      ]
+    }
+  }
+}

@@ -10,6 +10,8 @@ ServerEvents.recipes(event => {
   // Fervorite and zelosite are not used in the pack
   event.remove({id: /^chemica:(crushing\/(ferosite|fervorite|zelosite)|vat_machine_recipe\/leaching_(fervorite|zelosite))$/})
   event.remove({id: 'chemica:vat_machine_recipe/arc_furnace_tungsten'})
+  // Fluorite and phosphorus come from the pack's own ores (below)
+  event.remove({id: /^chemica:crushing\/(deepslate_fluorite_ore|deepslate_phosphorus_ore|phosphorus_ore)$/})
   event.remove({id: 'chemica:casting/molten_titanium'})
   // Broken: the fluid ingredient does not parse
   event.remove({id: 'chemica:mixing/caustic_soda'})
@@ -171,6 +173,23 @@ ServerEvents.recipes(event => {
   event.recipes.create.crushing(['2x chemica:rutile_crystal', CreateItem.of('chemica:rutile_dust', 0.25)], 'tfc_metallurgy:ore/poor_rutile')
   event.recipes.create.crushing(['chemica:medium_grade_rutile_crystal', CreateItem.of('chemica:rutile_crystal', 0.5)], 'tfc_metallurgy:ore/normal_rutile')
   event.recipes.create.crushing(['chemica:high_grade_rutile_crystal', CreateItem.of('chemica:medium_grade_rutile_crystal', 0.5)], 'tfc_metallurgy:ore/rich_rutile')
+
+  // Fluorite and phosphorite (kubejs ores, see addBlocks.js) are the source of Chemica's fluorite and phosphorus dust
+  event.recipes.create.crushing(['3x chemica:fluorite_dust', CreateItem.of('chemica:fluorite_dust', 0.5)], 'kubejs:ore/fluorite').processingTime(250)
+  event.recipes.create.crushing(['3x chemica:phosphorus_dust', CreateItem.of('chemica:phosphorus_dust', 0.5), CreateItem.of('chemica:arsenic_dust', 0.03)], 'kubejs:ore/phosphorite').processingTime(250)
+
+  // The new ores can collapse like any other ore in their rock
+  const rockOres = {
+    fluorite: ['granite', 'rhyolite', 'gneiss', 'quartzite', 'schist', 'marble', 'limestone', 'dolomite', 'slate', 'phyllite'],
+    phosphorite: ['limestone', 'chalk', 'shale', 'claystone', 'chert', 'dolomite', 'conglomerate']
+  }
+  const collapsing = {}
+  Object.keys(rockOres).forEach(mineral => rockOres[mineral].forEach(rock => {
+    collapsing[rock] = (collapsing[rock] || []).concat('kubejs:ore/' + mineral + '/' + rock)
+  }))
+  Object.keys(collapsing).forEach(rock => {
+    event.custom({type: 'tfc:collapse', ingredient: collapsing[rock], result: 'tfc:rock/cobble/' + rock}).id('kubejs:collapse/ore_' + rock)
+  })
 
   // Ore chunks of each grade give 2/3/5/7 dust (5 mB each, like a smelt), and the acid used
   // adds a 50% chance of one more

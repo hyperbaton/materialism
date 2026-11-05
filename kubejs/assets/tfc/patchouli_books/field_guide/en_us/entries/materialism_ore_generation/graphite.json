@@ -2,7 +2,7 @@
   "name": "Graphite",
   "category": "tfc:materialism_ore_generation",
   "icon": "tfc:ore/graphite/gneiss",
-  "sortnum": 160,
+  "sortnum": 170,
   "read_by_default": true,
   "pages": [
     {

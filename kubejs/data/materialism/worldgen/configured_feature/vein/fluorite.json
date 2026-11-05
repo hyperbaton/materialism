@@ -1,0 +1,124 @@
+{
+  "type": "tfc:cluster_vein",
+  "config": {
+    "rarity": 4000,
+    "density": 0.55,
+    "min_y": -80,
+    "max_y": 30,
+    "size": 90,
+    "random_name": "fluorite",
+    "blocks": [
+      {
+        "replace": [
+          "tfc:rock/raw/granite"
+        ],
+        "with": [
+          {
+            "block": "kubejs:ore/fluorite/granite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/rhyolite"
+        ],
+        "with": [
+          {
+            "block": "kubejs:ore/fluorite/rhyolite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/gneiss"
+        ],
+        "with": [
+          {
+            "block": "kubejs:ore/fluorite/gneiss"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/quartzite"
+        ],
+        "with": [
+          {
+            "block": "kubejs:ore/fluorite/quartzite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/schist"
+        ],
+        "with": [
+          {
+            "block": "kubejs:ore/fluorite/schist"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/marble"
+        ],
+        "with": [
+          {
+            "block": "kubejs:ore/fluorite/marble"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/limestone"
+        ],
+        "with": [
+          {
+            "block": "kubejs:ore/fluorite/limestone"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/dolomite"
+        ],
+        "with": [
+          {
+            "block": "kubejs:ore/fluorite/dolomite"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/slate"
+        ],
+        "with": [
+          {
+            "block": "kubejs:ore/fluorite/slate"
+          }
+        ]
+      },
+      {
+        "replace": [
+          "tfc:rock/raw/phyllite"
+        ],
+        "with": [
+          {
+            "block": "kubejs:ore/fluorite/phyllite"
+          }
+        ]
+      }
+    ],
+    "indicator": {
+      "rarity": 100,
+      "depth": 250,
+      "underground_rarity": 50,
+      "underground_count": 4,
+      "blocks": [
+        {
+          "block": "kubejs:small_fluorite"
+        }
+      ]
+    }
+  }
+}

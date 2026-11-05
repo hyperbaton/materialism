@@ -802,7 +802,7 @@ ServerEvents.recipes(event => {
   event.remove({id: 'tfmg:mixing/p_semiconductor'})
   event.recipes.create.mixing(
     'tfmg:n_semiconductor',
-    ['tfmg:silicon_ingot', 'tfc:pure_phosphorus']
+    ['tfmg:silicon_ingot', 'chemica:phosphorus_dust']
   )
   event.custom({
     type: 'create:mixing',

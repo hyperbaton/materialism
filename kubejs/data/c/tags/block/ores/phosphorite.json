@@ -1,0 +1,11 @@
+{
+  "values": [
+    "kubejs:ore/phosphorite/limestone",
+    "kubejs:ore/phosphorite/chalk",
+    "kubejs:ore/phosphorite/shale",
+    "kubejs:ore/phosphorite/claystone",
+    "kubejs:ore/phosphorite/chert",
+    "kubejs:ore/phosphorite/dolomite",
+    "kubejs:ore/phosphorite/conglomerate"
+  ]
+}

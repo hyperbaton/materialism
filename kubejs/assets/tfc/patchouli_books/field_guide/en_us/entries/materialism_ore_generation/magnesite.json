@@ -2,7 +2,7 @@
   "name": "Magnesite",
   "category": "tfc:materialism_ore_generation",
   "icon": "tfc_metallurgy:ore/poor_magnesite/marble",
-  "sortnum": 240,
+  "sortnum": 250,
   "read_by_default": true,
   "pages": [
     {

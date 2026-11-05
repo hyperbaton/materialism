@@ -1,0 +1,14 @@
+{
+  "values": [
+    "kubejs:ore/fluorite/granite",
+    "kubejs:ore/fluorite/rhyolite",
+    "kubejs:ore/fluorite/gneiss",
+    "kubejs:ore/fluorite/quartzite",
+    "kubejs:ore/fluorite/schist",
+    "kubejs:ore/fluorite/marble",
+    "kubejs:ore/fluorite/limestone",
+    "kubejs:ore/fluorite/dolomite",
+    "kubejs:ore/fluorite/slate",
+    "kubejs:ore/fluorite/phyllite"
+  ]
+}

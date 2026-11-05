@@ -2,7 +2,7 @@
   "name": "Kernite",
   "category": "tfc:materialism_ore_generation",
   "icon": "tfc_metallurgy:ore/poor_kernite/shale",
-  "sortnum": 200,
+  "sortnum": 210,
   "read_by_default": true,
   "pages": [
     {

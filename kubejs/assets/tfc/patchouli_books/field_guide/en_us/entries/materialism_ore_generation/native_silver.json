@@ -2,7 +2,7 @@
   "name": "Native Silver",
   "category": "tfc:materialism_ore_generation",
   "icon": "tfc:ore/poor_native_silver/granite",
-  "sortnum": 330,
+  "sortnum": 340,
   "read_by_default": true,
   "pages": [
     {

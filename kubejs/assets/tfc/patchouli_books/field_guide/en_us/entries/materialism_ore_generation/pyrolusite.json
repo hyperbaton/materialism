@@ -2,7 +2,7 @@
   "name": "Pyrolusite",
   "category": "tfc:materialism_ore_generation",
   "icon": "tfc_metallurgy:ore/poor_pyrolusite/shale",
-  "sortnum": 350,
+  "sortnum": 370,
   "read_by_default": true,
   "pages": [
     {

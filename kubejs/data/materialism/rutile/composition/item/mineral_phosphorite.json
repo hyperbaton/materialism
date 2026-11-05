@@ -1,0 +1,27 @@
+{
+  "compositions": [
+    {
+      "elements": [
+        {
+          "amount": 5,
+          "id": "rutile:calcium"
+        },
+        {
+          "amount": 3,
+          "id": "rutile:phosphorus"
+        },
+        {
+          "amount": 13,
+          "id": "rutile:oxygen"
+        },
+        {
+          "amount": 1,
+          "id": "rutile:hydrogen"
+        }
+      ]
+    }
+  ],
+  "contents": [
+    "kubejs:ore/phosphorite"
+  ]
+}

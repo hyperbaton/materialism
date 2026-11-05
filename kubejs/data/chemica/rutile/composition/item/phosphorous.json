@@ -1,0 +1,15 @@
+{
+  "compositions": [
+    {
+      "elements": [
+        {
+          "amount": 1,
+          "id": "rutile:phosphorus"
+        }
+      ]
+    }
+  ],
+  "contents": [
+    "chemica:phosphorus_dust"
+  ]
+}

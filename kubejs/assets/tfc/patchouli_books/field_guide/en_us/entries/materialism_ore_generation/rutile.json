@@ -2,7 +2,7 @@
   "name": "Rutile",
   "category": "tfc:materialism_ore_generation",
   "icon": "tfc_metallurgy:ore/poor_rutile/shale",
-  "sortnum": 360,
+  "sortnum": 380,
   "read_by_default": true,
   "pages": [
     {

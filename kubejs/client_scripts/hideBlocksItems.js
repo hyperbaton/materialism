@@ -632,6 +632,11 @@ RecipeViewerEvents.removeEntries('item', event => {
     r('chemica:tin_ore')
     // Ores that do not belong in the TFC world; the pack has its own sources
     r('chemica:fervorite')
+    // Fluorite and phosphorus come from the pack's own ores (kubejs:ore/fluorite, kubejs:ore/phosphorite)
+    r('chemica:phosphorus_ore')
+    r('chemica:deepslate_phosphorus_ore')
+    r('chemica:deepslate_fluorite_ore')
+    ;['fluorite', 'phosphorite'].forEach(mineral => event.remove(new RegExp('^kubejs:ore/' + mineral + '/')))
     r('chemica:zelosite')
     ;['antimony', 'chromite', 'cobalt', 'graphite', 'molybdenum', 'platinum', 'rutile', 'silver', 'tin', 'vanadium', 'wolframite']
         .forEach(ore => r('chemica:deepslate_' + ore + '_ore'))
