@@ -1,0 +1,18 @@
+{
+  "compositions": [
+    {
+      "elements": [
+        {
+          "amount": 1,
+          "id": "rutile:platinum"
+        }
+      ]
+    }
+  ],
+  "contents": [
+    "tfc_metallurgy:ore/normal_native_platinum",
+    "tfc_metallurgy:ore/poor_native_platinum",
+    "tfc_metallurgy:ore/rich_native_platinum",
+    "tfc_metallurgy:ore/small_native_platinum"
+  ]
+}

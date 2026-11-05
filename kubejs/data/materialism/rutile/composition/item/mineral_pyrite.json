@@ -1,0 +1,21 @@
+{
+  "compositions": [
+    {
+      "elements": [
+        {
+          "amount": 1,
+          "id": "rutile:iron"
+        },
+        {
+          "amount": 2,
+          "id": "rutile:sulfur"
+        }
+      ]
+    }
+  ],
+  "contents": [
+    "tfc:gem/pyrite",
+    "tfc:ore/pyrite",
+    "tfc:powder/pyrite"
+  ]
+}

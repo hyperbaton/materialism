@@ -1,0 +1,40 @@
+{
+  "compositions": [
+    {
+      "elements": [
+        {
+          "amount": 1,
+          "id": "rutile:silver"
+        },
+        {
+          "amount": 1,
+          "id": "rutile:gold"
+        }
+      ]
+    }
+  ],
+  "contents": [
+    "createaddition:electrum_spool",
+    "createaddition:electrum_wire",
+    "tfc_items:electrum_foil",
+    "tfc_items:electrum_gear",
+    "tfc_items:electrum_heavy_sheet",
+    "tfc_items:electrum_nail",
+    "tfc_items:electrum_ring",
+    "tfc_items:electrum_rivet",
+    "tfc_items:electrum_screw",
+    "tfc_items:electrum_stamen",
+    "tfc_items:electrum_wire",
+    "tfc_metallurgy:metal/block/electrum",
+    "tfc_metallurgy:metal/double_ingot/electrum",
+    "tfc_metallurgy:metal/double_sheet/electrum",
+    "tfc_metallurgy:metal/dust/electrum",
+    "tfc_metallurgy:metal/ingot/electrum",
+    "tfc_metallurgy:metal/rod/electrum",
+    "tfc_metallurgy:metal/sheet/electrum",
+    "tfc_metallurgy:metal/slab/electrum",
+    "tfc_metallurgy:metal/stairs/electrum",
+    "vintageimprovements:electrum_spring",
+    "vintageimprovements:small_electrum_spring"
+  ]
+}

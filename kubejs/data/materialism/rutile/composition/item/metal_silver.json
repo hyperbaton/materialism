@@ -1,0 +1,46 @@
+{
+  "compositions": [
+    {
+      "elements": [
+        {
+          "amount": 1,
+          "id": "rutile:silver"
+        }
+      ]
+    }
+  ],
+  "contents": [
+    "kubejs:metal/dust/silver",
+    "tfc:metal/block/silver",
+    "tfc:metal/block/silver_slab",
+    "tfc:metal/block/silver_stairs",
+    "tfc:metal/double_ingot/silver",
+    "tfc:metal/double_sheet/silver",
+    "tfc:metal/exposed_block/silver",
+    "tfc:metal/exposed_block/silver_slab",
+    "tfc:metal/exposed_block/silver_stairs",
+    "tfc:metal/ingot/silver",
+    "tfc:metal/oxidized_block/silver",
+    "tfc:metal/oxidized_block/silver_slab",
+    "tfc:metal/oxidized_block/silver_stairs",
+    "tfc:metal/rod/silver",
+    "tfc:metal/sheet/silver",
+    "tfc:metal/weathered_block/silver",
+    "tfc:metal/weathered_block/silver_slab",
+    "tfc:metal/weathered_block/silver_stairs",
+    "tfc_items:silver_foil",
+    "tfc_items:silver_gear",
+    "tfc_items:silver_heavy_sheet",
+    "tfc_items:silver_nail",
+    "tfc_items:silver_ring",
+    "tfc_items:silver_rivet",
+    "tfc_items:silver_screw",
+    "tfc_items:silver_stamen",
+    "tfc_items:silver_wire",
+    "tfchotornot:tong_part/silver",
+    "tfchotornot:tongs/silver",
+    "vintageimprovements:silver_spring",
+    "vintageimprovements:silver_wire",
+    "vintageimprovements:small_silver_spring"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "compositions": [
+    {
+      "elements": [
+        {
+          "amount": 5,
+          "id": "rutile:calcium"
+        },
+        {
+          "amount": 3,
+          "id": "rutile:phosphorus"
+        },
+        {
+          "amount": 12,
+          "id": "rutile:oxygen"
+        },
+        {
+          "amount": 1,
+          "id": "rutile:fluorine"
+        }
+      ]
+    }
+  ],
+  "contents": [
+    "tfcvolcanoes:mineral/apatite",
+    "tfcvolcanoes:mineral/powder/apatite"
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "compositions": [
+    {
+      "elements": [
+        {
+          "amount": 39,
+          "id": "rutile:gold"
+        },
+        {
+          "amount": 11,
+          "id": "rutile:copper"
+        }
+      ]
+    }
+  ],
+  "contents": [
+    "kubejs:metal/dust/rose_gold",
+    "tfc:metal/block/rose_gold",
+    "tfc:metal/block/rose_gold_slab",
+    "tfc:metal/block/rose_gold_stairs",
+    "tfc:metal/double_ingot/rose_gold",
+    "tfc:metal/double_sheet/rose_gold",
+    "tfc:metal/ingot/rose_gold",
+    "tfc:metal/rod/rose_gold",
+    "tfc:metal/sheet/rose_gold",
+    "tfc_items:rose_gold_foil",
+    "tfc_items:rose_gold_gear",
+    "tfc_items:rose_gold_heavy_sheet",
+    "tfc_items:rose_gold_nail",
+    "tfc_items:rose_gold_ring",
+    "tfc_items:rose_gold_rivet",
+    "tfc_items:rose_gold_screw",
+    "tfc_items:rose_gold_stamen",
+    "tfc_items:rose_gold_wire",
+    "tfchotornot:tong_part/rose_gold",
+    "tfchotornot:tongs/rose_gold",
+    "vintageimprovements:rose_gold_spring",
+    "vintageimprovements:rose_gold_wire",
+    "vintageimprovements:small_rose_gold_spring"
+  ]
+}

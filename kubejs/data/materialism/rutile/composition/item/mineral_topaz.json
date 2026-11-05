@@ -1,0 +1,29 @@
+{
+  "compositions": [
+    {
+      "elements": [
+        {
+          "amount": 2,
+          "id": "rutile:aluminum"
+        },
+        {
+          "amount": 1,
+          "id": "rutile:silicon"
+        },
+        {
+          "amount": 4,
+          "id": "rutile:oxygen"
+        },
+        {
+          "amount": 2,
+          "id": "rutile:fluorine"
+        }
+      ]
+    }
+  ],
+  "contents": [
+    "tfc:gem/topaz",
+    "tfc:ore/topaz",
+    "tfc:powder/topaz"
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "compositions": [
+    {
+      "elements": [
+        {
+          "amount": 1,
+          "id": "rutile:niobium"
+        }
+      ]
+    }
+  ],
+  "contents": [
+    "tfc_metallurgy:metal/block/niobium",
+    "tfc_metallurgy:metal/double_ingot/niobium",
+    "tfc_metallurgy:metal/double_sheet/niobium",
+    "tfc_metallurgy:metal/dust/niobium",
+    "tfc_metallurgy:metal/ingot/niobium",
+    "tfc_metallurgy:metal/rod/niobium",
+    "tfc_metallurgy:metal/sheet/niobium",
+    "tfc_metallurgy:metal/slab/niobium",
+    "tfc_metallurgy:metal/stairs/niobium"
+  ]
+}

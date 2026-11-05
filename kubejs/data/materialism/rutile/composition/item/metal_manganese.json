@@ -1,0 +1,23 @@
+{
+  "compositions": [
+    {
+      "elements": [
+        {
+          "amount": 1,
+          "id": "rutile:manganese"
+        }
+      ]
+    }
+  ],
+  "contents": [
+    "tfc_metallurgy:metal/block/manganese",
+    "tfc_metallurgy:metal/double_ingot/manganese",
+    "tfc_metallurgy:metal/double_sheet/manganese",
+    "tfc_metallurgy:metal/dust/manganese",
+    "tfc_metallurgy:metal/ingot/manganese",
+    "tfc_metallurgy:metal/rod/manganese",
+    "tfc_metallurgy:metal/sheet/manganese",
+    "tfc_metallurgy:metal/slab/manganese",
+    "tfc_metallurgy:metal/stairs/manganese"
+  ]
+}

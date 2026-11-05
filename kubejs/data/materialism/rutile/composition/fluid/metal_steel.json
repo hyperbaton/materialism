@@ -1,0 +1,19 @@
+{
+  "compositions": [
+    {
+      "elements": [
+        {
+          "amount": 19,
+          "id": "rutile:iron"
+        },
+        {
+          "amount": 1,
+          "id": "rutile:carbon"
+        }
+      ]
+    }
+  ],
+  "contents": [
+    "tfc:metal/steel"
+  ]
+}

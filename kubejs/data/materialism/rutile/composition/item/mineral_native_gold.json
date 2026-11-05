@@ -1,0 +1,19 @@
+{
+  "compositions": [
+    {
+      "elements": [
+        {
+          "amount": 1,
+          "id": "rutile:gold"
+        }
+      ]
+    }
+  ],
+  "contents": [
+    "tfc:ore/normal_native_gold",
+    "tfc:ore/poor_native_gold",
+    "tfc:ore/rich_native_gold",
+    "tfc:ore/small_native_gold",
+    "tfc:powder/native_gold"
+  ]
+}

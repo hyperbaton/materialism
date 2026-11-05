@@ -1,0 +1,23 @@
+{
+  "compositions": [
+    {
+      "elements": [
+        {
+          "amount": 7,
+          "id": "rutile:copper"
+        },
+        {
+          "amount": 2,
+          "id": "rutile:silver"
+        },
+        {
+          "amount": 2,
+          "id": "rutile:gold"
+        }
+      ]
+    }
+  ],
+  "contents": [
+    "tfc:metal/black_bronze"
+  ]
+}

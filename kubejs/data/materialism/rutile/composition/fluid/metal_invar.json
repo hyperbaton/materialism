@@ -1,0 +1,23 @@
+{
+  "compositions": [
+    {
+      "elements": [
+        {
+          "amount": 62,
+          "id": "rutile:iron"
+        },
+        {
+          "amount": 35,
+          "id": "rutile:nickel"
+        },
+        {
+          "amount": 3,
+          "id": "rutile:carbon"
+        }
+      ]
+    }
+  ],
+  "contents": [
+    "tfc_metallurgy:metal/invar"
+  ]
+}

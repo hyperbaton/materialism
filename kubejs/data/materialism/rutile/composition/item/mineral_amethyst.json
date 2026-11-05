@@ -1,0 +1,21 @@
+{
+  "compositions": [
+    {
+      "elements": [
+        {
+          "amount": 1,
+          "id": "rutile:silicon"
+        },
+        {
+          "amount": 2,
+          "id": "rutile:oxygen"
+        }
+      ]
+    }
+  ],
+  "contents": [
+    "tfc:gem/amethyst",
+    "tfc:ore/amethyst",
+    "tfc:powder/amethyst"
+  ]
+}

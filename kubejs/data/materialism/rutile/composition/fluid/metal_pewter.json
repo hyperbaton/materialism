@@ -1,0 +1,19 @@
+{
+  "compositions": [
+    {
+      "elements": [
+        {
+          "amount": 7,
+          "id": "rutile:antimony"
+        },
+        {
+          "amount": 3,
+          "id": "rutile:lead"
+        }
+      ]
+    }
+  ],
+  "contents": [
+    "tfc_metallurgy:metal/pewter"
+  ]
+}

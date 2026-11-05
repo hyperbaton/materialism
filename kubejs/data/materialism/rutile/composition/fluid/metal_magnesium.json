@@ -1,0 +1,15 @@
+{
+  "compositions": [
+    {
+      "elements": [
+        {
+          "amount": 1,
+          "id": "rutile:magnesium"
+        }
+      ]
+    }
+  ],
+  "contents": [
+    "tfc_metallurgy:metal/magnesium"
+  ]
+}

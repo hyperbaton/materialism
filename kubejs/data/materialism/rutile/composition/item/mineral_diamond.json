@@ -1,0 +1,17 @@
+{
+  "compositions": [
+    {
+      "elements": [
+        {
+          "amount": 1,
+          "id": "rutile:carbon"
+        }
+      ]
+    }
+  ],
+  "contents": [
+    "tfc:gem/diamond",
+    "tfc:ore/diamond",
+    "tfc:powder/diamond"
+  ]
+}

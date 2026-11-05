@@ -1,0 +1,23 @@
+{
+  "compositions": [
+    {
+      "elements": [
+        {
+          "amount": 1,
+          "id": "rutile:zirconium"
+        }
+      ]
+    }
+  ],
+  "contents": [
+    "tfc_metallurgy:metal/block/zirconium",
+    "tfc_metallurgy:metal/double_ingot/zirconium",
+    "tfc_metallurgy:metal/double_sheet/zirconium",
+    "tfc_metallurgy:metal/dust/zirconium",
+    "tfc_metallurgy:metal/ingot/zirconium",
+    "tfc_metallurgy:metal/rod/zirconium",
+    "tfc_metallurgy:metal/sheet/zirconium",
+    "tfc_metallurgy:metal/slab/zirconium",
+    "tfc_metallurgy:metal/stairs/zirconium"
+  ]
+}

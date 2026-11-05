@@ -1,0 +1,36 @@
+{
+  "compositions": [
+    {
+      "elements": [
+        {
+          "amount": 1,
+          "id": "rutile:lead"
+        }
+      ]
+    }
+  ],
+  "contents": [
+    "tfc_items:lead_foil",
+    "tfc_items:lead_gear",
+    "tfc_items:lead_heavy_sheet",
+    "tfc_items:lead_nail",
+    "tfc_items:lead_ring",
+    "tfc_items:lead_rivet",
+    "tfc_items:lead_screw",
+    "tfc_items:lead_stamen",
+    "tfc_items:lead_wire",
+    "tfc_metallurgy:metal/block/lead",
+    "tfc_metallurgy:metal/double_ingot/lead",
+    "tfc_metallurgy:metal/double_sheet/lead",
+    "tfc_metallurgy:metal/dust/lead",
+    "tfc_metallurgy:metal/ingot/lead",
+    "tfc_metallurgy:metal/rod/lead",
+    "tfc_metallurgy:metal/sheet/lead",
+    "tfc_metallurgy:metal/slab/lead",
+    "tfc_metallurgy:metal/stairs/lead",
+    "tfmg:lead_truss",
+    "vintageimprovements:lead_spring",
+    "vintageimprovements:lead_wire",
+    "vintageimprovements:small_lead_spring"
+  ]
+}

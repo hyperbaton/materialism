@@ -1,0 +1,24 @@
+{
+  "compositions": [
+    {
+      "elements": [
+        {
+          "amount": 2,
+          "id": "rutile:potassium"
+        },
+        {
+          "amount": 1,
+          "id": "rutile:sulfur"
+        },
+        {
+          "amount": 4,
+          "id": "rutile:oxygen"
+        }
+      ]
+    }
+  ],
+  "contents": [
+    "tfcvolcanoes:mineral/arcanite",
+    "tfcvolcanoes:mineral/powder/arcanite"
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "compositions": [
+    {
+      "elements": [
+        {
+          "amount": 7,
+          "id": "rutile:copper"
+        },
+        {
+          "amount": 3,
+          "id": "rutile:aluminum"
+        }
+      ]
+    }
+  ],
+  "contents": [
+    "tfc_metallurgy:metal/florentine_bronze"
+  ]
+}

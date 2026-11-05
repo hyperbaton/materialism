@@ -1,0 +1,19 @@
+{
+  "compositions": [
+    {
+      "elements": [
+        {
+          "amount": 39,
+          "id": "rutile:gold"
+        },
+        {
+          "amount": 11,
+          "id": "rutile:copper"
+        }
+      ]
+    }
+  ],
+  "contents": [
+    "tfc:metal/rose_gold"
+  ]
+}

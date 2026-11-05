@@ -1,0 +1,15 @@
+{
+  "compositions": [
+    {
+      "elements": [
+        {
+          "amount": 1,
+          "id": "rutile:neodymium"
+        }
+      ]
+    }
+  ],
+  "contents": [
+    "tfc_metallurgy:metal/neodymium"
+  ]
+}

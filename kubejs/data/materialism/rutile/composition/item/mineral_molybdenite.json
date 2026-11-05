@@ -1,0 +1,22 @@
+{
+  "compositions": [
+    {
+      "elements": [
+        {
+          "amount": 1,
+          "id": "rutile:molybdenum"
+        },
+        {
+          "amount": 2,
+          "id": "rutile:sulfur"
+        }
+      ]
+    }
+  ],
+  "contents": [
+    "tfc_metallurgy:ore/normal_molybdenite",
+    "tfc_metallurgy:ore/poor_molybdenite",
+    "tfc_metallurgy:ore/rich_molybdenite",
+    "tfc_metallurgy:ore/small_molybdenite"
+  ]
+}

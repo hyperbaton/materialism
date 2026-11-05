@@ -1,0 +1,23 @@
+{
+  "compositions": [
+    {
+      "elements": [
+        {
+          "amount": 1,
+          "id": "rutile:beryllium"
+        }
+      ]
+    }
+  ],
+  "contents": [
+    "tfc_metallurgy:metal/block/beryllium",
+    "tfc_metallurgy:metal/double_ingot/beryllium",
+    "tfc_metallurgy:metal/double_sheet/beryllium",
+    "tfc_metallurgy:metal/dust/beryllium",
+    "tfc_metallurgy:metal/ingot/beryllium",
+    "tfc_metallurgy:metal/rod/beryllium",
+    "tfc_metallurgy:metal/sheet/beryllium",
+    "tfc_metallurgy:metal/slab/beryllium",
+    "tfc_metallurgy:metal/stairs/beryllium"
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "compositions": [
+    {
+      "elements": [
+        {
+          "amount": 1,
+          "id": "rutile:gold"
+        }
+      ]
+    }
+  ],
+  "contents": [
+    "createaddition:gold_spool",
+    "createaddition:gold_wire",
+    "kubejs:metal/dust/gold",
+    "tfc:metal/block/gold",
+    "tfc:metal/block/gold_slab",
+    "tfc:metal/block/gold_stairs",
+    "tfc:metal/double_ingot/gold",
+    "tfc:metal/double_sheet/gold",
+    "tfc:metal/ingot/gold",
+    "tfc:metal/rod/gold",
+    "tfc:metal/sheet/gold",
+    "tfc_items:gold_foil",
+    "tfc_items:gold_gear",
+    "tfc_items:gold_heavy_sheet",
+    "tfc_items:gold_nail",
+    "tfc_items:gold_ring",
+    "tfc_items:gold_rivet",
+    "tfc_items:gold_screw",
+    "tfc_items:gold_stamen",
+    "tfc_items:gold_wire",
+    "tfchotornot:tong_part/gold",
+    "tfchotornot:tongs/gold"
+  ]
+}

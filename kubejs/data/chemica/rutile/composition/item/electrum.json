@@ -1,0 +1,17 @@
+{
+  "compositions": [
+    {
+      "elements": [
+        {
+          "amount": 1,
+          "id": "rutile:silver"
+        },
+        {
+          "amount": 1,
+          "id": "rutile:gold"
+        }
+      ]
+    }
+  ],
+  "contents": []
+}

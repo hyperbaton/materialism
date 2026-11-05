@@ -1,0 +1,28 @@
+{
+  "compositions": [
+    {
+      "elements": [
+        {
+          "amount": 3,
+          "id": "rutile:magnesium"
+        },
+        {
+          "amount": 2,
+          "id": "rutile:silicon"
+        },
+        {
+          "amount": 9,
+          "id": "rutile:oxygen"
+        },
+        {
+          "amount": 4,
+          "id": "rutile:hydrogen"
+        }
+      ]
+    }
+  ],
+  "contents": [
+    "tfcvolcanoes:mineral/powder/serpentine",
+    "tfcvolcanoes:mineral/serpentine"
+  ]
+}

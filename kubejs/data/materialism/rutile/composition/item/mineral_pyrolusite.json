@@ -1,0 +1,22 @@
+{
+  "compositions": [
+    {
+      "elements": [
+        {
+          "amount": 1,
+          "id": "rutile:manganese"
+        },
+        {
+          "amount": 2,
+          "id": "rutile:oxygen"
+        }
+      ]
+    }
+  ],
+  "contents": [
+    "tfc_metallurgy:ore/normal_pyrolusite",
+    "tfc_metallurgy:ore/poor_pyrolusite",
+    "tfc_metallurgy:ore/rich_pyrolusite",
+    "tfc_metallurgy:ore/small_pyrolusite"
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "compositions": [
+    {
+      "elements": [
+        {
+          "amount": 1,
+          "id": "rutile:lead"
+        },
+        {
+          "amount": 1,
+          "id": "rutile:sulfur"
+        }
+      ]
+    }
+  ],
+  "contents": [
+    "tfc_metallurgy:ore/normal_galena",
+    "tfc_metallurgy:ore/poor_galena",
+    "tfc_metallurgy:ore/rich_galena",
+    "tfc_metallurgy:ore/small_galena",
+    "tfcvolcanoes:mineral/galena",
+    "tfcvolcanoes:mineral/powder/galena"
+  ]
+}

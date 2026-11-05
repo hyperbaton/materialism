@@ -1,0 +1,26 @@
+{
+  "compositions": [
+    {
+      "elements": [
+        {
+          "amount": 1,
+          "id": "rutile:iron"
+        },
+        {
+          "amount": 1,
+          "id": "rutile:tungsten"
+        },
+        {
+          "amount": 4,
+          "id": "rutile:oxygen"
+        }
+      ]
+    }
+  ],
+  "contents": [
+    "tfc_metallurgy:ore/normal_wolframite",
+    "tfc_metallurgy:ore/poor_wolframite",
+    "tfc_metallurgy:ore/rich_wolframite",
+    "tfc_metallurgy:ore/small_wolframite"
+  ]
+}

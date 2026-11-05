@@ -1,0 +1,24 @@
+{
+  "compositions": [
+    {
+      "elements": [
+        {
+          "amount": 2,
+          "id": "rutile:lithium"
+        },
+        {
+          "amount": 1,
+          "id": "rutile:carbon"
+        },
+        {
+          "amount": 3,
+          "id": "rutile:oxygen"
+        }
+      ]
+    }
+  ],
+  "contents": [
+    "tfcvolcanoes:mineral/powder/zabuyelite",
+    "tfcvolcanoes:mineral/zabuyelite"
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "compositions": [
+    {
+      "elements": [
+        {
+          "amount": 38,
+          "id": "rutile:iron"
+        },
+        {
+          "amount": 13,
+          "id": "rutile:nickel"
+        },
+        {
+          "amount": 13,
+          "id": "rutile:chromium"
+        },
+        {
+          "amount": 13,
+          "id": "rutile:molybdenum"
+        },
+        {
+          "amount": 8,
+          "id": "rutile:copper"
+        },
+        {
+          "amount": 2,
+          "id": "rutile:carbon"
+        },
+        {
+          "amount": 2,
+          "id": "rutile:silver"
+        },
+        {
+          "amount": 2,
+          "id": "rutile:gold"
+        },
+        {
+          "amount": 2,
+          "id": "rutile:vanadium"
+        },
+        {
+          "amount": 2,
+          "id": "rutile:manganese"
+        },
+        {
+          "amount": 2,
+          "id": "rutile:cobalt"
+        },
+        {
+          "amount": 2,
+          "id": "rutile:niobium"
+        }
+      ]
+    }
+  ],
+  "contents": [
+    "tfc_metallurgy:metal/high_alloy_steel"
+  ]
+}

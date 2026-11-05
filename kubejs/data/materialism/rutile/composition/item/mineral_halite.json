@@ -1,0 +1,23 @@
+{
+  "compositions": [
+    {
+      "elements": [
+        {
+          "amount": 1,
+          "id": "rutile:sodium"
+        },
+        {
+          "amount": 1,
+          "id": "rutile:chlorine"
+        }
+      ]
+    }
+  ],
+  "contents": [
+    "tfc:halite",
+    "tfc:ore/halite",
+    "tfc:powder/halite",
+    "tfc:powder/salt",
+    "tfcvolcanoes:mineral/salt"
+  ]
+}

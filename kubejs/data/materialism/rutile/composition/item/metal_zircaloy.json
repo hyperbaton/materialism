@@ -1,0 +1,27 @@
+{
+  "compositions": [
+    {
+      "elements": [
+        {
+          "amount": 3,
+          "id": "rutile:zirconium"
+        },
+        {
+          "amount": 1,
+          "id": "rutile:tin"
+        }
+      ]
+    }
+  ],
+  "contents": [
+    "tfc_metallurgy:metal/block/zircaloy",
+    "tfc_metallurgy:metal/double_ingot/zircaloy",
+    "tfc_metallurgy:metal/double_sheet/zircaloy",
+    "tfc_metallurgy:metal/dust/zircaloy",
+    "tfc_metallurgy:metal/ingot/zircaloy",
+    "tfc_metallurgy:metal/rod/zircaloy",
+    "tfc_metallurgy:metal/sheet/zircaloy",
+    "tfc_metallurgy:metal/slab/zircaloy",
+    "tfc_metallurgy:metal/stairs/zircaloy"
+  ]
+}

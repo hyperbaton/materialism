@@ -1,0 +1,27 @@
+{
+  "compositions": [
+    {
+      "elements": [
+        {
+          "amount": 60,
+          "id": "rutile:iron"
+        },
+        {
+          "amount": 23,
+          "id": "rutile:chromium"
+        },
+        {
+          "amount": 14,
+          "id": "rutile:nickel"
+        },
+        {
+          "amount": 3,
+          "id": "rutile:carbon"
+        }
+      ]
+    }
+  ],
+  "contents": [
+    "firmalife:metal/stainless_steel"
+  ]
+}

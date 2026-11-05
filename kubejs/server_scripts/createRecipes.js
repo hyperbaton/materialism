@@ -130,7 +130,7 @@ ServerEvents.recipes(event => {
       [
         event.recipes.createDeploying('tfc_metallurgy:metal/rod/tungsten_steel', [
           'tfc_metallurgy:metal/rod/tungsten_steel',
-          'kubejs:powder/tungsten_carbide'
+          'chemica:tungsten_carbide_dust'
         ]),
         event.recipes.vintageimprovements.turning('tfc_metallurgy:metal/rod/tungsten_steel', 'tfc_metallurgy:metal/rod/tungsten_steel'),
         event.recipes.vintageimprovements.pressurizing('tfc_metallurgy:metal/rod/tungsten_steel', 'tfc_metallurgy:metal/rod/tungsten_steel'),

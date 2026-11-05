@@ -1,0 +1,19 @@
+{
+  "compositions": [
+    {
+      "elements": [
+        {
+          "amount": 7,
+          "id": "rutile:osmium"
+        },
+        {
+          "amount": 3,
+          "id": "rutile:iridium"
+        }
+      ]
+    }
+  ],
+  "contents": [
+    "tfc_metallurgy:metal/osmiridium"
+  ]
+}

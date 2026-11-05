@@ -1,0 +1,28 @@
+{
+  "compositions": [
+    {
+      "elements": [
+        {
+          "amount": 1,
+          "id": "rutile:cerium"
+        },
+        {
+          "amount": 1,
+          "id": "rutile:carbon"
+        },
+        {
+          "amount": 3,
+          "id": "rutile:oxygen"
+        },
+        {
+          "amount": 1,
+          "id": "rutile:fluorine"
+        }
+      ]
+    }
+  ],
+  "contents": [
+    "tfcvolcanoes:mineral/bastnasite",
+    "tfcvolcanoes:mineral/powder/bastnasite"
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "compositions": [
+    {
+      "elements": [
+        {
+          "amount": 1,
+          "id": "rutile:manganese"
+        },
+        {
+          "amount": 1,
+          "id": "rutile:sulfur"
+        }
+      ]
+    }
+  ],
+  "contents": [
+    "tfcvolcanoes:mineral/alabandite",
+    "tfcvolcanoes:mineral/powder/alabandite"
+  ]
+}

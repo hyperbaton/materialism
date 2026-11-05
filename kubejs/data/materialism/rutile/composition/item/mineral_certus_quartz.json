@@ -1,0 +1,21 @@
+{
+  "compositions": [
+    {
+      "elements": [
+        {
+          "amount": 1,
+          "id": "rutile:silicon"
+        },
+        {
+          "amount": 2,
+          "id": "rutile:oxygen"
+        }
+      ]
+    }
+  ],
+  "contents": [
+    "kubejs:certus_quartz_powder",
+    "kubejs:redstone_imbued_quartz_powder",
+    "tfc_metallurgy:ore/certus_quartz"
+  ]
+}

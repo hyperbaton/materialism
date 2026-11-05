@@ -1,0 +1,17 @@
+{
+  "compositions": [
+    {
+      "elements": [
+        {
+          "amount": 1,
+          "id": "rutile:sulfur"
+        }
+      ]
+    }
+  ],
+  "contents": [
+    "tfc:ore/sulfur",
+    "tfc:powder/sulfur",
+    "tfcvolcanoes:mineral/brimstone"
+  ]
+}

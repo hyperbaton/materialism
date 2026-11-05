@@ -1,0 +1,37 @@
+{
+  "compositions": [
+    {
+      "elements": [
+        {
+          "amount": 1,
+          "id": "rutile:tin"
+        }
+      ]
+    }
+  ],
+  "contents": [
+    "kubejs:metal/dust/tin",
+    "tfc:metal/block/tin",
+    "tfc:metal/block/tin_slab",
+    "tfc:metal/block/tin_stairs",
+    "tfc:metal/double_ingot/tin",
+    "tfc:metal/double_sheet/tin",
+    "tfc:metal/ingot/tin",
+    "tfc:metal/rod/tin",
+    "tfc:metal/sheet/tin",
+    "tfc_items:tin_foil",
+    "tfc_items:tin_gear",
+    "tfc_items:tin_heavy_sheet",
+    "tfc_items:tin_nail",
+    "tfc_items:tin_ring",
+    "tfc_items:tin_rivet",
+    "tfc_items:tin_screw",
+    "tfc_items:tin_stamen",
+    "tfc_items:tin_wire",
+    "tfchotornot:tong_part/tin",
+    "tfchotornot:tongs/tin",
+    "vintageimprovements:small_tin_spring",
+    "vintageimprovements:tin_spring",
+    "vintageimprovements:tin_wire"
+  ]
+}

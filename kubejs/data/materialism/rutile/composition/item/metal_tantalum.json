@@ -1,0 +1,23 @@
+{
+  "compositions": [
+    {
+      "elements": [
+        {
+          "amount": 1,
+          "id": "rutile:tantalum"
+        }
+      ]
+    }
+  ],
+  "contents": [
+    "tfc_metallurgy:metal/block/tantalum",
+    "tfc_metallurgy:metal/double_ingot/tantalum",
+    "tfc_metallurgy:metal/double_sheet/tantalum",
+    "tfc_metallurgy:metal/dust/tantalum",
+    "tfc_metallurgy:metal/ingot/tantalum",
+    "tfc_metallurgy:metal/rod/tantalum",
+    "tfc_metallurgy:metal/sheet/tantalum",
+    "tfc_metallurgy:metal/slab/tantalum",
+    "tfc_metallurgy:metal/stairs/tantalum"
+  ]
+}

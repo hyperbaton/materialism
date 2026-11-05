@@ -1,0 +1,24 @@
+{
+  "compositions": [
+    {
+      "elements": [
+        {
+          "amount": 2,
+          "id": "rutile:aluminum"
+        },
+        {
+          "amount": 3,
+          "id": "rutile:oxygen"
+        }
+      ]
+    }
+  ],
+  "contents": [
+    "tfc:gem/ruby",
+    "tfc:gem/sapphire",
+    "tfc:ore/ruby",
+    "tfc:ore/sapphire",
+    "tfc:powder/ruby",
+    "tfc:powder/sapphire"
+  ]
+}

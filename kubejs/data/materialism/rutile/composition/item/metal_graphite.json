@@ -1,0 +1,23 @@
+{
+  "compositions": [
+    {
+      "elements": [
+        {
+          "amount": 1,
+          "id": "rutile:carbon"
+        }
+      ]
+    }
+  ],
+  "contents": [
+    "tfc_metallurgy:metal/block/graphite",
+    "tfc_metallurgy:metal/double_ingot/graphite",
+    "tfc_metallurgy:metal/double_sheet/graphite",
+    "tfc_metallurgy:metal/dust/graphite",
+    "tfc_metallurgy:metal/ingot/graphite",
+    "tfc_metallurgy:metal/rod/graphite",
+    "tfc_metallurgy:metal/sheet/graphite",
+    "tfc_metallurgy:metal/slab/graphite",
+    "tfc_metallurgy:metal/stairs/graphite"
+  ]
+}

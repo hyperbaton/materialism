@@ -1,0 +1,26 @@
+{
+  "compositions": [
+    {
+      "elements": [
+        {
+          "amount": 1,
+          "id": "rutile:vanadium"
+        }
+      ]
+    }
+  ],
+  "contents": [
+    "tfc_metallurgy:metal/block/vanadium",
+    "tfc_metallurgy:metal/double_ingot/vanadium",
+    "tfc_metallurgy:metal/double_sheet/vanadium",
+    "tfc_metallurgy:metal/dust/vanadium",
+    "tfc_metallurgy:metal/ingot/vanadium",
+    "tfc_metallurgy:metal/rod/vanadium",
+    "tfc_metallurgy:metal/sheet/vanadium",
+    "tfc_metallurgy:metal/slab/vanadium",
+    "tfc_metallurgy:metal/stairs/vanadium",
+    "vintageimprovements:small_vanadium_spring",
+    "vintageimprovements:vanadium_spring",
+    "vintageimprovements:vanadium_wire"
+  ]
+}

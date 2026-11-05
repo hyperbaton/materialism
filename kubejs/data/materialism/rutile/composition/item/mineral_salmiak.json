@@ -1,0 +1,24 @@
+{
+  "compositions": [
+    {
+      "elements": [
+        {
+          "amount": 1,
+          "id": "rutile:nitrogen"
+        },
+        {
+          "amount": 4,
+          "id": "rutile:hydrogen"
+        },
+        {
+          "amount": 1,
+          "id": "rutile:chlorine"
+        }
+      ]
+    }
+  ],
+  "contents": [
+    "tfcvolcanoes:mineral/powder/salmiak",
+    "tfcvolcanoes:mineral/salmiak"
+  ]
+}

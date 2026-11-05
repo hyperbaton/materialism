@@ -1,0 +1,31 @@
+{
+  "compositions": [
+    {
+      "elements": [
+        {
+          "amount": 3,
+          "id": "rutile:nickel"
+        },
+        {
+          "amount": 2,
+          "id": "rutile:silicon"
+        },
+        {
+          "amount": 9,
+          "id": "rutile:oxygen"
+        },
+        {
+          "amount": 4,
+          "id": "rutile:hydrogen"
+        }
+      ]
+    }
+  ],
+  "contents": [
+    "tfc:ore/normal_garnierite",
+    "tfc:ore/poor_garnierite",
+    "tfc:ore/rich_garnierite",
+    "tfc:ore/small_garnierite",
+    "tfc:powder/garnierite"
+  ]
+}

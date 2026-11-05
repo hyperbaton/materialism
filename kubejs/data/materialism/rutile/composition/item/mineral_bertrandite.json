@@ -1,0 +1,30 @@
+{
+  "compositions": [
+    {
+      "elements": [
+        {
+          "amount": 4,
+          "id": "rutile:beryllium"
+        },
+        {
+          "amount": 2,
+          "id": "rutile:silicon"
+        },
+        {
+          "amount": 9,
+          "id": "rutile:oxygen"
+        },
+        {
+          "amount": 2,
+          "id": "rutile:hydrogen"
+        }
+      ]
+    }
+  ],
+  "contents": [
+    "tfc_metallurgy:ore/normal_bertrandite",
+    "tfc_metallurgy:ore/poor_bertrandite",
+    "tfc_metallurgy:ore/rich_bertrandite",
+    "tfc_metallurgy:ore/small_bertrandite"
+  ]
+}

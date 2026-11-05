@@ -1,0 +1,22 @@
+{
+  "compositions": [
+    {
+      "elements": [
+        {
+          "amount": 1,
+          "id": "rutile:uranium"
+        },
+        {
+          "amount": 2,
+          "id": "rutile:oxygen"
+        }
+      ]
+    }
+  ],
+  "contents": [
+    "tfc_metallurgy:ore/normal_uraninite",
+    "tfc_metallurgy:ore/poor_uraninite",
+    "tfc_metallurgy:ore/rich_uraninite",
+    "tfc_metallurgy:ore/small_uraninite"
+  ]
+}

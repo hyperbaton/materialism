@@ -1,0 +1,27 @@
+{
+  "compositions": [
+    {
+      "elements": [
+        {
+          "amount": 12,
+          "id": "rutile:copper"
+        },
+        {
+          "amount": 4,
+          "id": "rutile:antimony"
+        },
+        {
+          "amount": 13,
+          "id": "rutile:sulfur"
+        }
+      ]
+    }
+  ],
+  "contents": [
+    "tfc:ore/normal_tetrahedrite",
+    "tfc:ore/poor_tetrahedrite",
+    "tfc:ore/rich_tetrahedrite",
+    "tfc:ore/small_tetrahedrite",
+    "tfc:powder/tetrahedrite"
+  ]
+}

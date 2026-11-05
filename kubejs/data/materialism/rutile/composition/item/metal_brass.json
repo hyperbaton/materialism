@@ -1,0 +1,51 @@
+{
+  "compositions": [
+    {
+      "elements": [
+        {
+          "amount": 9,
+          "id": "rutile:copper"
+        },
+        {
+          "amount": 1,
+          "id": "rutile:zinc"
+        }
+      ]
+    }
+  ],
+  "contents": [
+    "kubejs:metal/dust/brass",
+    "tfc:metal/block/brass",
+    "tfc:metal/block/brass_slab",
+    "tfc:metal/block/brass_stairs",
+    "tfc:metal/double_ingot/brass",
+    "tfc:metal/double_sheet/brass",
+    "tfc:metal/exposed_block/brass",
+    "tfc:metal/exposed_block/brass_slab",
+    "tfc:metal/exposed_block/brass_stairs",
+    "tfc:metal/ingot/brass",
+    "tfc:metal/oxidized_block/brass",
+    "tfc:metal/oxidized_block/brass_slab",
+    "tfc:metal/oxidized_block/brass_stairs",
+    "tfc:metal/rod/brass",
+    "tfc:metal/sheet/brass",
+    "tfc:metal/weathered_block/brass",
+    "tfc:metal/weathered_block/brass_slab",
+    "tfc:metal/weathered_block/brass_stairs",
+    "tfc_items:brass_foil",
+    "tfc_items:brass_gear",
+    "tfc_items:brass_heavy_sheet",
+    "tfc_items:brass_nail",
+    "tfc_items:brass_ring",
+    "tfc_items:brass_rivet",
+    "tfc_items:brass_screw",
+    "tfc_items:brass_stamen",
+    "tfc_items:brass_wire",
+    "tfchotornot:tong_part/brass",
+    "tfchotornot:tongs/brass",
+    "tfmg:brass_truss",
+    "vintageimprovements:brass_spring",
+    "vintageimprovements:brass_wire",
+    "vintageimprovements:small_brass_spring"
+  ]
+}

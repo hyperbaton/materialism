@@ -1,0 +1,27 @@
+{
+  "compositions": [
+    {
+      "elements": [
+        {
+          "amount": 1,
+          "id": "rutile:carbon"
+        }
+      ]
+    }
+  ],
+  "contents": [
+    "minecraft:charcoal",
+    "tfc:bituminous_coal",
+    "tfc:lignite",
+    "tfc:ore/bituminous_coal",
+    "tfc:ore/graphite",
+    "tfc:ore/lignite",
+    "tfc:powder/charcoal",
+    "tfc:powder/coke",
+    "tfc:powder/graphite",
+    "tfcvolcanoes:mineral/jet",
+    "tfcvolcanoes:mineral/powder/jet",
+    "tfmg:coal_coke",
+    "tfmg:coal_coke_dust"
+  ]
+}

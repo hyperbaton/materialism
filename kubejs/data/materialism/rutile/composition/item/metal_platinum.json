@@ -1,0 +1,26 @@
+{
+  "compositions": [
+    {
+      "elements": [
+        {
+          "amount": 1,
+          "id": "rutile:platinum"
+        }
+      ]
+    }
+  ],
+  "contents": [
+    "tfc_metallurgy:metal/block/platinum",
+    "tfc_metallurgy:metal/double_ingot/platinum",
+    "tfc_metallurgy:metal/double_sheet/platinum",
+    "tfc_metallurgy:metal/dust/platinum",
+    "tfc_metallurgy:metal/ingot/platinum",
+    "tfc_metallurgy:metal/rod/platinum",
+    "tfc_metallurgy:metal/sheet/platinum",
+    "tfc_metallurgy:metal/slab/platinum",
+    "tfc_metallurgy:metal/stairs/platinum",
+    "vintageimprovements:platinum_spring",
+    "vintageimprovements:platinum_wire",
+    "vintageimprovements:small_platinum_spring"
+  ]
+}

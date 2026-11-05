@@ -1,0 +1,26 @@
+{
+  "compositions": [
+    {
+      "elements": [
+        {
+          "amount": 1,
+          "id": "rutile:cobalt"
+        },
+        {
+          "amount": 1,
+          "id": "rutile:arsenic"
+        },
+        {
+          "amount": 1,
+          "id": "rutile:sulfur"
+        }
+      ]
+    }
+  ],
+  "contents": [
+    "tfc_metallurgy:ore/normal_cobaltite",
+    "tfc_metallurgy:ore/poor_cobaltite",
+    "tfc_metallurgy:ore/rich_cobaltite",
+    "tfc_metallurgy:ore/small_cobaltite"
+  ]
+}

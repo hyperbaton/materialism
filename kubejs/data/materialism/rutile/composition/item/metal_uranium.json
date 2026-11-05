@@ -1,0 +1,35 @@
+{
+  "compositions": [
+    {
+      "elements": [
+        {
+          "amount": 1,
+          "id": "rutile:uranium"
+        }
+      ]
+    }
+  ],
+  "contents": [
+    "tfc_items:uranium_foil",
+    "tfc_items:uranium_gear",
+    "tfc_items:uranium_heavy_sheet",
+    "tfc_items:uranium_nail",
+    "tfc_items:uranium_ring",
+    "tfc_items:uranium_rivet",
+    "tfc_items:uranium_screw",
+    "tfc_items:uranium_stamen",
+    "tfc_items:uranium_wire",
+    "tfc_metallurgy:metal/block/uranium",
+    "tfc_metallurgy:metal/double_ingot/uranium",
+    "tfc_metallurgy:metal/double_sheet/uranium",
+    "tfc_metallurgy:metal/dust/uranium",
+    "tfc_metallurgy:metal/ingot/uranium",
+    "tfc_metallurgy:metal/rod/uranium",
+    "tfc_metallurgy:metal/sheet/uranium",
+    "tfc_metallurgy:metal/slab/uranium",
+    "tfc_metallurgy:metal/stairs/uranium",
+    "vintageimprovements:small_uranium_spring",
+    "vintageimprovements:uranium_spring",
+    "vintageimprovements:uranium_wire"
+  ]
+}

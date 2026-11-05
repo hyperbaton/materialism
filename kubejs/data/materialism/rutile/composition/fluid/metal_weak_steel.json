@@ -1,0 +1,35 @@
+{
+  "compositions": [
+    {
+      "elements": [
+        {
+          "amount": 57,
+          "id": "rutile:iron"
+        },
+        {
+          "amount": 20,
+          "id": "rutile:nickel"
+        },
+        {
+          "amount": 13,
+          "id": "rutile:copper"
+        },
+        {
+          "amount": 4,
+          "id": "rutile:silver"
+        },
+        {
+          "amount": 4,
+          "id": "rutile:gold"
+        },
+        {
+          "amount": 3,
+          "id": "rutile:carbon"
+        }
+      ]
+    }
+  ],
+  "contents": [
+    "tfc:metal/weak_steel"
+  ]
+}

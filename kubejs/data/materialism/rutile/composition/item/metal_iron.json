@@ -1,0 +1,18 @@
+{
+  "compositions": [
+    {
+      "elements": [
+        {
+          "amount": 1,
+          "id": "rutile:iron"
+        }
+      ]
+    }
+  ],
+  "contents": [
+    "createaddition:iron_wire",
+    "kubejs:metal/dust/iron",
+    "vintageimprovements:iron_spring",
+    "vintageimprovements:small_iron_spring"
+  ]
+}

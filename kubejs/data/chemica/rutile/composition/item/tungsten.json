@@ -1,0 +1,13 @@
+{
+  "compositions": [
+    {
+      "elements": [
+        {
+          "amount": 1,
+          "id": "rutile:tungsten"
+        }
+      ]
+    }
+  ],
+  "contents": []
+}

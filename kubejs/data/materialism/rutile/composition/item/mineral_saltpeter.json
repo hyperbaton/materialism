@@ -1,0 +1,25 @@
+{
+  "compositions": [
+    {
+      "elements": [
+        {
+          "amount": 1,
+          "id": "rutile:potassium"
+        },
+        {
+          "amount": 1,
+          "id": "rutile:nitrogen"
+        },
+        {
+          "amount": 3,
+          "id": "rutile:oxygen"
+        }
+      ]
+    }
+  ],
+  "contents": [
+    "tfc:ore/saltpeter",
+    "tfc:powder/saltpeter",
+    "tfcvolcanoes:mineral/saltpeter"
+  ]
+}

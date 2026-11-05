@@ -1,0 +1,31 @@
+{
+  "compositions": [
+    {
+      "elements": [
+        {
+          "amount": 1,
+          "id": "rutile:chromium"
+        }
+      ]
+    }
+  ],
+  "contents": [
+    "firmalife:metal/block/chromium",
+    "firmalife:metal/block/chromium_slab",
+    "firmalife:metal/block/chromium_stairs",
+    "firmalife:metal/double_ingot/chromium",
+    "firmalife:metal/double_sheet/chromium",
+    "firmalife:metal/ingot/chromium",
+    "firmalife:metal/rod/chromium",
+    "firmalife:metal/sheet/chromium",
+    "tfc_items:chromium_foil",
+    "tfc_items:chromium_gear",
+    "tfc_items:chromium_heavy_sheet",
+    "tfc_items:chromium_nail",
+    "tfc_items:chromium_ring",
+    "tfc_items:chromium_rivet",
+    "tfc_items:chromium_screw",
+    "tfc_items:chromium_stamen",
+    "tfc_items:chromium_wire"
+  ]
+}

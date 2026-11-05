@@ -1,0 +1,23 @@
+{
+  "compositions": [
+    {
+      "elements": [
+        {
+          "amount": 1,
+          "id": "rutile:molybdenum"
+        }
+      ]
+    }
+  ],
+  "contents": [
+    "tfc_metallurgy:metal/block/molybdenum",
+    "tfc_metallurgy:metal/double_ingot/molybdenum",
+    "tfc_metallurgy:metal/double_sheet/molybdenum",
+    "tfc_metallurgy:metal/dust/molybdenum",
+    "tfc_metallurgy:metal/ingot/molybdenum",
+    "tfc_metallurgy:metal/rod/molybdenum",
+    "tfc_metallurgy:metal/sheet/molybdenum",
+    "tfc_metallurgy:metal/slab/molybdenum",
+    "tfc_metallurgy:metal/stairs/molybdenum"
+  ]
+}

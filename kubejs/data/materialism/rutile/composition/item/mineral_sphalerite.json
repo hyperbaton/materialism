@@ -1,0 +1,23 @@
+{
+  "compositions": [
+    {
+      "elements": [
+        {
+          "amount": 1,
+          "id": "rutile:zinc"
+        },
+        {
+          "amount": 1,
+          "id": "rutile:sulfur"
+        }
+      ]
+    }
+  ],
+  "contents": [
+    "tfc:ore/normal_sphalerite",
+    "tfc:ore/poor_sphalerite",
+    "tfc:ore/rich_sphalerite",
+    "tfc:ore/small_sphalerite",
+    "tfc:powder/sphalerite"
+  ]
+}

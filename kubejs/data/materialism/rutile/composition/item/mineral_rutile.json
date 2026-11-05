@@ -1,0 +1,22 @@
+{
+  "compositions": [
+    {
+      "elements": [
+        {
+          "amount": 1,
+          "id": "rutile:titanium"
+        },
+        {
+          "amount": 2,
+          "id": "rutile:oxygen"
+        }
+      ]
+    }
+  ],
+  "contents": [
+    "tfc_metallurgy:ore/normal_rutile",
+    "tfc_metallurgy:ore/poor_rutile",
+    "tfc_metallurgy:ore/rich_rutile",
+    "tfc_metallurgy:ore/small_rutile"
+  ]
+}

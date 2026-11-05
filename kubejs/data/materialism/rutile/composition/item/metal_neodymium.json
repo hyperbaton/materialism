@@ -1,0 +1,23 @@
+{
+  "compositions": [
+    {
+      "elements": [
+        {
+          "amount": 1,
+          "id": "rutile:neodymium"
+        }
+      ]
+    }
+  ],
+  "contents": [
+    "tfc_metallurgy:metal/block/neodymium",
+    "tfc_metallurgy:metal/double_ingot/neodymium",
+    "tfc_metallurgy:metal/double_sheet/neodymium",
+    "tfc_metallurgy:metal/dust/neodymium",
+    "tfc_metallurgy:metal/ingot/neodymium",
+    "tfc_metallurgy:metal/rod/neodymium",
+    "tfc_metallurgy:metal/sheet/neodymium",
+    "tfc_metallurgy:metal/slab/neodymium",
+    "tfc_metallurgy:metal/stairs/neodymium"
+  ]
+}

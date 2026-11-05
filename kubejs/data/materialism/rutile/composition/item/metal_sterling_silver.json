@@ -1,0 +1,47 @@
+{
+  "compositions": [
+    {
+      "elements": [
+        {
+          "amount": 7,
+          "id": "rutile:silver"
+        },
+        {
+          "amount": 3,
+          "id": "rutile:copper"
+        }
+      ]
+    }
+  ],
+  "contents": [
+    "kubejs:metal/dust/sterling_silver",
+    "tfc:metal/block/sterling_silver",
+    "tfc:metal/block/sterling_silver_slab",
+    "tfc:metal/block/sterling_silver_stairs",
+    "tfc:metal/double_ingot/sterling_silver",
+    "tfc:metal/double_sheet/sterling_silver",
+    "tfc:metal/exposed_block/sterling_silver",
+    "tfc:metal/exposed_block/sterling_silver_slab",
+    "tfc:metal/exposed_block/sterling_silver_stairs",
+    "tfc:metal/ingot/sterling_silver",
+    "tfc:metal/oxidized_block/sterling_silver",
+    "tfc:metal/oxidized_block/sterling_silver_slab",
+    "tfc:metal/oxidized_block/sterling_silver_stairs",
+    "tfc:metal/rod/sterling_silver",
+    "tfc:metal/sheet/sterling_silver",
+    "tfc:metal/weathered_block/sterling_silver",
+    "tfc:metal/weathered_block/sterling_silver_slab",
+    "tfc:metal/weathered_block/sterling_silver_stairs",
+    "tfc_items:sterling_silver_foil",
+    "tfc_items:sterling_silver_gear",
+    "tfc_items:sterling_silver_heavy_sheet",
+    "tfc_items:sterling_silver_nail",
+    "tfc_items:sterling_silver_ring",
+    "tfc_items:sterling_silver_rivet",
+    "tfc_items:sterling_silver_screw",
+    "tfc_items:sterling_silver_stamen",
+    "tfc_items:sterling_silver_wire",
+    "tfchotornot:tong_part/sterling_silver",
+    "tfchotornot:tongs/sterling_silver"
+  ]
+}

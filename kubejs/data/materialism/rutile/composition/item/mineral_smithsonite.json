@@ -1,0 +1,24 @@
+{
+  "compositions": [
+    {
+      "elements": [
+        {
+          "amount": 1,
+          "id": "rutile:zinc"
+        },
+        {
+          "amount": 1,
+          "id": "rutile:carbon"
+        },
+        {
+          "amount": 3,
+          "id": "rutile:oxygen"
+        }
+      ]
+    }
+  ],
+  "contents": [
+    "tfcvolcanoes:mineral/powder/smithsonite",
+    "tfcvolcanoes:mineral/smithsonite"
+  ]
+}

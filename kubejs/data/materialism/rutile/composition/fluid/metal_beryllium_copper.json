@@ -1,0 +1,23 @@
+{
+  "compositions": [
+    {
+      "elements": [
+        {
+          "amount": 41,
+          "id": "rutile:copper"
+        },
+        {
+          "amount": 41,
+          "id": "rutile:beryllium"
+        },
+        {
+          "amount": 18,
+          "id": "rutile:aluminum"
+        }
+      ]
+    }
+  ],
+  "contents": [
+    "tfc_metallurgy:metal/beryllium_copper"
+  ]
+}

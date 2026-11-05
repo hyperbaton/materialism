@@ -1,0 +1,46 @@
+{
+  "compositions": [
+    {
+      "elements": [
+        {
+          "amount": 60,
+          "id": "rutile:iron"
+        },
+        {
+          "amount": 23,
+          "id": "rutile:chromium"
+        },
+        {
+          "amount": 14,
+          "id": "rutile:nickel"
+        },
+        {
+          "amount": 3,
+          "id": "rutile:carbon"
+        }
+      ]
+    }
+  ],
+  "contents": [
+    "firmalife:metal/block/stainless_steel",
+    "firmalife:metal/block/stainless_steel_slab",
+    "firmalife:metal/block/stainless_steel_stairs",
+    "firmalife:metal/double_ingot/stainless_steel",
+    "firmalife:metal/double_sheet/stainless_steel",
+    "firmalife:metal/ingot/stainless_steel",
+    "firmalife:metal/rod/stainless_steel",
+    "firmalife:metal/sheet/stainless_steel",
+    "tfc_items:handful_stainless_steel_nails",
+    "tfc_items:handful_stainless_steel_rivets",
+    "tfc_items:handful_stainless_steel_screws",
+    "tfc_items:stainless_steel_foil",
+    "tfc_items:stainless_steel_gear",
+    "tfc_items:stainless_steel_heavy_sheet",
+    "tfc_items:stainless_steel_nail",
+    "tfc_items:stainless_steel_ring",
+    "tfc_items:stainless_steel_rivet",
+    "tfc_items:stainless_steel_screw",
+    "tfc_items:stainless_steel_stamen",
+    "tfc_items:stainless_steel_wire"
+  ]
+}

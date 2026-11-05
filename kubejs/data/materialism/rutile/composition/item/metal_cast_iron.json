@@ -1,0 +1,42 @@
+{
+  "compositions": [
+    {
+      "elements": [
+        {
+          "amount": 24,
+          "id": "rutile:iron"
+        },
+        {
+          "amount": 1,
+          "id": "rutile:carbon"
+        }
+      ]
+    }
+  ],
+  "contents": [
+    "kubejs:metal/dust/cast_iron",
+    "tfc:metal/block/cast_iron",
+    "tfc:metal/block/cast_iron_slab",
+    "tfc:metal/block/cast_iron_stairs",
+    "tfc:metal/double_ingot/cast_iron",
+    "tfc:metal/double_sheet/cast_iron",
+    "tfc:metal/ingot/cast_iron",
+    "tfc:metal/rod/cast_iron",
+    "tfc:metal/sheet/cast_iron",
+    "tfc_items:cast_iron_foil",
+    "tfc_items:cast_iron_gear",
+    "tfc_items:cast_iron_heavy_sheet",
+    "tfc_items:cast_iron_nail",
+    "tfc_items:cast_iron_ring",
+    "tfc_items:cast_iron_rivet",
+    "tfc_items:cast_iron_screw",
+    "tfc_items:cast_iron_stamen",
+    "tfc_items:cast_iron_wire",
+    "tfchotornot:tong_part/cast_iron",
+    "tfchotornot:tongs/cast_iron",
+    "tfmg:cast_iron_truss",
+    "vintageimprovements:cast_iron_spring",
+    "vintageimprovements:cast_iron_wire",
+    "vintageimprovements:small_cast_iron_spring"
+  ]
+}

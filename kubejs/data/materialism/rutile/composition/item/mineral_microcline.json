@@ -1,0 +1,28 @@
+{
+  "compositions": [
+    {
+      "elements": [
+        {
+          "amount": 1,
+          "id": "rutile:potassium"
+        },
+        {
+          "amount": 1,
+          "id": "rutile:aluminum"
+        },
+        {
+          "amount": 3,
+          "id": "rutile:silicon"
+        },
+        {
+          "amount": 8,
+          "id": "rutile:oxygen"
+        }
+      ]
+    }
+  ],
+  "contents": [
+    "tfcvolcanoes:mineral/microcline",
+    "tfcvolcanoes:mineral/powder/microcline"
+  ]
+}

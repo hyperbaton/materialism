@@ -1,0 +1,23 @@
+{
+  "compositions": [
+    {
+      "elements": [
+        {
+          "amount": 1,
+          "id": "rutile:thorium"
+        }
+      ]
+    }
+  ],
+  "contents": [
+    "tfc_metallurgy:metal/block/thorium",
+    "tfc_metallurgy:metal/double_ingot/thorium",
+    "tfc_metallurgy:metal/double_sheet/thorium",
+    "tfc_metallurgy:metal/dust/thorium",
+    "tfc_metallurgy:metal/ingot/thorium",
+    "tfc_metallurgy:metal/rod/thorium",
+    "tfc_metallurgy:metal/sheet/thorium",
+    "tfc_metallurgy:metal/slab/thorium",
+    "tfc_metallurgy:metal/stairs/thorium"
+  ]
+}

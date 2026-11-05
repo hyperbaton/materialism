@@ -1,0 +1,17 @@
+{
+  "compositions": [
+    {
+      "elements": [
+        {
+          "amount": 2,
+          "id": "rutile:platinum"
+        },
+        {
+          "amount": 1,
+          "id": "rutile:iridium"
+        }
+      ]
+    }
+  ],
+  "contents": []
+}

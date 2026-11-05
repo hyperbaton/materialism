@@ -1,0 +1,25 @@
+{
+  "compositions": [
+    {
+      "elements": [
+        {
+          "amount": 1,
+          "id": "rutile:silicon"
+        },
+        {
+          "amount": 2,
+          "id": "rutile:oxygen"
+        },
+        {
+          "amount": 2,
+          "id": "rutile:hydrogen"
+        }
+      ]
+    }
+  ],
+  "contents": [
+    "tfc:gem/opal",
+    "tfc:ore/opal",
+    "tfc:powder/opal"
+  ]
+}

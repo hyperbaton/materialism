@@ -1,0 +1,38 @@
+{
+  "compositions": [
+    {
+      "elements": [
+        {
+          "amount": 1,
+          "id": "rutile:zinc"
+        }
+      ]
+    }
+  ],
+  "contents": [
+    "kubejs:metal/dust/zinc",
+    "tfc:metal/block/zinc",
+    "tfc:metal/block/zinc_slab",
+    "tfc:metal/block/zinc_stairs",
+    "tfc:metal/double_ingot/zinc",
+    "tfc:metal/double_sheet/zinc",
+    "tfc:metal/ingot/zinc",
+    "tfc:metal/rod/zinc",
+    "tfc:metal/sheet/zinc",
+    "tfc_items:zinc_foil",
+    "tfc_items:zinc_gear",
+    "tfc_items:zinc_heavy_sheet",
+    "tfc_items:zinc_nail",
+    "tfc_items:zinc_ring",
+    "tfc_items:zinc_rivet",
+    "tfc_items:zinc_screw",
+    "tfc_items:zinc_stamen",
+    "tfc_items:zinc_wire",
+    "tfchotornot:tong_part/zinc",
+    "tfchotornot:tongs/zinc",
+    "tfmg:zinc_truss",
+    "vintageimprovements:small_zinc_spring",
+    "vintageimprovements:zinc_spring",
+    "vintageimprovements:zinc_wire"
+  ]
+}

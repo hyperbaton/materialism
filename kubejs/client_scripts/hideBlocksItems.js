@@ -598,6 +598,47 @@ RecipeViewerEvents.removeEntries('item', event => {
         r('tfc_metallurgy:metal/unfinished_lamp/' + metal)
         r('tfc_metallurgy:metal/shield/' + metal)
     }
+
+    // Hide Chemica items that duplicate the pack's TFC / TFC Metallurgy / Firmalife ones
+    // (chemicaRecipes.js swaps them in Chemica's recipes)
+    const chemicaMetals = ['antimony', 'chromium', 'cobalt', 'iridium', 'magnesium', 'molybdenum',
+        'platinum', 'silver', 'tantalum', 'tin', 'titanium', 'tungsten', 'vanadium']
+    chemicaMetals.forEach(metal => {
+        r('chemica:' + metal + '_ingot')
+        r('chemica:' + metal + '_nugget')
+    })
+    r('chemica:graphite_nugget')
+    ;['iridium', 'magnesium', 'silver', 'tantalum', 'tin', 'titanium'].forEach(metal => r('chemica:' + metal + '_sheet'))
+    ;['antimony', 'cobalt', 'constantan', 'copper', 'gold', 'iridium', 'iron', 'magnesium', 'nickel',
+        'platinum', 'silver', 'tantalum', 'tin', 'titanium', 'tungsten', 'vanadium', 'zinc'].forEach(metal => r('chemica:' + metal + '_dust'))
+    r('chemica:electrum_grit')
+    r('chemica:ash')
+    r('chemica:charcoal_dust')
+    r('chemica:salt')
+    r('chemica:soda_ash')
+    r('chemica:crushed_graphite')
+    r('chemica:graphite_ingot')
+    r('chemica:graphite_sheet')
+    r('chemica:quartz_dust')
+    // TFMG nitrate dust, replaced by saltpeter powder
+    r('tfmg:nitrate_dust')
+    r('chemica:yeast')
+    r('chemica:reinforced_iridium_plate')
+    r('chemica:unfinished_reinforced_iridium_plate')
+    r('chemica:platinum_block')
+    r('chemica:raw_platinum_block')
+    ;['antimony', 'chromite', 'cobalt', 'molybdenum', 'platinum', 'silver', 'tin', 'tungsten', 'vanadium'].forEach(metal => r('chemica:raw_' + metal))
+    ;['antimony', 'chromium', 'cobalt', 'vanadium'].forEach(metal => r('chemica:crushed_raw_' + metal))
+    r('chemica:tin_ore')
+    // Ores that do not belong in the TFC world; the pack has its own sources
+    r('chemica:fervorite')
+    r('chemica:zelosite')
+    ;['antimony', 'chromite', 'cobalt', 'graphite', 'molybdenum', 'platinum', 'rutile', 'silver', 'tin', 'vanadium', 'wolframite']
+        .forEach(ore => r('chemica:deepslate_' + ore + '_ore'))
+    // Chemica's gas tanks for the gases the liquid air chain already provides
+    r('chemica:oxygen_bucket')
+    r('chemica:nitrogen_bucket')
+    r('chemica:molten_titanium_bucket')
 });
 
 RecipeViewerEvents.removeEntries('fluid', event => {
@@ -609,10 +650,15 @@ RecipeViewerEvents.removeEntries('fluid', event => {
     event.remove(/.*pink_slime.*/);
     event.remove(/.*refined_glowstone.*/);
     event.remove(/.*refined_obsidian.*/);
+    event.remove(/.*graphite.*/);
     event.remove('vintageimprovements:sulfuric_acid');
     event.remove('createbigcannons:molten_cast_iron')
     event.remove('createbigcannons:molten_bronze')
     event.remove('createbigcannons:molten_steel')
     event.remove('createbigcannons:molten_nethersteel')
     event.remove('tfmg:molten_steel')
+    // Chemica fluids that duplicate the pack's own (see chemicaRecipes.js)
+    event.remove('chemica:oxygen')
+    event.remove('chemica:nitrogen')
+    event.remove('chemica:molten_titanium')
 });

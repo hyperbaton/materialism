@@ -1,0 +1,22 @@
+{
+  "compositions": [
+    {
+      "elements": [
+        {
+          "amount": 2,
+          "id": "rutile:antimony"
+        },
+        {
+          "amount": 3,
+          "id": "rutile:sulfur"
+        }
+      ]
+    }
+  ],
+  "contents": [
+    "tfc_metallurgy:ore/normal_stibnite",
+    "tfc_metallurgy:ore/poor_stibnite",
+    "tfc_metallurgy:ore/rich_stibnite",
+    "tfc_metallurgy:ore/small_stibnite"
+  ]
+}

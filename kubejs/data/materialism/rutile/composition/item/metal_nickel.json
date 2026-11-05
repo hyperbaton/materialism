@@ -1,0 +1,38 @@
+{
+  "compositions": [
+    {
+      "elements": [
+        {
+          "amount": 1,
+          "id": "rutile:nickel"
+        }
+      ]
+    }
+  ],
+  "contents": [
+    "kubejs:metal/dust/nickel",
+    "tfc:metal/block/nickel",
+    "tfc:metal/block/nickel_slab",
+    "tfc:metal/block/nickel_stairs",
+    "tfc:metal/double_ingot/nickel",
+    "tfc:metal/double_sheet/nickel",
+    "tfc:metal/ingot/nickel",
+    "tfc:metal/rod/nickel",
+    "tfc:metal/sheet/nickel",
+    "tfc_items:nickel_foil",
+    "tfc_items:nickel_gear",
+    "tfc_items:nickel_heavy_sheet",
+    "tfc_items:nickel_nail",
+    "tfc_items:nickel_ring",
+    "tfc_items:nickel_rivet",
+    "tfc_items:nickel_screw",
+    "tfc_items:nickel_stamen",
+    "tfc_items:nickel_wire",
+    "tfchotornot:tong_part/nickel",
+    "tfchotornot:tongs/nickel",
+    "tfmg:nickel_truss",
+    "vintageimprovements:nickel_spring",
+    "vintageimprovements:nickel_wire",
+    "vintageimprovements:small_nickel_spring"
+  ]
+}

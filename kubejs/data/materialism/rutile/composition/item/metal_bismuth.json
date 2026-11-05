@@ -1,0 +1,34 @@
+{
+  "compositions": [
+    {
+      "elements": [
+        {
+          "amount": 1,
+          "id": "rutile:bismuth"
+        }
+      ]
+    }
+  ],
+  "contents": [
+    "kubejs:metal/dust/bismuth",
+    "tfc:metal/block/bismuth",
+    "tfc:metal/block/bismuth_slab",
+    "tfc:metal/block/bismuth_stairs",
+    "tfc:metal/double_ingot/bismuth",
+    "tfc:metal/double_sheet/bismuth",
+    "tfc:metal/ingot/bismuth",
+    "tfc:metal/rod/bismuth",
+    "tfc:metal/sheet/bismuth",
+    "tfc_items:bismuth_foil",
+    "tfc_items:bismuth_gear",
+    "tfc_items:bismuth_heavy_sheet",
+    "tfc_items:bismuth_nail",
+    "tfc_items:bismuth_ring",
+    "tfc_items:bismuth_rivet",
+    "tfc_items:bismuth_screw",
+    "tfc_items:bismuth_stamen",
+    "tfc_items:bismuth_wire",
+    "tfchotornot:tong_part/bismuth",
+    "tfchotornot:tongs/bismuth"
+  ]
+}

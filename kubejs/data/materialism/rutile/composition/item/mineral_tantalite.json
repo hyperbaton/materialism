@@ -1,0 +1,26 @@
+{
+  "compositions": [
+    {
+      "elements": [
+        {
+          "amount": 1,
+          "id": "rutile:iron"
+        },
+        {
+          "amount": 2,
+          "id": "rutile:tantalum"
+        },
+        {
+          "amount": 6,
+          "id": "rutile:oxygen"
+        }
+      ]
+    }
+  ],
+  "contents": [
+    "tfc_metallurgy:ore/normal_tantalite",
+    "tfc_metallurgy:ore/poor_tantalite",
+    "tfc_metallurgy:ore/rich_tantalite",
+    "tfc_metallurgy:ore/small_tantalite"
+  ]
+}

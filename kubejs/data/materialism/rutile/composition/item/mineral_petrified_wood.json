@@ -1,0 +1,21 @@
+{
+  "compositions": [
+    {
+      "elements": [
+        {
+          "amount": 1,
+          "id": "rutile:silicon"
+        },
+        {
+          "amount": 2,
+          "id": "rutile:oxygen"
+        }
+      ]
+    }
+  ],
+  "contents": [
+    "tfcvolcanoes:mineral/petrified_wood",
+    "tfcvolcanoes:mineral/powder/petrified_wood",
+    "tfcvolcanoes:petrified_wood"
+  ]
+}

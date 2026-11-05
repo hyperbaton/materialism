@@ -1,0 +1,41 @@
+{
+  "compositions": [
+    {
+      "elements": [
+        {
+          "amount": 1,
+          "id": "rutile:copper"
+        },
+        {
+          "amount": 1,
+          "id": "rutile:nickel"
+        }
+      ]
+    }
+  ],
+  "contents": [
+    "tfc_items:constantan_foil",
+    "tfc_items:constantan_gear",
+    "tfc_items:constantan_heavy_sheet",
+    "tfc_items:constantan_nail",
+    "tfc_items:constantan_ring",
+    "tfc_items:constantan_rivet",
+    "tfc_items:constantan_screw",
+    "tfc_items:constantan_stamen",
+    "tfc_items:constantan_wire",
+    "tfc_metallurgy:metal/block/constantan",
+    "tfc_metallurgy:metal/double_ingot/constantan",
+    "tfc_metallurgy:metal/double_sheet/constantan",
+    "tfc_metallurgy:metal/dust/constantan",
+    "tfc_metallurgy:metal/ingot/constantan",
+    "tfc_metallurgy:metal/rod/constantan",
+    "tfc_metallurgy:metal/sheet/constantan",
+    "tfc_metallurgy:metal/slab/constantan",
+    "tfc_metallurgy:metal/stairs/constantan",
+    "tfmg:constantan_spool",
+    "tfmg:constantan_truss",
+    "vintageimprovements:constantan_spring",
+    "vintageimprovements:constantan_wire",
+    "vintageimprovements:small_constantan_spring"
+  ]
+}

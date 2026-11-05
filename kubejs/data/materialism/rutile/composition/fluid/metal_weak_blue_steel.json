@@ -1,0 +1,43 @@
+{
+  "compositions": [
+    {
+      "elements": [
+        {
+          "amount": 62,
+          "id": "rutile:iron"
+        },
+        {
+          "amount": 14,
+          "id": "rutile:copper"
+        },
+        {
+          "amount": 10,
+          "id": "rutile:silver"
+        },
+        {
+          "amount": 5,
+          "id": "rutile:nickel"
+        },
+        {
+          "amount": 3,
+          "id": "rutile:carbon"
+        },
+        {
+          "amount": 3,
+          "id": "rutile:zinc"
+        },
+        {
+          "amount": 2,
+          "id": "rutile:bismuth"
+        },
+        {
+          "amount": 1,
+          "id": "rutile:gold"
+        }
+      ]
+    }
+  ],
+  "contents": [
+    "tfc:metal/weak_blue_steel"
+  ]
+}

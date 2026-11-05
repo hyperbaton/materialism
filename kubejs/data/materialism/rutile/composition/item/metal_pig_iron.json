@@ -1,0 +1,24 @@
+{
+  "compositions": [
+    {
+      "elements": [
+        {
+          "amount": 24,
+          "id": "rutile:iron"
+        },
+        {
+          "amount": 1,
+          "id": "rutile:carbon"
+        }
+      ]
+    }
+  ],
+  "contents": [
+    "tfc:metal/ingot/pig_iron",
+    "tfchotornot:tong_part/pig_iron",
+    "tfchotornot:tongs/pig_iron",
+    "vintageimprovements:pig_iron_spring",
+    "vintageimprovements:pig_iron_wire",
+    "vintageimprovements:small_pig_iron_spring"
+  ]
+}

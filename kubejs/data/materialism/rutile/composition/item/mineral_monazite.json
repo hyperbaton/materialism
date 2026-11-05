@@ -1,0 +1,27 @@
+{
+  "compositions": [
+    {
+      "elements": [
+        {
+          "amount": 1,
+          "id": "rutile:cerium"
+        },
+        {
+          "amount": 1,
+          "id": "rutile:phosphorus"
+        },
+        {
+          "amount": 4,
+          "id": "rutile:oxygen"
+        }
+      ]
+    }
+  ],
+  "contents": [
+    "kubejs:powder/monazite",
+    "tfc_metallurgy:ore/normal_monazite",
+    "tfc_metallurgy:ore/poor_monazite",
+    "tfc_metallurgy:ore/rich_monazite",
+    "tfc_metallurgy:ore/small_monazite"
+  ]
+}

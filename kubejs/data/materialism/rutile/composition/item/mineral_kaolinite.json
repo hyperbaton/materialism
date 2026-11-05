@@ -1,0 +1,27 @@
+{
+  "compositions": [
+    {
+      "elements": [
+        {
+          "amount": 2,
+          "id": "rutile:aluminum"
+        },
+        {
+          "amount": 2,
+          "id": "rutile:silicon"
+        },
+        {
+          "amount": 9,
+          "id": "rutile:oxygen"
+        },
+        {
+          "amount": 4,
+          "id": "rutile:hydrogen"
+        }
+      ]
+    }
+  ],
+  "contents": [
+    "tfc:powder/kaolinite"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "compositions": [
+    {
+      "elements": [
+        {
+          "amount": 2,
+          "id": "rutile:sodium"
+        },
+        {
+          "amount": 4,
+          "id": "rutile:boron"
+        },
+        {
+          "amount": 17,
+          "id": "rutile:oxygen"
+        },
+        {
+          "amount": 20,
+          "id": "rutile:hydrogen"
+        }
+      ]
+    }
+  ],
+  "contents": [
+    "tfc:ore/borax"
+  ]
+}

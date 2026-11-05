@@ -1,0 +1,16 @@
+{
+  "compositions": [
+    {
+      "elements": [
+        {
+          "amount": 1,
+          "id": "rutile:carbon"
+        }
+      ]
+    }
+  ],
+  "contents": [
+    "chemica:purified_graphite_flakes",
+    "chemica:electrochemically_exfoliated_graphene"
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "compositions": [
+    {
+      "elements": [
+        {
+          "amount": 2,
+          "id": "rutile:copper"
+        },
+        {
+          "amount": 1,
+          "id": "rutile:carbon"
+        },
+        {
+          "amount": 5,
+          "id": "rutile:oxygen"
+        },
+        {
+          "amount": 2,
+          "id": "rutile:hydrogen"
+        }
+      ]
+    }
+  ],
+  "contents": [
+    "tfc:ore/normal_malachite",
+    "tfc:ore/poor_malachite",
+    "tfc:ore/rich_malachite",
+    "tfc:ore/small_malachite",
+    "tfc:powder/malachite"
+  ]
+}

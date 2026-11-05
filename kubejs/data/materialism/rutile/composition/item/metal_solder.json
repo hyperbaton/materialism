@@ -1,0 +1,31 @@
+{
+  "compositions": [
+    {
+      "elements": [
+        {
+          "amount": 5,
+          "id": "rutile:antimony"
+        },
+        {
+          "amount": 3,
+          "id": "rutile:bismuth"
+        },
+        {
+          "amount": 3,
+          "id": "rutile:tin"
+        }
+      ]
+    }
+  ],
+  "contents": [
+    "tfc_metallurgy:metal/block/solder",
+    "tfc_metallurgy:metal/double_ingot/solder",
+    "tfc_metallurgy:metal/double_sheet/solder",
+    "tfc_metallurgy:metal/dust/solder",
+    "tfc_metallurgy:metal/ingot/solder",
+    "tfc_metallurgy:metal/rod/solder",
+    "tfc_metallurgy:metal/sheet/solder",
+    "tfc_metallurgy:metal/slab/solder",
+    "tfc_metallurgy:metal/stairs/solder"
+  ]
+}

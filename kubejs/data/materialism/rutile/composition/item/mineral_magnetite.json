@@ -1,0 +1,23 @@
+{
+  "compositions": [
+    {
+      "elements": [
+        {
+          "amount": 3,
+          "id": "rutile:iron"
+        },
+        {
+          "amount": 4,
+          "id": "rutile:oxygen"
+        }
+      ]
+    }
+  ],
+  "contents": [
+    "tfc:ore/normal_magnetite",
+    "tfc:ore/poor_magnetite",
+    "tfc:ore/rich_magnetite",
+    "tfc:ore/small_magnetite",
+    "tfc:powder/magnetite"
+  ]
+}

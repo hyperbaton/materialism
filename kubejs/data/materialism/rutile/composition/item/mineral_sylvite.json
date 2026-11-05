@@ -1,0 +1,20 @@
+{
+  "compositions": [
+    {
+      "elements": [
+        {
+          "amount": 1,
+          "id": "rutile:potassium"
+        },
+        {
+          "amount": 1,
+          "id": "rutile:chlorine"
+        }
+      ]
+    }
+  ],
+  "contents": [
+    "tfc:ore/sylvite",
+    "tfc:powder/sylvite"
+  ]
+}

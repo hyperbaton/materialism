@@ -1,0 +1,23 @@
+{
+  "compositions": [
+    {
+      "elements": [
+        {
+          "amount": 2,
+          "id": "rutile:iron"
+        },
+        {
+          "amount": 3,
+          "id": "rutile:oxygen"
+        }
+      ]
+    }
+  ],
+  "contents": [
+    "tfc:ore/normal_hematite",
+    "tfc:ore/poor_hematite",
+    "tfc:ore/rich_hematite",
+    "tfc:ore/small_hematite",
+    "tfc:powder/hematite"
+  ]
+}

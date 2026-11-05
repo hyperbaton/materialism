@@ -1,0 +1,26 @@
+{
+  "compositions": [
+    {
+      "elements": [
+        {
+          "amount": 1,
+          "id": "rutile:zirconium"
+        },
+        {
+          "amount": 1,
+          "id": "rutile:silicon"
+        },
+        {
+          "amount": 4,
+          "id": "rutile:oxygen"
+        }
+      ]
+    }
+  ],
+  "contents": [
+    "tfc_metallurgy:ore/normal_zircon",
+    "tfc_metallurgy:ore/poor_zircon",
+    "tfc_metallurgy:ore/rich_zircon",
+    "tfc_metallurgy:ore/small_zircon"
+  ]
+}

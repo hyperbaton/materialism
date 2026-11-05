@@ -1,0 +1,37 @@
+{
+  "compositions": [
+    {
+      "elements": [
+        {
+          "amount": 3,
+          "id": "rutile:sodium"
+        },
+        {
+          "amount": 1,
+          "id": "rutile:calcium"
+        },
+        {
+          "amount": 3,
+          "id": "rutile:aluminum"
+        },
+        {
+          "amount": 3,
+          "id": "rutile:silicon"
+        },
+        {
+          "amount": 12,
+          "id": "rutile:oxygen"
+        },
+        {
+          "amount": 1,
+          "id": "rutile:sulfur"
+        }
+      ]
+    }
+  ],
+  "contents": [
+    "tfc:gem/lapis_lazuli",
+    "tfc:ore/lapis_lazuli",
+    "tfc:powder/lapis_lazuli"
+  ]
+}

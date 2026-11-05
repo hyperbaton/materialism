@@ -1,0 +1,30 @@
+{
+  "compositions": [
+    {
+      "elements": [
+        {
+          "amount": 1,
+          "id": "rutile:lithium"
+        },
+        {
+          "amount": 1,
+          "id": "rutile:aluminum"
+        },
+        {
+          "amount": 2,
+          "id": "rutile:silicon"
+        },
+        {
+          "amount": 6,
+          "id": "rutile:oxygen"
+        }
+      ]
+    }
+  ],
+  "contents": [
+    "tfc_metallurgy:ore/normal_spodumene",
+    "tfc_metallurgy:ore/poor_spodumene",
+    "tfc_metallurgy:ore/rich_spodumene",
+    "tfc_metallurgy:ore/small_spodumene"
+  ]
+}

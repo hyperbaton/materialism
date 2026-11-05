@@ -1,0 +1,17 @@
+{
+  "compositions": [
+    {
+      "elements": [
+        {
+          "amount": 1,
+          "id": "rutile:molybdenum"
+        },
+        {
+          "amount": 1,
+          "id": "rutile:rhenium"
+        }
+      ]
+    }
+  ],
+  "contents": []
+}

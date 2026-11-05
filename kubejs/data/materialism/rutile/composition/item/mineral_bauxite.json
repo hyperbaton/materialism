@@ -1,0 +1,27 @@
+{
+  "compositions": [
+    {
+      "elements": [
+        {
+          "amount": 1,
+          "id": "rutile:aluminum"
+        },
+        {
+          "amount": 3,
+          "id": "rutile:oxygen"
+        },
+        {
+          "amount": 3,
+          "id": "rutile:hydrogen"
+        }
+      ]
+    }
+  ],
+  "contents": [
+    "tfc_metallurgy:ore/normal_bauxite",
+    "tfc_metallurgy:ore/poor_bauxite",
+    "tfc_metallurgy:ore/rich_bauxite",
+    "tfc_metallurgy:ore/small_bauxite",
+    "tfmg:bauxite"
+  ]
+}

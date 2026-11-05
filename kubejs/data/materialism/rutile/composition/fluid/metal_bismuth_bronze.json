@@ -1,0 +1,23 @@
+{
+  "compositions": [
+    {
+      "elements": [
+        {
+          "amount": 59,
+          "id": "rutile:copper"
+        },
+        {
+          "amount": 26,
+          "id": "rutile:zinc"
+        },
+        {
+          "amount": 15,
+          "id": "rutile:bismuth"
+        }
+      ]
+    }
+  ],
+  "contents": [
+    "tfc:metal/bismuth_bronze"
+  ]
+}

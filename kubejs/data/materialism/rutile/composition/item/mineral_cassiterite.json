@@ -1,0 +1,23 @@
+{
+  "compositions": [
+    {
+      "elements": [
+        {
+          "amount": 1,
+          "id": "rutile:tin"
+        },
+        {
+          "amount": 2,
+          "id": "rutile:oxygen"
+        }
+      ]
+    }
+  ],
+  "contents": [
+    "tfc:ore/normal_cassiterite",
+    "tfc:ore/poor_cassiterite",
+    "tfc:ore/rich_cassiterite",
+    "tfc:ore/small_cassiterite",
+    "tfc:powder/cassiterite"
+  ]
+}

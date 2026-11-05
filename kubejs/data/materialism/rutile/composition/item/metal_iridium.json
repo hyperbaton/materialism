@@ -1,0 +1,23 @@
+{
+  "compositions": [
+    {
+      "elements": [
+        {
+          "amount": 1,
+          "id": "rutile:iridium"
+        }
+      ]
+    }
+  ],
+  "contents": [
+    "tfc_metallurgy:metal/block/iridium",
+    "tfc_metallurgy:metal/double_ingot/iridium",
+    "tfc_metallurgy:metal/double_sheet/iridium",
+    "tfc_metallurgy:metal/dust/iridium",
+    "tfc_metallurgy:metal/ingot/iridium",
+    "tfc_metallurgy:metal/rod/iridium",
+    "tfc_metallurgy:metal/sheet/iridium",
+    "tfc_metallurgy:metal/slab/iridium",
+    "tfc_metallurgy:metal/stairs/iridium"
+  ]
+}

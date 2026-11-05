@@ -1,0 +1,23 @@
+{
+  "compositions": [
+    {
+      "elements": [
+        {
+          "amount": 2,
+          "id": "rutile:bismuth"
+        },
+        {
+          "amount": 3,
+          "id": "rutile:sulfur"
+        }
+      ]
+    }
+  ],
+  "contents": [
+    "tfc:ore/normal_bismuthinite",
+    "tfc:ore/poor_bismuthinite",
+    "tfc:ore/rich_bismuthinite",
+    "tfc:ore/small_bismuthinite",
+    "tfc:powder/bismuthinite"
+  ]
+}

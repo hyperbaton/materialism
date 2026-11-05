@@ -1,0 +1,19 @@
+{
+  "compositions": [
+    {
+      "elements": [
+        {
+          "amount": 7,
+          "id": "rutile:silver"
+        },
+        {
+          "amount": 3,
+          "id": "rutile:copper"
+        }
+      ]
+    }
+  ],
+  "contents": [
+    "tfc:metal/sterling_silver"
+  ]
+}

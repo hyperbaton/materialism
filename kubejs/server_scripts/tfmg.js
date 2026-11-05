@@ -847,8 +847,10 @@ ServerEvents.recipes(event => {
     results: [
       {amount: 6, id: 'tfmg:carbon_dioxide'},
       {amount: 44, id: 'kubejs:oxygen'},
-      {amount: 148, id: 'kubejs:nitrogen'},
-      {amount: 2, id: 'tfmg:neon'}
+      {amount: 4, id: 'chemica:argon'},
+      {amount: 142, id: 'kubejs:nitrogen'},
+      {amount: 2, id: 'tfmg:neon'},
+      {amount: 2, id: 'chemica:helium'}
     ]
   })
 
@@ -935,7 +937,7 @@ ServerEvents.recipes(event => {
       {item: 'tfc_metallurgy:metal/dust/cobalt'}
     ],
     processing_time: 400,
-    results: [{count: 2, id: 'kubejs:powder/tungsten_carbide'}]
+    results: [{count: 2, id: 'chemica:tungsten_carbide_dust'}]
   })
 
   // Weapon recipes — replace simple crafting with sequenced assembly

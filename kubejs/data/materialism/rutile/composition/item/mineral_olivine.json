@@ -1,0 +1,28 @@
+{
+  "compositions": [
+    {
+      "elements": [
+        {
+          "amount": 1,
+          "id": "rutile:magnesium"
+        },
+        {
+          "amount": 1,
+          "id": "rutile:iron"
+        },
+        {
+          "amount": 1,
+          "id": "rutile:silicon"
+        },
+        {
+          "amount": 4,
+          "id": "rutile:oxygen"
+        }
+      ]
+    }
+  ],
+  "contents": [
+    "tfcvolcanoes:mineral/olivine",
+    "tfcvolcanoes:mineral/powder/olivine"
+  ]
+}

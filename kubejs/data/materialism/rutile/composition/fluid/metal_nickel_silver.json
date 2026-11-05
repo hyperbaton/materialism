@@ -1,0 +1,23 @@
+{
+  "compositions": [
+    {
+      "elements": [
+        {
+          "amount": 59,
+          "id": "rutile:copper"
+        },
+        {
+          "amount": 21,
+          "id": "rutile:zinc"
+        },
+        {
+          "amount": 21,
+          "id": "rutile:nickel"
+        }
+      ]
+    }
+  ],
+  "contents": [
+    "tfc_metallurgy:metal/nickel_silver"
+  ]
+}

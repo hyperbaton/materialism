@@ -1,0 +1,19 @@
+{
+  "compositions": [
+    {
+      "elements": [
+        {
+          "amount": 3,
+          "id": "rutile:zirconium"
+        },
+        {
+          "amount": 1,
+          "id": "rutile:tin"
+        }
+      ]
+    }
+  ],
+  "contents": [
+    "tfc_metallurgy:metal/zircaloy"
+  ]
+}

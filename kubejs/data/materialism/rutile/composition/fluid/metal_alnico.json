@@ -1,0 +1,23 @@
+{
+  "compositions": [
+    {
+      "elements": [
+        {
+          "amount": 5,
+          "id": "rutile:aluminum"
+        },
+        {
+          "amount": 3,
+          "id": "rutile:cobalt"
+        },
+        {
+          "amount": 3,
+          "id": "rutile:nickel"
+        }
+      ]
+    }
+  ],
+  "contents": [
+    "tfc_metallurgy:metal/alnico"
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "compositions": [
+    {
+      "elements": [
+        {
+          "amount": 1,
+          "id": "rutile:magnesium"
+        }
+      ]
+    }
+  ],
+  "contents": [
+    "tfc_metallurgy:metal/block/magnesium",
+    "tfc_metallurgy:metal/double_ingot/magnesium",
+    "tfc_metallurgy:metal/double_sheet/magnesium",
+    "tfc_metallurgy:metal/dust/magnesium",
+    "tfc_metallurgy:metal/ingot/magnesium",
+    "tfc_metallurgy:metal/rod/magnesium",
+    "tfc_metallurgy:metal/sheet/magnesium",
+    "tfc_metallurgy:metal/slab/magnesium",
+    "tfc_metallurgy:metal/stairs/magnesium"
+  ]
+}

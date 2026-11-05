@@ -1,0 +1,27 @@
+{
+  "compositions": [
+    {
+      "elements": [
+        {
+          "amount": 1,
+          "id": "rutile:iron"
+        },
+        {
+          "amount": 2,
+          "id": "rutile:oxygen"
+        },
+        {
+          "amount": 1,
+          "id": "rutile:hydrogen"
+        }
+      ]
+    }
+  ],
+  "contents": [
+    "tfc:ore/normal_limonite",
+    "tfc:ore/poor_limonite",
+    "tfc:ore/rich_limonite",
+    "tfc:ore/small_limonite",
+    "tfc:powder/limonite"
+  ]
+}
