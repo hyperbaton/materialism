@@ -1,0 +1,11 @@
+#Durability of TFMG's electrodes. Vat recipes wear them with the electrode_wear field.
+[electrodes]
+	# Default: 1000
+	# Range: > 1
+	copperElectrodeDurability = 1000
+	# Default: 1000
+	# Range: > 1
+	zincElectrodeDurability = 1000
+	# Default: 1000
+	# Range: > 1
+	graphiteElectrodeDurability = 1000

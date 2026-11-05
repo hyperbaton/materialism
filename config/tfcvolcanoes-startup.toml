@@ -191,3 +191,95 @@
 	# Default: 0.2
 	# Range: 0.0 ~ 1.7976931348623157E308
 	pyroclasticFlowFirePlacementFactor = 0.2
+	#Maximum horizontal distance (Chebyshev) that fire can jump from the source block. Default 2.
+	# Default: 3
+	# Range: 0 ~ 32
+	maxFireJumpHoriz = 3
+	#Maximum number of blocks fire can jump upward from the source block. Default 4.
+	# Default: 5
+	# Range: 0 ~ 32
+	maxFireJumpUp = 5
+	#Maximum number of blocks fire can jump downward from the source block. Default 1.
+	# Default: 5
+	# Range: 0 ~ 32
+	maxFireJumpDown = 5
+	#Lower bound (inclusive) for the random interval used to rejuvenate charred blocks (in ticks).
+	# Default: 30
+	# Range: > 1
+	rejuvenationLowerBound = 30
+	#Upper bound (inclusive) for the random interval used to rejuvenate charred blocks (in ticks).
+	# Default: 250
+	# Range: > 1
+	rejuvenationUpperBound = 250
+	#Multiplier for fire spreading rate. Values below 1 slow spread, and values above 1 speed it up. Set to 0 to disable fire spread.
+	# Default: 0.5
+	# Range: 0.0 ~ 1.7976931348623157E308
+	fireSpreadRateMultiplier = 0.5
+	#Wind speed at which fire wind effects reach full strength. Lower values make weaker winds affect fire more.
+	# Default: 0.025
+	# Range: 0.0 ~ 1.7976931348623157E308
+	fireWindFullStrength = 0.025
+	#Maximum spread-odds multiplier directly downwind at full wind strength.
+	# Default: 2.0
+	# Range: 0.0 ~ 1.7976931348623157E308
+	fireWindMaxSpreadMultiplier = 2.0
+	#Minimum spread-odds multiplier directly upwind at full wind strength. Must be above 0 so fire can still spread against wind.
+	# Default: 0.001
+	# Range: 0.0 ~ 1.7976931348623157E308
+	fireWindMinSpreadMultiplier = 0.001
+	#Maximum extra horizontal jump distance directly downwind at full wind strength.
+	# Default: 3
+	# Range: 0 ~ 16
+	fireWindMaxHorizontalJumpBonus = 3
+	#Maximum fatigue level a fire can accumulate before it extinguishes. Fatigue uses the FIRE_AGE property, which supports levels 0-10.
+	# Default: 10
+	# Range: 1 ~ 10
+	fireFatigueMax = 10
+	#Radius in blocks used to count nearby flammable fuel. More nearby fuel slows fatigue.
+	# Default: 2
+	# Range: 0 ~ 8
+	fireFatigueFuelRadius = 2
+	#Number of nearby flammable blocks that fully reduce the fuel-related fatigue chance.
+	# Default: 12
+	# Range: 1 ~ 32767
+	fireFatigueFuelSupport = 12
+	#Overall multiplier for all fire fatigue increase chances. 1.0 uses the individual settings unchanged; values below 1 slow fatigue, values above 1 speed it up, and 0 disables fatigue accumulation.
+	# Default: 3.75
+	# Range: 0.0 ~ 1.7976931348623157E308
+	fireFatigueRateMultiplier = 3.75
+	#Chance (0-1) that successful fire spread increases the new fire's fatigue by one.
+	# Default: 0.12
+	# Range: 0.0 ~ 1.0
+	fireFatigueSpreadBaseChance = 0.12
+	#Additional spread-fatigue chance when nearby fuel is depleted.
+	# Default: 0.16
+	# Range: 0.0 ~ 1.0
+	fireFatigueSpreadFuelBonus = 0.16
+	#Additional spread-fatigue chance in unfavorable temperature/rainfall climate.
+	# Default: 0.08
+	# Range: 0.0 ~ 1.0
+	fireFatigueSpreadClimateBonus = 0.08
+	#Additional spread-fatigue chance when it is raining and the fire is exposed to rain.
+	# Default: 0.2
+	# Range: 0.0 ~ 1.0
+	fireFatigueSpreadRainBonus = 0.2
+	#Per-fire-tick chance (0-1) that the fire's fatigue increases by one.
+	# Default: 0.015
+	# Range: 0.0 ~ 1.0
+	fireFatigueBurnBaseChance = 0.015
+	#Additional per-tick fatigue chance when nearby fuel is depleted.
+	# Default: 0.1
+	# Range: 0.0 ~ 1.0
+	fireFatigueBurnFuelBonus = 0.1
+	#Additional per-tick fatigue chance in unfavorable temperature/rainfall climate.
+	# Default: 0.05
+	# Range: 0.0 ~ 1.0
+	fireFatigueBurnClimateBonus = 0.05
+	#Additional per-tick fatigue chance when it is raining and the fire is exposed to rain.
+	# Default: 0.15
+	# Range: 0.0 ~ 1.0
+	fireFatigueBurnRainBonus = 0.15
+	#Upper cap (0-1) for the combined base fatigue chance. fireFatigueRateMultiplier is applied after this cap.
+	# Default: 0.6
+	# Range: 0.0 ~ 1.0
+	fireFatigueMaxChance = 0.6

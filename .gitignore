@@ -18,6 +18,7 @@ shaderpacks/
 patchouli_books/
 screenshots/
 debug/
+dynamic-resource-pack-cache/
 
 # User-specific files
 options.txt
@@ -27,6 +28,7 @@ ponders_watched.json
 patchouli_data.json
 command_history.txt
 minecraftinstance.json
+bash.exe.stackdump
 
 # Track these:
 # kubejs/         - scripts and assets
@@ -38,3 +40,38 @@ minecraftinstance.json
 # Back up files
 *.bak
 *.old
+*_old
+
+# Client config
+*-client.toml
+
+# Generators and dev tooling (Python)
+*.py
+__pycache__/
+
+# Crash dumps and local logs
+hs_err_pid*.log
+*.log
+
+# Local/runtime state
+supportercache.json
+user-prefs.json
+map_atlases/
+patched_shaders/
+*.bak.*
+
+# Client-only mod settings and per-machine UI state
+config/jei/client/default/
+config/jei/server/
+config/jei/world/
+config/mezz_config/
+config/DistantHorizons.toml
+config/iris.properties
+config/iris-excluded.json
+config/ftblibrary-client.snbt
+config/ftbquests-client.snbt
+kubejs/config/probe-settings.json
+
+# Rock layer scan export (script and its output)
+kubejs/server_scripts/exportLogs/scanRockLayers.js
+kubejs/exported_rock_layers*.csv

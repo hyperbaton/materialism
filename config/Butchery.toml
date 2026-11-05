@@ -1,8 +1,6 @@
 [General]
 	#Give the butchers guide on first join.
 	"First Join Book" = false
-	#Show GUI hints when looking at carcasses.
-	"Show Hints" = true
 	#Enable to have carcasses drop with ONLY cleavers. Disable to have carcasses drop no matter what kills the mob.
 	"Only Cleavers Drop Carcasses" = true
 	#Instantly bleed carcasses.
@@ -25,6 +23,10 @@
 	"Magic Wishbone" = true
 	#The chance of receiving a wishbone from a chicken carcass. (Range: 0 - 1)
 	"Wishbone Chance" = 0.25
+	#Sends a message to the player when first joining a world.
+	"Welcome Message" = true
+	#Show GUI hints when looking at carcasses.
+	"Show Hints (Temporarily Disabled)" = false
 
 [Mobs]
 	#Enable Axolotl Carcass
@@ -169,6 +171,8 @@
 ["Farmers Delight Compatibility"]
 	#Enable Farmers Delight Compatibility
 	"Farmers Delight" = false
+	#Enable Carcass Drops From Farmer's Delight Knives.
+	"Farmers Delight Knives Drop Carcasses" = false
 
 ["Vampirism Compatibility"]
 	#Replaces heart drops with vampirisms hearts
@@ -179,3 +183,13 @@
 ["Butchers Coin Reward"]
 	#The loottable that the butchery coin rewards from.
 	Loottable = "minecraft:chests/end_city_treasu"
+
+["Timings (20 = 1 second)"]
+	#The time taken for skin to dry and convert into leather.
+	"Skin Drying Time" = 1800.0
+
+[Multipliers]
+	#Change the amount of leather dropped from a skin rack. (Default: 2)
+	"Skin Rack Yield" = 2.0
+	#Change the amount of salt dropped from the basin, standard yield is 5 salt. (Default: 1) (Max Yield: 64)
+	"Salt Basin Yield" = 1.0

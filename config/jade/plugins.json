@@ -1,4 +1,26 @@
 {
+  "cft": {
+    "xoonglin": true
+  },
+  "firmalife": {
+    "barrel_press": true,
+    "keg_sub": true,
+    "string": true,
+    "vat": true,
+    "drying_mat": true,
+    "tumbler": true,
+    "climate_station": true,
+    "keg": true,
+    "cheese": true,
+    "shelf": true,
+    "oven_top": true,
+    "pumping_station": true,
+    "solar_drier": true,
+    "pot": true,
+    "oven_bottom": true,
+    "jarbnet": true,
+    "hanger": true
+  },
   "minecraft": {
     "item_storage.show_name_amount": 5,
     "furnace": true,
@@ -52,26 +74,6 @@
     "painting": true,
     "chiseled_bookshelf": true
   },
-  "firmalife": {
-    "barrel_press": true,
-    "keg_sub": true,
-    "string": true,
-    "vat": true,
-    "drying_mat": true,
-    "tumbler": true,
-    "climate_station": true,
-    "keg": true,
-    "cheese": true,
-    "shelf": true,
-    "oven_top": true,
-    "pumping_station": true,
-    "solar_drier": true,
-    "pot": true,
-    "oven_bottom": true,
-    "fruit_tree_sapling": true,
-    "jarbnet": true,
-    "hanger": true
-  },
   "tfc": {
     "bloomery": true,
     "nest_box": true,
@@ -85,6 +87,7 @@
     "frog": true,
     "vane": true,
     "camel": true,
+    "armadillo": true,
     "sapling": true,
     "rabbit": true,
     "composter": true,
@@ -133,6 +136,9 @@
     "anemometer": true,
     "wet_concrete": true,
     "ingot_pile": true
+  },
+  "butchery": {
+    "player_corpse_status": true
   },
   "jade_access": {
     "held_item": true,

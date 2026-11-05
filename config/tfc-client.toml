@@ -120,6 +120,9 @@
 	#
 	# If true, particles specifically for wind will appear.
 	enableWindParticles = true
+	#
+	# If the inventory, climate, nutrition, and calendar tabs should display while in creative.
+	enableTabsInCreative = true
 
 [compatibility]
 	#

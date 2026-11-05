@@ -13,11 +13,11 @@ monstersHuntXoonglins = true
 	#Maximum amount of blocks that a Xoonglin house can have.
 	# Default: 1000
 	# Range: 36 ~ 24000
-	maxHouseSize = 2500
+	maxHouseSize = 4000
 	#Maximum amount of blocks that the floor of a Xoonglin house can have.
 	# Default: 100
 	# Range: 9 ~ 1000
-	maxFloorSize = 144
+	maxFloorSize = 500
 	#Maximum height of a block that is part of a Xoonglin house.
 	# Default: 319
 	# Range: -64 ~ 319
