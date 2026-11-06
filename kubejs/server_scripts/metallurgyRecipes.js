@@ -164,4 +164,17 @@ ServerEvents.recipes(event => {
         event.remove({output: 'tfc_metallurgy:metal/unfinished_lamp/' + metal})
         event.remove({output: 'tfc_metallurgy:metal/shield/' + metal})
     }
+
+    // These bars forge at tier 3 in TFC Metallurgy, but their metals need a tier 6 anvil.
+    // Collect first: adding recipes while iterating them is not safe
+    const retieredBars = []
+    event.forEachRecipe({ id: /^tfc_metallurgy:anvil\/(titanium|tungsten|tungsten_steel)_bars(_double)?$/ }, recipe => {
+        let json = JSON.parse(String(recipe.json))
+        json.tier = 6
+        retieredBars.push({ id: String(recipe.getId()), json: json })
+    })
+    retieredBars.forEach(recipe => {
+        event.remove({ id: recipe.id })
+        event.custom(recipe.json).id('kubejs:' + recipe.id.replace(':', '/'))
+    })
 })

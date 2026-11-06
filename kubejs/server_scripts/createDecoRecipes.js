@@ -174,7 +174,7 @@ ServerEvents.recipes(event => {
 
     // Trapdoor anvil recipes
     event.remove('createdeco:andesite_trapdoor')
-    event.recipes.tfc.anvil('createdeco:andesite_trapdoor', 'tfc_metallurgy:metal/sheet/aluminum', ['draw_any', 'hit_any', 'hit_last'])
+    event.recipes.tfc.anvil('createdeco:andesite_trapdoor', 'tfc_metallurgy:metal/sheet/aluminum', ['draw_any', 'hit_any', 'hit_last']).tier(4)
     event.remove('createdeco:brass_trapdoor')
     event.recipes.tfc.anvil('createdeco:brass_trapdoor', 'tfc:metal/sheet/brass', ['draw_any', 'hit_any', 'hit_last'])
     // TODO: createdeco:copper_trapdoor no longer exists in 1.21

@@ -170,4 +170,31 @@ ServerEvents.recipes(event => {
     // Remove washing (splashing) recipes of raw ore
     event.remove({ id: 'create:splashing/crushed_raw_copper' })
     event.remove({ id: 'create:splashing/crushed_raw_zinc' })
+
+    // tfc_items uses tier 1 for every heavy sheet weld, and its own guesses for TFC Metallurgy
+    // metals. Follow TFC's rule: forged parts use the metal's tier, welded parts the tier below.
+    // Metals with no tier in TFC's own recipes (brass, gold, zinc...) are left alone.
+    const itemMetalTiers = {
+        aluminum: 4, black_bronze: 2, black_steel: 5, bismuth_bronze: 2, blue_steel: 6, bronze: 2,
+        chromium: 4, constantan: 2, copper: 1, electrum: 2, lead: 1, red_steel: 6,
+        stainless_steel: 4, steel: 4, uranium: 3, wrought_iron: 3
+    }
+    // Collect first: adding recipes while iterating them is not safe
+    const retiered = []
+    event.forEachRecipe({ mod: 'tfc_items' }, recipe => {
+        let id = String(recipe.getId())
+        let match = id.match(/^tfc_items:(anvil|welding)\/(.+)$/)
+        if (!match) return
+        let metal = Object.keys(itemMetalTiers).filter(name => match[2].indexOf(name + '_') === 0)[0]
+        if (!metal) return
+        let tier = match[1] === 'anvil' ? itemMetalTiers[metal] : itemMetalTiers[metal] - 1
+        let json = JSON.parse(String(recipe.json))
+        if ((json.tier || 0) === tier) return
+        json.tier = tier
+        retiered.push({ id: id, json: json })
+    })
+    retiered.forEach(recipe => {
+        event.remove({ id: recipe.id })
+        event.custom(recipe.json).id('kubejs:' + recipe.id.replace(':', '/'))
+    })
 })

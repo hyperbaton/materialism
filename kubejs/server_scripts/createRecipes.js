@@ -1191,7 +1191,8 @@ event.recipes.create.sequenced_assembly([
 
     // Gunpowder recipes
     event.remove("tfc:crafting/gunpowder")
-    event.remove("tfc:crafting/gunpowder_graphite")
+    event.remove("tfc:crafting/gunpowder_with_graphite")
+    event.remove("create:filling/gunpowder")
     event.recipes.createMixing(
       Item.of("minecraft:gunpowder", 4),
       [
