@@ -802,12 +802,12 @@ ServerEvents.recipes(event => {
   event.remove({id: 'tfmg:mixing/p_semiconductor'})
   event.recipes.create.mixing(
     'tfmg:n_semiconductor',
-    ['tfmg:silicon_ingot', 'chemica:phosphorus_dust']
+    ['kubejs:polysilicon', 'chemica:phosphorus_dust']
   )
   event.custom({
     type: 'create:mixing',
     ingredients: [
-      {item: 'tfmg:silicon_ingot'},
+      {item: 'kubejs:polysilicon'},
       {type: 'neoforge:single', fluid: 'tfc_metallurgy:metal/boron', amount: 50}
     ],
     results: [{id: 'tfmg:p_semiconductor'}],

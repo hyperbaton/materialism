@@ -86,4 +86,6 @@ ClientEvents.lang("en_us", event => {
     
     event.renameItem('aeronautics:andesite_propeller', 'Steel Propeller')
 
+    event.renameItem('solarpunk:brass_solar_panel', 'Photovoltaic Solar Panel')
+
 });

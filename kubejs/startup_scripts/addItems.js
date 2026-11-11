@@ -29,6 +29,9 @@ StartupEvents.registry('item', event => {
     event.create('wire/titanium_wire').maxStackSize(16)
     event.create('wire/stainless_steel_wire').maxStackSize(16)
     event.create('silicon_wafer').maxStackSize(16)
+    event.create('polysilicon').maxStackSize(16).displayName('Polysilicon')
+    event.create('monocrystalline_silicon').maxStackSize(16).displayName('Monocrystalline Silicon Ingot')
+    event.create('incomplete_photovoltaic_panel').maxStackSize(1).displayName('Photovoltaic Panel in Progress')
     event.create('wood_plating_blank').maxStackSize(1).displayName('Wood Plating in Progress')
     const dyeColors = [
       "white", "orange", "magenta", "light_blue", "yellow", "lime", "pink", "gray",

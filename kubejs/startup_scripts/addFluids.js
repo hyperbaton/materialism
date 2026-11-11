@@ -13,4 +13,6 @@ StartupEvents.registry('fluid', event => {
     addGas('liquid_air', 'Liquid Air', '#9FE8E0')
     addGas('nitrogen', 'Nitrogen', '#A8D8F0')
     addGas('oxygen', 'Oxygen', '#6FB4E8')
+    // Polysilicon precursor
+    addGas('trichlorosilane', 'Trichlorosilane', '#D6DCD8')
 })

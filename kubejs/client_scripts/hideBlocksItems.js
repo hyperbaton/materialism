@@ -644,6 +644,34 @@ RecipeViewerEvents.removeEntries('item', event => {
     r('chemica:oxygen_bucket')
     r('chemica:nitrogen_bucket')
     r('chemica:molten_titanium_bucket')
+
+    // Create: Solarpunk (see solarpunkRecipes.js)
+    ;['lithium', 'beryllium'].forEach(metal => {
+        ;['dust', 'ingot', 'nugget', 'block'].forEach(form => r('solarpunk:' + metal + '_' + form))
+    })
+    r('solarpunk:lithium_ore')
+    r('solarpunk:deepslate_lithium_ore')
+    r('solarpunk:raw_lithium')
+    r('solarpunk:salt')
+    // Wiring
+    ;['copper', 'iron', 'gold'].forEach(metal => {
+        r('solarpunk:' + metal + '_wire')
+        r('solarpunk:' + metal + '_spool')
+    })
+    r('solarpunk:empty_spool')
+    r('solarpunk:wire_connector')
+    // Greenhouses
+    event.remove(/^solarpunk:.*greenhouse.*/)
+    event.remove(/^solarpunk:.*rammed_earth.*/)
+    r('solarpunk:andesite_solar_panel')
+    r('solarpunk:firebox_boiler')
+    r('solarpunk:geyser_vent')
+    r('solarpunk:geyser_cap')
+    r('solarpunk:kinetic_sprinkler')
+    r('solarpunk:moss_slab')
+    r('solarpunk:moss_stairs')
+    // Ash and salt building blocks
+    event.remove(/^solarpunk:(ash_block|(chiseled_)?(ash|salt)_brick.*|polished_(ash|salt).*|salt_(slab|stairs))$/)
 });
 
 RecipeViewerEvents.removeEntries('fluid', event => {
