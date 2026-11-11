@@ -148,8 +148,7 @@ ServerEvents.recipes(event => {
     [Item.of('solarpunk:solar_mirror')],
     'tfc:metal/sheet/steel',
     [
-      event.recipes.createDeploying('solarpunk:incomplete_solar_mirror', ['solarpunk:incomplete_solar_mirror', Ingredient.of('#c:glass_panes/colorless')]),
-      event.recipes.createFilling('solarpunk:incomplete_solar_mirror', ['solarpunk:incomplete_solar_mirror', Fluid.of('tfc:metal/silver', 10)]),
+      event.recipes.createDeploying('solarpunk:incomplete_solar_mirror', ['solarpunk:incomplete_solar_mirror', 'create_optical:mirror']),
       event.recipes.createDeploying('solarpunk:incomplete_solar_mirror', ['solarpunk:incomplete_solar_mirror', 'create:cogwheel']),
       event.recipes.createPressing('solarpunk:incomplete_solar_mirror', 'solarpunk:incomplete_solar_mirror')
     ]
@@ -253,6 +252,17 @@ ServerEvents.recipes(event => {
     C: 'create:brass_casing',
     I: 'create:fluid_tank'
   }).id('kubejs:solarpunk/crystallizer')
+
+  // Fermentation vat
+  event.remove({ id: 'solarpunk:fermentation_vat' })
+  event.shaped('2x solarpunk:fermentation_vat', [
+    'RSR',
+    'S S',
+    'RSR'
+  ], {
+    S: 'firmalife:metal/sheet/stainless_steel',
+    R: 'tfc_items:stainless_steel_rivet'
+  }).id('kubejs:solarpunk/fermentation_vat')
 
   // Kinetic battery
   event.remove({ id: 'solarpunk:kinetic_battery' })
