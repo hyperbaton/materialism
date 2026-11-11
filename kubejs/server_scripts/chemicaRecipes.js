@@ -96,10 +96,13 @@ ServerEvents.recipes(event => {
     ['chemica:oxygen', 'kubejs:oxygen'],
     ['chemica:nitrogen', 'kubejs:nitrogen'],
     ['chemica:molten_titanium', 'tfc_metallurgy:metal/titanium'],
-    ['chemica:hydrogen', 'tfmg:hydrogen']
+    ['chemica:hydrogen', 'tfmg:hydrogen'],
+    ['chemica:propene', 'tfmg:propylene']
   ]
+  event.remove({id: 'chemica:filling/propene'})
   const fluidRecipes = []
   event.forEachRecipe({mod: 'chemica'}, recipe => {
+    if (String(recipe.getId()) == 'chemica:filling/propene') return
     const json = String(recipe.json)
     if (fluidSwaps.some(swap => json.indexOf('"' + swap[0] + '"') !== -1)) {
       fluidRecipes.push({id: String(recipe.getId()), json: json})

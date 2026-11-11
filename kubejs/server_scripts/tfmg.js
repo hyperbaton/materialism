@@ -556,7 +556,7 @@ ServerEvents.recipes(event => {
     event.recipes.createDeploying('createaddition:copper_wire', ['createaddition:copper_wire', 'createaddition:gold_wire']),
     event.recipes.createFilling(
       'createaddition:copper_wire',
-      ['createaddition:copper_wire', Fluid.of('tfmg:molten_plastic', 100)]
+      ['createaddition:copper_wire', Fluid.of('chemica:epoxy_resin', 100)]
     ),
     event.recipes.createPressing('createaddition:copper_wire', 'createaddition:copper_wire'),
     event.custom({
@@ -583,7 +583,7 @@ ServerEvents.recipes(event => {
     event.recipes.createDeploying('tfc_metallurgy:metal/sheet/aluminum', ['tfc_metallurgy:metal/sheet/aluminum', 'createaddition:copper_wire']),
     event.recipes.createFilling(
       'tfc_metallurgy:metal/sheet/aluminum',
-      ['tfc_metallurgy:metal/sheet/aluminum', Fluid.of('tfmg:molten_plastic', 100)]
+      ['tfc_metallurgy:metal/sheet/aluminum', Fluid.of('chemica:polyethylene', 100)]
     ),
     event.recipes.createPressing('tfc_metallurgy:metal/sheet/aluminum', 'tfc_metallurgy:metal/sheet/aluminum'),
     event.custom({
@@ -672,7 +672,7 @@ ServerEvents.recipes(event => {
    Item.of('kubejs:lithium_battery_core', 1)
   ], 'tfmg:heavy_machinery_casing', [ // input
    event.recipes.createDeploying('tfmg:heavy_machinery_casing', ['tfmg:heavy_machinery_casing', 'tfc_metallurgy:metal/sheet/manganese']),
-   event.recipes.createDeploying('tfmg:heavy_machinery_casing', ['tfmg:heavy_machinery_casing', 'tfmg:plastic_sheet']),
+   event.recipes.createDeploying('tfmg:heavy_machinery_casing', ['tfmg:heavy_machinery_casing', 'chemica:polyethylene_sheet']),
    event.recipes.createFilling(
      'tfmg:heavy_machinery_casing',
      ['tfmg:heavy_machinery_casing', Fluid.of('tfmg:propylene', 100)]
@@ -991,19 +991,26 @@ ServerEvents.recipes(event => {
     event.recipes.createPressing('tfmg:thermite_grenade', 'tfmg:thermite_grenade')
   ]).transitionalItem('tfmg:thermite_grenade').loops(1)
 
-  // Napalm bomb: plastic sheet → fill napalm → seal with plastic + rivets → press
+  // Napalm bomb: aluminium canister → fill napalm → seal with aluminium + rivets → press
+  const napalmCase = 'tfc_metallurgy:metal/sheet/aluminum'
   event.recipes.create.sequenced_assembly([
     Item.of('tfmg:napalm_bomb', 1)
-  ], 'tfmg:plastic_sheet', [
-    event.recipes.createFilling(
-      'tfmg:plastic_sheet',
-      ['tfmg:plastic_sheet', Fluid.of('tfmg:napalm', 1000)]
-    ),
-    event.recipes.createDeploying('tfmg:plastic_sheet', ['tfmg:plastic_sheet', 'tfmg:plastic_sheet']),
-    event.recipes.createDeploying('tfmg:plastic_sheet', ['tfmg:plastic_sheet', 'tfc_items:steel_rivet']),
-    event.recipes.createPressing('tfmg:plastic_sheet', 'tfmg:plastic_sheet'),
-    event.recipes.createPressing('tfmg:plastic_sheet', 'tfmg:plastic_sheet')
-  ]).transitionalItem('tfmg:plastic_sheet').loops(1)
+  ], napalmCase, [
+    event.recipes.createFilling(napalmCase, [napalmCase, Fluid.of('tfmg:napalm', 1000)]),
+    event.recipes.createDeploying(napalmCase, [napalmCase, napalmCase]),
+    event.recipes.createDeploying(napalmCase, [napalmCase, 'tfc_items:steel_rivet']),
+    event.recipes.createPressing(napalmCase, napalmCase),
+    event.recipes.createPressing(napalmCase, napalmCase)
+  ]).transitionalItem(napalmCase).loops(1)
+
+  // TFMG items that used generic plastic
+  event.replaceInput({ id: 'tfmg:crafting/materials/empty_circuit_board' }, 'tfmg:plastic_sheet', 'chemica:cured_epoxy_sheet')
+  event.replaceInput({ id: 'tfmg:crafting/materials/cooling_fluid_bottle' }, 'tfmg:plastic_sheet', 'chemica:polyethylene_sheet')
+  event.replaceInput({ id: 'tfmg:crafting/materials/lithium_charge' }, 'tfmg:plastic_sheet', 'chemica:polyethylene_sheet')
+  // Generic plastic production (replaced by Chemica plastics)
+  ;['tfmg:casting/plastic_sheet', 'tfmg:crafting/materials/plastic_block', 'tfmg:crafting/materials/plastic_sheet',
+    'tfmg:melting/melt_plastic_ingot', 'tfmg:vat/plastic_from_ethylene', 'tfmg:vat/plastic_from_propylene']
+    .forEach(id => event.remove({ id: id }))
 
   event.remove({id: 'tfmg:crafting/materials/coke_oven'})
   event.recipes.shaped('9x tfmg:coke_oven', [

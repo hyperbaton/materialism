@@ -12,7 +12,7 @@ ServerEvents.recipes(event => {
         {
           A: 'tfmg:circuit_board',
           B: 'tfc_metallurgy:metal/sheet/aluminum',
-          C: 'tfmg:plastic_sheet',
+          C: 'chemica:polyvinyl_chloride_sheet',
           D: 'railways:smokestack_diesel',
           E: 'tfmg:cable_tube',
           // TODO: Find replacement for missing item
@@ -35,7 +35,7 @@ ServerEvents.recipes(event => {
       {
         A: 'tfmg:circuit_board',
         B: 'tfc_metallurgy:metal/sheet/aluminum',
-        C: 'tfmg:plastic_sheet',
+        C: 'chemica:polyvinyl_chloride_sheet',
         D: 'railways:smokestack_diesel',
         E: 'tfmg:cable_tube',
         // TODO: Find replacement for missing item
@@ -133,7 +133,7 @@ ServerEvents.recipes(event => {
         'ABA'
       ],
       {
-        A: 'tfmg:plastic_sheet',
+        A: 'chemica:polyvinyl_chloride_sheet',
         B: 'computercraft:cable',
         C: 'tfc_metallurgy:metal/sheet/aluminum',
         D: 'tfmg:circuit_board'
@@ -149,7 +149,7 @@ ServerEvents.recipes(event => {
       'ABA'
     ],
     {
-      A: 'tfmg:plastic_sheet',
+      A: 'chemica:polyvinyl_chloride_sheet',
       B: 'computercraft:cable',
       C: 'tfc_metallurgy:metal/sheet/aluminum',
       D: 'tfmg:circuit_board',
@@ -167,7 +167,7 @@ ServerEvents.recipes(event => {
       ' ABA '
     ],
     {
-      A: 'tfmg:plastic_sheet',
+      A: 'chemica:polyvinyl_chloride_sheet',
       B: 'computercraft:cable',
       C: 'tfc_metallurgy:metal/sheet/aluminum',
       D: 'tfmg:circuit_board',
@@ -192,7 +192,7 @@ ServerEvents.recipes(event => {
       'PAP'
     ],
     {
-      P: 'tfmg:plastic_sheet',
+      P: 'chemica:polyvinyl_chloride_sheet',
       G: 'firmalife:reinforced_glass',
       L: 'create:display_board',
       A: 'tfc_metallurgy:metal/sheet/aluminum',
@@ -209,7 +209,7 @@ ServerEvents.recipes(event => {
       ' PAP '
     ],
     {
-      P: 'tfmg:plastic_sheet',
+      P: 'chemica:polyvinyl_chloride_sheet',
       G: 'firmalife:reinforced_glass',
       L: 'tfmg:light_bulb',
       A: 'tfc_metallurgy:metal/sheet/aluminum',
@@ -227,7 +227,7 @@ ServerEvents.recipes(event => {
         ' APA '
       ],
       {
-        P: 'tfmg:plastic_sheet',
+        P: 'chemica:polyvinyl_chloride_sheet',
         C: 'create:mechanical_press',
         A: 'tfc_metallurgy:metal/sheet/aluminum',
         // TODO: Find replacement for missing item
@@ -249,7 +249,7 @@ ServerEvents.recipes(event => {
         ' APA '
       ],
       {
-        P: 'tfmg:plastic_sheet',
+        P: 'chemica:polyvinyl_chloride_sheet',
         C: 'create:turntable',
         D: 'create:precision_mechanism',
         A: 'tfc_metallurgy:metal/sheet/aluminum',
@@ -268,7 +268,7 @@ ServerEvents.recipes(event => {
         ' APA '
       ],
       {
-        P: 'tfmg:plastic_sheet',
+        P: 'chemica:polyvinyl_chloride_sheet',
         C: 'minecraft:note_block',
         A: 'tfc_metallurgy:metal/sheet/aluminum',
         // TODO: Find replacement for missing item
@@ -293,9 +293,9 @@ event.remove({ output: 'computercraft:disk' });
   dyeColors.forEach(color => {
     event.recipes.create.sequenced_assembly(
       Item.of(`computercraft:disk[dyed_color={rgb:${colorIds[color]},show_in_tooltip:false}]`),
-      'tfmg:plastic_sheet',
+      'chemica:polyethylene_sheet',
       [
-        event.recipes.create.deploying(`kubejs:plastic_sheet/${color}`, ['tfmg:plastic_sheet', dyeItems(color)]),
+        event.recipes.create.deploying(`kubejs:plastic_sheet/${color}`, ['chemica:polyethylene_sheet', dyeItems(color)]),
         event.recipes.create.pressing(`kubejs:plastic_sheet/${color}`, `kubejs:plastic_sheet/${color}`),
         event.recipes.create.deploying(`kubejs:plastic_sheet/${color}`, [`kubejs:plastic_sheet/${color}`, 'tfc:powder/magnetite']),
         event.recipes.create.pressing(`kubejs:plastic_sheet/${color}`, `kubejs:plastic_sheet/${color}`),

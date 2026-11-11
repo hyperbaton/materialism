@@ -315,10 +315,10 @@ ServerEvents.recipes(event => {
         T: '#tfc:twigs'
     })
 
-    // --- Plastic sheet: roll TFMG plastic; corner from two sheets ---
+    // --- Plastic sheet: roll polyethylene; corner from two sheets ---
     event.custom({
         type: 'createaddition:rolling',
-        ingredients: [{ item: 'tfmg:plastic_sheet' }],
+        ingredients: [{ item: 'chemica:polyethylene_sheet' }],
         results: [{ id: 'butchery:plastic_sheet', count: 1 }]
     })
     event.shapeless('butchery:plastic_sheet_corner', [

@@ -50,7 +50,7 @@ ServerEvents.recipes(event => {
     event.recipes.vintageimprovements.turning('2x tfmg:brass_pipe', 'tfc:metal/rod/brass').processingTime(300)
     event.recipes.vintageimprovements.turning('2x tfmg:cast_iron_pipe', 'tfc:metal/rod/cast_iron').processingTime(300)
     event.recipes.vintageimprovements.turning('2x tfmg:aluminum_pipe', 'tfc_metallurgy:metal/rod/aluminum').processingTime(300)
-    event.recipes.vintageimprovements.turning('2x tfmg:plastic_pipe', 'tfmg:plastic_sheet').processingTime(300)
+    event.recipes.vintageimprovements.turning('2x tfmg:plastic_pipe', 'chemica:polyvinyl_chloride_sheet').processingTime(300)
     event.remove({output: 'createaddition:spool'})
     event.custom({type: 'vintageimprovements:turning',
       ingredients: [{tag: 'tfc:lumber'}],

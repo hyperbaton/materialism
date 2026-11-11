@@ -654,7 +654,7 @@ ServerEvents.recipes(event => {
     //   [
     //     event.recipes.create.filling('kubejs:silicon_wafer', ['kubejs:silicon_wafer', Fluid.of('tfc_metallurgy:metal/boron', 50)]),
     //     event.recipes.createDeploying('kubejs:silicon_wafer', ['kubejs:silicon_wafer', 'tfc:pure_phosphorus']),
-    //     event.recipes.create.filling('kubejs:silicon_wafer', ['kubejs:silicon_wafer', Fluid.of('tfmg:molten_plastic', 100)]),
+    //     event.recipes.create.filling('kubejs:silicon_wafer', ['kubejs:silicon_wafer', Fluid.of('chemica:epoxy_resin', 100)]),
     //     /*event.recipes.create_optical.focusing(
     //       ['kubejs:silicon_wafer'],
     //       ['kubejs:silicon_wafer'],

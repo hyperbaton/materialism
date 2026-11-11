@@ -644,6 +644,11 @@ RecipeViewerEvents.removeEntries('item', event => {
     r('chemica:oxygen_bucket')
     r('chemica:nitrogen_bucket')
     r('chemica:molten_titanium_bucket')
+    r('chemica:propene_bucket')
+    // TFMG generic plastic (replaced by Chemica plastics)
+    r('tfmg:plastic_sheet')
+    r('tfmg:plastic_block')
+    r('tfmg:molten_plastic_bucket')
 
     // Create: Solarpunk (see solarpunkRecipes.js)
     ;['lithium', 'beryllium'].forEach(metal => {
@@ -694,4 +699,6 @@ RecipeViewerEvents.removeEntries('fluid', event => {
     event.remove('chemica:oxygen')
     event.remove('chemica:nitrogen')
     event.remove('chemica:molten_titanium')
+    event.remove('chemica:propene')
+    event.remove('tfmg:molten_plastic')
 });
