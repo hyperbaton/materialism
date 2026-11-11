@@ -87,6 +87,12 @@ ClientEvents.lang("en_us", event => {
     event.renameItem('aeronautics:andesite_propeller', 'Steel Propeller')
 
     event.renameItem('solarpunk:brass_solar_panel', 'Photovoltaic Solar Panel')
+    event.add('fluid_type.solarpunk.molten_salt', 'Molten Nitrate Salt')
+    event.add('block.solarpunk.molten_salt', 'Molten Nitrate Salt')
+    event.renameItem('solarpunk:molten_salt_bucket', 'Molten Nitrate Salt Bucket')
+    event.renameItem('solarpunk:salt_block', 'Nitrate Salt Block')
+    event.add('create.solar_punk.tooltip.molten_salt', 'Molten Nitrate Salt: ')
+    event.add('solarpunk.tooltip.tower_mode_salt', 'Molten Nitrate Salt')
     event.renameItem('solarpunk:andesite_turbine_blade', 'Stainless Steel Turbine Blade')
     event.renameItem('solarpunk:brass_turbine_blade', 'Titanium Turbine Blade')
 

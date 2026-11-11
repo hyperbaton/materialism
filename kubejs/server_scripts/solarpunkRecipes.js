@@ -19,20 +19,20 @@ ServerEvents.recipes(event => {
   event.remove({ output: /^solarpunk:moss_(slab|stairs)$/ })
   event.remove({ output: /^solarpunk:(ash_block|(chiseled_)?(ash|salt)_brick.*|polished_(ash|salt).*|salt_(slab|stairs))$/ })
   event.remove({ id: 'solarpunk:ash_from_ash_block' })
+  event.remove({ output: /^solarpunk:(grow_lamp|solar_plant_bed|salt_lamp|charred_timber.*|ruined_dirt)$/ })
+  event.remove({ input: /^solarpunk:(ruined_dirt|charred_timber.*)$/ })
 
-  // Salt: TFC salt; 1 salt = 100 mB molten salt
+  // Molten salt is nitrate salt: 1 saltpeter = 100 mB
+  event.remove({ output: 'solarpunk:salt_block' })
   event.remove({ id: 'solarpunk:salt_from_salt_block' })
-  event.shapeless('9x tfc:powder/salt', ['solarpunk:salt_block']).id('kubejs:solarpunk/salt_from_salt_block')
-
-  event.remove({ id: 'solarpunk:salt_lamp' })
-  event.shapeless('solarpunk:salt_lamp', ['solarpunk:salt_block', 'tfc:torch']).id('kubejs:solarpunk/salt_lamp')
-
+  event.recipes.create.compacting('solarpunk:salt_block', '20x tfc:powder/saltpeter').id('kubejs:solarpunk/compacting/salt_block')
   event.remove({ id: 'solarpunk:solar_heating/salt_to_molten_salt' })
+  event.remove({ id: 'solarpunk:solar_heating/salt_item_to_molten_salt' })
   event.custom({
     type: 'solarpunk:solar_heating',
-    ingredient: { tag: 'c:storage_blocks/salt' },
-    result: { id: 'solarpunk:molten_salt', amount: 900 }
-  }).id('kubejs:solarpunk/solar_heating/salt_block_to_molten_salt')
+    ingredient: { item: 'tfc:powder/saltpeter' },
+    result: { id: 'solarpunk:molten_salt', amount: 100 }
+  }).id('kubejs:solarpunk/solar_heating/saltpeter_to_molten_salt')
 
   event.remove({ id: 'solarpunk:crystallizing/molten_salt_to_salt' })
   event.custom({
@@ -41,8 +41,8 @@ ServerEvents.recipes(event => {
     input_b: { id: 'minecraft:water', amount: 50 },
     byproduct: { id: 'solarpunk:steam', amount: 25 },
     processing_time: 100,
-    result: { id: 'tfc:powder/salt', count: 1 }
-  }).id('kubejs:solarpunk/crystallizing/molten_salt_to_salt')
+    result: { id: 'tfc:powder/saltpeter', count: 1 }
+  }).id('kubejs:solarpunk/crystallizing/molten_salt_to_saltpeter')
 
   // Solar heater: rock to lava, reduced yield
   const LAVA_FROM_RAW_ROCK = 250
@@ -355,29 +355,6 @@ ServerEvents.recipes(event => {
     G: 'tfc:lamp_glass',
     A: 'tfc_metallurgy:metal/rod/aluminum'
   }).id('kubejs:solarpunk/garden_light')
-
-  event.remove({ id: 'solarpunk:grow_lamp' })
-  event.shaped('2x solarpunk:grow_lamp', [
-    'SWS',
-    'GAG'
-  ], {
-    S: 'tfc:metal/sheet/wrought_iron',
-    W: '#c:wires/copper',
-    G: '#c:glass_panes/colorless',
-    A: 'tfc:gem/amethyst'
-  }).id('kubejs:solarpunk/grow_lamp')
-
-  event.remove({ id: 'solarpunk:solar_plant_bed' })
-  event.shaped('solarpunk:solar_plant_bed', [
-    ' P ',
-    'CAC',
-    'CDC'
-  ], {
-    P: 'solarpunk:photovoltaic_cell',
-    C: 'tfc:metal/sheet/copper',
-    A: 'tfc:gem/amethyst',
-    D: '#tfc:dirt'
-  }).id('kubejs:solarpunk/solar_plant_bed')
 
   // Filigree railings
   const railings = {

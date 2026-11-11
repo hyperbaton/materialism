@@ -675,6 +675,7 @@ RecipeViewerEvents.removeEntries('item', event => {
     r('solarpunk:kinetic_sprinkler')
     r('solarpunk:moss_slab')
     r('solarpunk:moss_stairs')
+    event.remove(/^solarpunk:(grow_lamp|solar_plant_bed|salt_lamp|charred_timber.*|ruined_dirt)$/)
     // Ash and salt building blocks
     event.remove(/^solarpunk:(ash_block|(chiseled_)?(ash|salt)_brick.*|polished_(ash|salt).*|salt_(slab|stairs))$/)
 });

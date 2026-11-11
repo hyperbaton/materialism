@@ -35,6 +35,8 @@ ServerEvents.recipes(event => {
     // Remove recipes for accumulator (use TFMG batteries)
     event.remove({output: 'createaddition:modular_accumulator'})
     
+    event.remove({output: 'createaddition:mixing/netherrack'})
+    
     // Modify Tesla coil recipe
     event.replaceInput(
       {id: 'createaddition:mechanical_crafting/tesla_coil'},
