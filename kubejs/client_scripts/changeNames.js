@@ -87,5 +87,7 @@ ClientEvents.lang("en_us", event => {
     event.renameItem('aeronautics:andesite_propeller', 'Steel Propeller')
 
     event.renameItem('solarpunk:brass_solar_panel', 'Photovoltaic Solar Panel')
+    event.renameItem('solarpunk:andesite_turbine_blade', 'Stainless Steel Turbine Blade')
+    event.renameItem('solarpunk:brass_turbine_blade', 'Titanium Turbine Blade')
 
 });

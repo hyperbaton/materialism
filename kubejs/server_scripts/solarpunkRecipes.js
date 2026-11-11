@@ -265,6 +265,61 @@ ServerEvents.recipes(event => {
     F: 'tfmg:steel_flywheel'
   }).id('kubejs:solarpunk/kinetic_battery')
 
+  // Turbine casing: Cr-Mo-V steel shell, slag wool lagging, bolted flange
+  const casing = 'create:industrial_iron_block'
+  event.remove({ id: 'solarpunk:item_application/turbine_casing' })
+  event.recipes.create.sequenced_assembly(
+    [Item.of('solarpunk:turbine_casing', 2)],
+    casing,
+    [
+      event.recipes.createDeploying(casing, [casing, 'tfc_metallurgy:metal/sheet/high_alloy_steel']),
+      event.recipes.createFilling(casing, [casing, Fluid.of('tfmg:molten_slag', 100)]),
+      event.recipes.vintageimprovements.vibrating(casing, casing),
+      event.recipes.createDeploying(casing, [casing, 'tfc_items:steel_rivet']),
+      event.recipes.createPressing(casing, casing)
+    ]
+  ).transitionalItem(casing).loops(1).id('kubejs:solarpunk/sequenced_assembly/turbine_casing')
+
+  // Turbine casing glass: reinforced sight glass
+  event.remove({ id: 'solarpunk:item_application/turbine_casing_glass' })
+  event.custom({
+    type: 'create:item_application',
+    ingredients: [{ item: 'solarpunk:turbine_casing' }, { item: 'firmalife:reinforced_glass' }],
+    results: [{ id: 'solarpunk:turbine_casing_glass' }]
+  }).id('kubejs:solarpunk/item_application/turbine_casing_glass')
+
+  // Turbine blades: 12% Cr-Mo stainless and Ti-6Al-4V with a stellite erosion shield
+  const bladeCurving = item => event.custom({
+    type: 'vintageimprovements:curving',
+    ingredients: [{ item: item }],
+    results: [{ id: item }],
+    mode: 2
+  })
+  const stainless = 'firmalife:metal/double_sheet/stainless_steel'
+  event.remove({ id: 'solarpunk:mechanical_crafting/andesite_turbine_blade' })
+  event.recipes.create.sequenced_assembly(
+    [Item.of('solarpunk:andesite_turbine_blade', 2)],
+    stainless,
+    [
+      event.recipes.createFilling(stainless, [stainless, Fluid.of('tfc_metallurgy:metal/molybdenum', 10)]),
+      bladeCurving(stainless),
+      event.recipes.vintageimprovements.polishing(stainless, stainless)
+    ]
+  ).transitionalItem(stainless).loops(1).id('kubejs:solarpunk/sequenced_assembly/stainless_turbine_blade')
+
+  const titanium = 'tfc_metallurgy:metal/double_sheet/titanium'
+  event.remove({ id: 'solarpunk:mechanical_crafting/brass_turbine_blade' })
+  event.recipes.create.sequenced_assembly(
+    [Item.of('solarpunk:brass_turbine_blade', 2)],
+    titanium,
+    [
+      event.recipes.createFilling(titanium, [titanium, Fluid.of('tfc_metallurgy:metal/vanadium', 10)]),
+      bladeCurving(titanium),
+      event.recipes.createDeploying(titanium, [titanium, 'tfc_metallurgy:metal/sheet/cobalt']),
+      event.recipes.vintageimprovements.polishing(titanium, titanium)
+    ]
+  ).transitionalItem(titanium).loops(1).id('kubejs:solarpunk/sequenced_assembly/titanium_turbine_blade')
+
   // Turbine rotor
   event.remove({ id: 'solarpunk:turbine_rotor' })
   event.shaped('solarpunk:turbine_rotor', [
