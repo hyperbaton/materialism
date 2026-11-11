@@ -1193,6 +1193,33 @@ ServerEvents.recipes(event => {
       {chance: 0.9, id: 'tfmg:coal_coke_dust'}
     ]
   })
+
+  // Chemical vats: riveted frame with a corrosion-resistant lining
+  event.remove({id: 'tfmg:crafting/materials/cast_iron_chemical_vat'})
+  event.remove({id: 'tfmg:crafting/materials/steel_chemical_vat'})
+  // Cast iron: lined with pewter (hard lead)
+  event.recipes.create.mechanical_crafting(
+    'tfmg:cast_iron_chemical_vat',
+    [' RCR ', 'RL LR', 'C T C', 'RL LR', ' RCR '],
+    {
+      C: 'tfc:metal/sheet/cast_iron',
+      R: 'tfc_items:cast_iron_rivet',
+      L: 'tfc_metallurgy:metal/sheet/pewter',
+      T: 'tfmg:cast_iron_fluid_tank'
+    }
+  )
+  // Steel: stainless steel shell, lined with molybdenum and tantalum
+  event.recipes.create.mechanical_crafting(
+    '2x tfmg:steel_chemical_vat',
+    [' RSR ', 'RM MR', 'S T S', 'RA AR', ' RSR '],
+    {
+      S: 'firmalife:metal/sheet/stainless_steel',
+      R: 'tfc_items:stainless_steel_rivet',
+      M: 'tfc_metallurgy:metal/sheet/molybdenum',
+      A: 'tfc_metallurgy:metal/sheet/tantalum',
+      T: 'tfmg:steel_fluid_tank'
+    }
+  )
 }
 )
 
