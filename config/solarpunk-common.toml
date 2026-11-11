@@ -207,7 +207,7 @@
 		#headroom to recharge a drained bank, cover rainy days, or run more batteries.
 		# Default: 2.0
 		# Range: 0.0 ~ 1000.0
-		salt_output_multiplier = 2.0
+		salt_output_multiplier = 0.0
 		#Steam output multiplier. Default 7/3 = 21 mB/t at max size, matching one
 		#max-height Steam Turbine's consumption.
 		# Default: 2.3333333333333335

@@ -154,18 +154,8 @@ ServerEvents.recipes(event => {
     ]
   ).transitionalItem('solarpunk:incomplete_solar_mirror').loops(1).id('kubejs:solarpunk/sequenced_assembly/solar_mirror')
 
-  // Electromagnet coil
-  event.remove({ id: 'solarpunk:sequenced_assembly/electromagnet_coil' })
-  event.recipes.create.sequenced_assembly(
-    [Item.of('solarpunk:electromagnet_coil')],
-    'minecraft:lightning_rod',
-    [
-      event.recipes.createDeploying('solarpunk:incomplete_electromagnet_coil', ['solarpunk:incomplete_electromagnet_coil', 'tfc:metal/sheet/copper']),
-      event.recipes.createDeploying('solarpunk:incomplete_electromagnet_coil', ['solarpunk:incomplete_electromagnet_coil', 'tfc:metal/sheet/copper']),
-      event.recipes.createPressing('solarpunk:incomplete_electromagnet_coil', 'solarpunk:incomplete_electromagnet_coil'),
-      event.recipes.createDeploying('solarpunk:incomplete_electromagnet_coil', ['solarpunk:incomplete_electromagnet_coil', 'create:electron_tube'])
-    ]
-  ).transitionalItem('solarpunk:incomplete_electromagnet_coil').loops(3).id('kubejs:solarpunk/sequenced_assembly/electromagnet_coil')
+  // Electromagnet coil: TFMG's electromagnetic coil covers it
+  event.remove({ output: 'solarpunk:electromagnet_coil' })
 
   // Solar power tower
   event.remove({ id: 'solarpunk:mechanical_crafting/solar_power_tower' })
@@ -329,6 +319,244 @@ ServerEvents.recipes(event => {
       event.recipes.vintageimprovements.polishing(titanium, titanium)
     ]
   ).transitionalItem(titanium).loops(1).id('kubejs:solarpunk/sequenced_assembly/titanium_turbine_blade')
+
+  // Fusion reactor casing
+  const vessel = 'tfmg:heavy_machinery_casing'
+  event.remove({ id: 'solarpunk:item_application/fusion_reactor_casing' })
+  event.recipes.create.sequenced_assembly(
+    [Item.of('solarpunk:fusion_reactor_casing', 2)],
+    vessel,
+    [
+      // Double-walled vacuum vessel
+      event.recipes.createDeploying(vessel, [vessel, 'firmalife:metal/double_sheet/stainless_steel']),
+      // Borated neutron shielding
+      event.recipes.createFilling(vessel, [vessel, Fluid.of('tfc_metallurgy:metal/boron', 25)]),
+      // Plasma-facing tungsten armour
+      event.recipes.createDeploying(vessel, [vessel, 'tfc_metallurgy:metal/sheet/tungsten']),
+      // Superconducting magnet winding
+      event.recipes.createDeploying(vessel, [vessel, 'tfc_metallurgy:metal/rod/niobium']),
+      // Liquid helium magnet cooling
+      event.recipes.createFilling(vessel, [vessel, Fluid.of('chemica:helium', 5)]),
+      // Vessel pump-down
+      event.recipes.vintageimprovements.vacuumizing(vessel, [vessel])
+    ]
+  ).transitionalItem(vessel).loops(1).id('kubejs:solarpunk/sequenced_assembly/fusion_reactor_casing')
+
+  // Superconducting coil (Nb3Sn cable-in-conduit)
+  const coil = 'solarpunk:incomplete_superconducting_coil'
+  event.remove({ id: 'solarpunk:sequenced_assembly/superconducting_coil' })
+  event.recipes.create.sequenced_assembly(
+    [Item.of('solarpunk:superconducting_coil')],
+    'tfc_metallurgy:metal/rod/niobium',
+    [
+      // Tin for the Nb3Sn compound
+      event.recipes.createFilling(coil, [coil, Fluid.of('tfc:metal/tin', 25)]),
+      // Copper stabiliser matrix
+      event.recipes.createDeploying(coil, [coil, 'createaddition:copper_wire']),
+      // Stainless steel conduit jacket
+      event.recipes.createDeploying(coil, [coil, 'firmalife:metal/sheet/stainless_steel']),
+      // Reaction heat treatment
+      event.custom({ type: 'vintageimprovements:pressurizing', ingredients: [{ item: coil }], results: [{ id: coil }], heat_requirement: 'heated' }),
+      // Epoxy vacuum impregnation
+      event.recipes.createFilling(coil, [coil, Fluid.of('chemica:epoxy_resin', 50)])
+    ]
+  ).transitionalItem(coil).loops(2).id('kubejs:solarpunk/sequenced_assembly/superconducting_coil')
+
+  // Particle accelerator: spallation neutrons breed tritium from lithium, beryllium multiplies them
+  event.custom({
+    type: 'solarpunk:particle_accelerator',
+    ingredients: [
+      { item: 'tfc_metallurgy:metal/dust/lithium', count: 32 },
+      { item: 'tfc_metallurgy:metal/ingot/beryllium', count: 4 },
+      { item: 'solarpunk:empty_fuel_capsule', count: 1 }
+    ],
+    min_diameter: 9,
+    min_speed: 128,
+    processing_time: 600,
+    stress: 16384.0,
+    result: { id: 'solarpunk:tritium_capsule', count: 1 }
+  }).id('kubejs:solarpunk/particle_accelerator/tritium_capsule')
+
+  // Particle accelerator: accelerator-driven thorium breeding into fissile fuel
+  event.custom({
+    type: 'solarpunk:particle_accelerator',
+    ingredients: [
+      { item: 'tfc_metallurgy:metal/ingot/thorium', count: 4 }
+    ],
+    min_diameter: 15,
+    min_speed: 192,
+    processing_time: 800,
+    stress: 24576.0,
+    result: { id: 'create_new_age:radioactive_thorium', count: 4 }
+  }).id('kubejs:solarpunk/particle_accelerator/radioactive_thorium')
+
+  // Deuterium: cryogenic distillation of liquid hydrogen
+  event.remove({ id: 'solarpunk:mixing/water_to_deuterium' })
+  event.custom({
+    type: 'tfmg:distillation',
+    ingredients: [{ type: 'neoforge:single', fluid: 'chemica:liquid_hydrogen', amount: 1000 }],
+    results: [
+      { id: 'tfmg:hydrogen', amount: 975 },
+      { id: 'solarpunk:deuterium', amount: 25 }
+    ]
+  }).id('kubejs:solarpunk/distillation/deuterium')
+
+  // Particle accelerator: transmutation and neutron doping
+  const accelerate = (name, input, count, output, outCount, diameter, speed, stress, time) => event.custom({
+    type: 'solarpunk:particle_accelerator',
+    ingredients: [{ item: input, count: count }],
+    min_diameter: diameter,
+    min_speed: speed,
+    processing_time: time,
+    stress: stress,
+    result: { id: output, count: outCount }
+  }).id('kubejs:solarpunk/particle_accelerator/' + name)
+  accelerate('bismuth_to_gold', 'kubejs:metal/dust/bismuth', 16, 'kubejs:metal/dust/gold', 1, 21, 256, 32768.0, 2400)
+  accelerate('lead_to_gold', 'tfc_metallurgy:metal/dust/lead', 32, 'kubejs:metal/dust/gold', 1, 21, 256, 32768.0, 3600)
+  accelerate('platinum_to_gold', 'tfc_metallurgy:metal/dust/platinum', 8, 'kubejs:metal/dust/gold', 1, 15, 192, 24576.0, 1600)
+  accelerate('osmium_to_iridium', 'tfc_metallurgy:metal/dust/osmium', 8, 'tfc_metallurgy:metal/dust/iridium', 1, 15, 192, 24576.0, 1600)
+  accelerate('neutron_doped_silicon', 'kubejs:monocrystalline_silicon', 1, 'tfmg:n_semiconductor', 4, 9, 128, 16384.0, 600)
+
+  // Particle accelerator pipe (beam line with dipole magnets)
+  event.remove({ id: 'solarpunk:mechanical_crafting/particle_accelerator_pipe' })
+  event.recipes.create.mechanical_crafting('8x solarpunk:particle_accelerator_pipe', [
+    'GRRRG',
+    'RMCMR',
+    'RSPSR',
+    'RMCMR',
+    'GRRRG'
+  ], {
+    // Support girders
+    G: 'create:metal_girder',
+    // Reinforced glass shell
+    R: 'firmalife:reinforced_glass',
+    // Neodymium focusing magnets
+    M: 'create_new_age:netherite_magnet',
+    // Superconducting dipole magnets
+    S: 'solarpunk:superconducting_coil',
+    // Beam pipe
+    P: 'tfmg:steel_pipe',
+    // Stainless steel casing
+    C: 'firmalife:metal/sheet/stainless_steel'
+  }).id('kubejs:solarpunk/mechanical_crafting/particle_accelerator_pipe')
+
+  // Particle accelerator input (injector and RF station)
+  event.remove({ id: 'solarpunk:mechanical_crafting/particle_accelerator_input' })
+  event.recipes.create.mechanical_crafting('solarpunk:particle_accelerator_input', [
+    'SRS',
+    'FAC',
+    'EHE'
+  ], {
+    // Superconducting focusing magnets
+    S: 'solarpunk:superconducting_coil',
+    // Niobium RF cavity
+    R: 'tfc_metallurgy:metal/double_sheet/niobium',
+    // Item feed
+    F: 'create:brass_funnel',
+    // Beam line
+    A: 'solarpunk:particle_accelerator_pipe',
+    // Housing
+    C: 'create:brass_casing',
+    // Klystron RF power
+    E: 'create:electron_tube',
+    // Drive shaft
+    H: 'create:shaft'
+  }).id('kubejs:solarpunk/mechanical_crafting/particle_accelerator_input')
+
+  // Fusion reactor core
+  event.remove({ id: 'solarpunk:mechanical_crafting/fusion_reactor_core' })
+  event.recipes.create.mechanical_crafting('solarpunk:fusion_reactor_core', [
+    ' FTF ',
+    'FSGSF',
+    'TGCGT',
+    'FSGSF',
+    ' FTF '
+  ], {
+    // Vacuum vessel
+    F: 'solarpunk:fusion_reactor_casing',
+    // Tungsten divertor
+    T: 'tfc_metallurgy:metal/sheet/tungsten',
+    // Central solenoid
+    S: 'solarpunk:superconducting_coil',
+    // Gyrotron plasma heating
+    G: 'create:electron_tube',
+    // Plasma control system
+    C: 'computercraft:computer_advanced'
+  }).id('kubejs:solarpunk/mechanical_crafting/fusion_reactor_core')
+
+  // Blanket modules
+  const blanket = 'tfc_metallurgy:metal/double_sheet/high_alloy_steel'
+  event.remove({ id: 'solarpunk:mechanical_crafting/beryllium_reflector_module' })
+  event.recipes.create.sequenced_assembly(
+    [Item.of('solarpunk:beryllium_reflector_module', 2)],
+    blanket,
+    [
+      // Beryllium copper heat sink
+      event.recipes.createDeploying(blanket, [blanket, 'tfc_metallurgy:metal/sheet/beryllium_copper']),
+      // Beryllium neutron multiplier pebbles
+      event.recipes.createFilling(blanket, [blanket, Fluid.of('tfc_metallurgy:metal/beryllium', 50)]),
+      // Beryllium first wall armour
+      event.recipes.createDeploying(blanket, [blanket, 'tfc_metallurgy:metal/sheet/beryllium']),
+      // Helium coolant
+      event.recipes.createFilling(blanket, [blanket, Fluid.of('chemica:helium', 5)]),
+      // Seal the module box
+      event.recipes.createPressing(blanket, blanket)
+    ]
+  ).transitionalItem(blanket).loops(1).id('kubejs:solarpunk/sequenced_assembly/beryllium_reflector_module')
+
+  event.remove({ id: 'solarpunk:mechanical_crafting/lithium_breeder_module' })
+  event.recipes.create.sequenced_assembly(
+    [Item.of('solarpunk:lithium_breeder_module', 2)],
+    blanket,
+    [
+      // Water cooling tubes
+      event.recipes.createDeploying(blanket, [blanket, 'tfmg:steel_pipe']),
+      // Lead-lithium breeder: lead
+      event.recipes.createFilling(blanket, [blanket, Fluid.of('tfc_metallurgy:metal/lead', 85)]),
+      // Lead-lithium breeder: lithium
+      event.recipes.createFilling(blanket, [blanket, Fluid.of('tfc_metallurgy:metal/lithium', 15)]),
+      // Seal the module box
+      event.recipes.createPressing(blanket, blanket)
+    ]
+  ).transitionalItem(blanket).loops(1).id('kubejs:solarpunk/sequenced_assembly/lithium_breeder_module')
+
+  // Empty fuel capsule
+  const capsule = 'firmalife:metal/sheet/stainless_steel'
+  event.remove({ id: 'solarpunk:empty_fuel_capsule' })
+  event.recipes.create.sequenced_assembly(
+    [Item.of('solarpunk:empty_fuel_capsule', 2)],
+    capsule,
+    [
+      // Form the stainless steel container
+      event.custom({ type: 'vintageimprovements:curving', ingredients: [{ item: capsule }], results: [{ id: capsule }], mode: 1 }),
+      // Zirconium-cobalt getter bed: zirconium
+      event.recipes.createDeploying(capsule, [capsule, 'tfc_metallurgy:metal/dust/zirconium']),
+      // Zirconium-cobalt getter bed: cobalt
+      event.recipes.createDeploying(capsule, [capsule, 'tfc_metallurgy:metal/dust/cobalt']),
+      // Evacuate the container
+      event.recipes.vintageimprovements.vacuumizing(capsule, [capsule]),
+      // Seal the lid
+      event.recipes.createPressing(capsule, capsule)
+    ]
+  ).transitionalItem(capsule).loops(1).id('kubejs:solarpunk/sequenced_assembly/empty_fuel_capsule')
+
+  // Fusion reactor casing glass
+  const viewport = 'solarpunk:fusion_reactor_casing'
+  event.remove({ id: 'solarpunk:item_application/fusion_reactor_casing_glass' })
+  event.recipes.create.sequenced_assembly(
+    [Item.of('solarpunk:fusion_reactor_casing_glass')],
+    viewport,
+    [
+      // Radiation-hard sapphire inner window
+      event.recipes.createDeploying(viewport, [viewport, 'tfc:gem/sapphire']),
+      // Silica glass outer window
+      event.recipes.createDeploying(viewport, [viewport, Ingredient.of('#c:glass_blocks/colorless')]),
+      // Stainless steel port flange
+      event.recipes.createDeploying(viewport, [viewport, 'firmalife:metal/sheet/stainless_steel']),
+      // Leak test under vacuum
+      event.recipes.vintageimprovements.vacuumizing(viewport, [viewport])
+    ]
+  ).transitionalItem(viewport).loops(1).id('kubejs:solarpunk/sequenced_assembly/fusion_reactor_casing_glass')
 
   // Turbine rotor
   event.remove({ id: 'solarpunk:turbine_rotor' })
