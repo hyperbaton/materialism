@@ -558,6 +558,17 @@ ServerEvents.recipes(event => {
     ]
   ).transitionalItem(viewport).loops(1).id('kubejs:solarpunk/sequenced_assembly/fusion_reactor_casing_glass')
 
+  // Steam condenser: refrigerated steel vat, at least 4 tanks
+  event.custom({
+    type: 'tfmg:vat',
+    allowed_vat_types: ['tfmg:steel'],
+    machines: ['tfmg:freezer'],
+    min_size: 4,
+    ingredients: [{ type: 'neoforge:single', fluid: 'chemica:steam', amount: 1000 }],
+    processing_time: 20,
+    results: [{ id: 'minecraft:water', amount: 1000 }]
+  }).id('kubejs:solarpunk/vat/steam_condensing')
+
   // Turbine rotor
   event.remove({ id: 'solarpunk:turbine_rotor' })
   event.shaped('solarpunk:turbine_rotor', [

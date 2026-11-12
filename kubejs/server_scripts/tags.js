@@ -120,4 +120,5 @@ ServerEvents.tags('enchantment', event => {
 ServerEvents.tags('fluid', event => {
   event.add('tfmg:exhaustable', 'kubejs:oxygen')
   event.add('tfmg:exhaustable', 'kubejs:flowing_oxygen')
+  event.add('tfmg:exhaustable', 'chemica:steam')
 })
