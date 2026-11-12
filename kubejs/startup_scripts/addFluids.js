@@ -15,4 +15,6 @@ StartupEvents.registry('fluid', event => {
     addGas('oxygen', 'Oxygen', '#6FB4E8')
     // Polysilicon precursor
     addGas('trichlorosilane', 'Trichlorosilane', '#D6DCD8')
+    // Arc-quenching gas for high-voltage breakers
+    addGas('sulfur_hexafluoride', 'Sulfur Hexafluoride', '#E4ECE6')
 })

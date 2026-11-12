@@ -1,0 +1,16 @@
+{
+  "compositions": [
+    {
+      "elements": [
+        {
+          "amount": 2,
+          "id": "rutile:hydrogen"
+        }
+      ]
+    }
+  ],
+  "contents": [
+    "chemica:liquid_hydrogen",
+    "chemica:hydrogen_fuel"
+  ]
+}

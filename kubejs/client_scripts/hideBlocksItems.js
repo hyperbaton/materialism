@@ -678,6 +678,26 @@ RecipeViewerEvents.removeEntries('item', event => {
     event.remove(/^solarpunk:(grow_lamp|solar_plant_bed|salt_lamp|charred_timber.*|ruined_dirt|(incomplete_)?electromagnet_coil)$/)
     // Ash and salt building blocks
     event.remove(/^solarpunk:(ash_block|(chiseled_)?(ash|salt)_brick.*|polished_(ash|salt).*|salt_(slab|stairs))$/)
+
+    // Create Electro Energetics (see electroEnergeticsRecipes.js)
+    r('electroenergetics:copper_wire');
+    r('electroenergetics:electrum_wire');
+    r('electroenergetics:iron_wire');
+    r('electroenergetics:plant_oil_bucket');
+    // Generation is New Age's; transmission is Electro Energetics'
+    ;['alternator_rotor', 'stator', 'alternator_brushes', 'three_phase_alternator_brushes', 'magnet'].forEach(i => r('electroenergetics:' + i));
+    ;['copper_wire_block', 'overcharged_iron_wire_block', 'overcharged_golden_wire_block', 'overcharged_diamond_wire_block'].forEach(i => r('create_new_age:' + i));
+    ;['spool', 'copper_spool', 'electrum_spool', 'gold_spool', 'festive_spool'].forEach(i => r('createaddition:' + i));
+    r('tfmg:rubber_sheet');
+    r('tfmg:generator');
+    r('tfmg:electric_diode');
+    ;['aluminum_cable_hub', 'brass_cable_hub', 'copper_cable_hub', 'heavy_cable_hub', 'steel_cable_hub', 'steel_casing_cable_hub',
+      'cable_connector', 'cable_tube', 'concrete_encased_cable_tube', 'copycat_cable_base', 'copycat_cable_block', 'diagonal_cable_block',
+      'electric_post', 'concrete_encased_electric_post', 'glass_cable_insulator', 'large_switch', 'electric_motor', 'heavy_electric_motor',
+      'unfinished_electric_motor', 'unfinished_heavy_electric_motor', 'potentiometer', 'encased_potentiometer', 'unfinished_potentiometer',
+      'rotor', 'stator'].forEach(i => r('tfmg:' + i));
+    event.remove(/^tfmg:([a-z_]+_)?multimeter$/);
+    r('tfmg:unfinished_generator');
 });
 
 RecipeViewerEvents.removeEntries('fluid', event => {
@@ -702,4 +722,7 @@ RecipeViewerEvents.removeEntries('fluid', event => {
     event.remove('chemica:molten_titanium')
     event.remove('chemica:propene')
     event.remove('tfmg:molten_plastic')
+
+    // Electro Energetics plant oil (seed oils already exist)
+    event.remove('electroenergetics:plant_oil')
 });

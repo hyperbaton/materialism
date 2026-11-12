@@ -1,0 +1,13 @@
+#Steam cycle: steam engine outlets
+[steam]
+	#mB/t of pressurized steam per boiler level an outlet engine draws (Create takes 10 mB/t of water per level)
+	# Default: 10.0
+	# Range: 0.0 ~ 1000.0
+	steamPerBoilerLevel = 10.0
+
+#Electro Energetics converter bridge to TFMG's electrical network
+[electroenergetics]
+	#EE watts exchanged per TFMG watt (both networks compute power as V·I, so 1.0 conserves energy)
+	# Default: 1.0
+	# Range: 0.01 ~ 100.0
+	eeWattsPerTfmgWatt = 1.0

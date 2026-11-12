@@ -1,0 +1,23 @@
+{
+  "compositions": [
+    {
+      "elements": [
+        {
+          "amount": 6,
+          "id": "rutile:carbon"
+        },
+        {
+          "amount": 14,
+          "id": "rutile:hydrogen"
+        },
+        {
+          "amount": 1,
+          "id": "rutile:oxygen"
+        }
+      ]
+    }
+  ],
+  "contents": [
+    "chemica:ethyl_tert_butyl_ether"
+  ]
+}

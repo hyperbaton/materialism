@@ -496,8 +496,28 @@ ServerEvents.recipes(event => {
     machines: ['tfmg:mixer'],
     min_size: 1,
     processing_time: 40,
-    results: [{id: 'tfmg:rubber_sheet'}]
+    results: [{id: 'afc:rubber_bar'}]
   })
+  // TFMG wiring retired: Electro Energetics carries the power
+  const retiredElectrics = ['aluminum_cable_hub', 'brass_cable_hub', 'copper_cable_hub', 'heavy_cable_hub', 'steel_cable_hub',
+    'steel_casing_cable_hub', 'cable_connector', 'cable_tube', 'concrete_encased_cable_tube', 'copycat_cable_base',
+    'copycat_cable_block', 'diagonal_cable_block', 'electric_post', 'concrete_encased_electric_post', 'glass_cable_insulator',
+    'large_switch', 'electric_motor', 'heavy_electric_motor', 'potentiometer', 'encased_potentiometer', 'rotor', 'stator', 'multimeter']
+  ;['white', 'orange', 'magenta', 'light_blue', 'yellow', 'lime', 'pink', 'gray', 'light_gray', 'cyan', 'purple', 'blue',
+    'brown', 'green', 'red', 'black'].forEach(c => retiredElectrics.push(c + '_multimeter'))
+  event.replaceInput({}, 'tfmg:cable_tube', 'electroenergetics:insulated_wire')
+  event.replaceInput({}, 'tfmg:steel_casing_cable_hub', 'tfmg:steel_casing')
+  // Electrical switch: insulated leads and silver contacts
+  event.replaceInput({id: 'tfmg:crafting/materials/electrical_switch'}, 'tfmg:electric_post', 'electroenergetics:heavily_insulated_wire')
+  event.replaceInput({id: 'tfmg:crafting/materials/electrical_switch'}, '#c:dusts/redstone', 'tfc_items:silver_rivet')
+  retiredElectrics.forEach(i => event.remove({output: 'tfmg:' + i}))
+  // Diodes come from Electro Energetics
+  event.remove({output: 'tfmg:electric_diode'})
+  // Synthetic rubber merged into the AFC rubber bar
+  event.replaceInput({}, 'tfmg:rubber_sheet', 'afc:rubber_bar')
+  event.replaceOutput({}, 'tfmg:rubber_sheet', 'afc:rubber_bar')
+  event.remove({id: 'chemica:cutting/rubber_strip'})
+  event.recipes.create.cutting('2x chemica:rubber_strip', 'afc:rubber_bar').id('kubejs:cutting/rubber_strip')
   // Use TFC gravel and sand for asphalt
   event.replaceInput(
     { id: 'tfmg:mixing/liquid_asphalt' }, // Arg 1: the filter
@@ -744,25 +764,8 @@ ServerEvents.recipes(event => {
    ]
   ).transitionalItem('create:incomplete_precision_mechanism').loops(5)
 
-  // Generator modified recipe
-  event.remove({id: 'tfmg:sequenced_assembly/generator'})
-  event.recipes.create.sequenced_assembly(
-   [
-     CreateItem.of('tfmg:generator', 0.85),
-     CreateItem.of('tfmg:steel_casing', 0.05),
-     CreateItem.of('tfmg:steel_cogwheel', 0.05),
-     CreateItem.of('tfmg:capacitor_item', 0.05)
-   ],
-   'create:shaft',
-   [
-     event.recipes.createDeploying('tfmg:unfinished_generator', ['tfmg:unfinished_generator', 'tfmg:capacitor_item']),
-     event.recipes.createDeploying('tfmg:unfinished_generator', ['tfmg:unfinished_generator', 'tfc_items:steel_heavy_sheet']),
-     event.custom({ type: 'tfmg:winding',     ingredients: [{ item: 'tfmg:unfinished_generator' }, { item: 'tfmg:copper_spool' }],   processing_time: 75, results: [{ id: 'tfmg:unfinished_generator' }] }),
-     event.recipes.createDeploying('tfmg:unfinished_generator', ['tfmg:unfinished_generator', 'tfmg:magnet']),
-     event.recipes.createDeploying('tfmg:unfinished_generator', ['tfmg:unfinished_generator', 'tfmg:steel_mechanism']),
-     event.recipes.createDeploying('tfmg:unfinished_generator', ['tfmg:unfinished_generator', 'tfmg:screwdriver'])
-   ]
-  ).transitionalItem('tfmg:unfinished_generator').loops(3)
+  // Generation is New Age's: TFMG generators disabled
+  event.remove({output: 'tfmg:generator'})
   
   // Make cinder blocks from red concrete
   event.remove({id: 'tfmg:compacting/cinderflourblock'})

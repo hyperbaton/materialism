@@ -8,6 +8,9 @@ ServerEvents.recipes(event => {
   event.remove({id: 'create_new_age:diamond_wire'})
   event.remove({id: 'create_new_age:thorium_multiplication'})
   event.remove({output: /create_new_age:overcharged.*/})
+  // Transmission is Electro Energetics'
+  event.remove({output: 'create_new_age:copper_wire'})
+  event.remove({output: 'create_new_age:copper_wire_block'})
 
   event.remove({id: 'create_new_age:shapeless/basic_energiser'})
   event.custom({

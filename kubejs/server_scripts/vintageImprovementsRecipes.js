@@ -51,12 +51,8 @@ ServerEvents.recipes(event => {
     event.recipes.vintageimprovements.turning('2x tfmg:cast_iron_pipe', 'tfc:metal/rod/cast_iron').processingTime(300)
     event.recipes.vintageimprovements.turning('2x tfmg:aluminum_pipe', 'tfc_metallurgy:metal/rod/aluminum').processingTime(300)
     event.recipes.vintageimprovements.turning('2x tfmg:plastic_pipe', 'chemica:polyvinyl_chloride_sheet').processingTime(300)
-    event.remove({output: 'createaddition:spool'})
-    event.custom({type: 'vintageimprovements:turning',
-      ingredients: [{tag: 'tfc:lumber'}],
-      results: [{id: 'createaddition:spool', count: 4}],
-      processing_time: 150
-    })
+    // C&A spools retired; the lathe now turns Electro Energetics spools
+    event.remove({output: /createaddition:.*spool/})
     event.remove({id: 'tfmg:stonecutting/industrial_pipe'})
     event.recipes.vintageimprovements.turning('4x tfmg:industrial_pipe', 'tfc:metal/rod/steel').processingTime(300)
     event.recipes.vintageimprovements.turning('kubejs:circular_saw', 'tfc:metal/double_sheet/steel').processingTime(500)

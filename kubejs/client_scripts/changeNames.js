@@ -108,5 +108,8 @@ ClientEvents.lang("en_us", event => {
     event.add('solarpunk.ponder.turbine_condensate.text_4', 'Pipe the exhaust out of any casing face into a smokestack to vent it, or into a refrigerated steel vat to condense it back into water')
     event.renameItem('solarpunk:andesite_turbine_blade', 'Stainless Steel Turbine Blade')
     event.renameItem('solarpunk:brass_turbine_blade', 'Titanium Turbine Blade')
+    // Electro Energetics overhead line is aluminum on a steel core
+    event.renameItem('electroenergetics:iron_wire_strand', 'ACSR Conductor')
+    event.renameItem('electroenergetics:iron_wire_spool', 'ACSR Conductor Spool')
 
 });
