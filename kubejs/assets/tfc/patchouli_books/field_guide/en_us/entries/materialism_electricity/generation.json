@@ -1,0 +1,31 @@
+{
+  "name": "Generating Power",
+  "category": "tfc:materialism_electricity",
+  "icon": "create_new_age:generator_coil",
+  "sortnum": 10,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Power comes from New Age $(thing)Generator Coils$(0). A coil turns shaft rotation into electricity, but only when it is surrounded by $(thing)magnets$(0). Coils never produce rotation themselves.$(br2)Stronger magnets turn a larger share of the stress you feed in into electricity, so better magnets mean more efficient generators. They also put more load on the shaft."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "create_new_age:generator_coil",
+      "text": "Place coils along a driven shaft and surround them with magnet blocks. Each coil reports how much it generates on Engineer's Goggles."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Magnet progression$(0)$(br)$(li)$(thing)Magnetite$(0): the natural starting magnet$(li)$(thing)Weak Ferrite Magnet$(0)$(li)$(thing)Strong Ferrite Magnet$(0)$(li)$(thing)Alnico Magnet$(0)$(li)$(thing)Neodymium Magnet$(0): the endgame rare-earth magnet$(br2)Upgrading the magnets is the main way to get more power from the same shaft."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "create_new_age:carbon_brushes",
+      "text": "The current is collected by $(thing)Carbon Brushes$(0) on the coil line. The brushes push it into the blocks next to them; place a $(l:tfc:materialism_electricity/converter)Converter$(0) in input mode facing the brushes. That puts the power on the Electro Energetics grid."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Electro Energetics alternators are disabled in this pack: all generation is done by New Age coils.$(br2)Anything that turns a shaft can drive them: water wheels, windmills, steam engines or turbines. The rotation is the real fuel."
+    }
+  ],
+  "read_by_default": true
+}

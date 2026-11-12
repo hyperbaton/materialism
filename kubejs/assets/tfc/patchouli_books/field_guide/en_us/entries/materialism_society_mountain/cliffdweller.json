@@ -1,0 +1,33 @@
+{
+  "name": "Cliffdweller",
+  "category": "tfc:materialism_society_mountain",
+  "icon": "tfc:wood/planks/oak",
+  "sortnum": 30,
+  "read_by_default": true,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Cliffdweller$(0)$(br)$(italic)Mountain · tier 2 of 5 · Workers$(0)"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(thing)Can work as:$(0)$(br)$(li)Maize Farmer — Farm$(br)$(li)Field Farmer — Farm$(br)$(li)Miller — $(l:tfc:materialism_society_mountain/buildings#mill)Mill$(0)$(br)$(li)Preserver — $(l:tfc:materialism_society_mountain/buildings#pantry)Pantry$(0)$(br)$(li)Composter — $(l:tfc:materialism_society_mountain/buildings#compost_yard)Compost Yard$(0)$(br)$(li)Tavern Keeper — $(l:tfc:materialism_society_mountain/buildings#tavern)Tavern$(0)$(br)$(li)Grain Hauler$(br)$(li)Builder$(br)$(li)Rancher — Yak Pasture$(br)$(li)Quarrier — Quarry$(br)$(li)Prospector — $(l:tfc:materialism_society_mountain/buildings#prospector_camp)Prospector's Camp$(0)"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(thing)Can rise to:$(0)$(br)$(li)$(l:tfc:materialism_society_mountain/passwarden)Passwarden$(0): defender path — wants a copper mace$(br)$(li)$(l:tfc:materialism_society_mountain/deepdelver)Deepdelver$(0): maker path — wants a copper pickaxe$(br)$(li)$(l:tfc:materialism_society_mountain/peakrunner)Peakrunner$(0): keeper path — wants 2 candles$(br)$(br)Falls back to $(l:tfc:materialism_society_mountain/stonebound)Stonebound$(0) if its home, drink or food are badly neglected.$(br)$(br)$(bold)What it expects$(0)$(br)$(thing)Shelter:$(0) Cliffdweller's House"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(thing)Food:$(0) maize bread, brined red bell pepper and fresh red bell pepper$(br)$(br)$(thing)Drink:$(0) yak milk and water$(br)$(br)$(thing)Clothing:$(0) straw hat, wool sweater and wool pants$(br)$(br)$(thing)Warmth & light:$(0) a lit hearth or heat source nearby in cold weather and well-lit rooms"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(thing)Neighbours:$(0) 3 to 20 Stonebounds or Cliffdwellers within 32 blocks$(br)$(br)$(thing)Buildings:$(0) a visit to the $(l:tfc:materialism_society_mountain/buildings#tavern)tavern$(0)$(br)$(br)$(thing)Rites:$(0) Summit Beacon$(br)$(br)$(thing)Comforts:$(0) jug"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Cliffdweller's House$(0)$(br)$(thing)Marker block:$(0) a door$(br)$(thing)Interior:$(0) about 4×4 and 3 high, up to roughly 14×14$(br)$(thing)Floor:$(0) slate macadam road and slate gravel$(br)$(thing)Walls:$(0) mollisol mud bricks, birch or aspen logs, birch or aspen fences and a door$(br)$(thing)Roof:$(0) thatch roofs$(br)$(thing)Inside:$(0) a chest"
+    }
+  ]
+}

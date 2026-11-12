@@ -1,0 +1,29 @@
+{
+  "name": "Steppe Overview",
+  "category": "tfc:materialism_society_steppe",
+  "icon": "tfc:metal/sword/copper",
+  "sortnum": 0,
+  "read_by_default": true,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Steppe culture$(0)$(br)$(br)$(thing)Temperature:$(0) average -50 to 4 °C$(br)$(thing)Rainfall:$(0) 0 to 150 mm$(br)$(thing)Elevation:$(0) Y 64 to 100$(br)$(br)Settle this people where the climate suits them, or they will never be content."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)The ladder$(0)$(br)$(br)$(thing)Tier 1 — Newcomers:$(0) $(l:tfc:materialism_society_steppe/nomad)Nomad$(0)$(br)$(thing)Tier 2 — Workers:$(0) $(l:tfc:materialism_society_steppe/clansman)Clansman$(0)$(br)$(thing)Tier 3 — Specialists:$(0) $(l:tfc:materialism_society_steppe/dustwalker)Dustwalker$(0), $(l:tfc:materialism_society_steppe/outrider)Outrider$(0) · $(l:tfc:materialism_society_steppe/skychaser)Skychaser$(0)$(br)$(thing)Tier 4 — Elites:$(0) $(l:tfc:materialism_society_steppe/kinlord)Kinlord$(0) · $(l:tfc:materialism_society_steppe/windborn)Windborn$(0)$(br)$(thing)Tier 5 — Leader:$(0) $(l:tfc:materialism_society_steppe/great_rider)Great Rider$(0)"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Rites$(0)$(br)Officiants hold these rites. Each one consumes offerings you must supply.$(br)$(br)$(br)$(thing)Kurultai$(0) — in the $(l:tfc:materialism_society_steppe/buildings#hall)great hall$(0), about every 3 days$(br)Offerings: 4× candles, shosha and 2× cooked beef$(br)Held by: Windborn$(br)For: Kinlord, Windborn and Great Rider"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(thing)Naadam Games$(0) — in the $(l:tfc:materialism_society_steppe/buildings#plaza)plaza$(0), about every 7 days$(br)Offerings: 8× sugar, topaz and 4× barley bread sandwich$(br)Held by: Great Rider$(br)For: Nomad, Clansman, Outrider, Dustwalker, Skychaser, Kinlord and Windborn"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(thing)Sky Offering$(0) — in the $(l:tfc:materialism_society_steppe/buildings#shrine)ovoo cairn$(0), about every 3 days$(br)Offerings: 2× candles and 2× barley flatbread$(br)Held by: Skychaser$(br)For: Clansman, Outrider, Dustwalker and Skychaser"
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "name": "Electricity",
+  "description": "Generating, carrying and using electrical power: New Age generators, Electro Energetics grids, and converters that link them to motors and TFMG machines.",
+  "icon": "electroenergetics:converter",
+  "parent": "tfc:materialism",
+  "sortnum": 4
+}

@@ -1,0 +1,29 @@
+{
+  "name": "Temperate Overview",
+  "category": "tfc:materialism_society_temperate",
+  "icon": "tfc:food/wheat_bread",
+  "sortnum": 0,
+  "read_by_default": true,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Temperate culture$(0)$(br)$(br)$(thing)Temperature:$(0) average -5 to 50 °C$(br)$(thing)Rainfall:$(0) 150 to 350 mm$(br)$(thing)Elevation:$(0) Y 64 to 100$(br)$(br)Settle this people where the climate suits them, or they will never be content."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)The ladder$(0)$(br)$(br)$(thing)Tier 1 — Newcomers:$(0) $(l:tfc:materialism_society_temperate/homesteader)Homesteader$(0)$(br)$(thing)Tier 2 — Workers:$(0) $(l:tfc:materialism_society_temperate/villager)Villager$(0)$(br)$(thing)Tier 3 — Specialists:$(0) $(l:tfc:materialism_society_temperate/barkcloak)Barkcloak$(0), $(l:tfc:materialism_society_temperate/burgher)Burgher$(0) · $(l:tfc:materialism_society_temperate/moonwake)Moonwake$(0)$(br)$(thing)Tier 4 — Elites:$(0) $(l:tfc:materialism_society_temperate/lawmaker)Lawmaker$(0) · $(l:tfc:materialism_society_temperate/steward)Steward$(0)$(br)$(thing)Tier 5 — Leader:$(0) $(l:tfc:materialism_society_temperate/arbiter)Arbiter$(0)"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Rites$(0)$(br)Officiants hold these rites. Each one consumes offerings you must supply.$(br)$(br)$(br)$(thing)Assizes$(0) — in the $(l:tfc:materialism_society_temperate/buildings#hall)great hall$(0), about every 3 days$(br)Offerings: 4× candles, cheddar and 2× cooked rainbow trout$(br)Held by: Lawmaker$(br)For: Steward, Lawmaker and Arbiter"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(thing)Harvest Festival$(0) — in the $(l:tfc:materialism_society_temperate/buildings#plaza)plaza$(0), about every 7 days$(br)Offerings: 8× sugar, ruby and 4× cooked pizza$(br)Held by: Arbiter$(br)For: Homesteader, Villager, Barkcloak, Burgher, Moonwake, Steward and Lawmaker"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(thing)Moonlit Vigil$(0) — in the $(l:tfc:materialism_society_temperate/buildings#shrine)grove shrine$(0), about every 3 days$(br)Offerings: 2× candles and 2× wheat flatbread$(br)Held by: Moonwake$(br)For: Villager, Barkcloak, Burgher and Moonwake"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "name": "Mineral Finder",
+  "category": "tfc:materialism_ore_generation",
+  "icon": "tfc:metal/propick/copper",
+  "sortnum": 5,
+  "read_by_default": true,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Mineral Finder$(0)$(br2)Some minerals are not mined from a vein of their own name — they share a deposit with another ore. Look them up here."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(thing)Columbite$(0): $(l:tfc:materialism_ore_generation/coltan)Coltan$(0)$(br2)$(thing)Native Iridium$(0): $(l:tfc:materialism_ore_generation/native_osmium)Native Osmium$(0)$(br2)$(thing)Tantalite$(0): $(l:tfc:materialism_ore_generation/coltan)Coltan$(0)"
+    }
+  ]
+}

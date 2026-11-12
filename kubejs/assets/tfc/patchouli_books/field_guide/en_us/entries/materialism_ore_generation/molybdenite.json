@@ -1,0 +1,17 @@
+{
+  "name": "Molybdenite",
+  "category": "tfc:materialism_ore_generation",
+  "icon": "tfc_metallurgy:ore/poor_molybdenite/granite",
+  "sortnum": 280,
+  "read_by_default": true,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Molybdenite$(0)$(br2)$(thing)Contains:$(0) Molybdenite$(br2)$(thing)Host rock:$(0) igneous extrusive (andesite); igneous intrusive"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(thing)Where to dig$(0)$(br2)$(li)$(thing)Deep band:$(0) Y -160 to -10, extremely rare (1 per 10,000 chunks)$(br)Very large vein, dense; marked by surface samples"
+    }
+  ]
+}

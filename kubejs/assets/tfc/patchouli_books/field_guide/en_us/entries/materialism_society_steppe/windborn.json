@@ -1,0 +1,33 @@
+{
+  "name": "Windborn",
+  "category": "tfc:materialism_society_steppe",
+  "icon": "minecraft:bell",
+  "sortnum": 51,
+  "read_by_default": true,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Windborn$(0)$(br)$(italic)Steppe · tier 4 of 5 · Elites$(0)$(br)$(br)$(thing)Can work as:$(0)$(br)$(li)Writer — $(l:tfc:materialism_society_steppe/buildings#library)Library$(0)$(br)$(li)Kurultai Officiant — $(l:tfc:materialism_society_steppe/buildings#hall)Great Hall$(0)$(br)$(li)Apothecary — $(l:tfc:materialism_society_steppe/buildings#library)Library$(0)$(br)$(br)$(thing)Can rise to:$(0)$(br)$(li)$(l:tfc:materialism_society_steppe/great_rider)Great Rider$(0): leader path — wants a topaz"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Falls back to $(l:tfc:materialism_society_steppe/skychaser)Skychaser$(0) if its home or food are badly neglected.$(br)$(br)$(bold)What it expects$(0)$(br)$(thing)Shelter:$(0) Windborn's House$(br)$(br)$(thing)Food:$(0) barley bread sandwich, aged shosha, smoked beef and fresh shosha$(br)$(br)$(thing)Drink:$(0) aged vodka and vodka"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(thing)Clothing:$(0) leather helmet, leather chestplate, leather leggings and leather boots$(br)$(br)$(thing)Warmth & light:$(0) a lit hearth or heat source nearby in cold weather and well-lit rooms$(br)$(br)$(thing)Neighbours:$(0) 3 to 12 Outriders, Dustwalkers or Skychasers within 48 blocks$(br)$(br)$(thing)Buildings:$(0) a visit to the $(l:tfc:materialism_society_steppe/buildings#garden)pleasure garden$(0)"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(thing)Rites:$(0) Kurultai$(br)$(br)$(thing)Comforts:$(0) sugar, hematitic glass bottle, electricity, something to read and a pet dog"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Windborn's House$(0)$(br)$(thing)Marker block:$(0) a door$(br)$(thing)Storeys:$(0) 2$(br)$(thing)Interior, each storey:$(0) about 6×6 and 3 high$(br)$(thing)Light:$(0) 45% of the floor at level 9+$(br)$(thing)Floor:$(0) rhyolite flagstones and rosewood or mahogany planks$(br)$(thing)Walls:$(0) smooth rhyolite, rhyolite bricks and a door$(br)$(thing)Roof:$(0) rosewood or mahogany planks and ceramic tile roofs"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(thing)Inside:$(0) a rosewood or mahogany glass table, 2+ rosewood or mahogany chairs, a chest, a rosewood or mahogany wardrobe and a rosewood or mahogany bookshelf"
+    }
+  ]
+}

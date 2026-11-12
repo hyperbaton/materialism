@@ -1,0 +1,7 @@
+{
+  "name": "Temperate",
+  "description": "The temperate ladder: its classes, what they expect, the buildings they use, and their rites.",
+  "icon": "tfc:food/wheat_bread",
+  "parent": "tfc:materialism_society",
+  "sortnum": 10
+}

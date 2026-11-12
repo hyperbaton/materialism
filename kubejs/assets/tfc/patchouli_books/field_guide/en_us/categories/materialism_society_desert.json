@@ -1,0 +1,7 @@
+{
+  "name": "Desert",
+  "description": "The desert ladder: its classes, what they expect, the buildings they use, and their rites.",
+  "icon": "tfc:glass_basin",
+  "parent": "tfc:materialism_society",
+  "sortnum": 12
+}

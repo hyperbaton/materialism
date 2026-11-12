@@ -1,0 +1,7 @@
+{
+  "name": "Steppe",
+  "description": "The steppe ladder: its classes, what they expect, the buildings they use, and their rites.",
+  "icon": "tfc:metal/sword/copper",
+  "parent": "tfc:materialism_society",
+  "sortnum": 14
+}

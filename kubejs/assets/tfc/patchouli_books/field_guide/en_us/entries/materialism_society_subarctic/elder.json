@@ -1,0 +1,33 @@
+{
+  "name": "Elder",
+  "category": "tfc:materialism_society_subarctic",
+  "icon": "minecraft:bell",
+  "sortnum": 50,
+  "read_by_default": true,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Elder$(0)$(br)$(italic)Subarctic · tier 4 of 5 · Elites$(0)$(br)$(br)$(thing)Can work as:$(0)$(br)$(li)Writer — $(l:tfc:materialism_society_subarctic/buildings#library)Library$(0)$(br)$(li)Aurora Rite Officiant — $(l:tfc:materialism_society_subarctic/buildings#hall)Great Hall$(0)$(br)$(li)Apothecary — $(l:tfc:materialism_society_subarctic/buildings#library)Library$(0)$(br)$(br)$(thing)Can rise to:$(0)$(br)$(li)$(l:tfc:materialism_society_subarctic/frozen_lord)Frozen Lord$(0): leader path — wants a sapphire"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Falls back to $(l:tfc:materialism_society_subarctic/hearthkeeper)Hearthkeeper$(0) if its home or food are badly neglected.$(br)$(br)$(bold)What it expects$(0)$(br)$(thing)Shelter:$(0) Elder's House$(br)$(br)$(thing)Food:$(0) rye bread sandwich, aged chevre, smoked cod and fresh chevre$(br)$(br)$(thing)Drink:$(0) aged rye whiskey and rye whiskey"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(thing)Clothing:$(0) leather helmet, leather chestplate, leather leggings and leather boots$(br)$(br)$(thing)Warmth & light:$(0) a lit hearth or heat source nearby in cold weather and well-lit rooms$(br)$(br)$(thing)Neighbours:$(0) 3 to 12 Frostmarkeds, Trailwardens or Hearthkeepers within 48 blocks$(br)$(br)$(thing)Buildings:$(0) a visit to the $(l:tfc:materialism_society_subarctic/buildings#garden)pleasure garden$(0)"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(thing)Rites:$(0) Aurora Rite$(br)$(br)$(thing)Comforts:$(0) sugar, silica glass bottle, electricity, something to read and a pet cat"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Elder's House$(0)$(br)$(thing)Marker block:$(0) a door$(br)$(thing)Storeys:$(0) 2$(br)$(thing)Interior, each storey:$(0) about 6×6 and 3 high$(br)$(thing)Light:$(0) 45% of the floor at level 9+$(br)$(thing)Floor:$(0) quartzite flagstones and oak or hickory planks$(br)$(thing)Walls:$(0) smooth quartzite, quartzite bricks and a door$(br)$(thing)Roof:$(0) oak or hickory planks and ceramic tile roofs"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(thing)Inside:$(0) an oak or hickory glass table, 2+ oak or hickory chairs, a chest, an oak or hickory wardrobe and an oak or hickory bookshelf"
+    }
+  ]
+}

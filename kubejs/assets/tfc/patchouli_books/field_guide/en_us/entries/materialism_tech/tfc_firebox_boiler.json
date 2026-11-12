@@ -1,0 +1,25 @@
+{
+  "name": "Firing a Boiler with a Firebox",
+  "category": "tfc:materialism_tech",
+  "icon": "tfc:firebox",
+  "sortnum": 10,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Create's $(thing)Steam Engine$(0) needs heat under its $(thing)Fluid Tank$(0) boiler to turn water into power. Normally that means a Blaze Burner, or TFMG's own oil-fired firebox — but Materialism lets a plain $(thing)TFC firebox$(0) do the job too, so you can run a steam engine straight off wood or charcoal."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Setup:$(0) place a lit $(item)tfc:firebox$(0) directly beneath the bottom layer of the boiler's $(item)create:fluid_tank$(0) multiblock, exactly where you would put a Blaze Burner. One firebox heats one column of tank — a wider boiler base needs a firebox under every column."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "The heat the boiler sees scales with the firebox's real temperature, so better fuel means more power:$(br2)$(li)Below $(thing)200°C$(0) (unlit or dying out): no heat at all$(li)$(thing)200-599°C$(0) (burning wood): passive heat, same tier as an unlit Blaze Burner$(li)$(thing)600-1199°C$(0) (charcoal): active heat, comparable to a Kindled Blaze Burner$(li)$(thing)1200°C and above$(0) (coal): maximum heat, matching a Seething Blaze Burner"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Feed the firebox and work its bellows the same way you would to heat a forge, and keep it stoked — the boiler cools back down the moment the firebox does. This is a fully separate path from TFMG's firebox: no oil, blast furnace, or industrial chain required, just fuel you already need for early metalworking."
+    }
+  ],
+  "read_by_default": true
+}

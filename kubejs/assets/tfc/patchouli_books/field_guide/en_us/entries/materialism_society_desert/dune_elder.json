@@ -1,0 +1,33 @@
+{
+  "name": "Dune Elder",
+  "category": "tfc:materialism_society_desert",
+  "icon": "minecraft:bell",
+  "sortnum": 50,
+  "read_by_default": true,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Dune Elder$(0)$(br)$(italic)Desert · tier 4 of 5 · Elites$(0)$(br)$(br)$(thing)Can work as:$(0)$(br)$(li)Writer — $(l:tfc:materialism_society_desert/buildings#library)Library$(0)$(br)$(li)Star Reading Officiant — $(l:tfc:materialism_society_desert/buildings#hall)Great Hall$(0)$(br)$(li)Apothecary — $(l:tfc:materialism_society_desert/buildings#library)Library$(0)$(br)$(br)$(thing)Can rise to:$(0)$(br)$(li)$(l:tfc:materialism_society_desert/sunward)Sunward$(0): leader path — wants an opal"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Falls back to $(l:tfc:materialism_society_desert/waterkeeper)Waterkeeper$(0) if its home or food are badly neglected.$(br)$(br)$(bold)What it expects$(0)$(br)$(thing)Shelter:$(0) Dune Elder's House$(br)$(br)$(thing)Food:$(0) oat bread sandwich, aged feta, smoked shellfish and fresh feta$(br)$(br)$(thing)Drink:$(0) aged rum and rum"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(thing)Clothing:$(0) burlap cowl, leather chestplate, leather leggings and burlap shoes$(br)$(br)$(thing)Warmth & light:$(0) a lit hearth or heat source nearby in cold weather and well-lit rooms$(br)$(br)$(thing)Neighbours:$(0) 3 to 12 Dunespears, Scorchbinders or Waterkeepers within 48 blocks$(br)$(br)$(thing)Buildings:$(0) a visit to the $(l:tfc:materialism_society_desert/buildings#garden)pleasure garden$(0)"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(thing)Rites:$(0) Star Reading$(br)$(br)$(thing)Comforts:$(0) silk cloth, sugar, silica glass bottle, electricity, something to read and a pet cat"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Dune Elder's House$(0)$(br)$(thing)Marker block:$(0) a door$(br)$(thing)Storeys:$(0) 2$(br)$(thing)Interior, each storey:$(0) about 6×6 and 3 high$(br)$(thing)Light:$(0) 45% of the floor at level 9+$(br)$(thing)Floor:$(0) diorite flagstones and ipe or blackwood planks$(br)$(thing)Walls:$(0) smooth diorite, diorite bricks and a door$(br)$(thing)Roof:$(0) ipe or blackwood planks and ceramic tile roofs"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(thing)Inside:$(0) an ipe or blackwood glass table, 2+ ipe or blackwood chairs, a chest, an ipe or blackwood wardrobe and an ipe or blackwood bookshelf"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "name": "Bloomtender",
+  "category": "tfc:materialism_society_tropical",
+  "icon": "tfc:rock/bricks/limestone",
+  "sortnum": 40,
+  "read_by_default": true,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Bloomtender$(0)$(br)$(italic)Tropical · tier 3 of 5 · Specialists$(0)$(br)$(br)$(thing)Can work as:$(0)$(br)$(li)Fibre Weaver — $(l:tfc:materialism_society_tropical/buildings#workshop)Workshop$(0)$(br)$(li)Barrel Keeper — $(l:tfc:materialism_society_tropical/buildings#barrel_yard)Barrel Yard$(0)$(br)$(br)$(thing)Can rise to:$(0)$(br)$(li)$(l:tfc:materialism_society_tropical/feathered_noble)Feathered Noble$(0): authority path — wants a silver ingot$(br)$(li)$(l:tfc:materialism_society_tropical/councilor)Councilor$(0): lore path — wants a writable book"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Falls back to $(l:tfc:materialism_society_tropical/palmhand)Palmhand$(0) if its home, drink or food are badly neglected.$(br)$(br)$(bold)What it expects$(0)$(br)$(thing)Shelter:$(0) Bloomtender's House$(br)$(br)$(thing)Food:$(0) fruit salad, fresh gouda and smoked duck$(br)$(br)$(thing)Drink:$(0) sake and water"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(thing)Clothing:$(0) burlap cowl, burlap shirt, burlap pants and burlap shoes$(br)$(br)$(thing)Warmth & light:$(0) a lit hearth or heat source nearby in cold weather and well-lit rooms$(br)$(br)$(thing)Neighbours:$(0) 3 to 20 Palmhands within 32 blocks$(br)$(br)$(thing)Buildings:$(0) a visit to the $(l:tfc:materialism_society_tropical/buildings#tavern)tavern$(0)"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(thing)Rites:$(0) Rain Dance (also attends in person)$(br)$(br)$(thing)Tools & arms:$(0) scythe$(br)$(br)$(thing)Comforts:$(0) olivine glass bottle and candles"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Bloomtender's House$(0)$(br)$(thing)Marker block:$(0) a door$(br)$(thing)Interior:$(0) about 5×5 and 3 high$(br)$(thing)Light:$(0) 35% of the floor at level 7+$(br)$(thing)Floor:$(0) chalk cobbled road and chalk cobblestone$(br)$(thing)Walls:$(0) palm or hevea logs, palm or hevea planks, glass and a door$(br)$(thing)Roof:$(0) palm or hevea shingles$(br)$(thing)Inside:$(0) a chest, a palm or hevea table and 2+ palm or hevea stools"
+    }
+  ]
+}

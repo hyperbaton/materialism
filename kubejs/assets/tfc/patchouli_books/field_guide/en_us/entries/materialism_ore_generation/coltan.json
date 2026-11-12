@@ -1,0 +1,17 @@
+{
+  "name": "Coltan",
+  "category": "tfc:materialism_ore_generation",
+  "icon": "tfc_metallurgy:ore/poor_columbite/granite",
+  "sortnum": 120,
+  "read_by_default": true,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Coltan$(0)$(br2)$(thing)Contains:$(0) Columbite, Tantalite$(br2)$(thing)Host rock:$(0) igneous intrusive (granite); metamorphic (schist, gneiss)"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(thing)Where to dig$(0)$(br2)$(li)$(thing)Deep band:$(0) Y -170 to -10, very rare (1 per 9,000 chunks)$(br)Large vein, moderately dense; marked by surface samples"
+    }
+  ]
+}

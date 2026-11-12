@@ -1,0 +1,17 @@
+{
+  "name": "Fluorite",
+  "category": "tfc:materialism_ore_generation",
+  "icon": "kubejs:ore/fluorite/granite",
+  "sortnum": 140,
+  "read_by_default": true,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Fluorite$(0)$(br2)$(thing)Contains:$(0) Fluorite$(br2)$(thing)Host rock:$(0) igneous extrusive (rhyolite); igneous intrusive (granite); sedimentary (limestone, dolomite); metamorphic"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(thing)Where to dig$(0)$(br2)$(li)$(thing)Vein:$(0) Y -80 to 30, rare (1 per 4,000 chunks)$(br)Medium vein, dense; marked by surface samples"
+    }
+  ]
+}

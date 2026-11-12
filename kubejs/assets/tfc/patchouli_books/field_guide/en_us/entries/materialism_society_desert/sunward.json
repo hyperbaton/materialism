@@ -1,0 +1,33 @@
+{
+  "name": "Sunward",
+  "category": "tfc:materialism_society_desert",
+  "icon": "minecraft:emerald",
+  "sortnum": 60,
+  "read_by_default": true,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Sunward$(0)$(br)$(italic)Desert · tier 5 of 5 · Leader$(0)$(br)$(br)$(thing)Can work as:$(0)$(br)$(li)Solstice Court Host — $(l:tfc:materialism_society_desert/buildings#plaza)Plaza$(0)$(br)$(br)$(thing)The top of the ladder.$(0) Nothing lies above this class.$(br)$(br)Falls back to $(l:tfc:materialism_society_desert/trade_lord)Trade Lord$(0) if its home or food are badly neglected."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)What it expects$(0)$(br)$(thing)Shelter:$(0) Sunward's House$(br)$(br)$(thing)Food:$(0) oat bread jam sandwich, vintage feta, smoked shellfish, sugar cookie and cooked pie$(br)$(br)$(thing)Drink:$(0) wine olivine and aged rum$(br)$(br)$(thing)Clothing:$(0) leather helmet, leather chestplate, leather leggings and leather boots"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(thing)Warmth & light:$(0) a lit hearth or heat source nearby in cold weather and well-lit rooms$(br)$(br)$(thing)Neighbours:$(0) 2 to 8 Trade Lords or Dune Elders within 48 blocks$(br)$(br)$(thing)Buildings:$(0) a $(l:tfc:materialism_society_desert/buildings#plaza)plaza$(0) in the settlement$(br)$(br)$(thing)Rites:$(0) Star Reading"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(thing)Comforts:$(0) silk cloth, sugar, opal jewel, electricity, something to read, a pet horse and a pet peafowl"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Sunward's House$(0)$(br)$(thing)Marker block:$(0) a door$(br)$(thing)Storeys:$(0) 2 to 3$(br)$(thing)Interior, each storey:$(0) about 8×8 and 3 high$(br)$(thing)Light:$(0) 50% of the floor at level 11+$(br)$(thing)Floor:$(0) gabbro flagstones and mahogany or rosewood planks$(br)$(thing)Walls:$(0) alabaster bricks and a door$(br)$(thing)Roof:$(0) mahogany or rosewood planks and yellow terracotta roofs"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(thing)Inside:$(0) a scribing table, 4+ mahogany or rosewood modern chairs, 2+ mahogany or rosewood wardrobes, 4+ mahogany or rosewood bookshelves and a chest"
+    }
+  ]
+}

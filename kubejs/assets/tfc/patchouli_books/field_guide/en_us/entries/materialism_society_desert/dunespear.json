@@ -1,0 +1,29 @@
+{
+  "name": "Dunespear",
+  "category": "tfc:materialism_society_desert",
+  "icon": "tfc:rock/bricks/limestone",
+  "sortnum": 40,
+  "read_by_default": true,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Dunespear$(0)$(br)$(italic)Desert · tier 3 of 5 · Specialists$(0)$(br)$(br)$(thing)Can work as:$(0)$(br)$(li)Day Guard — needs bronze sword$(br)$(li)Night Guard — needs bronze sword$(br)$(br)$(thing)Can rise to:$(0)$(br)$(li)$(l:tfc:materialism_society_desert/trade_lord)Trade Lord$(0): authority path — wants a silver ingot"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Falls back to $(l:tfc:materialism_society_desert/sandborn)Sandborn$(0) if its home, drink or food are badly neglected.$(br)$(br)$(bold)What it expects$(0)$(br)$(thing)Shelter:$(0) Dunespear's House$(br)$(br)$(thing)Food:$(0) grain salad, fresh feta and smoked camelidae$(br)$(br)$(thing)Drink:$(0) rum and water"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(thing)Clothing:$(0) burlap cowl, burlap shirt, burlap pants and burlap shoes$(br)$(br)$(thing)Warmth & light:$(0) a lit hearth or heat source nearby in cold weather and well-lit rooms$(br)$(br)$(thing)Neighbours:$(0) 3 to 20 Sandborns within 32 blocks$(br)$(br)$(thing)Buildings:$(0) a visit to the $(l:tfc:materialism_society_desert/buildings#tavern)tavern$(0)"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(thing)Rites:$(0) Water Blessing (also attends in person)$(br)$(br)$(thing)Tools & arms:$(0) bronze sword and copper shield$(br)$(br)$(thing)Comforts:$(0) silica glass bottle and candles"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Dunespear's House$(0)$(br)$(thing)Marker block:$(0) a door$(br)$(thing)Interior:$(0) about 5×5 and 3 high$(br)$(thing)Light:$(0) 35% of the floor at level 7+$(br)$(thing)Floor:$(0) limestone cobbled road and limestone cobblestone$(br)$(thing)Walls:$(0) acacia or palm logs, acacia or palm planks, glass and a door$(br)$(thing)Roof:$(0) acacia or palm shingles$(br)$(thing)Inside:$(0) a chest, an acacia or palm table and 2+ acacia or palm stools"
+    }
+  ]
+}

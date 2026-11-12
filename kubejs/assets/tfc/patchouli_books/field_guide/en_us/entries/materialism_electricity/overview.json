@@ -1,0 +1,21 @@
+{
+  "name": "Electricity in Materialism",
+  "category": "tfc:materialism_electricity",
+  "icon": "electroenergetics:converter",
+  "sortnum": 0,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Electrical power in Materialism is shared between three mods, each doing the part it does best:$(br2)$(li)$(thing)Create: New Age$(0) generates it, and its motors turn it back into rotation.$(li)$(thing)Create: Electro Energetics$(0) carries it: wires, poles, transformers, switches, meters, lamps and heaters.$(li)$(thing)TFMG$(0) machines (freezer, polarizer, vat electrodes) consume it."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Those mods speak different languages. Electro Energetics simulates real circuits with volts and amps, New Age works with energy units (FE), and TFMG runs its own small networks.$(br2)The $(thing)Converter$(0) is the interpreter between them. Every link between a generator, the grid and a machine goes through one.$(br2)Electricity is never free: every watt starts as rotation turning a generator."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Chapters$(0)$(br)$(li)$(l:tfc:materialism_electricity/generation)Generating Power$(0)$(li)$(l:tfc:materialism_electricity/transmission)Wires and Transmission$(0)$(li)$(l:tfc:materialism_electricity/converter)The Converter$(0)$(li)$(l:tfc:materialism_electricity/motors)Motors and Electric Trains$(0)$(li)$(l:tfc:materialism_electricity/devices)Protection, Meters and Appliances$(0)"
+    }
+  ],
+  "read_by_default": true
+}

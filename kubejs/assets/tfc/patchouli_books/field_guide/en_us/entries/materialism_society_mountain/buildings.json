@@ -1,0 +1,88 @@
+{
+  "name": "Mountain Community Buildings",
+  "category": "tfc:materialism_society_mountain",
+  "icon": "tfc:rock/bricks/limestone",
+  "sortnum": 100,
+  "read_by_default": true,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Community Buildings$(0)$(br2)Beyond homes, a mountain settlement raises shared works that many citizens use at once. Their rules are summarised here; you may decorate them however you like as long as the required blocks are present."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Great Hall$(0)$(br)$(thing)Marker block:$(0) a banner$(br)$(thing)Interior:$(0) about 8×8 and 3 high$(br)$(thing)Light:$(0) 45% of the floor at level 8+$(br)$(thing)Entrance:$(0) a door$(br)$(thing)Inside:$(0) a chest, a banner, a teak or ironwood table and 4+ teak or ironwood chairs$(br)$(br)$(thing)Jobs here:$(0) Merchant and Rune Moot Officiant$(br)$(thing)Visited by:$(0) Skyforged",
+      "anchor": "hall"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Tavern$(0)$(br)$(thing)Marker block:$(0) a keg$(br)$(thing)Interior:$(0) about 7×7 and 3 high$(br)$(thing)Light:$(0) 45% of the floor at level 8+$(br)$(thing)Entrance:$(0) a door$(br)$(thing)Inside:$(0) a chest, a keg and a birch or aspen table$(br)$(br)$(thing)Jobs here:$(0) Tavern Keeper$(br)$(thing)Visited by:$(0) Cliffdweller, Deepdelver, Passwarden and Peakrunner",
+      "anchor": "tavern"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Library$(0)$(br)$(thing)Marker block:$(0) a lectern$(br)$(thing)Interior:$(0) about 7×7 and 3 high$(br)$(thing)Light:$(0) 45% of the floor at level 10+$(br)$(thing)Entrance:$(0) a door$(br)$(thing)Inside:$(0) a chest, a lectern, 6+ bookshelves and a scribing table$(br)$(thing)Serves:$(0) up to 4 users$(br)$(br)$(thing)Jobs here:$(0) Apothecary, Scribe and Writer$(br)$(thing)Visited by:$(0) Runespeaker",
+      "anchor": "library"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Beacon Cairn$(0)$(br)$(thing)Marker block:$(0) a lamp$(br)$(thing)Height:$(0) 3 to 8 blocks$(br)$(thing)Built of:$(0) lamps and phyllite cobblestone$(br)$(br)$(thing)Jobs here:$(0) Healer and Summit Beacon Officiant$(br)$(thing)Visited by:$(0) Peakrunner",
+      "anchor": "shrine"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Plaza$(0)$(br)$(thing)Marker block:$(0) a bell$(br)$(thing)Open to the sky.$(0)$(br)$(thing)Nearby (within 24 blocks):$(0) a great hall, a library and a stormcaller's house$(br)$(thing)Ground:$(0) 25+ andesite flagstones$(br)$(br)$(thing)Jobs here:$(0) Storm Feast Host$(br)$(thing)Visited by:$(0) Stormcaller",
+      "anchor": "plaza"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Pleasure Garden$(0)$(br)$(thing)Marker block:$(0) a flower pot$(br)$(thing)Open to the sky.$(0)$(br)$(br)$(thing)Visited by:$(0) Runespeaker and Skyforged",
+      "anchor": "garden"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Workshop$(0)$(br)$(thing)Marker block:$(0) an anvil$(br)$(thing)Interior:$(0) about 5×5 and 3 high$(br)$(thing)Entrance:$(0) a door$(br)$(thing)Inside:$(0) a chest and an anvil$(br)$(thing)Serves:$(0) up to 2 users$(br)$(br)$(thing)Jobs here:$(0) Toolsmith$(br)$(thing)Visited by:$(0) Deepdelver",
+      "anchor": "workshop"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Barracks$(0)$(br)$(thing)Marker block:$(0) a tool rack$(br)$(thing)Interior:$(0) about 5×5 and 3 high$(br)$(thing)Entrance:$(0) a door$(br)$(thing)Inside:$(0) a chest and 2+ tool racks$(br)$(thing)Serves:$(0) up to 4 users$(br)$(br)$(thing)Visited by:$(0) Passwarden",
+      "anchor": "barracks"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Granary$(0)$(br)$(thing)Marker block:$(0) a large vessel$(br)$(thing)Interior:$(0) about 4×4 and 3 high$(br)$(thing)Entrance:$(0) a door$(br)$(thing)Inside:$(0) a chest and a large vessel",
+      "anchor": "granary"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Mill$(0)$(br)$(thing)Marker block:$(0) a quern$(br)$(thing)Interior:$(0) about 3×3 and 3 high$(br)$(thing)Light:$(0) 35% of the floor at level 7+$(br)$(thing)Entrance:$(0) a door$(br)$(thing)Inside:$(0) a chest and a quern$(br)$(br)$(thing)Jobs here:$(0) Miller",
+      "anchor": "mill"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Pantry$(0)$(br)$(thing)Marker block:$(0) a barrel$(br)$(thing)Interior:$(0) about 3×3 and 3 high$(br)$(thing)Entrance:$(0) a door$(br)$(thing)Inside:$(0) a chest and a barrel$(br)$(br)$(thing)Jobs here:$(0) Preserver",
+      "anchor": "pantry"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Woodshed$(0)$(br)$(thing)Marker block:$(0) a log pile$(br)$(thing)Fenced plot,$(0) 1 block of fence wall$(br)$(thing)Border:$(0) 4+ fences, a log pile and a chest$(br)$(br)$(thing)Jobs here:$(0) Firekeeper",
+      "anchor": "woodshed"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Compost Yard$(0)$(br)$(thing)Marker block:$(0) a composter$(br)$(thing)Fenced plot,$(0) 1 block of fence wall$(br)$(thing)Border:$(0) 4+ fences, a composter and a chest$(br)$(thing)Ground:$(0) dirt$(br)$(br)$(thing)Jobs here:$(0) Composter",
+      "anchor": "compost_yard"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Charcoal Pit$(0)$(br)$(thing)Marker block:$(0) a firepit$(br)$(thing)Fenced plot,$(0) 1 block of fence wall$(br)$(thing)Border:$(0) 4+ fences, a firepit and a chest$(br)$(br)$(thing)Jobs here:$(0) Charcoal Burner",
+      "anchor": "charcoal_pit"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Prospector's Camp$(0)$(br)$(thing)Marker block:$(0) a workbench$(br)$(thing)Fenced plot,$(0) 1 block of fence wall$(br)$(thing)Border:$(0) 4+ fences, a workbench and a chest$(br)$(br)$(thing)Jobs here:$(0) Prospector",
+      "anchor": "prospector_camp"
+    }
+  ]
+}

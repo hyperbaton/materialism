@@ -1,0 +1,33 @@
+{
+  "name": "Frozen Lord",
+  "category": "tfc:materialism_society_subarctic",
+  "icon": "minecraft:emerald",
+  "sortnum": 60,
+  "read_by_default": true,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Frozen Lord$(0)$(br)$(italic)Subarctic · tier 5 of 5 · Leader$(0)$(br)$(br)$(thing)Can work as:$(0)$(br)$(li)Midwinter Feast Host — $(l:tfc:materialism_society_subarctic/buildings#plaza)Plaza$(0)$(br)$(br)$(thing)The top of the ladder.$(0) Nothing lies above this class.$(br)$(br)Falls back to $(l:tfc:materialism_society_subarctic/frostborn)Frostborn$(0) if its home or food are badly neglected."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)What it expects$(0)$(br)$(thing)Shelter:$(0) Frozen Lord's House$(br)$(br)$(thing)Food:$(0) cooked pie, vintage chevre, smoked salmon, vanilla ice cream, pumpkin pie and toast with jam winter$(br)$(br)$(thing)Drink:$(0) aged vodka and aged rye whiskey$(br)$(br)$(thing)Clothing:$(0) leather helmet, leather chestplate, leather leggings and leather boots"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(thing)Warmth & light:$(0) a lit hearth or heat source nearby in cold weather and well-lit rooms$(br)$(br)$(thing)Neighbours:$(0) 2 to 8 Frostborns or Elders within 48 blocks$(br)$(br)$(thing)Buildings:$(0) a $(l:tfc:materialism_society_subarctic/buildings#plaza)plaza$(0) in the settlement$(br)$(br)$(thing)Rites:$(0) Aurora Rite"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(thing)Comforts:$(0) sugar, sapphire jewel, electricity, something to read, a pet dog and a pet horse"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Frozen Lord's House$(0)$(br)$(thing)Marker block:$(0) a door$(br)$(thing)Storeys:$(0) 2 to 3$(br)$(thing)Interior, each storey:$(0) about 8×8 and 3 high$(br)$(thing)Light:$(0) 50% of the floor at level 11+$(br)$(thing)Floor:$(0) granite flagstones and sequoia or rosewood planks$(br)$(thing)Walls:$(0) alabaster bricks and a door$(br)$(thing)Roof:$(0) sequoia or rosewood planks and blue terracotta roofs"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(thing)Inside:$(0) a scribing table, 4+ sequoia or rosewood modern chairs, 2+ sequoia or rosewood wardrobes, 4+ sequoia or rosewood bookshelves and a chest"
+    }
+  ]
+}

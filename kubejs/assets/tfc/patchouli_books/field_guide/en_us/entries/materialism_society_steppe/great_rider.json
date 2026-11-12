@@ -1,0 +1,33 @@
+{
+  "name": "Great Rider",
+  "category": "tfc:materialism_society_steppe",
+  "icon": "minecraft:emerald",
+  "sortnum": 60,
+  "read_by_default": true,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Great Rider$(0)$(br)$(italic)Steppe · tier 5 of 5 · Leader$(0)$(br)$(br)$(thing)Can work as:$(0)$(br)$(li)Naadam Games Host — $(l:tfc:materialism_society_steppe/buildings#plaza)Plaza$(0)$(br)$(br)$(thing)The top of the ladder.$(0) Nothing lies above this class.$(br)$(br)Falls back to $(l:tfc:materialism_society_steppe/kinlord)Kinlord$(0) if its home or food are badly neglected."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)What it expects$(0)$(br)$(thing)Shelter:$(0) Great Rider's House$(br)$(br)$(thing)Food:$(0) burrito, vintage shosha, smoked beef, cookie dough ice cream, cooked rice noodles and sugar cookie winter$(br)$(br)$(thing)Drink:$(0) aged whiskey and aged vodka$(br)$(br)$(thing)Clothing:$(0) leather helmet, leather chestplate, leather leggings and leather boots"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(thing)Warmth & light:$(0) a lit hearth or heat source nearby in cold weather and well-lit rooms$(br)$(br)$(thing)Neighbours:$(0) 2 to 8 Kinlords or Windborns within 48 blocks$(br)$(br)$(thing)Buildings:$(0) a $(l:tfc:materialism_society_steppe/buildings#plaza)plaza$(0) in the settlement$(br)$(br)$(thing)Rites:$(0) Kurultai"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(thing)Comforts:$(0) sugar, topaz jewel, electricity, something to read and a pet horse"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Great Rider's House$(0)$(br)$(thing)Marker block:$(0) a door$(br)$(thing)Storeys:$(0) 2 to 3$(br)$(thing)Interior, each storey:$(0) about 8×8 and 3 high$(br)$(thing)Light:$(0) 50% of the floor at level 11+$(br)$(thing)Floor:$(0) schist flagstones and teak or ironwood planks$(br)$(thing)Walls:$(0) alabaster bricks and a door$(br)$(thing)Roof:$(0) teak or ironwood planks and orange terracotta roofs"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(thing)Inside:$(0) a scribing table, 4+ teak or ironwood modern chairs, 2+ teak or ironwood wardrobes, 4+ teak or ironwood bookshelves and a chest"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "name": "Frostmarked",
+  "category": "tfc:materialism_society_subarctic",
+  "icon": "tfc:rock/bricks/limestone",
+  "sortnum": 40,
+  "read_by_default": true,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Frostmarked$(0)$(br)$(italic)Subarctic · tier 3 of 5 · Specialists$(0)$(br)$(br)$(thing)Can work as:$(0)$(br)$(li)Day Guard — needs bronze axe$(br)$(li)Night Guard — needs bronze axe$(br)$(br)$(thing)Can rise to:$(0)$(br)$(li)$(l:tfc:materialism_society_subarctic/frostborn)Frostborn$(0): authority path — wants a silver ingot"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Falls back to $(l:tfc:materialism_society_subarctic/snowkin)Snowkin$(0) if its home, drink or food are badly neglected.$(br)$(br)$(bold)What it expects$(0)$(br)$(thing)Shelter:$(0) Frostmarked's House$(br)$(br)$(thing)Food:$(0) protein soup, fresh chevre and smoked venison$(br)$(br)$(thing)Drink:$(0) rye whiskey and water$(br)$(br)$(thing)Clothing:$(0) wool hat, wool sweater, wool pants and wool boots"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(thing)Warmth & light:$(0) a lit hearth or heat source nearby in cold weather and well-lit rooms$(br)$(br)$(thing)Neighbours:$(0) 3 to 20 Snowkins within 32 blocks$(br)$(br)$(thing)Buildings:$(0) a visit to the $(l:tfc:materialism_society_subarctic/buildings#tavern)tavern$(0)$(br)$(br)$(thing)Rites:$(0) Hearthfire Vigil (also attends in person)"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(thing)Tools & arms:$(0) bronze axe and copper shield$(br)$(br)$(thing)Comforts:$(0) silica glass bottle and candles"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Frostmarked's House$(0)$(br)$(thing)Marker block:$(0) a door$(br)$(thing)Interior:$(0) about 5×5 and 3 high$(br)$(thing)Light:$(0) 35% of the floor at level 7+$(br)$(thing)Floor:$(0) granite cobbled road and granite cobblestone$(br)$(thing)Walls:$(0) pine or douglas logs, pine or douglas planks, glass and a door$(br)$(thing)Roof:$(0) pine or douglas shingles$(br)$(thing)Inside:$(0) a chest, a pine table and 2+ pine stools"
+    }
+  ]
+}

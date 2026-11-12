@@ -1,0 +1,7 @@
+{
+  "name": "Tropical",
+  "description": "The tropical ladder: its classes, what they expect, the buildings they use, and their rites.",
+  "icon": "tfc:ceramic/jug",
+  "parent": "tfc:materialism_society",
+  "sortnum": 13
+}

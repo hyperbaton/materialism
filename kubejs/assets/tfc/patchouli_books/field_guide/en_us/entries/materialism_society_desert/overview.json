@@ -1,0 +1,29 @@
+{
+  "name": "Desert Overview",
+  "category": "tfc:materialism_society_desert",
+  "icon": "tfc:glass_basin",
+  "sortnum": 0,
+  "read_by_default": true,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Desert culture$(0)$(br)$(br)$(thing)Temperature:$(0) average 4 to 50 °C$(br)$(thing)Rainfall:$(0) 0 to 150 mm$(br)$(thing)Elevation:$(0) Y 64 to 100$(br)$(br)Settle this people where the climate suits them, or they will never be content."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)The ladder$(0)$(br)$(br)$(thing)Tier 1 — Newcomers:$(0) $(l:tfc:materialism_society_desert/wayfarer)Wayfarer$(0)$(br)$(thing)Tier 2 — Workers:$(0) $(l:tfc:materialism_society_desert/sandborn)Sandborn$(0)$(br)$(thing)Tier 3 — Specialists:$(0) $(l:tfc:materialism_society_desert/dunespear)Dunespear$(0), $(l:tfc:materialism_society_desert/scorchbinder)Scorchbinder$(0) · $(l:tfc:materialism_society_desert/waterkeeper)Waterkeeper$(0)$(br)$(thing)Tier 4 — Elites:$(0) $(l:tfc:materialism_society_desert/dune_elder)Dune Elder$(0) · $(l:tfc:materialism_society_desert/trade_lord)Trade Lord$(0)$(br)$(thing)Tier 5 — Leader:$(0) $(l:tfc:materialism_society_desert/sunward)Sunward$(0)"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Rites$(0)$(br)Officiants hold these rites. Each one consumes offerings you must supply.$(br)$(br)$(br)$(thing)Solstice Court$(0) — in the $(l:tfc:materialism_society_desert/buildings#plaza)plaza$(0), about every 7 days$(br)Offerings: 8× sugar, opal and 4× oat bread sandwich$(br)Held by: Sunward$(br)For: Wayfarer, Sandborn, Dunespear, Scorchbinder, Waterkeeper, Trade Lord and Dune Elder"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(thing)Star Reading$(0) — in the $(l:tfc:materialism_society_desert/buildings#hall)great hall$(0), about every 3 days$(br)Offerings: 4× candles, feta and 2× cooked shellfish$(br)Held by: Dune Elder$(br)For: Trade Lord, Dune Elder and Sunward"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(thing)Water Blessing$(0) — in the $(l:tfc:materialism_society_desert/buildings#shrine)well shrine$(0), about every 3 days$(br)Offerings: 2× candles and 2× oat flatbread$(br)Held by: Waterkeeper$(br)For: Sandborn, Dunespear, Scorchbinder and Waterkeeper"
+    }
+  ]
+}

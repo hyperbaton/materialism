@@ -1,0 +1,35 @@
+{
+  "name": "Protection, Meters and Appliances",
+  "category": "tfc:materialism_electricity",
+  "icon": "electroenergetics:miniature_circuit_breaker",
+  "sortnum": 50,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Protection$(0)$(br)A short circuit draws enormous current.$(br2)$(li)$(thing)Fuses$(0) melt when overloaded. Adjust their rating while holding Ctrl and scrolling, and replace them when they blow.$(li)$(thing)Miniature Circuit Breakers$(0) trip and can be reset.$(li)$(thing)SF6 Breakers$(0) switch high-voltage lines, their arc smothered in sulfur hexafluoride."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Measuring$(0)$(br)$(li)$(thing)Ammeter$(0): placed in series, along the wire, reads the current$(li)$(thing)Voltmeter$(0): placed in parallel, across two wires, reads the voltage$(li)$(thing)Energy Meters$(0) total the energy delivered$(li)The $(thing)Clamp Meter$(0) reads the current in any wire you point it at"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Switching and control$(0)$(br)Cut-off switches, relays, potentiometers and variacs control the circuit. Redstone versions let contraptions do the switching.$(br2)The $(thing)Voltage Regulator$(0) holds its output steady while the load changes."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "electroenergetics:accumulator",
+      "text": "Nickel-iron $(thing)Accumulators$(0) store energy at 24 V. Wire them in series for higher voltages: ten in a row charge at 240 V."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "electroenergetics:resistive_heater",
+      "text": "The $(thing)Resistive Heater$(0) turns current into heat. It heats boilers, basins and TFMG vats placed above it, just like a burner."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Light$(0)$(br)$(thing)Bulbs$(0) are tungsten-filament lamps in brass sockets. They stop mobs spawning even when switched off. A burnt-out bulb is repaired with a new tungsten wire.$(br2)$(thing)Indicator Bulbs$(0) are small signal lights you can dye."
+    }
+  ],
+  "read_by_default": true
+}

@@ -1,0 +1,31 @@
+{
+  "name": "Motors and Electric Trains",
+  "category": "tfc:materialism_electricity",
+  "icon": "create_new_age:basic_motor",
+  "sortnum": 40,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Stationary motors$(0)$(br)To turn electricity back into rotation, use New Age motors: $(thing)Basic$(0), $(thing)Advanced$(0) and $(thing)Reinforced$(0). Each tier has more power, and extensions raise a motor's stress capacity further.$(br2)Feed a motor from a $(l:tfc:materialism_electricity/converter)Converter$(0) in output mode facing it. A redstone signal stops it."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "create_new_age:basic_motor",
+      "text": "Set the speed with a wrench. The stress capacity stays the same, and energy use grows with it."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Traction motors$(0)$(br)The Electro Energetics $(thing)Electric Motor$(0) is a heavy series-wound traction motor, built for $(thing)electric trains$(0). It is the motor that works on a train.$(br2)It comes in every colour; the red one is the plain finish."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "electroenergetics:pantograph",
+      "text": "An electric train needs a $(thing)Pantograph$(0) touching overhead catenary wire, or a $(thing)Rail Contact Shoe$(0) on a third rail, plus Electric Motors on board."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Building the line$(0)$(br)$(li)Catenary Holders hook onto nearby poles automatically.$(li)Connect the overhead wire to the positive terminal of your supply.$(li)Connect the negative to a $(thing)Ground Rod$(0): the rails and earth carry the return current."
+    }
+  ],
+  "read_by_default": true
+}

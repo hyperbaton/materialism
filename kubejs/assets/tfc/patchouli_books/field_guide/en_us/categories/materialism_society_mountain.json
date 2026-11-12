@@ -1,0 +1,7 @@
+{
+  "name": "Mountain",
+  "description": "The mountain ladder: its classes, what they expect, the buildings they use, and their rites.",
+  "icon": "tfc:metal/saw/copper",
+  "parent": "tfc:materialism_society",
+  "sortnum": 15
+}

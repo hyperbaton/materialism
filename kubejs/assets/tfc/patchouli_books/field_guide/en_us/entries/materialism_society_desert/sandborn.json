@@ -1,0 +1,29 @@
+{
+  "name": "Sandborn",
+  "category": "tfc:materialism_society_desert",
+  "icon": "tfc:wood/planks/oak",
+  "sortnum": 30,
+  "read_by_default": true,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Sandborn$(0)$(br)$(italic)Desert · tier 2 of 5 · Workers$(0)$(br)$(br)$(thing)Can work as:$(0)$(br)$(li)Farmer — Farm$(br)$(li)Miller — $(l:tfc:materialism_society_desert/buildings#mill)Mill$(0)$(br)$(li)Preserver — $(l:tfc:materialism_society_desert/buildings#pantry)Pantry$(0)$(br)$(li)Composter — $(l:tfc:materialism_society_desert/buildings#compost_yard)Compost Yard$(0)$(br)$(li)Tavern Keeper — $(l:tfc:materialism_society_desert/buildings#tavern)Tavern$(0)$(br)$(li)Grain Hauler$(br)$(li)Builder$(br)$(li)Rancher — Goat Pasture$(br)$(li)Quarrier — Quarry$(br)$(li)Prospector — $(l:tfc:materialism_society_desert/buildings#prospector_camp)Prospector's Camp$(0)"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(thing)Can rise to:$(0)$(br)$(li)$(l:tfc:materialism_society_desert/dunespear)Dunespear$(0): defender path — wants a copper sword$(br)$(li)$(l:tfc:materialism_society_desert/scorchbinder)Scorchbinder$(0): maker path — wants a ceramic blowpipe$(br)$(li)$(l:tfc:materialism_society_desert/waterkeeper)Waterkeeper$(0): keeper path — wants 2 candles$(br)$(br)Falls back to $(l:tfc:materialism_society_desert/wayfarer)Wayfarer$(0) if its home, drink or food are badly neglected.$(br)$(br)$(bold)What it expects$(0)$(br)$(thing)Shelter:$(0) Sandborn's House"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(thing)Food:$(0) oat bread, brined green bean and fresh green bean$(br)$(br)$(thing)Drink:$(0) goat milk and water$(br)$(br)$(thing)Clothing:$(0) straw hat, burlap shirt and burlap pants$(br)$(br)$(thing)Warmth & light:$(0) a lit hearth or heat source nearby in cold weather and well-lit rooms$(br)$(br)$(thing)Neighbours:$(0) 3 to 20 Wayfarers or Sandborns within 32 blocks"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(thing)Buildings:$(0) a visit to the $(l:tfc:materialism_society_desert/buildings#tavern)tavern$(0)$(br)$(br)$(thing)Rites:$(0) Water Blessing$(br)$(br)$(thing)Comforts:$(0) jug"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Sandborn's House$(0)$(br)$(thing)Marker block:$(0) a door$(br)$(thing)Interior:$(0) about 4×4 and 3 high, up to roughly 14×14$(br)$(thing)Floor:$(0) yellow sandstone$(br)$(thing)Walls:$(0) aridisol mud bricks, fig or willow logs, fig or willow fences and a door$(br)$(thing)Roof:$(0) thatch roofs$(br)$(thing)Inside:$(0) a chest"
+    }
+  ]
+}

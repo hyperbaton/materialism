@@ -1,0 +1,21 @@
+{
+  "name": "Wayfarer",
+  "category": "tfc:materialism_society_desert",
+  "icon": "tfc:thatch",
+  "sortnum": 20,
+  "read_by_default": true,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Wayfarer$(0)$(br)$(italic)Desert · tier 1 of 5 · Newcomers$(0)$(br)$(br)$(thing)Can work as:$(0)$(br)$(li)Forager$(br)$(li)Firekeeper — $(l:tfc:materialism_society_desert/buildings#woodshed)Woodshed$(0)$(br)$(li)Shore Fisher$(br)$(br)$(thing)Can rise to:$(0)$(br)$(li)$(l:tfc:materialism_society_desert/sandborn)Sandborn$(0)$(br)$(br)$(bold)What it expects$(0)$(br)$(thing)Shelter:$(0) Wayfarer's House"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(thing)Food:$(0) oat flatbread$(br)$(br)$(thing)Drink:$(0) water$(br)$(br)$(thing)Clothing:$(0) straw hat"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Wayfarer's House$(0)$(br)$(thing)Marker block:$(0) a door$(br)$(thing)Interior:$(0) about 3×3 and 3 high, up to roughly 9×9$(br)$(thing)Floor:$(0) green sandstone and yellow sandstone$(br)$(thing)Walls:$(0) red sandstone, palm or acacia logs and a door$(br)$(thing)Roof:$(0) yellow sandstone$(br)$(thing)Inside:$(0) a chest"
+    }
+  ]
+}

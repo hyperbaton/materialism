@@ -1,0 +1,30 @@
+{
+  "name": "The Converter",
+  "category": "tfc:materialism_electricity",
+  "icon": "electroenergetics:converter",
+  "sortnum": 30,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "The $(thing)Converter$(0) links the Electro Energetics grid to other kinds of power. It has two wire nodes for the grid. Its $(thing)facing side$(0) is the bridge to the block in front of it.$(br2)Use a $(item)Wrench$(0) to switch it between $(thing)input$(0) and $(thing)output$(0) mode."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "electroenergetics:converter",
+      "text": "$(bold)Input mode$(0): takes power from the block it faces and drives the grid. Set the grid voltage on its value panel.$(br)$(bold)Output mode$(0): draws power from the grid and hands it to the block it faces."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)New Age (FE)$(0)$(br)Generator coils feed the grid through their $(thing)Carbon Brushes$(0) into a converter in input mode.$(br2)New Age motors and the Energiser are fed by a converter in output mode, facing the machine. No New Age wires are needed (they no longer exist in the pack)."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)TFMG machines$(0)$(br)TFMG cables and posts are retired. A converter in output mode joins TFMG's electrical network on its facing side and supplies it. Its value panel sets the TFMG supply voltage.$(br2)This is how you run the $(thing)Freezer$(0), the $(thing)Polarizer$(0) and $(thing)vat electrodes$(0). Each separate machine needs a converter touching it."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Energy is conserved across every converter. What comes out of the facing side was paid for from the grid, and whatever a generator puts in is all you have to spend.$(br2)If the grid cannot keep up, the converter runs dry and the machine stops until enough power has built up again."
+    }
+  ],
+  "read_by_default": true
+}

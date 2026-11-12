@@ -1,0 +1,35 @@
+{
+  "name": "Wires and Transmission",
+  "category": "tfc:materialism_electricity",
+  "icon": "electroenergetics:copper_wire_spool",
+  "sortnum": 20,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "Electro Energetics carries power through $(thing)Connectors$(0) joined by wire. Pick up a wire spool, use it on one connector, then on another, to string a wire between them.$(br2)Use an $(thing)Empty Spool$(0) on a wire to take it down again.$(br2)Like real circuits, every load needs a path out and back. Run two wires, or return the current through the ground with a $(thing)Ground Rod$(0)."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "electroenergetics:connector",
+      "text": "Fired clay bodies with a copper terminal. Double, triple and quad connectors carry several circuits on one block."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Wire types$(0)$(br)$(li)$(thing)Copper / Electrum$(0): bare wire, cheap and conductive$(li)$(thing)Insulated$(0): rubber-wrapped copper, safe to touch, can be dyed$(li)$(thing)Heavily Insulated$(0): paper-and-oil cable in a lead sheath, for high voltage near people$(li)$(thing)ACSR Conductor$(0): aluminium around a steel core, for long overhead lines$(li)$(thing)Bus / Rail$(0): stiff conductors for substations and third rails"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Wire is wound onto lathe-turned $(thing)Empty Spools$(0) by deployers on a sequenced-assembly line. Most wire comes from the rolling mill.$(br2)Overhead lines hang from $(thing)Pole Mounts$(0) on poles, insulated by porcelain $(thing)Insulators$(0) or strings of $(thing)Glass Insulator$(0) segments."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Losses and voltage$(0)$(br)Every wire has resistance, and the energy it wastes grows with the $(italic)square$(0) of the current.$(br2)To send power far, step the voltage up with a $(thing)Transformer$(0) at the plant and down again near the machines. Same power, less current, much smaller losses."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "electroenergetics:transformer",
+      "text": "The turns ratio sets the voltage ratio. Surround the core with Radiator Panels and cover it in Transformer Oil to raise its power rating; overloading it damages it."
+    }
+  ],
+  "read_by_default": true
+}

@@ -1,0 +1,29 @@
+{
+  "name": "Subarctic Overview",
+  "category": "tfc:materialism_society_subarctic",
+  "icon": "tfc:torch",
+  "sortnum": 0,
+  "read_by_default": true,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Subarctic culture$(0)$(br)$(br)$(thing)Temperature:$(0) average -50 to -14 °C$(br)$(thing)Rainfall:$(0) 300 to 500 mm$(br)$(thing)Elevation:$(0) Y 64 to 100$(br)$(br)Settle this people where the climate suits them, or they will never be content."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)The ladder$(0)$(br)$(br)$(thing)Tier 1 — Newcomers:$(0) $(l:tfc:materialism_society_subarctic/tundrafellow)Tundrafellow$(0)$(br)$(thing)Tier 2 — Workers:$(0) $(l:tfc:materialism_society_subarctic/snowkin)Snowkin$(0)$(br)$(thing)Tier 3 — Specialists:$(0) $(l:tfc:materialism_society_subarctic/frostmarked)Frostmarked$(0), $(l:tfc:materialism_society_subarctic/hearthkeeper)Hearthkeeper$(0) · $(l:tfc:materialism_society_subarctic/trailwarden)Trailwarden$(0)$(br)$(thing)Tier 4 — Elites:$(0) $(l:tfc:materialism_society_subarctic/elder)Elder$(0) · $(l:tfc:materialism_society_subarctic/frostborn)Frostborn$(0)$(br)$(thing)Tier 5 — Leader:$(0) $(l:tfc:materialism_society_subarctic/frozen_lord)Frozen Lord$(0)"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Rites$(0)$(br)Officiants hold these rites. Each one consumes offerings you must supply.$(br)$(br)$(br)$(thing)Aurora Rite$(0) — in the $(l:tfc:materialism_society_subarctic/buildings#hall)great hall$(0), about every 3 days$(br)Offerings: 4× candles, chevre and 2× cooked cod$(br)Held by: Elder$(br)For: Frostborn, Elder and Frozen Lord"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(thing)Hearthfire Vigil$(0) — in the $(l:tfc:materialism_society_subarctic/buildings#shrine)hearth lodge$(0), about every 3 days$(br)Offerings: 2× candles and 2× rye flatbread$(br)Held by: Hearthkeeper$(br)For: Snowkin, Frostmarked, Trailwarden and Hearthkeeper"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(thing)Midwinter Feast$(0) — in the $(l:tfc:materialism_society_subarctic/buildings#plaza)plaza$(0), about every 7 days$(br)Offerings: 8× sugar, sapphire and 4× rye bread sandwich$(br)Held by: Frozen Lord$(br)For: Tundrafellow, Snowkin, Frostmarked, Trailwarden, Hearthkeeper, Frostborn and Elder"
+    }
+  ]
+}

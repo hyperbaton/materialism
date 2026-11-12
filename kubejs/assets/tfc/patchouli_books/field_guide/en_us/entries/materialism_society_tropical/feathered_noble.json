@@ -1,0 +1,33 @@
+{
+  "name": "Feathered Noble",
+  "category": "tfc:materialism_society_tropical",
+  "icon": "minecraft:bell",
+  "sortnum": 51,
+  "read_by_default": true,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Feathered Noble$(0)$(br)$(italic)Tropical · tier 4 of 5 · Elites$(0)$(br)$(br)$(thing)Can work as:$(0)$(br)$(li)Captain — needs steel javelin$(br)$(li)Merchant — $(l:tfc:materialism_society_tropical/buildings#hall)Great Hall$(0)$(br)$(br)$(thing)Can rise to:$(0)$(br)$(li)$(l:tfc:materialism_society_tropical/sun_blessed)Sun-Blessed$(0): leader path — wants an emerald"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Falls back to $(l:tfc:materialism_society_tropical/junglebound)Junglebound$(0) if its home or food are badly neglected.$(br)$(br)$(bold)What it expects$(0)$(br)$(thing)Shelter:$(0) Feathered Noble's House$(br)$(br)$(thing)Food:$(0) maki roll, aged gouda, smoked fish and smoked duck$(br)$(br)$(thing)Drink:$(0) aged sake and sake"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(thing)Clothing:$(0) burlap cowl, leather chestplate, leather leggings and burlap shoes$(br)$(br)$(thing)Warmth & light:$(0) a lit hearth or heat source nearby in cold weather and well-lit rooms$(br)$(br)$(thing)Neighbours:$(0) 3 to 12 Junglebounds, Bloomtenders or Raincallers within 48 blocks$(br)$(br)$(thing)Buildings:$(0) a visit to the $(l:tfc:materialism_society_tropical/buildings#garden)pleasure garden$(0)"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(thing)Rites:$(0) Calendar Rite$(br)$(br)$(thing)Tools & arms:$(0) steel javelin and wrought iron shield$(br)$(br)$(thing)Comforts:$(0) silk cloth, sugar, olivine glass bottle, electricity, something to read and a pet cat"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Feathered Noble's House$(0)$(br)$(thing)Marker block:$(0) a door$(br)$(thing)Storeys:$(0) 2$(br)$(thing)Interior, each storey:$(0) about 6×6 and 3 high$(br)$(thing)Light:$(0) 45% of the floor at level 9+$(br)$(thing)Floor:$(0) marble flagstones and ipe or ironwood planks$(br)$(thing)Walls:$(0) smooth marble, marble bricks and a door$(br)$(thing)Roof:$(0) ipe or ironwood planks and ceramic tile roofs"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(thing)Inside:$(0) an ipe or ironwood glass table, 2+ ipe or ironwood chairs, a chest, an ipe or ironwood wardrobe and an ipe or ironwood bookshelf"
+    }
+  ]
+}

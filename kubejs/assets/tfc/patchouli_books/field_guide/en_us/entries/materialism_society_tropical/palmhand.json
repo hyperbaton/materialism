@@ -1,0 +1,29 @@
+{
+  "name": "Palmhand",
+  "category": "tfc:materialism_society_tropical",
+  "icon": "tfc:wood/planks/oak",
+  "sortnum": 30,
+  "read_by_default": true,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Palmhand$(0)$(br)$(italic)Tropical · tier 2 of 5 · Workers$(0)$(br)$(br)$(thing)Can work as:$(0)$(br)$(li)Rice Farmer — Farm$(br)$(li)Field Farmer — Farm$(br)$(li)Miller — $(l:tfc:materialism_society_tropical/buildings#mill)Mill$(0)$(br)$(li)Preserver — $(l:tfc:materialism_society_tropical/buildings#pantry)Pantry$(0)$(br)$(li)Composter — $(l:tfc:materialism_society_tropical/buildings#compost_yard)Compost Yard$(0)$(br)$(li)Tavern Keeper — $(l:tfc:materialism_society_tropical/buildings#tavern)Tavern$(0)$(br)$(li)Grain Hauler$(br)$(li)Builder$(br)$(li)Rancher — Pig Pasture"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(thing)Can rise to:$(0)$(br)$(li)$(l:tfc:materialism_society_tropical/junglebound)Junglebound$(0): defender path — wants a copper javelin$(br)$(li)$(l:tfc:materialism_society_tropical/bloomtender)Bloomtender$(0): maker path — wants a copper scythe$(br)$(li)$(l:tfc:materialism_society_tropical/raincaller)Raincaller$(0): keeper path — wants 2 candles$(br)$(br)Falls back to $(l:tfc:materialism_society_tropical/mudkin)Mudkin$(0) if its home, drink or food are badly neglected.$(br)$(br)$(bold)What it expects$(0)$(br)$(thing)Shelter:$(0) Palmhand's House"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(thing)Food:$(0) rice bread, brined tomato and fresh tomato$(br)$(br)$(thing)Drink:$(0) milk and water$(br)$(br)$(thing)Clothing:$(0) straw hat, burlap shirt and burlap pants$(br)$(br)$(thing)Warmth & light:$(0) a lit hearth or heat source nearby in cold weather and well-lit rooms$(br)$(br)$(thing)Neighbours:$(0) 3 to 20 Mudkins or Palmhands within 32 blocks"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(thing)Buildings:$(0) a visit to the $(l:tfc:materialism_society_tropical/buildings#tavern)tavern$(0)$(br)$(br)$(thing)Rites:$(0) Rain Dance$(br)$(br)$(thing)Comforts:$(0) jug"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Palmhand's House$(0)$(br)$(thing)Marker block:$(0) a door$(br)$(thing)Interior:$(0) about 4×4 and 3 high, up to roughly 14×14$(br)$(thing)Floor:$(0) chalk macadam road and chalk gravel$(br)$(thing)Walls:$(0) aridisol mud bricks, mangrove or palm logs, mangrove or palm fences and a door$(br)$(thing)Roof:$(0) thatch roofs$(br)$(thing)Inside:$(0) a chest"
+    }
+  ]
+}

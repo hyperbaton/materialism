@@ -1,0 +1,29 @@
+{
+  "name": "Moonwake",
+  "category": "tfc:materialism_society_temperate",
+  "icon": "tfc:rock/bricks/limestone",
+  "sortnum": 42,
+  "read_by_default": true,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Moonwake$(0)$(br)$(italic)Temperate · tier 3 of 5 · Specialists$(0)$(br)$(br)$(thing)Can work as:$(0)$(br)$(li)Moonlit Vigil Officiant — $(l:tfc:materialism_society_temperate/buildings#shrine)Grove Shrine$(0)$(br)$(li)Healer — $(l:tfc:materialism_society_temperate/buildings#shrine)Grove Shrine$(0)$(br)$(li)Scribe — $(l:tfc:materialism_society_temperate/buildings#library)Library$(0)$(br)$(br)$(thing)Can rise to:$(0)$(br)$(li)$(l:tfc:materialism_society_temperate/lawmaker)Lawmaker$(0): lore path — wants a writable book"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Falls back to $(l:tfc:materialism_society_temperate/villager)Villager$(0) if its home, drink or food are badly neglected.$(br)$(br)$(bold)What it expects$(0)$(br)$(thing)Shelter:$(0) Moonwake's House$(br)$(br)$(thing)Food:$(0) grain soup, fresh cheddar and smoked pork$(br)$(br)$(thing)Drink:$(0) beer and water$(br)$(br)$(thing)Clothing:$(0) wool hat, wool sweater, wool pants and wool boots"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(thing)Warmth & light:$(0) a lit hearth or heat source nearby in cold weather and well-lit rooms$(br)$(br)$(thing)Neighbours:$(0) 3 to 20 Villagers within 32 blocks$(br)$(br)$(thing)Buildings:$(0) a visit to the $(l:tfc:materialism_society_temperate/buildings#tavern)tavern$(0)$(br)$(br)$(thing)Rites:$(0) Moonlit Vigil (also attends in person)"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(thing)Comforts:$(0) hematitic glass bottle and candles"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Moonwake's House$(0)$(br)$(thing)Marker block:$(0) a door$(br)$(thing)Interior:$(0) about 5×5 and 3 high$(br)$(thing)Light:$(0) 35% of the floor at level 7+$(br)$(thing)Floor:$(0) claystone cobbled road and claystone cobblestone$(br)$(thing)Walls:$(0) willow or maple logs, willow or maple planks, glass and a door$(br)$(thing)Roof:$(0) willow or maple shingles$(br)$(thing)Inside:$(0) a chest, a willow or maple table and 2+ willow or maple stools"
+    }
+  ]
+}

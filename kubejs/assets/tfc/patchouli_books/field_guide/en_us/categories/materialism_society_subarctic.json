@@ -1,0 +1,7 @@
+{
+  "name": "Subarctic",
+  "description": "The subarctic ladder: its classes, what they expect, the buildings they use, and their rites.",
+  "icon": "tfc:torch",
+  "parent": "tfc:materialism_society",
+  "sortnum": 11
+}

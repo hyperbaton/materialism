@@ -1,0 +1,33 @@
+{
+  "name": "Trade Lord",
+  "category": "tfc:materialism_society_desert",
+  "icon": "minecraft:bell",
+  "sortnum": 51,
+  "read_by_default": true,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Trade Lord$(0)$(br)$(italic)Desert · tier 4 of 5 · Elites$(0)$(br)$(br)$(thing)Can work as:$(0)$(br)$(li)Captain — needs steel sword$(br)$(li)Merchant — $(l:tfc:materialism_society_desert/buildings#hall)Great Hall$(0)$(br)$(br)$(thing)Can rise to:$(0)$(br)$(li)$(l:tfc:materialism_society_desert/sunward)Sunward$(0): leader path — wants an opal$(br)$(br)Falls back to $(l:tfc:materialism_society_desert/dunespear)Dunespear$(0) if its home or food are badly neglected."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)What it expects$(0)$(br)$(thing)Shelter:$(0) Trade Lord's House$(br)$(br)$(thing)Food:$(0) oat bread sandwich, aged feta, smoked shellfish and smoked camelidae$(br)$(br)$(thing)Drink:$(0) aged rum and rum$(br)$(br)$(thing)Clothing:$(0) burlap cowl, leather chestplate, leather leggings and burlap shoes"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(thing)Warmth & light:$(0) a lit hearth or heat source nearby in cold weather and well-lit rooms$(br)$(br)$(thing)Neighbours:$(0) 3 to 12 Dunespears, Scorchbinders or Waterkeepers within 48 blocks$(br)$(br)$(thing)Buildings:$(0) a visit to the $(l:tfc:materialism_society_desert/buildings#garden)pleasure garden$(0)$(br)$(br)$(thing)Rites:$(0) Star Reading"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(thing)Tools & arms:$(0) steel sword and wrought iron shield$(br)$(br)$(thing)Comforts:$(0) silk cloth, sugar, silica glass bottle, electricity, something to read and a pet horse"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Trade Lord's House$(0)$(br)$(thing)Marker block:$(0) a door$(br)$(thing)Storeys:$(0) 2$(br)$(thing)Interior, each storey:$(0) about 6×6 and 3 high$(br)$(thing)Light:$(0) 45% of the floor at level 9+$(br)$(thing)Floor:$(0) limestone flagstones and white or eucalyptus planks$(br)$(thing)Walls:$(0) smooth limestone, limestone bricks and a door$(br)$(thing)Roof:$(0) white or eucalyptus planks and ceramic tile roofs"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(thing)Inside:$(0) an eucalyptus glass table, 2+ eucalyptus chairs, a chest, an eucalyptus wardrobe and an eucalyptus bookshelf"
+    }
+  ]
+}

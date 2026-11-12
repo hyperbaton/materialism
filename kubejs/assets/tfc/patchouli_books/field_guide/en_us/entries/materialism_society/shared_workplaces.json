@@ -1,0 +1,37 @@
+{
+  "name": "Shared Workplaces",
+  "category": "tfc:materialism_society",
+  "icon": "tfc:seeds/wheat",
+  "sortnum": 50,
+  "read_by_default": true,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Shared Workplaces$(0)$(br2)Farms, quarries and pastures are the same for every culture. Citizens with farming, quarrying or ranching jobs need one of these nearby to work."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Farm$(0)$(br)$(thing)Marker block:$(0) a fence gate$(br)$(thing)Fenced plot,$(0) 1 block of fence wall$(br)$(thing)Border:$(0) 4+ fences, a fence gate and a chest$(br)$(thing)Ground:$(0) 4+ farmland$(br)$(br)$(thing)Jobs here:$(0) Farmer, Field Farmer, Maize Farmer and Rice Farmer"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Quarry$(0)$(br)$(thing)Marker block:$(0) a fence gate$(br)$(thing)Fenced plot,$(0) 1 block of fence wall$(br)$(thing)Border:$(0) 4+ fences, a fence gate and a chest$(br)$(br)$(thing)Jobs here:$(0) Quarrier"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Cow Pasture$(0)$(br)$(thing)Marker block:$(0) thatch$(br)$(thing)Holds:$(0) at least 2 cows$(br)$(thing)Border:$(0) 4+ fences and a fence gate$(br)$(br)$(thing)Jobs here:$(0) Rancher"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Goat Pasture$(0)$(br)$(thing)Marker block:$(0) thatch$(br)$(thing)Holds:$(0) at least 2 goats$(br)$(thing)Border:$(0) 4+ fences and a fence gate$(br)$(br)$(thing)Jobs here:$(0) Rancher"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Pig Pasture$(0)$(br)$(thing)Marker block:$(0) thatch$(br)$(thing)Holds:$(0) at least 2 pigs$(br)$(thing)Border:$(0) 4+ fences and a fence gate$(br)$(br)$(thing)Jobs here:$(0) Rancher"
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Yak Pasture$(0)$(br)$(thing)Marker block:$(0) thatch$(br)$(thing)Holds:$(0) at least 2 yaks$(br)$(thing)Border:$(0) 4+ fences and a fence gate$(br)$(br)$(thing)Jobs here:$(0) Rancher"
+    }
+  ]
+}
