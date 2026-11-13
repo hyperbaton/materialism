@@ -127,6 +127,17 @@ ServerEvents.recipes(event => {
         R: `${namespace}:metal/rod/${metal}`,
         N: `tfc_items:${metal}_rivet`
     })
+    // Frames: a truss of the same metal braced with extra rods and rivets
+    event.remove({id: `tfmg:crafting/materials/${metal}_frame`})
+    event.shaped(Item.of(`tfmg:${metal}_frame`, 4), [
+        'RNR',
+        'NTN',
+        'RNR'
+    ], {
+        R: `${namespace}:metal/rod/${metal}`,
+        N: `tfc_items:${metal}_rivet`,
+        T: `tfmg:${metal}_truss`
+    })
   })
 
   event.remove({id: 'tfmg:crafting/materials/aluminum_block_from_compacting'})

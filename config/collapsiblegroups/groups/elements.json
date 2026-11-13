@@ -1,0 +1,489 @@
+{
+  "schema_version": 1,
+  "id": "elements",
+  "name": {
+    "translate": "collapsible_groups.group.elements",
+    "fallback": "Elements"
+  },
+  "enabled": true,
+  "filter": {
+    "any": [
+      {
+        "type": "rutile:element",
+        "id": "rutile:null"
+      },
+      {
+        "type": "rutile:element",
+        "id": "rutile:hydrogen"
+      },
+      {
+        "type": "rutile:element",
+        "id": "rutile:helium"
+      },
+      {
+        "type": "rutile:element",
+        "id": "rutile:lithium"
+      },
+      {
+        "type": "rutile:element",
+        "id": "rutile:beryllium"
+      },
+      {
+        "type": "rutile:element",
+        "id": "rutile:boron"
+      },
+      {
+        "type": "rutile:element",
+        "id": "rutile:carbon"
+      },
+      {
+        "type": "rutile:element",
+        "id": "rutile:nitrogen"
+      },
+      {
+        "type": "rutile:element",
+        "id": "rutile:oxygen"
+      },
+      {
+        "type": "rutile:element",
+        "id": "rutile:fluorine"
+      },
+      {
+        "type": "rutile:element",
+        "id": "rutile:neon"
+      },
+      {
+        "type": "rutile:element",
+        "id": "rutile:sodium"
+      },
+      {
+        "type": "rutile:element",
+        "id": "rutile:magnesium"
+      },
+      {
+        "type": "rutile:element",
+        "id": "rutile:aluminum"
+      },
+      {
+        "type": "rutile:element",
+        "id": "rutile:silicon"
+      },
+      {
+        "type": "rutile:element",
+        "id": "rutile:phosphorus"
+      },
+      {
+        "type": "rutile:element",
+        "id": "rutile:sulfur"
+      },
+      {
+        "type": "rutile:element",
+        "id": "rutile:chlorine"
+      },
+      {
+        "type": "rutile:element",
+        "id": "rutile:argon"
+      },
+      {
+        "type": "rutile:element",
+        "id": "rutile:potassium"
+      },
+      {
+        "type": "rutile:element",
+        "id": "rutile:calcium"
+      },
+      {
+        "type": "rutile:element",
+        "id": "rutile:scandium"
+      },
+      {
+        "type": "rutile:element",
+        "id": "rutile:titanium"
+      },
+      {
+        "type": "rutile:element",
+        "id": "rutile:vanadium"
+      },
+      {
+        "type": "rutile:element",
+        "id": "rutile:chromium"
+      },
+      {
+        "type": "rutile:element",
+        "id": "rutile:manganese"
+      },
+      {
+        "type": "rutile:element",
+        "id": "rutile:iron"
+      },
+      {
+        "type": "rutile:element",
+        "id": "rutile:cobalt"
+      },
+      {
+        "type": "rutile:element",
+        "id": "rutile:nickel"
+      },
+      {
+        "type": "rutile:element",
+        "id": "rutile:copper"
+      },
+      {
+        "type": "rutile:element",
+        "id": "rutile:zinc"
+      },
+      {
+        "type": "rutile:element",
+        "id": "rutile:gallium"
+      },
+      {
+        "type": "rutile:element",
+        "id": "rutile:germanium"
+      },
+      {
+        "type": "rutile:element",
+        "id": "rutile:arsenic"
+      },
+      {
+        "type": "rutile:element",
+        "id": "rutile:selenium"
+      },
+      {
+        "type": "rutile:element",
+        "id": "rutile:bromine"
+      },
+      {
+        "type": "rutile:element",
+        "id": "rutile:krypton"
+      },
+      {
+        "type": "rutile:element",
+        "id": "rutile:rubidium"
+      },
+      {
+        "type": "rutile:element",
+        "id": "rutile:strontium"
+      },
+      {
+        "type": "rutile:element",
+        "id": "rutile:yttrium"
+      },
+      {
+        "type": "rutile:element",
+        "id": "rutile:zirconium"
+      },
+      {
+        "type": "rutile:element",
+        "id": "rutile:niobium"
+      },
+      {
+        "type": "rutile:element",
+        "id": "rutile:molybdenum"
+      },
+      {
+        "type": "rutile:element",
+        "id": "rutile:technetium"
+      },
+      {
+        "type": "rutile:element",
+        "id": "rutile:ruthenium"
+      },
+      {
+        "type": "rutile:element",
+        "id": "rutile:rhodium"
+      },
+      {
+        "type": "rutile:element",
+        "id": "rutile:palladium"
+      },
+      {
+        "type": "rutile:element",
+        "id": "rutile:silver"
+      },
+      {
+        "type": "rutile:element",
+        "id": "rutile:cadmium"
+      },
+      {
+        "type": "rutile:element",
+        "id": "rutile:indium"
+      },
+      {
+        "type": "rutile:element",
+        "id": "rutile:tin"
+      },
+      {
+        "type": "rutile:element",
+        "id": "rutile:antimony"
+      },
+      {
+        "type": "rutile:element",
+        "id": "rutile:tellurium"
+      },
+      {
+        "type": "rutile:element",
+        "id": "rutile:iodine"
+      },
+      {
+        "type": "rutile:element",
+        "id": "rutile:xenon"
+      },
+      {
+        "type": "rutile:element",
+        "id": "rutile:cesium"
+      },
+      {
+        "type": "rutile:element",
+        "id": "rutile:barium"
+      },
+      {
+        "type": "rutile:element",
+        "id": "rutile:lanthanum"
+      },
+      {
+        "type": "rutile:element",
+        "id": "rutile:cerium"
+      },
+      {
+        "type": "rutile:element",
+        "id": "rutile:praseodymium"
+      },
+      {
+        "type": "rutile:element",
+        "id": "rutile:neodymium"
+      },
+      {
+        "type": "rutile:element",
+        "id": "rutile:promethium"
+      },
+      {
+        "type": "rutile:element",
+        "id": "rutile:samarium"
+      },
+      {
+        "type": "rutile:element",
+        "id": "rutile:europium"
+      },
+      {
+        "type": "rutile:element",
+        "id": "rutile:gadolinium"
+      },
+      {
+        "type": "rutile:element",
+        "id": "rutile:terbium"
+      },
+      {
+        "type": "rutile:element",
+        "id": "rutile:dysprosium"
+      },
+      {
+        "type": "rutile:element",
+        "id": "rutile:holmium"
+      },
+      {
+        "type": "rutile:element",
+        "id": "rutile:erbium"
+      },
+      {
+        "type": "rutile:element",
+        "id": "rutile:thulium"
+      },
+      {
+        "type": "rutile:element",
+        "id": "rutile:ytterbium"
+      },
+      {
+        "type": "rutile:element",
+        "id": "rutile:lutetium"
+      },
+      {
+        "type": "rutile:element",
+        "id": "rutile:hafnium"
+      },
+      {
+        "type": "rutile:element",
+        "id": "rutile:tantalum"
+      },
+      {
+        "type": "rutile:element",
+        "id": "rutile:tungsten"
+      },
+      {
+        "type": "rutile:element",
+        "id": "rutile:rhenium"
+      },
+      {
+        "type": "rutile:element",
+        "id": "rutile:osmium"
+      },
+      {
+        "type": "rutile:element",
+        "id": "rutile:iridium"
+      },
+      {
+        "type": "rutile:element",
+        "id": "rutile:platinum"
+      },
+      {
+        "type": "rutile:element",
+        "id": "rutile:gold"
+      },
+      {
+        "type": "rutile:element",
+        "id": "rutile:mercury"
+      },
+      {
+        "type": "rutile:element",
+        "id": "rutile:thallium"
+      },
+      {
+        "type": "rutile:element",
+        "id": "rutile:lead"
+      },
+      {
+        "type": "rutile:element",
+        "id": "rutile:bismuth"
+      },
+      {
+        "type": "rutile:element",
+        "id": "rutile:polonium"
+      },
+      {
+        "type": "rutile:element",
+        "id": "rutile:astatine"
+      },
+      {
+        "type": "rutile:element",
+        "id": "rutile:radon"
+      },
+      {
+        "type": "rutile:element",
+        "id": "rutile:francium"
+      },
+      {
+        "type": "rutile:element",
+        "id": "rutile:radium"
+      },
+      {
+        "type": "rutile:element",
+        "id": "rutile:actinium"
+      },
+      {
+        "type": "rutile:element",
+        "id": "rutile:thorium"
+      },
+      {
+        "type": "rutile:element",
+        "id": "rutile:protactinium"
+      },
+      {
+        "type": "rutile:element",
+        "id": "rutile:uranium"
+      },
+      {
+        "type": "rutile:element",
+        "id": "rutile:neptunium"
+      },
+      {
+        "type": "rutile:element",
+        "id": "rutile:plutonium"
+      },
+      {
+        "type": "rutile:element",
+        "id": "rutile:americium"
+      },
+      {
+        "type": "rutile:element",
+        "id": "rutile:curium"
+      },
+      {
+        "type": "rutile:element",
+        "id": "rutile:berkelium"
+      },
+      {
+        "type": "rutile:element",
+        "id": "rutile:californium"
+      },
+      {
+        "type": "rutile:element",
+        "id": "rutile:einsteinium"
+      },
+      {
+        "type": "rutile:element",
+        "id": "rutile:fermium"
+      },
+      {
+        "type": "rutile:element",
+        "id": "rutile:mendelevium"
+      },
+      {
+        "type": "rutile:element",
+        "id": "rutile:nobelium"
+      },
+      {
+        "type": "rutile:element",
+        "id": "rutile:lawrencium"
+      },
+      {
+        "type": "rutile:element",
+        "id": "rutile:rutherfordium"
+      },
+      {
+        "type": "rutile:element",
+        "id": "rutile:dubnium"
+      },
+      {
+        "type": "rutile:element",
+        "id": "rutile:seaborgium"
+      },
+      {
+        "type": "rutile:element",
+        "id": "rutile:bohrium"
+      },
+      {
+        "type": "rutile:element",
+        "id": "rutile:hassium"
+      },
+      {
+        "type": "rutile:element",
+        "id": "rutile:meitnerium"
+      },
+      {
+        "type": "rutile:element",
+        "id": "rutile:darmstadtium"
+      },
+      {
+        "type": "rutile:element",
+        "id": "rutile:roentgenium"
+      },
+      {
+        "type": "rutile:element",
+        "id": "rutile:copernicium"
+      },
+      {
+        "type": "rutile:element",
+        "id": "rutile:nihonium"
+      },
+      {
+        "type": "rutile:element",
+        "id": "rutile:flerovium"
+      },
+      {
+        "type": "rutile:element",
+        "id": "rutile:moscovium"
+      },
+      {
+        "type": "rutile:element",
+        "id": "rutile:livermorium"
+      },
+      {
+        "type": "rutile:element",
+        "id": "rutile:tennessine"
+      },
+      {
+        "type": "rutile:element",
+        "id": "rutile:oganesson"
+      }
+    ]
+  }
+}

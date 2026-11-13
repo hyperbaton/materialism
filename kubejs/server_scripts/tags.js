@@ -45,6 +45,8 @@ ServerEvents.tags('item', event => {
     ]
     tfcMetalAnvils.forEach(metal => event.add('vintageimprovements:anvils', `tfc:metal/anvil/${metal}`))
     tfcMetallurgyMetalAnvils.forEach(metal => event.add('vintageimprovements:anvils', `tfc_metallurgy:metal/anvil/${metal}`))
+    // Removed Solarpunk blocks leave the wood tags
+    event.removeAllTagsFrom('solarpunk:charred_timber', 'solarpunk:charred_timber_slab', 'solarpunk:charred_timber_stairs', 'solarpunk:ruined_dirt')
 })
 
 ServerEvents.tags('entity_type', event => {

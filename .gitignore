@@ -18,6 +18,7 @@ shaderpacks/
 screenshots/
 debug/
 dynamic-resource-pack-cache/
+scripts/
 
 # User-specific files
 options.txt

@@ -529,6 +529,11 @@ RecipeViewerEvents.removeEntries('item', event => {
     event.remove('minecraft:chiseled_bookshelf');
     event.remove(/minecraft:.*head.*/);
     event.remove('minecraft:brewing_stand');
+    event.remove('minecraft:wheat');
+    event.remove('minecraft:skeleton_skull');
+    event.remove('minecraft:wither_skeleton_skull');
+    event.remove('minecraft:spectral_arrow');
+    event.remove('minecraft:tipped_arrow');
 
     event.remove(/afc:.*leaves.*/);
     event.remove(/tfc:.*leaves.*/);
@@ -536,6 +541,18 @@ RecipeViewerEvents.removeEntries('item', event => {
     // Hide the TFC ores, which just clutter JEI
     event.remove(/tfc:ore\/.*\/.*/);
     event.remove(/tfc_metallurgy:ore\/.*\/.*/);
+    event.remove(/firmalife:ore\/.*\/.*/);
+
+    // Vanilla-wood carts are uncraftable; TFC Astikor Carts provides the TFC-wood ones
+    event.remove(/^astikorcartsredux:/);
+    // RnR tamped soils are an intermediate step, not useful in JEI
+    event.remove(/^rnr:tamped_/);
+    // FTB Quests and FTB Filter System items
+    event.remove(/^(ftbquests|ftbfiltersystem):/);
+    // TFC's jack o'lantern replaces the vanilla one
+    event.remove(/^minecraft:jack_o_lantern$/);
+    // Fish buckets
+    event.remove(/^(tfc:bucket\/(arctic_char|bluegill|burbot|cod|crappie|jellyfish|lake_trout|largemouth_bass|muksun|northern_pike|pacu|peacock_bass|pufferfish|rainbow_trout|red_piranha|salmon|smallmouth_bass|spotted_gudgeon|tilapia|tropical_fish)|minecraft:(cod|salmon|pufferfish|tropical_fish)_bucket)$/);
     event.remove(/tfc:deposit\/.*/);
 
     // Hide the wild crops, which are unobtainable
@@ -647,6 +664,8 @@ RecipeViewerEvents.removeEntries('item', event => {
     r('chemica:propene_bucket')
     // TFMG generic plastic (replaced by Chemica plastics)
     r('tfmg:plastic_sheet')
+    // Floppy disk transitional items
+    event.remove(/^kubejs:plastic_sheet\/.*/)
     r('tfmg:plastic_block')
     r('tfmg:molten_plastic_bucket')
 
@@ -723,6 +742,9 @@ RecipeViewerEvents.removeEntries('fluid', event => {
     event.remove('chemica:propene')
     event.remove('tfmg:molten_plastic')
 
-    // Electro Energetics plant oil (seed oils already exist)
+    // Electro Energetics
     event.remove('electroenergetics:plant_oil')
+
+    // Create potion fluids
+    event.remove('create:potion')
 });
