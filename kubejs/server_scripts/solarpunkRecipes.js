@@ -92,6 +92,25 @@ ServerEvents.recipes(event => {
       { id: 'chemica:hydrochloric_acid', amount: 200 }
     ]
   }).id('kubejs:solarpunk/vat/polysilicon')
+  // Low-yield Siemens reactor in a steel vat, to make the first polysilicon
+  event.custom({
+    type: 'tfmg:vat',
+    allowed_vat_types: ['tfmg:steel'],
+    machines: ['tfmg:graphite_electrode', 'tfmg:graphite_electrode'],
+    min_size: 1,
+    min_current: 6,
+    temperature: 1100,
+    ingredients: [
+      { type: 'neoforge:single', fluid: 'kubejs:trichlorosilane', amount: 1000 },
+      { type: 'neoforge:single', fluid: 'tfmg:hydrogen', amount: 200 }
+    ],
+    processing_time: 1200,
+    energy: 1200 * 30000,
+    results: [
+      { id: 'kubejs:polysilicon' },
+      { id: 'chemica:hydrochloric_acid', amount: 200 }
+    ]
+  }).id('kubejs:solarpunk/vat/polysilicon_steel')
 
   // Monocrystalline silicon (Czochralski pulling under argon)
   event.custom({

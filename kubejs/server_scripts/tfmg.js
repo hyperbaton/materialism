@@ -628,6 +628,36 @@ ServerEvents.recipes(event => {
       ]
     })
   ]).transitionalItem('tfc_metallurgy:metal/sheet/aluminum').loops(1)
+  // Transistor on a polyethylene base
+  event.remove({id: 'tfmg:sequenced_assembly/transistor'})
+  event.recipes.create.sequenced_assembly([
+    CreateItem.of(Item.of('tfmg:transistor', 4), 0.85),
+    CreateItem.of('tfmg:silicon_ingot', 0.05),
+    CreateItem.of('tfmg:p_semiconductor', 0.05),
+    CreateItem.of('tfmg:n_semiconductor', 0.05)
+  ], 'chemica:polyethylene_sheet', [
+    event.recipes.createDeploying('tfmg:unfinished_transistor', ['tfmg:unfinished_transistor', Ingredient.of('#c:wires/copper')]),
+    event.recipes.createDeploying('tfmg:unfinished_transistor', ['tfmg:unfinished_transistor', 'tfmg:n_semiconductor']),
+    event.recipes.createDeploying('tfmg:unfinished_transistor', ['tfmg:unfinished_transistor', 'tfmg:p_semiconductor']),
+    event.recipes.createDeploying('tfmg:unfinished_transistor', ['tfmg:unfinished_transistor', 'tfmg:n_semiconductor'])
+  ]).transitionalItem('tfmg:unfinished_transistor').loops(1)
+  // Freezer: vapour-compression unit on the compressor, charged with propane (LPG)
+  event.remove({id: 'tfmg:crafting/materials/freezer'})
+  const freezer = 'tfmg:compressor'
+  event.recipes.create.sequenced_assembly([
+    'tfmg:freezer'
+  ], freezer, [
+    event.recipes.createDeploying(freezer, [freezer, 'create:fluid_pipe']),
+    event.recipes.createDeploying(freezer, [freezer, 'tfc_metallurgy:metal/sheet/aluminum']),
+    event.recipes.createPressing(freezer, freezer),
+    event.recipes.createDeploying(freezer, [freezer, 'create:fluid_valve']),
+    event.recipes.createDeploying(freezer, [freezer, 'create:fluid_pipe']),
+    event.recipes.createFilling(freezer, [freezer, Fluid.of('tfc_metallurgy:metal/solder', 20)]),
+    event.recipes.createDeploying(freezer, [freezer, 'tfmg:electromagnetic_coil']),
+    event.recipes.createDeploying(freezer, [freezer, 'electroenergetics:connector']),
+    event.recipes.vintageimprovements.vacuumizing(freezer, [freezer]),
+    event.recipes.createFilling(freezer, [freezer, Fluid.of('tfmg:lpg', 1000)])
+  ]).transitionalItem(freezer).loops(2).id('kubejs:tfmg/sequenced_assembly/freezer')
   // TODO: tfmg:electric_casing, tfmg:copper_cable no longer exist in TFMG 1.21
   /*event.remove({id: 'tfmg:crafting/electric_casing'})
   event.recipes.create.sequenced_assembly([

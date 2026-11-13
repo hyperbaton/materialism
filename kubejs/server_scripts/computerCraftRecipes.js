@@ -14,7 +14,7 @@ ServerEvents.recipes(event => {
           B: 'tfc_metallurgy:metal/sheet/aluminum',
           C: 'chemica:polyvinyl_chloride_sheet',
           D: 'railways:smokestack_diesel',
-          E: 'tfmg:cable_tube',
+          E: 'electroenergetics:insulated_wire',
           // TODO: Find replacement for missing item
           //F: 'tfmg:electric_casing',
           F: 'tfmg:electrical_switch',
@@ -37,7 +37,7 @@ ServerEvents.recipes(event => {
         B: 'tfc_metallurgy:metal/sheet/aluminum',
         C: 'chemica:polyvinyl_chloride_sheet',
         D: 'railways:smokestack_diesel',
-        E: 'tfmg:cable_tube',
+        E: 'electroenergetics:insulated_wire',
         // TODO: Find replacement for missing item
         //E: 'tfmg:electric_casing',
         F: 'tfmg:electrical_switch',
@@ -179,8 +179,8 @@ ServerEvents.recipes(event => {
   )
   event.remove('computercraft:cable')
   event.shapeless('6x computercraft:cable',[
-    'tfmg:cable_tube',
-    'tfmg:cable_tube'
+    'electroenergetics:insulated_wire',
+    'electroenergetics:insulated_wire'
   ])
   event.remove('computercraft:monitor_normal')
   event.recipes.create.mechanical_crafting(

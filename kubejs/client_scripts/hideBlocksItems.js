@@ -127,6 +127,10 @@ RecipeViewerEvents.removeEntries('item', event => {
     r('design_decor:queens_lime_large_chain');
     event.remove('createbigcannons:bronze_ingot')
     event.remove(/.*tfc_items.*rod.*/)
+    event.remove('createbigcannons:molten_cast_iron_bucket')
+    event.remove('createbigcannons:molten_bronze_bucket')
+    event.remove('createbigcannons:molten_steel_bucket')
+    event.remove('createbigcannons:molten_nethersteel_bucket')
 
     // Hide TFMG tools/armor/ingots
     r('tfmg:lead_axe');
