@@ -1,0 +1,61 @@
+{
+  "name": "The Steam Cycle",
+  "category": "tfc:materialism_tech",
+  "icon": "solarpunk:turbine_rotor",
+  "sortnum": 20,
+  "pages": [
+    {
+      "type": "patchouli:text",
+      "text": "A plain Create $(thing)Steam Engine$(0) bolted to a boiler still works as it always has: water and heat in, rotation out.$(br2)The $(thing)steam cycle$(0) is the advanced route. The boiler raises steam for a $(thing)Steam Turbine$(0) instead, and the steam that leaves the turbine is vented or condensed back into water. It takes more building, and in return it concentrates a lot of power in one place."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)The cycle at a glance$(0)$(br)$(li)A heated boiler turns water into $(thing)Pressurized Steam$(0).$(li)The turbine expands it into rotation.$(li)What leaves the turbine is $(thing)Low-Pressure Steam$(0).$(li)Vent it up a smokestack, or condense it back into water and send it to the boiler again.$(br2)No water is created or lost along the way: a full loop returns every drop."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "create:steam_engine",
+      "title": "Steam Outlets",
+      "text": "Attach a Steam Engine to the boiler as usual, but put a $(thing)fluid pipe$(0) where its shaft would go. The engine no longer turns: it becomes an outlet that pipes out its share of the boiler as Pressurized Steam."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Each outlet takes the same share of the boiler that an engine would, so the boiler's size and heat level set how much steam you get: $(thing)10 mB per tick per boiler level$(0), the same water the boiler boils.$(br2)Engines and outlets can share one boiler, splitting its output between rotation and steam."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "solarpunk:turbine_rotor",
+      "title": "The Steam Turbine",
+      "text": "A 7x7 multiblock of $(thing)Turbine Casing$(0) around a column of $(thing)Turbine Rotors$(0) fitted with blades. Pipe Pressurized Steam into the casing walls and take rotation from the cap rotor. It can stand up or lie on its side."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Every rotor layer adds speed and capacity, and burns about $(thing)8 mB of steam per tick$(0). A tall turbine needs a large boiler, or several.$(br2)$(li)$(thing)Stainless Steel Blades$(0): the first blades you can make. They waste part of the steam.$(li)$(thing)Titanium Blades$(0): full efficiency.$(br2)Engineer's Goggles on a rotor show height, blades, steam supply and exhaust."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Exhaust$(0)$(br)Spent steam collects inside the turbine as Low-Pressure Steam. Pipe it out of any casing face.$(br2)If the exhaust tank fills up, the turbine shuts down and stops drawing steam until it is drained. A turbine with nowhere to send its exhaust will stall."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "tfmg:brick_smokestack",
+      "title": "Venting",
+      "text": "The simple answer: pipe the exhaust into a TFMG $(thing)Smokestack$(0) (brick, concrete or metal) or an $(thing)Exhaust$(0). It lets the steam out as white clouds. Cheap and reliable, but the water is lost, so the boiler needs a steady supply."
+    },
+    {
+      "type": "patchouli:spotlight",
+      "item": "tfmg:freezer",
+      "title": "Condensing",
+      "text": "To recover the water, pipe the exhaust into a $(thing)steel chemical vat$(0) of at least $(thing)4 tanks$(0) with a $(thing)Freezer$(0) at the bottom. It turns 1000 mB of steam into 1000 mB of water every second."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "Each condensing vat handles about $(thing)50 mB per tick$(0), so a large boiler needs several in parallel.$(br2)The Freezer runs on electricity: feed it through a $(l:tfc:materialism_electricity/converter)Converter$(0) in output mode. Pipe the water back to the boiler and the loop is closed."
+    },
+    {
+      "type": "patchouli:text",
+      "text": "$(bold)Other steam sources$(0)$(br)The turbine burns Pressurized Steam from any source. A boiler is the usual one, but a $(thing)Solar Power Tower$(0) in steam mode and the $(thing)Fusion Reactor$(0) make it too. Their exhaust is handled the same way."
+    }
+  ],
+  "read_by_default": true
+}
