@@ -171,11 +171,8 @@ ServerEvents.recipes(event => {
   event.recipes.create.crushing(['3x chemica:coal_dust', CreateItem.of('chemica:coal_dust', 0.5)], 'tfc:ore/bituminous_coal')
   event.recipes.create.crushing(['2x chemica:coal_dust', CreateItem.of('chemica:coal_dust', 0.25)], 'tfc:ore/lignite')
 
-  // Rutile chunks into Chemica's rutile grades
-  event.recipes.create.crushing(['chemica:rutile_crystal', CreateItem.of('chemica:rutile_dust', 0.25)], 'tfc_metallurgy:ore/small_rutile')
-  event.recipes.create.crushing(['2x chemica:rutile_crystal', CreateItem.of('chemica:rutile_dust', 0.25)], 'tfc_metallurgy:ore/poor_rutile')
-  event.recipes.create.crushing(['chemica:medium_grade_rutile_crystal', CreateItem.of('chemica:rutile_crystal', 0.5)], 'tfc_metallurgy:ore/normal_rutile')
-  event.recipes.create.crushing(['chemica:high_grade_rutile_crystal', CreateItem.of('chemica:medium_grade_rutile_crystal', 0.5)], 'tfc_metallurgy:ore/rich_rutile')
+  // Chemica's rutile grades are replaced by TFC Metallurgy ore, crushed into rutile dust
+  event.remove({ id: /^chemica:crushing\/(medium_grade_|high_grade_)?rutile_crystal$/ })
 
   // Fluorite and phosphorite (kubejs ores, see addBlocks.js) are the source of Chemica's fluorite and phosphorus dust
   event.recipes.create.crushing(['3x chemica:fluorite_dust', CreateItem.of('chemica:fluorite_dust', 0.5)], 'kubejs:ore/fluorite').processingTime(250)
@@ -216,8 +213,6 @@ ServerEvents.recipes(event => {
     ['kubejs:metal/dust/silver', 'tfc', ['native_silver'], [nitric]],
     ['kubejs:metal/dust/gold', 'tfc', ['native_gold'], [nitric, hydrochloric]],
     ['tfc_metallurgy:metal/dust/lead', 'tfc_metallurgy', ['galena'], [sulfuric]],
-    ['tfc_metallurgy:metal/dust/platinum', 'tfc_metallurgy', ['native_platinum'], [nitric, hydrochloric]],
-    ['tfc_metallurgy:metal/dust/cobalt', 'tfc_metallurgy', ['cobaltite'], [sulfuric]],
     ['tfc_metallurgy:metal/dust/molybdenum', 'tfc_metallurgy', ['molybdenite'], [sulfuric]],
     ['tfc_metallurgy:metal/dust/antimony', 'tfc_metallurgy', ['stibnite'], [hydrochloric]],
     ['chemica:chromium_dust', 'firmalife', ['chromite'], [sulfuric]]
@@ -234,23 +229,6 @@ ServerEvents.recipes(event => {
           results: [{id: entry[0], count: grade.dust}, {id: entry[0], chance: 0.5}]
         })
       })
-    })
-  })
-
-  // Tungsten: arc furnace the wolframite chunks into dust, like Chemica did with its raw tungsten
-  grades.forEach(grade => {
-    event.custom({
-      type: 'tfmg:vat_machine_recipe',
-      allowed_vat_types: ['tfmg:firebrick_lined_vat'],
-      machines: ['tfmg:graphite_electrode', 'tfmg:graphite_electrode', 'tfmg:graphite_electrode'],
-      min_size: 6,
-      ingredients: [{item: 'tfc_metallurgy:ore/' + grade.name + '_wolframite'}, {item: 'tfmg:coal_coke_dust'}],
-      processing_time: 20,
-      results: [
-        {chance: 0.9, id: 'tfmg:coal_coke_dust'},
-        {id: 'tfc_metallurgy:metal/dust/tungsten', count: grade.dust},
-        {amount: 60, id: 'tfmg:molten_slag'}
-      ]
     })
   })
 })

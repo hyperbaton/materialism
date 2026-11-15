@@ -1,0 +1,27 @@
+{
+  "compositions": [
+    {
+      "elements": [
+        {
+          "amount": 10,
+          "id": "rutile:nitrogen"
+        },
+        {
+          "amount": 42,
+          "id": "rutile:hydrogen"
+        },
+        {
+          "amount": 12,
+          "id": "rutile:tungsten"
+        },
+        {
+          "amount": 42,
+          "id": "rutile:oxygen"
+        }
+      ]
+    }
+  ],
+  "contents": [
+    "kubejs:powder/ammonium_paratungstate"
+  ]
+}

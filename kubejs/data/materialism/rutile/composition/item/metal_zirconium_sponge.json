@@ -1,0 +1,16 @@
+{
+  "compositions": [
+    {
+      "elements": [
+        {
+          "amount": 1,
+          "id": "rutile:zirconium"
+        }
+      ]
+    }
+  ],
+  "contents": [
+    "kubejs:crude_zirconium_sponge",
+    "kubejs:zirconium_sponge"
+  ]
+}

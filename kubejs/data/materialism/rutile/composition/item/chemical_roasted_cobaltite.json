@@ -1,0 +1,19 @@
+{
+  "compositions": [
+    {
+      "elements": [
+        {
+          "amount": 1,
+          "id": "rutile:cobalt"
+        },
+        {
+          "amount": 1,
+          "id": "rutile:oxygen"
+        }
+      ]
+    }
+  ],
+  "contents": [
+    "kubejs:powder/roasted_cobaltite"
+  ]
+}

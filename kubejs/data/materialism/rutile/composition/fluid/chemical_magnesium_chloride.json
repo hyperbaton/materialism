@@ -1,0 +1,19 @@
+{
+  "compositions": [
+    {
+      "elements": [
+        {
+          "amount": 1,
+          "id": "rutile:magnesium"
+        },
+        {
+          "amount": 2,
+          "id": "rutile:chlorine"
+        }
+      ]
+    }
+  ],
+  "contents": [
+    "kubejs:magnesium_chloride"
+  ]
+}

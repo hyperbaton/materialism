@@ -1,0 +1,23 @@
+{
+  "compositions": [
+    {
+      "elements": [
+        {
+          "amount": 1,
+          "id": "rutile:aluminum"
+        },
+        {
+          "amount": 3,
+          "id": "rutile:oxygen"
+        },
+        {
+          "amount": 3,
+          "id": "rutile:hydrogen"
+        }
+      ]
+    }
+  ],
+  "contents": [
+    "kubejs:powder/aluminum_hydroxide"
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "compositions": [
+    {
+      "elements": [
+        {
+          "amount": 1,
+          "id": "rutile:tungsten"
+        },
+        {
+          "amount": 3,
+          "id": "rutile:oxygen"
+        }
+      ]
+    }
+  ],
+  "contents": [
+    "kubejs:powder/tungsten_trioxide"
+  ]
+}

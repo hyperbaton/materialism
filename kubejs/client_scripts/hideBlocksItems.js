@@ -714,6 +714,8 @@ RecipeViewerEvents.removeEntries('item', event => {
     r('tfmg:rubber_sheet');
     r('tfmg:generator');
     r('tfmg:electric_diode');
+    // Chemica rutile grades (TFC Metallurgy rutile is used instead)
+    ;['rutile_crystal', 'medium_grade_rutile_crystal', 'high_grade_rutile_crystal'].forEach(i => r('chemica:' + i));
     ;['aluminum_cable_hub', 'brass_cable_hub', 'copper_cable_hub', 'heavy_cable_hub', 'steel_cable_hub', 'steel_casing_cable_hub',
       'cable_connector', 'cable_tube', 'concrete_encased_cable_tube', 'copycat_cable_base', 'copycat_cable_block', 'diagonal_cable_block',
       'electric_post', 'concrete_encased_electric_post', 'glass_cable_insulator', 'large_switch', 'electric_motor', 'heavy_electric_motor',

@@ -1,0 +1,27 @@
+{
+  "compositions": [
+    {
+      "elements": [
+        {
+          "amount": 2,
+          "id": "rutile:hydrogen"
+        },
+        {
+          "amount": 1,
+          "id": "rutile:niobium"
+        },
+        {
+          "amount": 1,
+          "id": "rutile:oxygen"
+        },
+        {
+          "amount": 5,
+          "id": "rutile:fluorine"
+        }
+      ]
+    }
+  ],
+  "contents": [
+    "kubejs:fluoroniobic_acid"
+  ]
+}

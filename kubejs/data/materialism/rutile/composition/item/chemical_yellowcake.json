@@ -1,0 +1,27 @@
+{
+  "compositions": [
+    {
+      "elements": [
+        {
+          "amount": 2,
+          "id": "rutile:nitrogen"
+        },
+        {
+          "amount": 8,
+          "id": "rutile:hydrogen"
+        },
+        {
+          "amount": 2,
+          "id": "rutile:uranium"
+        },
+        {
+          "amount": 7,
+          "id": "rutile:oxygen"
+        }
+      ]
+    }
+  ],
+  "contents": [
+    "kubejs:powder/yellowcake"
+  ]
+}

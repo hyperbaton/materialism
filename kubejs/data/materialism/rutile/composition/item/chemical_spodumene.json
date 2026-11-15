@@ -1,0 +1,28 @@
+{
+  "compositions": [
+    {
+      "elements": [
+        {
+          "amount": 1,
+          "id": "rutile:lithium"
+        },
+        {
+          "amount": 1,
+          "id": "rutile:aluminum"
+        },
+        {
+          "amount": 2,
+          "id": "rutile:silicon"
+        },
+        {
+          "amount": 6,
+          "id": "rutile:oxygen"
+        }
+      ]
+    }
+  ],
+  "contents": [
+    "kubejs:powder/spodumene",
+    "kubejs:powder/beta_spodumene"
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "compositions": [
+    {
+      "elements": [
+        {
+          "amount": 1,
+          "id": "rutile:niobium"
+        },
+        {
+          "amount": 5,
+          "id": "rutile:oxygen"
+        },
+        {
+          "amount": 5,
+          "id": "rutile:hydrogen"
+        }
+      ]
+    }
+  ],
+  "contents": [
+    "kubejs:powder/niobium_hydroxide"
+  ]
+}

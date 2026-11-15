@@ -71,6 +71,8 @@ config/iris-excluded.json
 config/ftblibrary-client.snbt
 config/ftbquests-client.snbt
 kubejs/config/probe-settings.json
+config/voicechat/voicechat-client.properties
+config/collapsiblegroups/expand_state.json
 
 # Rock layer scan export (script and its output)
 kubejs/server_scripts/exportLogs/scanRockLayers.js

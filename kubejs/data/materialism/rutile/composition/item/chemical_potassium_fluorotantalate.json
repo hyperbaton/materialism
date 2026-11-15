@@ -1,0 +1,23 @@
+{
+  "compositions": [
+    {
+      "elements": [
+        {
+          "amount": 2,
+          "id": "rutile:potassium"
+        },
+        {
+          "amount": 1,
+          "id": "rutile:tantalum"
+        },
+        {
+          "amount": 7,
+          "id": "rutile:fluorine"
+        }
+      ]
+    }
+  ],
+  "contents": [
+    "kubejs:powder/potassium_fluorotantalate"
+  ]
+}

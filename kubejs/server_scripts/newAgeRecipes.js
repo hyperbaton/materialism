@@ -593,7 +593,7 @@ ServerEvents.recipes(event => {
       G: 'tfc_metallurgy:metal/rod/graphite'
     })
 
-    event.remove('create_new_age:thorium/thorium_crushing')
+    event.remove('create_new_age:thorium/radioactive_thorium')
     event.custom({type: 'create_optical:focusing',
       ingredients: [{item: 'tfc_metallurgy:metal/ingot/thorium'}],
       results: [{id: 'create_new_age:radioactive_thorium'}],

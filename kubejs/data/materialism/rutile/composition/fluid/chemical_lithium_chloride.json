@@ -1,0 +1,19 @@
+{
+  "compositions": [
+    {
+      "elements": [
+        {
+          "amount": 1,
+          "id": "rutile:lithium"
+        },
+        {
+          "amount": 1,
+          "id": "rutile:chlorine"
+        }
+      ]
+    }
+  ],
+  "contents": [
+    "kubejs:lithium_chloride"
+  ]
+}

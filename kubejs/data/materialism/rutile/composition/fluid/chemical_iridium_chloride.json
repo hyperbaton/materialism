@@ -1,0 +1,19 @@
+{
+  "compositions": [
+    {
+      "elements": [
+        {
+          "amount": 1,
+          "id": "rutile:iridium"
+        },
+        {
+          "amount": 3,
+          "id": "rutile:chlorine"
+        }
+      ]
+    }
+  ],
+  "contents": [
+    "kubejs:iridium_chloride"
+  ]
+}

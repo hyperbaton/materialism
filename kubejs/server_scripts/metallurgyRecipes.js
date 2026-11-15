@@ -48,22 +48,13 @@ ServerEvents.recipes(event => {
     event.recipes.create.crushing('3x kubejs:powder/monazite', 'tfc_metallurgy:ore/poor_monazite')
     event.recipes.create.crushing('5x kubejs:powder/monazite', 'tfc_metallurgy:ore/normal_monazite')
     event.recipes.create.crushing('7x kubejs:powder/monazite', 'tfc_metallurgy:ore/rich_monazite')
-    // It seems it's not possible to put more than 1 item quantity in the input. For now, let's just reduce how much we get.
-    event.custom({type: 'tfmg:industrial_blasting',
-      ingredients: [{item: 'kubejs:powder/monazite'}],
-      results: [{id: 'tfc_metallurgy:metal/thorium', amount: 5}, {id: 'tfmg:molten_slag', amount: 1}],
-      processing_time: 500
-    })
+    // Monazite powder goes through the caustic digestion line in metalExtractionRecipes.js
     event.remove({id: /tfc_metallurgy:heating\/ore.*uraninite/})
     event.recipes.create.crushing('2x kubejs:powder/uraninite', 'tfc_metallurgy:ore/small_uraninite')
     event.recipes.create.crushing('3x kubejs:powder/uraninite', 'tfc_metallurgy:ore/poor_uraninite')
     event.recipes.create.crushing('5x kubejs:powder/uraninite', 'tfc_metallurgy:ore/normal_uraninite')
     event.recipes.create.crushing('7x kubejs:powder/uraninite', 'tfc_metallurgy:ore/rich_uraninite')
-    event.custom({type: 'tfmg:industrial_blasting',
-      ingredients: [{item: 'kubejs:powder/uraninite'}],
-      results: [{id: 'tfc_metallurgy:metal/uranium', amount: 5}, {id: 'tfmg:molten_slag', amount: 1}],
-      processing_time: 2000
-    })
+    // Uraninite powder goes through the acid leach line in metalExtractionRecipes.js
     // Dusts for the base TFC metals (TFC Metallurgy only adds dusts for its own metals)
     const baseMetalDusts = {
         bismuth: 270, bismuth_bronze: 985, black_bronze: 1070, black_steel: 1485, blue_steel: 1540,

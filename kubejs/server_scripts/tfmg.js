@@ -567,8 +567,8 @@ ServerEvents.recipes(event => {
   event.recipes.create.compacting('tfmg:galena', Ingredient.of('tfc_metallurgy:ore/normal_galena', 4))
   event.recipes.create.compacting('tfmg:galena', Ingredient.of('tfc_metallurgy:ore/poor_galena', 7))
   event.recipes.create.compacting('tfmg:galena', Ingredient.of('tfc_metallurgy:ore/small_galena', 10))
-  event.recipes.tfc.heating('tfmg:bauxite', 660)
-    .resultFluid(Fluid.of('tfc_metallurgy:metal/aluminum', 100))
+  event.recipes.tfc.heating('tfmg:bauxite', 1600)
+    .resultFluid(Fluid.of('tfc_metallurgy:metal/aluminum', 20))
   event.recipes.tfc.heating('tfmg:galena', 328)
     .resultFluid(Fluid.of('tfc_metallurgy:metal/lead', 100))
   
@@ -882,6 +882,22 @@ ServerEvents.recipes(event => {
     results: [{id: 'kubejs:liquid_air', amount: 200}],
     processing_time: 400
   })
+  // Linde cycle alternative: a compressor and four freezers under a big steel vat, no coolant but a lot of power (75 ohm each, 10 A = 7.5 kW)
+  event.custom({
+    type: 'tfmg:vat',
+    allowed_vat_types: ['tfmg:steel'],
+    machines: ['tfmg:compressor', 'tfmg:freezer', 'tfmg:freezer', 'tfmg:freezer', 'tfmg:freezer'],
+    min_size: 27,
+    heat_level: -4,
+    pressure: 1,
+    min_current: 10,
+    energy: 1200 * 30000,
+    ingredients: [
+      {type: 'neoforge:single', amount: 2000, fluid: 'tfmg:air'}
+    ],
+    processing_time: 600,
+    results: [{id: 'kubejs:liquid_air', amount: 400}]
+  }).id('kubejs:vat/liquid_air_refrigerated')
   // Layers fill bottom to top, from the highest to the lowest boiling point
   event.custom({
     type: 'tfmg:distillation',
@@ -1158,48 +1174,6 @@ ServerEvents.recipes(event => {
     ingredients: [{tag: 'c:sands/silica'}],
     processing_time: 5,
     results: [{amount: 40, id: 'tfmg:liquid_silicon'}]
-  })
-
-  // Industrial blasting for boron (kernite ore pieces → molten boron)
-  event.custom({
-    type: 'tfmg:industrial_blasting',
-    hot_air_usage: 30,
-    ingredients: [{item: 'tfc_metallurgy:ore/small_kernite'}],
-    processing_time: 15,
-    results: [
-      {amount: 10, id: 'tfc_metallurgy:metal/boron'},
-      {amount: 50, id: 'tfmg:molten_slag'}
-    ]
-  })
-  event.custom({
-    type: 'tfmg:industrial_blasting',
-    hot_air_usage: 30,
-    ingredients: [{item: 'tfc_metallurgy:ore/poor_kernite'}],
-    processing_time: 15,
-    results: [
-      {amount: 15, id: 'tfc_metallurgy:metal/boron'},
-      {amount: 50, id: 'tfmg:molten_slag'}
-    ]
-  })
-  event.custom({
-    type: 'tfmg:industrial_blasting',
-    hot_air_usage: 30,
-    ingredients: [{item: 'tfc_metallurgy:ore/normal_kernite'}],
-    processing_time: 15,
-    results: [
-      {amount: 25, id: 'tfc_metallurgy:metal/boron'},
-      {amount: 50, id: 'tfmg:molten_slag'}
-    ]
-  })
-  event.custom({
-    type: 'tfmg:industrial_blasting',
-    hot_air_usage: 30,
-    ingredients: [{item: 'tfc_metallurgy:ore/rich_kernite'}],
-    processing_time: 15,
-    results: [
-      {amount: 35, id: 'tfc_metallurgy:metal/boron'},
-      {amount: 50, id: 'tfmg:molten_slag'}
-    ]
   })
 
   // Industrial blasting for steel (iron powder + flux → molten steel)

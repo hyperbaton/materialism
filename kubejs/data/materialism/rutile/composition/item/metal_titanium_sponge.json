@@ -1,0 +1,17 @@
+{
+  "compositions": [
+    {
+      "elements": [
+        {
+          "amount": 1,
+          "id": "rutile:titanium"
+        }
+      ]
+    }
+  ],
+  "contents": [
+    "kubejs:crude_titanium_sponge",
+    "kubejs:titanium_sponge",
+    "kubejs:titanium_electrode"
+  ]
+}

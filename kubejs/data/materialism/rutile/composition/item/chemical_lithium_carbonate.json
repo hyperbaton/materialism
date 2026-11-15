@@ -1,0 +1,23 @@
+{
+  "compositions": [
+    {
+      "elements": [
+        {
+          "amount": 2,
+          "id": "rutile:lithium"
+        },
+        {
+          "amount": 1,
+          "id": "rutile:carbon"
+        },
+        {
+          "amount": 3,
+          "id": "rutile:oxygen"
+        }
+      ]
+    }
+  ],
+  "contents": [
+    "kubejs:powder/lithium_carbonate"
+  ]
+}

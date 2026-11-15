@@ -1,0 +1,23 @@
+{
+  "compositions": [
+    {
+      "elements": [
+        {
+          "amount": 1,
+          "id": "rutile:cerium"
+        },
+        {
+          "amount": 3,
+          "id": "rutile:oxygen"
+        },
+        {
+          "amount": 3,
+          "id": "rutile:hydrogen"
+        }
+      ]
+    }
+  ],
+  "contents": [
+    "kubejs:powder/rare_earth_hydroxide"
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "compositions": [
+    {
+      "elements": [
+        {
+          "amount": 2,
+          "id": "rutile:niobium"
+        },
+        {
+          "amount": 5,
+          "id": "rutile:oxygen"
+        }
+      ]
+    }
+  ],
+  "contents": [
+    "kubejs:powder/niobium_pentoxide"
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "compositions": [
+    {
+      "elements": [
+        {
+          "amount": 1,
+          "id": "rutile:thorium"
+        },
+        {
+          "amount": 4,
+          "id": "rutile:nitrogen"
+        },
+        {
+          "amount": 12,
+          "id": "rutile:oxygen"
+        }
+      ]
+    }
+  ],
+  "contents": [
+    "kubejs:thorium_nitrate"
+  ]
+}

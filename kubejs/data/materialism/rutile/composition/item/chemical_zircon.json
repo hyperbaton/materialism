@@ -1,0 +1,23 @@
+{
+  "compositions": [
+    {
+      "elements": [
+        {
+          "amount": 1,
+          "id": "rutile:zirconium"
+        },
+        {
+          "amount": 1,
+          "id": "rutile:silicon"
+        },
+        {
+          "amount": 4,
+          "id": "rutile:oxygen"
+        }
+      ]
+    }
+  ],
+  "contents": [
+    "kubejs:powder/zircon"
+  ]
+}

@@ -11,3 +11,11 @@
 	# Default: 1.0
 	# Range: 0.01 ~ 100.0
 	eeWattsPerTfmgWatt = 1.0
+	#°C a lit resistive heater pushes into the TFC heat consumer above it (a TFMG vat, a crucible) per unit of its heat; 1 heat is about 7.4 kW
+	# Default: 1000.0
+	# Range: 0.0 ~ 10000.0
+	resistiveHeaterDegreesPerHeat = 1000.0
+	#Highest °C a resistive heater can push, the limit of its heating element
+	# Default: 1800.0
+	# Range: 0.0 ~ 5000.0
+	resistiveHeaterMaxTemperature = 1800.0

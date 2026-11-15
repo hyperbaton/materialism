@@ -1,0 +1,19 @@
+{
+  "compositions": [
+    {
+      "elements": [
+        {
+          "amount": 1,
+          "id": "rutile:uranium"
+        },
+        {
+          "amount": 4,
+          "id": "rutile:fluorine"
+        }
+      ]
+    }
+  ],
+  "contents": [
+    "kubejs:powder/uranium_tetrafluoride"
+  ]
+}

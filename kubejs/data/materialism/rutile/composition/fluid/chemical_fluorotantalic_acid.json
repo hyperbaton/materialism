@@ -1,0 +1,23 @@
+{
+  "compositions": [
+    {
+      "elements": [
+        {
+          "amount": 2,
+          "id": "rutile:hydrogen"
+        },
+        {
+          "amount": 1,
+          "id": "rutile:tantalum"
+        },
+        {
+          "amount": 7,
+          "id": "rutile:fluorine"
+        }
+      ]
+    }
+  ],
+  "contents": [
+    "kubejs:fluorotantalic_acid"
+  ]
+}

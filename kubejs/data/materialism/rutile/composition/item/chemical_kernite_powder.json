@@ -1,0 +1,27 @@
+{
+  "compositions": [
+    {
+      "elements": [
+        {
+          "amount": 2,
+          "id": "rutile:sodium"
+        },
+        {
+          "amount": 4,
+          "id": "rutile:boron"
+        },
+        {
+          "amount": 11,
+          "id": "rutile:oxygen"
+        },
+        {
+          "amount": 8,
+          "id": "rutile:hydrogen"
+        }
+      ]
+    }
+  ],
+  "contents": [
+    "kubejs:powder/kernite"
+  ]
+}
