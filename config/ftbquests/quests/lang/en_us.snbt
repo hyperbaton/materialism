@@ -1,0 +1,1600 @@
+{
+	chapter_group.160F5791078B9764.title: "Main Path"
+	chapter_group.3E009514FEB829B8.title: "Branches"
+	chapter.6CAD417204CD4FFF.title: "First Steps"
+	chapter.6CAD417204CD4FFF.chapter_subtitle: ["Bare hands to fired pottery. Stone tools, food, water, shelter and the pit kiln."]
+	quest.74FF71154D3118B1.title: "Loose Rocks"
+	quest.74FF71154D3118B1.quest_subtitle: "Everything starts on the ground"
+	quest.74FF71154D3118B1.quest_desc: ["Before you can make anything, you need stone. Loose rocks lie on the surface almost everywhere, so just pick them up. You need two in hand to knap."]
+	task.293FEE79595984FC.title: "Any Rock"
+	quest.4BFB579A92804318.title: "Sticks"
+	quest.4BFB579A92804318.quest_subtitle: "Handles for everything you knap"
+	quest.4BFB579A92804318.quest_desc: ["A tool head is only half a tool. Pick up sticks from the ground, or break them off bushes and dead branches."]
+	quest.3AE2A41115A1C181.title: "A Knife Head"
+	quest.3AE2A41115A1C181.quest_subtitle: "Rock in, tool head out"
+	quest.3AE2A41115A1C181.quest_desc: ["Hold two rocks and strike away pieces in the knapping grid. A knife head is the simplest shape to start with."]
+	task.6B55BFA771FB425C.title: "Any Stone Knife Head"
+	quest.4AB168BAE1584829.title: "A Stone Knife"
+	quest.4AB168BAE1584829.quest_subtitle: "Rock in, tool head out"
+	quest.4AB168BAE1584829.quest_desc: ["Put a stick on the knife head. It cuts straw, skins hides and opens most of what follows."]
+	task.10002B3EB2BBFF35.title: "Any Stone Knife"
+	quest.61FE2DA856EB3726.title: "More Tool Heads"
+	quest.61FE2DA856EB3726.quest_subtitle: "Axe, shovel, hammer, hoe"
+	quest.61FE2DA856EB3726.quest_desc: ["Knap the other stone heads. Each one is a different pattern in the knapping grid."]
+	task.6A705179443708EA.title: "Any Stone Axe Head"
+	task.06499F51ED47DFF0.title: "Any Stone Shovel Head"
+	task.6C4CAD08A2B85586.title: "Any Stone Hammer Head"
+	task.1C4A76E32AC510E6.title: "Any Stone Hoe Head"
+	quest.61A93B86BEFF9234.title: "A Complete Toolkit"
+	quest.61A93B86BEFF9234.quest_subtitle: "Axe, shovel, hammer, hoe"
+	quest.61A93B86BEFF9234.quest_desc: ["Fit each head with a stick. The axe fells trees, the shovel digs clay, the hammer makes anvils and flux, and the hoe works soil."]
+	task.117E73D66C31D6C3.title: "Any Stone Axe"
+	task.3F1228E1CD018C0F.title: "Any Stone Shovel"
+	task.5726F2C3D5FEEE4A.title: "Any Stone Hammer"
+	task.7650C97DF8349691.title: "Any Stone Hoe"
+	quest.660DF97AA55B1189.title: "Straw"
+	quest.660DF97AA55B1189.quest_subtitle: "Cut from tall grass"
+	quest.660DF97AA55B1189.quest_desc: ["Use your knife on tall grass and similar plants. Straw thatches roofs, lines pit kilns and starts fires."]
+	quest.6CCE71257B530C8C.title: "Thatch"
+	quest.6CCE71257B530C8C.quest_subtitle: "Four straw, woven together"
+	quest.6CCE71257B530C8C.quest_desc: ["A light, quick building block, and half of a proper bed."]
+	quest.422AEF4BF2BD5C9F.title: "A Large Hide"
+	quest.422AEF4BF2BD5C9F.quest_subtitle: "Hunt, then skin"
+	quest.422AEF4BF2BD5C9F.quest_desc: ["Hunt a large animal and take its hide. This is also your first step towards leather."]
+	quest.71113F5A966A6069.title: "A Place to Sleep"
+	quest.71113F5A966A6069.quest_subtitle: "Thatch and a hide"
+	quest.71113F5A966A6069.quest_desc: ["With thatch and a large hide, make a bed where you stand. Sleeping skips the most dangerous hours."]
+	quest.07D7EA0014B110E2.title: "Logs"
+	quest.07D7EA0014B110E2.quest_subtitle: "Fell a tree"
+	quest.07D7EA0014B110E2.quest_desc: ["Fuel, lumber, charcoal and barrels all start here. Any tree will do."]
+	task.5C9C156CDFA16088.title: "Any Logs"
+	quest.3A8A81D3A01D745F.title: "The Firestarter"
+	quest.3A8A81D3A01D745F.quest_subtitle: "Two sticks and patience"
+	quest.3A8A81D3A01D745F.quest_desc: ["Craft a firestarter from sticks. Fire is what everything else in this chapter is waiting for."]
+	quest.313D63AEF9710FD8.title: "The Firepit"
+	quest.313D63AEF9710FD8.quest_subtitle: "Your first real heat source"
+	quest.313D63AEF9710FD8.quest_desc: ["Drop sticks and straw on the ground with a log, and use the firestarter. A firepit cooks food, gives warmth and takes a pot or a grill later."]
+	quest.7644B41846F9A19E.title: "Cooking"
+	quest.7644B41846F9A19E.quest_subtitle: "Don't eat it raw"
+	quest.7644B41846F9A19E.quest_desc: ["Cook meat on a lit firepit. Cooked food is safer, keeps longer and feeds you better."]
+	task.60358230BEC021D9.title: "Any Cooked Meat"
+	quest.7809992CF7AEB2E6.title: "Clay"
+	quest.7809992CF7AEB2E6.quest_subtitle: "Look for the surface tell"
+	quest.7809992CF7AEB2E6.quest_desc: ["Clay patches are marked by certain plants nearby. Dig them with your shovel, and take plenty."]
+	quest.155ADEF7336331A6.title: "Shaping a Vessel"
+	quest.155ADEF7336331A6.quest_subtitle: "Clay, worked by hand"
+	quest.155ADEF7336331A6.quest_desc: ["Knap clay in your hand into an unfired vessel. It has to be fired before you can use it."]
+	quest.38AB6EF4A503435E.title: "The Pit Kiln"
+	quest.38AB6EF4A503435E.quest_subtitle: "Fire without a real kiln"
+	quest.38AB6EF4A503435E.quest_desc: ["Dig a shallow pit, place your unfired clay in it, then cover it with straw and logs and light it. It is slow, but it gets hot enough to melt most metals in a vessel."]
+	quest.7765CD7C784DB930.title: "First Ceramics"
+	quest.7765CD7C784DB930.quest_subtitle: "Vessels, jugs and molds"
+	quest.7765CD7C784DB930.quest_desc: ["A fired vessel stores food, and it holds molten metal for casting."]
+	quest.3DB10FE83C2BE1DB.title: "Dress for the Weather"
+	quest.3DB10FE83C2BE1DB.quest_subtitle: "Body heat matters"
+	quest.3DB10FE83C2BE1DB.quest_desc: ["Your body temperature counts here, so wear what suits the climate. A straw hat keeps the sun off, and insulated hide keeps the cold out."]
+	quest.4660D2328FE7CFD4.title: "A Jug"
+	quest.4660D2328FE7CFD4.quest_subtitle: "Water you can carry"
+	quest.4660D2328FE7CFD4.quest_desc: ["You get thirsty here. A fired jug carries water with you, so you can leave the river behind."]
+	chapter.6FF7B79A48B3DB3D.title: "Copper Age"
+	chapter.6FF7B79A48B3DB3D.chapter_subtitle: ["First metal, and the end of guessing where ore is. Includes the old Prospecting chapter."]
+	quest.5F85A814E91061BD.title: "Surface Tells"
+	quest.5F85A814E91061BD.quest_subtitle: "Ore lying on the ground"
+	quest.5F85A814E91061BD.quest_desc: ["Small ore pieces on the surface are real ore, and they mean a vein lies somewhere below. Look for native copper, malachite or tetrahedrite. Ten pieces melt into exactly one ingot."]
+	task.3AF6D8A11D002493.title: "Any Small Copper Ore"
+	quest.5D9CEC2405F911FD.title: "Shaping a Mold"
+	quest.5D9CEC2405F911FD.quest_subtitle: "Clay, knapped"
+	quest.5D9CEC2405F911FD.quest_desc: ["Knap clay into an ingot mold. Like a vessel, it must be fired before it holds metal."]
+	quest.2BC103FC65D2E80F.title: "An Ingot Mold"
+	quest.2BC103FC65D2E80F.quest_subtitle: "Shaped from clay, fired like a vessel"
+	quest.2BC103FC65D2E80F.quest_desc: ["Knap clay into an ingot mold and fire it in a pit kiln."]
+	quest.252DCBC3CE3A5C33.title: "A Copper Ingot"
+	quest.252DCBC3CE3A5C33.quest_subtitle: "Your first real metal"
+	quest.252DCBC3CE3A5C33.quest_desc: ["Fill a vessel with ore and heat it in a pit kiln until it melts. Then pour the melt into your mold. Nearly all metal from here on starts the same way."]
+	quest.1E99D0D162476EE7.title: "Tool Head Molds"
+	quest.1E99D0D162476EE7.quest_subtitle: "One mold per tool shape"
+	quest.1E99D0D162476EE7.quest_desc: ["Knap and fire a mold for each tool head you want. They work the same way as the ingot mold."]
+	quest.339E594BB30A4498.title: "Casting Tool Heads"
+	quest.339E594BB30A4498.quest_subtitle: "Pour into the mold"
+	quest.339E594BB30A4498.quest_desc: ["Fill a tool mold with molten copper from a vessel and let it set. Break the mold open, or keep it if it survives, and you have a metal head."]
+	task.593159A18565F052.title: "Any Casting Tool Heads"
+	quest.07E99D4D087CE8F0.title: "The Pickaxe"
+	quest.07E99D4D087CE8F0.quest_subtitle: "Now you can mine"
+	quest.07E99D4D087CE8F0.quest_desc: ["Cast a pickaxe head and add a stick. There is no stone pickaxe, so nothing below the surface can be mined until now."]
+	task.1584DBF4B9504167.title: "Any Pickaxe"
+	quest.73B4D7C54619B949.title: "The Prospector's Pick"
+	quest.73B4D7C54619B949.quest_subtitle: "No more guessing"
+	quest.73B4D7C54619B949.quest_desc: ["Right-click rock with it to read what ore lies nearby."]
+	task.556D923548D5C8B1.title: "Any Prospector's Pick"
+	quest.5D3ADCC4ECED777F.title: "Finding Veins"
+	quest.5D3ADCC4ECED777F.quest_subtitle: "Put the pick to work"
+	quest.5D3ADCC4ECED777F.quest_desc: ["Each rock type carries its own minerals, and the layers you see on a cliff continue underground. Follow your readings until the pick reports a vein underfoot."]
+	quest.793D0625A66AE2A8.title: "The Saw"
+	quest.793D0625A66AE2A8.quest_subtitle: "Unlocks lumber"
+	quest.793D0625A66AE2A8.quest_desc: ["Nothing before this can make lumber: there is no stone saw."]
+	task.7C01C5936030E984.title: "Any Saw"
+	quest.048F5A9A69345557.title: "The Chisel"
+	quest.048F5A9A69345557.quest_subtitle: "Smooth stone and cut parts"
+	quest.048F5A9A69345557.quest_desc: ["Chisels smooth rock, and much later they cut your first shafts."]
+	task.6F02563047A1CD3F.title: "Any Chisel"
+	chapter.1622FC149F30DA4A.title: "Woodworking \\& Storage"
+	chapter.1622FC149F30DA4A.chapter_subtitle: ["Any wood counts. Saws turn logs into everything a base is made of."]
+	quest.54C843168E5E1157.title: "Lumber"
+	quest.54C843168E5E1157.quest_subtitle: "Eight per log"
+	quest.54C843168E5E1157.quest_desc: ["Saw a log into lumber. Chests, barrels and bellows are all built from it, and every wood works the same."]
+	task.66E0020158FDCD7E.title: "Any Lumber"
+	quest.5FB215472BC351AF.title: "Planks"
+	quest.5FB215472BC351AF.quest_subtitle: "Four lumber, one plank"
+	quest.5FB215472BC351AF.quest_desc: ["Craft lumber into planks. Workbenches need planks, not lumber."]
+	task.5F07DE45CEAD7DBE.title: "Any Planks"
+	quest.236246E777CA001C.title: "The Workbench"
+	quest.236246E777CA001C.quest_subtitle: "Your real crafting table"
+	quest.236246E777CA001C.quest_desc: ["Craft a workbench from four planks. Many recipes from here on need a full crafting grid."]
+	task.5F2ACE76877B44DF.title: "Any Workbench"
+	quest.7BB4E24F34E39105.title: "A Chest"
+	quest.7BB4E24F34E39105.quest_subtitle: "Storage, finally"
+	quest.7BB4E24F34E39105.quest_desc: ["Eight lumber in a ring."]
+	task.0B6250AEF2BC7CA6.title: "Any Chest"
+	quest.6EAF761D972C49A8.title: "Support Beams"
+	quest.6EAF761D972C49A8.quest_subtitle: "Keep the mine from collapsing"
+	quest.6EAF761D972C49A8.quest_desc: ["Saw logs into support beams. Large open spaces underground cave in without them, so carry a stack before you dig out a real mine."]
+	task.4545CC70D395A032.title: "Any Support Beam"
+	chapter.356599EC71437881.title: "Barrel Processing"
+	chapter.356599EC71437881.chapter_subtitle: ["A whole crafting system in a box: leather, mortar, paper and preserved food."]
+	quest.31BA91869E63D383.title: "The Barrel"
+	quest.31BA91869E63D383.quest_subtitle: "A whole crafting system in a box"
+	quest.31BA91869E63D383.quest_desc: ["Craft a barrel from lumber. Sealing ingredients in one unlocks leather, alcohol, mortar, paper and food preservation."]
+	task.4B4176799A935C39.title: "Any Barrel"
+	quest.3A3D7855DB6E0423.title: "Limewater"
+	quest.3A3D7855DB6E0423.quest_subtitle: "Flux in water"
+	quest.3A3D7855DB6E0423.quest_desc: ["Seal flux in a barrel of water. It is the base of tanning and mortar."]
+	quest.71967F52B2C074E7.title: "Tannin"
+	quest.71967F52B2C074E7.quest_subtitle: "Bark, soaked in water"
+	quest.71967F52B2C074E7.quest_desc: ["Seal bark from a tannin-rich tree in a barrel of water. Birch and chestnut both work, among others."]
+	quest.0EEC0D0C01758B8C.title: "A Soaked Hide"
+	quest.0EEC0D0C01758B8C.quest_subtitle: "Step one: limewater"
+	quest.0EEC0D0C01758B8C.quest_desc: ["Seal a raw hide in a barrel of limewater. It loosens the hair and flesh."]
+	task.01B64DA347189078.title: "Any Soaked Hide"
+	quest.67434EB1CF9CB312.title: "A Scraped Hide"
+	quest.67434EB1CF9CB312.quest_subtitle: "Step two: the knife"
+	quest.67434EB1CF9CB312.quest_desc: ["Place the soaked hide on top of a log and scrape it with your knife."]
+	task.3C79C30892B10ED0.title: "Any Scraped Hide"
+	quest.2F732D2E47807A5E.title: "A Prepared Hide"
+	quest.2F732D2E47807A5E.quest_subtitle: "Step three: rinse"
+	quest.2F732D2E47807A5E.quest_desc: ["Seal the scraped hide in a barrel of fresh water to wash the lime out."]
+	task.1B96CD6B61319BC6.title: "Any Prepared Hide"
+	quest.1E13A0C8E8BAD5EC.title: "Leather"
+	quest.1E13A0C8E8BAD5EC.quest_subtitle: "Soak, scrape, soak, soak"
+	quest.1E13A0C8E8BAD5EC.quest_desc: ["Seal the prepared hide in tannin. What comes out is real leather, the last step of four."]
+	quest.5724AF9507731FB9.title: "Brewing \\& Aging"
+	quest.5724AF9507731FB9.quest_subtitle: "Sealed and left alone"
+	quest.5724AF9507731FB9.quest_desc: ["Seal a food in a water barrel and let it sit. Grain, fruit and sugar give different drinks, and upper classes pay attention to which."]
+	quest.20DF0C13F2C600AD.title: "Mortar"
+	quest.20DF0C13F2C600AD.quest_subtitle: "Sand and limewater"
+	quest.20DF0C13F2C600AD.quest_desc: ["Seal sand in limewater. Mortar binds stone bricks into proper walls."]
+	quest.577BB03B3430453A.title: "Papyrus Strips"
+	quest.577BB03B3430453A.quest_subtitle: "Cut with a knife"
+	quest.577BB03B3430453A.quest_desc: ["Papyrus grows wild in warm wetlands. Cut it into strips with a knife."]
+	quest.7AEB6D186FF1C4B8.title: "Soaked Strips"
+	quest.7AEB6D186FF1C4B8.quest_subtitle: "A day in water"
+	quest.7AEB6D186FF1C4B8.quest_desc: ["Seal the strips in a barrel of water until they soften."]
+	quest.379B3F6BD45435C3.title: "The Loom"
+	quest.379B3F6BD45435C3.quest_subtitle: "For weaving"
+	quest.379B3F6BD45435C3.quest_desc: ["Build a loom. Paper, burlap and wool cloth are all woven on it."]
+	task.4937CD30FA3C0BCC.title: "Any Loom"
+	quest.07FD2957BAC19C26.title: "Unrefined Paper"
+	quest.07FD2957BAC19C26.quest_subtitle: "Woven on the loom"
+	quest.07FD2957BAC19C26.quest_desc: ["Weave four soaked strips on the loom into a sheet of unrefined paper."]
+	quest.745F1FEC5A1D24E3.title: "Paper"
+	quest.745F1FEC5A1D24E3.quest_subtitle: "Papyrus, soaked and woven"
+	quest.745F1FEC5A1D24E3.quest_desc: ["Place the unrefined paper on a log and scrape it smooth with your knife."]
+	quest.37DC051194DF1FD0.title: "Preserving Food"
+	quest.37DC051194DF1FD0.quest_subtitle: "Vinegar and brine"
+	quest.37DC051194DF1FD0.quest_desc: ["Make vinegar from alcohol and fruit, and brine from salt water and vinegar. Then brine and pickle your food. Pickled food barely decays."]
+	chapter.4F8D8F7E93FD13E7.title: "Anvils \\& Forging"
+	chapter.4F8D8F7E93FD13E7.chapter_subtitle: ["Charcoal, flux and the first anvils. Flux comes first here, because welding needs it from the very first double ingot."]
+	quest.3D30067DA7362B13.title: "Flux"
+	quest.3D30067DA7362B13.quest_subtitle: "Crushed fluxstone"
+	quest.3D30067DA7362B13.quest_desc: ["Crush fluxstone with a hammer. Every weld needs flux, starting with your first double ingot, and limewater needs it too."]
+	quest.511EABEA0E823FBC.title: "The Stone Anvil"
+	quest.511EABEA0E823FBC.quest_subtitle: "Right-click, don't craft"
+	quest.511EABEA0E823FBC.quest_desc: ["No recipe makes this. Right-click the top of raw igneous rock with a hammer and it becomes an anvil. It is too weak to forge metal, but it can weld two ingots into one."]
+	quest.1975673D8698942D.title: "The Charcoal Pit"
+	quest.1975673D8698942D.quest_subtitle: "Logs, buried and lit"
+	quest.1975673D8698942D.quest_desc: ["Stack logs into a log pile, cover it completely with dirt or other blocks so no air gets in, and light it. Starved of air, it smoulders into a charcoal pile over several hours."]
+	quest.54DE10867CF49C2E.title: "Charcoal"
+	quest.54DE10867CF49C2E.quest_subtitle: "Bury logs, then burn them slow"
+	quest.54DE10867CF49C2E.quest_desc: ["Dig out the finished pile. Charcoal burns far hotter than wood, and every forge runs on it."]
+	quest.6285A50D84BBC917.title: "The Charcoal Forge"
+	quest.6285A50D84BBC917.quest_subtitle: "Five stones and a hot pile"
+	quest.6285A50D84BBC917.quest_desc: ["Surround a deep charcoal pile with five stone blocks and light it. It needs open sky above it to draw properly."]
+	quest.39C301D72E8E48BF.title: "A Double Ingot"
+	quest.39C301D72E8E48BF.quest_subtitle: "Weld two into one"
+	quest.39C301D72E8E48BF.quest_desc: ["Heat two copper ingots to welding temperature and weld them with flux on the stone anvil. This is the one job a stone anvil does well."]
+	quest.37503E08F44B82E2.title: "The Copper Anvil"
+	quest.37503E08F44B82E2.quest_subtitle: "Seven double ingots"
+	quest.37503E08F44B82E2.quest_desc: ["Craft a metal anvil from seven double ingots. It works at tier I."]
+	quest.58AAD5A29308D38F.title: "Real Forging"
+	quest.58AAD5A29308D38F.quest_subtitle: "Anvil plus forge"
+	quest.58AAD5A29308D38F.quest_desc: ["With heat and a metal anvil, you can forge parts properly by following the hit rules the anvil shows you. Start with a copper sheet."]
+	quest.393843AAF9FCFF61.title: "Bellows"
+	quest.393843AAF9FCFF61.quest_subtitle: "More air, more heat"
+	quest.393843AAF9FCFF61.quest_desc: ["Six lumber and three leather. Pumping bellows on a forge adds up to 600 °C, which you will need much sooner than you think."]
+	chapter.190C77EB2FDEB546.title: "Bronze \\& Crucible"
+	chapter.190C77EB2FDEB546.chapter_subtitle: ["First alloys and the tier II anvil. A vessel is enough for bronze. The crucible and fire clay form a second lane that the blast furnace needs."]
+	quest.302CF9688372A4A1.title: "Alloying Metals"
+	quest.302CF9688372A4A1.quest_subtitle: "Tin, bismuth or zinc"
+	quest.302CF9688372A4A1.quest_desc: ["Bronze needs a second metal: tin for bronze, bismuth and zinc for bismuth bronze, or silver and gold for black bronze. Look for their small ores and veins."]
+	task.6CA0FBEDA2EC3F9D.title: "Any Ingot"
+	quest.4D402106901FB0EF.title: "A Bronze Ingot"
+	quest.4D402106901FB0EF.quest_subtitle: "Hit the ratio, get the alloy"
+	quest.4D402106901FB0EF.quest_desc: ["Melt metals together in a vessel, and they alloy if the ratio is right. Bronze is about nine parts copper to one part tin. Bismuth bronze and black bronze work just as well, so use what your region gives you."]
+	task.4CE3F87BA4DE1C93.title: "Any Bronze Ingot"
+	quest.174C4310A1AA06FC.title: "Bronze Double Ingots"
+	quest.174C4310A1AA06FC.quest_subtitle: "Weld at tier I"
+	quest.174C4310A1AA06FC.quest_desc: ["Weld ingots of one bronze on your copper anvil."]
+	task.791629C8BD05200B.title: "Any Bronze Double Ingot"
+	quest.0707763CAB6FE51A.title: "The Bronze Anvil"
+	quest.0707763CAB6FE51A.quest_subtitle: "Tier II"
+	quest.0707763CAB6FE51A.quest_desc: ["Seven double ingots of any one bronze. The anvil ladder goes up one metal at a time from here."]
+	task.1D11B8AE4FABA43A.title: "Any Bronze Anvil"
+	quest.4FB55FBB394B9B83.title: "The Quern"
+	quest.4FB55FBB394B9B83.quest_subtitle: "Three smooth stones, three raw"
+	quest.4FB55FBB394B9B83.quest_desc: ["Grain, graphite and most minerals are ground here. Chisel smooth stone for it."]
+	quest.45E84AA7CD87F1E6.title: "Kaolin Clay"
+	quest.45E84AA7CD87F1E6.quest_subtitle: "A rarer clay"
+	quest.45E84AA7CD87F1E6.quest_desc: ["Kaolin clay is found in some regions instead of ordinary clay. Dig it like clay."]
+	task.1089E215CBDC0A6D.title: "Any Kaolin Clay"
+	quest.60E97CF1896309A6.title: "Kaolinite"
+	quest.60E97CF1896309A6.quest_subtitle: "Heat kaolin clay"
+	quest.60E97CF1896309A6.quest_desc: ["Heat kaolin clay to get kaolinite powder, though only part of it survives."]
+	quest.050AAB8FF301E85C.title: "Graphite"
+	quest.050AAB8FF301E85C.quest_subtitle: "Mined from its vein"
+	quest.050AAB8FF301E85C.quest_desc: ["Graphite comes from its own mineral vein. Mine some and take it to the quern."]
+	quest.7E073D54489D1DCA.title: "Graphite Powder"
+	quest.7E073D54489D1DCA.quest_subtitle: "From the quern"
+	quest.7E073D54489D1DCA.quest_desc: ["Mine graphite and grind it on a quern."]
+	quest.6CBB93B3CF9FA4CA.title: "Fire Clay"
+	quest.6CBB93B3CF9FA4CA.quest_subtitle: "Kaolinite and graphite"
+	quest.6CBB93B3CF9FA4CA.quest_desc: ["Combine kaolinite powder, graphite powder and clay. Crucibles and fire bricks are both made from it."]
+	quest.36F18523BC1E56EF.title: "An Unfired Crucible"
+	quest.36F18523BC1E56EF.quest_subtitle: "Fire clay, knapped"
+	quest.36F18523BC1E56EF.quest_desc: ["Knap fire clay into an unfired crucible."]
+	quest.176BCF909EF12AC1.title: "The Crucible"
+	quest.176BCF909EF12AC1.quest_subtitle: "Alloying in bulk"
+	quest.176BCF909EF12AC1.quest_desc: ["Knap fire clay into an unfired crucible and fire it. It holds far more metal than a vessel, and it goes inside your blast furnace."]
+	chapter.206BF17A869EA55D.title: "Iron Age"
+	chapter.206BF17A869EA55D.chapter_subtitle: ["The bloomery gives wrought iron, and wrought iron builds the blast furnace."]
+	quest.1BD74C2523FA6F4D.title: "Bronze Sheets"
+	quest.1BD74C2523FA6F4D.quest_subtitle: "Forged from double ingots"
+	quest.1BD74C2523FA6F4D.quest_desc: ["Forge double ingots of one bronze into sheets on your bronze anvil."]
+	task.467EF5B6C0A6D3BB.title: "Any Bronze Sheet"
+	quest.72DA1B57FB553B41.title: "Bronze Double Sheets"
+	quest.72DA1B57FB553B41.quest_subtitle: "Eight for one bloomery"
+	quest.72DA1B57FB553B41.quest_desc: ["Weld pairs of sheets into double sheets. Any bronze works."]
+	task.4D5A162FD5A5445C.title: "Any Bronze Double Sheet"
+	quest.74B5420D54FC7AB0.title: "The Bloomery"
+	quest.74B5420D54FC7AB0.quest_subtitle: "Eight double sheets"
+	quest.74B5420D54FC7AB0.quest_desc: ["Craft the bloomery, and build it into a stone chimney as the field guide shows. It takes ore directly, and it doesn't care how high a metal's melting point is. Remember that later."]
+	quest.6EB21F335F326CCF.title: "Iron Ore"
+	quest.6EB21F335F326CCF.quest_subtitle: "Hematite, magnetite or limonite"
+	quest.6EB21F335F326CCF.quest_desc: ["Find an iron vein: hematite, magnetite or limonite, each in its own rocks."]
+	task.1F69B6FFEEB79BFB.title: "Any Iron Ore"
+	quest.161CE790D0FAAAE4.title: "A Working Bloomery"
+	quest.161CE790D0FAAAE4.quest_subtitle: "Chimney and all"
+	quest.161CE790D0FAAAE4.quest_desc: ["Set the bloomery into a stone chimney, as the field guide shows, so it can draw air."]
+	quest.6DC8766ED1D35EC9.title: "A Raw Iron Bloom"
+	quest.6DC8766ED1D35EC9.quest_subtitle: "Ore and charcoal"
+	quest.6DC8766ED1D35EC9.quest_desc: ["Fill the bloomery with iron ore and charcoal, light it and wait. You get a spongy, impure lump."]
+	quest.156CE7CBAD2CEA8F.title: "A Refined Bloom"
+	quest.156CE7CBAD2CEA8F.quest_subtitle: "Hammered clean"
+	quest.156CE7CBAD2CEA8F.quest_desc: ["Work the raw bloom on your anvil to knock out the slag."]
+	quest.5BDD335BAEB5D3CD.title: "Wrought Iron"
+	quest.5BDD335BAEB5D3CD.quest_subtitle: "A real structural metal"
+	quest.5BDD335BAEB5D3CD.quest_desc: ["Work the refined bloom into an ingot."]
+	quest.3CE77F6BCCEEE09C.title: "The Wrought Iron Anvil"
+	quest.3CE77F6BCCEEE09C.quest_subtitle: "Tier III"
+	quest.3CE77F6BCCEEE09C.quest_desc: ["Seven double ingots, welded on your bronze anvil."]
+	quest.6AB4B307DCBBFB20.title: "The Tuyere"
+	quest.6AB4B307DCBBFB20.quest_subtitle: "Air into the furnace"
+	quest.6AB4B307DCBBFB20.quest_desc: ["Forge a tuyere from a wrought iron double sheet. Fitted to a bellows, it feeds the blast furnace."]
+	quest.0D31BC2ECF34F22A.title: "Unfired Fire Bricks"
+	quest.0D31BC2ECF34F22A.quest_subtitle: "Fire clay, shaped"
+	quest.0D31BC2ECF34F22A.quest_desc: ["Knap fire clay into unfired fire bricks."]
+	quest.72C9588819852E5B.title: "Fire Bricks"
+	quest.72C9588819852E5B.quest_subtitle: "They take the heat"
+	quest.72C9588819852E5B.quest_desc: ["Fire clay bricks, bound with mortar. The blast furnace is lined with them."]
+	quest.6A5F453B1A0438B4.title: "The Blast Furnace"
+	quest.6A5F453B1A0438B4.quest_subtitle: "A crucible in iron"
+	quest.6A5F453B1A0438B4.quest_desc: ["Eight wrought iron double sheets around a crucible. Build the tower as the field guide shows, with your tuyere and bellows."]
+	quest.773E83F816EEC773.title: "A Working Blast Furnace"
+	quest.773E83F816EEC773.quest_subtitle: "Built and fed with air"
+	quest.773E83F816EEC773.quest_desc: ["Build the furnace tower as the field guide shows, with the tuyere and bellows feeding it air."]
+	quest.16B0A12678349853.title: "Pig Iron"
+	quest.16B0A12678349853.quest_subtitle: "The bridge to steel"
+	quest.16B0A12678349853.quest_desc: ["Feed iron ore, flux and charcoal into the running furnace, then cast what comes out."]
+	chapter.3B5CD57AA4F3849D.title: "Steel Age"
+	chapter.3B5CD57AA4F3849D.chapter_subtitle: ["Pig iron becomes steel, and the steel anvil opens tier IV. It ends on the steel rod, the part every Create shaft starts from."]
+	quest.57DF9D26A5A41258.title: "High Carbon Steel"
+	quest.57DF9D26A5A41258.quest_subtitle: "Pig iron, beaten thin"
+	quest.57DF9D26A5A41258.quest_desc: ["Heat pig iron to working temperature and work it on your anvil. Most of the carbon is still in there, so it isn't steel yet."]
+	quest.035518F71EC5C806.title: "A Steel Ingot"
+	quest.035518F71EC5C806.quest_subtitle: "Beaten once more"
+	quest.035518F71EC5C806.quest_desc: ["Work the high carbon steel again to drive out the last of the excess carbon. Everything mechanical in this world grows from this ingot."]
+	quest.69CCA56805D52ED1.title: "Steel Double Ingots"
+	quest.69CCA56805D52ED1.quest_subtitle: "Weld two into one"
+	quest.69CCA56805D52ED1.quest_desc: ["Weld two steel ingots with flux. Welding needs one anvil tier less than forging, so a wrought iron anvil can do this."]
+	quest.5881E2EFD6D5B272.title: "The Steel Anvil"
+	quest.5881E2EFD6D5B272.quest_subtitle: "Tier IV"
+	quest.5881E2EFD6D5B272.quest_desc: ["Seven double ingots make the steel anvil. Forging any steel part needs one, and so does aluminium sheet."]
+	quest.514EEC713C07EA62.title: "Steel Sheets"
+	quest.514EEC713C07EA62.quest_subtitle: "Machines eat these"
+	quest.514EEC713C07EA62.quest_desc: ["Forge double ingots into sheets. Keep a stock: crushing wheels alone need sixteen."]
+	quest.28E92462F94F7A45.title: "Steel Double Sheets"
+	quest.28E92462F94F7A45.quest_subtitle: "For the heavy work"
+	quest.28E92462F94F7A45.quest_desc: ["Weld two sheets together. Later, a press and solder can do the same job without you."]
+	quest.22DC33318EC3ADE5.title: "Steel Rods"
+	quest.22DC33318EC3ADE5.quest_subtitle: "The first shaft starts here"
+	quest.22DC33318EC3ADE5.quest_desc: ["Forge steel rods. A pair of rods and a chisel gives you a shaft, and nothing turns without shafts."]
+	quest.705041C61B2F5AC5.title: "Steel Tools"
+	quest.705041C61B2F5AC5.quest_subtitle: "Better, not required"
+	quest.705041C61B2F5AC5.quest_desc: ["Every metal pickaxe mines every ore here, so steel tools buy you durability and speed, not access."]
+	quest.79C3ECB5AB980B91.title: "The Trip Hammer"
+	quest.79C3ECB5AB980B91.quest_subtitle: "Your arm gets a rest"
+	quest.79C3ECB5AB980B91.quest_desc: ["A TFC trip hammer works an anvil from axle power. It is a taste of what rotation can do, long before Create."]
+	chapter.171A21DA3925C375.title: "Deep Veins"
+	chapter.171A21DA3925C375.chapter_subtitle: ["The first real mine. Small surface ores are signposts. These metals and minerals come from the deep veins below them."]
+	quest.028A679789A7C67D.title: "A Real Mine"
+	quest.028A679789A7C67D.quest_subtitle: "Signposts point down"
+	quest.028A679789A7C67D.quest_desc: ["Small ores on the surface tell you what lies below, but they won't feed a factory. Follow them down with your prospector's pick, and shore up your tunnels with support beams."]
+	quest.01CD699C5DC5A7E4.title: "Mechanic: Collapses"
+	quest.01CD699C5DC5A7E4.quest_subtitle: "Thought the surface was hard?"
+	quest.01CD699C5DC5A7E4.quest_desc: ["Raw rock or ore with air below it is unsupported, and mining near it can start a cave-in. Cave roofs of hardened stone are safe. Support beams hold up the rock around them, so place them as you dig."]
+	quest.2378788924E5D9A1.title: "Nickel"
+	quest.2378788924E5D9A1.quest_subtitle: "Garnierite, far below"
+	quest.2378788924E5D9A1.quest_desc: ["Garnierite only generates deep, from Y -180 to -10. Electron tubes need nickel sheet, so this mine comes before any serious machine."]
+	quest.61D26D7F6A54AFF3.title: "Aluminium"
+	quest.61D26D7F6A54AFF3.quest_subtitle: "Bauxite melts easily"
+	quest.61D26D7F6A54AFF3.quest_desc: ["Bauxite veins sit between Y -40 and 40. Bauxite ore only melts at 1600 °C, which needs a forge with bellows, and it gives just 2 to 7 mB by grade. You need a lot of ore for a little aluminium until the Bayer and Hall–Héroult line. Its forged parts need a tier IV anvil."]
+	quest.57745AF9BC82C558.title: "Aluminium Double Ingots"
+	quest.57745AF9BC82C558.quest_subtitle: "Tier III is enough to weld"
+	quest.57745AF9BC82C558.quest_desc: ["Weld aluminium ingots on your wrought iron anvil."]
+	quest.175233B3242872A8.title: "The Aluminium Anvil"
+	quest.175233B3242872A8.quest_subtitle: "A second way to tier IV"
+	quest.175233B3242872A8.quest_desc: ["An aluminium anvil works at tier IV, just like steel. Useful if your bauxite turns up before your steel does."]
+	quest.03E67F66005810E1.title: "Aluminium Sheets"
+	quest.03E67F66005810E1.quest_subtitle: "Machines start as casings"
+	quest.03E67F66005810E1.quest_desc: ["Forge aluminium sheets at tier IV. Almost every Create machine sits in a casing made from these."]
+	quest.3C028FF67824DC74.title: "Brass"
+	quest.3C028FF67824DC74.quest_subtitle: "Copper and zinc"
+	quest.3C028FF67824DC74.quest_desc: ["Alloy copper with zinc. Brass goes into hands, casings, mechanisms and your glass table."]
+	quest.0170480B29CC3824.title: "Magnesium"
+	quest.0170480B29CC3824.quest_subtitle: "Magnesite, smelted hot"
+	quest.0170480B29CC3824.quest_desc: ["Magnesite smelts only in a hot forge, and poorly. Airship envelopes and traction motors want a little magnesium long before the electrolysis line."]
+	quest.5415E484EEFC90B7.title: "Gold"
+	quest.5415E484EEFC90B7.quest_subtitle: "Not only for show"
+	quest.5415E484EEFC90B7.quest_desc: ["Gold sheets go into goggles and wrenches, and later into resistors."]
+	quest.2255E4EC6DEC344B.title: "Redstone"
+	quest.2255E4EC6DEC344B.quest_subtitle: "Cinnabar or cryolite"
+	quest.2255E4EC6DEC344B.quest_desc: ["There is no redstone ore here. Grind cinnabar or cryolite on a quern: a full ore gives 8 redstone, and a small one gives 1."]
+	quest.6B3CC16462333336.title: "Certus Quartz"
+	quest.6B3CC16462333336.quest_subtitle: "Keep it for later"
+	quest.6B3CC16462333336.quest_desc: ["Mine certus quartz from its vein. Ground and imbued with redstone, it is the first step towards rose quartz."]
+	quest.7D974A2698EDED60.title: "Sulfur"
+	quest.7D974A2698EDED60.quest_subtitle: "Rubber and gunpowder"
+	quest.7D974A2698EDED60.quest_desc: ["Grind sulfur ore on a quern. It vulcanises rubber now and becomes acid much later."]
+	chapter.47A21414A82E92CB.title: "Industrial Shopping List"
+	chapter.47A21414A82E92CB.chapter_subtitle: ["Parallel lanes for what the first machines need: rubber, glass, rose quartz, electron tubes and casings. Players can work them in any order."]
+	quest.774698339396FEBA.title: "The Tree Tap"
+	quest.774698339396FEBA.quest_subtitle: "Wrought iron, tier III"
+	quest.774698339396FEBA.quest_desc: ["Forge a tree tap from a wrought iron sheet. Latex comes from hevea trees, and at half the rate from rubber figs."]
+	quest.5596AA043F82E616.title: "Latex"
+	quest.5596AA043F82E616.quest_subtitle: "Tapped from a hevea"
+	quest.5596AA043F82E616.quest_desc: ["Put the tap on a hevea log, or a rubber fig, and collect the latex in a barrel or bucket below it."]
+	quest.25E70BD2E241F3B8.title: "Rubber"
+	quest.25E70BD2E241F3B8.quest_subtitle: "Latex, sulfur and heat"
+	quest.25E70BD2E241F3B8.quest_desc: ["Hevea only taps between 14 and 50 °C, so a cold base has to import latex or rubber. Cook 1000 mB of latex with sulfur in a pot at 600 °C."]
+	quest.6133F6323A69B1B8.title: "A Glass Batch"
+	quest.6133F6323A69B1B8.quest_subtitle: "Sand, lime and an alkali"
+	quest.6133F6323A69B1B8.quest_desc: ["Mix silica sand with lime and saltpeter or soda ash. Glass here is worked, never just smelted."]
+	task.7405D9E7024EC856.title: "Any Glass Batch"
+	quest.102CBB41B3D339C0.title: "The Blowpipe"
+	quest.102CBB41B3D339C0.quest_subtitle: "Holds the batch"
+	quest.102CBB41B3D339C0.quest_desc: ["Heat a batch on a blowpipe until it glows faint red. A ceramic blowpipe does the job at first."]
+	task.6C0DB52B1C5F11F2.title: "Any Blowpipe"
+	quest.44F8106203C82A20.title: "Glass on the Pipe"
+	quest.44F8106203C82A20.quest_subtitle: "Gather a gob"
+	quest.44F8106203C82A20.quest_desc: ["Put a glass batch on the blowpipe and heat it in a forge until it glows faint red. It is ready to be worked or poured."]
+	task.0916B27E63A7A450.title: "Any Blowpipe With Glass"
+	quest.76279D0AAA941A6D.title: "Lamp Glass"
+	quest.76279D0AAA941A6D.quest_subtitle: "Glass for vacuum tubes"
+	quest.76279D0AAA941A6D.quest_desc: ["Glasswork a batch into lamp glass. Your first electron tubes are built around it."]
+	quest.1A8770401A033987.title: "A Pouring Table"
+	quest.1A8770401A033987.quest_subtitle: "Brass plated blocks"
+	quest.1A8770401A033987.quest_desc: ["Plate planks with brass sheets to build a pouring table. One craft gives 8 blocks, and a table can use up to sixteen."]
+	quest.790D81FF21DFD76B.title: "The Gem Saw"
+	quest.790D81FF21DFD76B.quest_subtitle: "Cuts poured glass free"
+	quest.790D81FF21DFD76B.quest_desc: ["A brass rod and any gem powder make a gem saw. Without one you can't collect what you pour."]
+	quest.3EA940C332457480.title: "Glass Panes"
+	quest.3EA940C332457480.quest_subtitle: "Pour, wait, cut"
+	quest.3EA940C332457480.quest_desc: ["Pour a hot batch onto the table and collect the pane with a gem saw. Fluid tanks need panes. A press and saw can make these in bulk later."]
+	quest.096926CF31A25E76.title: "Beeswax"
+	quest.096926CF31A25E76.quest_subtitle: "A knife on a full frame"
+	quest.096926CF31A25E76.quest_desc: ["Use a knife on a filled beehive frame. Beeswax binds the quartz powder and seals your cellar."]
+	quest.48D0308B76007791.title: "Certus Powder"
+	quest.48D0308B76007791.quest_subtitle: "Ground on the quern"
+	quest.48D0308B76007791.quest_desc: ["Grind certus quartz on the quern."]
+	quest.723B93EB5273853D.title: "Imbued Quartz Powder"
+	quest.723B93EB5273853D.quest_subtitle: "Certus, redstone and wax"
+	quest.723B93EB5273853D.quest_desc: ["Grind certus quartz on a quern, then mix the powder with 6 redstone and beeswax."]
+	quest.57D953E18E81F5AC.title: "Rose Quartz"
+	quest.57D953E18E81F5AC.quest_subtitle: "1800 °C, 40% of the time"
+	quest.57D953E18E81F5AC.quest_desc: ["Heat imbued powder to 1800 °C. A charcoal forge only gets there with bellows running, and only 40% of attempts succeed, so bring spares."]
+	quest.703C5B65BE79257F.title: "Polished Rose Quartz"
+	quest.703C5B65BE79257F.quest_subtitle: "A costly hand job"
+	quest.703C5B65BE79257F.quest_desc: ["Polish rose quartz with sandpaper. The first sandpaper is an expensive hand recipe, because the cheap one needs deployers."]
+	quest.1542B28D2B2AE81F.title: "The Electron Tube"
+	quest.1542B28D2B2AE81F.quest_subtitle: "The heart of a smart machine"
+	quest.1542B28D2B2AE81F.quest_desc: ["Lamp glass, polished rose quartz and a nickel sheet. Deployers and mechanical crafters both need one."]
+	quest.15857F56257596EE.title: "Andesite Casing"
+	quest.15857F56257596EE.quest_subtitle: "Aluminium over wood"
+	quest.15857F56257596EE.quest_desc: ["Right-click a stripped log with an aluminium sheet. Andesite alloy doesn't exist here: aluminium takes its place almost everywhere."]
+	quest.52A2387D471FC146.title: "Copper Casing"
+	quest.52A2387D471FC146.quest_subtitle: "For fluids"
+	quest.52A2387D471FC146.quest_desc: ["Right-click a stripped log with a copper sheet."]
+	quest.5BA8022214FF6AF5.title: "Brass Casing"
+	quest.5BA8022214FF6AF5.quest_subtitle: "For the clever machines"
+	quest.5BA8022214FF6AF5.quest_desc: ["Right-click a stripped log with a brass sheet."]
+	quest.7642DFF558F9E209.title: "The Brass Hand"
+	quest.7642DFF558F9E209.quest_subtitle: "Tier III"
+	quest.7642DFF558F9E209.quest_desc: ["Forge a brass hand from a double sheet of brass. It becomes the working end of the deployer."]
+	quest.2CAE3289B617F9A7.title: "The Basin"
+	quest.2CAE3289B617F9A7.quest_subtitle: "Cast iron and a crucible"
+	quest.2CAE3289B617F9A7.quest_desc: ["Five cast iron sheets around a crucible. Mixers and presses work on whatever sits in it."]
+	chapter.7C933B9C9D8C04B6.title: "First Kinetics"
+	chapter.7C933B9C9D8C04B6.chapter_subtitle: ["Rotation at last. Water power, then the first generation of machines. Transmission carries stress in this pack, so long drive lines cost power."]
+	quest.75A3B9EC836837DC.title: "The Shaft"
+	quest.75A3B9EC836837DC.quest_subtitle: "Steel, cut to length"
+	quest.75A3B9EC836837DC.quest_desc: ["Two steel rods and a chisel. Everything in this chapter turns on these."]
+	quest.1EFA8A6BBD5D7031.title: "Cogwheels"
+	quest.1EFA8A6BBD5D7031.quest_subtitle: "Shaft and planks"
+	quest.1EFA8A6BBD5D7031.quest_desc: ["Fit a shaft with planks. Large cogwheels follow from these."]
+	quest.501F314919A3012A.title: "The Water Wheel"
+	quest.501F314919A3012A.quest_subtitle: "Free rotation, if you have a river"
+	quest.501F314919A3012A.quest_desc: ["Place a water wheel in flowing water. Shafts, cogs and belts all use a little stress here, so plan short lines or bring more wheels."]
+	quest.30E93321CCE8BEDC.title: "Engineer's Goggles"
+	quest.30E93321CCE8BEDC.quest_subtitle: "See the stress"
+	quest.30E93321CCE8BEDC.quest_desc: ["Two lenses, a gold sheet and string. Wear them to read stress and speed on any machine."]
+	quest.40BBECB889D17E7C.title: "The Mechanical Mixer"
+	quest.40BBECB889D17E7C.quest_subtitle: "Stirring at scale"
+	quest.40BBECB889D17E7C.quest_desc: ["Casing, whisk and cogwheel. Set over a basin, it replaces hand alloying and a great deal of barrel work."]
+	quest.4B91793713601D5E.title: "The Millstone"
+	quest.4B91793713601D5E.quest_subtitle: "Quern, automated"
+	quest.4B91793713601D5E.quest_desc: ["Casing, cogwheel and stone. Grain and minerals grind without you."]
+	quest.1D648FF332873905.title: "The Rolling Mill"
+	quest.1D648FF332873905.quest_subtitle: "Rods, wires and belts"
+	quest.1D648FF332873905.quest_desc: ["Your belts come from here, so this has to be built first. It rolls rubber into belting and rods into wire."]
+	quest.13877EE68CBF9F98.title: "Mechanical Belts"
+	quest.13877EE68CBF9F98.quest_subtitle: "Rubber, rolled"
+	quest.13877EE68CBF9F98.quest_desc: ["Roll a rubber bar in the rolling mill. There is no other recipe."]
+	quest.2FC83F769A9EED07.title: "The Mechanical Saw"
+	quest.2FC83F769A9EED07.quest_subtitle: "Logs in, planks out"
+	quest.2FC83F769A9EED07.quest_desc: ["A circular saw blade, a casing and a shaft."]
+	quest.1DC652856B338410.title: "The Encased Fan"
+	quest.1DC652856B338410.quest_subtitle: "Air to wash and blast"
+	quest.1DC652856B338410.quest_desc: ["Casing, propeller and shaft. Fans wash, smoke and blow."]
+	quest.1BF311FC4E3ADA0C.title: "The Deployer"
+	quest.1BF311FC4E3ADA0C.quest_subtitle: "A hand on a stick"
+	quest.1BF311FC4E3ADA0C.quest_desc: ["Electron tube, casing and brass hand. Sequenced assembly starts here."]
+	quest.616ADBE255F42706.title: "The Mechanical Crafter"
+	quest.616ADBE255F42706.quest_subtitle: "Recipes too big for a table"
+	quest.616ADBE255F42706.quest_desc: ["Electron tube, brass casing and a crafting table. The big machines ahead are built on a grid of these."]
+	quest.2C7C08507123B176.title: "Crushing Wheels"
+	quest.2C7C08507123B176.quest_subtitle: "Sixteen steel sheets each"
+	quest.2C7C08507123B176.quest_desc: ["Build them with mechanical crafters. A pair doubles what you get from your ore and starts you on crushed metals."]
+	quest.71496D3549A1D7AC.title: "The Spout"
+	quest.71496D3549A1D7AC.quest_subtitle: "Liquid by the drop"
+	quest.71496D3549A1D7AC.quest_desc: ["Apply a rubber bar to a copper casing."]
+	quest.1772AFD39460A77C.title: "The Fluid Tank"
+	quest.1772AFD39460A77C.quest_subtitle: "Needs glass"
+	quest.1772AFD39460A77C.quest_desc: ["Two copper sheets and a glass pane. Getting fluids between machines waits on the lathe, but storage can start now."]
+	chapter.358A4099CA88891A.title: "Mechanised Metalworking"
+	chapter.358A4099CA88891A.chapter_subtitle: ["Springs, precision parts and the machines that take metalworking off the anvil."]
+	quest.2F151ED6F49CD251.title: "Marble"
+	quest.2F151ED6F49CD251.quest_subtitle: "A geology gate"
+	quest.2F151ED6F49CD251.quest_desc: ["The coiling wheel is cut from marble, so you need to find some. It is a metamorphic rock: check your map and prospect further afield if your region has none."]
+	quest.0706AD74EB68D6C8.title: "The Coiling Wheel"
+	quest.0706AD74EB68D6C8.quest_subtitle: "Smooth marble, shaped"
+	quest.0706AD74EB68D6C8.quest_desc: ["Four smooth marble and a marble slab."]
+	quest.0AE259A0FB97309C.title: "The Spring Coiling Machine"
+	quest.0AE259A0FB97309C.quest_subtitle: "Wire into springs"
+	quest.0AE259A0FB97309C.quest_desc: ["Coiling wheel, iron ingots and a casing."]
+	quest.2A25435D4AD82924.title: "Steel Springs"
+	quest.2A25435D4AD82924.quest_subtitle: "Everything ahead needs these"
+	quest.2A25435D4AD82924.quest_desc: ["Feed steel rods to the coiling machine."]
+	quest.617823E9D5255279.title: "Invar"
+	quest.617823E9D5255279.quest_subtitle: "Cast iron and nickel"
+	quest.617823E9D5255279.quest_desc: ["Alloy cast iron with nickel. This pack's invar has no wrought iron in it."]
+	quest.117885FDF52358F6.title: "Constantan"
+	quest.117885FDF52358F6.quest_subtitle: "Copper and nickel"
+	quest.117885FDF52358F6.quest_desc: ["Alloy copper with nickel. Precision work and resistors both call for it."]
+	quest.73E6BAF8F5F81895.title: "Small Invar Springs"
+	quest.73E6BAF8F5F81895.quest_subtitle: "Roll, then coil"
+	quest.73E6BAF8F5F81895.quest_desc: ["Roll invar into wire, then coil the wire into small springs."]
+	quest.4B6498EEFBCE8E84.title: "The Precision Mechanism"
+	quest.4B6498EEFBCE8E84.quest_subtitle: "Your first big assembly"
+	quest.4B6498EEFBCE8E84.quest_desc: ["Build a sequenced assembly line with deployers, starting from a brass sheet. It is the first thing here you can't make by hand."]
+	quest.0FF60097DEFBF7E1.title: "The Curving Press"
+	quest.0FF60097DEFBF7E1.quest_subtitle: "Bends sheet to shape"
+	quest.0FF60097DEFBF7E1.quest_desc: ["Casing, two steel springs and a shaft."]
+	quest.46DF7E78B2A425B1.title: "The Helve Hammer"
+	quest.46DF7E78B2A425B1.quest_subtitle: "An anvil that works itself"
+	quest.46DF7E78B2A425B1.quest_desc: ["Built with mechanical crafters. It works blooms and ingots at their forging temperature, so high carbon steel stops being hand work."]
+	quest.02DADB633A0359D0.title: "The Vibrating Table"
+	quest.02DADB633A0359D0.quest_subtitle: "Shakes things apart"
+	quest.02DADB633A0359D0.quest_desc: ["Four steel springs, a mechanical piston and a slab."]
+	quest.400FB32F9C428CFB.title: "The Centrifuge"
+	quest.400FB32F9C428CFB.quest_subtitle: "Separate by weight"
+	quest.400FB32F9C428CFB.quest_desc: ["Four steel springs, a shaft, logs and a casing."]
+	quest.7916D148A8C25365.title: "The Belt Grinder"
+	quest.7916D148A8C25365.quest_subtitle: "Fine finishing"
+	quest.7916D148A8C25365.quest_desc: ["A grinder belt on a casing and a shaft. Terne plate and the drill bit both finish here."]
+	quest.18687C0E4557C87A.title: "Stainless Steel"
+	quest.18687C0E4557C87A.quest_subtitle: "Chromium in the mix"
+	quest.18687C0E4557C87A.quest_desc: ["Chromite gives chromium, and steel with chromium and nickel gives stainless steel. Your coke oven will need its rivets."]
+	chapter.672487BD2B69B316.title: "The Lathe Gate"
+	chapter.672487BD2B69B316.chapter_subtitle: ["Intended as the great wall of the pack. Tungsten steel is the last metal TFC technology can make, and the lathe, press, pipes and pump all wait behind it."]
+	quest.59BF9C79DE17DE3A.title: "Beyond Any Forge"
+	quest.59BF9C79DE17DE3A.quest_subtitle: "The bloomery has no limit"
+	quest.59BF9C79DE17DE3A.quest_desc: ["No forge melts tungsten, iridium or osmium. You don't need to: a bloomery takes ore directly, at any melting point. Put in the ore and charcoal, wait, and work the bloom on an anvil, as you did with iron."]
+	quest.3320714C9C1C23A1.title: "Platinum from the Bloomery"
+	quest.3320714C9C1C23A1.quest_subtitle: "A precious catalyst"
+	quest.3320714C9C1C23A1.quest_desc: ["Native platinum blooms like any other high-melting metal. Nitric acid needs a platinum catalyst, so you need some long before the aqua regia line."]
+	quest.46D6404C0D514118.title: "Cobalt Dust"
+	quest.46D6404C0D514118.quest_subtitle: "Bloomed, then ground"
+	quest.46D6404C0D514118.quest_desc: ["Bloom cobaltite and grind the ingot into dust on a quern. Drill bits are hardened with it."]
+	quest.2907CD7290370DD8.title: "A Raw Tungsten Bloom"
+	quest.2907CD7290370DD8.quest_subtitle: "Wolframite and charcoal"
+	quest.2907CD7290370DD8.quest_desc: ["Fill the bloomery with wolframite and charcoal."]
+	quest.195148B9209988A8.title: "A Refined Tungsten Bloom"
+	quest.195148B9209988A8.quest_subtitle: "First anvil step"
+	quest.195148B9209988A8.quest_desc: ["Work the raw bloom on a bronze anvil or better."]
+	quest.00A91E7DB936DF1F.title: "Tungsten"
+	quest.00A91E7DB936DF1F.quest_subtitle: "Two anvil steps"
+	quest.00A91E7DB936DF1F.quest_desc: ["Work the raw bloom into a refined bloom, then into an ingot. A bronze anvil is enough. Tungsten only needs about 921 °C to work, so an ordinary forge will do."]
+	quest.499D4A45877EA67A.title: "Weak Steel"
+	quest.499D4A45877EA67A.quest_subtitle: "Steel, nickel, black bronze"
+	quest.499D4A45877EA67A.quest_desc: ["Melt steel, nickel and black bronze together in a crucible. Three metals you already know make the base for every high steel."]
+	quest.29F112721815EEDB.title: "High Carbon Black Steel"
+	quest.29F112721815EEDB.quest_subtitle: "Weak steel and pig iron"
+	quest.29F112721815EEDB.quest_desc: ["Weld weak steel with pig iron."]
+	quest.3BF1942D2750F43E.title: "Black Steel"
+	quest.3BF1942D2750F43E.quest_subtitle: "Weak steel and pig iron"
+	quest.3BF1942D2750F43E.quest_desc: ["Work the high carbon ingot on your anvil until it is black steel."]
+	quest.51CDAFC46C4A47E2.title: "The Black Steel Anvil"
+	quest.51CDAFC46C4A47E2.quest_subtitle: "Tier V"
+	quest.51CDAFC46C4A47E2.quest_desc: ["Seven double ingots of black steel. Tungsten steel double ingots weld at this tier."]
+	quest.40F365848FC50DE8.title: "Weak Red Steel"
+	quest.40F365848FC50DE8.quest_subtitle: "An alloy for red steel"
+	quest.40F365848FC50DE8.quest_desc: ["Melt black steel, steel, brass and rose gold together in a crucible."]
+	quest.75CC3FB61A9C0D95.title: "High Carbon Red Steel"
+	quest.75CC3FB61A9C0D95.quest_subtitle: "Welded with black steel"
+	quest.75CC3FB61A9C0D95.quest_desc: ["Weld weak red steel with black steel."]
+	quest.33694F7D647B70F6.title: "Weak Blue Steel"
+	quest.33694F7D647B70F6.quest_subtitle: "An alloy for blue steel"
+	quest.33694F7D647B70F6.quest_desc: ["Melt black steel, steel, bismuth bronze and sterling silver together in a crucible."]
+	quest.6FF9D4A0DD44C0D1.title: "High Carbon Blue Steel"
+	quest.6FF9D4A0DD44C0D1.quest_subtitle: "Welded with black steel"
+	quest.6FF9D4A0DD44C0D1.quest_desc: ["Weld weak blue steel with black steel."]
+	quest.02AE5A71832E7FC4.title: "Red Steel"
+	quest.02AE5A71832E7FC4.quest_subtitle: "One of two roads"
+	quest.02AE5A71832E7FC4.quest_desc: ["Work the high carbon ingot into red steel. Red and blue steel both give tier VI, so you only need one. Pick whichever your ores make easier."]
+	quest.0ED4983694A18771.title: "Blue Steel"
+	quest.0ED4983694A18771.quest_subtitle: "One of two roads"
+	quest.0ED4983694A18771.quest_desc: ["Work the high carbon ingot into blue steel. Red and blue steel both give tier VI, so you only need one."]
+	quest.19E77B8BBF110948.title: "The Red Steel Anvil"
+	quest.19E77B8BBF110948.quest_subtitle: "Tier VI"
+	quest.19E77B8BBF110948.quest_desc: ["Seven double ingots of red steel."]
+	quest.221FB0E28782164F.title: "The Blue Steel Anvil"
+	quest.221FB0E28782164F.quest_subtitle: "Tier VI"
+	quest.221FB0E28782164F.quest_desc: ["Seven double ingots of blue steel."]
+	quest.4AC65AC9DC16CEF5.title: "The Top of the Ladder"
+	quest.4AC65AC9DC16CEF5.quest_subtitle: "Either anvil counts"
+	quest.4AC65AC9DC16CEF5.quest_desc: ["This is the finest forging a hand can do. Either tier VI anvil unlocks this quest."]
+	quest.3534CF9288079C91.title: "High Carbon Tungsten Steel"
+	quest.3534CF9288079C91.quest_subtitle: "Weld at tier IV"
+	quest.3534CF9288079C91.quest_desc: ["Weld a tungsten ingot with weak steel."]
+	quest.5AECF30AFEEC10BD.title: "Tungsten Steel"
+	quest.5AECF30AFEEC10BD.quest_subtitle: "The last hand-made metal"
+	quest.5AECF30AFEEC10BD.quest_desc: ["Work the high carbon ingot at tier IV. Nothing past this point can be made with TFC technology alone."]
+	quest.77DE35DDBE8FA92C.title: "Tungsten Steel Sheet"
+	quest.77DE35DDBE8FA92C.quest_subtitle: "Tier VI"
+	quest.77DE35DDBE8FA92C.quest_desc: ["Weld double ingots at tier V, then forge the sheet at tier VI."]
+	quest.17CDBF0D999225B4.title: "The Lathe"
+	quest.17CDBF0D999225B4.quest_subtitle: "The door out of hand metalworking"
+	quest.17CDBF0D999225B4.quest_desc: ["Built with mechanical crafters from tungsten steel sheet, a precision mechanism, steel springs and a steel block. Everything you've done with a hammer can now start to run by itself."]
+	quest.57A2313BF2DA60F1.title: "The Concave Curving Head"
+	quest.57A2313BF2DA60F1.quest_subtitle: "A block, turned"
+	quest.57A2313BF2DA60F1.quest_desc: ["Turn a steel block on the lathe."]
+	quest.1135582C6FA5A24D.title: "The Mechanical Press"
+	quest.1135582C6FA5A24D.quest_subtitle: "Finally"
+	quest.1135582C6FA5A24D.quest_desc: ["Casing, curving head and shaft. Plated blocks, tracks and any sequenced assembly with a pressing step open up now."]
+	quest.701590A8BA95915A.title: "Fluid Pipes"
+	quest.701590A8BA95915A.quest_subtitle: "Turned from copper rod"
+	quest.701590A8BA95915A.quest_desc: ["Turn copper rods on the lathe. Cast iron and steel pipes come from the same machine."]
+	quest.57447992336EAC51.title: "The Mechanical Pump"
+	quest.57447992336EAC51.quest_subtitle: "Pipe and cogwheel"
+	quest.57447992336EAC51.quest_desc: ["Apply a cogwheel to a fluid pipe. Fluids move at last."]
+	quest.59FBE9A5C43A55DB.title: "The Compressor"
+	quest.59FBE9A5C43A55DB.quest_subtitle: "Pressure and vacuum"
+	quest.59FBE9A5C43A55DB.quest_desc: ["Pump, steel springs and a casing. Sulfur, rubber and acids all pass through this."]
+	quest.10878335C39C0913.title: "The Drill Bit"
+	quest.10878335C39C0913.quest_subtitle: "Tungsten steel, cobalt-hardened"
+	quest.10878335C39C0913.quest_desc: ["A sequenced assembly starting from a tungsten steel rod, with cobalt dust pressed in and a belt grinder to finish."]
+	quest.4363E60D302F9705.title: "The Mechanical Drill"
+	quest.4363E60D302F9705.quest_subtitle: "Mining without arms"
+	quest.4363E60D302F9705.quest_desc: ["Drill bit, casing and shaft."]
+	chapter.5BE254B4D7C4C250.title: "Heavy Industry"
+	chapter.5BE254B4D7C4C250.chapter_subtitle: ["Steam, coke, cast metal and oil. TFMG takes over the scale of production."]
+	quest.589AB7F4A0F1AB1E.title: "Lubrication Oil"
+	quest.589AB7F4A0F1AB1E.quest_subtitle: "Tallow bridges the gap"
+	quest.589AB7F4A0F1AB1E.quest_desc: ["Before you drill for oil, render animal fat into tallow and reduce it in a heated mixer. 1000 mB of tallow gives 100 mB of oil."]
+	quest.6E92565AE4D3D360.title: "The Steam Engine"
+	quest.6E92565AE4D3D360.quest_subtitle: "Filled, not just built"
+	quest.6E92565AE4D3D360.quest_desc: ["Build the engine with mechanical crafters, then fill it with 1000 mB of lubrication oil from a spout. Beryllium copper sheets give two engines instead of one."]
+	quest.1042E53FF23B2F2C.title: "Steel Casing"
+	quest.1042E53FF23B2F2C.quest_subtitle: "Steel over wood"
+	quest.1042E53FF23B2F2C.quest_desc: ["Right-click a stripped log with a steel sheet."]
+	quest.3A1CB6DD2986AED8.title: "Heavy Machinery Casing"
+	quest.3A1CB6DD2986AED8.quest_subtitle: "Black steel over wood"
+	quest.3A1CB6DD2986AED8.quest_desc: ["Right-click a stripped log with a black steel sheet."]
+	quest.47C317ED8D341526.title: "The Steel Mechanism"
+	quest.47C317ED8D341526.quest_subtitle: "The precision of the big machines"
+	quest.47C317ED8D341526.quest_desc: ["A sequenced assembly on steel sheet, with steel cogwheels and small invar springs."]
+	quest.62C5F6FAA65E856C.title: "The Coke Oven"
+	quest.62C5F6FAA65E856C.quest_subtitle: "Stainless rivets, industrial iron"
+	quest.62C5F6FAA65E856C.quest_desc: ["Eight stainless steel rivets around an industrial iron block. Rivets press out of stamens, which turn on the lathe."]
+	quest.5A7CD09F4D809FA6.title: "Coal Coke"
+	quest.5A7CD09F4D809FA6.quest_subtitle: "Bituminous coal, baked"
+	quest.5A7CD09F4D809FA6.quest_desc: ["Bake bituminous coal in the coke oven. Coke also gives you graphite electrodes later on."]
+	quest.7B963D4BBA91BB73.title: "The Casting Basin"
+	quest.7B963D4BBA91BB73.quest_subtitle: "Molten metal, shaped"
+	quest.7B963D4BBA91BB73.quest_desc: ["Fire bricks, cast iron and a cast iron pipe."]
+	quest.1ABE530C50337A82.title: "The Industrial Blast Furnace"
+	quest.1ABE530C50337A82.quest_subtitle: "A tower of fireproof brick"
+	quest.1ABE530C50337A82.quest_desc: ["Build the tower around a blast furnace output, with fireproof bricks and a hatch. It runs ore, flux and coke into molten iron, and leaves slag behind."]
+	quest.7A6BBCEA7E68939E.title: "The Steel Fluid Tank"
+	quest.7A6BBCEA7E68939E.quest_subtitle: "Bulk storage"
+	quest.7A6BBCEA7E68939E.quest_desc: ["Two steel sheets and a glass pane."]
+	quest.35321E7E9226B41D.title: "The Steel Chemical Vat"
+	quest.35321E7E9226B41D.quest_subtitle: "Reactions in bulk"
+	quest.35321E7E9226B41D.quest_desc: ["Six steel sheets, two nickel sheets and a steel fluid tank."]
+	quest.09FB7E8834D3B642.title: "A Taste of Oil"
+	quest.09FB7E8834D3B642.quest_subtitle: "Heat an oil seep"
+	quest.09FB7E8834D3B642.quest_desc: ["Oil seeps heat to 10 mB of crude oil, enough for a first look without drilling. The fluid scanner helps you find a real deposit."]
+	quest.550D082F2FB29D86.title: "The Distillation Tower"
+	quest.550D082F2FB29D86.quest_subtitle: "Crude to everything"
+	quest.550D082F2FB29D86.quest_desc: ["Build the controller, then a tower on top of it. Crude gives heavy oil, and heavy oil gives lubrication oil without any tallow."]
+	quest.61B598AA5C61FDA9.title: "The Pumpjack"
+	quest.61B598AA5C61FDA9.quest_subtitle: "Oil from near bedrock"
+	quest.61B598AA5C61FDA9.quest_desc: ["Base, hammer and crank over a deposit. This is what your fuel, plastics and resistors depend on."]
+	quest.64F19E8C6AFC764F.title: "Crude Oil"
+	quest.64F19E8C6AFC764F.quest_subtitle: "The black river"
+	quest.64F19E8C6AFC764F.quest_desc: ["Pump crude oil from a deposit near bedrock. Heat and pressure made it once, and they won't make more: plan your use."]
+	quest.6AAFDD1727916A4B.title: "Electrodes"
+	quest.6AAFDD1727916A4B.quest_subtitle: "For splitting water"
+	quest.6AAFDD1727916A4B.quest_desc: ["Build an electrode holder and cut a graphite electrode from a block of coal coke. Fitted to a vat, they split water and brine."]
+	chapter.53F0E2EAF032068B.title: "Steam Power"
+	chapter.53F0E2EAF032068B.chapter_subtitle: ["From a firebox under a tank to a full steam cycle. Steam turns your first big shafts, and later drives the turbines that feed the grid."]
+	quest.657B235B5495B18A.title: "The Firebox Boiler"
+	quest.657B235B5495B18A.quest_subtitle: "No blazes required"
+	quest.657B235B5495B18A.quest_desc: ["Build fluid tanks into a boiler and put a lit TFC firebox under every column of its bottom layer. Wood gives passive heat, charcoal active heat, and coal at 1200 °C or more the maximum."]
+	quest.32C2AD5A3E89F4D4.title: "Mechanic: Boiler Heat"
+	quest.32C2AD5A3E89F4D4.quest_subtitle: "Hotter fire, more power"
+	quest.32C2AD5A3E89F4D4.quest_desc: ["The boiler reads the firebox's real temperature. Below 200 °C it gives nothing. Keep the firebox fed and work its bellows as you would a forge, because the boiler cools the moment the fire does."]
+	quest.4E054E45D1232D18.title: "The Steam Whistle"
+	quest.4E054E45D1232D18.quest_subtitle: "Let everyone know"
+	quest.4E054E45D1232D18.quest_desc: ["A whistle on the boiler sounds when it has steam. It is mostly for show, and a little for safety."]
+	quest.3D0523DB30A849FB.title: "Engines on the Boiler"
+	quest.3D0523DB30A849FB.quest_subtitle: "Water and heat in, rotation out"
+	quest.3D0523DB30A849FB.quest_desc: ["Mount lubricated steam engines on the boiler. More engines share its output, and the boiler's size and heat decide how many it can drive."]
+	quest.67F6A4835CC04099.title: "The Oil Firebox"
+	quest.67F6A4835CC04099.quest_subtitle: "Heat without stoking"
+	quest.67F6A4835CC04099.quest_desc: ["TFMG's firebox burns liquid fuel instead of wood. It is the way to keep a boiler hot without anyone feeding it."]
+	quest.32666CB0A81095B9.title: "The Steam Outlet"
+	quest.32666CB0A81095B9.quest_subtitle: "A pipe where the shaft would be"
+	quest.32666CB0A81095B9.quest_desc: ["Put a fluid pipe where an engine's shaft would go. The engine stops turning and pipes out its share of the boiler as Pressurized Steam instead, 10 mB per tick per boiler level."]
+	quest.70323F1797579C61.title: "Stainless Steel Blades"
+	quest.70323F1797579C61.quest_subtitle: "The first turbine blades"
+	quest.70323F1797579C61.quest_desc: ["Molybdenum-filled stainless double sheet, curved and polished. They waste part of the steam, but they work."]
+	quest.66EEE6153BEF1307.title: "Turbine Casing"
+	quest.66EEE6153BEF1307.quest_subtitle: "A Cr-Mo-V steel shell"
+	quest.66EEE6153BEF1307.quest_desc: ["Turbine casing is built on high alloy steel sheet, so the turbine waits for your arc furnace."]
+	quest.2C11633C80D83B46.title: "Turbine Rotors"
+	quest.2C11633C80D83B46.quest_subtitle: "The spinning column"
+	quest.2C11633C80D83B46.quest_desc: ["Rotors stack into a column inside the casing. Each layer adds speed and capacity, and burns about 8 mB of steam per tick."]
+	quest.5DA61100494D52F9.title: "The Steam Turbine"
+	quest.5DA61100494D52F9.quest_subtitle: "A 7x7 tower of power"
+	quest.5DA61100494D52F9.quest_desc: ["Build the casing around the rotor column, fit the blades and pipe Pressurized Steam into the walls. Take rotation from the cap rotor. Goggles on a rotor show its blades, steam and exhaust."]
+	quest.2EE9D98603F3E248.title: "Titanium Blades"
+	quest.2EE9D98603F3E248.quest_subtitle: "Full efficiency"
+	quest.2EE9D98603F3E248.quest_desc: ["Titanium blades waste no steam. Swap them in once you can make titanium sheet."]
+	quest.6B1565E567F781CE.title: "Venting"
+	quest.6B1565E567F781CE.quest_subtitle: "White clouds"
+	quest.6B1565E567F781CE.quest_desc: ["Spent steam leaves the turbine as Low-Pressure Steam, and a turbine with nowhere to send it stalls. Pipe it to a smokestack or an exhaust: cheap and reliable, but the water is lost."]
+	task.3F052BC5D8BC5D97.title: "Any Venting"
+	quest.3854FCA028E7DA86.title: "The Freezer"
+	quest.3854FCA028E7DA86.quest_subtitle: "A refrigeration unit"
+	quest.3854FCA028E7DA86.quest_desc: ["A sequenced assembly on a compressor: condenser tubing with aluminium fins pressed on, an expansion valve, an evaporator coil, brazed joints, a motor coil and a power terminal. The circuit is evacuated, then charged with propane from your distillation tower. It runs on electricity through a converter."]
+	quest.14406B15F11C81D1.title: "Condensing"
+	quest.14406B15F11C81D1.quest_subtitle: "Close the loop"
+	quest.14406B15F11C81D1.quest_desc: ["Pipe the exhaust into a steel chemical vat of at least four tanks with a freezer at the bottom. It turns steam back into water for the boiler."]
+	chapter.6CEAC98F667A3FC6.title: "Chemistry"
+	chapter.6CEAC98F667A3FC6.chapter_subtitle: ["Slag gives the catalyst, and sulfur gives the acid. Chemica stays at the basics here until it has been tested further."]
+	quest.01F1A23F32EF34B3.title: "Slag"
+	quest.01F1A23F32EF34B3.quest_subtitle: "The blast furnace leftovers"
+	quest.01F1A23F32EF34B3.quest_desc: ["Your blast furnace leaves molten slag. Cast it into blocks, then crush them. Don't throw it away: this pack has no vanadium ore."]
+	quest.45855358BC584855.title: "Vanadium"
+	quest.45855358BC584855.quest_subtitle: "A catalyst from waste"
+	quest.45855358BC584855.quest_desc: ["Pressurize slag with salt, saltpeter and water in a heated compressor. It only gives vanadium 10% of the time, or 30% once you have sulfuric acid."]
+	quest.29F12A51E7A13B5A.title: "Sulfur Dioxide"
+	quest.29F12A51E7A13B5A.quest_subtitle: "Burn it under pressure"
+	quest.29F12A51E7A13B5A.quest_desc: ["Pressurize sulfur powder in a heated compressor."]
+	quest.72FA8D26A907117F.title: "Sulfur Trioxide"
+	quest.72FA8D26A907117F.quest_subtitle: "Vanadium does the work"
+	quest.72FA8D26A907117F.quest_desc: ["Pressurize sulfur dioxide with a vanadium nugget."]
+	quest.3B8D69CA5AD743F7.title: "Sulfuric Acid"
+	quest.3B8D69CA5AD743F7.quest_subtitle: "The king of chemicals"
+	quest.3B8D69CA5AD743F7.quest_desc: ["Pressurize sulfur trioxide with water. A chemical vat can also make it from sulfur and saltpeter powder."]
+	quest.1D7F69AC334C7B2F.title: "Copper Sulfate"
+	quest.1D7F69AC334C7B2F.quest_subtitle: "Blue crystals"
+	quest.1D7F69AC334C7B2F.quest_desc: ["Pressurize copper powder with sulfuric acid and water."]
+	quest.334C3814FAD890A1.title: "Zinc Sulfate"
+	quest.334C3814FAD890A1.quest_subtitle: "One half of a battery"
+	quest.334C3814FAD890A1.quest_desc: ["Pressurize sphalerite powder with sulfuric acid and water."]
+	quest.05589774C48B40A3.title: "Fluorite"
+	quest.05589774C48B40A3.quest_subtitle: "From the pack's own ore"
+	quest.05589774C48B40A3.quest_desc: ["Crush fluorite ore into dust. It is the key to hydrofluoric acid."]
+	quest.46D52B2F8BE7381A.title: "Phosphorite"
+	quest.46D52B2F8BE7381A.quest_subtitle: "For your semiconductors"
+	quest.46D52B2F8BE7381A.quest_desc: ["Crush phosphorite ore into dust. Circuit boards can't be made without it, because phosphorus dopes silicon into n-type semiconductor."]
+	quest.23206F2F3C607C2C.title: "Hydrogen"
+	quest.23206F2F3C607C2C.quest_subtitle: "Water, split"
+	quest.23206F2F3C607C2C.quest_desc: ["Run water through an electrode vat. This needs power, so it waits for your first electricity. Airships need it too."]
+	quest.0776ACF8377E0947.title: "Brine and Chlorine"
+	quest.0776ACF8377E0947.quest_subtitle: "Salt water, split"
+	quest.0776ACF8377E0947.quest_desc: ["Mix salt and water into brine, then run it through an electrode vat. It gives chlorine, hydrogen and caustic soda."]
+	quest.641AD4D1666F216F.title: "Hydrochloric Acid"
+	quest.641AD4D1666F216F.quest_subtitle: "Salt and sulfuric acid"
+	quest.641AD4D1666F216F.quest_desc: ["Salt in a vat of sulfuric acid gives hydrochloric acid, with sodium bisulfate left over. Hydrogen burnt in chlorine makes it too."]
+	quest.0A50238BB214541A.title: "Polyethylene"
+	quest.0A50238BB214541A.quest_subtitle: "Ethylene, polymerized"
+	quest.0A50238BB214541A.quest_desc: ["Ethylene from your distillation tower polymerizes in a heated vat with air, over a titanium tetrachloride catalyst. Cast the polyethylene into sheets. Insulation and electronics need it."]
+	quest.747B1F410BD783E2.title: "Nitric Acid"
+	quest.747B1F410BD783E2.quest_subtitle: "Ammonia, oxidised"
+	quest.747B1F410BD783E2.quest_desc: ["Ammonia burnt over a platinum catalyst gives nitrogen dioxide, and water turns it into nitric acid. Platinum, silver and thorium all need it."]
+	quest.267282D570010FB1.title: "Hydrofluoric Acid"
+	quest.267282D570010FB1.quest_subtitle: "Fluorite in sulfuric acid"
+	quest.267282D570010FB1.quest_desc: ["Fluorite dust in sulfuric acid gives hydrofluoric acid. Handle it with care: it etches glass and much else."]
+	quest.1FE85AB58610B959.title: "Liquid Air"
+	quest.1FE85AB58610B959.quest_subtitle: "Everything in the sky"
+	quest.1FE85AB58610B959.quest_desc: ["Pressurize air with cooling fluid, which you mix from water and ethylene, then distil it into nitrogen, oxygen, argon and more."]
+	chapter.6CCAAADA618A6D71.title: "Light Metals"
+	chapter.6CCAAADA618A6D71.chapter_subtitle: ["Aluminium, titanium, magnesium, lithium, beryllium and zirconium by the processes industry really uses. Early on these metals come from the forge or the bloomery in small amounts; here they come in bulk."]
+	quest.23C031E751FDA2BE.title: "Mechanic: Ores That Resist Heat"
+	quest.23C031E751FDA2BE.quest_subtitle: "Why the forge is not enough"
+	quest.23C031E751FDA2BE.quest_desc: ["Bauxite only melts at 1600 °C, and then gives just 2 to 7 mB by grade. Rutile doesn't melt at all, so titanium comes from the bloomery until you build the Kroll line. Magnesite and bertrandite smelt hot and poorly, and spodumene and zircon don't smelt. Each has a proper process in this chapter."]
+	quest.39A3BB2B390D4EAA.title: "Crushing Ore to Powder"
+	quest.39A3BB2B390D4EAA.quest_subtitle: "The start of every line"
+	quest.39A3BB2B390D4EAA.quest_desc: ["Crushing wheels turn each ore into its powder: 2, 3, 5 or 7 by grade. Every line here starts from a powder."]
+	quest.4815FCA8115F74AF.title: "Caustic Soda"
+	quest.4815FCA8115F74AF.quest_subtitle: "From brine electrolysis"
+	quest.4815FCA8115F74AF.quest_desc: ["Electrolysing brine gives chlorine, hydrogen and caustic soda. The Bayer process and several others run on it."]
+	quest.0B780EE48CD05E58.title: "Bayer Digestion"
+	quest.0B780EE48CD05E58.quest_subtitle: "Bauxite in hot caustic soda"
+	quest.0B780EE48CD05E58.quest_desc: ["Pressurize four bauxite powder with 500 mB of caustic soda in a heated compressor. You get sodium aluminate solution, and the iron oxides stay behind as red mud."]
+	quest.6B87F51D19F89C36.title: "Aluminium Hydroxide"
+	quest.6B87F51D19F89C36.quest_subtitle: "Seeded out of the cold liquor"
+	quest.6B87F51D19F89C36.quest_desc: ["Cool the sodium aluminate in a steel vat with a freezer. Aluminium hydroxide settles out, and most of the caustic soda comes back."]
+	quest.6DD6D46FA3B80E2E.title: "Alumina"
+	quest.6DD6D46FA3B80E2E.quest_subtitle: "Calcined at 1100 °C"
+	quest.6DD6D46FA3B80E2E.quest_desc: ["Heat the hydroxide to 1100 °C and it gives off water, leaving alumina."]
+	quest.27C952226E154D04.title: "Cryolite"
+	quest.27C952226E154D04.quest_subtitle: "The molten bath"
+	quest.27C952226E154D04.quest_desc: ["Mine cryolite. Alumina dissolves in molten cryolite, and nearly all of it survives each batch."]
+	quest.1F62C2C534E37F80.title: "The Hall–Héroult Cell"
+	quest.1F62C2C534E37F80.quest_subtitle: "Aluminium by electricity"
+	quest.1F62C2C534E37F80.quest_desc: ["A firebrick-lined vat of four tanks or more, with two graphite electrodes, at 960 °C and at least 6 A. Three alumina and the cryolite bath give 15 mB of molten aluminium. The carbon electrodes burn away as CO2."]
+	quest.6300E546FCD8A0DA.title: "Rutile Dust"
+	quest.6300E546FCD8A0DA.quest_subtitle: "Titanium ore, crushed"
+	quest.6300E546FCD8A0DA.quest_desc: ["Crush rutile ore into dust. One dust carries 5 mB of titanium."]
+	quest.02AA0240CEB7F737.title: "Titanium Tetrachloride"
+	quest.02AA0240CEB7F737.quest_subtitle: "Carbochlorination"
+	quest.02AA0240CEB7F737.quest_desc: ["Two rutile dust, one coal coke dust and 500 mB of chlorine in a heated vat with a mixer give 250 mB of titanium tetrachloride."]
+	quest.2E4797701C350AB6.title: "Magnesium"
+	quest.2E4797701C350AB6.quest_subtitle: "Calcined, chlorinated, electrolysed"
+	quest.2E4797701C350AB6.quest_desc: ["Heat magnesite powder into magnesia, chlorinate it into molten magnesium chloride, and electrolyse that. Magnesium is the reducing metal for titanium, zirconium, boron and more."]
+	quest.5F182F730599A93F.title: "The Kroll Process"
+	quest.5F182F730599A93F.quest_subtitle: "TiCl4 and magnesium under argon"
+	quest.5F182F730599A93F.quest_desc: ["In a steel vat at 850 °C, 500 mB of titanium tetrachloride, 20 mB of molten magnesium and 50 mB of argon give two crude titanium sponge. The molten magnesium chloride goes back to electrolysis, which closes the loop."]
+	quest.00244F00EDCE135B.title: "Titanium Sponge"
+	quest.00244F00EDCE135B.quest_subtitle: "Salt boiled off in vacuum"
+	quest.00244F00EDCE135B.quest_desc: ["Vacuum distillation strips the salt left in the crude sponge."]
+	quest.075B0E1A415C2324.title: "The Sponge Electrode"
+	quest.075B0E1A415C2324.quest_subtitle: "Pressed for remelting"
+	quest.075B0E1A415C2324.quest_desc: ["Compact ten titanium sponge into a consumable electrode."]
+	quest.691FF0F8B55C859C.title: "Vacuum Arc Remelting"
+	quest.691FF0F8B55C859C.quest_subtitle: "Titanium in bulk"
+	quest.691FF0F8B55C859C.quest_desc: ["In the arc furnace, an electrode and 150 mB of argon give 100 mB of molten titanium. This is the bulk route: the bloomery stays for small amounts."]
+	quest.7835A76AB5CC95DD.title: "Spodumene"
+	quest.7835A76AB5CC95DD.quest_subtitle: "Lithium ore, decrepitated"
+	quest.7835A76AB5CC95DD.quest_desc: ["Crush spodumene and heat the powder. It cracks into beta spodumene, which acid can attack."]
+	quest.2DA56D89F1103A61.title: "Lithium Carbonate"
+	quest.2DA56D89F1103A61.quest_subtitle: "Acid roast, then soda ash"
+	quest.2DA56D89F1103A61.quest_desc: ["Sulfuric acid turns beta spodumene into lithium sulfate solution, and soda ash precipitates lithium carbonate."]
+	quest.213E6442F9704F1C.title: "Lithium"
+	quest.213E6442F9704F1C.quest_subtitle: "Electrolysed with sylvite"
+	quest.213E6442F9704F1C.quest_desc: ["Hydrochloric acid gives lithium chloride. Electrolyse it with sylvite, which lowers the melting point and is mostly kept."]
+	quest.0BE69C0DFB1D1CD7.title: "Beryllium Fluoride"
+	quest.0BE69C0DFB1D1CD7.quest_subtitle: "Sulfate, then fluoride"
+	quest.0BE69C0DFB1D1CD7.quest_desc: ["Leach bertrandite powder in sulfuric acid, precipitate ammonium fluoroberyllate, and heat it into beryllium fluoride."]
+	quest.6595BDDFC4A9B120.title: "Beryllium"
+	quest.6595BDDFC4A9B120.quest_subtitle: "Reduced by magnesium"
+	quest.6595BDDFC4A9B120.quest_desc: ["Beryllium fluoride and magnesium dust give beryllium dust."]
+	quest.67A19D9014F54314.title: "Zirconium Sponge"
+	quest.67A19D9014F54314.quest_subtitle: "The titanium line again"
+	quest.67A19D9014F54314.quest_desc: ["Zircon follows titanium: carbochlorination to zirconium tetrachloride, Kroll reduction, vacuum. The sponge melts in a forge with bellows."]
+	chapter.79B9234FD22BE021.title: "Rare Metals"
+	chapter.79B9234FD22BE021.chapter_subtitle: ["Tungsten, boron, cobalt, the platinum metals, thorium, uranium, niobium and tantalum. The bloomery makes small amounts of several of them; these lines make them in bulk."]
+	quest.53F9B5E99466F04C.title: "The Arc Furnace"
+	quest.53F9B5E99466F04C.quest_subtitle: "Hotter than any forge"
+	quest.53F9B5E99466F04C.quest_desc: ["A fireproof vat of size six with three graphite electrodes, run under argon. Boron, iridium, osmium, niobium, tantalum and titanium melt here, far above any forge."]
+	quest.0EC24BE12B73AB5A.title: "Wolframite Powder"
+	quest.0EC24BE12B73AB5A.quest_subtitle: "Tungsten ore, crushed"
+	quest.0EC24BE12B73AB5A.quest_desc: ["Crush wolframite. Hot caustic soda will dissolve the tungsten and leave iron and manganese behind as slag."]
+	quest.3C63C4144D5CB055.title: "Ammonium Paratungstate"
+	quest.3C63C4144D5CB055.quest_subtitle: "Crystallised from the liquor"
+	quest.3C63C4144D5CB055.quest_desc: ["Pressurize the powder with caustic soda for sodium tungstate. Then add ammonia and hydrochloric acid in a vat, and APT crystallises out."]
+	quest.059A7B28EBA26804.title: "Tungsten Trioxide"
+	quest.059A7B28EBA26804.quest_subtitle: "The yellow oxide"
+	quest.059A7B28EBA26804.quest_desc: ["Calcining drives the ammonia and water off."]
+	quest.0EDC1DB04E8C8910.title: "Tungsten Powder"
+	quest.0EDC1DB04E8C8910.quest_subtitle: "Reduced by hydrogen"
+	quest.0EDC1DB04E8C8910.quest_desc: ["Four tungsten trioxide and hydrogen in a vat give tungsten powder and steam."]
+	quest.46630D0A957C3D9F.title: "Sintered Tungsten"
+	quest.46630D0A957C3D9F.quest_subtitle: "Pressed, never cast"
+	quest.46630D0A957C3D9F.quest_desc: ["Compact the powder into a green bar, then sinter it under hydrogen by running current through it. Tungsten is never melted in industry."]
+	quest.5918429AAEA60599.title: "Boric Acid"
+	quest.5918429AAEA60599.quest_subtitle: "Kernite in acid"
+	quest.5918429AAEA60599.quest_desc: ["Crush kernite and dissolve four powder in sulfuric acid and water. Boric acid crystallises, the sodium sulfate stays in solution."]
+	quest.0A33FA09562270D1.title: "Boron Trioxide"
+	quest.0A33FA09562270D1.quest_subtitle: "Dehydrated"
+	quest.0A33FA09562270D1.quest_desc: ["Heat boric acid and it loses its water."]
+	quest.45F3CB3FEC51FF79.title: "Boron"
+	quest.45F3CB3FEC51FF79.quest_subtitle: "The Moissan reduction"
+	quest.45F3CB3FEC51FF79.quest_desc: ["Two boron trioxide and two magnesium dust give boron dust and magnesia. Melt four dust in the arc furnace under argon."]
+	quest.6A481E89873B8E92.title: "Roasted Cobaltite"
+	quest.6A481E89873B8E92.quest_subtitle: "Sulfur driven off"
+	quest.6A481E89873B8E92.quest_desc: ["Crush cobaltite and roast it with oxygen in a compressor. The sulfur leaves as sulfur dioxide."]
+	quest.0C8938FC323F6486.title: "Cobalt Dust"
+	quest.0C8938FC323F6486.quest_subtitle: "Leached in acid"
+	quest.0C8938FC323F6486.quest_desc: ["Four roasted cobaltite in sulfuric acid give cobalt dust."]
+	quest.6107CEA9B00D4D81.title: "Aqua Regia"
+	quest.6107CEA9B00D4D81.quest_subtitle: "Platinum dissolved"
+	quest.6107CEA9B00D4D81.quest_desc: ["Nitric and hydrochloric acid together dissolve native platinum into chloroplatinic acid. A quarter of the time, native iridium is left behind as a residue."]
+	quest.641B5619DEB33E24.title: "Ammonium Chloroplatinate"
+	quest.641B5619DEB33E24.quest_subtitle: "The yellow salt"
+	quest.641B5619DEB33E24.quest_desc: ["Ammonia precipitates the platinum as its ammonium salt."]
+	quest.74B8E784792154B0.title: "Platinum"
+	quest.74B8E784792154B0.quest_subtitle: "From sponge"
+	quest.74B8E784792154B0.quest_desc: ["Heat the salt into platinum sponge, which a forge can melt."]
+	quest.7B2D7F8FCF6EC37B.title: "Iridium and Osmium"
+	quest.7B2D7F8FCF6EC37B.quest_subtitle: "Alkaline fusion"
+	quest.7B2D7F8FCF6EC37B.quest_desc: ["Fuse native iridium or osmium powder with saltpeter and caustic soda, then chlorinate. Osmium escapes as volatile osmium tetroxide, and iridium stays as its chloride."]
+	quest.4CB4C297EDD81449.title: "Osmium"
+	quest.4CB4C297EDD81449.quest_subtitle: "Reduced by hydrogen"
+	quest.4CB4C297EDD81449.quest_desc: ["Osmium tetroxide and hydrogen give osmium dust. Melt it in the arc furnace."]
+	quest.6621B6FBCB430B6C.title: "Iridium"
+	quest.6621B6FBCB430B6C.quest_subtitle: "Salt, then hydrogen"
+	quest.6621B6FBCB430B6C.quest_desc: ["Ammonia precipitates ammonium hexachloroiridate, and hydrogen reduces it to iridium dust for the arc furnace."]
+	quest.0E03FB128375F2C2.title: "Rare Earth Hydroxide"
+	quest.0E03FB128375F2C2.quest_subtitle: "Monazite in caustic soda"
+	quest.0E03FB128375F2C2.quest_desc: ["Crush monazite and pressurize it with hot caustic soda. The phosphate washes away and leaves the hydroxides."]
+	quest.241B0504FAF26358.title: "Thoria"
+	quest.241B0504FAF26358.quest_subtitle: "Nitrate, then heat"
+	quest.241B0504FAF26358.quest_desc: ["Nitric acid dissolves the hydroxides and separates the thorium as its nitrate. Heating it leaves thoria and releases nitrogen dioxide."]
+	quest.117B0078F413D8FD.title: "Thorium"
+	quest.117B0078F413D8FD.quest_subtitle: "Fluoride, then magnesium"
+	quest.117B0078F413D8FD.quest_desc: ["Hydrofluoric acid turns thoria into thorium tetrafluoride, and magnesium reduces it to thorium dust."]
+	quest.57FC1EAEE18682E5.title: "Yellowcake"
+	quest.57FC1EAEE18682E5.quest_subtitle: "Uranium leached"
+	quest.57FC1EAEE18682E5.quest_desc: ["Leach uraninite powder in oxidising sulfuric acid, then precipitate the uranium with ammonia."]
+	quest.45B9C13293B69035.title: "Uranium"
+	quest.45B9C13293B69035.quest_subtitle: "Fluoride, then magnesium"
+	quest.45B9C13293B69035.quest_desc: ["Hot hydrogen and hydrofluoric acid turn yellowcake into uranium tetrafluoride, and magnesium reduces it to uranium dust."]
+	quest.03513A18C0940CEF.title: "Tantalum"
+	quest.03513A18C0940CEF.quest_subtitle: "Fluorotantalate, reduced by sodium"
+	quest.03513A18C0940CEF.quest_desc: ["Hot hydrofluoric acid dissolves tantalite powder. Sylvite crystallises potassium fluorotantalate, and sodium reduces it under argon to tantalum dust."]
+	quest.03131E1BAF18DAFE.title: "Niobium"
+	quest.03131E1BAF18DAFE.quest_subtitle: "Reduced by aluminium"
+	quest.03131E1BAF18DAFE.quest_desc: ["Columbite in hydrofluoric acid, then ammonia, gives niobium hydroxide. Calcine it to the pentoxide and reduce it with aluminium dust. The alumina goes back to the Hall–Héroult cell."]
+	chapter.5B80C2E21F80F61B.title: "Electricity"
+	chapter.5B80C2E21F80F61B.chapter_subtitle: ["Generator coils turn rotation into current, and the Converter puts it on the Electro Energetics grid. Better magnets mean more power from the same shaft."]
+	quest.769AE59AEDC4D448.title: "Mechanic: Three Mods, One Grid"
+	quest.769AE59AEDC4D448.quest_subtitle: "Who does what"
+	quest.769AE59AEDC4D448.quest_desc: ["New Age generates power and turns it back into rotation. Electro Energetics carries it: wires, poles, transformers, meters, lamps and heaters. TFMG machines consume it. The Converter translates between them, and every watt starts as rotation turning a generator."]
+	quest.1002FC2978C93276.title: "Copper Wire"
+	quest.1002FC2978C93276.quest_subtitle: "Rolled from rod"
+	quest.1002FC2978C93276.quest_desc: ["Roll copper rods into wire. Nearly every wire in the pack comes from the rolling mill."]
+	quest.24C7CB06BECAA84D.title: "Empty Spools"
+	quest.24C7CB06BECAA84D.quest_subtitle: "Turned from lumber"
+	quest.24C7CB06BECAA84D.quest_desc: ["Turn lumber on the lathe into empty spools. Wire is always handled on a spool."]
+	quest.1DC0C707DDC8A17D.title: "A Copper Wire Spool"
+	quest.1DC0C707DDC8A17D.quest_subtitle: "Wound by deployers"
+	quest.1DC0C707DDC8A17D.quest_desc: ["Deployers wind copper wire onto an empty spool on a sequenced assembly line. Use the spool on one connector, then on another, to string a wire between them."]
+	quest.42A35D1AB65873B0.title: "Connectors"
+	quest.42A35D1AB65873B0.quest_subtitle: "Fired clay, copper terminal"
+	quest.42A35D1AB65873B0.quest_desc: ["A clay block curved twice by the W-shaped head, fired by heated pressurizing, fitted with a copper rod and pressed. Every wire runs between connectors."]
+	quest.520876E156CDA0F2.title: "Core Laminations"
+	quest.520876E156CDA0F2.quest_subtitle: "Thin iron, cut to shape"
+	quest.520876E156CDA0F2.quest_desc: ["Cut wrought iron sheet into laminations, or make silicon steel ones from steel sheet. Converters, transformers and motors are built around them."]
+	quest.301F3ABE79A6E71C.title: "The Converter"
+	quest.301F3ABE79A6E71C.quest_subtitle: "The interpreter"
+	quest.301F3ABE79A6E71C.quest_desc: ["Four connectors, two electron tubes, two wire spools and a lamination. Its facing side bridges to the block in front of it. A wrench switches it between input, which feeds the grid, and output, which draws from it."]
+	quest.415B059787BCE3D5.title: "Silicon"
+	quest.415B059787BCE3D5.quest_subtitle: "From the blast furnace"
+	quest.415B059787BCE3D5.quest_desc: ["Run silica sand through the industrial blast furnace, then cast the liquid silicon. Magnetic alloy needs it."]
+	quest.66528BEC40683B2B.title: "Magnetic Alloy"
+	quest.66528BEC40683B2B.quest_subtitle: "Nickel, steel and silicon"
+	quest.66528BEC40683B2B.quest_desc: ["Two nickel, two steel and a silicon ingot in a heated mixer give two magnetic alloy ingots."]
+	quest.33CE7FE82A19CE7B.title: "Electromagnetic Coils"
+	quest.33CE7FE82A19CE7B.quest_subtitle: "Wound with copper"
+	quest.33CE7FE82A19CE7B.quest_desc: ["Magnetic alloy and two steel rings give unfinished coils. Wind them with a copper spool in TFMG's winding machine."]
+	quest.0EF1C3B4B0ECAD4A.title: "Magnetite Blocks"
+	quest.0EF1C3B4B0ECAD4A.quest_subtitle: "The natural magnet"
+	quest.0EF1C3B4B0ECAD4A.quest_desc: ["Compact forty magnetite powder into a block. It is the weakest magnet, and the first one you can make."]
+	quest.47900981E1A6F408.title: "The Generator Coil"
+	quest.47900981E1A6F408.quest_subtitle: "Rotation into current"
+	quest.47900981E1A6F408.quest_desc: ["Built with mechanical crafters from a shaft, manganese rods, tungsten steel and stainless sheets and eight electromagnetic coils. A coil only generates when magnets surround it, and it never makes rotation itself."]
+	quest.0DE36789532A32C8.title: "Carbon Brushes"
+	quest.0DE36789532A32C8.quest_subtitle: "Collecting the current"
+	quest.0DE36789532A32C8.quest_desc: ["Graphite and copper pressed in a steel casing, sintered and ground to size. Brushes on the coil line push the current into the block next to them."]
+	quest.1C87D51F077F0648.title: "First Current"
+	quest.1C87D51F077F0648.quest_subtitle: "Rotation into the grid"
+	quest.1C87D51F077F0648.quest_desc: ["Line coils along a driven shaft, surround them with magnet blocks and put carbon brushes on the line. Face a converter in input mode to the brushes. Goggles on a coil show what it generates."]
+	quest.3B50A4885DD5601D.title: "The Energiser"
+	quest.3B50A4885DD5601D.quest_subtitle: "Charging parts"
+	quest.3B50A4885DD5601D.quest_desc: ["Apply a soldered copper lightning rod to a casing, and feed the energiser from a converter in output mode. Capacitors, resistors and better magnets all finish under it."]
+	quest.34526F2A32AD50EF.title: "Weak Ferrite Magnets"
+	quest.34526F2A32AD50EF.quest_subtitle: "A better magnet"
+	quest.34526F2A32AD50EF.quest_desc: ["Loop a magnetite block four times through zinc powder, vibration, pressing and energising. Better magnets turn more of the shaft's stress into current."]
+	quest.580A43FA01E8D98A.title: "The Basic Motor"
+	quest.580A43FA01E8D98A.quest_subtitle: "Current back into rotation"
+	quest.580A43FA01E8D98A.quest_desc: ["Built with mechanical crafters. Feed it from a converter in output mode facing it, and set its speed with a wrench. A redstone signal stops it."]
+	quest.3AFD6C20F2812B0C.title: "Motor Extensions"
+	quest.3AFD6C20F2812B0C.quest_subtitle: "More stress capacity"
+	quest.3AFD6C20F2812B0C.quest_desc: ["An extension raises a motor's stress capacity without a bigger motor."]
+	quest.10B98D1834C794B2.title: "Mechanic: Powering TFMG Machines"
+	quest.10B98D1834C794B2.quest_subtitle: "One converter per machine"
+	quest.10B98D1834C794B2.quest_desc: ["TFMG cables are gone. A converter in output mode joins TFMG's electrical network on its facing side, and each machine needs a converter touching it. That is how the freezer, the polarizer and vat electrodes run."]
+	quest.13E0E34E882799DB.title: "The Galvanic Cell"
+	quest.13E0E34E882799DB.quest_subtitle: "A battery you assemble"
+	quest.13E0E34E882799DB.quest_desc: ["A Daniell cell on an assembly line: steel casing, large vessel, water, both sulfates, salt, zinc and copper rods, copper wire, then a press. It powers TFMG machines directly, without a generator, until it runs out."]
+	quest.5F3ABFCF7A206BA4.title: "The Capacitor"
+	quest.5F3ABFCF7A206BA4.quest_subtitle: "Foil and paper"
+	quest.5F3ABFCF7A206BA4.quest_desc: ["Aluminium sheet, paper and copper wire on an assembly line, then pressed and energised."]
+	quest.0E1FABF9746DF7CC.title: "The Resistor"
+	quest.0E1FABF9746DF7CC.quest_subtitle: "Gold wire, wound with constantan"
+	quest.0E1FABF9746DF7CC.quest_desc: ["Copper and gold wire with glue, pressed and energised, then wound with a constantan spool."]
+	quest.012191E920B74F40.title: "The Voltmeter"
+	quest.012191E920B74F40.quest_subtitle: "For the polarizer"
+	quest.012191E920B74F40.quest_desc: ["Steel screws, a compass and aluminium parts around a weak ferrite magnet."]
+	quest.7A647F7DCF75056A.title: "The Polarizer"
+	quest.7A647F7DCF75056A.quest_subtitle: "Make your own magnets"
+	quest.7A647F7DCF75056A.quest_desc: ["Brass sheets, capacitors, resistors, a steel casing and a voltmeter. Power it through a converter."]
+	quest.4F45E05B1A555C2A.title: "Polarized Magnets"
+	quest.4F45E05B1A555C2A.quest_subtitle: "Magnetic alloy, charged"
+	quest.4F45E05B1A555C2A.quest_desc: ["Polarize a magnetic alloy ingot."]
+	quest.604C5989935A37CA.title: "Strong Ferrite Magnets"
+	quest.604C5989935A37CA.quest_subtitle: "Layered and energised"
+	quest.604C5989935A37CA.quest_desc: ["A long assembly on a polarized magnet: hematite, zinc, manganese and pressure, energised at the end."]
+	quest.73F6D6CF5A3A6810.title: "Alnico Magnets"
+	quest.73F6D6CF5A3A6810.quest_subtitle: "Aluminium, nickel, cobalt"
+	quest.73F6D6CF5A3A6810.quest_desc: ["Polarize an alnico core, then fit cobalt rods, press, energise and fill it with chromium."]
+	quest.08B7F62B8E9C5546.title: "Neodymium Magnets"
+	quest.08B7F62B8E9C5546.quest_subtitle: "The endgame rare earth"
+	quest.08B7F62B8E9C5546.quest_desc: ["Electrum sheet, ferroboron rods, solder and neodymium powder, vacuumized, pressed, polished and energised."]
+	quest.61F38C321F6EDA6E.title: "Better Motors"
+	quest.61F38C321F6EDA6E.quest_subtitle: "Advanced and reinforced"
+	quest.61F38C321F6EDA6E.quest_desc: ["Each motor tier gives more power. Advanced and reinforced motors carry the big machines."]
+	task.7132A947B413EB9C.title: "Any Motor"
+	quest.24685F03E7EAE610.title: "The Stirling Engine"
+	quest.24685F03E7EAE610.quest_subtitle: "Heat into rotation"
+	quest.24685F03E7EAE610.quest_desc: ["A heat engine that runs on New Age's heat. It turns any steady heat source into a shaft."]
+	chapter.140DECE8B8D1EB61.title: "The Grid"
+	chapter.140DECE8B8D1EB61.chapter_subtitle: ["Carrying power far and safely: insulated wire, poles, earthing, protection, meters, storage and transformers."]
+	quest.5A32AE66513D4EC2.title: "Mechanic: Real Circuits"
+	quest.5A32AE66513D4EC2.quest_subtitle: "Out and back"
+	quest.5A32AE66513D4EC2.quest_desc: ["Like real circuits, every load needs a path out and back. Run two wires, or send the current back through the ground with a ground rod. Every wire has resistance, and its losses grow with the square of the current."]
+	quest.51A427A469BA737E.title: "Rubber Strips"
+	quest.51A427A469BA737E.quest_subtitle: "Cut from the bar"
+	quest.51A427A469BA737E.quest_desc: ["Cut rubber bars into strips. Insulation starts here."]
+	quest.0C99B6A0089FB629.title: "Insulated Wire"
+	quest.0C99B6A0089FB629.quest_subtitle: "Safe to touch"
+	quest.0C99B6A0089FB629.quest_desc: ["Copper wire wrapped in a rubber strip, curved shut. Wind it onto a spool for a wire you can run where people walk."]
+	quest.5DA6B795E01FC291.title: "The Ground Rod"
+	quest.5DA6B795E01FC291.quest_subtitle: "Earth the return"
+	quest.5DA6B795E01FC291.quest_desc: ["Copper rods soldered onto a connector. Connect your negative to it, and the earth carries the return current."]
+	quest.0F3DC65FB68165F8.title: "Pole Mounts"
+	quest.0F3DC65FB68165F8.quest_subtitle: "Lines up high"
+	quest.0F3DC65FB68165F8.quest_desc: ["Steel sheet and rods. Overhead lines hang from pole mounts."]
+	quest.57B7A443029C4D63.title: "Porcelain Insulators"
+	quest.57B7A443029C4D63.quest_subtitle: "Fired onto a stainless rod"
+	quest.57B7A443029C4D63.quest_desc: ["Clay discs curved and fired onto a stainless steel rod, four sheds deep. They keep the line off the pole."]
+	quest.2CAE2CF069EBC1C2.title: "Concrete Poles"
+	quest.2CAE2CF069EBC1C2.quest_subtitle: "Rebar and concrete"
+	quest.2CAE2CF069EBC1C2.quest_desc: ["Rebar concrete with a wire spool through it. Poles carry your lines across the land."]
+	quest.22B49234755C04AF.title: "Fuses"
+	quest.22B49234755C04AF.quest_subtitle: "A short circuit draws enormous current"
+	quest.22B49234755C04AF.quest_desc: ["Silver wire in a glass tube with brass caps. A fuse melts when overloaded: set its rating by holding Ctrl and scrolling, and replace it when it blows."]
+	quest.6137DA88F404CDCA.title: "Circuit Breakers"
+	quest.6137DA88F404CDCA.quest_subtitle: "Trip and reset"
+	quest.6137DA88F404CDCA.quest_desc: ["A miniature circuit breaker trips like a fuse but can be reset."]
+	quest.29527B589DA406BB.title: "Measuring"
+	quest.29527B589DA406BB.quest_subtitle: "Know your current"
+	quest.29527B589DA406BB.quest_desc: ["An ammeter goes in series along the wire. A clamp meter reads any wire you point it at."]
+	task.5B2317850217A849.title: "Any Measuring"
+	quest.529D80B9E7D2EDA1.title: "The Voltmeter"
+	quest.529D80B9E7D2EDA1.quest_subtitle: "Across two wires"
+	quest.529D80B9E7D2EDA1.quest_desc: ["A voltmeter goes in parallel, across two wires, and reads the voltage between them."]
+	quest.3E6DBBC64CC3DDC8.title: "Nickel-Iron Accumulators"
+	quest.3E6DBBC64CC3DDC8.quest_subtitle: "Edison cells"
+	quest.3E6DBBC64CC3DDC8.quest_desc: ["Nickel and steel plates in lye, in an aluminium case. Each stores energy at 24 V, and ten in series charge at 240 V."]
+	quest.61F3825395213EFA.title: "The Resistive Heater"
+	quest.61F3825395213EFA.quest_subtitle: "Current into heat"
+	quest.61F3825395213EFA.quest_desc: ["A constantan coil packed in magnesia, bent into a horseshoe on a casing. It heats boilers, basins and TFMG vats placed above it, just like a burner."]
+	quest.0120F3539E65904F.title: "Electric Light"
+	quest.0120F3539E65904F.quest_subtitle: "Tungsten in a brass socket"
+	quest.0120F3539E65904F.quest_desc: ["A tungsten-filament lamp in a brass socket, built with mechanical crafters. Bulbs stop mobs spawning even when switched off, and a burnt-out bulb is repaired with new tungsten wire."]
+	quest.3C6A4736CBB85D4E.title: "Switching"
+	quest.3C6A4736CBB85D4E.quest_subtitle: "Cut it off"
+	quest.3C6A4736CBB85D4E.quest_desc: ["Cut-off switches, relays and potentiometers control the circuit. Redstone versions let contraptions do the switching."]
+	quest.457B13554BABAED7.title: "Transformer Oil"
+	quest.457B13554BABAED7.quest_subtitle: "Hydrotreated or vegetable"
+	quest.457B13554BABAED7.quest_desc: ["Heat heavy oil with hydrogen, or soybean oil, in a mixer. Transformers and paper-insulated cable both need it."]
+	quest.0B39E1A1A5256A14.title: "The Transformer Core"
+	quest.0B39E1A1A5256A14.quest_subtitle: "Stacked and wound"
+	quest.0B39E1A1A5256A14.quest_desc: ["Stack laminations, press them, then wind paper and coils around them."]
+	quest.73794CFAE794A739.title: "The Transformer"
+	quest.73794CFAE794A739.quest_subtitle: "Step it up, step it down"
+	quest.73794CFAE794A739.quest_desc: ["Fit connectors and a steel shell, then fill it with transformer oil. The turns ratio sets the voltage ratio. Step the voltage up at the plant and down again near the machines: same power, less current, far smaller losses."]
+	quest.5E176F660AA5F2F3.title: "Cooling the Transformer"
+	quest.5E176F660AA5F2F3.quest_subtitle: "Radiators and oil"
+	quest.5E176F660AA5F2F3.quest_desc: ["Surround the core with radiator panels and cover it in transformer oil to raise its rating. An overloaded transformer gets damaged."]
+	quest.344D06A670281885.title: "Paper-Insulated Cable"
+	quest.344D06A670281885.quest_subtitle: "For high voltage near people"
+	quest.344D06A670281885.quest_desc: ["Paper soaked in transformer oil under a lead sheath. Run it where high voltage passes close to people."]
+	quest.24BE5BDD0EF344D2.title: "ACSR Conductor"
+	quest.24BE5BDD0EF344D2.quest_subtitle: "For long overhead lines"
+	quest.24BE5BDD0EF344D2.quest_desc: ["Aluminium strands laid around a steel core: light, strong and cheap per metre of line."]
+	quest.4D85698FC147F28A.title: "Glass Insulator Strings"
+	quest.4D85698FC147F28A.quest_subtitle: "For the highest voltages"
+	quest.4D85698FC147F28A.quest_desc: ["Glass discs strung on a steel rod with wire ties. Hang them in strings for high-voltage lines."]
+	quest.7DA23E682C2EF89A.title: "The SF6 Breaker"
+	quest.7DA23E682C2EF89A.quest_subtitle: "Smothering the arc"
+	quest.7DA23E682C2EF89A.quest_desc: ["An evacuated stainless tank filled with sulfur hexafluoride switches high-voltage lines without an arc."]
+	quest.6419E40213E96F82.title: "The Electric Pump"
+	quest.6419E40213E96F82.quest_subtitle: "A pump with its own motor"
+	quest.6419E40213E96F82.quest_desc: ["A mechanical pump with a small built-in motor. It runs straight off the grid."]
+	chapter.546908DF1439FA40.title: "Electronics"
+	chapter.546908DF1439FA40.chapter_subtitle: ["Silicon refined to semiconductor grade, then transistors and circuit boards. They open the fireproof vat, computers and the high-end machines."]
+	quest.1CEDB6ABE2820016.title: "Trichlorosilane"
+	quest.1CEDB6ABE2820016.quest_subtitle: "Silicon, chlorinated"
+	quest.1CEDB6ABE2820016.quest_desc: ["Turn silicon into trichlorosilane, the liquid that refining starts from."]
+	quest.7AE04C072ECDE239.title: "Polysilicon"
+	quest.7AE04C072ECDE239.quest_subtitle: "The Siemens process"
+	quest.7AE04C072ECDE239.quest_desc: ["Deposit silicon from trichlorosilane and hydrogen onto hot rods: graphite electrodes, at 1100 °C. A steel vat can do it, but it turns 1000 mB of trichlorosilane into a single piece. The fireproof vat is the real reactor and gets four times as much."]
+	quest.37863C291329083A.title: "Semiconductors"
+	quest.37863C291329083A.quest_subtitle: "Silicon, doped"
+	quest.37863C291329083A.quest_desc: ["Mix polysilicon with phosphorus dust for n-type, and with molten boron for p-type. Boron comes from kernite through the bloomery."]
+	quest.1D00170C37DC4C94.title: "The Transistor"
+	quest.1D00170C37DC4C94.quest_subtitle: "An n-p-n sandwich"
+	quest.1D00170C37DC4C94.quest_desc: ["Copper wire, then n-type, p-type and n-type again, on a polyethylene sheet."]
+	quest.4394E18CCEF6A7A2.title: "The Diode"
+	quest.4394E18CCEF6A7A2.quest_subtitle: "A P-N junction"
+	quest.4394E18CCEF6A7A2.quest_desc: ["A P-N junction with leads, cased in epoxy."]
+	quest.01379EB0C708704C.title: "The Circuit Board"
+	quest.01379EB0C708704C.quest_subtitle: "Coated, etched, populated"
+	quest.01379EB0C708704C.quest_desc: ["Deploy a gold sheet on an empty board and etch it with sulfuric acid in a vat. Then an assembly loop adds capacitors, resistors and transistors."]
+	quest.6454F90D417AA7DE.title: "The Fireproof Chemical Vat"
+	quest.6454F90D417AA7DE.quest_subtitle: "Arc furnaces and worse"
+	quest.6454F90D417AA7DE.quest_desc: ["A steel chemical vat, a heavy casing, two circuit boards, fireproof bricks and a rubber bar. It opens the arc furnace, high alloy steel and polysilicon."]
+	quest.7D5A493EDE67E8E5.title: "Silicon Wafers"
+	quest.7D5A493EDE67E8E5.quest_subtitle: "Pulled from the melt"
+	quest.7D5A493EDE67E8E5.quest_desc: ["Pull a monocrystalline silicon ingot from polysilicon under argon, then cut it into wafers."]
+	quest.70B9444C12F48A8E.title: "The Computer"
+	quest.70B9444C12F48A8E.quest_subtitle: "Programmable control"
+	quest.70B9444C12F48A8E.quest_desc: ["A ComputerCraft computer, built with mechanical crafters. It can run your factory by script."]
+	quest.11EF275C1455EC4E.title: "The Chunk Loader"
+	quest.11EF275C1455EC4E.quest_subtitle: "Keep it running"
+	quest.11EF275C1455EC4E.quest_desc: ["A chunk loader keeps your machines working while you are far away."]
+	chapter.2EBC2B74D9720AB7.title: "Power Plants"
+	chapter.2EBC2B74D9720AB7.chapter_subtitle: ["The big sources: sunlight, stored heat and motion, fission and fusion. Each one feeds rotation, heat or steam into what you already built."]
+	quest.0B9E467C35FB6754.title: "The Solar Heater"
+	quest.0B9E467C35FB6754.quest_subtitle: "Sunlight on a pan"
+	quest.0B9E467C35FB6754.quest_desc: ["Glass, copper and aluminium sheets. In full sun it heats what you put in it, and it can even melt rock into lava, which is scarce here: 250 mB per raw rock, 100 mB per cobble."]
+	quest.0702BDE82ADF48F3.title: "The Kinetic Battery"
+	quest.0702BDE82ADF48F3.quest_subtitle: "Store rotation in a flywheel"
+	quest.0702BDE82ADF48F3.quest_desc: ["A steel flywheel in aluminium. It stores rotation when you have too much and gives it back later."]
+	quest.79CC9A8DA825A99D.title: "Solar Mirrors"
+	quest.79CC9A8DA825A99D.quest_subtitle: "Aimed at one point"
+	quest.79CC9A8DA825A99D.quest_desc: ["Mirrors focus sunlight on a solar power tower."]
+	quest.0A1FEC7A9F7946FD.title: "The Solar Power Tower"
+	quest.0A1FEC7A9F7946FD.quest_subtitle: "Concentrated sunlight"
+	quest.0A1FEC7A9F7946FD.quest_desc: ["A tower surrounded by mirrors. In steam mode it raises Pressurized Steam for your turbines."]
+	quest.1A632DA1879AC739.title: "Molten Nitrate Salt"
+	quest.1A632DA1879AC739.quest_subtitle: "Saltpeter, melted"
+	quest.1A632DA1879AC739.quest_desc: ["Saltpeter melts into molten nitrate salt, 100 mB each, and crystallizes back. It carries and stores heat."]
+	quest.646B17C65516690D.title: "The Heat Battery"
+	quest.646B17C65516690D.quest_subtitle: "Heat for later"
+	quest.646B17C65516690D.quest_desc: ["A salt block holds heat for when the sun is down."]
+	quest.46D5B6670322A599.title: "Photovoltaic Cells"
+	quest.46D5B6670322A599.quest_subtitle: "Sunlight straight to current"
+	quest.46D5B6670322A599.quest_desc: ["Multicrystalline cells cut from polysilicon: boron, a wire saw and several more steps."]
+	quest.2745A071C057AC59.title: "Photovoltaic Solar Panels"
+	quest.2745A071C057AC59.quest_subtitle: "Laminated modules"
+	quest.2745A071C057AC59.quest_desc: ["Cells laminated into a panel. Wire panels into the grid for power with no fuel at all."]
+	quest.2D4CA0A1A631E900.title: "Heat Plates and Pipes"
+	quest.2D4CA0A1A631E900.quest_subtitle: "New Age's heat"
+	quest.2D4CA0A1A631E900.quest_desc: ["Solar heating plates collect heat, and heat pipes carry it to heaters and Stirling engines."]
+	quest.1601BE2C7B5145FF.title: "Reactor Casing"
+	quest.1601BE2C7B5145FF.quest_subtitle: "A shielded vessel"
+	quest.1601BE2C7B5145FF.quest_desc: ["Reactor casing, glass and heat vents form the New Age fission reactor."]
+	quest.79CE07AF883BEE27.title: "Radioactive Thorium"
+	quest.79CE07AF883BEE27.quest_subtitle: "Monazite, then light"
+	quest.79CE07AF883BEE27.quest_desc: ["Thorium comes from monazite through the bloomery. Focus a thorium ingot with an optical source to make it radioactive."]
+	quest.6C5C37449502094A.title: "Zircaloy"
+	quest.6C5C37449502094A.quest_subtitle: "A jacket for fuel"
+	quest.6C5C37449502094A.quest_desc: ["Weld zircaloy sheets at tier V, or compact them with solder."]
+	quest.4B3EB83645146C75.title: "Nuclear Fuel"
+	quest.4B3EB83645146C75.quest_subtitle: "A dangerous kind of warm"
+	quest.4B3EB83645146C75.quest_desc: ["An assembly on a zircaloy double sheet: radioactive thorium, press, a second sheet, then curve it shut."]
+	quest.58DD156331E7AA73.title: "The Fission Reactor"
+	quest.58DD156331E7AA73.quest_subtitle: "Rods, casing and vents"
+	quest.58DD156331E7AA73.quest_desc: ["Reactor rods hold the fuel. A working reactor puts out more heat than anything else you can build before fusion."]
+	quest.11F437723C0B89E6.title: "Deuterium"
+	quest.11F437723C0B89E6.quest_subtitle: "Cryogenic distillation"
+	quest.11F437723C0B89E6.quest_desc: ["Distil liquid hydrogen in a TFMG tower: 1000 mB gives 975 mB of liquid hydrogen and 25 mB of deuterium."]
+	quest.7D7E89202352682B.title: "Fuel Capsules"
+	quest.7D7E89202352682B.quest_subtitle: "To hold the fuel"
+	quest.7D7E89202352682B.quest_desc: ["Empty fuel capsules carry deuterium and tritium into the fusion reactor."]
+	quest.046F0224E9D9888D.title: "Tritium"
+	quest.046F0224E9D9888D.quest_subtitle: "Bred in the accelerator"
+	quest.046F0224E9D9888D.quest_desc: ["Spallation neutrons from the particle accelerator breed tritium from lithium, with beryllium multiplying them."]
+	quest.3258539832B08CC5.title: "The Particle Accelerator"
+	quest.3258539832B08CC5.quest_subtitle: "A beam line of magnets"
+	quest.3258539832B08CC5.quest_desc: ["Accelerator pipe with dipole magnets and an injector with RF power. It breeds tritium and turns thorium into fissile fuel."]
+	quest.15851ABC9F7E6E57.title: "Fusion Casing"
+	quest.15851ABC9F7E6E57.quest_subtitle: "A double-walled vessel"
+	quest.15851ABC9F7E6E57.quest_desc: ["Fusion casing, shielded and armoured with tungsten, plus superconducting coils of Nb3Sn cable."]
+	quest.47E53561FE5729AE.title: "The Fusion Reactor"
+	quest.47E53561FE5729AE.quest_subtitle: "A star in a box"
+	quest.47E53561FE5729AE.quest_desc: ["The core needs an advanced computer to control the plasma. Feed it fuel capsules of deuterium and tritium, and it raises steam for your turbines on a scale nothing else matches."]
+	chapter.0BEC819B8BEE0DF3.title: "Endgame"
+	chapter.0BEC819B8BEE0DF3.chapter_subtitle: ["The last alloys, and the machines only they can build. Trains and airships are in Transport, and the big power sources in Power Plants."]
+	quest.11B304B8038C5F99.title: "High Alloy Steel"
+	quest.11B304B8038C5F99.quest_subtitle: "A recipe with a long list"
+	quest.11B304B8038C5F99.quest_desc: ["Weak steel, chromium, molybdenum and nitrogen, with vanadium, manganese and other metal dusts, in your fireproof vat. Turbine casings are built from it."]
+	quest.650BF90AABDFA94B.title: "The High Alloy Steel Anvil"
+	quest.650BF90AABDFA94B.quest_subtitle: "The last anvil"
+	quest.650BF90AABDFA94B.quest_desc: ["Seven double ingots of high alloy steel."]
+	quest.1A2C584AF007032C.title: "Tungsten Carbide"
+	quest.1A2C584AF007032C.quest_subtitle: "Harder than steel"
+	quest.1A2C584AF007032C.quest_desc: ["Tungsten and carbon fused in the arc furnace. It makes the hardest cutting edges in the pack."]
+	chapter.5A40F759B21A177C.title: "Survival"
+	chapter.5A40F759B21A177C.chapter_subtitle: ["Staying alive in a world that wants you thirsty, cold, burnt and badly fed. None of this gates the tech, but all of it keeps you playing."]
+	quest.041755B9252E8E60.title: "Mechanic: Thirst"
+	quest.041755B9252E8E60.quest_subtitle: "Another bar to keep full"
+	quest.041755B9252E8E60.quest_desc: ["You get thirsty, and faster in the heat. Drink from rivers and lakes with an empty hand, but not from the sea: salt water makes it worse. Carry water once you can."]
+	quest.6F0A7203934A20FA.title: "Mechanic: Nutrition"
+	quest.6F0A7203934A20FA.quest_subtitle: "Steak alone won't do"
+	quest.6F0A7203934A20FA.quest_desc: ["Food has five groups: grain, fruit, vegetables, protein and dairy. Your maximum health follows how balanced your diet is, so eat a bit of everything. Meals, sandwiches and soups pack several groups into one item."]
+	quest.3390891895DFFC1F.title: "Mechanic: Food Decay"
+	quest.3390891895DFFC1F.quest_subtitle: "Nothing keeps forever"
+	quest.3390891895DFFC1F.quest_desc: ["Food rots over time. Cooking, salting, smoking, drying, brining and sealing it in jars or vessels all slow that down. Check the tooltip to see how long something has left."]
+	quest.3B293605FF1E76C3.title: "Mechanic: Body Temperature"
+	quest.3B293605FF1E76C3.quest_subtitle: "Hypo- and hyperthermia"
+	quest.3B293605FF1E76C3.quest_desc: ["Your body temperature follows the weather, the season, the time of day and what you wear. Fires and shelter warm you, and shade and water cool you. Dress for where you live."]
+	quest.0925593BCC6162AE.title: "Mechanic: Hot Items"
+	quest.0925593BCC6162AE.quest_subtitle: "Stop burning your hands"
+	quest.0925593BCC6162AE.quest_desc: ["Hot metal, molds and vessels burn you if you hold them bare-handed. Mittens knapped from leather or a pair of tongs let you carry them safely."]
+	quest.067278A8269B001C.title: "Tongs"
+	quest.067278A8269B001C.quest_subtitle: "Better than mittens"
+	quest.067278A8269B001C.quest_desc: ["Wooden tongs come first, and metal ones last much longer."]
+	task.35737A13A20D9A43.title: "Any Tongs"
+	quest.4EAABCDD0BE8E1FE.title: "A Bladder"
+	quest.4EAABCDD0BE8E1FE.quest_subtitle: "From the butcher"
+	quest.4EAABCDD0BE8E1FE.quest_desc: ["Butchering an animal gives a bladder, the waterproof heart of a flask."]
+	quest.71AD5069A4532DE6.title: "The Leather Flask"
+	quest.71AD5069A4532DE6.quest_subtitle: "Water for the road"
+	quest.71AD5069A4532DE6.quest_desc: ["Two leather sides, a bladder and string, stitched with a knife. It holds far more than a jug."]
+	quest.543FD5EA8E4C0498.title: "The Iron Flask"
+	quest.543FD5EA8E4C0498.quest_subtitle: "Hard to break"
+	quest.543FD5EA8E4C0498.quest_desc: ["A wrought iron flask lasts a long time and holds more."]
+	quest.27ACD7F2EABE5E09.title: "The Red Steel Flask"
+	quest.27ACD7F2EABE5E09.quest_subtitle: "The last flask you will need"
+	quest.27ACD7F2EABE5E09.quest_desc: ["A red steel flask is the best there is."]
+	quest.414DDED8410CEC4E.title: "Primitive Insulation"
+	quest.414DDED8410CEC4E.quest_subtitle: "Raw hide, tied on"
+	quest.414DDED8410CEC4E.quest_desc: ["Raw hides tied into rough clothes. Better than nothing in the first winter."]
+	task.0FC9E480A117EC1B.title: "Any Primitive Insulation"
+	quest.4D4E54DD4003EE78.title: "Insulated Leather"
+	quest.4D4E54DD4003EE78.quest_subtitle: "For the cold"
+	quest.4D4E54DD4003EE78.quest_desc: ["Leather armour lined with string keeps the cold out."]
+	quest.47B40103DF1C7253.title: "Predator Furs"
+	quest.47B40103DF1C7253.quest_subtitle: "Hardcore fur coats"
+	quest.47B40103DF1C7253.quest_desc: ["Furs from bears, big cats and wolves make the warmest clothes. Each animal's fur is sewn onto leather armour."]
+	task.7532BF58B19D83C9.title: "Any Predator Furs"
+	quest.5F15A054AE9C810B.title: "Wool Yarn"
+	quest.5F15A054AE9C810B.quest_subtitle: "Spun on a spindle"
+	quest.5F15A054AE9C810B.quest_desc: ["Shear wool from a familiar sheep or alpaca and spin it into yarn with a spindle."]
+	quest.6D88D10DAC055DBE.title: "Wool Cloth"
+	quest.6D88D10DAC055DBE.quest_subtitle: "Woven on the loom"
+	quest.6D88D10DAC055DBE.quest_desc: ["Weave yarn into wool cloth on a loom."]
+	quest.0958E36B093621BD.title: "Burlap Cloth"
+	quest.0958E36B093621BD.quest_subtitle: "Jute, retted and woven"
+	quest.0958E36B093621BD.quest_desc: ["Soak jute in water to get its fibre, then weave the fibre into burlap on a loom."]
+	quest.6AD1CE475668E0B6.title: "Wool Clothes"
+	quest.6AD1CE475668E0B6.quest_subtitle: "Knitted for winter"
+	quest.6AD1CE475668E0B6.quest_desc: ["Shear a sheep or alpaca, spin the wool into yarn and weave it into cloth for a sweater, hat, trousers and boots."]
+	quest.2FD31715422D1ED6.title: "Burlap Clothes"
+	quest.2FD31715422D1ED6.quest_subtitle: "Light for the heat"
+	quest.2FD31715422D1ED6.quest_desc: ["Burlap woven from jute is cool and airy, for hot climates."]
+	quest.508870AEF9AFAEC7.title: "Mechanic: Sleep"
+	quest.508870AEF9AFAEC7.quest_subtitle: "A safe night"
+	quest.508870AEF9AFAEC7.quest_desc: ["Sleeping skips the most dangerous hours, but only in a bed. A thatch bed is the first, and a proper bed later is warmer and safer."]
+	chapter.64D4E6FE7247EF78.title: "Milling \\& Baking"
+	chapter.64D4E6FE7247EF78.chapter_subtitle: ["Grain into bread. Any grain counts, so grow what your climate gives you."]
+	quest.26DC493DE112A864.title: "Grain"
+	quest.26DC493DE112A864.quest_subtitle: "Threshed from the crop"
+	quest.26DC493DE112A864.quest_desc: ["Harvest a grain crop and use a knife on it, or a scythe in the field, to get grain."]
+	task.1198FF29FC1A951D.title: "Any Grain"
+	quest.381FF952519CCC53.title: "Flour"
+	quest.381FF952519CCC53.quest_subtitle: "Grain, ground down"
+	quest.381FF952519CCC53.quest_desc: ["Grind grain on the quern. Wheat, barley, rye, oat, rice and maize all work the same way."]
+	task.6B8CF7C74272AD67.title: "Any Flour"
+	quest.55323E8BBC7A83D4.title: "Dough"
+	quest.55323E8BBC7A83D4.quest_subtitle: "Flour and water"
+	quest.55323E8BBC7A83D4.quest_desc: ["Mix flour with water. It still needs baking before it is food."]
+	task.480038BA830FACD0.title: "Any Dough"
+	quest.434CFE97669CB735.title: "The Oven"
+	quest.434CFE97669CB735.quest_subtitle: "Clay, assembled and fired"
+	quest.434CFE97669CB735.quest_desc: ["Knap and fire the bottom, top and chimney of a clay oven. Add a hopper later for automatic fuel."]
+	quest.795A07CA5197307E.title: "Bread"
+	quest.795A07CA5197307E.quest_subtitle: "Actual bread, not flatbread"
+	quest.795A07CA5197307E.quest_desc: ["Bake your dough in the oven."]
+	task.6632001117FB0DD3.title: "Any Bread"
+	quest.02C11CFCDF7A8AE5.title: "A Sandwich"
+	quest.02C11CFCDF7A8AE5.quest_subtitle: "Bread, a filling and a knife"
+	quest.02C11CFCDF7A8AE5.quest_desc: ["Two slices of bread and a filling. It packs more nutrition into one food slot."]
+	task.5D8A1EFCE82F7AE5.title: "Any Sandwich"
+	chapter.44CB1BB9F1CF815E.title: "Farm \\& Cellar"
+	chapter.44CB1BB9F1CF815E.chapter_subtitle: ["Fields, animals, cheese, cellars and greenhouses. Everything Xoonglins eat comes through here, so it pays off on a server too."]
+	quest.7DD2388332DA90E8.title: "Beekeeping"
+	quest.7DD2388332DA90E8.quest_subtitle: "Frames, hives and patience"
+	quest.7DD2388332DA90E8.quest_desc: ["Build a beehive, put frames in it and leave it near flowers. Frames fill over time."]
+	quest.5B1EEB6F6DBFF465.title: "Your First Field"
+	quest.5B1EEB6F6DBFF465.quest_subtitle: "Hoe, seeds and water"
+	quest.5B1EEB6F6DBFF465.quest_desc: ["Till soil near water and plant what you find growing wild. Crops care about climate, so look at what grows nearby before you plant."]
+	quest.45FD8C864D2A1280.title: "The Composter"
+	quest.45FD8C864D2A1280.quest_subtitle: "Soil needs feeding"
+	quest.45FD8C864D2A1280.quest_desc: ["Crops use up nutrients. A composter turns scraps and straw into fertilizer."]
+	quest.6F8F40EB6EDF0099.title: "The Watering Can"
+	quest.6F8F40EB6EDF0099.quest_subtitle: "Rain on demand"
+	quest.6F8F40EB6EDF0099.quest_desc: ["A wooden bucket and lumber, filled with water."]
+	quest.76502CA600810987.title: "Chickens"
+	quest.76502CA600810987.quest_subtitle: "A nest box and patience"
+	quest.76502CA600810987.quest_desc: ["Build a nest box and tame a chicken. Familiarity grows with daily feeding."]
+	quest.24D68E4888C03B71.title: "The Butcher's Table"
+	quest.24D68E4888C03B71.quest_subtitle: "Waste nothing"
+	quest.24D68E4888C03B71.quest_desc: ["Hang a carcass and break it down: meat, fat, hide and offal all come from here. Stomachs give rennet, and fat gives tallow."]
+	task.0F6D711A60389E63.title: "Any Butchers Table"
+	quest.48679B64F3E5465B.title: "Rennet"
+	quest.48679B64F3E5465B.quest_subtitle: "A stomach and a knife"
+	quest.48679B64F3E5465B.quest_desc: ["Cut a stomach with a knife to get four rennet. It is what curdles your milk."]
+	quest.3CF9DBA1EB6805F9.title: "Cheesecloth"
+	quest.3CF9DBA1EB6805F9.quest_subtitle: "Woven for straining"
+	quest.3CF9DBA1EB6805F9.quest_desc: ["Two pieces of good cloth make eight cheesecloth, for straining your curds."]
+	quest.4B0884AA2B09A656.title: "Milk Curds"
+	quest.4B0884AA2B09A656.quest_subtitle: "Curdled milk, strained"
+	quest.4B0884AA2B09A656.quest_desc: ["Seal milk with rennet in a barrel to curdle it, then strain the curdled milk through cheesecloth in a barrel. Whey is left over."]
+	task.55412777CD475AB8.title: "Any Curd"
+	quest.7335843E297193D9.title: "A Cheese Wheel"
+	quest.7335843E297193D9.quest_subtitle: "Curds, salt and time"
+	quest.7335843E297193D9.quest_desc: ["Pack milk curds and salt into a wheel. Cheddar takes three curds and six salt, and every milk has its own cheese. Upper classes in your settlement will ask for it."]
+	task.34F9FDF4ED0F1D72.title: "Any Cheese Wheel"
+	quest.70CCBF9F8633EA4A.title: "Sealed Bricks"
+	quest.70CCBF9F8633EA4A.quest_subtitle: "A cellar that keeps"
+	quest.70CCBF9F8633EA4A.quest_desc: ["Eight stone bricks and beeswax make eight sealed bricks. Build a cellar with them to keep food and age cheese."]
+	quest.7C4A94E18ECDF2BE.title: "Preserves"
+	quest.7C4A94E18ECDF2BE.quest_subtitle: "Fruit in a jar"
+	quest.7C4A94E18ECDF2BE.quest_desc: ["Cook fruit with sugar and seal it in a jar. It keeps almost forever."]
+	task.090C77E53A54D666.title: "Any Jam"
+	quest.0494D24576208AC3.title: "The Mixing Bowl"
+	quest.0494D24576208AC3.quest_subtitle: "Doughs and batters"
+	quest.0494D24576208AC3.quest_desc: ["Treated lumber and glue. Lumber is treated with beeswax, so bees come first."]
+	quest.75721D39E80772CA.title: "A Sugar Cookie"
+	quest.75721D39E80772CA.quest_subtitle: "Luxury, in small form"
+	quest.75721D39E80772CA.quest_desc: ["Bake a cookie. Upper classes care about this kind of thing."]
+	quest.38CBEFCE51A8EFBD.title: "Pizza"
+	quest.38CBEFCE51A8EFBD.quest_subtitle: "A finished meal"
+	quest.38CBEFCE51A8EFBD.quest_desc: ["Pizza dough goes through a mechanical mixer, with oil, salt and basil. Top it with cheese and tomato sauce, then bake it."]
+	quest.2D6E0EFE576B2E6D.title: "The Greenhouse"
+	quest.2D6E0EFE576B2E6D.quest_subtitle: "Your own climate"
+	quest.2D6E0EFE576B2E6D.quest_desc: ["Greenhouse walls and a climate station let you grow what your region can't. Fruit, spices and cold-hating crops open up here."]
+	task.4EE5E1F72906E17D.title: "Any Greenhouse Wall"
+	quest.409F50AA0D0BD32C.title: "Irrigation"
+	quest.409F50AA0D0BD32C.quest_subtitle: "Pipes, pumps and sprinklers"
+	quest.409F50AA0D0BD32C.quest_desc: ["Copper pipes, a pumping station and sprinklers keep a greenhouse watered without you."]
+	quest.4B616352A885AAFB.title: "The Firmalife Vat"
+	quest.4B616352A885AAFB.quest_subtitle: "Stainless, for wine and more"
+	quest.4B616352A885AAFB.quest_desc: ["Three stainless steel rods and beeswax."]
+	chapter.596C1E6B8A162C9F.title: "Ore Processing"
+	chapter.596C1E6B8A162C9F.chapter_subtitle: ["Getting metal out of rock, from melting ore in a pit kiln to leaching it in acid. Later methods give a little more, and some feed chemistry."]
+	quest.1B5759C0681CA301.title: "Mechanic: Ore Grades"
+	quest.1B5759C0681CA301.quest_subtitle: "Small, poor, normal, rich"
+	quest.1B5759C0681CA301.quest_desc: ["Ore comes in grades. A small piece melts to 10 mB, and poor, normal and rich ore to more each step up: 35 mB for rich malachite. A propick reading tells you which grades are around."]
+	quest.46C2BC8A81800930.title: "Melting Ore"
+	quest.46C2BC8A81800930.quest_subtitle: "The simplest way"
+	quest.46C2BC8A81800930.quest_desc: ["Ore melts straight into metal in a vessel or crucible. Most of your metal will come this way for a long time."]
+	quest.2E63BBAFCECB5507.title: "Panning"
+	quest.2E63BBAFCECB5507.quest_subtitle: "Ore from river gravel"
+	quest.2E63BBAFCECB5507.quest_desc: ["A fired clay pan, used on ore-bearing gravel deposits in rivers, sifts out small ore pieces."]
+	quest.4B92F99B2934E581.title: "The Sluice"
+	quest.4B92F99B2934E581.quest_subtitle: "Panning, but lazier"
+	quest.4B92F99B2934E581.quest_desc: ["A sluice in flowing water processes deposit gravel for you."]
+	task.2E378BD2780E87B0.title: "Any Sluice"
+	quest.60796AD2EBB8D44C.title: "Ore Powders"
+	quest.60796AD2EBB8D44C.quest_subtitle: "Ground on the quern"
+	quest.60796AD2EBB8D44C.quest_desc: ["Grinding ore gives powder: two for a small piece, up to seven for rich ore. Powders don't melt, but chemistry and the industrial blast furnace use them."]
+	task.2A484BD04D52DB3F.title: "Any Powder"
+	quest.3A705A92A7941AB4.title: "Metal Dust"
+	quest.3A705A92A7941AB4.quest_subtitle: "An ingot, ground"
+	quest.3A705A92A7941AB4.quest_desc: ["Grind a metal ingot on a quern or crushing wheels into twenty dust. Carbon brushes, alloys and catalysts take dust instead of ingots."]
+	quest.62D12871E3E6D080.title: "Mechanical Grinding"
+	quest.62D12871E3E6D080.quest_subtitle: "No more querning"
+	quest.62D12871E3E6D080.quest_desc: ["A millstone or crushing wheels grind ore to powder for you."]
+	quest.3328BC1F0C80E51E.title: "Iron Powder for the Furnace"
+	quest.3328BC1F0C80E51E.quest_subtitle: "Industrial pig iron"
+	quest.3328BC1F0C80E51E.quest_desc: ["Iron ore powders and flux go into the industrial blast furnace and come out as molten pig iron, with slag."]
+	task.2F133E0643ECC093.title: "Any Powder"
+	quest.48D0D09E52E09347.title: "Blooms by Machine"
+	quest.48D0D09E52E09347.quest_subtitle: "The helve hammer"
+	quest.48D0D09E52E09347.quest_desc: ["The helve hammer works raw and refined blooms at forging heat, so the bloomery line can run without you."]
+	quest.7A545AABBC1E148D.title: "Ore in the Basin"
+	quest.7A545AABBC1E148D.quest_subtitle: "Melting by machine"
+	quest.7A545AABBC1E148D.quest_desc: ["A heated mixer melts ore straight into molten metal, ready for a casting basin."]
+	quest.3FD5728231F2FBFB.title: "Acid Leaching"
+	quest.3FD5728231F2FBFB.quest_subtitle: "More metal per ore"
+	quest.3FD5728231F2FBFB.quest_desc: ["Ore in a vat of sulfuric acid gives metal dust: five for normal ore, seven for rich, plus a chance of one more. Each dust melts to 5 mB, so leaching yields a little more than melting."]
+	quest.0565DB89F4A62FA9.title: "Other Acids"
+	quest.0565DB89F4A62FA9.quest_subtitle: "Tin, silver, gold"
+	quest.0565DB89F4A62FA9.quest_desc: ["Hydrochloric acid leaches tin and antimony, nitric acid silver, and aqua regia, nitric with hydrochloric, gold and platinum."]
+	quest.153D34E7840A527D.title: "The Arc Furnace"
+	quest.153D34E7840A527D.quest_subtitle: "Tungsten dust"
+	quest.153D34E7840A527D.quest_desc: ["Tungsten dust comes from an arc furnace in a fireproof vat of size six."]
+	chapter.47F53FBD6F007B8F.title: "Logistics"
+	chapter.47F53FBD6F007B8F.chapter_subtitle: ["Moving items without carrying them: chutes, funnels, arms and vaults, then Create's package network."]
+	quest.154D9A6958B3A78A.title: "The Depot"
+	quest.154D9A6958B3A78A.quest_subtitle: "A place to set things down"
+	quest.154D9A6958B3A78A.quest_desc: ["A depot holds one stack under a press, a deployer or a fan."]
+	quest.630317A3AC020C26.title: "Chutes"
+	quest.630317A3AC020C26.quest_subtitle: "Gravity does the work"
+	quest.630317A3AC020C26.quest_desc: ["Chutes drop items straight down, and a fan can push them up."]
+	quest.5CA1170F3C6B1BED.title: "Funnels"
+	quest.5CA1170F3C6B1BED.quest_subtitle: "In and out of inventories"
+	quest.5CA1170F3C6B1BED.quest_desc: ["Funnels pull from and push into containers, belts and depots. Brass funnels can filter."]
+	quest.0C1FFB3703A4DCF8.title: "Brass Funnels and Tunnels"
+	quest.0C1FFB3703A4DCF8.quest_subtitle: "Filtering and splitting"
+	quest.0C1FFB3703A4DCF8.quest_desc: ["Brass funnels filter what passes, and brass tunnels split belt traffic evenly."]
+	quest.7D11188E244E11F4.title: "Smart Chutes"
+	quest.7D11188E244E11F4.quest_subtitle: "Filtered falls"
+	quest.7D11188E244E11F4.quest_desc: ["A smart chute only lets the items you choose drop through."]
+	quest.59F47C2BDDDB91A3.title: "The Weighted Ejector"
+	quest.59F47C2BDDDB91A3.quest_subtitle: "Throw it over there"
+	quest.59F47C2BDDDB91A3.quest_desc: ["An ejector launches items to a target block a few metres away."]
+	quest.51D8E4A505697E76.title: "The Mechanical Arm"
+	quest.51D8E4A505697E76.quest_subtitle: "Pick and place"
+	quest.51D8E4A505697E76.quest_desc: ["A precision-built arm moves items between any inputs and outputs in its reach."]
+	quest.550C7320B76068BA.title: "The Clipboard"
+	quest.550C7320B76068BA.quest_subtitle: "Copy settings"
+	quest.550C7320B76068BA.quest_desc: ["Write notes, and copy and paste filter and machine settings."]
+	quest.07DD8605854F9197.title: "The Item Vault"
+	quest.07DD8605854F9197.quest_subtitle: "Titanium strongroom"
+	quest.07DD8605854F9197.quest_desc: ["Two titanium sheets around a chest make bulk storage that grows with every block you add."]
+	quest.215A956B553C03C9.title: "Display Links"
+	quest.215A956B553C03C9.quest_subtitle: "Show your stock"
+	quest.215A956B553C03C9.quest_desc: ["A display link reads a block and writes to a display board or sign."]
+	quest.1D4B2D722504DEF9.title: "Cardboard"
+	quest.1D4B2D722504DEF9.quest_subtitle: "For packages"
+	quest.1D4B2D722504DEF9.quest_desc: ["Pulped paper pressed into cardboard. Packages are made of it."]
+	quest.4EBC6001522188A9.title: "The Packager"
+	quest.4EBC6001522188A9.quest_subtitle: "Pack it up"
+	quest.4EBC6001522188A9.quest_desc: ["A packager wraps items into addressed packages."]
+	quest.7CB8A7EE27913BA0.title: "Package Frogports"
+	quest.7CB8A7EE27913BA0.quest_subtitle: "The chain of command"
+	quest.7CB8A7EE27913BA0.quest_desc: ["Frogports catch and send packages along chain conveyors."]
+	quest.67244B7A451853E3.title: "Stock Links and Tickers"
+	quest.67244B7A451853E3.quest_subtitle: "Order from your storage"
+	quest.67244B7A451853E3.quest_desc: ["A stock link joins packagers into a network, and a stock ticker lets you order from all of them at once."]
+	quest.75F34A2180C6AA50.title: "Redstone Requesters"
+	quest.75F34A2180C6AA50.quest_subtitle: "Same-day delivery"
+	quest.75F34A2180C6AA50.quest_desc: ["A redstone requester orders a fixed delivery every time it gets a signal."]
+	quest.48A945D370E7A101.title: "The Factory Gauge"
+	quest.48A945D370E7A101.quest_subtitle: "Automation, reinvented"
+	quest.48A945D370E7A101.quest_desc: ["Factory gauges keep stock levels topped up by ordering ingredients and crafting automatically."]
+	chapter.51C2F3F650A42A93.title: "Society"
+	chapter.51C2F3F650A42A93.chapter_subtitle: ["Suggestions, never requirements. A lone player can run a settlement of Xoonglins, and a server can trade between climates. Every quest here is optional and nothing in the tech spine depends on it."]
+	quest.1FC6CBDDE010ADA1.title: "The Leader's Staff"
+	quest.1FC6CBDDE010ADA1.quest_subtitle: "Gold and silver"
+	quest.1FC6CBDDE010ADA1.quest_desc: ["Gold ingots and silver rods. It marks you as the one Xoonglins answer to."]
+	quest.6C48A50675BC6BEF.title: "First Settlers"
+	quest.6C48A50675BC6BEF.quest_subtitle: "Hands before anything"
+	quest.6C48A50675BC6BEF.quest_desc: ["Xoonglins of the lowest class settle where their climate suits them. Each culture has its own temperature and rainfall, so your region decides who comes."]
+	quest.0120F8322D7DEAE6.title: "A Roof and a Fire"
+	quest.0120F8322D7DEAE6.quest_subtitle: "Basic needs first"
+	quest.0120F8322D7DEAE6.quest_desc: ["Give them a small home, water and a fire. Check what they ask for: every class lists its needs."]
+	quest.2EEBC3F7DC2EDE02.title: "Feed Your People"
+	quest.2EEBC3F7DC2EDE02.quest_subtitle: "Flatbread is a start"
+	quest.2EEBC3F7DC2EDE02.quest_desc: ["Early classes want simple food and clothing. Later ones want bread, preserves, milk and fuel."]
+	quest.6AEC8A0EC4E84285.title: "Workers"
+	quest.6AEC8A0EC4E84285.quest_subtitle: "Farmers and fishers"
+	quest.6AEC8A0EC4E84285.quest_desc: ["Happy settlers rise to the next class and take on real jobs. Workers produce goods. Remember that nothing here creates matter: crafters use what you give them."]
+	quest.572AC44401414CC6.title: "Specialists"
+	quest.572AC44401414CC6.quest_subtitle: "Guards and crafters"
+	quest.572AC44401414CC6.quest_desc: ["Workplaces, tools and a little ritual. Guards take your armour and weapons, so a forge pays for itself here."]
+	quest.64CDB5D474329162.title: "Elites"
+	quest.64CDB5D474329162.quest_subtitle: "Priests and master crafters"
+	quest.64CDB5D474329162.quest_desc: ["Cheese, aged drink, fine clothes and imported goods. Elites want what your own region can't make."]
+	quest.5C2F63EC356843F7.title: "Trade"
+	quest.5C2F63EC356843F7.quest_subtitle: "Other climates, other goods"
+	quest.5C2F63EC356843F7.quest_desc: ["No culture can feed its elites alone. Found a second settlement in another climate, or trade with a neighbour on your server. A cart road or a railway connects them."]
+	quest.48BC22C8550CA7C8.title: "Neighbours"
+	quest.48BC22C8550CA7C8.quest_subtitle: "For server players"
+	quest.48BC22C8550CA7C8.quest_desc: ["On a server, a smith, a farmer and a chemist together move faster than any one of them. Share an anvil, swap goods, or start a team."]
+	quest.25B3AF87D25C1714.title: "A Leader"
+	quest.25B3AF87D25C1714.quest_subtitle: "The end of the wealth ladder"
+	quest.25B3AF87D25C1714.quest_desc: ["One leader per settlement, and the most expensive needs in the game. Their grand rites use imported luxuries to lift everybody's happiness."]
+	chapter.031B7D874776F795.title: "Transport"
+	chapter.031B7D874776F795.chapter_subtitle: ["From roads and carts to trains and airships. Each step moves more goods further."]
+	quest.44779F4EFC94364E.title: "A Proper Road"
+	quest.44779F4EFC94364E.quest_subtitle: "Base course and hoggin"
+	quest.44779F4EFC94364E.quest_desc: ["Crush gravel and rock into base course, then top it with hoggin mix. Roads speed you up and tell people where you are."]
+	quest.5E9734061D00DDD8.title: "A Boat"
+	quest.5E9734061D00DDD8.quest_subtitle: "Lumber and water"
+	quest.5E9734061D00DDD8.quest_desc: ["Rivers are the first highways."]
+	task.10008B1744F5F9D1.title: "Any Boat"
+	quest.4DA910D8C7257748.title: "A Wheel"
+	quest.4DA910D8C7257748.quest_subtitle: "The great invention"
+	quest.4DA910D8C7257748.quest_desc: ["Make a pair of wooden wheels for your first cart."]
+	task.3A4211C16E63F884.title: "Any Wheel"
+	quest.6C56D9FD8A05DF26.title: "The Hand Cart"
+	quest.6C56D9FD8A05DF26.quest_subtitle: "You pull"
+	quest.6C56D9FD8A05DF26.quest_desc: ["Enough for the walk from the mine to the base."]
+	task.627F4E00A2001A29.title: "Any Hand Cart"
+	quest.10E2BA34DEB02A7C.title: "A Saddle"
+	quest.10E2BA34DEB02A7C.quest_subtitle: "Tame a horse"
+	quest.10E2BA34DEB02A7C.quest_desc: ["Tame a horse, then saddle it. A horse makes long prospecting trips possible."]
+	quest.18BAA4066577892D.title: "The Supply Cart"
+	quest.18BAA4066577892D.quest_subtitle: "An animal pulls"
+	quest.18BAA4066577892D.quest_desc: ["A big rolling chest for a horse or donkey. This is how goods move between settlements until you have rails."]
+	task.1D37B2876C324A96.title: "Any Supply Cart"
+	quest.6EFE9EE573827369.title: "The Plow"
+	quest.6EFE9EE573827369.quest_subtitle: "Fields, faster"
+	quest.6EFE9EE573827369.quest_desc: ["A plow pulled by an animal tills a whole row at once."]
+	task.361C63007A36ECF4.title: "Any Plow"
+	quest.79147D3C025F735F.title: "The Handcar"
+	quest.79147D3C025F735F.quest_subtitle: "Rails by muscle"
+	quest.79147D3C025F735F.quest_desc: ["Casings, a cogwheel, an aluminium rod and contraption controls, which need an electron tube. It runs on any track."]
+	quest.3E5A9E3DFCF4EA22.title: "Train Tracks"
+	quest.3E5A9E3DFCF4EA22.quest_subtitle: "Stone and steel, pressed"
+	quest.3E5A9E3DFCF4EA22.quest_desc: ["A sequenced assembly: two steel rods on a smooth stone, then press. Tracks need the mechanical press."]
+	quest.400C00A759731B57.title: "Titanium"
+	quest.400C00A759731B57.quest_subtitle: "Rutile through the bloomery"
+	quest.400C00A759731B57.quest_desc: ["Bloom rutile as you did tungsten, then forge the sheet at tier VI. Train casings and vaults are built from it."]
+	quest.0C6E38DEB042A686.title: "Train Casing"
+	quest.0C6E38DEB042A686.quest_subtitle: "Titanium over wood"
+	quest.0C6E38DEB042A686.quest_desc: ["Right-click a stripped log with a titanium sheet."]
+	quest.192B14FD9C954D1B.title: "Stations and Signals"
+	quest.192B14FD9C954D1B.quest_subtitle: "Where trains stop"
+	quest.192B14FD9C954D1B.quest_desc: ["A casing and a compass make two stations. A casing and an electron tube make four signals."]
+	quest.401444CCB5108E24.title: "Terne Plate"
+	quest.401444CCB5108E24.quest_subtitle: "Sturdy sheet"
+	quest.401444CCB5108E24.quest_desc: ["Coat a steel heavy sheet with 80 mB of lead and 20 mB of tin, press it, then finish it on a belt grinder. Real fuel tanks were made the same way."]
+	quest.30A70A42790719CD.title: "Train Schedules"
+	quest.30A70A42790719CD.quest_subtitle: "Trains that drive themselves"
+	quest.30A70A42790719CD.quest_desc: ["Sturdy sheet and paper make four schedules. Now your trains don't need you aboard."]
+	quest.6F2677DE69AB3FC6.title: "The Traction Motor"
+	quest.6F2677DE69AB3FC6.quest_subtitle: "Electric trains"
+	quest.6F2677DE69AB3FC6.quest_desc: ["The Electro Energetics electric motor is a heavy series-wound traction motor: titanium housing, field coils, commutator and graphite brushes. It is the motor that works on a train."]
+	quest.7F0C78ECD419B56C.title: "Catenary"
+	quest.7F0C78ECD419B56C.quest_subtitle: "Overhead line"
+	quest.7F0C78ECD419B56C.quest_desc: ["Catenary holders hook onto nearby poles. Connect the overhead wire to the positive terminal, and the negative to a ground rod: the rails and earth carry the return."]
+	quest.3499804F8702214E.title: "Pantograph or Contact Shoe"
+	quest.3499804F8702214E.quest_subtitle: "Drawing the current"
+	quest.3499804F8702214E.quest_desc: ["A pantograph touches the overhead wire, and a contact shoe rides a third rail. A train needs one of them plus electric motors on board."]
+	task.04766B6145CA9675.title: "Any Pantograph or Contact Shoe"
+	quest.2BD9C7CE8C074969.title: "Liquid Fuel"
+	quest.2BD9C7CE8C074969.quest_subtitle: "A tank on wheels"
+	quest.2BD9C7CE8C074969.quest_desc: ["Sturdy sheet goes into the fuel tank, so your locomotives can burn liquid fuel."]
+	quest.39FA5E67F94C4C89.title: "Off-Road"
+	quest.39FA5E67F94C4C89.quest_subtitle: "Tyres and mounts"
+	quest.39FA5E67F94C4C89.quest_desc: ["Rubber tyres and a wheel mount put a contraption on the road without rails."]
+	quest.0FAB8C9EE20D8375.title: "Envelopes"
+	quest.0FAB8C9EE20D8375.quest_subtitle: "Lift, at last"
+	quest.0FAB8C9EE20D8375.quest_desc: ["Wool stiffened with magnesium rods. Envelopes give your first airship its body."]
+	task.34F2A19437ABC929.title: "Any Hot Air Envelope"
+	quest.4433C839478DCF32.title: "The Propeller Bearing"
+	quest.4433C839478DCF32.quest_subtitle: "Thrust"
+	quest.4433C839478DCF32.quest_desc: ["A titanium sheet on a brass casing, with steel springs. Fit propellers and you have a flying machine."]
+	quest.5A5D0574E0412953.title: "The Adjustable Burner"
+	quest.5A5D0574E0412953.quest_subtitle: "Hot air under control"
+	quest.5A5D0574E0412953.quest_desc: ["Titanium bars, sheets, a flarestack and a redstone contact."]
+	quest.4B0A9149EAD22D08.title: "Levitite"
+	quest.4B0A9149EAD22D08.quest_subtitle: "Filled with hydrogen"
+	quest.4B0A9149EAD22D08.quest_desc: ["A sequenced assembly on magnesium sheet, filled with 125 mB of hydrogen."]
+	chapter.7363F2CA4C12D9FF.title: "Weapons"
+	chapter.7363F2CA4C12D9FF.chapter_subtitle: ["Staying alive, then keeping others out. Weapons and armour also supply guards in your settlement."]
+	quest.495120B2D0DC2AF2.title: "A Javelin"
+	quest.495120B2D0DC2AF2.quest_subtitle: "Stone, thrown"
+	quest.495120B2D0DC2AF2.quest_desc: ["Knap a javelin head. It hits hard and you can pick it up again."]
+	task.62271684638FF110.title: "Any Stone Javelin"
+	quest.341CECFA08FCA5FA.title: "A Bow"
+	quest.341CECFA08FCA5FA.quest_subtitle: "Reach out"
+	quest.341CECFA08FCA5FA.quest_desc: ["Bows and arrows work as you'd expect, and they cost less metal."]
+	quest.6C7AFBD6955F62E9.title: "A Metal Weapon"
+	quest.6C7AFBD6955F62E9.quest_subtitle: "Copper, cast"
+	quest.6C7AFBD6955F62E9.quest_desc: ["A mace or sword from your first anvil. Every weapon here has a damage type, and some creatures resist it."]
+	task.5D092DFCF5951DDA.title: "Any Sword or Mace"
+	quest.0C5A98CB2755EF2E.title: "A Shield"
+	quest.0C5A98CB2755EF2E.quest_subtitle: "Block, then strike"
+	quest.0C5A98CB2755EF2E.quest_desc: ["Forge a shield. In this world, a shield is what keeps a bear from ending your run."]
+	task.314706A6F484E6CB.title: "Any Shield"
+	quest.15EB2F85BA59618E.title: "A Full Suit"
+	quest.15EB2F85BA59618E.quest_subtitle: "Helmet to boots"
+	quest.15EB2F85BA59618E.quest_desc: ["Any metal counts. Armour takes real metal and a good anvil, and your guards will want the same."]
+	task.7CE1E03B3BA60B42.title: "Any Helmet"
+	task.47C19F2B3E59D54C.title: "Any Chestplate"
+	task.7018801F991C2E3D.title: "Any Greaves"
+	task.2A072E2289552058.title: "Any Boots"
+	quest.45427A3953C4B619.title: "A Crossbow"
+	quest.45427A3953C4B619.quest_subtitle: "A harder pull"
+	quest.45427A3953C4B619.quest_desc: ["More force, slower reload."]
+	quest.37CEA14BE7D3526A.title: "Gunpowder"
+	quest.37CEA14BE7D3526A.quest_subtitle: "Saltpeter, sulfur, charcoal"
+	quest.37CEA14BE7D3526A.quest_desc: ["Hand mixing doesn't work: charcoal, sulfur and saltpeter powder go in a mechanical mixer."]
+	quest.51D87F70D9D08013.title: "A Log Cannon"
+	quest.51D87F70D9D08013.quest_subtitle: "Crude and honest"
+	quest.51D87F70D9D08013.quest_desc: ["A chamber from logs and gunpowder. It won't last, but it fires."]
+	quest.42DB4A1836029847.title: "A Wrought Iron Cannon"
+	quest.42DB4A1836029847.quest_subtitle: "Now you mean it"
+	quest.42DB4A1836029847.quest_desc: ["Wrought iron sheets and gunpowder make a real chamber."]
+	quest.209F29B8648E214E.title: "The Cannon Mount"
+	quest.209F29B8648E214E.quest_subtitle: "Aim is everything"
+	quest.209F29B8648E214E.quest_desc: ["Casing, shafts, sheets and gunpowder."]
+	quest.190FFBFB8EC8D63C.title: "The Cannon Loader"
+	quest.190FFBFB8EC8D63C.quest_subtitle: "Reload from behind"
+	quest.190FFBFB8EC8D63C.quest_desc: ["Automates what you'd otherwise do with a ram rod."]
+	quest.5D9B7432C9CB57B0.title: "Solid Shot"
+	quest.5D9B7432C9CB57B0.quest_subtitle: "Iron and wood"
+	quest.5D9B7432C9CB57B0.quest_desc: ["Four iron ingots, a wooden slab and wrought iron rods."]
+	quest.5B910B15EAE27CD6.title: "A Powder Charge"
+	quest.5B910B15EAE27CD6.quest_subtitle: "Pack it in wool"
+	quest.5B910B15EAE27CD6.quest_desc: ["Packed gunpowder in a bag of wool and yarn. Packing the powder needs a press."]
+	quest.0A8A10945B36FB76.title: "Fire!"
+	quest.0A8A10945B36FB76.quest_subtitle: "Test it somewhere empty"
+	quest.0A8A10945B36FB76.quest_desc: ["Load a charge and shot, then fire. Point it away from your base."]
+	quest.4CD8C5DE84C60811.title: "High Explosive"
+	quest.4CD8C5DE84C60811.quest_subtitle: "The endgame of argument"
+	quest.4CD8C5DE84C60811.quest_desc: ["An HE shell with a fuze. It is heavy on acid and steel, so expect to work for it."]
+}

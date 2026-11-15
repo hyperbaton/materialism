@@ -1,0 +1,555 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "power_plants"
+	group: "160F5791078B9764"
+	icon: {
+		id: "solarpunk:solar_power_tower"
+	}
+	id: "2EBC2B74D9720AB7"
+	images: [ ]
+	order_index: 21
+	quest_links: [
+		{
+			id: "6B94028829960676"
+			linked_quest: "3EA940C332457480"
+			shape: "circle"
+			size: 0.75d
+			x: 0.0d
+			y: 0.79d
+		}
+		{
+			id: "2116256BE49229CA"
+			linked_quest: "1135582C6FA5A24D"
+			shape: "circle"
+			size: 0.75d
+			x: 0.0d
+			y: 2.54d
+		}
+		{
+			id: "21B01C7043EA648A"
+			linked_quest: "40BBECB889D17E7C"
+			shape: "circle"
+			size: 0.75d
+			x: 0.0d
+			y: 4.31d
+		}
+		{
+			id: "71B751DDC1F8053C"
+			linked_quest: "24685F03E7EAE610"
+			shape: "circle"
+			size: 0.75d
+			x: 0.0d
+			y: 5.43d
+		}
+		{
+			id: "4E7281BBEFF961A9"
+			linked_quest: "6454F90D417AA7DE"
+			shape: "circle"
+			size: 0.75d
+			x: 0.0d
+			y: 6.55d
+		}
+		{
+			id: "379BFFDCD5145D6D"
+			linked_quest: "67A19D9014F54314"
+			shape: "circle"
+			size: 0.75d
+			x: 0.0d
+			y: 8.48d
+		}
+		{
+			id: "6FD02972C942F9FB"
+			linked_quest: "46D52B2F8BE7381A"
+			shape: "circle"
+			size: 0.75d
+			x: 0.0d
+			y: 13.65d
+		}
+		{
+			id: "069296B4E42BD2ED"
+			linked_quest: "18687C0E4557C87A"
+			shape: "circle"
+			size: 0.75d
+			x: 2.0d
+			y: 2.66d
+		}
+		{
+			id: "40D734ADC4AF1E83"
+			linked_quest: "70B9444C12F48A8E"
+			shape: "circle"
+			size: 0.75d
+			x: 2.0d
+			y: 9.87d
+		}
+		{
+			id: "6C8B9EA3418F4151"
+			linked_quest: "23206F2F3C607C2C"
+			shape: "circle"
+			size: 0.75d
+			x: 4.0d
+			y: 7.81d
+		}
+	]
+	quests: [
+		{
+			dependencies: [
+				"3EA940C332457480"
+				"03E67F66005810E1"
+			]
+			icon: {
+				id: "solarpunk:solar_heater"
+			}
+			id: "0B9E467C35FB6754"
+			optional: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				id: "2C075460D56066FF"
+				item: { count: 1, id: "solarpunk:solar_heater" }
+				type: "item"
+			}]
+			x: 2.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["47C317ED8D341526"]
+			icon: {
+				id: "solarpunk:kinetic_battery"
+			}
+			id: "0702BDE82ADF48F3"
+			optional: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				id: "68AC407E13167EEA"
+				item: { count: 1, id: "solarpunk:kinetic_battery" }
+				type: "item"
+			}]
+			x: 11.2d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"3EA940C332457480"
+				"71496D3549A1D7AC"
+				"1135582C6FA5A24D"
+				"7916D148A8C25365"
+				"02DADB633A0359D0"
+			]
+			icon: {
+				id: "solarpunk:solar_mirror"
+			}
+			id: "79CC9A8DA825A99D"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				count: 8L
+				id: "15BDF1C3590246EE"
+				item: { count: 1, id: "solarpunk:solar_mirror" }
+				type: "item"
+			}]
+			x: 2.0d
+			y: 1.4d
+		}
+		{
+			dependencies: [
+				"79CC9A8DA825A99D"
+				"32666CB0A81095B9"
+				"18687C0E4557C87A"
+			]
+			icon: {
+				id: "solarpunk:solar_power_tower"
+			}
+			id: "0A1FEC7A9F7946FD"
+			shape: "circle"
+			size: 1.5d
+			tasks: [{
+				consume_items: false
+				id: "7326306F0D90D811"
+				item: { count: 1, id: "solarpunk:solar_power_tower" }
+				type: "item"
+			}]
+			x: 4.0d
+			y: 2.28d
+		}
+		{
+			dependencies: [
+				"7D974A2698EDED60"
+				"1772AFD39460A77C"
+				"5BA8022214FF6AF5"
+			]
+			icon: {
+				id: "solarpunk:crystallizer"
+			}
+			id: "1A632DA1879AC739"
+			optional: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				id: "42D8B126778558AE"
+				item: { count: 1, id: "solarpunk:crystallizer" }
+				type: "item"
+			}]
+			x: 4.0d
+			y: 0.88d
+		}
+		{
+			dependencies: [
+				"1A632DA1879AC739"
+				"0A1FEC7A9F7946FD"
+			]
+			icon: {
+				id: "solarpunk:heat_battery"
+			}
+			id: "646B17C65516690D"
+			optional: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				id: "112150B89B771B1D"
+				item: { count: 1, id: "solarpunk:heat_battery" }
+				type: "item"
+			}]
+			x: 6.0d
+			y: 1.58d
+		}
+		{
+			dependencies: [
+				"7AE04C072ECDE239"
+				"46D52B2F8BE7381A"
+				"4815FCA8115F74AF"
+			]
+			icon: {
+				id: "solarpunk:photovoltaic_cell"
+			}
+			id: "46D5B6670322A599"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				count: 4L
+				id: "45519C88D2A1E4CE"
+				item: { count: 1, id: "solarpunk:photovoltaic_cell" }
+				type: "item"
+			}]
+			x: 2.0d
+			y: 13.65d
+		}
+		{
+			dependencies: [
+				"46D5B6670322A599"
+				"5A32AE66513D4EC2"
+				"1D00170C37DC4C94"
+			]
+			icon: {
+				id: "solarpunk:brass_solar_panel"
+			}
+			id: "2745A071C057AC59"
+			shape: "circle"
+			size: 1.5d
+			tasks: [{
+				consume_items: false
+				id: "05D93B5DD95FF1CC"
+				item: { count: 1, id: "solarpunk:brass_solar_panel" }
+				type: "item"
+			}]
+			x: 4.0d
+			y: 13.65d
+		}
+		{
+			dependencies: [
+				"24685F03E7EAE610"
+				"64F19E8C6AFC764F"
+				"550D082F2FB29D86"
+				"1042E53FF23B2F2C"
+				"40BBECB889D17E7C"
+				"2FC83F769A9EED07"
+				"0FF60097DEFBF7E1"
+			]
+			icon: {
+				id: "create_new_age:basic_solar_heating_plate"
+			}
+			id: "2D4CA0A1A631E900"
+			optional: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{
+					consume_items: false
+					id: "780F2957582EA0E6"
+					item: { count: 1, id: "create_new_age:basic_solar_heating_plate" }
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "6B7ADC26D110781E"
+					item: { count: 1, id: "create_new_age:heat_pipe" }
+					type: "item"
+				}
+			]
+			x: 2.0d
+			y: 5.0d
+		}
+		{
+			dependencies: [
+				"1135582C6FA5A24D"
+				"18687C0E4557C87A"
+				"40BBECB889D17E7C"
+			]
+			icon: {
+				id: "create_new_age:reactor_casing"
+			}
+			id: "1601BE2C7B5145FF"
+			optional: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{
+					consume_items: false
+					count: 16L
+					id: "71DAE8D228C5E931"
+					item: { count: 1, id: "create_new_age:reactor_casing" }
+					type: "item"
+				}
+				{
+					consume_items: false
+					count: 4L
+					id: "33E3D7D70B88B378"
+					item: { count: 1, id: "create_new_age:reactor_glass" }
+					type: "item"
+				}
+			]
+			x: 4.0d
+			y: 4.46d
+		}
+		{
+			dependencies: [
+				"6454F90D417AA7DE"
+				"0170480B29CC3824"
+			]
+			icon: {
+				id: "create_new_age:radioactive_thorium"
+			}
+			id: "79CE07AF883BEE27"
+			optional: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				id: "68205D1AD06012F5"
+				item: { count: 1, id: "create_new_age:radioactive_thorium" }
+				type: "item"
+			}]
+			x: 2.0d
+			y: 6.4d
+		}
+		{
+			dependencies: ["67A19D9014F54314"]
+			icon: {
+				components: {
+					"tfc:heat": { }
+				}
+				id: "tfc_metallurgy:metal/double_sheet/zircaloy"
+			}
+			id: "6C5C37449502094A"
+			optional: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				id: "2B6EF92D18FFCF4A"
+				item: { components: { "tfc:heat": { } }, count: 1, id: "tfc_metallurgy:metal/double_sheet/zircaloy" }
+				type: "item"
+			}]
+			x: 2.0d
+			y: 7.8d
+		}
+		{
+			dependencies: [
+				"79CE07AF883BEE27"
+				"6C5C37449502094A"
+			]
+			icon: {
+				id: "create_new_age:nuclear_fuel"
+			}
+			id: "4B3EB83645146C75"
+			optional: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				id: "397D57B94C9F9C2A"
+				item: { count: 1, id: "create_new_age:nuclear_fuel" }
+				type: "item"
+			}]
+			x: 4.0d
+			y: 5.86d
+		}
+		{
+			dependencies: [
+				"4B3EB83645146C75"
+				"1601BE2C7B5145FF"
+			]
+			icon: {
+				id: "create_new_age:reactor_rod"
+			}
+			id: "58DD156331E7AA73"
+			optional: true
+			shape: "circle"
+			size: 1.5d
+			tasks: [{
+				consume_items: false
+				id: "7C661DBDDCE5B935"
+				item: { count: 1, id: "create_new_age:reactor_rod" }
+				type: "item"
+			}]
+			x: 6.0d
+			y: 5.08d
+		}
+		{
+			dependencies: ["23206F2F3C607C2C"]
+			icon: {
+				id: "solarpunk:solar_power_tower"
+			}
+			id: "11F437723C0B89E6"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				fluid: {
+					amount: 1000
+					id: "solarpunk:deuterium"
+				}
+				id: "4C0781024EFAC0AC"
+				type: "fluid"
+			}]
+			x: 6.0d
+			y: 8.1d
+		}
+		{
+			dependencies: [
+				"46D6404C0D514118"
+				"67A19D9014F54314"
+			]
+			icon: {
+				id: "solarpunk:empty_fuel_capsule"
+			}
+			id: "7D7E89202352682B"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				count: 4L
+				id: "16FED078E2D46A3D"
+				item: { count: 1, id: "solarpunk:empty_fuel_capsule" }
+				type: "item"
+			}]
+			x: 4.0d
+			y: 9.07d
+		}
+		{
+			dependencies: [
+				"3258539832B08CC5"
+				"7D7E89202352682B"
+			]
+			icon: {
+				id: "solarpunk:tritium_capsule"
+			}
+			id: "046F0224E9D9888D"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				id: "4B49F1D250507EDD"
+				item: { count: 1, id: "solarpunk:tritium_capsule" }
+				type: "item"
+			}]
+			x: 6.0d
+			y: 9.5d
+		}
+		{
+			dependencies: [
+				"70B9444C12F48A8E"
+				"73794CFAE794A739"
+				"0C1FFB3703A4DCF8"
+				"15851ABC9F7E6E57"
+			]
+			icon: {
+				id: "solarpunk:particle_accelerator_pipe"
+			}
+			id: "3258539832B08CC5"
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{
+					consume_items: false
+					count: 8L
+					id: "107394507785AC68"
+					item: { count: 1, id: "solarpunk:particle_accelerator_pipe" }
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "6015BF19D52D06AF"
+					item: { count: 1, id: "solarpunk:particle_accelerator_input" }
+					type: "item"
+				}
+			]
+			x: 4.0d
+			y: 10.47d
+		}
+		{
+			dependencies: ["03131E1BAF18DAFE"]
+			icon: {
+				id: "solarpunk:fusion_reactor_casing"
+			}
+			id: "15851ABC9F7E6E57"
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{
+					consume_items: false
+					count: 16L
+					id: "2BDC9A6BA2E364A1"
+					item: { count: 1, id: "solarpunk:fusion_reactor_casing" }
+					type: "item"
+				}
+				{
+					consume_items: false
+					count: 4L
+					id: "6B5F64FFDED41BE1"
+					item: { count: 1, id: "solarpunk:superconducting_coil" }
+					type: "item"
+				}
+			]
+			x: 2.0d
+			y: 11.13d
+		}
+		{
+			dependencies: [
+				"11F437723C0B89E6"
+				"046F0224E9D9888D"
+				"5DA61100494D52F9"
+			]
+			icon: {
+				id: "solarpunk:fusion_reactor_core"
+			}
+			id: "47E53561FE5729AE"
+			shape: "circle"
+			size: 1.5d
+			tasks: [{
+				consume_items: false
+				id: "71A90B475D3EAFA7"
+				item: { count: 1, id: "solarpunk:fusion_reactor_core" }
+				type: "item"
+			}]
+			x: 8.0d
+			y: 8.89d
+		}
+	]
+}

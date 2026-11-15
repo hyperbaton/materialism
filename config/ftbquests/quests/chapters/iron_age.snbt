@@ -1,0 +1,377 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "iron_age"
+	group: "160F5791078B9764"
+	icon: {
+		components: {
+			"tfc:heat": { }
+		}
+		id: "tfc:metal/ingot/wrought_iron"
+	}
+	id: "206BF17A869EA55D"
+	images: [ ]
+	order_index: 6
+	quest_links: [
+		{
+			id: "298D8FE9F1D6BFB3"
+			linked_quest: "0707763CAB6FE51A"
+			shape: "circle"
+			size: 0.75d
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			id: "0E67316A4518E3D5"
+			linked_quest: "5D3ADCC4ECED777F"
+			shape: "circle"
+			size: 0.75d
+			x: 6.0d
+			y: 1.4d
+		}
+		{
+			id: "3E35A54462A3B7C3"
+			linked_quest: "6CBB93B3CF9FA4CA"
+			shape: "circle"
+			size: 0.75d
+			x: 14.0d
+			y: 2.1d
+		}
+		{
+			id: "7C5C4B5533A6BB92"
+			linked_quest: "20DF0C13F2C600AD"
+			shape: "circle"
+			size: 0.75d
+			x: 16.0d
+			y: 3.36d
+		}
+		{
+			id: "13B27493944AE734"
+			linked_quest: "176BCF909EF12AC1"
+			shape: "circle"
+			size: 0.75d
+			x: 18.0d
+			y: 3.78d
+		}
+		{
+			id: "1C987A7872A455EA"
+			linked_quest: "393843AAF9FCFF61"
+			shape: "circle"
+			size: 0.75d
+			x: 18.0d
+			y: 4.9d
+		}
+	]
+	quests: [
+		{
+			dependencies: ["0707763CAB6FE51A"]
+			icon: {
+				components: {
+					"tfc:heat": { }
+				}
+				id: "tfc:metal/sheet/bismuth_bronze"
+			}
+			id: "1BD74C2523FA6F4D"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				count: 8L
+				id: "467EF5B6C0A6D3BB"
+				item: { components: { "ftbfiltersystem:filter": "ftbfiltersystem:or(ftbfiltersystem:item(tfc:metal/sheet/bismuth_bronze)ftbfiltersystem:item(tfc:metal/sheet/black_bronze)ftbfiltersystem:item(tfc:metal/sheet/bronze))" }, count: 1, id: "ftbfiltersystem:smart_filter" }
+				type: "item"
+			}]
+			x: 2.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["1BD74C2523FA6F4D"]
+			icon: {
+				components: {
+					"tfc:heat": { }
+				}
+				id: "tfc:metal/double_sheet/bismuth_bronze"
+			}
+			id: "72DA1B57FB553B41"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				count: 8L
+				id: "4D5A162FD5A5445C"
+				item: { components: { "ftbfiltersystem:filter": "ftbfiltersystem:item_tag(tfc:double_sheets/any_bronze)" }, count: 1, id: "ftbfiltersystem:smart_filter" }
+				type: "item"
+			}]
+			x: 4.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["72DA1B57FB553B41"]
+			icon: {
+				id: "tfc:bloomery"
+			}
+			id: "74B5420D54FC7AB0"
+			shape: "circle"
+			size: 1.5d
+			tasks: [{
+				consume_items: false
+				id: "7E9DA46F71264A3D"
+				item: { count: 1, id: "tfc:bloomery" }
+				type: "item"
+			}]
+			x: 6.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["5D3ADCC4ECED777F"]
+			icon: {
+				components: {
+					"tfc:heat": { }
+				}
+				id: "tfc:ore/small_hematite"
+			}
+			id: "6EB21F335F326CCF"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				id: "1F69B6FFEEB79BFB"
+				item: { components: { "ftbfiltersystem:filter": "ftbfiltersystem:or(ftbfiltersystem:item(tfc:ore/normal_hematite)ftbfiltersystem:item(tfc:ore/normal_limonite)ftbfiltersystem:item(tfc:ore/normal_magnetite)ftbfiltersystem:item(tfc:ore/poor_hematite)ftbfiltersystem:item(tfc:ore/poor_limonite)ftbfiltersystem:item(tfc:ore/poor_magnetite)ftbfiltersystem:item(tfc:ore/rich_hematite)ftbfiltersystem:item(tfc:ore/rich_limonite)ftbfiltersystem:item(tfc:ore/rich_magnetite)ftbfiltersystem:item(tfc:ore/small_hematite)ftbfiltersystem:item(tfc:ore/small_limonite)ftbfiltersystem:item(tfc:ore/small_magnetite))" }, count: 1, id: "ftbfiltersystem:smart_filter" }
+				type: "item"
+			}]
+			x: 8.0d
+			y: 1.4d
+		}
+		{
+			dependencies: ["74B5420D54FC7AB0"]
+			icon: {
+				id: "tfc:bloomery"
+			}
+			id: "161CE790D0FAAAE4"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				id: "6251942C15C532B1"
+				observation_type: "block"
+				observe_type: 0
+				timer: 0L
+				to_observe: "tfc:bloomery"
+				type: "observation"
+			}]
+			x: 8.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"161CE790D0FAAAE4"
+				"6EB21F335F326CCF"
+			]
+			icon: {
+				components: {
+					"tfc:heat": { }
+				}
+				id: "tfc:raw_iron_bloom"
+			}
+			id: "6DC8766ED1D35EC9"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				id: "07DDE1042C0245F2"
+				item: { components: { "tfc:heat": { } }, count: 1, id: "tfc:raw_iron_bloom" }
+				type: "item"
+			}]
+			x: 10.0d
+			y: 0.7d
+		}
+		{
+			dependencies: ["6DC8766ED1D35EC9"]
+			icon: {
+				components: {
+					"tfc:heat": { }
+				}
+				id: "tfc:refined_iron_bloom"
+			}
+			id: "156CE7CBAD2CEA8F"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				id: "60E8D217467A0242"
+				item: { components: { "tfc:heat": { } }, count: 1, id: "tfc:refined_iron_bloom" }
+				type: "item"
+			}]
+			x: 12.0d
+			y: 0.7d
+		}
+		{
+			dependencies: ["156CE7CBAD2CEA8F"]
+			icon: {
+				components: {
+					"tfc:heat": { }
+				}
+				id: "tfc:metal/ingot/wrought_iron"
+			}
+			id: "5BDD335BAEB5D3CD"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				id: "12D2DE599E1117C2"
+				item: { components: { "tfc:heat": { } }, count: 1, id: "tfc:metal/ingot/wrought_iron" }
+				type: "item"
+			}]
+			x: 14.0d
+			y: 0.7d
+		}
+		{
+			dependencies: ["5BDD335BAEB5D3CD"]
+			icon: {
+				components: {
+					"tfc:heat": { }
+				}
+				id: "tfc:metal/anvil/wrought_iron"
+			}
+			id: "3CE77F6BCCEEE09C"
+			shape: "circle"
+			size: 1.5d
+			tasks: [{
+				consume_items: false
+				id: "1115A74F32E39870"
+				item: { components: { "tfc:heat": { } }, count: 1, id: "tfc:metal/anvil/wrought_iron" }
+				type: "item"
+			}]
+			x: 16.0d
+			y: 0.7d
+		}
+		{
+			dependencies: ["3CE77F6BCCEEE09C"]
+			icon: {
+				components: {
+					"tfc:heat": { }
+				}
+				id: "tfc:metal/tuyere/wrought_iron"
+			}
+			id: "6AB4B307DCBBFB20"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				id: "605C8D5F1A7C7E89"
+				item: { components: { "tfc:heat": { } }, count: 1, id: "tfc:metal/tuyere/wrought_iron" }
+				type: "item"
+			}]
+			x: 18.0d
+			y: 1.12d
+		}
+		{
+			dependencies: ["6CBB93B3CF9FA4CA"]
+			icon: {
+				components: {
+					"tfc:heat": { }
+				}
+				id: "tfc:ceramic/unfired_fire_brick"
+			}
+			id: "0D31BC2ECF34F22A"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				count: 8L
+				id: "61C6DC0FD469A289"
+				item: { components: { "tfc:heat": { } }, count: 1, id: "tfc:ceramic/unfired_fire_brick" }
+				type: "item"
+			}]
+			x: 16.0d
+			y: 2.1d
+		}
+		{
+			dependencies: [
+				"0D31BC2ECF34F22A"
+				"20DF0C13F2C600AD"
+			]
+			icon: {
+				id: "tfc:fire_bricks"
+			}
+			id: "72C9588819852E5B"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				count: 8L
+				id: "28E69847D2894848"
+				item: { count: 1, id: "tfc:fire_bricks" }
+				type: "item"
+			}]
+			x: 18.0d
+			y: 2.52d
+		}
+		{
+			dependencies: [
+				"176BCF909EF12AC1"
+				"6AB4B307DCBBFB20"
+				"72C9588819852E5B"
+				"393843AAF9FCFF61"
+			]
+			icon: {
+				components: {
+					"tfc:heat": { }
+				}
+				id: "tfc:blast_furnace"
+			}
+			id: "6A5F453B1A0438B4"
+			shape: "circle"
+			size: 1.5d
+			tasks: [{
+				consume_items: false
+				id: "05D35D960301EAED"
+				item: { components: { "tfc:heat": { } }, count: 1, id: "tfc:blast_furnace" }
+				type: "item"
+			}]
+			x: 20.0d
+			y: 3.08d
+		}
+		{
+			dependencies: ["6A5F453B1A0438B4"]
+			icon: {
+				components: {
+					"tfc:heat": { }
+				}
+				id: "tfc:blast_furnace"
+			}
+			id: "773E83F816EEC773"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				id: "47EE38AEDBBF4560"
+				observation_type: "block"
+				observe_type: 0
+				timer: 0L
+				to_observe: "tfc:blast_furnace"
+				type: "observation"
+			}]
+			x: 22.0d
+			y: 3.08d
+		}
+		{
+			dependencies: ["773E83F816EEC773"]
+			icon: {
+				components: {
+					"tfc:heat": { }
+				}
+				id: "tfc:metal/ingot/pig_iron"
+			}
+			id: "16B0A12678349853"
+			shape: "circle"
+			size: 1.5d
+			tasks: [{
+				consume_items: false
+				id: "6FF05993E3098C84"
+				item: { components: { "tfc:heat": { } }, count: 1, id: "tfc:metal/ingot/pig_iron" }
+				type: "item"
+			}]
+			x: 24.0d
+			y: 3.08d
+		}
+	]
+}

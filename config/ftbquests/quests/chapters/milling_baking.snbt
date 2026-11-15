@@ -1,0 +1,195 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "milling_baking"
+	group: "3E009514FEB829B8"
+	icon: {
+		components: {
+			"tfc:food": {
+				creation_date: 7387200L
+			}
+			"tfc:heat": { }
+		}
+		id: "tfc:food/wheat_bread"
+	}
+	id: "64D4E6FE7247EF78"
+	images: [ ]
+	order_index: 1
+	quest_links: [
+		{
+			id: "0BDFBB0E8B4AF0DF"
+			linked_quest: "5B1EEB6F6DBFF465"
+			shape: "circle"
+			size: 0.75d
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			id: "72C7E85D6E2E9BCE"
+			linked_quest: "4FB55FBB394B9B83"
+			shape: "circle"
+			size: 0.75d
+			x: 2.0d
+			y: 1.26d
+		}
+		{
+			id: "3080A32BDD3E39DF"
+			linked_quest: "38AB6EF4A503435E"
+			shape: "circle"
+			size: 0.75d
+			x: 4.0d
+			y: 2.03d
+		}
+	]
+	quests: [
+		{
+			dependencies: ["5B1EEB6F6DBFF465"]
+			icon: {
+				components: {
+					"tfc:food": {
+						creation_date: 7387200L
+					}
+				}
+				id: "tfc:food/barley_grain"
+			}
+			id: "26DC493DE112A864"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				id: "1198FF29FC1A951D"
+				item: { components: { "ftbfiltersystem:filter": "ftbfiltersystem:or(ftbfiltersystem:item(tfc:food/barley_grain)ftbfiltersystem:item(tfc:food/maize_grain)ftbfiltersystem:item(tfc:food/oat_grain)ftbfiltersystem:item(tfc:food/rice_grain)ftbfiltersystem:item(tfc:food/rye_grain)ftbfiltersystem:item(tfc:food/wheat_grain))" }, count: 1, id: "ftbfiltersystem:smart_filter" }
+				type: "item"
+			}]
+			x: 2.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"26DC493DE112A864"
+				"4FB55FBB394B9B83"
+			]
+			icon: {
+				components: {
+					"tfc:food": {
+						creation_date: 7387200L
+					}
+				}
+				id: "tfc:food/barley_flour"
+			}
+			id: "381FF952519CCC53"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				id: "6B8CF7C74272AD67"
+				item: { components: { "ftbfiltersystem:filter": "ftbfiltersystem:item_tag(c:foods/flour)" }, count: 1, id: "ftbfiltersystem:smart_filter" }
+				type: "item"
+			}]
+			x: 4.0d
+			y: 0.63d
+		}
+		{
+			dependencies: ["381FF952519CCC53"]
+			icon: {
+				components: {
+					"tfc:food": {
+						creation_date: 7387200L
+					}
+					"tfc:heat": { }
+				}
+				id: "tfc:food/barley_dough"
+			}
+			id: "55323E8BBC7A83D4"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				id: "480038BA830FACD0"
+				item: { components: { "ftbfiltersystem:filter": "ftbfiltersystem:item_tag(c:foods/dough)" }, count: 1, id: "ftbfiltersystem:smart_filter" }
+				type: "item"
+			}]
+			x: 6.0d
+			y: 0.63d
+		}
+		{
+			dependencies: ["38AB6EF4A503435E"]
+			icon: {
+				id: "firmalife:clay_oven_bottom"
+			}
+			id: "434CFE97669CB735"
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{
+					consume_items: false
+					id: "0E8010717BE3301E"
+					item: { count: 1, id: "firmalife:clay_oven_bottom" }
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "3C0F773E8C42CBBE"
+					item: { count: 1, id: "firmalife:clay_oven_top" }
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "3998D1A33F6DB95D"
+					item: { count: 1, id: "firmalife:clay_oven_chimney" }
+					type: "item"
+				}
+			]
+			x: 6.0d
+			y: 2.03d
+		}
+		{
+			dependencies: [
+				"55323E8BBC7A83D4"
+				"434CFE97669CB735"
+			]
+			icon: {
+				components: {
+					"tfc:food": {
+						creation_date: 7387200L
+					}
+					"tfc:heat": { }
+				}
+				id: "tfc:food/barley_bread"
+			}
+			id: "795A07CA5197307E"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				id: "6632001117FB0DD3"
+				item: { components: { "ftbfiltersystem:filter": "ftbfiltersystem:item_tag(c:foods/bread)" }, count: 1, id: "ftbfiltersystem:smart_filter" }
+				type: "item"
+			}]
+			x: 8.0d
+			y: 1.33d
+		}
+		{
+			dependencies: ["795A07CA5197307E"]
+			icon: {
+				components: {
+					"tfc:food": {
+						creation_date: 7387200L
+					}
+				}
+				id: "tfc:food/barley_bread_jam_sandwich"
+			}
+			id: "02C11CFCDF7A8AE5"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				id: "5D8A1EFCE82F7AE5"
+				item: { components: { "ftbfiltersystem:filter": "ftbfiltersystem:or(ftbfiltersystem:item(tfc:food/barley_bread_jam_sandwich)ftbfiltersystem:item(tfc:food/barley_bread_sandwich)ftbfiltersystem:item(tfc:food/maize_bread_jam_sandwich)ftbfiltersystem:item(tfc:food/maize_bread_sandwich)ftbfiltersystem:item(tfc:food/oat_bread_jam_sandwich)ftbfiltersystem:item(tfc:food/oat_bread_sandwich)ftbfiltersystem:item(tfc:food/rice_bread_jam_sandwich)ftbfiltersystem:item(tfc:food/rice_bread_sandwich)ftbfiltersystem:item(tfc:food/rye_bread_jam_sandwich)ftbfiltersystem:item(tfc:food/rye_bread_sandwich)ftbfiltersystem:item(tfc:food/wheat_bread_jam_sandwich)ftbfiltersystem:item(tfc:food/wheat_bread_sandwich))" }, count: 1, id: "ftbfiltersystem:smart_filter" }
+				type: "item"
+			}]
+			x: 10.0d
+			y: 1.33d
+		}
+	]
+}

@@ -1,0 +1,297 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "bronze_crucible"
+	group: "160F5791078B9764"
+	icon: {
+		components: {
+			"tfc:heat": { }
+		}
+		id: "tfc:metal/ingot/bronze"
+	}
+	id: "190C77EB2FDEB546"
+	images: [ ]
+	order_index: 5
+	quest_links: [
+		{
+			id: "35F4455597C1CE73"
+			linked_quest: "252DCBC3CE3A5C33"
+			shape: "circle"
+			size: 0.75d
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			id: "37D6CE937DE57A92"
+			linked_quest: "07E99D4D087CE8F0"
+			shape: "circle"
+			size: 0.75d
+			x: 0.0d
+			y: 4.48d
+		}
+		{
+			id: "2611FA4066E0635B"
+			linked_quest: "61A93B86BEFF9234"
+			shape: "circle"
+			size: 0.75d
+			x: 0.0d
+			y: 6.58d
+		}
+		{
+			id: "4226EC5FC53EF3BA"
+			linked_quest: "38AB6EF4A503435E"
+			shape: "circle"
+			size: 0.75d
+			x: 2.0d
+			y: 7.84d
+		}
+		{
+			id: "5DF67B4AD49111A4"
+			linked_quest: "37503E08F44B82E2"
+			shape: "circle"
+			size: 0.75d
+			x: 4.0d
+			y: 1.26d
+		}
+	]
+	quests: [
+		{
+			dependencies: ["252DCBC3CE3A5C33"]
+			icon: {
+				components: {
+					"tfc:heat": { }
+				}
+				id: "tfc:metal/ingot/bismuth"
+			}
+			id: "302CF9688372A4A1"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				id: "6CA0FBEDA2EC3F9D"
+				item: { components: { "ftbfiltersystem:filter": "ftbfiltersystem:or(ftbfiltersystem:item(tfc:metal/ingot/bismuth)ftbfiltersystem:item(tfc:metal/ingot/tin)ftbfiltersystem:item(tfc:metal/ingot/zinc))" }, count: 1, id: "ftbfiltersystem:smart_filter" }
+				type: "item"
+			}]
+			x: 2.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["302CF9688372A4A1"]
+			icon: {
+				components: {
+					"tfc:heat": { }
+				}
+				id: "tfc:metal/ingot/bismuth_bronze"
+			}
+			id: "4D402106901FB0EF"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				id: "4CE3F87BA4DE1C93"
+				item: { components: { "ftbfiltersystem:filter": "ftbfiltersystem:or(ftbfiltersystem:item(tfc:metal/ingot/bismuth_bronze)ftbfiltersystem:item(tfc:metal/ingot/black_bronze)ftbfiltersystem:item(tfc:metal/ingot/bronze))" }, count: 1, id: "ftbfiltersystem:smart_filter" }
+				type: "item"
+			}]
+			x: 4.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"4D402106901FB0EF"
+				"37503E08F44B82E2"
+			]
+			icon: {
+				components: {
+					"tfc:heat": { }
+				}
+				id: "tfc:metal/double_ingot/bismuth_bronze"
+			}
+			id: "174C4310A1AA06FC"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				count: 7L
+				id: "791629C8BD05200B"
+				item: { components: { "ftbfiltersystem:filter": "ftbfiltersystem:or(ftbfiltersystem:item(tfc:metal/double_ingot/bismuth_bronze)ftbfiltersystem:item(tfc:metal/double_ingot/black_bronze)ftbfiltersystem:item(tfc:metal/double_ingot/bronze))" }, count: 1, id: "ftbfiltersystem:smart_filter" }
+				type: "item"
+			}]
+			x: 6.0d
+			y: 0.63d
+		}
+		{
+			dependencies: ["174C4310A1AA06FC"]
+			icon: {
+				components: {
+					"tfc:heat": { }
+				}
+				id: "tfc:metal/anvil/bismuth_bronze"
+			}
+			id: "0707763CAB6FE51A"
+			shape: "circle"
+			size: 1.5d
+			tasks: [{
+				consume_items: false
+				id: "1D11B8AE4FABA43A"
+				item: { components: { "ftbfiltersystem:filter": "ftbfiltersystem:or(ftbfiltersystem:item(tfc:metal/anvil/bismuth_bronze)ftbfiltersystem:item(tfc:metal/anvil/black_bronze)ftbfiltersystem:item(tfc:metal/anvil/bronze))" }, count: 1, id: "ftbfiltersystem:smart_filter" }
+				type: "item"
+			}]
+			x: 8.0d
+			y: 0.63d
+		}
+		{
+			dependencies: ["07E99D4D087CE8F0"]
+			icon: {
+				id: "tfc:quern"
+			}
+			id: "4FB55FBB394B9B83"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				id: "40871001E2978740"
+				item: { count: 1, id: "tfc:quern" }
+				type: "item"
+			}]
+			x: 2.0d
+			y: 3.78d
+		}
+		{
+			dependencies: ["61A93B86BEFF9234"]
+			icon: {
+				components: {
+					"tfc:heat": { }
+				}
+				id: "tfc:kaolin_clay"
+			}
+			id: "45E84AA7CD87F1E6"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				id: "1089E215CBDC0A6D"
+				item: { components: { "ftbfiltersystem:filter": "ftbfiltersystem:or(ftbfiltersystem:item(tfc:kaolin_clay)ftbfiltersystem:item(tfc:pink_kaolin_clay)ftbfiltersystem:item(tfc:red_kaolin_clay)ftbfiltersystem:item(tfc:white_kaolin_clay))" }, count: 1, id: "ftbfiltersystem:smart_filter" }
+				type: "item"
+			}]
+			x: 2.0d
+			y: 6.58d
+		}
+		{
+			dependencies: [
+				"45E84AA7CD87F1E6"
+				"38AB6EF4A503435E"
+			]
+			icon: {
+				id: "tfc:powder/kaolinite"
+			}
+			id: "60E97CF1896309A6"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				id: "13D6B7F89037462D"
+				item: { count: 1, id: "tfc:powder/kaolinite" }
+				type: "item"
+			}]
+			x: 4.0d
+			y: 6.54d
+		}
+		{
+			dependencies: ["07E99D4D087CE8F0"]
+			icon: {
+				id: "tfc:ore/graphite"
+			}
+			id: "050AAB8FF301E85C"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				id: "5FD45890F9481149"
+				item: { count: 1, id: "tfc:ore/graphite" }
+				type: "item"
+			}]
+			x: 2.0d
+			y: 5.18d
+		}
+		{
+			dependencies: [
+				"050AAB8FF301E85C"
+				"4FB55FBB394B9B83"
+			]
+			icon: {
+				components: {
+					"tfc:heat": { }
+				}
+				id: "tfc:powder/graphite"
+			}
+			id: "7E073D54489D1DCA"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				id: "5E6675AB7AAAB71D"
+				item: { components: { "tfc:heat": { } }, count: 1, id: "tfc:powder/graphite" }
+				type: "item"
+			}]
+			x: 4.0d
+			y: 5.14d
+		}
+		{
+			dependencies: [
+				"60E97CF1896309A6"
+				"7E073D54489D1DCA"
+			]
+			icon: {
+				id: "tfc:fire_clay"
+			}
+			id: "6CBB93B3CF9FA4CA"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				id: "7554420C89B32DB9"
+				item: { count: 1, id: "tfc:fire_clay" }
+				type: "item"
+			}]
+			x: 6.0d
+			y: 5.84d
+		}
+		{
+			dependencies: ["6CBB93B3CF9FA4CA"]
+			icon: {
+				components: {
+					"tfc:heat": { }
+				}
+				id: "tfc:ceramic/unfired_crucible"
+			}
+			id: "36F18523BC1E56EF"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				id: "6CE8F94B19351EB9"
+				item: { components: { "tfc:heat": { } }, count: 1, id: "tfc:ceramic/unfired_crucible" }
+				type: "item"
+			}]
+			x: 8.0d
+			y: 5.84d
+		}
+		{
+			dependencies: ["36F18523BC1E56EF"]
+			icon: {
+				id: "tfc:crucible"
+			}
+			id: "176BCF909EF12AC1"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				id: "024C15ECB0BD8F2A"
+				item: { count: 1, id: "tfc:crucible" }
+				type: "item"
+			}]
+			x: 10.0d
+			y: 5.84d
+		}
+	]
+}

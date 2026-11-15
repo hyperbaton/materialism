@@ -1,0 +1,262 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "copper_age"
+	group: "160F5791078B9764"
+	icon: {
+		components: {
+			"tfc:heat": { }
+		}
+		id: "tfc:metal/ingot/copper"
+	}
+	id: "6FF7B79A48B3DB3D"
+	images: [ ]
+	order_index: 1
+	quest_links: [
+		{
+			id: "2C0C006F1EE7A1EE"
+			linked_quest: "7809992CF7AEB2E6"
+			shape: "circle"
+			size: 0.75d
+			x: 0.0d
+			y: 1.26d
+		}
+		{
+			id: "46C24AAE2578C5D2"
+			linked_quest: "7765CD7C784DB930"
+			shape: "circle"
+			size: 0.75d
+			x: 2.0d
+			y: 0.0d
+		}
+		{
+			id: "1C5B7CBDD7AE9F8E"
+			linked_quest: "38AB6EF4A503435E"
+			shape: "circle"
+			size: 0.75d
+			x: 2.0d
+			y: 2.52d
+		}
+	]
+	quests: [
+		{
+			dependencies: ["7765CD7C784DB930"]
+			icon: {
+				components: {
+					"tfc:heat": { }
+				}
+				id: "tfc:ore/small_malachite"
+			}
+			id: "5F85A814E91061BD"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				count: 10L
+				id: "3AF6D8A11D002493"
+				item: { components: { "ftbfiltersystem:filter": "ftbfiltersystem:or(ftbfiltersystem:item(tfc:ore/small_malachite)ftbfiltersystem:item(tfc:ore/small_native_copper)ftbfiltersystem:item(tfc:ore/small_tetrahedrite))" }, count: 1, id: "ftbfiltersystem:smart_filter" }
+				type: "item"
+			}]
+			x: 4.0d
+			y: 0.33d
+		}
+		{
+			dependencies: ["7809992CF7AEB2E6"]
+			icon: {
+				components: {
+					"tfc:heat": { }
+				}
+				id: "tfc:ceramic/unfired_ingot_mold"
+			}
+			id: "5D9CEC2405F911FD"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				id: "6DD32EB72188F5D6"
+				item: { components: { "tfc:heat": { } }, count: 1, id: "tfc:ceramic/unfired_ingot_mold" }
+				type: "item"
+			}]
+			x: 2.0d
+			y: 1.26d
+		}
+		{
+			dependencies: [
+				"5D9CEC2405F911FD"
+				"38AB6EF4A503435E"
+			]
+			icon: {
+				id: "tfc:ceramic/ingot_mold"
+			}
+			id: "2BC103FC65D2E80F"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				id: "2736D6F7E92A1617"
+				item: { count: 1, id: "tfc:ceramic/ingot_mold" }
+				type: "item"
+			}]
+			x: 4.0d
+			y: 1.73d
+		}
+		{
+			dependencies: [
+				"5F85A814E91061BD"
+				"2BC103FC65D2E80F"
+			]
+			icon: {
+				components: {
+					"tfc:heat": { }
+				}
+				id: "tfc:metal/ingot/copper"
+			}
+			id: "252DCBC3CE3A5C33"
+			shape: "circle"
+			size: 1.5d
+			tasks: [{
+				consume_items: false
+				id: "26B2CDD39B374B3C"
+				item: { components: { "tfc:heat": { } }, count: 1, id: "tfc:metal/ingot/copper" }
+				type: "item"
+			}]
+			x: 6.0d
+			y: 1.03d
+		}
+		{
+			dependencies: ["252DCBC3CE3A5C33"]
+			icon: {
+				id: "tfc:ceramic/pickaxe_head_mold"
+			}
+			id: "1E99D0D162476EE7"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				id: "3D14818D47AB0B40"
+				item: { count: 1, id: "tfc:ceramic/pickaxe_head_mold" }
+				type: "item"
+			}]
+			x: 8.0d
+			y: 1.03d
+		}
+		{
+			dependencies: ["1E99D0D162476EE7"]
+			icon: {
+				components: {
+					"tfc:heat": { }
+				}
+				id: "tfc:metal/chisel_head/copper"
+			}
+			id: "339E594BB30A4498"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				id: "593159A18565F052"
+				item: { components: { "ftbfiltersystem:filter": "ftbfiltersystem:or(ftbfiltersystem:item(tfc:metal/chisel_head/copper)ftbfiltersystem:item(tfc:metal/pickaxe_head/copper)ftbfiltersystem:item(tfc:metal/propick_head/copper)ftbfiltersystem:item(tfc:metal/saw_blade/copper))" }, count: 1, id: "ftbfiltersystem:smart_filter" }
+				type: "item"
+			}]
+			x: 10.0d
+			y: 1.03d
+		}
+		{
+			dependencies: ["048F5A9A69345557"]
+			icon: {
+				components: {
+					"tfc:heat": { }
+				}
+				id: "tfc:metal/pickaxe/copper"
+			}
+			id: "07E99D4D087CE8F0"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				id: "1584DBF4B9504167"
+				item: { components: { "ftbfiltersystem:filter": "ftbfiltersystem:item_tag(c:tools/pickaxes)" }, count: 1, id: "ftbfiltersystem:smart_filter" }
+				type: "item"
+			}]
+			x: 14.0d
+			y: 1.03d
+		}
+		{
+			dependencies: ["07E99D4D087CE8F0"]
+			icon: {
+				components: {
+					"tfc:heat": { }
+				}
+				id: "tfc:metal/propick/copper"
+			}
+			id: "73B4D7C54619B949"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				id: "556D923548D5C8B1"
+				item: { components: { "ftbfiltersystem:filter": "ftbfiltersystem:item_tag(c:tools/propick)" }, count: 1, id: "ftbfiltersystem:smart_filter" }
+				type: "item"
+			}]
+			x: 16.0d
+			y: 1.03d
+		}
+		{
+			dependencies: ["73B4D7C54619B949"]
+			icon: {
+				components: {
+					"tfc:heat": { }
+				}
+				id: "tfc:metal/propick/copper"
+			}
+			id: "5D3ADCC4ECED777F"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				id: "4F890BF58E370DEC"
+				type: "checkmark"
+			}]
+			x: 18.0d
+			y: 0.33d
+		}
+		{
+			dependencies: ["73B4D7C54619B949"]
+			icon: {
+				components: {
+					"tfc:heat": { }
+				}
+				id: "tfc:metal/saw/copper"
+			}
+			id: "793D0625A66AE2A8"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				id: "7C01C5936030E984"
+				item: { components: { "ftbfiltersystem:filter": "ftbfiltersystem:item_tag(c:tools/saw)" }, count: 1, id: "ftbfiltersystem:smart_filter" }
+				type: "item"
+			}]
+			x: 18.0d
+			y: 1.73d
+		}
+		{
+			dependencies: ["339E594BB30A4498"]
+			icon: {
+				components: {
+					"tfc:heat": { }
+				}
+				id: "tfc:metal/chisel/copper"
+			}
+			id: "048F5A9A69345557"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				id: "6F02563047A1CD3F"
+				item: { components: { "ftbfiltersystem:filter": "ftbfiltersystem:item_tag(c:tools/chisel)" }, count: 1, id: "ftbfiltersystem:smart_filter" }
+				type: "item"
+			}]
+			x: 12.0d
+			y: 1.03d
+		}
+	]
+}

@@ -1,0 +1,698 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "the_lathe_gate"
+	group: "160F5791078B9764"
+	icon: {
+		id: "vintageimprovements:lathe"
+	}
+	id: "672487BD2B69B316"
+	images: [ ]
+	order_index: 12
+	quest_links: [
+		{
+			id: "1F56D5ACFEE14F13"
+			linked_quest: "74B5420D54FC7AB0"
+			shape: "circle"
+			size: 0.75d
+			x: 0.0d
+			y: 2.28d
+		}
+		{
+			id: "26F3CB0A7AC88904"
+			linked_quest: "035518F71EC5C806"
+			shape: "circle"
+			size: 0.75d
+			x: 0.0d
+			y: 3.4d
+		}
+		{
+			id: "7FE138B55E250D50"
+			linked_quest: "2378788924E5D9A1"
+			shape: "circle"
+			size: 0.75d
+			x: 0.0d
+			y: 4.52d
+		}
+		{
+			id: "2194D23AC5126896"
+			linked_quest: "028A679789A7C67D"
+			shape: "circle"
+			size: 0.75d
+			x: 8.0d
+			y: 3.29d
+		}
+		{
+			id: "70758AC6DAE871F4"
+			linked_quest: "616ADBE255F42706"
+			shape: "circle"
+			size: 0.75d
+			x: 20.0d
+			y: 4.89d
+		}
+		{
+			id: "4F92D8795EE10C8A"
+			linked_quest: "4B6498EEFBCE8E84"
+			shape: "circle"
+			size: 0.75d
+			x: 20.0d
+			y: 6.01d
+		}
+		{
+			id: "38C9BB9F312CD033"
+			linked_quest: "2A25435D4AD82924"
+			shape: "circle"
+			size: 0.75d
+			x: 20.0d
+			y: 7.13d
+		}
+		{
+			id: "565338C21BEB5B03"
+			linked_quest: "514EEC713C07EA62"
+			shape: "circle"
+			size: 0.75d
+			x: 20.0d
+			y: 8.25d
+		}
+		{
+			id: "749CF6F105477326"
+			linked_quest: "3A705A92A7941AB4"
+			shape: "circle"
+			size: 0.75d
+			x: 26.0d
+			y: 1.92d
+		}
+		{
+			id: "638D4E60DB52C89B"
+			linked_quest: "7916D148A8C25365"
+			shape: "circle"
+			size: 0.75d
+			x: 28.0d
+			y: 4.05d
+		}
+	]
+	quests: [
+		{
+			dependencies: ["74B5420D54FC7AB0"]
+			icon: {
+				id: "tfc:bloomery"
+			}
+			id: "59BF9C79DE17DE3A"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				id: "46DDDF1DB3894AD4"
+				type: "checkmark"
+			}]
+			x: 2.0d
+			y: 2.35d
+		}
+		{
+			dependencies: ["59BF9C79DE17DE3A"]
+			icon: {
+				components: {
+					"tfc:heat": { }
+				}
+				id: "tfc_metallurgy:metal/ingot/platinum"
+			}
+			id: "3320714C9C1C23A1"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				id: "5AA84955AF75666B"
+				item: { components: { "tfc:heat": { } }, count: 1, id: "tfc_metallurgy:metal/ingot/platinum" }
+				type: "item"
+			}]
+			x: 4.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"59BF9C79DE17DE3A"
+				"3A705A92A7941AB4"
+			]
+			icon: {
+				components: {
+					"tfc:heat": { }
+				}
+				id: "tfc_metallurgy:metal/dust/cobalt"
+			}
+			id: "46D6404C0D514118"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				count: 5L
+				id: "40B74DFCD780BB35"
+				item: { components: { "tfc:heat": { } }, count: 1, id: "tfc_metallurgy:metal/dust/cobalt" }
+				type: "item"
+			}]
+			x: 28.0d
+			y: 2.79d
+		}
+		{
+			dependencies: [
+				"59BF9C79DE17DE3A"
+				"028A679789A7C67D"
+			]
+			icon: {
+				components: {
+					"tfc:heat": { }
+				}
+				id: "tfc_metallurgy:raw_tungsten_bloom"
+			}
+			id: "2907CD7290370DD8"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				id: "2FC4FAD1A7C31A58"
+				item: { components: { "tfc:heat": { } }, count: 1, id: "tfc_metallurgy:raw_tungsten_bloom" }
+				type: "item"
+			}]
+			x: 10.0d
+			y: 5.5d
+		}
+		{
+			dependencies: ["2907CD7290370DD8"]
+			icon: {
+				components: {
+					"tfc:heat": { }
+				}
+				id: "tfc_metallurgy:refined_tungsten_bloom"
+			}
+			id: "195148B9209988A8"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				id: "58313C250C197169"
+				item: { components: { "tfc:heat": { } }, count: 1, id: "tfc_metallurgy:refined_tungsten_bloom" }
+				type: "item"
+			}]
+			x: 12.0d
+			y: 3.5d
+		}
+		{
+			dependencies: ["195148B9209988A8"]
+			icon: {
+				components: {
+					"tfc:heat": { }
+				}
+				id: "tfc_metallurgy:metal/ingot/tungsten"
+			}
+			id: "00A91E7DB936DF1F"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				id: "381B4E5BE6266D27"
+				item: { components: { "tfc:heat": { } }, count: 1, id: "tfc_metallurgy:metal/ingot/tungsten" }
+				type: "item"
+			}]
+			x: 14.0d
+			y: 3.53d
+		}
+		{
+			dependencies: [
+				"035518F71EC5C806"
+				"2378788924E5D9A1"
+			]
+			icon: {
+				components: {
+					"tfc:heat": { }
+				}
+				id: "tfc:metal/ingot/weak_steel"
+			}
+			id: "499D4A45877EA67A"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				count: 2L
+				id: "1A163FEAC434384C"
+				item: { components: { "tfc:heat": { } }, count: 1, id: "tfc:metal/ingot/weak_steel" }
+				type: "item"
+			}]
+			x: 2.0d
+			y: 3.93d
+		}
+		{
+			dependencies: ["499D4A45877EA67A"]
+			icon: {
+				components: {
+					"tfc:heat": { }
+				}
+				id: "tfc:metal/ingot/high_carbon_black_steel"
+			}
+			id: "29F112721815EEDB"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				id: "64E53A58ECCDE9EB"
+				item: { components: { "tfc:heat": { } }, count: 1, id: "tfc:metal/ingot/high_carbon_black_steel" }
+				type: "item"
+			}]
+			x: 4.0d
+			y: 1.4d
+		}
+		{
+			dependencies: ["29F112721815EEDB"]
+			icon: {
+				components: {
+					"tfc:heat": { }
+				}
+				id: "tfc:metal/ingot/black_steel"
+			}
+			id: "3BF1942D2750F43E"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				count: 2L
+				id: "7DA0ABFB10F68871"
+				item: { components: { "tfc:heat": { } }, count: 1, id: "tfc:metal/ingot/black_steel" }
+				type: "item"
+			}]
+			x: 6.0d
+			y: 1.43d
+		}
+		{
+			dependencies: ["3BF1942D2750F43E"]
+			icon: {
+				components: {
+					"tfc:heat": { }
+				}
+				id: "tfc:metal/anvil/black_steel"
+			}
+			id: "51CDAFC46C4A47E2"
+			shape: "circle"
+			size: 1.5d
+			tasks: [{
+				consume_items: false
+				id: "64009F3648B2D663"
+				item: { components: { "tfc:heat": { } }, count: 1, id: "tfc:metal/anvil/black_steel" }
+				type: "item"
+			}]
+			x: 8.0d
+			y: 1.47d
+		}
+		{
+			dependencies: ["51CDAFC46C4A47E2"]
+			icon: {
+				components: {
+					"tfc:heat": { }
+				}
+				id: "tfc:metal/ingot/weak_red_steel"
+			}
+			id: "40F365848FC50DE8"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				id: "41CF7B55748F3FE2"
+				item: { components: { "tfc:heat": { } }, count: 1, id: "tfc:metal/ingot/weak_red_steel" }
+				type: "item"
+			}]
+			x: 10.0d
+			y: 1.39d
+		}
+		{
+			dependencies: ["40F365848FC50DE8"]
+			icon: {
+				components: {
+					"tfc:heat": { }
+				}
+				id: "tfc:metal/ingot/high_carbon_red_steel"
+			}
+			id: "75CC3FB61A9C0D95"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				id: "3A676939D4BAF469"
+				item: { components: { "tfc:heat": { } }, count: 1, id: "tfc:metal/ingot/high_carbon_red_steel" }
+				type: "item"
+			}]
+			x: 12.0d
+			y: 0.14d
+		}
+		{
+			dependencies: ["51CDAFC46C4A47E2"]
+			icon: {
+				components: {
+					"tfc:heat": { }
+				}
+				id: "tfc:metal/ingot/weak_blue_steel"
+			}
+			id: "33694F7D647B70F6"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				id: "30A3A05F2E0D44BB"
+				item: { components: { "tfc:heat": { } }, count: 1, id: "tfc:metal/ingot/weak_blue_steel" }
+				type: "item"
+			}]
+			x: 10.0d
+			y: 3.46d
+		}
+		{
+			dependencies: ["33694F7D647B70F6"]
+			icon: {
+				components: {
+					"tfc:heat": { }
+				}
+				id: "tfc:metal/ingot/high_carbon_blue_steel"
+			}
+			id: "6FF9D4A0DD44C0D1"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				id: "73370DB0D49BB01E"
+				item: { components: { "tfc:heat": { } }, count: 1, id: "tfc:metal/ingot/high_carbon_blue_steel" }
+				type: "item"
+			}]
+			x: 12.0d
+			y: 1.54d
+		}
+		{
+			dependencies: ["75CC3FB61A9C0D95"]
+			icon: {
+				components: {
+					"tfc:heat": { }
+				}
+				id: "tfc:metal/ingot/red_steel"
+			}
+			id: "02AE5A71832E7FC4"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				count: 2L
+				id: "49F5B9C0D84B2E42"
+				item: { components: { "tfc:heat": { } }, count: 1, id: "tfc:metal/ingot/red_steel" }
+				type: "item"
+			}]
+			x: 14.0d
+			y: 0.17d
+		}
+		{
+			dependencies: ["6FF9D4A0DD44C0D1"]
+			icon: {
+				components: {
+					"tfc:heat": { }
+				}
+				id: "tfc:metal/ingot/blue_steel"
+			}
+			id: "0ED4983694A18771"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				count: 2L
+				id: "1F904B85EF89B043"
+				item: { components: { "tfc:heat": { } }, count: 1, id: "tfc:metal/ingot/blue_steel" }
+				type: "item"
+			}]
+			x: 14.0d
+			y: 1.57d
+		}
+		{
+			dependencies: ["02AE5A71832E7FC4"]
+			icon: {
+				components: {
+					"tfc:heat": { }
+				}
+				id: "tfc:metal/anvil/red_steel"
+			}
+			id: "19E77B8BBF110948"
+			shape: "circle"
+			size: 1.5d
+			tasks: [{
+				consume_items: false
+				id: "5DCC347CBDDC734F"
+				item: { components: { "tfc:heat": { } }, count: 1, id: "tfc:metal/anvil/red_steel" }
+				type: "item"
+			}]
+			x: 16.0d
+			y: 1.59d
+		}
+		{
+			dependencies: ["0ED4983694A18771"]
+			icon: {
+				components: {
+					"tfc:heat": { }
+				}
+				id: "tfc:metal/anvil/blue_steel"
+			}
+			id: "221FB0E28782164F"
+			shape: "circle"
+			size: 1.5d
+			tasks: [{
+				consume_items: false
+				id: "24649C6299B269C9"
+				item: { components: { "tfc:heat": { } }, count: 1, id: "tfc:metal/anvil/blue_steel" }
+				type: "item"
+			}]
+			x: 16.0d
+			y: 3.56d
+		}
+		{
+			dependencies: [
+				"19E77B8BBF110948"
+				"221FB0E28782164F"
+			]
+			dependency_requirement: "one_completed"
+			icon: {
+				components: {
+					"tfc:heat": { }
+				}
+				id: "tfc:metal/anvil/red_steel"
+			}
+			id: "4AC65AC9DC16CEF5"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				id: "0264A485E72A78C7"
+				type: "checkmark"
+			}]
+			x: 18.0d
+			y: 1.64d
+		}
+		{
+			dependencies: [
+				"00A91E7DB936DF1F"
+				"499D4A45877EA67A"
+			]
+			icon: {
+				id: "tfc_metallurgy:metal/ingot/high_carbon_tungsten_steel"
+			}
+			id: "3534CF9288079C91"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				id: "77FF44355F6523F0"
+				item: { count: 1, id: "tfc_metallurgy:metal/ingot/high_carbon_tungsten_steel" }
+				type: "item"
+			}]
+			x: 16.0d
+			y: 4.96d
+		}
+		{
+			dependencies: ["3534CF9288079C91"]
+			icon: {
+				components: {
+					"tfc:heat": { }
+				}
+				id: "tfc_metallurgy:metal/ingot/tungsten_steel"
+			}
+			id: "5AECF30AFEEC10BD"
+			shape: "circle"
+			size: 1.5d
+			tasks: [{
+				consume_items: false
+				count: 2L
+				id: "7BBB2347AB52152C"
+				item: { components: { "tfc:heat": { } }, count: 1, id: "tfc_metallurgy:metal/ingot/tungsten_steel" }
+				type: "item"
+			}]
+			x: 18.0d
+			y: 3.69d
+		}
+		{
+			dependencies: [
+				"5AECF30AFEEC10BD"
+				"4AC65AC9DC16CEF5"
+			]
+			icon: {
+				components: {
+					"tfc:heat": { }
+				}
+				id: "tfc_metallurgy:metal/sheet/tungsten_steel"
+			}
+			id: "77DE35DDBE8FA92C"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				id: "3B72B6683C75EDEA"
+				item: { components: { "tfc:heat": { } }, count: 1, id: "tfc_metallurgy:metal/sheet/tungsten_steel" }
+				type: "item"
+			}]
+			x: 20.0d
+			y: 3.63d
+		}
+		{
+			dependencies: [
+				"77DE35DDBE8FA92C"
+				"4B6498EEFBCE8E84"
+				"2A25435D4AD82924"
+				"616ADBE255F42706"
+				"514EEC713C07EA62"
+			]
+			icon: {
+				id: "vintageimprovements:lathe"
+			}
+			id: "17CDBF0D999225B4"
+			shape: "circle"
+			size: 1.5d
+			tasks: [{
+				consume_items: false
+				id: "56F9772794050B8A"
+				item: { count: 1, id: "vintageimprovements:lathe" }
+				type: "item"
+			}]
+			x: 22.0d
+			y: 4.83d
+		}
+		{
+			dependencies: ["17CDBF0D999225B4"]
+			icon: {
+				id: "vintageimprovements:concave_curving_head"
+			}
+			id: "57A2313BF2DA60F1"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				id: "6DEBD7A7D27A409B"
+				item: { count: 1, id: "vintageimprovements:concave_curving_head" }
+				type: "item"
+			}]
+			x: 24.0d
+			y: 4.13d
+		}
+		{
+			dependencies: ["57A2313BF2DA60F1"]
+			icon: {
+				id: "create:mechanical_press"
+			}
+			id: "1135582C6FA5A24D"
+			shape: "circle"
+			size: 1.5d
+			tasks: [{
+				consume_items: false
+				id: "2E8C2DB108F41DF7"
+				item: { count: 1, id: "create:mechanical_press" }
+				type: "item"
+			}]
+			x: 26.0d
+			y: 4.13d
+		}
+		{
+			dependencies: ["17CDBF0D999225B4"]
+			icon: {
+				id: "create:fluid_pipe"
+			}
+			id: "701590A8BA95915A"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				count: 8L
+				id: "5155DC8A11C29FD6"
+				item: { count: 1, id: "create:fluid_pipe" }
+				type: "item"
+			}]
+			x: 24.0d
+			y: 5.53d
+		}
+		{
+			dependencies: ["701590A8BA95915A"]
+			icon: {
+				id: "create:mechanical_pump"
+			}
+			id: "57447992336EAC51"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				id: "682F835B083D092B"
+				item: { count: 1, id: "create:mechanical_pump" }
+				type: "item"
+			}]
+			x: 26.0d
+			y: 5.53d
+		}
+		{
+			dependencies: ["57447992336EAC51"]
+			icon: {
+				id: "vintageimprovements:vacuum_chamber"
+			}
+			id: "59FBE9A5C43A55DB"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				id: "6C69D46A4E333244"
+				item: { count: 1, id: "vintageimprovements:vacuum_chamber" }
+				type: "item"
+			}]
+			x: 28.0d
+			y: 5.31d
+		}
+		{
+			dependencies: [
+				"7916D148A8C25365"
+				"59FBE9A5C43A55DB"
+				"46D6404C0D514118"
+			]
+			icon: {
+				id: "kubejs:drill_bit"
+			}
+			id: "10878335C39C0913"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				id: "0F7D259C5015B9E8"
+				item: { count: 1, id: "kubejs:drill_bit" }
+				type: "item"
+			}]
+			x: 30.0d
+			y: 4.05d
+		}
+		{
+			dependencies: ["10878335C39C0913"]
+			icon: {
+				id: "create:mechanical_drill"
+			}
+			id: "4363E60D302F9705"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				id: "42E7FA8A24D4C9DD"
+				item: { count: 1, id: "create:mechanical_drill" }
+				type: "item"
+			}]
+			x: 32.0d
+			y: 4.05d
+		}
+	]
+}

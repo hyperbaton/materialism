@@ -1,0 +1,380 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "steam_power"
+	group: "160F5791078B9764"
+	icon: {
+		id: "create:steam_engine"
+	}
+	id: "53F0E2EAF032068B"
+	images: [ ]
+	order_index: 14
+	quest_links: [
+		{
+			id: "62FB5F063AD0043D"
+			linked_quest: "1772AFD39460A77C"
+			shape: "circle"
+			size: 0.75d
+			x: 0.0d
+			y: 0.98d
+		}
+		{
+			id: "7A871CF3E19758B8"
+			linked_quest: "550D082F2FB29D86"
+			shape: "circle"
+			size: 0.75d
+			x: 0.0d
+			y: 3.24d
+		}
+		{
+			id: "44832E82D7B71D6C"
+			linked_quest: "42A35D1AB65873B0"
+			shape: "circle"
+			size: 0.75d
+			x: 0.0d
+			y: 4.36d
+		}
+		{
+			id: "5FFA27EFD87DAF93"
+			linked_quest: "33CE7FE82A19CE7B"
+			shape: "circle"
+			size: 0.75d
+			x: 0.0d
+			y: 5.48d
+		}
+		{
+			id: "285FEBE7D0970A16"
+			linked_quest: "64F19E8C6AFC764F"
+			shape: "circle"
+			size: 0.75d
+			x: 0.0d
+			y: 6.6d
+		}
+		{
+			id: "19DA684C93ECB908"
+			linked_quest: "6E92565AE4D3D360"
+			shape: "circle"
+			size: 0.75d
+			x: 2.0d
+			y: 2.24d
+		}
+		{
+			id: "21C3D6B608AB7871"
+			linked_quest: "7A6BBCEA7E68939E"
+			shape: "circle"
+			size: 0.75d
+			x: 2.0d
+			y: 4.56d
+		}
+		{
+			id: "106C1989D2330871"
+			linked_quest: "17CDBF0D999225B4"
+			shape: "circle"
+			size: 0.75d
+			x: 2.0d
+			y: 7.08d
+		}
+		{
+			id: "6ED3AFC18604B3D8"
+			linked_quest: "11B304B8038C5F99"
+			shape: "circle"
+			size: 0.75d
+			x: 2.0d
+			y: 8.2d
+		}
+		{
+			id: "68E1B2AE35B9ECD9"
+			linked_quest: "71496D3549A1D7AC"
+			shape: "circle"
+			size: 0.75d
+			x: 4.0d
+			y: 5.46d
+		}
+	]
+	quests: [
+		{
+			dependencies: ["1772AFD39460A77C"]
+			icon: {
+				id: "tfc:firebox"
+			}
+			id: "657B235B5495B18A"
+			shape: "circle"
+			size: 1.5d
+			tasks: [
+				{
+					consume_items: false
+					id: "34233B96824FA819"
+					item: { count: 1, id: "tfc:firebox" }
+					type: "item"
+				}
+				{
+					consume_items: false
+					count: 4L
+					id: "326B67B415698612"
+					item: { count: 1, id: "create:fluid_tank" }
+					type: "item"
+				}
+			]
+			x: 2.0d
+			y: 0.98d
+		}
+		{
+			dependencies: ["657B235B5495B18A"]
+			icon: {
+				id: "tfc:firebox"
+			}
+			id: "32C2AD5A3E89F4D4"
+			shape: "diamond"
+			size: 1.0d
+			tasks: [{
+				id: "2C37B7759A80C303"
+				type: "checkmark"
+			}]
+			x: 4.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"657B235B5495B18A"
+				"5415E484EEFC90B7"
+			]
+			icon: {
+				id: "create:steam_whistle"
+			}
+			id: "4E054E45D1232D18"
+			optional: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				id: "429E821CA7EFB120"
+				item: { count: 1, id: "create:steam_whistle" }
+				type: "item"
+			}]
+			x: 4.0d
+			y: 1.4d
+		}
+		{
+			dependencies: [
+				"657B235B5495B18A"
+				"6E92565AE4D3D360"
+			]
+			icon: {
+				id: "create:steam_engine"
+			}
+			id: "3D0523DB30A849FB"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				id: "5F261F4323B0A17C"
+				observation_type: "block"
+				observe_type: 0
+				timer: 0L
+				to_observe: "create:steam_engine"
+				type: "observation"
+			}]
+			x: 4.0d
+			y: 2.8d
+		}
+		{
+			dependencies: [
+				"657B235B5495B18A"
+				"550D082F2FB29D86"
+				"7A6BBCEA7E68939E"
+				"17CDBF0D999225B4"
+			]
+			icon: {
+				id: "tfmg:firebox"
+			}
+			id: "67F6A4835CC04099"
+			optional: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				id: "490613A01FE20EEE"
+				item: { count: 1, id: "tfmg:firebox" }
+				type: "item"
+			}]
+			x: 4.0d
+			y: 4.2d
+		}
+		{
+			dependencies: [
+				"3D0523DB30A849FB"
+				"701590A8BA95915A"
+			]
+			icon: {
+				id: "create:fluid_pipe"
+			}
+			id: "32666CB0A81095B9"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				id: "311CBAF8D157AF82"
+				type: "checkmark"
+			}]
+			x: 6.0d
+			y: 3.68d
+		}
+		{
+			dependencies: [
+				"18687C0E4557C87A"
+				"0FF60097DEFBF7E1"
+				"7916D148A8C25365"
+				"71496D3549A1D7AC"
+			]
+			icon: {
+				id: "solarpunk:andesite_turbine_blade"
+			}
+			id: "70323F1797579C61"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				count: 8L
+				id: "2BEFC76BD9EC93E1"
+				item: { count: 1, id: "solarpunk:andesite_turbine_blade" }
+				type: "item"
+			}]
+			x: 6.0d
+			y: 5.08d
+		}
+		{
+			dependencies: ["11B304B8038C5F99"]
+			icon: {
+				id: "solarpunk:turbine_casing"
+			}
+			id: "66EEE6153BEF1307"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				count: 16L
+				id: "765490DD211BA8EA"
+				item: { count: 1, id: "solarpunk:turbine_casing" }
+				type: "item"
+			}]
+			x: 4.0d
+			y: 6.72d
+		}
+		{
+			dependencies: ["66EEE6153BEF1307"]
+			icon: {
+				id: "solarpunk:turbine_rotor"
+			}
+			id: "2C11633C80D83B46"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				count: 4L
+				id: "7B284F8232857086"
+				item: { count: 1, id: "solarpunk:turbine_rotor" }
+				type: "item"
+			}]
+			x: 6.0d
+			y: 6.48d
+		}
+		{
+			dependencies: [
+				"2C11633C80D83B46"
+				"70323F1797579C61"
+				"32666CB0A81095B9"
+			]
+			icon: {
+				id: "solarpunk:turbine_rotor"
+			}
+			id: "5DA61100494D52F9"
+			shape: "circle"
+			size: 1.5d
+			tasks: [{
+				id: "118CBD9DF69570FF"
+				observation_type: "block"
+				observe_type: 0
+				timer: 0L
+				to_observe: "solarpunk:turbine_rotor"
+				type: "observation"
+			}]
+			x: 8.0d
+			y: 5.08d
+		}
+		{
+			dependencies: [
+				"5DA61100494D52F9"
+				"400C00A759731B57"
+			]
+			icon: {
+				id: "solarpunk:brass_turbine_blade"
+			}
+			id: "2EE9D98603F3E248"
+			optional: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				count: 8L
+				id: "3E1CFA229FE03B6C"
+				item: { count: 1, id: "solarpunk:brass_turbine_blade" }
+				type: "item"
+			}]
+			x: 10.0d
+			y: 3.68d
+		}
+		{
+			dependencies: ["5DA61100494D52F9"]
+			icon: {
+				id: "tfmg:brick_smokestack"
+			}
+			id: "6B1565E567F781CE"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				id: "3F052BC5D8BC5D97"
+				item: { components: { "ftbfiltersystem:filter": "ftbfiltersystem:or(ftbfiltersystem:item(tfmg:brick_smokestack)ftbfiltersystem:item(tfmg:concrete_smokestack)ftbfiltersystem:item(tfmg:exhaust)ftbfiltersystem:item(tfmg:metal_smokestack))" }, count: 1, id: "ftbfiltersystem:smart_filter" }
+				type: "item"
+			}]
+			x: 10.0d
+			y: 5.08d
+		}
+		{
+			dependencies: [
+				"550D082F2FB29D86"
+				"42A35D1AB65873B0"
+				"33CE7FE82A19CE7B"
+				"64F19E8C6AFC764F"
+			]
+			icon: {
+				id: "tfmg:freezer"
+			}
+			id: "3854FCA028E7DA86"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				id: "643E6A3E795C67D5"
+				item: { count: 1, id: "tfmg:freezer" }
+				type: "item"
+			}]
+			x: 2.0d
+			y: 5.82d
+		}
+		{
+			dependencies: ["5DA61100494D52F9"]
+			icon: {
+				id: "create:steam_engine"
+			}
+			id: "14406B15F11C81D1"
+			optional: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				id: "462B6BC0CB73DAFE"
+				type: "checkmark"
+			}]
+			x: 10.0d
+			y: 6.48d
+		}
+	]
+}

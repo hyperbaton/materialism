@@ -1,0 +1,221 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "steel_age"
+	group: "160F5791078B9764"
+	icon: {
+		components: {
+			"tfc:heat": { }
+		}
+		id: "tfc:metal/ingot/steel"
+	}
+	id: "3B5CD57AA4F3849D"
+	images: [ ]
+	order_index: 7
+	quest_links: [
+		{
+			id: "6549C2D7678C3B5B"
+			linked_quest: "16B0A12678349853"
+			shape: "circle"
+			size: 0.75d
+			x: 0.0d
+			y: 1.4d
+		}
+		{
+			id: "6FB651688346D6E1"
+			linked_quest: "3C028FF67824DC74"
+			shape: "circle"
+			size: 0.75d
+			x: 10.0d
+			y: 4.06d
+		}
+	]
+	quests: [
+		{
+			dependencies: ["16B0A12678349853"]
+			icon: {
+				components: {
+					"tfc:heat": { }
+				}
+				id: "tfc:metal/ingot/high_carbon_steel"
+			}
+			id: "57DF9D26A5A41258"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				id: "565E8DDDF7A5CE50"
+				item: { components: { "tfc:heat": { } }, count: 1, id: "tfc:metal/ingot/high_carbon_steel" }
+				type: "item"
+			}]
+			x: 2.0d
+			y: 1.4d
+		}
+		{
+			dependencies: ["57DF9D26A5A41258"]
+			icon: {
+				components: {
+					"tfc:heat": { }
+				}
+				id: "tfc:metal/ingot/steel"
+			}
+			id: "035518F71EC5C806"
+			shape: "circle"
+			size: 1.5d
+			tasks: [{
+				consume_items: false
+				id: "2A033F4F41690958"
+				item: { components: { "tfc:heat": { } }, count: 1, id: "tfc:metal/ingot/steel" }
+				type: "item"
+			}]
+			x: 4.0d
+			y: 1.4d
+		}
+		{
+			dependencies: ["035518F71EC5C806"]
+			icon: {
+				components: {
+					"tfc:heat": { }
+				}
+				id: "tfc:metal/double_ingot/steel"
+			}
+			id: "69CCA56805D52ED1"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				count: 7L
+				id: "58A2EC939964CA8B"
+				item: { components: { "tfc:heat": { } }, count: 1, id: "tfc:metal/double_ingot/steel" }
+				type: "item"
+			}]
+			x: 6.0d
+			y: 1.4d
+		}
+		{
+			dependencies: ["69CCA56805D52ED1"]
+			icon: {
+				components: {
+					"tfc:heat": { }
+				}
+				id: "tfc:metal/anvil/steel"
+			}
+			id: "5881E2EFD6D5B272"
+			shape: "circle"
+			size: 1.5d
+			tasks: [{
+				consume_items: false
+				id: "5DD6456FBB0D4F11"
+				item: { components: { "tfc:heat": { } }, count: 1, id: "tfc:metal/anvil/steel" }
+				type: "item"
+			}]
+			x: 8.0d
+			y: 1.4d
+		}
+		{
+			dependencies: ["5881E2EFD6D5B272"]
+			icon: {
+				components: {
+					"tfc:heat": { }
+				}
+				id: "tfc:metal/sheet/steel"
+			}
+			id: "514EEC713C07EA62"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				count: 4L
+				id: "1EE5A3E675AEC813"
+				item: { components: { "tfc:heat": { } }, count: 1, id: "tfc:metal/sheet/steel" }
+				type: "item"
+			}]
+			x: 10.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["514EEC713C07EA62"]
+			icon: {
+				components: {
+					"tfc:heat": { }
+				}
+				id: "tfc:metal/double_sheet/steel"
+			}
+			id: "28E92462F94F7A45"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				id: "154DEA4272835798"
+				item: { components: { "tfc:heat": { } }, count: 1, id: "tfc:metal/double_sheet/steel" }
+				type: "item"
+			}]
+			x: 12.0d
+			y: 0.47d
+		}
+		{
+			dependencies: ["5881E2EFD6D5B272"]
+			icon: {
+				components: {
+					"tfc:heat": { }
+				}
+				id: "tfc:metal/rod/steel"
+			}
+			id: "22DC33318EC3ADE5"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				count: 4L
+				id: "45AB26C5E7B9E10D"
+				item: { components: { "tfc:heat": { } }, count: 1, id: "tfc:metal/rod/steel" }
+				type: "item"
+			}]
+			x: 10.0d
+			y: 1.4d
+		}
+		{
+			dependencies: ["5881E2EFD6D5B272"]
+			icon: {
+				components: {
+					"tfc:heat": { }
+				}
+				id: "tfc:metal/pickaxe/steel"
+			}
+			id: "705041C61B2F5AC5"
+			optional: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				id: "17EEFED1F2A1E262"
+				item: { components: { "tfc:heat": { } }, count: 1, id: "tfc:metal/pickaxe/steel" }
+				type: "item"
+			}]
+			x: 10.0d
+			y: 2.8d
+		}
+		{
+			dependencies: [
+				"514EEC713C07EA62"
+				"22DC33318EC3ADE5"
+				"3C028FF67824DC74"
+			]
+			icon: {
+				id: "tfc:trip_hammer"
+			}
+			id: "79C3ECB5AB980B91"
+			optional: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				id: "3A2257664F36395D"
+				item: { count: 1, id: "tfc:trip_hammer" }
+				type: "item"
+			}]
+			x: 12.0d
+			y: 2.29d
+		}
+	]
+}

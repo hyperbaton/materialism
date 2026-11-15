@@ -1,0 +1,427 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "first_steps"
+	group: "160F5791078B9764"
+	icon: {
+		id: "tfc:stone/axe/sedimentary"
+	}
+	id: "6CAD417204CD4FFF"
+	images: [ ]
+	order_index: 0
+	quest_links: [ ]
+	quests: [
+		{
+			icon: {
+				id: "tfc:rock/loose/andesite"
+			}
+			id: "74FF71154D3118B1"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				count: 2L
+				id: "293FEE79595984FC"
+				item: { components: { "ftbfiltersystem:filter": "ftbfiltersystem:item_tag(c:stones/loose)" }, count: 1, id: "ftbfiltersystem:smart_filter" }
+				type: "item"
+			}]
+			x: 0.0d
+			y: 4.67d
+		}
+		{
+			icon: {
+				components: {
+					"tfc:heat": { }
+				}
+				id: "minecraft:stick"
+			}
+			id: "4BFB579A92804318"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				count: 4L
+				id: "396F0CC8F54B9C47"
+				item: { components: { "tfc:heat": { } }, count: 1, id: "minecraft:stick" }
+				type: "item"
+			}]
+			x: 2.0d
+			y: 3.03d
+		}
+		{
+			dependencies: ["74FF71154D3118B1"]
+			icon: {
+				id: "tfc:stone/knife_head/igneous_extrusive"
+			}
+			id: "3AE2A41115A1C181"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				id: "6B55BFA771FB425C"
+				item: { components: { "ftbfiltersystem:filter": "ftbfiltersystem:item_tag(c:tools/head_knife/stone)" }, count: 1, id: "ftbfiltersystem:smart_filter" }
+				type: "item"
+			}]
+			x: 2.0d
+			y: 4.67d
+		}
+		{
+			dependencies: [
+				"3AE2A41115A1C181"
+				"4BFB579A92804318"
+			]
+			icon: {
+				id: "tfc:stone/knife/igneous_extrusive"
+			}
+			id: "4AB168BAE1584829"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				id: "10002B3EB2BBFF35"
+				item: { components: { "ftbfiltersystem:filter": "ftbfiltersystem:item_tag(c:tools/knife/stone)" }, count: 1, id: "ftbfiltersystem:smart_filter" }
+				type: "item"
+			}]
+			x: 4.0d
+			y: 3.03d
+		}
+		{
+			dependencies: ["3AE2A41115A1C181"]
+			icon: {
+				id: "tfc:stone/axe_head/igneous_extrusive"
+			}
+			id: "61FE2DA856EB3726"
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{
+					consume_items: false
+					id: "6A705179443708EA"
+					item: { components: { "ftbfiltersystem:filter": "ftbfiltersystem:item_tag(c:tools/head_axe/stone)" }, count: 1, id: "ftbfiltersystem:smart_filter" }
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "06499F51ED47DFF0"
+					item: { components: { "ftbfiltersystem:filter": "ftbfiltersystem:item_tag(c:tools/head_shovel/stone)" }, count: 1, id: "ftbfiltersystem:smart_filter" }
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "6C4CAD08A2B85586"
+					item: { components: { "ftbfiltersystem:filter": "ftbfiltersystem:item_tag(c:tools/head_hammer/stone)" }, count: 1, id: "ftbfiltersystem:smart_filter" }
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "1C4A76E32AC510E6"
+					item: { components: { "ftbfiltersystem:filter": "ftbfiltersystem:item_tag(c:tools/head_hoe/stone)" }, count: 1, id: "ftbfiltersystem:smart_filter" }
+					type: "item"
+				}
+			]
+			x: 4.0d
+			y: 6.3d
+		}
+		{
+			dependencies: [
+				"61FE2DA856EB3726"
+				"4AB168BAE1584829"
+			]
+			icon: {
+				id: "tfc:stone/axe/igneous_extrusive"
+			}
+			id: "61A93B86BEFF9234"
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{
+					consume_items: false
+					id: "117E73D66C31D6C3"
+					item: { components: { "ftbfiltersystem:filter": "ftbfiltersystem:item_tag(c:tools/axe/stone)" }, count: 1, id: "ftbfiltersystem:smart_filter" }
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "3F1228E1CD018C0F"
+					item: { components: { "ftbfiltersystem:filter": "ftbfiltersystem:item_tag(c:tools/shovel/stone)" }, count: 1, id: "ftbfiltersystem:smart_filter" }
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "5726F2C3D5FEEE4A"
+					item: { components: { "ftbfiltersystem:filter": "ftbfiltersystem:item_tag(c:tools/hammer/stone)" }, count: 1, id: "ftbfiltersystem:smart_filter" }
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "7650C97DF8349691"
+					item: { components: { "ftbfiltersystem:filter": "ftbfiltersystem:item_tag(c:tools/hoe/stone)" }, count: 1, id: "ftbfiltersystem:smart_filter" }
+					type: "item"
+				}
+			]
+			x: 6.0d
+			y: 6.3d
+		}
+		{
+			dependencies: ["4AB168BAE1584829"]
+			icon: {
+				id: "tfc:straw"
+			}
+			id: "660DF97AA55B1189"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				count: 8L
+				id: "3B5564646C61D95A"
+				item: { count: 1, id: "tfc:straw" }
+				type: "item"
+			}]
+			x: 6.0d
+			y: 2.8d
+		}
+		{
+			dependencies: ["660DF97AA55B1189"]
+			icon: {
+				id: "tfc:thatch"
+			}
+			id: "6CCE71257B530C8C"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				count: 2L
+				id: "771927251F6972E4"
+				item: { count: 1, id: "tfc:thatch" }
+				type: "item"
+			}]
+			x: 8.0d
+			y: 1.4d
+		}
+		{
+			dependencies: ["4AB168BAE1584829"]
+			icon: {
+				id: "tfc:large_raw_hide"
+			}
+			id: "422AEF4BF2BD5C9F"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				id: "2F447CDC210DBF56"
+				item: { count: 1, id: "tfc:large_raw_hide" }
+				type: "item"
+			}]
+			x: 8.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"6CCE71257B530C8C"
+				"422AEF4BF2BD5C9F"
+			]
+			icon: {
+				id: "tfc:thatch_bed"
+			}
+			id: "71113F5A966A6069"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				id: "04B31E88B9210416"
+				type: "checkmark"
+			}]
+			x: 10.0d
+			y: 0.93d
+		}
+		{
+			dependencies: ["61A93B86BEFF9234"]
+			icon: {
+				id: "tfc:wood/log/oak"
+			}
+			id: "07D7EA0014B110E2"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				count: 8L
+				id: "5C9C156CDFA16088"
+				item: { components: { "ftbfiltersystem:filter": "ftbfiltersystem:item_tag(minecraft:logs)" }, count: 1, id: "ftbfiltersystem:smart_filter" }
+				type: "item"
+			}]
+			x: 8.0d
+			y: 5.6d
+		}
+		{
+			dependencies: ["660DF97AA55B1189"]
+			icon: {
+				id: "tfc:firestarter"
+			}
+			id: "3A8A81D3A01D745F"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				id: "6894B61C4C31115A"
+				item: { count: 1, id: "tfc:firestarter" }
+				type: "item"
+			}]
+			x: 8.0d
+			y: 2.8d
+		}
+		{
+			dependencies: [
+				"3A8A81D3A01D745F"
+				"07D7EA0014B110E2"
+			]
+			icon: {
+				id: "tfc:firepit"
+			}
+			id: "313D63AEF9710FD8"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				advancement: "tfc:story/firepit"
+				criterion: ""
+				id: "682474F246FE5AC3"
+				type: "advancement"
+			}]
+			x: 10.0d
+			y: 4.43d
+		}
+		{
+			dependencies: ["313D63AEF9710FD8"]
+			icon: {
+				components: {
+					"tfc:food": {
+						creation_date: 7387200L
+					}
+					"tfc:heat": { }
+				}
+				id: "tfc:food/cooked_bear"
+			}
+			id: "7644B41846F9A19E"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				id: "60358230BEC021D9"
+				item: { components: { "ftbfiltersystem:filter": "ftbfiltersystem:item_tag(c:foods/cooked_meat)" }, count: 1, id: "ftbfiltersystem:smart_filter" }
+				type: "item"
+			}]
+			x: 12.0d
+			y: 4.43d
+		}
+		{
+			dependencies: ["61A93B86BEFF9234"]
+			icon: {
+				id: "minecraft:clay_ball"
+			}
+			id: "7809992CF7AEB2E6"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				count: 10L
+				id: "283B3121DFADA943"
+				item: { count: 1, id: "minecraft:clay_ball" }
+				type: "item"
+			}]
+			x: 8.0d
+			y: 7.0d
+		}
+		{
+			dependencies: ["7809992CF7AEB2E6"]
+			icon: {
+				components: {
+					"tfc:heat": { }
+				}
+				id: "tfc:ceramic/unfired_vessel"
+			}
+			id: "155ADEF7336331A6"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				id: "2380D44648EE1F37"
+				item: { components: { "tfc:heat": { } }, count: 1, id: "tfc:ceramic/unfired_vessel" }
+				type: "item"
+			}]
+			x: 10.0d
+			y: 5.83d
+		}
+		{
+			dependencies: [
+				"155ADEF7336331A6"
+				"313D63AEF9710FD8"
+			]
+			icon: {
+				components: {
+					"tfc:heat": { }
+				}
+				id: "tfc:ceramic/unfired_vessel"
+			}
+			id: "38AB6EF4A503435E"
+			shape: "circle"
+			size: 1.5d
+			tasks: [{
+				advancement: "tfc:story/pit_kiln"
+				criterion: ""
+				id: "49FAB4AEBA219E59"
+				type: "advancement"
+			}]
+			x: 12.0d
+			y: 5.83d
+		}
+		{
+			dependencies: ["38AB6EF4A503435E"]
+			icon: {
+				id: "tfc:ceramic/vessel"
+			}
+			id: "7765CD7C784DB930"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				id: "324F194EC95A084E"
+				item: { count: 1, id: "tfc:ceramic/vessel" }
+				type: "item"
+			}]
+			x: 14.0d
+			y: 5.13d
+		}
+		{
+			dependencies: ["660DF97AA55B1189"]
+			icon: {
+				id: "tfcambiental:straw_hat"
+			}
+			id: "3DB10FE83C2BE1DB"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				id: "683F5A89E06A3EBF"
+				item: { count: 1, id: "tfcambiental:straw_hat" }
+				type: "item"
+			}]
+			x: 8.0d
+			y: 4.2d
+		}
+		{
+			dependencies: ["38AB6EF4A503435E"]
+			icon: {
+				id: "tfc:ceramic/jug"
+			}
+			id: "4660D2328FE7CFD4"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				id: "4D6EC64403EF1412"
+				item: { count: 1, id: "tfc:ceramic/jug" }
+				type: "item"
+			}]
+			x: 14.0d
+			y: 6.53d
+		}
+	]
+}

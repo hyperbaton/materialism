@@ -1,0 +1,302 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "electronics"
+	group: "160F5791078B9764"
+	icon: {
+		id: "tfmg:circuit_board"
+	}
+	id: "546908DF1439FA40"
+	images: [ ]
+	order_index: 20
+	quest_links: [
+		{
+			id: "13922CB902A3CFF4"
+			linked_quest: "0776ACF8377E0947"
+			shape: "circle"
+			size: 0.75d
+			x: 0.0d
+			y: 0.07d
+		}
+		{
+			id: "3CE8851CDD8BB919"
+			linked_quest: "641AD4D1666F216F"
+			shape: "circle"
+			size: 0.75d
+			x: 0.0d
+			y: 1.19d
+		}
+		{
+			id: "314C5A0B46BC4EC9"
+			linked_quest: "46D52B2F8BE7381A"
+			shape: "circle"
+			size: 0.75d
+			x: 4.0d
+			y: 1.89d
+		}
+		{
+			id: "6BA35186DA37389F"
+			linked_quest: "0A50238BB214541A"
+			shape: "circle"
+			size: 0.75d
+			x: 6.0d
+			y: 0.0d
+		}
+		{
+			id: "61F49BB4F468B4E8"
+			linked_quest: "3320714C9C1C23A1"
+			shape: "circle"
+			size: 0.75d
+			x: 6.0d
+			y: 2.52d
+		}
+		{
+			id: "1743948942F751C2"
+			linked_quest: "5F3ABFCF7A206BA4"
+			shape: "circle"
+			size: 0.75d
+			x: 8.0d
+			y: 3.22d
+		}
+		{
+			id: "26156DF40076967B"
+			linked_quest: "457B13554BABAED7"
+			shape: "circle"
+			size: 0.75d
+			x: 10.0d
+			y: 2.96d
+		}
+		{
+			id: "300F1395AADC0677"
+			linked_quest: "51A427A469BA737E"
+			shape: "circle"
+			size: 0.75d
+			x: 10.0d
+			y: 4.08d
+		}
+		{
+			id: "4F7753F1C52E235C"
+			linked_quest: "1601BE2C7B5145FF"
+			shape: "circle"
+			size: 0.75d
+			x: 12.0d
+			y: 4.4d
+		}
+		{
+			id: "5AE132D62CF3C74E"
+			linked_quest: "400C00A759731B57"
+			shape: "circle"
+			size: 0.75d
+			x: 12.0d
+			y: 5.52d
+		}
+	]
+	quests: [
+		{
+			dependencies: [
+				"0776ACF8377E0947"
+				"641AD4D1666F216F"
+			]
+			icon: {
+				id: "tfmg:silicon_ingot"
+			}
+			id: "1CEDB6ABE2820016"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				id: "7C9AC0FCA51AAA05"
+				type: "checkmark"
+			}]
+			x: 2.0d
+			y: 0.63d
+		}
+		{
+			dependencies: ["1CEDB6ABE2820016"]
+			icon: {
+				id: "kubejs:polysilicon"
+			}
+			id: "7AE04C072ECDE239"
+			shape: "circle"
+			size: 1.5d
+			tasks: [{
+				consume_items: false
+				count: 4L
+				id: "5B47EF5F4DE7745D"
+				item: { count: 1, id: "kubejs:polysilicon" }
+				type: "item"
+			}]
+			x: 4.0d
+			y: 0.63d
+		}
+		{
+			dependencies: [
+				"7AE04C072ECDE239"
+				"46D52B2F8BE7381A"
+			]
+			icon: {
+				id: "tfmg:n_semiconductor"
+			}
+			id: "37863C291329083A"
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{
+					consume_items: false
+					id: "4EE44908271E8F8E"
+					item: { count: 1, id: "tfmg:n_semiconductor" }
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "25DC7BB934D4105D"
+					item: { count: 1, id: "tfmg:p_semiconductor" }
+					type: "item"
+				}
+			]
+			x: 6.0d
+			y: 1.26d
+		}
+		{
+			dependencies: [
+				"37863C291329083A"
+				"0A50238BB214541A"
+			]
+			icon: {
+				id: "tfmg:transistor"
+			}
+			id: "1D00170C37DC4C94"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				count: 4L
+				id: "2493747BE3E6AD15"
+				item: { count: 1, id: "tfmg:transistor" }
+				type: "item"
+			}]
+			x: 8.0d
+			y: 0.56d
+		}
+		{
+			dependencies: [
+				"37863C291329083A"
+				"3320714C9C1C23A1"
+			]
+			icon: {
+				id: "electroenergetics:diode"
+			}
+			id: "4394E18CCEF6A7A2"
+			optional: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				id: "5A5328613FE8A1EA"
+				item: { count: 1, id: "electroenergetics:diode" }
+				type: "item"
+			}]
+			x: 8.0d
+			y: 1.96d
+		}
+		{
+			dependencies: [
+				"1D00170C37DC4C94"
+				"5F3ABFCF7A206BA4"
+			]
+			icon: {
+				id: "tfmg:circuit_board"
+			}
+			id: "01379EB0C708704C"
+			shape: "circle"
+			size: 1.5d
+			tasks: [{
+				consume_items: false
+				id: "375BD13F77E4E341"
+				item: { count: 1, id: "tfmg:circuit_board" }
+				type: "item"
+			}]
+			x: 10.0d
+			y: 1.7d
+		}
+		{
+			dependencies: ["01379EB0C708704C"]
+			icon: {
+				id: "tfmg:fireproof_chemical_vat"
+			}
+			id: "6454F90D417AA7DE"
+			shape: "circle"
+			size: 1.5d
+			tasks: [{
+				consume_items: false
+				id: "4A76CCBA99836F60"
+				item: { count: 1, id: "tfmg:fireproof_chemical_vat" }
+				type: "item"
+			}]
+			x: 12.0d
+			y: 1.74d
+		}
+		{
+			dependencies: ["6454F90D417AA7DE"]
+			icon: {
+				id: "kubejs:silicon_wafer"
+			}
+			id: "7D5A493EDE67E8E5"
+			optional: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				count: 8L
+				id: "7FAB505D7FFA1AF2"
+				item: { count: 1, id: "kubejs:silicon_wafer" }
+				type: "item"
+			}]
+			x: 14.0d
+			y: 1.74d
+		}
+		{
+			dependencies: [
+				"01379EB0C708704C"
+				"457B13554BABAED7"
+				"51A427A469BA737E"
+			]
+			icon: {
+				id: "computercraft:computer_normal"
+			}
+			id: "70B9444C12F48A8E"
+			optional: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				id: "1CD419107002F08F"
+				item: { count: 1, id: "computercraft:computer_normal" }
+				type: "item"
+			}]
+			x: 12.0d
+			y: 3.14d
+		}
+		{
+			dependencies: [
+				"70B9444C12F48A8E"
+				"1601BE2C7B5145FF"
+				"400C00A759731B57"
+			]
+			icon: {
+				id: "create_power_loader:andesite_chunk_loader"
+			}
+			id: "11EF275C1455EC4E"
+			optional: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				id: "2F7A64E45696E2A2"
+				item: { count: 1, id: "create_power_loader:andesite_chunk_loader" }
+				type: "item"
+			}]
+			x: 14.0d
+			y: 4.36d
+		}
+	]
+}

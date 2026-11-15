@@ -1,0 +1,117 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "endgame"
+	group: "160F5791078B9764"
+	icon: {
+		components: {
+			"tfc:heat": { }
+		}
+		id: "tfc_metallurgy:metal/ingot/high_alloy_steel"
+	}
+	id: "0BEC819B8BEE0DF3"
+	images: [ ]
+	order_index: 22
+	quest_links: [
+		{
+			id: "73216ECA5F7F7F90"
+			linked_quest: "03131E1BAF18DAFE"
+			shape: "circle"
+			size: 0.75d
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			id: "45DAFBC878E33339"
+			linked_quest: "46D6404C0D514118"
+			shape: "circle"
+			size: 0.75d
+			x: 0.0d
+			y: 1.12d
+		}
+		{
+			id: "70FA2941081C605E"
+			linked_quest: "6454F90D417AA7DE"
+			shape: "circle"
+			size: 0.75d
+			x: 0.0d
+			y: 2.24d
+		}
+		{
+			id: "017C5EEA6E1DE3B7"
+			linked_quest: "0EDC1DB04E8C8910"
+			shape: "circle"
+			size: 0.75d
+			x: 0.0d
+			y: 3.36d
+		}
+	]
+	quests: [
+		{
+			dependencies: [
+				"46D6404C0D514118"
+				"03131E1BAF18DAFE"
+			]
+			icon: {
+				components: {
+					"tfc:heat": { }
+				}
+				id: "tfc_metallurgy:metal/ingot/high_alloy_steel"
+			}
+			id: "11B304B8038C5F99"
+			shape: "circle"
+			size: 1.5d
+			tasks: [{
+				consume_items: false
+				id: "633C1F1B8ECC4F35"
+				item: { components: { "tfc:heat": { } }, count: 1, id: "tfc_metallurgy:metal/ingot/high_alloy_steel" }
+				type: "item"
+			}]
+			x: 2.0d
+			y: 0.63d
+		}
+		{
+			dependencies: ["11B304B8038C5F99"]
+			icon: {
+				components: {
+					"tfc:heat": { }
+				}
+				id: "tfc_metallurgy:metal/anvil/high_alloy_steel"
+			}
+			id: "650BF90AABDFA94B"
+			optional: true
+			shape: "circle"
+			size: 1.5d
+			tasks: [{
+				consume_items: false
+				id: "14F793EA044D632E"
+				item: { components: { "tfc:heat": { } }, count: 1, id: "tfc_metallurgy:metal/anvil/high_alloy_steel" }
+				type: "item"
+			}]
+			x: 4.0d
+			y: 0.63d
+		}
+		{
+			dependencies: [
+				"6454F90D417AA7DE"
+				"46D6404C0D514118"
+				"0EDC1DB04E8C8910"
+			]
+			icon: {
+				id: "chemica:tungsten_carbide_ingot"
+			}
+			id: "1A2C584AF007032C"
+			optional: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				id: "04E2AEB20C97602A"
+				item: { count: 1, id: "chemica:tungsten_carbide_ingot" }
+				type: "item"
+			}]
+			x: 2.0d
+			y: 2.31d
+		}
+	]
+}

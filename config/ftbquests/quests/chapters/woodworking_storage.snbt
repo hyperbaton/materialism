@@ -1,0 +1,110 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "woodworking_storage"
+	group: "160F5791078B9764"
+	icon: {
+		id: "tfc:wood/workbench/oak"
+	}
+	id: "1622FC149F30DA4A"
+	images: [ ]
+	order_index: 2
+	quest_links: [{
+		id: "4C2330E21C11956A"
+		linked_quest: "793D0625A66AE2A8"
+		shape: "circle"
+		size: 0.75d
+		x: 0.0d
+		y: 1.22d
+	}]
+	quests: [
+		{
+			dependencies: ["793D0625A66AE2A8"]
+			icon: {
+				id: "tfc:wood/lumber/oak"
+			}
+			id: "54C843168E5E1157"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				count: 8L
+				id: "66E0020158FDCD7E"
+				item: { components: { "ftbfiltersystem:filter": "ftbfiltersystem:item_tag(tfc:lumber)" }, count: 1, id: "ftbfiltersystem:smart_filter" }
+				type: "item"
+			}]
+			x: 2.0d
+			y: 0.52d
+		}
+		{
+			dependencies: ["54C843168E5E1157"]
+			icon: {
+				id: "tfc:wood/planks/oak"
+			}
+			id: "5FB215472BC351AF"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				count: 4L
+				id: "5F07DE45CEAD7DBE"
+				item: { components: { "ftbfiltersystem:filter": "ftbfiltersystem:item_tag(minecraft:planks)" }, count: 1, id: "ftbfiltersystem:smart_filter" }
+				type: "item"
+			}]
+			x: 4.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["5FB215472BC351AF"]
+			icon: {
+				id: "tfc:wood/workbench/oak"
+			}
+			id: "236246E777CA001C"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				id: "5F2ACE76877B44DF"
+				item: { components: { "ftbfiltersystem:filter": "ftbfiltersystem:item_tag(tfc:workbenches)" }, count: 1, id: "ftbfiltersystem:smart_filter" }
+				type: "item"
+			}]
+			x: 6.0d
+			y: 0.35d
+		}
+		{
+			dependencies: ["54C843168E5E1157"]
+			icon: {
+				id: "tfc:wood/chest/oak"
+			}
+			id: "7BB4E24F34E39105"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				id: "0B6250AEF2BC7CA6"
+				item: { components: { "ftbfiltersystem:filter": "ftbfiltersystem:item_tag(c:chests/wooden)" }, count: 1, id: "ftbfiltersystem:smart_filter" }
+				type: "item"
+			}]
+			x: 4.0d
+			y: 1.4d
+		}
+		{
+			dependencies: ["793D0625A66AE2A8"]
+			icon: {
+				id: "tfc:wood/support/oak"
+			}
+			id: "6EAF761D972C49A8"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				count: 8L
+				id: "4545CC70D395A032"
+				item: { components: { "ftbfiltersystem:filter": "ftbfiltersystem:item_tag(tfc:support_beams)" }, count: 1, id: "ftbfiltersystem:smart_filter" }
+				type: "item"
+			}]
+			x: 2.0d
+			y: 1.92d
+		}
+	]
+}

@@ -1,0 +1,241 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "society"
+	group: "3E009514FEB829B8"
+	icon: {
+		id: "cft:leader_staff"
+	}
+	id: "51C2F3F650A42A93"
+	images: [ ]
+	order_index: 5
+	quest_links: [
+		{
+			id: "198D228460CFEC77"
+			linked_quest: "58AAD5A29308D38F"
+			shape: "circle"
+			size: 0.75d
+			x: 0.0d
+			y: 0.49d
+		}
+		{
+			id: "76E1FA8291890658"
+			linked_quest: "5415E484EEFC90B7"
+			shape: "circle"
+			size: 0.75d
+			x: 0.0d
+			y: 1.61d
+		}
+		{
+			id: "381CFD7C4AF706E4"
+			linked_quest: "795A07CA5197307E"
+			shape: "circle"
+			size: 0.75d
+			x: 6.0d
+			y: 1.65d
+		}
+		{
+			id: "69F979E5AFAE7B15"
+			linked_quest: "15EB2F85BA59618E"
+			shape: "circle"
+			size: 0.75d
+			x: 10.0d
+			y: 2.28d
+		}
+		{
+			id: "7340C801C01FB757"
+			linked_quest: "7335843E297193D9"
+			shape: "circle"
+			size: 0.75d
+			x: 12.0d
+			y: 2.91d
+		}
+		{
+			id: "39AD05037BF1F2C4"
+			linked_quest: "18BAA4066577892D"
+			shape: "circle"
+			size: 0.75d
+			x: 14.0d
+			y: 3.54d
+		}
+	]
+	quests: [
+		{
+			dependencies: [
+				"58AAD5A29308D38F"
+				"5415E484EEFC90B7"
+			]
+			icon: {
+				id: "cft:leader_staff"
+			}
+			id: "1FC6CBDDE010ADA1"
+			optional: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				id: "5B6C747BA7DA344E"
+				item: { count: 1, id: "cft:leader_staff" }
+				type: "item"
+			}]
+			x: 2.0d
+			y: 1.4d
+		}
+		{
+			dependencies: ["1FC6CBDDE010ADA1"]
+			icon: {
+				id: "cft:leader_staff"
+			}
+			id: "6C48A50675BC6BEF"
+			optional: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				id: "5DA5396BE30D2069"
+				type: "checkmark"
+			}]
+			x: 4.0d
+			y: 0.39d
+		}
+		{
+			dependencies: ["6C48A50675BC6BEF"]
+			icon: {
+				id: "cft:leader_staff"
+			}
+			id: "0120F8322D7DEAE6"
+			optional: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				id: "0A49FA70665DA601"
+				type: "checkmark"
+			}]
+			x: 6.0d
+			y: 0.39d
+		}
+		{
+			dependencies: [
+				"0120F8322D7DEAE6"
+				"795A07CA5197307E"
+			]
+			icon: {
+				id: "cft:leader_staff"
+			}
+			id: "2EEBC3F7DC2EDE02"
+			optional: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				id: "76DC8C65A705A462"
+				type: "checkmark"
+			}]
+			x: 8.0d
+			y: 1.02d
+		}
+		{
+			dependencies: ["2EEBC3F7DC2EDE02"]
+			icon: {
+				id: "cft:leader_staff"
+			}
+			id: "6AEC8A0EC4E84285"
+			optional: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				id: "4E4170F3BA8C9D3A"
+				type: "checkmark"
+			}]
+			x: 10.0d
+			y: 1.02d
+		}
+		{
+			dependencies: [
+				"6AEC8A0EC4E84285"
+				"15EB2F85BA59618E"
+			]
+			icon: {
+				id: "cft:leader_staff"
+			}
+			id: "572AC44401414CC6"
+			optional: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				id: "794493912CDF3FBD"
+				type: "checkmark"
+			}]
+			x: 12.0d
+			y: 1.65d
+		}
+		{
+			dependencies: [
+				"572AC44401414CC6"
+				"7335843E297193D9"
+			]
+			icon: {
+				id: "cft:leader_staff"
+			}
+			id: "64CDB5D474329162"
+			optional: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				id: "38E84BEA24845D56"
+				type: "checkmark"
+			}]
+			x: 14.0d
+			y: 2.28d
+		}
+		{
+			dependencies: [
+				"64CDB5D474329162"
+				"18BAA4066577892D"
+			]
+			icon: {
+				id: "cft:leader_staff"
+			}
+			id: "5C2F63EC356843F7"
+			optional: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				id: "3AEBE740F4C6CDD6"
+				type: "checkmark"
+			}]
+			x: 16.0d
+			y: 2.91d
+		}
+		{
+			dependencies: ["58AAD5A29308D38F"]
+			icon: {
+				id: "cft:leader_staff"
+			}
+			id: "48BC22C8550CA7C8"
+			optional: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				id: "4004981777C0238D"
+				type: "checkmark"
+			}]
+			x: 2.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["5C2F63EC356843F7"]
+			icon: {
+				id: "cft:leader_staff"
+			}
+			id: "25B3AF87D25C1714"
+			optional: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				id: "09A41AF4F2958F4A"
+				type: "checkmark"
+			}]
+			x: 18.0d
+			y: 2.91d
+		}
+	]
+}

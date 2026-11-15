@@ -1,0 +1,414 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "chemistry"
+	group: "160F5791078B9764"
+	icon: {
+		id: "vintageimprovements:vanadium_nugget"
+	}
+	id: "6CEAC98F667A3FC6"
+	images: [ ]
+	order_index: 15
+	quest_links: [
+		{
+			id: "21AF9ECE2373DCBB"
+			linked_quest: "2C7C08507123B176"
+			shape: "circle"
+			size: 0.75d
+			x: 0.0d
+			y: 0.54d
+		}
+		{
+			id: "34516352C035FA18"
+			linked_quest: "1ABE530C50337A82"
+			shape: "circle"
+			size: 0.75d
+			x: 0.0d
+			y: 1.66d
+		}
+		{
+			id: "35074FB0982F08C2"
+			linked_quest: "7B963D4BBA91BB73"
+			shape: "circle"
+			size: 0.75d
+			x: 0.0d
+			y: 2.78d
+		}
+		{
+			id: "5956E330C3F7A89C"
+			linked_quest: "7A6BBCEA7E68939E"
+			shape: "circle"
+			size: 0.75d
+			x: 0.0d
+			y: 3.9d
+		}
+		{
+			id: "79AD5753BFCA0FE0"
+			linked_quest: "59FBE9A5C43A55DB"
+			shape: "circle"
+			size: 0.75d
+			x: 0.0d
+			y: 5.02d
+		}
+		{
+			id: "2380FBAAB878875F"
+			linked_quest: "35321E7E9226B41D"
+			shape: "circle"
+			size: 0.75d
+			x: 0.0d
+			y: 6.14d
+		}
+		{
+			id: "58D90DEECE01857D"
+			linked_quest: "1C87D51F077F0648"
+			shape: "circle"
+			size: 0.75d
+			x: 0.0d
+			y: 7.26d
+		}
+		{
+			id: "13F1C6CCC47D6682"
+			linked_quest: "64F19E8C6AFC764F"
+			shape: "circle"
+			size: 0.75d
+			x: 0.0d
+			y: 8.38d
+		}
+		{
+			id: "52DD61BF48865A05"
+			linked_quest: "550D082F2FB29D86"
+			shape: "circle"
+			size: 0.75d
+			x: 0.0d
+			y: 9.5d
+		}
+		{
+			id: "61757059640D5C91"
+			linked_quest: "2CAE3289B617F9A7"
+			shape: "circle"
+			size: 0.75d
+			x: 2.0d
+			y: 3.21d
+		}
+	]
+	quests: [
+		{
+			dependencies: [
+				"1ABE530C50337A82"
+				"7B963D4BBA91BB73"
+				"7A6BBCEA7E68939E"
+				"2C7C08507123B176"
+			]
+			icon: {
+				id: "tfmg:slag"
+			}
+			id: "01F1A23F32EF34B3"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				count: 4L
+				id: "00AF927980107A81"
+				item: { count: 1, id: "tfmg:slag" }
+				type: "item"
+			}]
+			x: 2.0d
+			y: 1.95d
+		}
+		{
+			dependencies: [
+				"01F1A23F32EF34B3"
+				"59FBE9A5C43A55DB"
+				"2CAE3289B617F9A7"
+			]
+			icon: {
+				id: "vintageimprovements:vanadium_nugget"
+			}
+			id: "45855358BC584855"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				id: "603DBF2A8AC0A50C"
+				item: { count: 1, id: "vintageimprovements:vanadium_nugget" }
+				type: "item"
+			}]
+			x: 4.0d
+			y: 3.08d
+		}
+		{
+			dependencies: [
+				"59FBE9A5C43A55DB"
+				"2CAE3289B617F9A7"
+			]
+			icon: {
+				id: "tfc:powder/sulfur"
+			}
+			id: "29F12A51E7A13B5A"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				id: "6C4DF11E7B852FE9"
+				type: "checkmark"
+			}]
+			x: 4.0d
+			y: 4.48d
+		}
+		{
+			dependencies: [
+				"29F12A51E7A13B5A"
+				"45855358BC584855"
+			]
+			icon: {
+				id: "vintageimprovements:vanadium_nugget"
+			}
+			id: "72FA8D26A907117F"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				id: "79E0F1EDAD817AB1"
+				type: "checkmark"
+			}]
+			x: 6.0d
+			y: 3.69d
+		}
+		{
+			dependencies: ["72FA8D26A907117F"]
+			icon: {
+				id: "tfmg:sulfuric_acid_bucket"
+			}
+			id: "3B8D69CA5AD743F7"
+			shape: "circle"
+			size: 1.5d
+			tasks: [{
+				fluid: {
+					amount: 1000
+					id: "tfmg:sulfuric_acid"
+				}
+				id: "2AC58F00B7D78268"
+				type: "fluid"
+			}]
+			x: 8.0d
+			y: 3.69d
+		}
+		{
+			dependencies: ["3B8D69CA5AD743F7"]
+			icon: {
+				id: "vintageimprovements:copper_sulfate"
+			}
+			id: "1D7F69AC334C7B2F"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				id: "5C7701941BE9ADAE"
+				item: { count: 1, id: "vintageimprovements:copper_sulfate" }
+				type: "item"
+			}]
+			x: 10.0d
+			y: 4.38d
+		}
+		{
+			dependencies: ["267282D570010FB1"]
+			icon: {
+				id: "kubejs:zinc_sulfate"
+			}
+			id: "334C3814FAD890A1"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				id: "017C41F1B65DD605"
+				item: { count: 1, id: "kubejs:zinc_sulfate" }
+				type: "item"
+			}]
+			x: 12.0d
+			y: 2.41d
+		}
+		{
+			dependencies: ["2C7C08507123B176"]
+			icon: {
+				id: "chemica:fluorite_dust"
+			}
+			id: "05589774C48B40A3"
+			optional: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				id: "42862D9AF71B8310"
+				item: { count: 1, id: "chemica:fluorite_dust" }
+				type: "item"
+			}]
+			x: 8.0d
+			y: 2.29d
+		}
+		{
+			dependencies: ["2C7C08507123B176"]
+			icon: {
+				id: "chemica:phosphorus_dust"
+			}
+			id: "46D52B2F8BE7381A"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				id: "29E1C2377F7CE1FA"
+				item: { count: 1, id: "chemica:phosphorus_dust" }
+				type: "item"
+			}]
+			x: 2.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"1C87D51F077F0648"
+				"35321E7E9226B41D"
+			]
+			icon: {
+				id: "tfmg:hydrogen_bucket"
+			}
+			id: "23206F2F3C607C2C"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				fluid: {
+					amount: 1000
+					id: "tfmg:hydrogen"
+				}
+				id: "5020577DF556B1A3"
+				type: "fluid"
+			}]
+			x: 2.0d
+			y: 6.71d
+		}
+		{
+			dependencies: ["23206F2F3C607C2C"]
+			icon: {
+				id: "chemica:chlorine_bucket"
+			}
+			id: "0776ACF8377E0947"
+			optional: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				fluid: {
+					amount: 1000
+					id: "chemica:chlorine"
+				}
+				id: "5A1CC9D34119E881"
+				type: "fluid"
+			}]
+			x: 4.0d
+			y: 6.81d
+		}
+		{
+			dependencies: [
+				"35321E7E9226B41D"
+				"1D7F69AC334C7B2F"
+			]
+			icon: {
+				id: "chemica:hydrochloric_acid_bucket"
+			}
+			id: "641AD4D1666F216F"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				fluid: {
+					amount: 1000
+					id: "chemica:hydrochloric_acid"
+				}
+				id: "75BF3898CBCCBA42"
+				type: "fluid"
+			}]
+			x: 12.0d
+			y: 5.21d
+		}
+		{
+			dependencies: [
+				"641AD4D1666F216F"
+				"02AA0240CEB7F737"
+			]
+			icon: {
+				id: "chemica:polyethylene_sheet"
+			}
+			id: "0A50238BB214541A"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				count: 4L
+				id: "19FA671F1BF1D46D"
+				item: { count: 1, id: "chemica:polyethylene_sheet" }
+				type: "item"
+			}]
+			x: 14.0d
+			y: 5.21d
+		}
+		{
+			dependencies: [
+				"23206F2F3C607C2C"
+				"3320714C9C1C23A1"
+			]
+			icon: {
+				id: "vintageimprovements:vanadium_nugget"
+			}
+			id: "747B1F410BD783E2"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				fluid: {
+					amount: 1000
+					id: "chemica:nitric_acid"
+				}
+				id: "1A84EF05E876FE12"
+				type: "fluid"
+			}]
+			x: 4.0d
+			y: 8.21d
+		}
+		{
+			dependencies: [
+				"05589774C48B40A3"
+				"3B8D69CA5AD743F7"
+			]
+			icon: {
+				id: "vintageimprovements:vanadium_nugget"
+			}
+			id: "267282D570010FB1"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				fluid: {
+					amount: 1000
+					id: "chemica:hydrofluoric_acid"
+				}
+				id: "6F9495A91A8FFA5E"
+				type: "fluid"
+			}]
+			x: 10.0d
+			y: 2.41d
+		}
+		{
+			dependencies: [
+				"59FBE9A5C43A55DB"
+				"1135582C6FA5A24D"
+				"550D082F2FB29D86"
+				"64F19E8C6AFC764F"
+				"40BBECB889D17E7C"
+			]
+			icon: {
+				id: "tfmg:steel_fluid_tank"
+			}
+			id: "1FE85AB58610B959"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				id: "3695D7159C1D5865"
+				type: "checkmark"
+			}]
+			x: 2.0d
+			y: 8.11d
+		}
+	]
+}

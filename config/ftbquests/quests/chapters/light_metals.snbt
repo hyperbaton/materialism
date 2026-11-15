@@ -1,0 +1,517 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "light_metals"
+	group: "160F5791078B9764"
+	icon: {
+		id: "kubejs:powder/alumina"
+	}
+	id: "6CCAAADA618A6D71"
+	images: [ ]
+	order_index: 16
+	quest_links: [
+		{
+			id: "513ED58B79484BD9"
+			linked_quest: "3B8D69CA5AD743F7"
+			shape: "circle"
+			size: 0.75d
+			x: 0.0d
+			y: 5.27d
+		}
+		{
+			id: "25AF8677FE249DF6"
+			linked_quest: "0776ACF8377E0947"
+			shape: "circle"
+			size: 0.75d
+			x: 6.0d
+			y: 2.71d
+		}
+		{
+			id: "56B01F229C730C24"
+			linked_quest: "10B98D1834C794B2"
+			shape: "circle"
+			size: 0.75d
+			x: 6.0d
+			y: 4.01d
+		}
+		{
+			id: "06ACD27E00090450"
+			linked_quest: "23206F2F3C607C2C"
+			shape: "circle"
+			size: 0.75d
+			x: 8.0d
+			y: 5.92d
+		}
+		{
+			id: "6916EA06875D2A0B"
+			linked_quest: "35321E7E9226B41D"
+			shape: "circle"
+			size: 0.75d
+			x: 8.0d
+			y: 8.44d
+		}
+		{
+			id: "2145FC4D14521A0C"
+			linked_quest: "641AD4D1666F216F"
+			shape: "circle"
+			size: 0.75d
+			x: 10.0d
+			y: 9.38d
+		}
+		{
+			id: "7B49E038828209B8"
+			linked_quest: "3854FCA028E7DA86"
+			shape: "circle"
+			size: 0.75d
+			x: 12.0d
+			y: 0.46d
+		}
+		{
+			id: "10209D7FD2804BDB"
+			linked_quest: "2255E4EC6DEC344B"
+			shape: "circle"
+			size: 0.75d
+			x: 14.0d
+			y: 0.16d
+		}
+		{
+			id: "2908AE4783AD0122"
+			linked_quest: "53F9B5E99466F04C"
+			shape: "circle"
+			size: 0.75d
+			x: 14.0d
+			y: 6.32d
+		}
+		{
+			id: "2948AB677058A0B5"
+			linked_quest: "6454F90D417AA7DE"
+			shape: "circle"
+			size: 0.75d
+			x: 16.0d
+			y: 3.22d
+		}
+	]
+	quests: [
+		{
+			dependencies: ["3B8D69CA5AD743F7"]
+			icon: {
+				id: "kubejs:powder/alumina"
+			}
+			id: "23C031E751FDA2BE"
+			shape: "diamond"
+			size: 1.0d
+			tasks: [{
+				id: "448284104EBBF03F"
+				type: "checkmark"
+			}]
+			x: 2.0d
+			y: 5.27d
+		}
+		{
+			dependencies: ["23C031E751FDA2BE"]
+			icon: {
+				id: "kubejs:powder/bauxite"
+			}
+			id: "39A3BB2B390D4EAA"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				count: 8L
+				id: "3E1558FC88B71EF4"
+				item: { count: 1, id: "kubejs:powder/bauxite" }
+				type: "item"
+			}]
+			x: 4.0d
+			y: 5.27d
+		}
+		{
+			dependencies: ["0776ACF8377E0947"]
+			icon: {
+				id: "kubejs:powder/alumina"
+			}
+			id: "4815FCA8115F74AF"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				fluid: {
+					amount: 1000
+					id: "chemica:caustic_soda"
+				}
+				id: "73A40C94CC91B199"
+				type: "fluid"
+			}]
+			x: 10.0d
+			y: 1.72d
+		}
+		{
+			dependencies: [
+				"4815FCA8115F74AF"
+				"0BE69C0DFB1D1CD7"
+			]
+			icon: {
+				id: "kubejs:powder/alumina"
+			}
+			id: "0B780EE48CD05E58"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				id: "343850CE75902F24"
+				type: "checkmark"
+			}]
+			x: 12.0d
+			y: 1.72d
+		}
+		{
+			dependencies: [
+				"0B780EE48CD05E58"
+				"3854FCA028E7DA86"
+			]
+			icon: {
+				components: {
+					"tfc:heat": { }
+				}
+				id: "kubejs:powder/aluminum_hydroxide"
+			}
+			id: "6B87F51D19F89C36"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				count: 4L
+				id: "39737CDF6E1C7404"
+				item: { components: { "tfc:heat": { } }, count: 1, id: "kubejs:powder/aluminum_hydroxide" }
+				type: "item"
+			}]
+			x: 14.0d
+			y: 1.56d
+		}
+		{
+			dependencies: ["6B87F51D19F89C36"]
+			icon: {
+				id: "kubejs:powder/alumina"
+			}
+			id: "6DD6D46FA3B80E2E"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				count: 3L
+				id: "706175ADE39B7FC9"
+				item: { count: 1, id: "kubejs:powder/alumina" }
+				type: "item"
+			}]
+			x: 16.0d
+			y: 1.4d
+		}
+		{
+			dependencies: ["2255E4EC6DEC344B"]
+			icon: {
+				id: "tfc:ore/cryolite"
+			}
+			id: "27C952226E154D04"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				id: "469C92EE1258C1C7"
+				item: { count: 1, id: "tfc:ore/cryolite" }
+				type: "item"
+			}]
+			x: 16.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"6DD6D46FA3B80E2E"
+				"27C952226E154D04"
+				"10B98D1834C794B2"
+				"6454F90D417AA7DE"
+			]
+			icon: {
+				id: "kubejs:powder/alumina"
+			}
+			id: "1F62C2C534E37F80"
+			shape: "circle"
+			size: 1.5d
+			tasks: [{
+				id: "085E507845AC3C66"
+				type: "checkmark"
+			}]
+			x: 18.0d
+			y: 2.05d
+		}
+		{
+			dependencies: ["39A3BB2B390D4EAA"]
+			icon: {
+				id: "chemica:rutile_dust"
+			}
+			id: "6300E546FCD8A0DA"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				count: 8L
+				id: "7AC8044169454DCD"
+				item: { count: 1, id: "chemica:rutile_dust" }
+				type: "item"
+			}]
+			x: 6.0d
+			y: 5.27d
+		}
+		{
+			dependencies: [
+				"6300E546FCD8A0DA"
+				"0776ACF8377E0947"
+			]
+			icon: {
+				id: "kubejs:powder/alumina"
+			}
+			id: "02AA0240CEB7F737"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				fluid: {
+					amount: 1000
+					id: "chemica:titanium_tetrachloride"
+				}
+				id: "0BB3BF059332A2EB"
+				type: "fluid"
+			}]
+			x: 8.0d
+			y: 2.7d
+		}
+		{
+			dependencies: [
+				"0776ACF8377E0947"
+				"10B98D1834C794B2"
+			]
+			icon: {
+				id: "kubejs:powder/magnesia"
+			}
+			id: "2E4797701C350AB6"
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{
+					consume_items: false
+					count: 4L
+					id: "297E797085D9E1A7"
+					item: { count: 1, id: "kubejs:powder/magnesia" }
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "1268D55E51178FAC"
+					item: { components: { "tfc:heat": { } }, count: 1, id: "tfc_metallurgy:metal/ingot/magnesium" }
+					type: "item"
+				}
+			]
+			x: 8.0d
+			y: 4.66d
+		}
+		{
+			dependencies: [
+				"02AA0240CEB7F737"
+				"2E4797701C350AB6"
+			]
+			icon: {
+				id: "kubejs:crude_titanium_sponge"
+			}
+			id: "5F182F730599A93F"
+			shape: "circle"
+			size: 1.5d
+			tasks: [{
+				consume_items: false
+				count: 2L
+				id: "755F7645C661C098"
+				item: { count: 1, id: "kubejs:crude_titanium_sponge" }
+				type: "item"
+			}]
+			x: 10.0d
+			y: 4.34d
+		}
+		{
+			dependencies: ["5F182F730599A93F"]
+			icon: {
+				id: "kubejs:titanium_sponge"
+			}
+			id: "00244F00EDCE135B"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				count: 10L
+				id: "0F25F332451A2051"
+				item: { count: 1, id: "kubejs:titanium_sponge" }
+				type: "item"
+			}]
+			x: 12.0d
+			y: 5.41d
+		}
+		{
+			dependencies: ["00244F00EDCE135B"]
+			icon: {
+				id: "kubejs:titanium_electrode"
+			}
+			id: "075B0E1A415C2324"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				id: "3B3C6E36EFF84B8E"
+				item: { count: 1, id: "kubejs:titanium_electrode" }
+				type: "item"
+			}]
+			x: 14.0d
+			y: 5.06d
+		}
+		{
+			dependencies: [
+				"075B0E1A415C2324"
+				"53F9B5E99466F04C"
+			]
+			icon: {
+				id: "kubejs:powder/alumina"
+			}
+			id: "691FF0F8B55C859C"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				id: "337F0DE65A227E4E"
+				type: "checkmark"
+			}]
+			x: 16.0d
+			y: 5.78d
+		}
+		{
+			dependencies: ["6300E546FCD8A0DA"]
+			icon: {
+				id: "kubejs:powder/beta_spodumene"
+			}
+			id: "7835A76AB5CC95DD"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				count: 4L
+				id: "5581A58B04B23914"
+				item: { count: 1, id: "kubejs:powder/beta_spodumene" }
+				type: "item"
+			}]
+			x: 8.0d
+			y: 7.18d
+		}
+		{
+			dependencies: [
+				"7835A76AB5CC95DD"
+				"35321E7E9226B41D"
+			]
+			icon: {
+				id: "kubejs:powder/lithium_carbonate"
+			}
+			id: "2DA56D89F1103A61"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				count: 4L
+				id: "539F6B898D27B674"
+				item: { count: 1, id: "kubejs:powder/lithium_carbonate" }
+				type: "item"
+			}]
+			x: 10.0d
+			y: 8.12d
+		}
+		{
+			dependencies: [
+				"2DA56D89F1103A61"
+				"641AD4D1666F216F"
+			]
+			icon: {
+				components: {
+					"tfc:heat": { }
+				}
+				id: "tfc_metallurgy:metal/ingot/lithium"
+			}
+			id: "213E6442F9704F1C"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				id: "7328E055690F47F2"
+				item: { components: { "tfc:heat": { } }, count: 1, id: "tfc_metallurgy:metal/ingot/lithium" }
+				type: "item"
+			}]
+			x: 12.0d
+			y: 8.34d
+		}
+		{
+			dependencies: [
+				"23206F2F3C607C2C"
+				"7835A76AB5CC95DD"
+			]
+			icon: {
+				id: "kubejs:powder/beryllium_fluoride"
+			}
+			id: "0BE69C0DFB1D1CD7"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				count: 2L
+				id: "0102DA8EED04E698"
+				item: { count: 1, id: "kubejs:powder/beryllium_fluoride" }
+				type: "item"
+			}]
+			x: 10.0d
+			y: 6.72d
+		}
+		{
+			dependencies: [
+				"0BE69C0DFB1D1CD7"
+				"2E4797701C350AB6"
+			]
+			icon: {
+				components: {
+					"tfc:heat": { }
+				}
+				id: "tfc_metallurgy:metal/dust/beryllium"
+			}
+			id: "6595BDDFC4A9B120"
+			optional: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				id: "79BDABCBFADE9B66"
+				item: { components: { "tfc:heat": { } }, count: 1, id: "tfc_metallurgy:metal/dust/beryllium" }
+				type: "item"
+			}]
+			x: 12.0d
+			y: 6.81d
+		}
+		{
+			dependencies: ["5F182F730599A93F"]
+			icon: {
+				components: {
+					"tfc:heat": { }
+				}
+				id: "kubejs:zirconium_sponge"
+			}
+			id: "67A19D9014F54314"
+			optional: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				count: 4L
+				id: "70E48CAC0A17CB44"
+				item: { components: { "tfc:heat": { } }, count: 1, id: "kubejs:zirconium_sponge" }
+				type: "item"
+			}]
+			x: 12.0d
+			y: 4.01d
+		}
+	]
+}
