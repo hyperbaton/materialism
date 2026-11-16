@@ -2,93 +2,93 @@
 	default_hide_dependency_lines: false
 	default_quest_shape: ""
 	filename: "electricity"
-	group: "160F5791078B9764"
+	group: "494F2A100505BD58"
 	icon: {
 		id: "create_new_age:generator_coil"
 	}
 	id: "5B80C2E21F80F61B"
 	images: [ ]
-	order_index: 18
+	order_index: 9
 	quest_links: [
 		{
-			id: "2A35168CC3ED17BE"
+			id: "7269AEDF7629ED91"
 			linked_quest: "1135582C6FA5A24D"
 			shape: "circle"
 			size: 0.75d
-			x: 0.0d
-			y: 2.78d
+			x: 2.0d
+			y: 1.27d
 		}
 		{
-			id: "0E3144ACEA1BE560"
-			linked_quest: "59FBE9A5C43A55DB"
-			shape: "circle"
-			size: 0.75d
-			x: 4.0d
-			y: 2.61d
-		}
-		{
-			id: "628710CCCAAD869C"
+			id: "01D050E6E813A1F0"
 			linked_quest: "2FC83F769A9EED07"
 			shape: "circle"
 			size: 0.75d
-			x: 4.0d
-			y: 4.45d
+			x: 2.0d
+			y: 2.39d
 		}
 		{
-			id: "4D9FFAF5BA250EAE"
+			id: "15A36EE45961F623"
+			linked_quest: "59FBE9A5C43A55DB"
+			shape: "circle"
+			size: 0.75d
+			x: 2.0d
+			y: 6.31d
+		}
+		{
+			id: "013C04705883776E"
 			linked_quest: "1042E53FF23B2F2C"
 			shape: "circle"
 			size: 0.75d
-			x: 4.0d
-			y: 8.37d
+			x: 2.0d
+			y: 7.43d
 		}
 		{
 			id: "2162F232E93446C2"
 			linked_quest: "1D7F69AC334C7B2F"
 			shape: "circle"
 			size: 0.75d
-			x: 4.0d
-			y: 9.49d
+			x: 2.0d
+			y: 8.55d
 		}
 		{
 			id: "64EC7F68E1F1D647"
 			linked_quest: "334C3814FAD890A1"
 			shape: "circle"
 			size: 0.75d
-			x: 4.0d
-			y: 10.61d
+			x: 2.0d
+			y: 9.67d
 		}
 		{
-			id: "0757EC61F1D10EAA"
-			linked_quest: "457B13554BABAED7"
+			id: "3101E1F80526A872"
+			linked_quest: "3A705A92A7941AB4"
 			shape: "circle"
 			size: 0.75d
-			x: 12.0d
-			y: 5.82d
+			x: 4.0d
+			y: 5.46d
 		}
 		{
 			id: "770C64E7968DF777"
 			linked_quest: "3B8D69CA5AD743F7"
 			shape: "circle"
 			size: 0.75d
-			x: 14.0d
-			y: 5.98d
+			x: 12.0d
+			y: 5.3d
 		}
 		{
 			id: "4723A74F8DB1E3C6"
 			linked_quest: "0776ACF8377E0947"
 			shape: "circle"
 			size: 0.75d
-			x: 16.0d
-			y: 4.23d
+			x: 14.0d
+			y: 3.47d
 		}
 		{
 			id: "2DBE44D60343B5EA"
 			linked_quest: "641AD4D1666F216F"
 			shape: "circle"
 			size: 0.75d
-			x: 18.0d
-			y: 3.23d
+			x: 16.0d
+			y: 2.49d
 		}
 	]
 	quests: [
@@ -104,8 +104,8 @@
 				id: "33130C70B6BC7124"
 				type: "checkmark"
 			}]
-			x: 2.0d
-			y: 5.71d
+			x: 0.0d
+			y: 3.65d
 		}
 		{
 			dependencies: [
@@ -128,8 +128,8 @@
 				item: { components: { "tfc:heat": { } }, count: 1, id: "createaddition:copper_wire" }
 				type: "item"
 			}]
-			x: 4.0d
-			y: 5.71d
+			x: 2.0d
+			y: 3.65d
 		}
 		{
 			dependencies: ["17CDBF0D999225B4"]
@@ -146,8 +146,8 @@
 				item: { count: 1, id: "electroenergetics:empty_spool" }
 				type: "item"
 			}]
-			x: 4.0d
-			y: 0.88d
+			x: 2.0d
+			y: 0.01d
 		}
 		{
 			dependencies: [
@@ -167,7 +167,7 @@
 				item: { count: 1, id: "electroenergetics:copper_wire_spool" }
 				type: "item"
 			}]
-			x: 6.0d
+			x: 4.0d
 			y: 0.0d
 		}
 		{
@@ -189,7 +189,7 @@
 				item: { count: 1, id: "electroenergetics:connector" }
 				type: "item"
 			}]
-			x: 6.0d
+			x: 4.0d
 			y: 1.4d
 		}
 		{
@@ -207,7 +207,7 @@
 				item: { count: 1, id: "electroenergetics:transformer_core_lamination" }
 				type: "item"
 			}]
-			x: 6.0d
+			x: 4.0d
 			y: 2.8d
 		}
 		{
@@ -228,8 +228,8 @@
 				item: { count: 1, id: "electroenergetics:converter" }
 				type: "item"
 			}]
-			x: 8.0d
-			y: 2.71d
+			x: 6.0d
+			y: 2.09d
 		}
 		{
 			dependencies: [
@@ -250,8 +250,8 @@
 				item: { count: 1, id: "tfmg:silicon_ingot" }
 				type: "item"
 			}]
-			x: 2.0d
-			y: 7.11d
+			x: 0.0d
+			y: 5.05d
 		}
 		{
 			dependencies: [
@@ -271,8 +271,8 @@
 				item: { count: 1, id: "tfmg:magnetic_alloy_ingot" }
 				type: "item"
 			}]
-			x: 4.0d
-			y: 7.11d
+			x: 2.0d
+			y: 5.05d
 		}
 		{
 			dependencies: [
@@ -295,8 +295,8 @@
 				item: { count: 1, id: "tfmg:electromagnetic_coil" }
 				type: "item"
 			}]
-			x: 6.0d
-			y: 6.3d
+			x: 4.0d
+			y: 4.2d
 		}
 		{
 			dependencies: [
@@ -325,8 +325,8 @@
 					type: "item"
 				}
 			]
-			x: 8.0d
-			y: 4.11d
+			x: 6.0d
+			y: 3.49d
 		}
 		{
 			dependencies: ["33CE7FE82A19CE7B"]
@@ -342,8 +342,8 @@
 				item: { count: 1, id: "create_new_age:generator_coil" }
 				type: "item"
 			}]
-			x: 8.0d
-			y: 5.51d
+			x: 6.0d
+			y: 4.89d
 		}
 		{
 			dependencies: [
@@ -365,8 +365,8 @@
 				item: { count: 1, id: "create_new_age:carbon_brushes" }
 				type: "item"
 			}]
-			x: 8.0d
-			y: 6.91d
+			x: 6.0d
+			y: 6.29d
 		}
 		{
 			dependencies: [
@@ -389,8 +389,8 @@
 				to_observe: "create_new_age:generator_coil"
 				type: "observation"
 			}]
-			x: 10.0d
-			y: 4.81d
+			x: 8.0d
+			y: 4.19d
 		}
 		{
 			dependencies: ["1C87D51F077F0648"]
@@ -406,8 +406,8 @@
 				item: { count: 1, id: "create_new_age:basic_energiser" }
 				type: "item"
 			}]
-			x: 12.0d
-			y: 3.21d
+			x: 10.0d
+			y: 2.45d
 		}
 		{
 			dependencies: [
@@ -428,8 +428,8 @@
 				item: { count: 1, id: "create_new_age:redstone_magnet" }
 				type: "item"
 			}]
-			x: 14.0d
-			y: 2.76d
+			x: 12.0d
+			y: 2.08d
 		}
 		{
 			dependencies: [
@@ -448,8 +448,8 @@
 				item: { count: 1, id: "create_new_age:basic_motor" }
 				type: "item"
 			}]
-			x: 14.0d
-			y: 4.16d
+			x: 12.0d
+			y: 3.48d
 		}
 		{
 			dependencies: [
@@ -469,8 +469,8 @@
 				item: { count: 1, id: "create_new_age:basic_motor_extension" }
 				type: "item"
 			}]
-			x: 16.0d
-			y: 1.81d
+			x: 14.0d
+			y: 1.09d
 		}
 		{
 			dependencies: ["1C87D51F077F0648"]
@@ -484,8 +484,8 @@
 				id: "46676E5A9FBDD1E0"
 				type: "checkmark"
 			}]
-			x: 20.0d
-			y: 5.64d
+			x: 18.0d
+			y: 4.86d
 		}
 		{
 			dependencies: [
@@ -507,8 +507,8 @@
 				item: { count: 1, id: "materialismcore:galvanic_cell" }
 				type: "item"
 			}]
-			x: 6.0d
-			y: 8.3d
+			x: 4.0d
+			y: 8.46d
 		}
 		{
 			dependencies: [
@@ -529,8 +529,8 @@
 				item: { count: 1, id: "tfmg:capacitor" }
 				type: "item"
 			}]
-			x: 20.0d
-			y: 4.24d
+			x: 18.0d
+			y: 3.46d
 		}
 		{
 			dependencies: [
@@ -552,8 +552,8 @@
 				item: { count: 1, id: "tfmg:resistor" }
 				type: "item"
 			}]
-			x: 18.0d
-			y: 4.49d
+			x: 16.0d
+			y: 3.75d
 		}
 		{
 			dependencies: ["34526F2A32AD50EF"]
@@ -569,8 +569,8 @@
 				item: { count: 1, id: "tfmg:voltmeter" }
 				type: "item"
 			}]
-			x: 20.0d
-			y: 2.84d
+			x: 18.0d
+			y: 2.06d
 		}
 		{
 			dependencies: [
@@ -590,8 +590,8 @@
 				item: { count: 1, id: "tfmg:polarizer" }
 				type: "item"
 			}]
-			x: 22.0d
-			y: 4.24d
+			x: 20.0d
+			y: 3.46d
 		}
 		{
 			dependencies: ["7A647F7DCF75056A"]
@@ -608,8 +608,8 @@
 				item: { count: 1, id: "tfmg:magnet" }
 				type: "item"
 			}]
-			x: 24.0d
-			y: 4.24d
+			x: 22.0d
+			y: 3.46d
 		}
 		{
 			dependencies: [
@@ -629,8 +629,8 @@
 				item: { count: 1, id: "create_new_age:layered_magnet" }
 				type: "item"
 			}]
-			x: 26.0d
-			y: 4.24d
+			x: 24.0d
+			y: 3.46d
 		}
 		{
 			dependencies: ["604C5989935A37CA"]
@@ -647,8 +647,8 @@
 				item: { count: 1, id: "create_new_age:fluxuated_magnetite" }
 				type: "item"
 			}]
-			x: 28.0d
-			y: 4.24d
+			x: 26.0d
+			y: 3.46d
 		}
 		{
 			dependencies: [
@@ -668,8 +668,8 @@
 				item: { count: 1, id: "create_new_age:netherite_magnet" }
 				type: "item"
 			}]
-			x: 16.0d
-			y: 6.29d
+			x: 14.0d
+			y: 5.57d
 		}
 		{
 			dependencies: [
@@ -689,29 +689,8 @@
 				item: { components: { "ftbfiltersystem:filter": "ftbfiltersystem:or(ftbfiltersystem:item(create_new_age:advanced_motor)ftbfiltersystem:item(create_new_age:reinforced_motor))" }, count: 1, id: "ftbfiltersystem:smart_filter" }
 				type: "item"
 			}]
-			x: 18.0d
-			y: 6.45d
-		}
-		{
-			dependencies: [
-				"1135582C6FA5A24D"
-				"18687C0E4557C87A"
-			]
-			icon: {
-				id: "create_new_age:stirling_engine"
-			}
-			id: "24685F03E7EAE610"
-			optional: true
-			shape: "circle"
-			size: 1.0d
-			tasks: [{
-				consume_items: false
-				id: "6F1D32DC3BDF5F2D"
-				item: { count: 1, id: "create_new_age:stirling_engine" }
-				type: "item"
-			}]
-			x: 2.0d
-			y: 4.09d
+			x: 16.0d
+			y: 5.71d
 		}
 	]
 }

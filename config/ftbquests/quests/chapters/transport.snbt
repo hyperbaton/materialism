@@ -2,53 +2,85 @@
 	default_hide_dependency_lines: false
 	default_quest_shape: ""
 	filename: "transport"
-	group: "3E009514FEB829B8"
+	group: "494F2A100505BD58"
 	icon: {
 		id: "create:track"
 	}
 	id: "031B7D874776F795"
 	images: [ ]
-	order_index: 6
+	order_index: 15
 	quest_links: [
 		{
-			id: "33427FF38FBD689D"
+			id: "25E723E04E50CD20"
 			linked_quest: "1542B28D2B2AE81F"
 			shape: "circle"
 			size: 0.75d
 			x: 0.0d
-			y: 5.36d
+			y: 0.0d
 		}
 		{
-			id: "3303BC81851EEA5F"
+			id: "49C7E4F3BC22BF98"
 			linked_quest: "1135582C6FA5A24D"
 			shape: "circle"
 			size: 0.75d
 			x: 0.0d
-			y: 7.39d
+			y: 2.03d
 		}
 		{
-			id: "36E3E789712ACD37"
+			id: "46D61240BD864EEC"
 			linked_quest: "1EFA8A6BBD5D7031"
 			shape: "circle"
 			size: 0.75d
 			x: 0.0d
-			y: 8.51d
+			y: 3.15d
 		}
 		{
-			id: "4AA5133A8EE2845B"
+			id: "12C9D38B3E7D002C"
+			linked_quest: "42A35D1AB65873B0"
+			shape: "circle"
+			size: 0.75d
+			x: 0.0d
+			y: 4.27d
+		}
+		{
+			id: "3943AC6F2B9D7CEE"
+			linked_quest: "520876E156CDA0F2"
+			shape: "circle"
+			size: 0.75d
+			x: 0.0d
+			y: 5.39d
+		}
+		{
+			id: "31B7AD24395877A9"
+			linked_quest: "1DC0C707DDC8A17D"
+			shape: "circle"
+			size: 0.75d
+			x: 0.0d
+			y: 6.51d
+		}
+		{
+			id: "3626B3A158F8D5C9"
 			linked_quest: "2A25435D4AD82924"
 			shape: "circle"
 			size: 0.75d
 			x: 0.0d
-			y: 11.24d
+			y: 7.63d
 		}
 		{
-			id: "58EE09B19814983F"
+			id: "7D4B5F5F8F0F9E97"
+			linked_quest: "400C00A759731B57"
+			shape: "circle"
+			size: 0.75d
+			x: 0.0d
+			y: 8.75d
+		}
+		{
+			id: "1A393C4B7516893E"
 			linked_quest: "0170480B29CC3824"
 			shape: "circle"
 			size: 0.75d
 			x: 0.0d
-			y: 14.11d
+			y: 10.29d
 		}
 		{
 			id: "5FFB752DAB06DEC7"
@@ -56,179 +88,10 @@
 			shape: "circle"
 			size: 0.75d
 			x: 0.0d
-			y: 15.37d
-		}
-		{
-			id: "1CAD167E05E8D659"
-			linked_quest: "745F1FEC5A1D24E3"
-			shape: "circle"
-			size: 0.75d
-			x: 2.0d
-			y: 16.63d
-		}
-		{
-			id: "12C9D38B3E7D002C"
-			linked_quest: "42A35D1AB65873B0"
-			shape: "circle"
-			size: 0.75d
-			x: 2.0d
-			y: 17.75d
-		}
-		{
-			id: "54389DF11D6B65BD"
-			linked_quest: "793D0625A66AE2A8"
-			shape: "circle"
-			size: 0.75d
-			x: 3.2d
-			y: 0.0d
-		}
-		{
-			id: "281ED6A3627F2A74"
-			linked_quest: "1E13A0C8E8BAD5EC"
-			shape: "circle"
-			size: 0.75d
-			x: 13.6d
-			y: 0.0d
+			y: 13.09d
 		}
 	]
 	quests: [
-		{
-			dependencies: ["7809992CF7AEB2E6"]
-			icon: {
-				id: "rnr:crushed_base_course"
-			}
-			id: "44779F4EFC94364E"
-			optional: true
-			shape: "circle"
-			size: 1.0d
-			tasks: [
-				{
-					consume_items: false
-					count: 8L
-					id: "4CC129A33F2A04C3"
-					item: { count: 1, id: "rnr:crushed_base_course" }
-					type: "item"
-				}
-				{
-					consume_items: false
-					count: 8L
-					id: "775CD95B29013417"
-					item: { count: 1, id: "rnr:hoggin_mix" }
-					type: "item"
-				}
-			]
-			x: 0.0d
-			y: 0.0d
-		}
-		{
-			dependencies: ["793D0625A66AE2A8"]
-			icon: {
-				id: "tfc:wood/boat/oak"
-			}
-			id: "5E9734061D00DDD8"
-			optional: true
-			shape: "circle"
-			size: 1.0d
-			tasks: [{
-				consume_items: false
-				id: "10008B1744F5F9D1"
-				item: { components: { "ftbfiltersystem:filter": "ftbfiltersystem:item_tag(minecraft:boats)" }, count: 1, id: "ftbfiltersystem:smart_filter" }
-				type: "item"
-			}]
-			x: 5.2d
-			y: 0.0d
-		}
-		{
-			dependencies: ["5FB215472BC351AF"]
-			icon: {
-				id: "tfcastikorcarts:wheel/oak"
-			}
-			id: "4DA910D8C7257748"
-			shape: "circle"
-			size: 1.0d
-			tasks: [{
-				consume_items: false
-				id: "3A4211C16E63F884"
-				item: { components: { "ftbfiltersystem:filter": "ftbfiltersystem:item_tag(tfcastikorcarts:cart_wheel)" }, count: 1, id: "ftbfiltersystem:smart_filter" }
-				type: "item"
-			}]
-			x: 8.4d
-			y: 1.4d
-		}
-		{
-			dependencies: ["4DA910D8C7257748"]
-			icon: {
-				id: "tfcastikorcarts:hand_cart/oak"
-			}
-			id: "6C56D9FD8A05DF26"
-			optional: true
-			shape: "circle"
-			size: 1.0d
-			tasks: [{
-				consume_items: false
-				id: "627F4E00A2001A29"
-				item: { components: { "ftbfiltersystem:filter": "ftbfiltersystem:item_tag(tfcastikorcarts:hand_cart)" }, count: 1, id: "ftbfiltersystem:smart_filter" }
-				type: "item"
-			}]
-			x: 10.4d
-			y: 0.0d
-		}
-		{
-			dependencies: ["1E13A0C8E8BAD5EC"]
-			icon: {
-				id: "minecraft:saddle"
-			}
-			id: "10E2BA34DEB02A7C"
-			optional: true
-			shape: "circle"
-			size: 1.0d
-			tasks: [{
-				consume_items: false
-				id: "6464C8D7C01EB528"
-				item: { count: 1, id: "minecraft:saddle" }
-				type: "item"
-			}]
-			x: 15.6d
-			y: 0.0d
-		}
-		{
-			dependencies: [
-				"4DA910D8C7257748"
-				"7BB4E24F34E39105"
-			]
-			icon: {
-				id: "tfcastikorcarts:supply_cart/oak"
-			}
-			id: "18BAA4066577892D"
-			shape: "circle"
-			size: 1.0d
-			tasks: [{
-				consume_items: false
-				id: "1D37B2876C324A96"
-				item: { components: { "ftbfiltersystem:filter": "ftbfiltersystem:item_tag(tfcastikorcarts:supply_cart)" }, count: 1, id: "ftbfiltersystem:smart_filter" }
-				type: "item"
-			}]
-			x: 10.4d
-			y: 1.4d
-		}
-		{
-			dependencies: ["4DA910D8C7257748"]
-			icon: {
-				id: "tfcastikorcarts:plow/oak"
-			}
-			id: "6EFE9EE573827369"
-			optional: true
-			shape: "circle"
-			size: 1.0d
-			tasks: [{
-				consume_items: false
-				id: "361C63007A36ECF4"
-				item: { components: { "ftbfiltersystem:filter": "ftbfiltersystem:item_tag(tfcastikorcarts:plow)" }, count: 1, id: "ftbfiltersystem:smart_filter" }
-				type: "item"
-			}]
-			x: 10.4d
-			y: 2.8d
-		}
 		{
 			dependencies: [
 				"1EFA8A6BBD5D7031"
@@ -249,7 +112,7 @@
 				type: "item"
 			}]
 			x: 2.0d
-			y: 5.32d
+			y: 0.23d
 		}
 		{
 			dependencies: ["1135582C6FA5A24D"]
@@ -267,30 +130,7 @@
 				type: "item"
 			}]
 			x: 2.0d
-			y: 6.66d
-		}
-		{
-			dependencies: [
-				"59BF9C79DE17DE3A"
-				"4AC65AC9DC16CEF5"
-			]
-			icon: {
-				components: {
-					"tfc:heat": { }
-				}
-				id: "tfc_metallurgy:metal/sheet/titanium"
-			}
-			id: "400C00A759731B57"
-			shape: "circle"
-			size: 1.0d
-			tasks: [{
-				consume_items: false
-				id: "11B0FEF9A0BD3740"
-				item: { components: { "tfc:heat": { } }, count: 1, id: "tfc_metallurgy:metal/sheet/titanium" }
-				type: "item"
-			}]
-			x: 2.0d
-			y: 10.86d
+			y: 2.27d
 		}
 		{
 			dependencies: ["400C00A759731B57"]
@@ -307,8 +147,8 @@
 				item: { count: 1, id: "create:railway_casing" }
 				type: "item"
 			}]
-			x: 4.0d
-			y: 9.64d
+			x: 2.0d
+			y: 9.27d
 		}
 		{
 			dependencies: [
@@ -335,8 +175,8 @@
 					type: "item"
 				}
 			]
-			x: 6.0d
-			y: 8.99d
+			x: 4.0d
+			y: 2.41d
 		}
 		{
 			dependencies: [
@@ -358,7 +198,7 @@
 				type: "item"
 			}]
 			x: 2.0d
-			y: 8.06d
+			y: 3.67d
 		}
 		{
 			dependencies: [
@@ -377,8 +217,8 @@
 				item: { count: 1, id: "create:schedule" }
 				type: "item"
 			}]
-			x: 8.0d
-			y: 7.69d
+			x: 6.0d
+			y: 3.5d
 		}
 		{
 			dependencies: [
@@ -403,8 +243,8 @@
 				item: { count: 1, id: "electroenergetics:red_electric_motor" }
 				type: "item"
 			}]
-			x: 4.0d
-			y: 14.61d
+			x: 2.0d
+			y: 6.47d
 		}
 		{
 			dependencies: [
@@ -425,8 +265,8 @@
 				item: { count: 1, id: "electroenergetics:catenary_holder" }
 				type: "item"
 			}]
-			x: 6.0d
-			y: 12.49d
+			x: 4.0d
+			y: 6.48d
 		}
 		{
 			dependencies: ["7F0C78ECD419B56C"]
@@ -443,8 +283,8 @@
 				item: { components: { "ftbfiltersystem:filter": "ftbfiltersystem:or(ftbfiltersystem:item(electroenergetics:pantograph)ftbfiltersystem:item(electroenergetics:rail_contact_shoe))" }, count: 1, id: "ftbfiltersystem:smart_filter" }
 				type: "item"
 			}]
-			x: 8.0d
-			y: 11.19d
+			x: 6.0d
+			y: 6.48d
 		}
 		{
 			dependencies: [
@@ -465,7 +305,7 @@
 				type: "item"
 			}]
 			x: 4.0d
-			y: 6.8d
+			y: 4.56d
 		}
 		{
 			dependencies: [
@@ -496,7 +336,7 @@
 				}
 			]
 			x: 2.0d
-			y: 9.46d
+			y: 5.07d
 		}
 		{
 			dependencies: [
@@ -519,7 +359,7 @@
 				type: "item"
 			}]
 			x: 2.0d
-			y: 13.38d
+			y: 12.07d
 		}
 		{
 			dependencies: [
@@ -540,8 +380,8 @@
 				item: { count: 1, id: "aeronautics:propeller_bearing" }
 				type: "item"
 			}]
-			x: 4.0d
-			y: 12.44d
+			x: 2.0d
+			y: 7.87d
 		}
 		{
 			dependencies: [
@@ -561,8 +401,8 @@
 				item: { count: 1, id: "aeronautics:adjustable_burner" }
 				type: "item"
 			}]
-			x: 4.0d
-			y: 11.04d
+			x: 2.0d
+			y: 10.67d
 		}
 		{
 			dependencies: [
@@ -583,7 +423,7 @@
 				type: "item"
 			}]
 			x: 2.0d
-			y: 15.37d
+			y: 13.47d
 		}
 	]
 }

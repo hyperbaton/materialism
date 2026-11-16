@@ -2,13 +2,13 @@
 	default_hide_dependency_lines: false
 	default_quest_shape: ""
 	filename: "electronics"
-	group: "160F5791078B9764"
+	group: "494F2A100505BD58"
 	icon: {
 		id: "tfmg:circuit_board"
 	}
 	id: "546908DF1439FA40"
 	images: [ ]
-	order_index: 20
+	order_index: 11
 	quest_links: [
 		{
 			id: "13922CB902A3CFF4"
@@ -43,7 +43,7 @@
 			y: 0.0d
 		}
 		{
-			id: "61F49BB4F468B4E8"
+			id: "5AE1D5DB17620879"
 			linked_quest: "3320714C9C1C23A1"
 			shape: "circle"
 			size: 0.75d
@@ -75,16 +75,16 @@
 			y: 4.08d
 		}
 		{
-			id: "4F7753F1C52E235C"
-			linked_quest: "1601BE2C7B5145FF"
+			id: "0391382BE7CBEFC6"
+			linked_quest: "400C00A759731B57"
 			shape: "circle"
 			size: 0.75d
 			x: 12.0d
 			y: 4.4d
 		}
 		{
-			id: "5AE132D62CF3C74E"
-			linked_quest: "400C00A759731B57"
+			id: "088CDAFC766E2168"
+			linked_quest: "1601BE2C7B5145FF"
 			shape: "circle"
 			size: 0.75d
 			x: 12.0d

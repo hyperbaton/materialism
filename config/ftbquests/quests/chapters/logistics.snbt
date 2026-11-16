@@ -2,155 +2,96 @@
 	default_hide_dependency_lines: false
 	default_quest_shape: ""
 	filename: "logistics"
-	group: "3E009514FEB829B8"
+	group: "494F2A100505BD58"
 	icon: {
 		id: "create:brass_funnel"
 	}
 	id: "47F53FBD6F007B8F"
 	images: [ ]
-	order_index: 4
+	order_index: 13
 	quest_links: [
 		{
-			id: "275E55B04D101901"
-			linked_quest: "13877EE68CBF9F98"
+			id: "536DA6ADB8A979EC"
+			linked_quest: "5CA1170F3C6B1BED"
 			shape: "circle"
 			size: 0.75d
 			x: 0.0d
-			y: 3.42d
+			y: 0.0d
 		}
 		{
-			id: "7910CC7F796185FF"
-			linked_quest: "514EEC713C07EA62"
+			id: "064A9C6C0E6D858B"
+			linked_quest: "5BA8022214FF6AF5"
 			shape: "circle"
 			size: 0.75d
 			x: 0.0d
-			y: 4.86d
+			y: 1.12d
 		}
 		{
-			id: "4F8A956CCE3FE117"
+			id: "14CF62EFC34E5738"
+			linked_quest: "1542B28D2B2AE81F"
+			shape: "circle"
+			size: 0.75d
+			x: 0.0d
+			y: 2.24d
+		}
+		{
+			id: "49EEC605EF9094DC"
+			linked_quest: "630317A3AC020C26"
+			shape: "circle"
+			size: 0.75d
+			x: 0.0d
+			y: 3.36d
+		}
+		{
+			id: "16C537BB1E072FDA"
 			linked_quest: "745F1FEC5A1D24E3"
 			shape: "circle"
 			size: 0.75d
 			x: 0.0d
-			y: 8.11d
+			y: 5.77d
 		}
 		{
-			id: "1E048B6CEBE8BB68"
-			linked_quest: "40BBECB889D17E7C"
-			shape: "circle"
-			size: 0.75d
-			x: 0.0d
-			y: 9.23d
-		}
-		{
-			id: "1ED8D345C160919E"
+			id: "789027724D510098"
 			linked_quest: "1135582C6FA5A24D"
 			shape: "circle"
 			size: 0.75d
 			x: 0.0d
-			y: 10.35d
+			y: 6.89d
 		}
 		{
-			id: "18CBDCD877A5CE0C"
-			linked_quest: "5BA8022214FF6AF5"
+			id: "07371AC935F3C818"
+			linked_quest: "40BBECB889D17E7C"
+			shape: "circle"
+			size: 0.75d
+			x: 0.0d
+			y: 8.01d
+		}
+		{
+			id: "57A5B5D1797CC64E"
+			linked_quest: "28E92462F94F7A45"
 			shape: "circle"
 			size: 0.75d
 			x: 2.0d
-			y: 1.67d
+			y: 3.64d
 		}
 		{
-			id: "5F5C041CD9B1B71C"
-			linked_quest: "1542B28D2B2AE81F"
-			shape: "circle"
-			size: 0.75d
-			x: 2.0d
-			y: 2.79d
-		}
-		{
-			id: "4BCA1FD45599DBE8"
-			linked_quest: "2A25435D4AD82924"
-			shape: "circle"
-			size: 0.75d
-			x: 2.0d
-			y: 8.11d
-		}
-		{
-			id: "383DE4ED15EEBA0F"
-			linked_quest: "4B6498EEFBCE8E84"
-			shape: "circle"
-			size: 0.75d
-			x: 4.0d
-			y: 0.0d
-		}
-		{
-			id: "3CACF47EE4C12053"
+			id: "4F763D174B59DE27"
 			linked_quest: "71496D3549A1D7AC"
 			shape: "circle"
 			size: 0.75d
 			x: 4.0d
-			y: 3.92d
+			y: 5.71d
+		}
+		{
+			id: "194EA3A38F8ABD25"
+			linked_quest: "154D9A6958B3A78A"
+			shape: "circle"
+			size: 0.75d
+			x: 11.2d
+			y: 0.0d
 		}
 	]
 	quests: [
-		{
-			dependencies: [
-				"13877EE68CBF9F98"
-				"514EEC713C07EA62"
-			]
-			icon: {
-				id: "create:depot"
-			}
-			id: "154D9A6958B3A78A"
-			shape: "circle"
-			size: 1.0d
-			tasks: [{
-				consume_items: false
-				id: "0A3420E2897B16C7"
-				item: { count: 1, id: "create:depot" }
-				type: "item"
-			}]
-			x: 2.0d
-			y: 5.45d
-		}
-		{
-			dependencies: ["13877EE68CBF9F98"]
-			icon: {
-				id: "create:chute"
-			}
-			id: "630317A3AC020C26"
-			shape: "circle"
-			size: 1.0d
-			tasks: [{
-				consume_items: false
-				count: 4L
-				id: "072C960D3FE86853"
-				item: { count: 1, id: "create:chute" }
-				type: "item"
-			}]
-			x: 2.0d
-			y: 0.41d
-		}
-		{
-			dependencies: [
-				"13877EE68CBF9F98"
-				"514EEC713C07EA62"
-			]
-			icon: {
-				id: "create:andesite_funnel"
-			}
-			id: "5CA1170F3C6B1BED"
-			shape: "circle"
-			size: 1.0d
-			tasks: [{
-				consume_items: false
-				count: 4L
-				id: "05E672374A0273F6"
-				item: { count: 1, id: "create:andesite_funnel" }
-				type: "item"
-			}]
-			x: 2.0d
-			y: 4.05d
-		}
 		{
 			dependencies: [
 				"5CA1170F3C6B1BED"
@@ -179,8 +120,8 @@
 					type: "item"
 				}
 			]
-			x: 4.0d
-			y: 2.66d
+			x: 2.0d
+			y: 0.98d
 		}
 		{
 			dependencies: [
@@ -201,8 +142,8 @@
 				item: { count: 1, id: "create:smart_chute" }
 				type: "item"
 			}]
-			x: 4.0d
-			y: 1.26d
+			x: 2.0d
+			y: 2.38d
 		}
 		{
 			dependencies: [
@@ -222,8 +163,8 @@
 				item: { count: 1, id: "create:weighted_ejector" }
 				type: "item"
 			}]
-			x: 4.0d
-			y: 6.58d
+			x: 13.2d
+			y: 0.0d
 		}
 		{
 			dependencies: [
@@ -243,8 +184,8 @@
 				item: { count: 1, id: "create:mechanical_arm" }
 				type: "item"
 			}]
-			x: 6.0d
-			y: 3.37d
+			x: 4.0d
+			y: 3.17d
 		}
 		{
 			dependencies: [
@@ -265,7 +206,7 @@
 				type: "item"
 			}]
 			x: 2.0d
-			y: 6.85d
+			y: 4.9d
 		}
 		{
 			dependencies: ["400C00A759731B57"]
@@ -282,7 +223,7 @@
 				type: "item"
 			}]
 			x: 4.0d
-			y: 5.18d
+			y: 6.97d
 		}
 		{
 			dependencies: [
@@ -311,8 +252,8 @@
 					type: "item"
 				}
 			]
-			x: 8.0d
-			y: 4.77d
+			x: 6.0d
+			y: 3.86d
 		}
 		{
 			dependencies: [
@@ -333,7 +274,7 @@
 				type: "item"
 			}]
 			x: 2.0d
-			y: 9.93d
+			y: 7.65d
 		}
 		{
 			dependencies: ["1D4B2D722504DEF9"]
@@ -350,7 +291,7 @@
 				type: "item"
 			}]
 			x: 4.0d
-			y: 8.54d
+			y: 8.37d
 		}
 		{
 			dependencies: [
@@ -371,7 +312,7 @@
 				type: "item"
 			}]
 			x: 6.0d
-			y: 7.15d
+			y: 7.46d
 		}
 		{
 			dependencies: [
@@ -401,7 +342,7 @@
 				}
 			]
 			x: 6.0d
-			y: 5.19d
+			y: 6.06d
 		}
 		{
 			dependencies: [
@@ -422,7 +363,7 @@
 				type: "item"
 			}]
 			x: 8.0d
-			y: 6.17d
+			y: 5.54d
 		}
 		{
 			dependencies: ["67244B7A451853E3"]
@@ -440,7 +381,7 @@
 				type: "item"
 			}]
 			x: 8.0d
-			y: 7.57d
+			y: 6.94d
 		}
 	]
 }

@@ -1,97 +1,360 @@
 {
 	default_hide_dependency_lines: false
 	default_quest_shape: ""
-	filename: "industrial_shopping_list"
-	group: "160F5791078B9764"
+	filename: "machine_materials"
+	group: "577AA6560051154F"
 	icon: {
 		id: "create:electron_tube"
 	}
-	id: "47A21414A82E92CB"
+	id: "458F48ADB244F047"
 	images: [ ]
-	order_index: 9
+	order_index: 6
 	quest_links: [
 		{
-			id: "7B059F1BA7F78624"
-			linked_quest: "5BDD335BAEB5D3CD"
+			id: "1E0553C51160CBD9"
+			linked_quest: "5D3ADCC4ECED777F"
 			shape: "circle"
 			size: 0.75d
 			x: 0.0d
-			y: 0.0d
+			y: 2.37d
 		}
 		{
-			id: "3FFB291AB1EA67CE"
-			linked_quest: "7DD2388332DA90E8"
+			id: "5E08F9E9CAA886D5"
+			linked_quest: "6EAF761D972C49A8"
 			shape: "circle"
 			size: 0.75d
 			x: 0.0d
-			y: 3.34d
+			y: 3.49d
 		}
 		{
-			id: "0A8A2812A2D144B1"
-			linked_quest: "6B3CC16462333336"
+			id: "3652957324B0545A"
+			linked_quest: "252DCBC3CE3A5C33"
 			shape: "circle"
 			size: 0.75d
 			x: 0.0d
-			y: 4.46d
+			y: 6.93d
 		}
 		{
-			id: "789406C8FE6B5DA6"
-			linked_quest: "4FB55FBB394B9B83"
-			shape: "circle"
-			size: 0.75d
-			x: 0.0d
-			y: 5.58d
-		}
-		{
-			id: "4A5590BC1B7CA0EB"
+			id: "10B40910BD77BCDF"
 			linked_quest: "58AAD5A29308D38F"
 			shape: "circle"
 			size: 0.75d
 			x: 0.0d
-			y: 9.08d
+			y: 9.99d
 		}
 		{
-			id: "09490267B8315497"
-			linked_quest: "3C028FF67824DC74"
-			shape: "circle"
-			size: 0.75d
-			x: 0.0d
-			y: 11.37d
-		}
-		{
-			id: "60F4379EB70A79D4"
-			linked_quest: "3CE77F6BCCEEE09C"
-			shape: "circle"
-			size: 0.75d
-			x: 0.0d
-			y: 12.91d
-		}
-		{
-			id: "771610E0D083DAE5"
+			id: "69EDF1B3F7B88A0B"
 			linked_quest: "176BCF909EF12AC1"
 			shape: "circle"
 			size: 0.75d
 			x: 0.0d
-			y: 14.31d
+			y: 13.37d
 		}
 		{
-			id: "08B320ADE0B39A22"
-			linked_quest: "393843AAF9FCFF61"
+			id: "544ABAF75A6EAE9B"
+			linked_quest: "3CE77F6BCCEEE09C"
+			shape: "circle"
+			size: 0.75d
+			x: 2.0d
+			y: 9.77d
+		}
+		{
+			id: "4D79B66F17B13153"
+			linked_quest: "4FB55FBB394B9B83"
 			shape: "circle"
 			size: 0.75d
 			x: 4.0d
-			y: 4.77d
+			y: 3.1d
 		}
 		{
-			id: "6EB420197EB9D1ED"
-			linked_quest: "03E67F66005810E1"
+			id: "6D22BE6BD1F7778E"
+			linked_quest: "5BDD335BAEB5D3CD"
 			shape: "circle"
 			size: 0.75d
-			x: 13.2d
-			y: 2.52d
+			x: 6.0d
+			y: 3.77d
+		}
+		{
+			id: "11F7FC6AD2ED3E6C"
+			linked_quest: "7DD2388332DA90E8"
+			shape: "circle"
+			size: 0.75d
+			x: 6.0d
+			y: 4.89d
+		}
+		{
+			id: "72CB512F79367986"
+			linked_quest: "393843AAF9FCFF61"
+			shape: "circle"
+			size: 0.75d
+			x: 10.0d
+			y: 0.75d
 		}
 	]
 	quests: [
+		{
+			dependencies: [
+				"5D3ADCC4ECED777F"
+				"6EAF761D972C49A8"
+			]
+			icon: {
+				id: "tfc:wood/support/oak"
+			}
+			id: "028A679789A7C67D"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				id: "5E02E97514B444D1"
+				type: "checkmark"
+			}]
+			x: 2.0d
+			y: 3.28d
+		}
+		{
+			dependencies: ["0170480B29CC3824"]
+			icon: {
+				id: "tfc:wood/support/oak"
+			}
+			id: "01CD699C5DC5A7E4"
+			shape: "diamond"
+			size: 1.0d
+			tasks: [{
+				id: "14F87BF3DB0C2218"
+				type: "checkmark"
+			}]
+			x: 16.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["028A679789A7C67D"]
+			icon: {
+				components: {
+					"tfc:heat": { }
+				}
+				id: "tfc:metal/ingot/nickel"
+			}
+			id: "2378788924E5D9A1"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				count: 4L
+				id: "416085DEC5BE6BFC"
+				item: { components: { "tfc:heat": { } }, count: 1, id: "tfc:metal/ingot/nickel" }
+				type: "item"
+			}]
+			x: 4.0d
+			y: 1.84d
+		}
+		{
+			dependencies: [
+				"393843AAF9FCFF61"
+				"7D974A2698EDED60"
+			]
+			icon: {
+				components: {
+					"tfc:heat": { }
+				}
+				id: "tfc_metallurgy:metal/ingot/aluminum"
+			}
+			id: "61D26D7F6A54AFF3"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				count: 4L
+				id: "35AF82F60EC09DEF"
+				item: { components: { "tfc:heat": { } }, count: 1, id: "tfc_metallurgy:metal/ingot/aluminum" }
+				type: "item"
+			}]
+			x: 12.0d
+			y: 1.05d
+		}
+		{
+			dependencies: [
+				"61D26D7F6A54AFF3"
+				"5BDD335BAEB5D3CD"
+			]
+			icon: {
+				components: {
+					"tfc:heat": { }
+				}
+				id: "tfc_metallurgy:metal/double_ingot/aluminum"
+			}
+			id: "57745AF9BC82C558"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				count: 2L
+				id: "4CCC182B45CF7D09"
+				item: { components: { "tfc:heat": { } }, count: 1, id: "tfc_metallurgy:metal/double_ingot/aluminum" }
+				type: "item"
+			}]
+			x: 14.0d
+			y: 2.1d
+		}
+		{
+			dependencies: ["57745AF9BC82C558"]
+			icon: {
+				components: {
+					"tfc:heat": { }
+				}
+				id: "tfc_metallurgy:metal/anvil/aluminum"
+			}
+			id: "175233B3242872A8"
+			optional: true
+			shape: "circle"
+			size: 1.5d
+			tasks: [{
+				consume_items: false
+				id: "1767E2C5B185B5F2"
+				item: { components: { "tfc:heat": { } }, count: 1, id: "tfc_metallurgy:metal/anvil/aluminum" }
+				type: "item"
+			}]
+			x: 16.0d
+			y: 2.8d
+		}
+		{
+			dependencies: ["57745AF9BC82C558"]
+			icon: {
+				components: {
+					"tfc:heat": { }
+				}
+				id: "tfc_metallurgy:metal/sheet/aluminum"
+			}
+			id: "03E67F66005810E1"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				count: 4L
+				id: "0DE5B8B63384B197"
+				item: { components: { "tfc:heat": { } }, count: 1, id: "tfc_metallurgy:metal/sheet/aluminum" }
+				type: "item"
+			}]
+			x: 16.0d
+			y: 1.4d
+		}
+		{
+			dependencies: ["252DCBC3CE3A5C33"]
+			icon: {
+				components: {
+					"tfc:heat": { }
+				}
+				id: "tfc:metal/ingot/brass"
+			}
+			id: "3C028FF67824DC74"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				count: 4L
+				id: "045E1A831F31D4FD"
+				item: { components: { "tfc:heat": { } }, count: 1, id: "tfc:metal/ingot/brass" }
+				type: "item"
+			}]
+			x: 2.0d
+			y: 4.87d
+		}
+		{
+			dependencies: ["61D26D7F6A54AFF3"]
+			icon: {
+				components: {
+					"tfc:heat": { }
+				}
+				id: "tfc_metallurgy:metal/ingot/magnesium"
+			}
+			id: "0170480B29CC3824"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				id: "3C60067CD9051ACC"
+				item: { components: { "tfc:heat": { } }, count: 1, id: "tfc_metallurgy:metal/ingot/magnesium" }
+				type: "item"
+			}]
+			x: 14.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["5D3ADCC4ECED777F"]
+			icon: {
+				components: {
+					"tfc:heat": { }
+				}
+				id: "tfc:metal/ingot/gold"
+			}
+			id: "5415E484EEFC90B7"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				count: 2L
+				id: "153C948988C8E49D"
+				item: { components: { "tfc:heat": { } }, count: 1, id: "tfc:metal/ingot/gold" }
+				type: "item"
+			}]
+			x: 2.0d
+			y: 1.88d
+		}
+		{
+			dependencies: [
+				"4FB55FBB394B9B83"
+				"6B3CC16462333336"
+			]
+			icon: {
+				id: "minecraft:redstone"
+			}
+			id: "2255E4EC6DEC344B"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				count: 6L
+				id: "4BEE83954C4EFEDC"
+				item: { count: 1, id: "minecraft:redstone" }
+				type: "item"
+			}]
+			x: 8.0d
+			y: 1.06d
+		}
+		{
+			dependencies: ["2378788924E5D9A1"]
+			icon: {
+				id: "tfc_metallurgy:ore/certus_quartz"
+			}
+			id: "6B3CC16462333336"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				count: 4L
+				id: "7F430E1686F05D98"
+				item: { count: 1, id: "tfc_metallurgy:ore/certus_quartz" }
+				type: "item"
+			}]
+			x: 6.0d
+			y: 1.22d
+		}
+		{
+			dependencies: ["2255E4EC6DEC344B"]
+			icon: {
+				id: "tfc:powder/sulfur"
+			}
+			id: "7D974A2698EDED60"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				count: 4L
+				id: "5E03D070AEFA7692"
+				item: { count: 1, id: "tfc:powder/sulfur" }
+				type: "item"
+			}]
+			x: 10.0d
+			y: 2.01d
+		}
 		{
 			dependencies: ["5BDD335BAEB5D3CD"]
 			icon: {
@@ -106,8 +369,8 @@
 				item: { count: 1, id: "afc:tree_tap" }
 				type: "item"
 			}]
-			x: 2.0d
-			y: 0.0d
+			x: 8.0d
+			y: 5.14d
 		}
 		{
 			dependencies: ["774698339396FEBA"]
@@ -125,8 +388,8 @@
 				id: "17FA62813656D430"
 				type: "fluid"
 			}]
-			x: 4.0d
-			y: 0.0d
+			x: 10.0d
+			y: 5.53d
 		}
 		{
 			dependencies: [
@@ -146,8 +409,8 @@
 				item: { count: 1, id: "afc:rubber_bar" }
 				type: "item"
 			}]
-			x: 6.0d
-			y: 0.0d
+			x: 12.0d
+			y: 5.92d
 		}
 		{
 			dependencies: ["58AAD5A29308D38F"]
@@ -167,7 +430,7 @@
 				type: "item"
 			}]
 			x: 2.0d
-			y: 6.8d
+			y: 11.1d
 		}
 		{
 			dependencies: ["6133F6323A69B1B8"]
@@ -184,7 +447,7 @@
 				type: "item"
 			}]
 			x: 4.0d
-			y: 7.47d
+			y: 9.26d
 		}
 		{
 			dependencies: ["102CBB41B3D339C0"]
@@ -204,7 +467,7 @@
 				type: "item"
 			}]
 			x: 6.0d
-			y: 6.33d
+			y: 10.83d
 		}
 		{
 			dependencies: [
@@ -223,8 +486,8 @@
 				item: { count: 1, id: "tfc:lamp_glass" }
 				type: "item"
 			}]
-			x: 8.0d
-			y: 7.55d
+			x: 14.0d
+			y: 7.0d
 		}
 		{
 			dependencies: [
@@ -248,7 +511,7 @@
 				type: "item"
 			}]
 			x: 6.0d
-			y: 10.67d
+			y: 9.43d
 		}
 		{
 			dependencies: [
@@ -272,7 +535,7 @@
 				type: "item"
 			}]
 			x: 6.0d
-			y: 7.73d
+			y: 8.03d
 		}
 		{
 			dependencies: [
@@ -294,7 +557,7 @@
 				type: "item"
 			}]
 			x: 8.0d
-			y: 9.92d
+			y: 8.64d
 		}
 		{
 			dependencies: ["7DD2388332DA90E8"]
@@ -311,8 +574,8 @@
 				item: { count: 1, id: "firmalife:beeswax" }
 				type: "item"
 			}]
-			x: 2.0d
-			y: 2.52d
+			x: 8.0d
+			y: 3.74d
 		}
 		{
 			dependencies: [
@@ -332,8 +595,8 @@
 				item: { count: 1, id: "kubejs:certus_quartz_powder" }
 				type: "item"
 			}]
-			x: 2.0d
-			y: 3.92d
+			x: 8.0d
+			y: 2.46d
 		}
 		{
 			dependencies: [
@@ -356,8 +619,8 @@
 				item: { components: { "tfc:heat": { } }, count: 1, id: "kubejs:redstone_imbued_quartz_powder" }
 				type: "item"
 			}]
-			x: 4.0d
-			y: 6.03d
+			x: 10.0d
+			y: 4.13d
 		}
 		{
 			dependencies: [
@@ -376,8 +639,8 @@
 				item: { count: 1, id: "create:rose_quartz" }
 				type: "item"
 			}]
-			x: 6.0d
-			y: 4.93d
+			x: 12.0d
+			y: 4.52d
 		}
 		{
 			dependencies: ["57D953E18E81F5AC"]
@@ -393,8 +656,8 @@
 				item: { count: 1, id: "create:polished_rose_quartz" }
 				type: "item"
 			}]
-			x: 8.0d
-			y: 6.15d
+			x: 14.0d
+			y: 5.6d
 		}
 		{
 			dependencies: [
@@ -414,8 +677,8 @@
 				item: { count: 1, id: "create:electron_tube" }
 				type: "item"
 			}]
-			x: 10.0d
-			y: 6.85d
+			x: 16.0d
+			y: 6.3d
 		}
 		{
 			dependencies: ["03E67F66005810E1"]
@@ -432,8 +695,8 @@
 				item: { count: 1, id: "create:andesite_casing" }
 				type: "item"
 			}]
-			x: 15.2d
-			y: 2.52d
+			x: 18.0d
+			y: 1.56d
 		}
 		{
 			dependencies: ["58AAD5A29308D38F"]
@@ -450,7 +713,7 @@
 				type: "item"
 			}]
 			x: 2.0d
-			y: 5.32d
+			y: 6.27d
 		}
 		{
 			dependencies: [
@@ -469,8 +732,8 @@
 				item: { count: 1, id: "create:brass_casing" }
 				type: "item"
 			}]
-			x: 2.0d
-			y: 8.2d
+			x: 4.0d
+			y: 4.36d
 		}
 		{
 			dependencies: [
@@ -489,8 +752,8 @@
 				item: { count: 1, id: "create:brass_hand" }
 				type: "item"
 			}]
-			x: 2.0d
-			y: 11.7d
+			x: 4.0d
+			y: 7.86d
 		}
 		{
 			dependencies: [
@@ -510,7 +773,7 @@
 				type: "item"
 			}]
 			x: 2.0d
-			y: 13.1d
+			y: 12.5d
 		}
 	]
 }

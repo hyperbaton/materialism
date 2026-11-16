@@ -2,7 +2,7 @@
 	default_hide_dependency_lines: false
 	default_quest_shape: ""
 	filename: "rare_metals"
-	group: "160F5791078B9764"
+	group: "494F2A100505BD58"
 	icon: {
 		components: {
 			"tfc:heat": { }
@@ -11,23 +11,23 @@
 	}
 	id: "79B9234FD22BE021"
 	images: [ ]
-	order_index: 17
+	order_index: 5
 	quest_links: [
 		{
-			id: "7AA157B21ABA9A70"
-			linked_quest: "6454F90D417AA7DE"
+			id: "594BF98D9C4C3E72"
+			linked_quest: "641AD4D1666F216F"
 			shape: "circle"
 			size: 0.75d
 			x: 0.0d
-			y: 2.02d
+			y: 1.81d
 		}
 		{
-			id: "5AE417FE9AA247BC"
+			id: "55CED83D25C88178"
 			linked_quest: "4815FCA8115F74AF"
 			shape: "circle"
 			size: 0.75d
 			x: 0.0d
-			y: 4.96d
+			y: 4.65d
 		}
 		{
 			id: "5E0B7B75042AB77E"
@@ -35,23 +35,15 @@
 			shape: "circle"
 			size: 0.75d
 			x: 0.0d
-			y: 7.63d
+			y: 6.27d
 		}
 		{
-			id: "594BF98D9C4C3E72"
-			linked_quest: "641AD4D1666F216F"
+			id: "475FBAAFFF16E533"
+			linked_quest: "46D6404C0D514118"
 			shape: "circle"
 			size: 0.75d
-			x: 0.0d
-			y: 8.75d
-		}
-		{
-			id: "4BFA06955339EDAC"
-			linked_quest: "2E4797701C350AB6"
-			shape: "circle"
-			size: 0.75d
-			x: 4.0d
-			y: 5.16d
+			x: 2.0d
+			y: 11.48d
 		}
 		{
 			id: "78DFC5CF1F2AC982"
@@ -59,7 +51,23 @@
 			shape: "circle"
 			size: 0.75d
 			x: 4.0d
-			y: 7.68d
+			y: 5.73d
+		}
+		{
+			id: "7AA157B21ABA9A70"
+			linked_quest: "6454F90D417AA7DE"
+			shape: "circle"
+			size: 0.75d
+			x: 4.0d
+			y: 6.85d
+		}
+		{
+			id: "4BFA06955339EDAC"
+			linked_quest: "2E4797701C350AB6"
+			shape: "circle"
+			size: 0.75d
+			x: 4.0d
+			y: 9.37d
 		}
 		{
 			id: "34669374E2D4A321"
@@ -70,7 +78,7 @@
 			y: 0.0d
 		}
 		{
-			id: "0CCDAA99C1664ED5"
+			id: "4F38CCEFC7F3C91C"
 			linked_quest: "39A3BB2B390D4EAA"
 			shape: "circle"
 			size: 0.75d
@@ -85,34 +93,8 @@
 			x: 13.2d
 			y: 2.24d
 		}
-		{
-			id: "59A72629E9C5A978"
-			linked_quest: "6AAFDD1727916A4B"
-			shape: "circle"
-			size: 0.75d
-			x: 13.2d
-			y: 3.36d
-		}
 	]
 	quests: [
-		{
-			dependencies: ["6454F90D417AA7DE"]
-			icon: {
-				components: {
-					"tfc:heat": { }
-				}
-				id: "tfc_metallurgy:metal/dust/tungsten"
-			}
-			id: "53F9B5E99466F04C"
-			shape: "circle"
-			size: 1.5d
-			tasks: [{
-				id: "1D95CBBBA390CF7A"
-				type: "checkmark"
-			}]
-			x: 2.0d
-			y: 0.0d
-		}
 		{
 			dependencies: ["4815FCA8115F74AF"]
 			icon: {
@@ -129,7 +111,7 @@
 				type: "item"
 			}]
 			x: 2.0d
-			y: 4.51d
+			y: 2.11d
 		}
 		{
 			dependencies: [
@@ -153,7 +135,7 @@
 				type: "item"
 			}]
 			x: 4.0d
-			y: 6.42d
+			y: 0.83d
 		}
 		{
 			dependencies: ["3C63C4144D5CB055"]
@@ -171,7 +153,7 @@
 				type: "item"
 			}]
 			x: 6.0d
-			y: 4.5d
+			y: 0.0d
 		}
 		{
 			dependencies: ["059A7B28EBA26804"]
@@ -192,7 +174,7 @@
 				type: "item"
 			}]
 			x: 8.0d
-			y: 5.23d
+			y: 4.35d
 		}
 		{
 			dependencies: ["0EDC1DB04E8C8910"]
@@ -217,7 +199,7 @@
 				}
 			]
 			x: 10.0d
-			y: 5.3d
+			y: 1.18d
 		}
 		{
 			dependencies: ["35321E7E9226B41D"]
@@ -238,7 +220,7 @@
 				type: "item"
 			}]
 			x: 2.0d
-			y: 10.11d
+			y: 9.8d
 		}
 		{
 			dependencies: ["5918429AAEA60599"]
@@ -256,7 +238,7 @@
 				type: "item"
 			}]
 			x: 4.0d
-			y: 11.74d
+			y: 10.63d
 		}
 		{
 			dependencies: [
@@ -280,7 +262,7 @@
 				type: "item"
 			}]
 			x: 6.0d
-			y: 8.28d
+			y: 11.1d
 		}
 		{
 			dependencies: [
@@ -301,7 +283,7 @@
 				type: "item"
 			}]
 			x: 15.2d
-			y: 0.63d
+			y: 0.19d
 		}
 		{
 			dependencies: ["6A481E89873B8E92"]
@@ -322,7 +304,7 @@
 				type: "item"
 			}]
 			x: 17.2d
-			y: 0.7d
+			y: 0.4d
 		}
 		{
 			dependencies: [
@@ -343,7 +325,7 @@
 				type: "checkmark"
 			}]
 			x: 2.0d
-			y: 8.01d
+			y: 3.51d
 		}
 		{
 			dependencies: ["6107CEA9B00D4D81"]
@@ -364,7 +346,7 @@
 				type: "item"
 			}]
 			x: 4.0d
-			y: 10.34d
+			y: 2.23d
 		}
 		{
 			dependencies: ["641B5619DEB33E24"]
@@ -392,7 +374,7 @@
 				}
 			]
 			x: 6.0d
-			y: 12.48d
+			y: 1.4d
 		}
 		{
 			dependencies: [
@@ -414,7 +396,7 @@
 				type: "item"
 			}]
 			x: 4.0d
-			y: 8.94d
+			y: 4.33d
 		}
 		{
 			dependencies: ["7B2D7F8FCF6EC37B"]
@@ -436,7 +418,7 @@
 				type: "item"
 			}]
 			x: 6.0d
-			y: 9.68d
+			y: 2.8d
 		}
 		{
 			dependencies: ["7B2D7F8FCF6EC37B"]
@@ -458,7 +440,7 @@
 				type: "item"
 			}]
 			x: 6.0d
-			y: 11.08d
+			y: 4.2d
 		}
 		{
 			dependencies: ["4815FCA8115F74AF"]
@@ -476,7 +458,7 @@
 				type: "item"
 			}]
 			x: 2.0d
-			y: 1.4d
+			y: 7.01d
 		}
 		{
 			dependencies: [
@@ -497,7 +479,7 @@
 				type: "item"
 			}]
 			x: 4.0d
-			y: 3.34d
+			y: 8.11d
 		}
 		{
 			dependencies: [
@@ -523,7 +505,7 @@
 				type: "item"
 			}]
 			x: 6.0d
-			y: 3.1d
+			y: 9.1d
 		}
 		{
 			dependencies: ["23206F2F3C607C2C"]
@@ -541,7 +523,7 @@
 				type: "item"
 			}]
 			x: 6.0d
-			y: 6.88d
+			y: 5.6d
 		}
 		{
 			dependencies: [
@@ -568,7 +550,7 @@
 				type: "item"
 			}]
 			x: 8.0d
-			y: 6.63d
+			y: 6.31d
 		}
 		{
 			dependencies: [
@@ -596,7 +578,7 @@
 				type: "item"
 			}]
 			x: 15.2d
-			y: 2.03d
+			y: 1.59d
 		}
 		{
 			dependencies: ["1F62C2C534E37F80"]
@@ -616,8 +598,74 @@
 				item: { components: { "tfc:heat": { } }, count: 1, id: "tfc_metallurgy:metal/dust/niobium" }
 				type: "item"
 			}]
-			x: 0.0d
-			y: 15.0d
+			x: 2.0d
+			y: 12.74d
+		}
+		{
+			dependencies: [
+				"46D6404C0D514118"
+				"03131E1BAF18DAFE"
+			]
+			icon: {
+				components: {
+					"tfc:heat": { }
+				}
+				id: "tfc_metallurgy:metal/ingot/high_alloy_steel"
+			}
+			id: "11B304B8038C5F99"
+			shape: "circle"
+			size: 1.5d
+			tasks: [{
+				consume_items: false
+				id: "633C1F1B8ECC4F35"
+				item: { components: { "tfc:heat": { } }, count: 1, id: "tfc_metallurgy:metal/ingot/high_alloy_steel" }
+				type: "item"
+			}]
+			x: 4.0d
+			y: 14.04d
+		}
+		{
+			dependencies: ["11B304B8038C5F99"]
+			icon: {
+				components: {
+					"tfc:heat": { }
+				}
+				id: "tfc_metallurgy:metal/anvil/high_alloy_steel"
+			}
+			id: "650BF90AABDFA94B"
+			optional: true
+			shape: "circle"
+			size: 1.5d
+			tasks: [{
+				consume_items: false
+				id: "14F793EA044D632E"
+				item: { components: { "tfc:heat": { } }, count: 1, id: "tfc_metallurgy:metal/anvil/high_alloy_steel" }
+				type: "item"
+			}]
+			x: 6.0d
+			y: 13.92d
+		}
+		{
+			dependencies: [
+				"6454F90D417AA7DE"
+				"46D6404C0D514118"
+				"0EDC1DB04E8C8910"
+			]
+			icon: {
+				id: "chemica:tungsten_carbide_ingot"
+			}
+			id: "1A2C584AF007032C"
+			optional: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				id: "04E2AEB20C97602A"
+				item: { count: 1, id: "chemica:tungsten_carbide_ingot" }
+				type: "item"
+			}]
+			x: 10.0d
+			y: 4.68d
 		}
 	]
 }

@@ -2,7 +2,7 @@
 	default_hide_dependency_lines: false
 	default_quest_shape: ""
 	filename: "ore_processing"
-	group: "3E009514FEB829B8"
+	group: "494F2A100505BD58"
 	icon: {
 		components: {
 			"tfc:heat": { }
@@ -14,217 +14,146 @@
 	order_index: 3
 	quest_links: [
 		{
-			id: "55B187EEB18AC7F8"
-			linked_quest: "5F85A814E91061BD"
+			id: "018E10DCD1893C0D"
+			linked_quest: "3B8D69CA5AD743F7"
 			shape: "circle"
 			size: 0.75d
 			x: 0.0d
-			y: 1.81d
+			y: 0.0d
 		}
 		{
-			id: "025952E37A07499C"
-			linked_quest: "4FB55FBB394B9B83"
+			id: "7EF368BC21B22D8B"
+			linked_quest: "60796AD2EBB8D44C"
 			shape: "circle"
 			size: 0.75d
 			x: 0.0d
-			y: 2.93d
+			y: 4.56d
 		}
 		{
-			id: "78E90B663AD34273"
-			linked_quest: "35321E7E9226B41D"
+			id: "25B63E9D6C9ED73E"
+			linked_quest: "1ABE530C50337A82"
 			shape: "circle"
 			size: 0.75d
 			x: 0.0d
-			y: 7.56d
+			y: 5.68d
 		}
 		{
-			id: "672970D67073554A"
-			linked_quest: "252DCBC3CE3A5C33"
+			id: "313B0C83BBD5ED25"
+			linked_quest: "46C2BC8A81800930"
 			shape: "circle"
 			size: 0.75d
-			x: 2.0d
-			y: 3.24d
+			x: 5.2d
+			y: 4.56d
+		}
+		{
+			id: "3C07315977261F88"
+			linked_quest: "40BBECB889D17E7C"
+			shape: "circle"
+			size: 0.75d
+			x: 5.2d
+			y: 5.68d
 		}
 		{
 			id: "166FBFDF37B32030"
 			linked_quest: "0776ACF8377E0947"
 			shape: "circle"
 			size: 0.75d
-			x: 2.0d
-			y: 8.82d
+			x: 7.2d
+			y: 0.57d
 		}
 		{
-			id: "60382BEB0A660EA3"
-			linked_quest: "4B91793713601D5E"
+			id: "7AE37CEF354986B7"
+			linked_quest: "35321E7E9226B41D"
 			shape: "circle"
 			size: 0.75d
-			x: 4.0d
-			y: 0.0d
-		}
-		{
-			id: "79DB8EB5F0D4E70B"
-			linked_quest: "1ABE530C50337A82"
-			shape: "circle"
-			size: 0.75d
-			x: 4.0d
-			y: 2.52d
-		}
-		{
-			id: "67AAFF5E9A540016"
-			linked_quest: "40BBECB889D17E7C"
-			shape: "circle"
-			size: 0.75d
-			x: 4.0d
-			y: 5.04d
+			x: 7.2d
+			y: 2.04d
 		}
 		{
 			id: "42BC650D1904CA31"
 			linked_quest: "6454F90D417AA7DE"
 			shape: "circle"
 			size: 0.75d
-			x: 7.2d
-			y: 7.56d
-		}
-		{
-			id: "5F76883A8FAC8007"
-			linked_quest: "38AB6EF4A503435E"
-			shape: "circle"
-			size: 0.75d
-			x: 9.2d
+			x: 14.4d
 			y: 0.0d
 		}
 	]
 	quests: [
 		{
-			dependencies: ["5F85A814E91061BD"]
+			dependencies: ["3B8D69CA5AD743F7"]
 			icon: {
 				components: {
 					"tfc:heat": { }
 				}
-				id: "tfc:ore/normal_malachite"
+				id: "tfc:ore/rich_malachite"
 			}
-			id: "1B5759C0681CA301"
+			id: "23C031E751FDA2BE"
 			shape: "diamond"
 			size: 1.0d
 			tasks: [{
-				id: "275197AD276184B2"
+				id: "448284104EBBF03F"
 				type: "checkmark"
 			}]
 			x: 2.0d
-			y: 1.11d
-		}
-		{
-			dependencies: [
-				"1B5759C0681CA301"
-				"252DCBC3CE3A5C33"
-			]
-			icon: {
-				id: "tfc:ceramic/vessel"
-			}
-			id: "46C2BC8A81800930"
-			shape: "circle"
-			size: 1.0d
-			tasks: [{
-				id: "4F3D9F8EC77173C0"
-				type: "checkmark"
-			}]
-			x: 4.0d
-			y: 3.78d
-		}
-		{
-			dependencies: ["38AB6EF4A503435E"]
-			icon: {
-				id: "tfc:pan/empty"
-			}
-			id: "2E63BBAFCECB5507"
-			optional: true
-			shape: "circle"
-			size: 1.0d
-			tasks: [{
-				consume_items: false
-				id: "1DE6D5148AEA0AC7"
-				item: { count: 1, id: "tfc:pan/empty" }
-				type: "item"
-			}]
-			x: 11.2d
 			y: 0.0d
 		}
 		{
-			dependencies: [
-				"2E63BBAFCECB5507"
-				"54C843168E5E1157"
-			]
+			dependencies: ["23C031E751FDA2BE"]
 			icon: {
-				id: "tfc:wood/sluice/oak"
+				id: "kubejs:powder/bauxite"
 			}
-			id: "4B92F99B2934E581"
-			optional: true
+			id: "39A3BB2B390D4EAA"
 			shape: "circle"
 			size: 1.0d
 			tasks: [{
 				consume_items: false
-				id: "2E378BD2780E87B0"
-				item: { components: { "ftbfiltersystem:filter": "ftbfiltersystem:or(ftbfiltersystem:item(afc:wood/sluice/araucaria)ftbfiltersystem:item(afc:wood/sluice/baobab)ftbfiltersystem:item(afc:wood/sluice/beech)ftbfiltersystem:item(afc:wood/sluice/cypress)ftbfiltersystem:item(afc:wood/sluice/eucalyptus)ftbfiltersystem:item(afc:wood/sluice/fig)ftbfiltersystem:item(afc:wood/sluice/ginkgo)ftbfiltersystem:item(afc:wood/sluice/hevea)ftbfiltersystem:item(afc:wood/sluice/ipe)ftbfiltersystem:item(afc:wood/sluice/ironwood)ftbfiltersystem:item(afc:wood/sluice/mahoe)ftbfiltersystem:item(afc:wood/sluice/mahogany)ftbfiltersystem:item(afc:wood/sluice/teak)ftbfiltersystem:item(afc:wood/sluice/tualang)ftbfiltersystem:item(tfc:wood/sluice/acacia)ftbfiltersystem:item(tfc:wood/sluice/ash)ftbfiltersystem:item(tfc:wood/sluice/aspen)ftbfiltersystem:item(tfc:wood/sluice/birch)ftbfiltersystem:item(tfc:wood/sluice/blackwood)ftbfiltersystem:item(tfc:wood/sluice/chestnut)ftbfiltersystem:item(tfc:wood/sluice/douglas_fir)ftbfiltersystem:item(tfc:wood/sluice/hickory)ftbfiltersystem:item(tfc:wood/sluice/kapok)ftbfiltersystem:item(tfc:wood/sluice/mangrove)ftbfiltersystem:item(tfc:wood/sluice/maple)ftbfiltersystem:item(tfc:wood/sluice/oak)ftbfiltersystem:item(tfc:wood/sluice/palm)ftbfiltersystem:item(tfc:wood/sluice/pine)ftbfiltersystem:item(tfc:wood/sluice/rosewood)ftbfiltersystem:item(tfc:wood/sluice/sequoia)ftbfiltersystem:item(tfc:wood/sluice/spruce)ftbfiltersystem:item(tfc:wood/sluice/sycamore)ftbfiltersystem:item(tfc:wood/sluice/white_cedar)ftbfiltersystem:item(tfc:wood/sluice/willow))" }, count: 1, id: "ftbfiltersystem:smart_filter" }
-				type: "item"
-			}]
-			x: 13.2d
-			y: 0.0d
-		}
-		{
-			dependencies: [
-				"4FB55FBB394B9B83"
-				"1B5759C0681CA301"
-			]
-			icon: {
-				id: "tfc:powder/malachite"
-			}
-			id: "60796AD2EBB8D44C"
-			shape: "circle"
-			size: 1.0d
-			tasks: [{
-				consume_items: false
-				id: "2A484BD04D52DB3F"
-				item: { components: { "ftbfiltersystem:filter": "ftbfiltersystem:item_tag(materialism:powders/copper)" }, count: 1, id: "ftbfiltersystem:smart_filter" }
+				count: 8L
+				id: "3E1558FC88B71EF4"
+				item: { count: 1, id: "kubejs:powder/bauxite" }
 				type: "item"
 			}]
 			x: 4.0d
-			y: 1.26d
+			y: 0.0d
 		}
 		{
-			dependencies: ["4FB55FBB394B9B83"]
+			dependencies: ["0776ACF8377E0947"]
 			icon: {
-				id: "kubejs:metal/dust/copper"
+				components: {
+					"tfc:heat": { }
+				}
+				id: "tfc:ore/rich_malachite"
 			}
-			id: "3A705A92A7941AB4"
+			id: "4815FCA8115F74AF"
 			shape: "circle"
 			size: 1.0d
 			tasks: [{
-				consume_items: false
-				count: 20L
-				id: "6C090EFE35B97F31"
-				item: { count: 1, id: "kubejs:metal/dust/copper" }
-				type: "item"
+				fluid: {
+					amount: 1000
+					id: "chemica:caustic_soda"
+				}
+				id: "73A40C94CC91B199"
+				type: "fluid"
 			}]
-			x: 2.0d
-			y: 4.5d
+			x: 9.2d
+			y: 0.0d
 		}
 		{
-			dependencies: [
-				"60796AD2EBB8D44C"
-				"4B91793713601D5E"
-			]
+			dependencies: ["6454F90D417AA7DE"]
 			icon: {
-				id: "create:millstone"
+				components: {
+					"tfc:heat": { }
+				}
+				id: "tfc_metallurgy:metal/ingot/tungsten"
 			}
-			id: "62D12871E3E6D080"
+			id: "53F9B5E99466F04C"
 			shape: "circle"
-			size: 1.0d
+			size: 1.5d
 			tasks: [{
-				id: "29C59065BD65D8AD"
+				id: "1D95CBBBA390CF7A"
 				type: "checkmark"
 			}]
-			x: 6.0d
-			y: 0.56d
+			x: 16.4d
+			y: 0.0d
 		}
 		{
 			dependencies: [
@@ -243,23 +172,8 @@
 				item: { components: { "ftbfiltersystem:filter": "ftbfiltersystem:item_tag(materialism:powders/iron)" }, count: 1, id: "ftbfiltersystem:smart_filter" }
 				type: "item"
 			}]
-			x: 6.0d
-			y: 1.96d
-		}
-		{
-			dependencies: ["46DF7E78B2A425B1"]
-			icon: {
-				id: "vintageimprovements:helve_hammer"
-			}
-			id: "48D0D09E52E09347"
-			shape: "circle"
-			size: 1.0d
-			tasks: [{
-				id: "14364B3A03D8CA6C"
-				type: "checkmark"
-			}]
-			x: 16.4d
-			y: 0.0d
+			x: 2.0d
+			y: 5.12d
 		}
 		{
 			dependencies: [
@@ -276,8 +190,8 @@
 				id: "4BAFB2EAFC29F426"
 				type: "checkmark"
 			}]
-			x: 6.0d
-			y: 4.41d
+			x: 7.2d
+			y: 5.12d
 		}
 		{
 			dependencies: ["35321E7E9226B41D"]
@@ -294,8 +208,8 @@
 				item: { count: 1, id: "kubejs:metal/dust/copper" }
 				type: "item"
 			}]
-			x: 2.0d
-			y: 7.56d
+			x: 9.2d
+			y: 2.04d
 		}
 		{
 			dependencies: [
@@ -313,27 +227,8 @@
 				id: "0CC6328C4242AE09"
 				type: "checkmark"
 			}]
-			x: 4.0d
-			y: 8.19d
-		}
-		{
-			dependencies: ["6454F90D417AA7DE"]
-			icon: {
-				components: {
-					"tfc:heat": { }
-				}
-				id: "tfc_metallurgy:metal/ingot/tungsten"
-			}
-			id: "153D34E7840A527D"
-			optional: true
-			shape: "circle"
-			size: 1.0d
-			tasks: [{
-				id: "03DC07286F711421"
-				type: "checkmark"
-			}]
-			x: 9.2d
-			y: 7.56d
+			x: 11.2d
+			y: 1.39d
 		}
 	]
 }

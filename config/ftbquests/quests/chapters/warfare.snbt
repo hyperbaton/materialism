@@ -1,0 +1,252 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "warfare"
+	group: "494F2A100505BD58"
+	icon: {
+		id: "createbigcannons:solid_shot"
+	}
+	id: "3E452A52FF041A83"
+	images: [ ]
+	order_index: 16
+	quest_links: [
+		{
+			id: "79C9EF4983175700"
+			linked_quest: "40BBECB889D17E7C"
+			shape: "circle"
+			size: 0.75d
+			x: 0.0d
+			y: 2.45d
+		}
+		{
+			id: "50DB3F6662064440"
+			linked_quest: "5BDD335BAEB5D3CD"
+			shape: "circle"
+			size: 0.75d
+			x: 2.0d
+			y: 4.01d
+		}
+		{
+			id: "614E737D94D99709"
+			linked_quest: "6D88D10DAC055DBE"
+			shape: "circle"
+			size: 0.75d
+			x: 2.0d
+			y: 5.13d
+		}
+		{
+			id: "0318976ECED72FB0"
+			linked_quest: "1135582C6FA5A24D"
+			shape: "circle"
+			size: 0.75d
+			x: 2.0d
+			y: 6.25d
+		}
+		{
+			id: "3EF938741E0E12FC"
+			linked_quest: "1EB407D7875A2867"
+			shape: "circle"
+			size: 0.75d
+			x: 4.0d
+			y: 6.86d
+		}
+		{
+			id: "04B6A2ED801C7BEA"
+			linked_quest: "3B8D69CA5AD743F7"
+			shape: "circle"
+			size: 0.75d
+			x: 6.0d
+			y: 1.66d
+		}
+		{
+			id: "0EA1D4B9EA1D0505"
+			linked_quest: "745F1FEC5A1D24E3"
+			shape: "circle"
+			size: 0.75d
+			x: 6.0d
+			y: 4.18d
+		}
+	]
+	quests: [
+		{
+			dependencies: ["40BBECB889D17E7C"]
+			icon: {
+				id: "minecraft:gunpowder"
+			}
+			id: "37CEA14BE7D3526A"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				count: 4L
+				id: "124F983167938273"
+				item: { count: 1, id: "minecraft:gunpowder" }
+				type: "item"
+			}]
+			x: 2.0d
+			y: 2.45d
+		}
+		{
+			dependencies: ["37CEA14BE7D3526A"]
+			icon: {
+				id: "createbigcannons:log_cannon_chamber"
+			}
+			id: "51D87F70D9D08013"
+			optional: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				id: "370EDF6B50234AE0"
+				item: { count: 1, id: "createbigcannons:log_cannon_chamber" }
+				type: "item"
+			}]
+			x: 4.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["37CEA14BE7D3526A"]
+			icon: {
+				id: "createbigcannons:wrought_iron_cannon_chamber"
+			}
+			id: "42DB4A1836029847"
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{
+					consume_items: false
+					id: "5BA1251BED138751"
+					item: { count: 1, id: "createbigcannons:wrought_iron_cannon_chamber" }
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "33BD443B6943F1B3"
+					item: { count: 1, id: "createbigcannons:wrought_iron_cannon_end" }
+					type: "item"
+				}
+			]
+			x: 4.0d
+			y: 1.4d
+		}
+		{
+			dependencies: ["37CEA14BE7D3526A"]
+			icon: {
+				id: "createbigcannons:cannon_mount"
+			}
+			id: "209F29B8648E214E"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				id: "49525E24A289DBE7"
+				item: { count: 1, id: "createbigcannons:cannon_mount" }
+				type: "item"
+			}]
+			x: 4.0d
+			y: 2.8d
+		}
+		{
+			dependencies: [
+				"209F29B8648E214E"
+				"1EB407D7875A2867"
+			]
+			icon: {
+				id: "createbigcannons:cannon_loader"
+			}
+			id: "190FFBFB8EC8D63C"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				id: "5161E8FE35CB1506"
+				item: { count: 1, id: "createbigcannons:cannon_loader" }
+				type: "item"
+			}]
+			x: 6.0d
+			y: 5.44d
+		}
+		{
+			dependencies: ["5BDD335BAEB5D3CD"]
+			icon: {
+				id: "createbigcannons:solid_shot"
+			}
+			id: "5D9B7432C9CB57B0"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				count: 4L
+				id: "5FCDBCEFE00C410D"
+				item: { count: 1, id: "createbigcannons:solid_shot" }
+				type: "item"
+			}]
+			x: 4.0d
+			y: 4.2d
+		}
+		{
+			dependencies: [
+				"37CEA14BE7D3526A"
+				"1135582C6FA5A24D"
+				"6D88D10DAC055DBE"
+			]
+			icon: {
+				id: "createbigcannons:powder_charge"
+			}
+			id: "5B910B15EAE27CD6"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				count: 2L
+				id: "23A675001780BB26"
+				item: { count: 1, id: "createbigcannons:powder_charge" }
+				type: "item"
+			}]
+			x: 4.0d
+			y: 5.6d
+		}
+		{
+			dependencies: [
+				"42DB4A1836029847"
+				"209F29B8648E214E"
+				"5D9B7432C9CB57B0"
+				"5B910B15EAE27CD6"
+			]
+			icon: {
+				id: "createbigcannons:solid_shot"
+			}
+			id: "0A8A10945B36FB76"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				id: "29102ADD435F8407"
+				type: "checkmark"
+			}]
+			x: 6.0d
+			y: 2.92d
+		}
+		{
+			dependencies: [
+				"0A8A10945B36FB76"
+				"3B8D69CA5AD743F7"
+				"745F1FEC5A1D24E3"
+			]
+			icon: {
+				id: "createbigcannons:he_shell"
+			}
+			id: "4CD8C5DE84C60811"
+			optional: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				id: "2CAF4649B280010F"
+				item: { count: 1, id: "createbigcannons:he_shell" }
+				type: "item"
+			}]
+			x: 8.0d
+			y: 3.08d
+		}
+	]
+}

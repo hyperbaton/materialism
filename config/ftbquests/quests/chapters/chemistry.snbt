@@ -2,61 +2,45 @@
 	default_hide_dependency_lines: false
 	default_quest_shape: ""
 	filename: "chemistry"
-	group: "160F5791078B9764"
+	group: "494F2A100505BD58"
 	icon: {
 		id: "vintageimprovements:vanadium_nugget"
 	}
 	id: "6CEAC98F667A3FC6"
 	images: [ ]
-	order_index: 15
+	order_index: 7
 	quest_links: [
 		{
-			id: "21AF9ECE2373DCBB"
+			id: "72B27B5F132AE57A"
 			linked_quest: "2C7C08507123B176"
 			shape: "circle"
 			size: 0.75d
 			x: 0.0d
-			y: 0.54d
+			y: 0.75d
 		}
 		{
-			id: "34516352C035FA18"
+			id: "1BA2D86BB5FDBCEA"
 			linked_quest: "1ABE530C50337A82"
 			shape: "circle"
 			size: 0.75d
 			x: 0.0d
-			y: 1.66d
+			y: 2.01d
 		}
 		{
-			id: "35074FB0982F08C2"
-			linked_quest: "7B963D4BBA91BB73"
-			shape: "circle"
-			size: 0.75d
-			x: 0.0d
-			y: 2.78d
-		}
-		{
-			id: "5956E330C3F7A89C"
-			linked_quest: "7A6BBCEA7E68939E"
-			shape: "circle"
-			size: 0.75d
-			x: 0.0d
-			y: 3.9d
-		}
-		{
-			id: "79AD5753BFCA0FE0"
+			id: "3B748CD3D83CEDBD"
 			linked_quest: "59FBE9A5C43A55DB"
 			shape: "circle"
 			size: 0.75d
 			x: 0.0d
-			y: 5.02d
+			y: 4.21d
 		}
 		{
-			id: "2380FBAAB878875F"
+			id: "1132F407CAD35709"
 			linked_quest: "35321E7E9226B41D"
 			shape: "circle"
 			size: 0.75d
 			x: 0.0d
-			y: 6.14d
+			y: 5.33d
 		}
 		{
 			id: "58D90DEECE01857D"
@@ -64,31 +48,47 @@
 			shape: "circle"
 			size: 0.75d
 			x: 0.0d
-			y: 7.26d
+			y: 6.45d
 		}
 		{
-			id: "13F1C6CCC47D6682"
-			linked_quest: "64F19E8C6AFC764F"
+			id: "762DE39712BBC9BD"
+			linked_quest: "40BBECB889D17E7C"
 			shape: "circle"
 			size: 0.75d
 			x: 0.0d
-			y: 8.38d
+			y: 7.57d
 		}
 		{
-			id: "52DD61BF48865A05"
-			linked_quest: "550D082F2FB29D86"
+			id: "1103754D45873374"
+			linked_quest: "1135582C6FA5A24D"
 			shape: "circle"
 			size: 0.75d
 			x: 0.0d
-			y: 9.5d
+			y: 8.69d
 		}
 		{
-			id: "61757059640D5C91"
+			id: "6136DB6590808885"
 			linked_quest: "2CAE3289B617F9A7"
 			shape: "circle"
 			size: 0.75d
 			x: 2.0d
-			y: 3.21d
+			y: 2.5d
+		}
+		{
+			id: "31FD7FFAE8D3C1A8"
+			linked_quest: "3320714C9C1C23A1"
+			shape: "circle"
+			size: 0.75d
+			x: 2.0d
+			y: 8.66d
+		}
+		{
+			id: "1F3135F20A315C74"
+			linked_quest: "02AA0240CEB7F737"
+			shape: "circle"
+			size: 0.75d
+			x: 12.0d
+			y: 5.67d
 		}
 	]
 	quests: [
@@ -113,7 +113,7 @@
 				type: "item"
 			}]
 			x: 2.0d
-			y: 1.95d
+			y: 1.24d
 		}
 		{
 			dependencies: [
@@ -134,7 +134,7 @@
 				type: "item"
 			}]
 			x: 4.0d
-			y: 3.08d
+			y: 2.46d
 		}
 		{
 			dependencies: [
@@ -152,7 +152,7 @@
 				type: "checkmark"
 			}]
 			x: 4.0d
-			y: 4.48d
+			y: 3.86d
 		}
 		{
 			dependencies: [
@@ -170,7 +170,7 @@
 				type: "checkmark"
 			}]
 			x: 6.0d
-			y: 3.69d
+			y: 3.07d
 		}
 		{
 			dependencies: ["72FA8D26A907117F"]
@@ -189,7 +189,7 @@
 				type: "fluid"
 			}]
 			x: 8.0d
-			y: 3.69d
+			y: 3.07d
 		}
 		{
 			dependencies: ["3B8D69CA5AD743F7"]
@@ -206,7 +206,7 @@
 				type: "item"
 			}]
 			x: 10.0d
-			y: 4.38d
+			y: 3.59d
 		}
 		{
 			dependencies: ["267282D570010FB1"]
@@ -223,7 +223,7 @@
 				type: "item"
 			}]
 			x: 12.0d
-			y: 2.41d
+			y: 1.85d
 		}
 		{
 			dependencies: ["2C7C08507123B176"]
@@ -241,7 +241,7 @@
 				type: "item"
 			}]
 			x: 8.0d
-			y: 2.29d
+			y: 1.67d
 		}
 		{
 			dependencies: ["2C7C08507123B176"]
@@ -280,7 +280,7 @@
 				type: "fluid"
 			}]
 			x: 2.0d
-			y: 6.71d
+			y: 6.0d
 		}
 		{
 			dependencies: ["23206F2F3C607C2C"]
@@ -300,7 +300,7 @@
 				type: "fluid"
 			}]
 			x: 4.0d
-			y: 6.81d
+			y: 6.43d
 		}
 		{
 			dependencies: [
@@ -322,7 +322,7 @@
 				type: "fluid"
 			}]
 			x: 12.0d
-			y: 5.21d
+			y: 4.41d
 		}
 		{
 			dependencies: [
@@ -343,7 +343,7 @@
 				type: "item"
 			}]
 			x: 14.0d
-			y: 5.21d
+			y: 5.04d
 		}
 		{
 			dependencies: [
@@ -365,7 +365,7 @@
 				type: "fluid"
 			}]
 			x: 4.0d
-			y: 8.21d
+			y: 7.83d
 		}
 		{
 			dependencies: [
@@ -387,7 +387,7 @@
 				type: "fluid"
 			}]
 			x: 10.0d
-			y: 2.41d
+			y: 1.85d
 		}
 		{
 			dependencies: [
@@ -408,7 +408,7 @@
 				type: "checkmark"
 			}]
 			x: 2.0d
-			y: 8.11d
+			y: 7.4d
 		}
 	]
 }

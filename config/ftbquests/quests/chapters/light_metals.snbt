@@ -2,148 +2,96 @@
 	default_hide_dependency_lines: false
 	default_quest_shape: ""
 	filename: "light_metals"
-	group: "160F5791078B9764"
+	group: "494F2A100505BD58"
 	icon: {
 		id: "kubejs:powder/alumina"
 	}
 	id: "6CCAAADA618A6D71"
 	images: [ ]
-	order_index: 16
+	order_index: 4
 	quest_links: [
 		{
-			id: "513ED58B79484BD9"
-			linked_quest: "3B8D69CA5AD743F7"
+			id: "56B01F229C730C24"
+			linked_quest: "10B98D1834C794B2"
 			shape: "circle"
 			size: 0.75d
 			x: 0.0d
-			y: 5.27d
+			y: 2.43d
 		}
 		{
 			id: "25AF8677FE249DF6"
 			linked_quest: "0776ACF8377E0947"
 			shape: "circle"
 			size: 0.75d
-			x: 6.0d
-			y: 2.71d
-		}
-		{
-			id: "56B01F229C730C24"
-			linked_quest: "10B98D1834C794B2"
-			shape: "circle"
-			size: 0.75d
-			x: 6.0d
-			y: 4.01d
+			x: 0.0d
+			y: 4.24d
 		}
 		{
 			id: "06ACD27E00090450"
 			linked_quest: "23206F2F3C607C2C"
 			shape: "circle"
 			size: 0.75d
-			x: 8.0d
-			y: 5.92d
+			x: 2.0d
+			y: 6.2d
 		}
 		{
-			id: "6916EA06875D2A0B"
+			id: "68065C4ABA5AEAFE"
 			linked_quest: "35321E7E9226B41D"
 			shape: "circle"
 			size: 0.75d
-			x: 8.0d
-			y: 8.44d
+			x: 2.0d
+			y: 8.72d
+		}
+		{
+			id: "3973498711B1CADD"
+			linked_quest: "4815FCA8115F74AF"
+			shape: "circle"
+			size: 0.75d
+			x: 4.0d
+			y: 1.57d
 		}
 		{
 			id: "2145FC4D14521A0C"
 			linked_quest: "641AD4D1666F216F"
 			shape: "circle"
 			size: 0.75d
-			x: 10.0d
-			y: 9.38d
+			x: 4.0d
+			y: 9.89d
 		}
 		{
-			id: "7B49E038828209B8"
+			id: "247FE187F9331537"
 			linked_quest: "3854FCA028E7DA86"
 			shape: "circle"
 			size: 0.75d
-			x: 12.0d
-			y: 0.46d
-		}
-		{
-			id: "10209D7FD2804BDB"
-			linked_quest: "2255E4EC6DEC344B"
-			shape: "circle"
-			size: 0.75d
-			x: 14.0d
+			x: 6.0d
 			y: 0.16d
 		}
 		{
-			id: "2908AE4783AD0122"
+			id: "6483A09A94C84586"
+			linked_quest: "2255E4EC6DEC344B"
+			shape: "circle"
+			size: 0.75d
+			x: 8.0d
+			y: 1.55d
+		}
+		{
+			id: "6CE38286BB9DD7E8"
 			linked_quest: "53F9B5E99466F04C"
 			shape: "circle"
 			size: 0.75d
-			x: 14.0d
-			y: 6.32d
+			x: 8.0d
+			y: 5.8d
 		}
 		{
 			id: "2948AB677058A0B5"
 			linked_quest: "6454F90D417AA7DE"
 			shape: "circle"
 			size: 0.75d
-			x: 16.0d
+			x: 10.0d
 			y: 3.22d
 		}
 	]
 	quests: [
-		{
-			dependencies: ["3B8D69CA5AD743F7"]
-			icon: {
-				id: "kubejs:powder/alumina"
-			}
-			id: "23C031E751FDA2BE"
-			shape: "diamond"
-			size: 1.0d
-			tasks: [{
-				id: "448284104EBBF03F"
-				type: "checkmark"
-			}]
-			x: 2.0d
-			y: 5.27d
-		}
-		{
-			dependencies: ["23C031E751FDA2BE"]
-			icon: {
-				id: "kubejs:powder/bauxite"
-			}
-			id: "39A3BB2B390D4EAA"
-			shape: "circle"
-			size: 1.0d
-			tasks: [{
-				consume_items: false
-				count: 8L
-				id: "3E1558FC88B71EF4"
-				item: { count: 1, id: "kubejs:powder/bauxite" }
-				type: "item"
-			}]
-			x: 4.0d
-			y: 5.27d
-		}
-		{
-			dependencies: ["0776ACF8377E0947"]
-			icon: {
-				id: "kubejs:powder/alumina"
-			}
-			id: "4815FCA8115F74AF"
-			shape: "circle"
-			size: 1.0d
-			tasks: [{
-				fluid: {
-					amount: 1000
-					id: "chemica:caustic_soda"
-				}
-				id: "73A40C94CC91B199"
-				type: "fluid"
-			}]
-			x: 10.0d
-			y: 1.72d
-		}
 		{
 			dependencies: [
 				"4815FCA8115F74AF"
@@ -159,8 +107,8 @@
 				id: "343850CE75902F24"
 				type: "checkmark"
 			}]
-			x: 12.0d
-			y: 1.72d
+			x: 6.0d
+			y: 1.42d
 		}
 		{
 			dependencies: [
@@ -183,8 +131,8 @@
 				item: { components: { "tfc:heat": { } }, count: 1, id: "kubejs:powder/aluminum_hydroxide" }
 				type: "item"
 			}]
-			x: 14.0d
-			y: 1.56d
+			x: 8.0d
+			y: 0.29d
 		}
 		{
 			dependencies: ["6B87F51D19F89C36"]
@@ -201,8 +149,8 @@
 				item: { count: 1, id: "kubejs:powder/alumina" }
 				type: "item"
 			}]
-			x: 16.0d
-			y: 1.4d
+			x: 10.0d
+			y: 0.0d
 		}
 		{
 			dependencies: ["2255E4EC6DEC344B"]
@@ -218,8 +166,8 @@
 				item: { count: 1, id: "tfc:ore/cryolite" }
 				type: "item"
 			}]
-			x: 16.0d
-			y: 0.0d
+			x: 10.0d
+			y: 1.4d
 		}
 		{
 			dependencies: [
@@ -238,8 +186,8 @@
 				id: "085E507845AC3C66"
 				type: "checkmark"
 			}]
-			x: 18.0d
-			y: 2.05d
+			x: 12.0d
+			y: 2.37d
 		}
 		{
 			dependencies: ["39A3BB2B390D4EAA"]
@@ -256,8 +204,8 @@
 				item: { count: 1, id: "chemica:rutile_dust" }
 				type: "item"
 			}]
-			x: 6.0d
-			y: 5.27d
+			x: 0.0d
+			y: 6.2d
 		}
 		{
 			dependencies: [
@@ -278,8 +226,8 @@
 				id: "0BB3BF059332A2EB"
 				type: "fluid"
 			}]
-			x: 8.0d
-			y: 2.7d
+			x: 2.0d
+			y: 4.94d
 		}
 		{
 			dependencies: [
@@ -307,8 +255,8 @@
 					type: "item"
 				}
 			]
-			x: 8.0d
-			y: 4.66d
+			x: 2.0d
+			y: 3.54d
 		}
 		{
 			dependencies: [
@@ -328,8 +276,8 @@
 				item: { count: 1, id: "kubejs:crude_titanium_sponge" }
 				type: "item"
 			}]
-			x: 10.0d
-			y: 4.34d
+			x: 4.0d
+			y: 4.04d
 		}
 		{
 			dependencies: ["5F182F730599A93F"]
@@ -346,8 +294,8 @@
 				item: { count: 1, id: "kubejs:titanium_sponge" }
 				type: "item"
 			}]
-			x: 12.0d
-			y: 5.41d
+			x: 6.0d
+			y: 3.71d
 		}
 		{
 			dependencies: ["00244F00EDCE135B"]
@@ -363,8 +311,8 @@
 				item: { count: 1, id: "kubejs:titanium_electrode" }
 				type: "item"
 			}]
-			x: 14.0d
-			y: 5.06d
+			x: 8.0d
+			y: 4.54d
 		}
 		{
 			dependencies: [
@@ -381,8 +329,8 @@
 				id: "337F0DE65A227E4E"
 				type: "checkmark"
 			}]
-			x: 16.0d
-			y: 5.78d
+			x: 10.0d
+			y: 4.96d
 		}
 		{
 			dependencies: ["6300E546FCD8A0DA"]
@@ -399,8 +347,8 @@
 				item: { count: 1, id: "kubejs:powder/beta_spodumene" }
 				type: "item"
 			}]
-			x: 8.0d
-			y: 7.18d
+			x: 2.0d
+			y: 7.46d
 		}
 		{
 			dependencies: [
@@ -420,8 +368,8 @@
 				item: { count: 1, id: "kubejs:powder/lithium_carbonate" }
 				type: "item"
 			}]
-			x: 10.0d
-			y: 8.12d
+			x: 4.0d
+			y: 8.63d
 		}
 		{
 			dependencies: [
@@ -443,8 +391,8 @@
 				item: { components: { "tfc:heat": { } }, count: 1, id: "tfc_metallurgy:metal/ingot/lithium" }
 				type: "item"
 			}]
-			x: 12.0d
-			y: 8.34d
+			x: 6.0d
+			y: 9.26d
 		}
 		{
 			dependencies: [
@@ -464,8 +412,8 @@
 				item: { count: 1, id: "kubejs:powder/beryllium_fluoride" }
 				type: "item"
 			}]
-			x: 10.0d
-			y: 6.72d
+			x: 4.0d
+			y: 6.09d
 		}
 		{
 			dependencies: [
@@ -488,8 +436,8 @@
 				item: { components: { "tfc:heat": { } }, count: 1, id: "tfc_metallurgy:metal/dust/beryllium" }
 				type: "item"
 			}]
-			x: 12.0d
-			y: 6.81d
+			x: 6.0d
+			y: 6.51d
 		}
 		{
 			dependencies: ["5F182F730599A93F"]
@@ -510,8 +458,8 @@
 				item: { components: { "tfc:heat": { } }, count: 1, id: "kubejs:zirconium_sponge" }
 				type: "item"
 			}]
-			x: 12.0d
-			y: 4.01d
+			x: 6.0d
+			y: 5.11d
 		}
 	]
 }

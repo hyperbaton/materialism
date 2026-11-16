@@ -1,137 +1,97 @@
 {
 	default_hide_dependency_lines: false
 	default_quest_shape: ""
-	filename: "heavy_industry"
-	group: "160F5791078B9764"
+	filename: "oil_heavy_industry"
+	group: "494F2A100505BD58"
 	icon: {
 		id: "tfmg:heavy_machinery_casing"
 	}
-	id: "5BE254B4D7C4C250"
+	id: "349B3624F5718ADC"
 	images: [ ]
-	order_index: 13
+	order_index: 6
 	quest_links: [
 		{
-			id: "0DE8672A2923955D"
-			linked_quest: "40BBECB889D17E7C"
-			shape: "circle"
-			size: 0.75d
-			x: 0.0d
-			y: 0.0d
-		}
-		{
-			id: "7CB9918AEE652564"
-			linked_quest: "616ADBE255F42706"
-			shape: "circle"
-			size: 0.75d
-			x: 2.0d
-			y: 1.26d
-		}
-		{
-			id: "2D8CFC77AA490EEA"
-			linked_quest: "71496D3549A1D7AC"
-			shape: "circle"
-			size: 0.75d
-			x: 2.0d
-			y: 2.38d
-		}
-		{
-			id: "6F9B6FC7ECF107AC"
-			linked_quest: "51CDAFC46C4A47E2"
-			shape: "circle"
-			size: 0.75d
-			x: 7.2d
-			y: 1.09d
-		}
-		{
-			id: "20DD3CD1214883E6"
+			id: "2309AEE1E677BB9F"
 			linked_quest: "514EEC713C07EA62"
 			shape: "circle"
 			size: 0.75d
-			x: 7.2d
-			y: 3.89d
+			x: 0.0d
+			y: 1.28d
 		}
 		{
-			id: "29CCA4E3BA497171"
+			id: "39F74EFA9BD12812"
+			linked_quest: "3EA940C332457480"
+			shape: "circle"
+			size: 0.75d
+			x: 0.0d
+			y: 2.4d
+		}
+		{
+			id: "4E02BB205471480E"
 			linked_quest: "1BF311FC4E3ADA0C"
 			shape: "circle"
 			size: 0.75d
-			x: 7.2d
-			y: 5.29d
+			x: 0.0d
+			y: 4.17d
 		}
 		{
-			id: "0B4F8387ECFC81A0"
-			linked_quest: "1135582C6FA5A24D"
-			shape: "circle"
-			size: 0.75d
-			x: 7.2d
-			y: 6.69d
-		}
-		{
-			id: "37E68F9174D4CD88"
+			id: "1C33141B99C8F22D"
 			linked_quest: "701590A8BA95915A"
 			shape: "circle"
 			size: 0.75d
-			x: 7.2d
-			y: 8.93d
+			x: 0.0d
+			y: 7.67d
 		}
 		{
-			id: "61AD63D2EB7AEC06"
+			id: "74783A9D1213E0EB"
+			linked_quest: "0958E36B093621BD"
+			shape: "circle"
+			size: 0.75d
+			x: 2.0d
+			y: 2.66d
+		}
+		{
+			id: "12C51673D6A430A3"
+			linked_quest: "657B235B5495B18A"
+			shape: "circle"
+			size: 0.75d
+			x: 4.0d
+			y: 3.86d
+		}
+		{
+			id: "72E7345DAD7FB844"
 			linked_quest: "1002FC2978C93276"
 			shape: "circle"
 			size: 0.75d
-			x: 11.2d
-			y: 5.49d
+			x: 4.0d
+			y: 6.38d
 		}
 		{
-			id: "5692FA3B40413AD0"
+			id: "68C906D2AF19A54B"
 			linked_quest: "2FC83F769A9EED07"
 			shape: "circle"
 			size: 0.75d
-			x: 11.2d
-			y: 6.61d
+			x: 4.0d
+			y: 8.18d
 		}
-	]
-	quests: [
 		{
-			dependencies: ["40BBECB889D17E7C"]
-			icon: {
-				id: "tfmg:lubrication_oil_bucket"
-			}
-			id: "589AB7F4A0F1AB1E"
+			id: "249F931CC1BB0EEC"
+			linked_quest: "6133F6323A69B1B8"
 			shape: "circle"
-			size: 1.0d
-			tasks: [{
-				fluid: {
-					amount: 1000
-					id: "tfmg:lubrication_oil"
-				}
-				id: "028D177CC8509C18"
-				type: "fluid"
-			}]
-			x: 2.0d
+			size: 0.75d
+			x: 12.4d
 			y: 0.0d
 		}
 		{
-			dependencies: [
-				"589AB7F4A0F1AB1E"
-				"616ADBE255F42706"
-				"71496D3549A1D7AC"
-			]
-			icon: {
-				id: "create:steam_engine"
-			}
-			id: "6E92565AE4D3D360"
+			id: "01E012C5843E81C3"
+			linked_quest: "3C028FF67824DC74"
 			shape: "circle"
-			size: 1.0d
-			tasks: [{
-				consume_items: false
-				id: "4631824306DD2DCA"
-				item: { count: 1, id: "create:steam_engine" }
-				type: "item"
-			}]
-			x: 4.0d
-			y: 1.21d
+			size: 0.75d
+			x: 12.4d
+			y: 1.12d
 		}
+	]
+	quests: [
 		{
 			dependencies: ["514EEC713C07EA62"]
 			icon: {
@@ -147,8 +107,8 @@
 				item: { count: 1, id: "tfmg:steel_casing" }
 				type: "item"
 			}]
-			x: 9.2d
-			y: 1.4d
+			x: 2.0d
+			y: 0.0d
 		}
 		{
 			dependencies: ["51CDAFC46C4A47E2"]
@@ -165,8 +125,8 @@
 				item: { count: 1, id: "tfmg:heavy_machinery_casing" }
 				type: "item"
 			}]
-			x: 9.2d
-			y: 0.0d
+			x: 2.0d
+			y: 6.37d
 		}
 		{
 			dependencies: [
@@ -187,8 +147,8 @@
 				item: { count: 1, id: "tfmg:steel_mechanism" }
 				type: "item"
 			}]
-			x: 9.2d
-			y: 4.2d
+			x: 2.0d
+			y: 3.92d
 		}
 		{
 			dependencies: [
@@ -207,8 +167,8 @@
 				item: { count: 1, id: "tfmg:coke_oven" }
 				type: "item"
 			}]
-			x: 9.2d
-			y: 5.6d
+			x: 2.0d
+			y: 9.84d
 		}
 		{
 			dependencies: ["62C5F6FAA65E856C"]
@@ -225,8 +185,8 @@
 				item: { count: 1, id: "tfmg:coal_coke" }
 				type: "item"
 			}]
-			x: 11.2d
-			y: 7.87d
+			x: 4.0d
+			y: 10.47d
 		}
 		{
 			dependencies: ["701590A8BA95915A"]
@@ -242,8 +202,8 @@
 				item: { count: 1, id: "tfmg:casting_basin" }
 				type: "item"
 			}]
-			x: 9.2d
-			y: 7.91d
+			x: 2.0d
+			y: 7.77d
 		}
 		{
 			dependencies: [
@@ -262,8 +222,8 @@
 				item: { count: 1, id: "tfmg:blast_furnace_output" }
 				type: "item"
 			}]
-			x: 13.2d
-			y: 8.82d
+			x: 6.0d
+			y: 9.56d
 		}
 		{
 			dependencies: [
@@ -282,8 +242,8 @@
 				item: { count: 1, id: "tfmg:steel_fluid_tank" }
 				type: "item"
 			}]
-			x: 9.2d
-			y: 2.8d
+			x: 2.0d
+			y: 1.4d
 		}
 		{
 			dependencies: ["03513A18C0940CEF"]
@@ -299,7 +259,7 @@
 				item: { count: 1, id: "tfmg:steel_chemical_vat" }
 				type: "item"
 			}]
-			x: 16.4d
+			x: 9.2d
 			y: 0.0d
 		}
 		{
@@ -320,8 +280,8 @@
 				item: { count: 1, id: "materialismcore:fluid_scanner" }
 				type: "item"
 			}]
-			x: 0.0d
-			y: 11.45d
+			x: 14.4d
+			y: 0.56d
 		}
 		{
 			dependencies: [
@@ -340,8 +300,8 @@
 				item: { count: 1, id: "tfmg:steel_distillation_controller" }
 				type: "item"
 			}]
-			x: 11.2d
-			y: 1.7d
+			x: 4.0d
+			y: 5.12d
 		}
 		{
 			dependencies: [
@@ -363,8 +323,8 @@
 				item: { count: 1, id: "tfmg:pumpjack_base" }
 				type: "item"
 			}]
-			x: 11.2d
-			y: 4.23d
+			x: 4.0d
+			y: 1.79d
 		}
 		{
 			dependencies: ["61B598AA5C61FDA9"]
@@ -382,8 +342,8 @@
 				id: "05B8F4D94A5E8DBA"
 				type: "fluid"
 			}]
-			x: 13.2d
-			y: 3.96d
+			x: 6.0d
+			y: 2.73d
 		}
 		{
 			dependencies: [
@@ -412,8 +372,31 @@
 					type: "item"
 				}
 			]
-			x: 13.2d
-			y: 5.36d
+			x: 6.0d
+			y: 7.63d
+		}
+		{
+			dependencies: [
+				"657B235B5495B18A"
+				"550D082F2FB29D86"
+				"7A6BBCEA7E68939E"
+				"17CDBF0D999225B4"
+			]
+			icon: {
+				id: "tfmg:firebox"
+			}
+			id: "67F6A4835CC04099"
+			optional: true
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				id: "490613A01FE20EEE"
+				item: { count: 1, id: "tfmg:firebox" }
+				type: "item"
+			}]
+			x: 6.0d
+			y: 4.13d
 		}
 	]
 }

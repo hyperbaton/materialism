@@ -1,14 +1,14 @@
 {
 	default_hide_dependency_lines: false
 	default_quest_shape: ""
-	filename: "the_grid"
-	group: "160F5791078B9764"
+	filename: "power_grid"
+	group: "494F2A100505BD58"
 	icon: {
 		id: "electroenergetics:transformer"
 	}
 	id: "140DECE8B8D1EB61"
 	images: [ ]
-	order_index: 19
+	order_index: 10
 	quest_links: [
 		{
 			id: "7A6569E902146F8B"
@@ -16,31 +16,23 @@
 			shape: "circle"
 			size: 0.75d
 			x: 0.0d
-			y: 4.33d
+			y: 4.89d
 		}
 		{
-			id: "2F6AA810EB24E142"
-			linked_quest: "520876E156CDA0F2"
-			shape: "circle"
-			size: 0.75d
-			x: 0.0d
-			y: 5.45d
-		}
-		{
-			id: "75DF18C8215BA162"
+			id: "654B7C8CD62E0002"
 			linked_quest: "745F1FEC5A1D24E3"
 			shape: "circle"
 			size: 0.75d
 			x: 0.0d
-			y: 8.6d
+			y: 8.39d
 		}
 		{
-			id: "084DC62A96C1218C"
+			id: "5D4576882587A093"
 			linked_quest: "2FC83F769A9EED07"
 			shape: "circle"
 			size: 0.75d
 			x: 0.0d
-			y: 9.94d
+			y: 9.73d
 		}
 		{
 			id: "0FBA9E6AC523227B"
@@ -48,7 +40,7 @@
 			shape: "circle"
 			size: 0.75d
 			x: 0.0d
-			y: 13.44d
+			y: 13.23d
 		}
 		{
 			id: "1B965922F0AA4D60"
@@ -59,12 +51,20 @@
 			y: 6.82d
 		}
 		{
-			id: "0CB74B79A722749B"
+			id: "5AF161597176BD60"
 			linked_quest: "0FF60097DEFBF7E1"
 			shape: "circle"
 			size: 0.75d
 			x: 2.0d
 			y: 7.94d
+		}
+		{
+			id: "7EF4C127E3D6593D"
+			linked_quest: "3A705A92A7941AB4"
+			shape: "circle"
+			size: 0.75d
+			x: 2.0d
+			y: 15.83d
 		}
 		{
 			id: "251F68A7853C163C"
@@ -75,7 +75,7 @@
 			y: 2.66d
 		}
 		{
-			id: "7A788EB740D6BA41"
+			id: "4DEFAD92380E7E9B"
 			linked_quest: "550D082F2FB29D86"
 			shape: "circle"
 			size: 0.75d
@@ -403,7 +403,7 @@
 				type: "fluid"
 			}]
 			x: 2.0d
-			y: 11.03d
+			y: 11.32d
 		}
 		{
 			dependencies: [
@@ -504,7 +504,7 @@
 				type: "item"
 			}]
 			x: 2.0d
-			y: 14.53d
+			y: 14.57d
 		}
 		{
 			dependencies: [
@@ -528,7 +528,7 @@
 				type: "item"
 			}]
 			x: 4.0d
-			y: 14.08d
+			y: 14.66d
 		}
 		{
 			dependencies: [

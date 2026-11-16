@@ -1,0 +1,165 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "advanced_tech"
+	group: "494F2A100505BD58"
+	icon: {
+		id: "vintageimprovements:lathe"
+	}
+	id: "2AA7983C6E34B8F8"
+	images: [ ]
+	order_index: 0
+	quest_links: [
+		{
+			id: "5ED7F235528CA98D"
+			linked_quest: "3D0523DB30A849FB"
+			shape: "circle"
+			size: 0.75d
+			x: -3.0d
+			y: 0.0d
+		}
+		{
+			id: "5E047018BC32A60C"
+			linked_quest: "59BF9C79DE17DE3A"
+			shape: "circle"
+			size: 0.75d
+			x: 3.0d
+			y: -3.15d
+		}
+		{
+			id: "4772F994BA2EBCAB"
+			linked_quest: "2D6E0EFE576B2E6D"
+			shape: "circle"
+			size: 0.75d
+			x: 3.0d
+			y: -1.05d
+		}
+		{
+			id: "0275987D49AF1D49"
+			linked_quest: "0AE259A0FB97309C"
+			shape: "circle"
+			size: 0.75d
+			x: 6.0d
+			y: -3.15d
+		}
+		{
+			id: "067C85EDC7C67115"
+			linked_quest: "37CEA14BE7D3526A"
+			shape: "circle"
+			size: 0.75d
+			x: 6.0d
+			y: -1.05d
+		}
+		{
+			id: "7E377FC144B40BA3"
+			linked_quest: "0C1FFB3703A4DCF8"
+			shape: "circle"
+			size: 0.75d
+			x: 6.0d
+			y: 1.05d
+		}
+		{
+			id: "02F89DE68CEF28C2"
+			linked_quest: "769AE59AEDC4D448"
+			shape: "circle"
+			size: 0.75d
+			x: 6.0d
+			y: 3.15d
+		}
+		{
+			id: "2052204385B3F063"
+			linked_quest: "32666CB0A81095B9"
+			shape: "circle"
+			size: 0.75d
+			x: 9.0d
+			y: -3.15d
+		}
+		{
+			id: "7B2105B54CE28303"
+			linked_quest: "1601BE2C7B5145FF"
+			shape: "circle"
+			size: 0.75d
+			x: 9.0d
+			y: -1.05d
+		}
+		{
+			id: "513EA164DD88F049"
+			linked_quest: "62C5F6FAA65E856C"
+			shape: "circle"
+			size: 0.75d
+			x: 9.0d
+			y: 1.05d
+		}
+		{
+			id: "12C88A89BC39E0B4"
+			linked_quest: "3E5A9E3DFCF4EA22"
+			shape: "circle"
+			size: 0.75d
+			x: 9.0d
+			y: 3.15d
+		}
+		{
+			id: "786C03671DE4AEF6"
+			linked_quest: "29F12A51E7A13B5A"
+			shape: "circle"
+			size: 0.75d
+			x: 12.0d
+			y: -3.15d
+		}
+		{
+			id: "275E8F8D4A02DCE3"
+			linked_quest: "23C031E751FDA2BE"
+			shape: "circle"
+			size: 0.75d
+			x: 12.0d
+			y: -1.05d
+		}
+		{
+			id: "449FCF4F77B230D8"
+			linked_quest: "5A32AE66513D4EC2"
+			shape: "circle"
+			size: 0.75d
+			x: 12.0d
+			y: 1.05d
+		}
+		{
+			id: "68A93230FC02B2E6"
+			linked_quest: "1CEDB6ABE2820016"
+			shape: "circle"
+			size: 0.75d
+			x: 12.0d
+			y: 3.15d
+		}
+		{
+			id: "178C8A268EF72624"
+			linked_quest: "0B780EE48CD05E58"
+			shape: "circle"
+			size: 0.75d
+			x: 15.0d
+			y: -3.15d
+		}
+		{
+			id: "2C9B98DB05527217"
+			linked_quest: "0EC24BE12B73AB5A"
+			shape: "circle"
+			size: 0.75d
+			x: 15.0d
+			y: -1.05d
+		}
+	]
+	quests: [{
+		dependencies: ["3D0523DB30A849FB"]
+		icon: {
+			id: "vintageimprovements:lathe"
+		}
+		id: "19064C96B18BB2BD"
+		shape: "gear"
+		size: 1.5d
+		tasks: [{
+			id: "2E736FF27D5328BC"
+			type: "checkmark"
+		}]
+		x: 0.0d
+		y: 0.0d
+	}]
+}
