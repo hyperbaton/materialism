@@ -1,0 +1,264 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "nuclear"
+	group: "487F9426BD01CD7B"
+	icon: {
+		id: "create_new_age:reactor_rod"
+	}
+	id: "44D314E7082F0C66"
+	images: [ ]
+	order_index: 11
+	quest_links: [
+		{
+			id: "72F50694901D48D6"
+			linked_quest: "67A19D9014F54314"
+			shape: "circle"
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			id: "0A039FC720C018E4"
+			linked_quest: "117B0078F413D8FD"
+			shape: "circle"
+			x: 0.0d
+			y: -2.5d
+		}
+		{
+			id: "553C53B2B8D99878"
+			linked_quest: "6454F90D417AA7DE"
+			shape: "circle"
+			x: 0.0d
+			y: 5.5d
+		}
+	]
+	quests: [
+		{
+			dependencies: ["67A19D9014F54314"]
+			icon: {
+				components: {
+					"tfc:heat": { }
+				}
+				id: "tfc_metallurgy:metal/double_sheet/zircaloy"
+			}
+			id: "62C43B76F4F6A4CD"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				id: "07011043B1B43360"
+				item: { components: { "tfc:heat": { } }, count: 1, id: "tfc_metallurgy:metal/double_sheet/zircaloy" }
+				type: "item"
+			}]
+			x: 2.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["117B0078F413D8FD"]
+			icon: {
+				id: "create_new_age:radioactive_thorium"
+			}
+			id: "1D137A215FCE90C5"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				id: "1C31C66158B27773"
+				item: { count: 1, id: "create_new_age:radioactive_thorium" }
+				type: "item"
+			}]
+			x: 2.0d
+			y: -2.5d
+		}
+		{
+			dependencies: [
+				"62C43B76F4F6A4CD"
+				"1D137A215FCE90C5"
+			]
+			icon: {
+				id: "create_new_age:nuclear_fuel"
+			}
+			id: "3FF4FAA28C4BEE22"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				id: "6032A12BCA97FA75"
+				item: { count: 1, id: "create_new_age:nuclear_fuel" }
+				type: "item"
+			}]
+			x: 4.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"3FF4FAA28C4BEE22"
+				"07C1B748DB2196E1"
+			]
+			icon: {
+				id: "create_new_age:reactor_rod"
+			}
+			id: "462F607BA92F02F8"
+			shape: "rsquare"
+			size: 2.0d
+			tasks: [{
+				consume_items: false
+				id: "51C1825B85763ACC"
+				item: { count: 1, id: "create_new_age:reactor_rod" }
+				type: "item"
+			}]
+			x: 6.5d
+			y: 0.0d
+		}
+		{
+			icon: {
+				id: "create_new_age:reactor_casing"
+			}
+			id: "07C1B748DB2196E1"
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{
+					consume_items: false
+					count: 16L
+					id: "284E6D589A892DB7"
+					item: { count: 1, id: "create_new_age:reactor_casing" }
+					type: "item"
+				}
+				{
+					consume_items: false
+					count: 4L
+					id: "739C30391850DE3F"
+					item: { count: 1, id: "create_new_age:reactor_glass" }
+					type: "item"
+				}
+			]
+			x: 6.5d
+			y: -2.5d
+		}
+		{
+			dependencies: ["6454F90D417AA7DE"]
+			icon: {
+				id: "solarpunk:fusion_reactor_casing"
+			}
+			id: "4C5F894FB1FA887A"
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{
+					consume_items: false
+					count: 16L
+					id: "5F86BDF710E02CF3"
+					item: { count: 1, id: "solarpunk:fusion_reactor_casing" }
+					type: "item"
+				}
+				{
+					consume_items: false
+					count: 4L
+					id: "1FC1819C206B2C01"
+					item: { count: 1, id: "solarpunk:superconducting_coil" }
+					type: "item"
+				}
+			]
+			x: 2.0d
+			y: 5.5d
+		}
+		{
+			dependencies: ["4C5F894FB1FA887A"]
+			icon: {
+				id: "solarpunk:particle_accelerator_pipe"
+			}
+			id: "6DCEAAEA3CEBE45E"
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{
+					consume_items: false
+					count: 8L
+					id: "35F8F2A6A5900674"
+					item: { count: 1, id: "solarpunk:particle_accelerator_pipe" }
+					type: "item"
+				}
+				{
+					consume_items: false
+					id: "031C766CBD1AD76F"
+					item: { count: 1, id: "solarpunk:particle_accelerator_input" }
+					type: "item"
+				}
+			]
+			x: 4.0d
+			y: 5.5d
+		}
+		{
+			dependencies: [
+				"6DCEAAEA3CEBE45E"
+				"2F3C9247D6740D9F"
+			]
+			icon: {
+				id: "solarpunk:tritium_capsule"
+			}
+			id: "34B2DEAFB322629F"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				id: "33FA6CE65D1ED3BA"
+				item: { count: 1, id: "solarpunk:tritium_capsule" }
+				type: "item"
+			}]
+			x: 6.0d
+			y: 5.5d
+		}
+		{
+			icon: {
+				id: "solarpunk:empty_fuel_capsule"
+			}
+			id: "2F3C9247D6740D9F"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				count: 4L
+				id: "7AB026CC62C2199B"
+				item: { count: 1, id: "solarpunk:empty_fuel_capsule" }
+				type: "item"
+			}]
+			x: 6.0d
+			y: 3.5d
+		}
+		{
+			dependencies: [
+				"34B2DEAFB322629F"
+				"745263529A3AF0E9"
+			]
+			icon: {
+				id: "solarpunk:fusion_reactor_core"
+			}
+			id: "28383C431C0F7395"
+			shape: "gear"
+			size: 2.5d
+			tasks: [{
+				consume_items: false
+				id: "477A846F4C77299B"
+				item: { count: 1, id: "solarpunk:fusion_reactor_core" }
+				type: "item"
+			}]
+			x: 8.75d
+			y: 5.5d
+		}
+		{
+			icon: {
+				id: "create_new_age:reactor_rod"
+			}
+			id: "745263529A3AF0E9"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				id: "5634F5F10E1F8EF2"
+				type: "checkmark"
+			}]
+			x: 8.75d
+			y: 8.25d
+		}
+	]
+}

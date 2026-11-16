@@ -1,0 +1,460 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "mechanical"
+	group: "487F9426BD01CD7B"
+	icon: {
+		id: "vintageimprovements:steel_spring"
+	}
+	id: "68CDBBC22E837421"
+	images: [ ]
+	order_index: 1
+	quest_links: [
+		{
+			id: "2112FB0742F89A8C"
+			linked_quest: "7897D552FAE9A14E"
+			shape: "circle"
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			id: "6B52A5C70BB401E5"
+			linked_quest: "3271499464BB0C03"
+			shape: "circle"
+			x: 16.0d
+			y: -3.0d
+		}
+	]
+	quests: [
+		{
+			dependencies: ["7897D552FAE9A14E"]
+			icon: {
+				id: "tfc:rock/smooth/marble"
+			}
+			id: "267036718EDC9182"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				count: 4L
+				id: "36725AA1C0CA3459"
+				item: { count: 1, id: "tfc:rock/smooth/marble" }
+				type: "item"
+			}]
+			x: 2.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["7897D552FAE9A14E"]
+			icon: {
+				id: "tfc:trip_hammer"
+			}
+			id: "262C3A51009AD09E"
+			optional: true
+			shape: "square"
+			size: 0.75d
+			tasks: [{
+				consume_items: false
+				id: "6EF593FFDD2A4A14"
+				item: { count: 1, id: "tfc:trip_hammer" }
+				type: "item"
+			}]
+			x: 2.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["7897D552FAE9A14E"]
+			icon: {
+				id: "create:encased_chain_drive"
+			}
+			id: "66E69C32CEF4A545"
+			optional: true
+			shape: "square"
+			size: 0.75d
+			tasks: [{
+				consume_items: false
+				count: 4L
+				id: "6DB7F3010B88572D"
+				item: { count: 1, id: "create:encased_chain_drive" }
+				type: "item"
+			}]
+			x: 2.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["267036718EDC9182"]
+			icon: {
+				id: "vintageimprovements:spring_coiling_machine_wheel"
+			}
+			id: "10C466C5DA1ABC34"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				id: "7EDA2702A8286AA5"
+				item: { count: 1, id: "vintageimprovements:spring_coiling_machine_wheel" }
+				type: "item"
+			}]
+			x: 4.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["10C466C5DA1ABC34"]
+			icon: {
+				id: "vintageimprovements:spring_coiling_machine"
+			}
+			id: "49704F8B066BA61F"
+			shape: "rsquare"
+			size: 1.5d
+			tasks: [{
+				consume_items: false
+				id: "2F2AF62868AE3355"
+				item: { count: 1, id: "vintageimprovements:spring_coiling_machine" }
+				type: "item"
+			}]
+			x: 6.25d
+			y: 0.0d
+		}
+		{
+			dependencies: ["49704F8B066BA61F"]
+			icon: {
+				id: "vintageimprovements:steel_spring"
+			}
+			id: "3A2ACC6AD0E5453C"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				count: 4L
+				id: "17ABF0CA49476D98"
+				item: { count: 1, id: "vintageimprovements:steel_spring" }
+				type: "item"
+			}]
+			x: 8.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["3A2ACC6AD0E5453C"]
+			icon: {
+				id: "vintageimprovements:centrifuge"
+			}
+			id: "73252B2E2A39FF75"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				id: "45E1CFCD2095F915"
+				item: { count: 1, id: "vintageimprovements:centrifuge" }
+				type: "item"
+			}]
+			x: 7.5d
+			y: -2.0d
+		}
+		{
+			dependencies: ["3A2ACC6AD0E5453C"]
+			icon: {
+				id: "vintageimprovements:curving_press"
+			}
+			id: "7F15FEEA3DD4D462"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				id: "4F2B9E13D766A711"
+				item: { count: 1, id: "vintageimprovements:curving_press" }
+				type: "item"
+			}]
+			x: 9.5d
+			y: -2.0d
+		}
+		{
+			dependencies: ["3A2ACC6AD0E5453C"]
+			icon: {
+				id: "vintageimprovements:helve_hammer"
+			}
+			id: "0422EDAE0A58A0ED"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				id: "17EFF42F1EF78161"
+				item: { count: 1, id: "vintageimprovements:helve_hammer" }
+				type: "item"
+			}]
+			x: 7.5d
+			y: 2.0d
+		}
+		{
+			dependencies: ["0422EDAE0A58A0ED"]
+			icon: {
+				id: "vintageimprovements:helve_hammer"
+			}
+			id: "5B164516F84AD257"
+			shape: "diamond"
+			size: 1.0d
+			tasks: [{
+				id: "4D894435B52DE51D"
+				type: "checkmark"
+			}]
+			x: 7.5d
+			y: 3.5d
+		}
+		{
+			dependencies: [
+				"3A2ACC6AD0E5453C"
+				"1EB407D7875A2867"
+			]
+			icon: {
+				id: "vintageimprovements:vibrating_table"
+			}
+			id: "182D4D62DB0D6C95"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				id: "15D944A5243C7406"
+				item: { count: 1, id: "vintageimprovements:vibrating_table" }
+				type: "item"
+			}]
+			x: 9.5d
+			y: 2.0d
+		}
+		{
+			icon: {
+				id: "create:mechanical_piston"
+			}
+			id: "1EB407D7875A2867"
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{
+					consume_items: false
+					id: "4367A2D8E24C4C77"
+					item: { count: 1, id: "create:mechanical_piston" }
+					type: "item"
+				}
+				{
+					consume_items: false
+					count: 4L
+					id: "2F4F5DF3FDA34371"
+					item: { count: 1, id: "create:piston_extension_pole" }
+					type: "item"
+				}
+			]
+			x: 9.5d
+			y: 3.5d
+		}
+		{
+			dependencies: ["3A2ACC6AD0E5453C"]
+			icon: {
+				id: "vintageimprovements:small_invar_spring"
+			}
+			id: "72141227F2942F30"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				count: 2L
+				id: "3784CF2C40FBC4FF"
+				item: { count: 1, id: "vintageimprovements:small_invar_spring" }
+				type: "item"
+			}]
+			x: 10.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["72141227F2942F30"]
+			icon: {
+				id: "create:precision_mechanism"
+			}
+			id: "25C333920E309964"
+			shape: "rsquare"
+			size: 2.0d
+			tasks: [{
+				consume_items: false
+				id: "28CFA923BB765E49"
+				item: { count: 1, id: "create:precision_mechanism" }
+				type: "item"
+			}]
+			x: 13.0d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"25C333920E309964"
+				"3271499464BB0C03"
+			]
+			icon: {
+				id: "vintageimprovements:lathe"
+			}
+			id: "4198BE0839E346F3"
+			shape: "rsquare"
+			size: 2.0d
+			tasks: [{
+				consume_items: false
+				id: "75FE665AC66B5524"
+				item: { count: 1, id: "vintageimprovements:lathe" }
+				type: "item"
+			}]
+			x: 16.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["4198BE0839E346F3"]
+			icon: {
+				id: "vintageimprovements:concave_curving_head"
+			}
+			id: "73A51CF0E0021564"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				id: "1D9957D42CC91C08"
+				item: { count: 1, id: "vintageimprovements:concave_curving_head" }
+				type: "item"
+			}]
+			x: 18.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["73A51CF0E0021564"]
+			icon: {
+				id: "create:mechanical_press"
+			}
+			id: "641F53332629C0AE"
+			shape: "rsquare"
+			size: 2.0d
+			tasks: [{
+				consume_items: false
+				id: "4E44B1C0FE661EB0"
+				item: { count: 1, id: "create:mechanical_press" }
+				type: "item"
+			}]
+			x: 21.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["641F53332629C0AE"]
+			icon: {
+				id: "create:fluid_pipe"
+			}
+			id: "2972B973AE95E687"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				count: 8L
+				id: "4D3C48962D69A825"
+				item: { count: 1, id: "create:fluid_pipe" }
+				type: "item"
+			}]
+			x: 23.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["0680614F100F1452"]
+			icon: {
+				id: "materialismcore:fluid_scanner"
+			}
+			id: "1D6059AD73D48F2A"
+			optional: true
+			shape: "square"
+			size: 0.75d
+			tasks: [{
+				consume_items: false
+				id: "67DAF2ACCEF2790B"
+				item: { count: 1, id: "materialismcore:fluid_scanner" }
+				type: "item"
+			}]
+			x: 25.5d
+			y: -2.0d
+		}
+		{
+			dependencies: ["2972B973AE95E687"]
+			icon: {
+				id: "create:mechanical_pump"
+			}
+			id: "0680614F100F1452"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				id: "62F4E0A348C6EB7E"
+				item: { count: 1, id: "create:mechanical_pump" }
+				type: "item"
+			}]
+			x: 25.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["0680614F100F1452"]
+			icon: {
+				id: "vintageimprovements:vacuum_chamber"
+			}
+			id: "6CF2CE946DFD4FDC"
+			shape: "rsquare"
+			size: 1.5d
+			tasks: [{
+				consume_items: false
+				id: "5754FCD41BD95493"
+				item: { count: 1, id: "vintageimprovements:vacuum_chamber" }
+				type: "item"
+			}]
+			x: 27.75d
+			y: 0.0d
+		}
+		{
+			dependencies: [
+				"6CF2CE946DFD4FDC"
+				"5AFE1596BDF4C963"
+			]
+			icon: {
+				id: "kubejs:drill_bit"
+			}
+			id: "7D633BB109B733B5"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				id: "01804CA5892E4CD4"
+				item: { count: 1, id: "kubejs:drill_bit" }
+				type: "item"
+			}]
+			x: 30.0d
+			y: 0.0d
+		}
+		{
+			icon: {
+				id: "vintageimprovements:belt_grinder"
+			}
+			id: "5AFE1596BDF4C963"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				id: "02EC1A092A0743A5"
+				item: { count: 1, id: "vintageimprovements:belt_grinder" }
+				type: "item"
+			}]
+			x: 30.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["7D633BB109B733B5"]
+			icon: {
+				id: "create:mechanical_drill"
+			}
+			id: "715DEDD536238E8F"
+			shape: "gear"
+			size: 2.5d
+			tasks: [{
+				consume_items: false
+				id: "552EFE33B0627D10"
+				item: { count: 1, id: "create:mechanical_drill" }
+				type: "item"
+			}]
+			x: 32.75d
+			y: 0.0d
+		}
+	]
+}

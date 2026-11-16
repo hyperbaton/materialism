@@ -2,267 +2,186 @@
 	default_hide_dependency_lines: false
 	default_quest_shape: ""
 	filename: "agriculture"
-	group: "494F2A100505BD58"
+	group: "4DF6F75C72654E2C"
 	icon: {
 		id: "firmalife:climate_station"
 	}
 	id: "0B6E45EC9BAEBD74"
 	images: [ ]
-	order_index: 14
+	order_index: 1
 	quest_links: [
 		{
 			id: "3F43DCBC9889D732"
-			linked_quest: "096926CF31A25E76"
+			linked_quest: "7DE994478C778AEC"
 			shape: "circle"
-			size: 0.75d
 			x: 0.0d
-			y: 0.75d
-		}
-		{
-			id: "505AC3B6707755B0"
-			linked_quest: "20DF0C13F2C600AD"
-			shape: "circle"
-			size: 0.75d
-			x: 0.0d
-			y: 1.87d
-		}
-		{
-			id: "212D6BB681B37097"
-			linked_quest: "434CFE97669CB735"
-			shape: "circle"
-			size: 0.75d
-			x: 0.0d
-			y: 2.99d
-		}
-		{
-			id: "5B7F8C850010ADD3"
-			linked_quest: "5BDD335BAEB5D3CD"
-			shape: "circle"
-			size: 0.75d
-			x: 0.0d
-			y: 8.82d
-		}
-		{
-			id: "4B61A0D8B678D16C"
-			linked_quest: "6EFE9EE573827369"
-			shape: "circle"
-			size: 0.75d
-			x: 0.0d
-			y: 9.94d
-		}
-		{
-			id: "473CAE03CC4411F5"
-			linked_quest: "3CF9DBA1EB6805F9"
-			shape: "circle"
-			size: 0.75d
-			x: 2.0d
-			y: 4.06d
-		}
-		{
-			id: "74590A1883AA53DD"
-			linked_quest: "632860AB69C89D7A"
-			shape: "circle"
-			size: 0.75d
-			x: 2.0d
-			y: 5.18d
-		}
-		{
-			id: "2AEBB3425B56CF43"
-			linked_quest: "381FF952519CCC53"
-			shape: "circle"
-			size: 0.75d
-			x: 2.0d
-			y: 6.3d
-		}
-		{
-			id: "68D8D7BE016F2E1F"
-			linked_quest: "58AAD5A29308D38F"
-			shape: "circle"
-			size: 0.75d
-			x: 7.2d
 			y: 0.0d
+		}
+		{
+			id: "7FEC3AABD0DDF6F5"
+			linked_quest: "5B9EC2C565E27DDD"
+			shape: "circle"
+			x: 0.0d
+			y: 5.5d
 		}
 		{
 			id: "1E56303751FCAB1B"
 			linked_quest: "1EB407D7875A2867"
 			shape: "circle"
-			size: 0.75d
-			x: 14.4d
-			y: 0.7d
+			x: 0.0d
+			y: 9.5d
 		}
 	]
 	quests: [
 		{
-			dependencies: [
-				"096926CF31A25E76"
-				"20DF0C13F2C600AD"
-			]
+			dependencies: ["7DE994478C778AEC"]
+			icon: {
+				id: "firmalife:mixing_bowl"
+			}
+			id: "734BC64A6432E519"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				id: "5CBCE9EBB1E4FDD4"
+				item: { count: 1, id: "firmalife:mixing_bowl" }
+				type: "item"
+			}]
+			x: 2.0d
+			y: -2.5d
+		}
+		{
+			dependencies: ["734BC64A6432E519"]
+			icon: {
+				components: {
+					"tfc:food": {
+						creation_date: 7545600L
+					}
+				}
+				id: "firmalife:food/cooked_pizza"
+			}
+			id: "51ACA9A9E5D81E94"
+			optional: true
+			shape: "square"
+			size: 0.75d
+			tasks: [{
+				consume_items: false
+				id: "38CAE3F4FD0CC64D"
+				item: { components: { "tfc:food": { creation_date: 7545600L } }, count: 1, id: "firmalife:food/cooked_pizza" }
+				type: "item"
+			}]
+			x: 2.0d
+			y: -4.5d
+		}
+		{
+			dependencies: ["734BC64A6432E519"]
+			icon: {
+				components: {
+					"tfc:food": {
+						creation_date: 7545600L
+					}
+				}
+				id: "firmalife:food/sugar_cookie"
+			}
+			id: "21401596E6D47D78"
+			optional: true
+			shape: "square"
+			size: 0.75d
+			tasks: [{
+				consume_items: false
+				id: "20D8800C0BD012F4"
+				item: { components: { "tfc:food": { creation_date: 7545600L } }, count: 1, id: "firmalife:food/sugar_cookie" }
+				type: "item"
+			}]
+			x: 4.0d
+			y: -2.5d
+		}
+		{
+			dependencies: ["7DE994478C778AEC"]
 			icon: {
 				id: "firmalife:sealed_bricks"
 			}
-			id: "70CCBF9F8633EA4A"
+			id: "7F784F13348A7FB6"
 			shape: "circle"
 			size: 1.0d
 			tasks: [{
 				consume_items: false
 				count: 8L
-				id: "219757756F39CA32"
+				id: "2F6FF5862774E324"
 				item: { count: 1, id: "firmalife:sealed_bricks" }
 				type: "item"
 			}]
 			x: 2.0d
-			y: 1.4d
+			y: 0.0d
 		}
 		{
-			dependencies: [
-				"434CFE97669CB735"
-				"096926CF31A25E76"
-			]
+			dependencies: ["7DE994478C778AEC"]
 			icon: {
-				id: "firmalife:mixing_bowl"
+				id: "firmalife:vat"
 			}
-			id: "0494D24576208AC3"
-			shape: "circle"
-			size: 1.0d
+			id: "4C081C0A270B2583"
+			optional: true
+			shape: "square"
+			size: 0.75d
 			tasks: [{
 				consume_items: false
-				id: "16902CF7446BD5EC"
-				item: { count: 1, id: "firmalife:mixing_bowl" }
+				id: "2EAFB819BA14E1C8"
+				item: { count: 1, id: "firmalife:vat" }
 				type: "item"
 			}]
 			x: 2.0d
-			y: 2.8d
+			y: 2.5d
 		}
 		{
-			dependencies: [
-				"0494D24576208AC3"
-				"3CF9DBA1EB6805F9"
-				"381FF952519CCC53"
-				"632860AB69C89D7A"
-			]
-			icon: {
-				components: {
-					"tfc:food": {
-						creation_date: 7452000L
-					}
-				}
-				id: "firmalife:food/sugar_cookie"
-			}
-			id: "75721D39E80772CA"
-			optional: true
-			shape: "circle"
-			size: 1.0d
-			tasks: [{
-				consume_items: false
-				id: "76A4D5640BA0D11F"
-				item: { components: { "tfc:food": { creation_date: 7452000L } }, count: 1, id: "firmalife:food/sugar_cookie" }
-				type: "item"
-			}]
-			x: 4.0d
-			y: 4.6d
-		}
-		{
-			dependencies: [
-				"0494D24576208AC3"
-				"3CF9DBA1EB6805F9"
-				"40BBECB889D17E7C"
-			]
-			icon: {
-				components: {
-					"tfc:food": {
-						creation_date: 7452000L
-					}
-				}
-				id: "firmalife:food/cooked_pizza"
-			}
-			id: "38CBEFCE51A8EFBD"
-			optional: true
-			shape: "circle"
-			size: 1.0d
-			tasks: [{
-				consume_items: false
-				id: "249AD84171BE9D05"
-				item: { components: { "tfc:food": { creation_date: 7452000L } }, count: 1, id: "firmalife:food/cooked_pizza" }
-				type: "item"
-			}]
-			x: 4.0d
-			y: 3.2d
-		}
-		{
-			dependencies: [
-				"58AAD5A29308D38F"
-				"2255E4EC6DEC344B"
-				"3C028FF67824DC74"
-			]
+			dependencies: ["5B9EC2C565E27DDD"]
 			icon: {
 				id: "firmalife:copper_greenhouse_wall"
 			}
-			id: "2D6E0EFE576B2E6D"
-			shape: "circle"
-			size: 1.0d
+			id: "35DE7B7B3F365935"
+			shape: "rsquare"
+			size: 1.5d
 			tasks: [
 				{
 					consume_items: false
 					count: 8L
-					id: "4EE5E1F72906E17D"
+					id: "549CF3076557DFFD"
 					item: { components: { "ftbfiltersystem:filter": "ftbfiltersystem:or(ftbfiltersystem:item(firmalife:copper_greenhouse_wall)ftbfiltersystem:item(firmalife:iron_greenhouse_wall)ftbfiltersystem:item(firmalife:stainless_steel_greenhouse_wall)ftbfiltersystem:item(firmalife:treated_wood_greenhouse_wall))" }, count: 1, id: "ftbfiltersystem:smart_filter" }
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "611DD57F9803BCDA"
+					id: "78F15F8B127DD236"
 					item: { count: 1, id: "firmalife:climate_station" }
 					type: "item"
 				}
 			]
-			x: 9.2d
-			y: 0.0d
+			x: 2.25d
+			y: 5.5d
 		}
 		{
-			dependencies: ["2D6E0EFE576B2E6D"]
+			dependencies: ["35DE7B7B3F365935"]
 			icon: {
 				id: "firmalife:sprinkler"
 			}
-			id: "409F50AA0D0BD32C"
-			shape: "circle"
-			size: 1.0d
+			id: "72DE01EC1C6FA073"
+			shape: "gear"
+			size: 2.5d
 			tasks: [
 				{
 					consume_items: false
-					id: "38F48CA445AA2385"
+					id: "6F423CD131F2428D"
 					item: { count: 1, id: "firmalife:sprinkler" }
 					type: "item"
 				}
 				{
 					consume_items: false
-					id: "1D2B1992177756C4"
+					id: "6464FDFFD4CF91F7"
 					item: { count: 1, id: "firmalife:pumping_station" }
 					type: "item"
 				}
 			]
-			x: 11.2d
-			y: 0.0d
-		}
-		{
-			dependencies: [
-				"18687C0E4557C87A"
-				"096926CF31A25E76"
-			]
-			icon: {
-				id: "firmalife:vat"
-			}
-			id: "4B616352A885AAFB"
-			optional: true
-			shape: "circle"
-			size: 1.0d
-			tasks: [{
-				consume_items: false
-				id: "1EDC78993AD66E90"
-				item: { count: 1, id: "firmalife:vat" }
-				type: "item"
-			}]
-			x: 2.0d
-			y: 0.0d
+			x: 5.25d
+			y: 5.5d
 		}
 		{
 			dependencies: ["1EB407D7875A2867"]
@@ -278,8 +197,8 @@
 				item: { count: 1, id: "create:mechanical_harvester" }
 				type: "item"
 			}]
-			x: 16.4d
-			y: 0.0d
+			x: 2.0d
+			y: 9.5d
 		}
 		{
 			dependencies: ["1EB407D7875A2867"]
@@ -288,37 +207,33 @@
 			}
 			id: "76D8CA9A9317998B"
 			optional: true
-			shape: "circle"
-			size: 1.0d
+			shape: "square"
+			size: 0.75d
 			tasks: [{
 				consume_items: false
 				id: "15D3159C2CAC68CA"
 				item: { count: 1, id: "create:mechanical_plough" }
 				type: "item"
 			}]
-			x: 16.4d
-			y: 1.4d
+			x: 2.0d
+			y: 11.25d
 		}
 		{
-			dependencies: [
-				"6EFE9EE573827369"
-				"5BDD335BAEB5D3CD"
-			]
 			icon: {
 				id: "tfcastikorcarts:seed_drill/oak"
 			}
 			id: "4C58354A63FE06EE"
 			optional: true
-			shape: "circle"
-			size: 1.0d
+			shape: "square"
+			size: 0.75d
 			tasks: [{
 				consume_items: false
 				id: "2A09D9CCC5B80733"
 				item: { components: { "ftbfiltersystem:filter": "ftbfiltersystem:item_tag(tfcastikorcarts:seed_drill)" }, count: 1, id: "ftbfiltersystem:smart_filter" }
 				type: "item"
 			}]
-			x: 2.0d
-			y: 9.38d
+			x: 4.0d
+			y: 11.25d
 		}
 	]
 }

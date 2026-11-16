@@ -1,8 +1,8 @@
 {
 	default_hide_dependency_lines: false
 	default_quest_shape: ""
-	filename: "rare_metals"
-	group: "494F2A100505BD58"
+	filename: "rare"
+	group: "487F9426BD01CD7B"
 	icon: {
 		components: {
 			"tfc:heat": { }
@@ -11,92 +11,33 @@
 	}
 	id: "79B9234FD22BE021"
 	images: [ ]
-	order_index: 5
+	order_index: 9
 	quest_links: [
 		{
-			id: "594BF98D9C4C3E72"
-			linked_quest: "641AD4D1666F216F"
+			id: "4F38CCEFC7F3C91C"
+			linked_quest: "788DC7B6BD541EEF"
 			shape: "circle"
-			size: 0.75d
 			x: 0.0d
-			y: 1.81d
-		}
-		{
-			id: "55CED83D25C88178"
-			linked_quest: "4815FCA8115F74AF"
-			shape: "circle"
-			size: 0.75d
-			x: 0.0d
-			y: 4.65d
+			y: 2.5d
 		}
 		{
 			id: "5E0B7B75042AB77E"
 			linked_quest: "747B1F410BD783E2"
 			shape: "circle"
-			size: 0.75d
 			x: 0.0d
-			y: 6.27d
+			y: 10.0d
 		}
 		{
-			id: "475FBAAFFF16E533"
-			linked_quest: "46D6404C0D514118"
+			id: "4B91B5A0E64F7035"
+			linked_quest: "1F62C2C534E37F80"
 			shape: "circle"
-			size: 0.75d
-			x: 2.0d
-			y: 11.48d
-		}
-		{
-			id: "78DFC5CF1F2AC982"
-			linked_quest: "23206F2F3C607C2C"
-			shape: "circle"
-			size: 0.75d
-			x: 4.0d
-			y: 5.73d
-		}
-		{
-			id: "7AA157B21ABA9A70"
-			linked_quest: "6454F90D417AA7DE"
-			shape: "circle"
-			size: 0.75d
-			x: 4.0d
-			y: 6.85d
-		}
-		{
-			id: "4BFA06955339EDAC"
-			linked_quest: "2E4797701C350AB6"
-			shape: "circle"
-			size: 0.75d
-			x: 4.0d
-			y: 9.37d
-		}
-		{
-			id: "34669374E2D4A321"
-			linked_quest: "1FE85AB58610B959"
-			shape: "circle"
-			size: 0.75d
-			x: 13.2d
-			y: 0.0d
-		}
-		{
-			id: "4F38CCEFC7F3C91C"
-			linked_quest: "39A3BB2B390D4EAA"
-			shape: "circle"
-			size: 0.75d
-			x: 13.2d
-			y: 1.12d
-		}
-		{
-			id: "16261B311E056909"
-			linked_quest: "267282D570010FB1"
-			shape: "circle"
-			size: 0.75d
-			x: 13.2d
-			y: 2.24d
+			x: 0.0d
+			y: 19.0d
 		}
 	]
 	quests: [
 		{
-			dependencies: ["4815FCA8115F74AF"]
+			dependencies: ["788DC7B6BD541EEF"]
 			icon: {
 				id: "kubejs:powder/wolframite"
 			}
@@ -111,13 +52,10 @@
 				type: "item"
 			}]
 			x: 2.0d
-			y: 2.11d
+			y: 0.0d
 		}
 		{
-			dependencies: [
-				"0EC24BE12B73AB5A"
-				"641AD4D1666F216F"
-			]
+			dependencies: ["0EC24BE12B73AB5A"]
 			icon: {
 				components: {
 					"tfc:heat": { }
@@ -135,7 +73,7 @@
 				type: "item"
 			}]
 			x: 4.0d
-			y: 0.83d
+			y: 0.0d
 		}
 		{
 			dependencies: ["3C63C4144D5CB055"]
@@ -174,7 +112,7 @@
 				type: "item"
 			}]
 			x: 8.0d
-			y: 4.35d
+			y: 0.0d
 		}
 		{
 			dependencies: ["0EDC1DB04E8C8910"]
@@ -182,8 +120,8 @@
 				id: "kubejs:tungsten_green_bar"
 			}
 			id: "46630D0A957C3D9F"
-			shape: "circle"
-			size: 1.0d
+			shape: "rsquare"
+			size: 1.5d
 			tasks: [
 				{
 					consume_items: false
@@ -198,11 +136,29 @@
 					type: "item"
 				}
 			]
-			x: 10.0d
-			y: 1.18d
+			x: 10.25d
+			y: 0.0d
 		}
 		{
-			dependencies: ["35321E7E9226B41D"]
+			dependencies: ["46630D0A957C3D9F"]
+			icon: {
+				id: "chemica:tungsten_carbide_ingot"
+			}
+			id: "1307B4B36F98D13F"
+			optional: true
+			shape: "square"
+			size: 0.75d
+			tasks: [{
+				consume_items: false
+				id: "45EF96851154CD13"
+				item: { count: 1, id: "chemica:tungsten_carbide_ingot" }
+				type: "item"
+			}]
+			x: 12.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["788DC7B6BD541EEF"]
 			icon: {
 				components: {
 					"tfc:heat": { }
@@ -220,7 +176,7 @@
 				type: "item"
 			}]
 			x: 2.0d
-			y: 9.8d
+			y: 2.5d
 		}
 		{
 			dependencies: ["5918429AAEA60599"]
@@ -238,13 +194,10 @@
 				type: "item"
 			}]
 			x: 4.0d
-			y: 10.63d
+			y: 2.5d
 		}
 		{
-			dependencies: [
-				"0A33FA09562270D1"
-				"2E4797701C350AB6"
-			]
+			dependencies: ["0A33FA09562270D1"]
 			icon: {
 				components: {
 					"tfc:heat": { }
@@ -262,13 +215,10 @@
 				type: "item"
 			}]
 			x: 6.0d
-			y: 11.1d
+			y: 2.5d
 		}
 		{
-			dependencies: [
-				"39A3BB2B390D4EAA"
-				"1FE85AB58610B959"
-			]
+			dependencies: ["788DC7B6BD541EEF"]
 			icon: {
 				id: "kubejs:powder/roasted_cobaltite"
 			}
@@ -282,8 +232,8 @@
 				item: { count: 1, id: "kubejs:powder/roasted_cobaltite" }
 				type: "item"
 			}]
-			x: 15.2d
-			y: 0.19d
+			x: 2.0d
+			y: 5.0d
 		}
 		{
 			dependencies: ["6A481E89873B8E92"]
@@ -303,14 +253,107 @@
 				item: { components: { "tfc:heat": { } }, count: 1, id: "tfc_metallurgy:metal/dust/cobalt" }
 				type: "item"
 			}]
-			x: 17.2d
-			y: 0.4d
+			x: 4.0d
+			y: 5.0d
 		}
 		{
-			dependencies: [
-				"641AD4D1666F216F"
-				"747B1F410BD783E2"
-			]
+			dependencies: ["747B1F410BD783E2"]
+			icon: {
+				id: "kubejs:powder/rare_earth_hydroxide"
+			}
+			id: "0E03FB128375F2C2"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				count: 4L
+				id: "269724A48227D301"
+				item: { count: 1, id: "kubejs:powder/rare_earth_hydroxide" }
+				type: "item"
+			}]
+			x: 2.0d
+			y: 7.5d
+		}
+		{
+			dependencies: ["0E03FB128375F2C2"]
+			icon: {
+				id: "kubejs:powder/thoria"
+			}
+			id: "241B0504FAF26358"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				count: 4L
+				id: "23AA7719A0EC836F"
+				item: { count: 1, id: "kubejs:powder/thoria" }
+				type: "item"
+			}]
+			x: 4.0d
+			y: 7.5d
+		}
+		{
+			dependencies: ["241B0504FAF26358"]
+			icon: {
+				components: {
+					"tfc:heat": { }
+				}
+				id: "tfc_metallurgy:metal/dust/thorium"
+			}
+			id: "117B0078F413D8FD"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				count: 2L
+				id: "6BD87847FB202B52"
+				item: { components: { "tfc:heat": { } }, count: 1, id: "tfc_metallurgy:metal/dust/thorium" }
+				type: "item"
+			}]
+			x: 6.0d
+			y: 7.5d
+		}
+		{
+			dependencies: ["747B1F410BD783E2"]
+			icon: {
+				id: "kubejs:powder/yellowcake"
+			}
+			id: "57FC1EAEE18682E5"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				count: 4L
+				id: "1D41558527017855"
+				item: { count: 1, id: "kubejs:powder/yellowcake" }
+				type: "item"
+			}]
+			x: 2.0d
+			y: 10.0d
+		}
+		{
+			dependencies: ["57FC1EAEE18682E5"]
+			icon: {
+				components: {
+					"tfc:heat": { }
+				}
+				id: "tfc_metallurgy:metal/dust/uranium"
+			}
+			id: "45B9C13293B69035"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				count: 2L
+				id: "045565D51AB4A492"
+				item: { components: { "tfc:heat": { } }, count: 1, id: "tfc_metallurgy:metal/dust/uranium" }
+				type: "item"
+			}]
+			x: 4.0d
+			y: 10.0d
+		}
+		{
+			dependencies: ["747B1F410BD783E2"]
 			icon: {
 				components: {
 					"tfc:heat": { }
@@ -325,7 +368,7 @@
 				type: "checkmark"
 			}]
 			x: 2.0d
-			y: 3.51d
+			y: 12.5d
 		}
 		{
 			dependencies: ["6107CEA9B00D4D81"]
@@ -346,7 +389,7 @@
 				type: "item"
 			}]
 			x: 4.0d
-			y: 2.23d
+			y: 12.5d
 		}
 		{
 			dependencies: ["641B5619DEB33E24"]
@@ -374,20 +417,17 @@
 				}
 			]
 			x: 6.0d
-			y: 1.4d
+			y: 12.5d
 		}
 		{
-			dependencies: [
-				"6107CEA9B00D4D81"
-				"4815FCA8115F74AF"
-			]
+			dependencies: ["6107CEA9B00D4D81"]
 			icon: {
 				id: "kubejs:powder/native_iridium"
 			}
 			id: "7B2D7F8FCF6EC37B"
 			optional: true
-			shape: "circle"
-			size: 1.0d
+			shape: "square"
+			size: 0.75d
 			tasks: [{
 				consume_items: false
 				count: 3L
@@ -395,8 +435,8 @@
 				item: { count: 1, id: "kubejs:powder/native_iridium" }
 				type: "item"
 			}]
-			x: 4.0d
-			y: 4.33d
+			x: 2.0d
+			y: 14.5d
 		}
 		{
 			dependencies: ["7B2D7F8FCF6EC37B"]
@@ -408,8 +448,8 @@
 			}
 			id: "4CB4C297EDD81449"
 			optional: true
-			shape: "circle"
-			size: 1.0d
+			shape: "square"
+			size: 0.75d
 			tasks: [{
 				consume_items: false
 				count: 4L
@@ -417,8 +457,8 @@
 				item: { components: { "tfc:heat": { } }, count: 1, id: "tfc_metallurgy:metal/dust/osmium" }
 				type: "item"
 			}]
-			x: 6.0d
-			y: 2.8d
+			x: 4.0d
+			y: 14.5d
 		}
 		{
 			dependencies: ["7B2D7F8FCF6EC37B"]
@@ -430,8 +470,8 @@
 			}
 			id: "6621B6FBCB430B6C"
 			optional: true
-			shape: "circle"
-			size: 1.0d
+			shape: "square"
+			size: 0.75d
 			tasks: [{
 				consume_items: false
 				count: 4L
@@ -439,146 +479,8 @@
 				item: { components: { "tfc:heat": { } }, count: 1, id: "tfc_metallurgy:metal/dust/iridium" }
 				type: "item"
 			}]
-			x: 6.0d
-			y: 4.2d
-		}
-		{
-			dependencies: ["4815FCA8115F74AF"]
-			icon: {
-				id: "kubejs:powder/rare_earth_hydroxide"
-			}
-			id: "0E03FB128375F2C2"
-			shape: "circle"
-			size: 1.0d
-			tasks: [{
-				consume_items: false
-				count: 4L
-				id: "269724A48227D301"
-				item: { count: 1, id: "kubejs:powder/rare_earth_hydroxide" }
-				type: "item"
-			}]
 			x: 2.0d
-			y: 7.01d
-		}
-		{
-			dependencies: [
-				"0E03FB128375F2C2"
-				"747B1F410BD783E2"
-			]
-			icon: {
-				id: "kubejs:powder/thoria"
-			}
-			id: "241B0504FAF26358"
-			shape: "circle"
-			size: 1.0d
-			tasks: [{
-				consume_items: false
-				count: 4L
-				id: "23AA7719A0EC836F"
-				item: { count: 1, id: "kubejs:powder/thoria" }
-				type: "item"
-			}]
-			x: 4.0d
-			y: 8.11d
-		}
-		{
-			dependencies: [
-				"241B0504FAF26358"
-				"2E4797701C350AB6"
-				"6454F90D417AA7DE"
-			]
-			icon: {
-				components: {
-					"tfc:heat": { }
-				}
-				id: "tfc_metallurgy:metal/dust/thorium"
-			}
-			id: "117B0078F413D8FD"
-			optional: true
-			shape: "circle"
-			size: 1.0d
-			tasks: [{
-				consume_items: false
-				count: 2L
-				id: "6BD87847FB202B52"
-				item: { components: { "tfc:heat": { } }, count: 1, id: "tfc_metallurgy:metal/dust/thorium" }
-				type: "item"
-			}]
-			x: 6.0d
-			y: 9.1d
-		}
-		{
-			dependencies: ["23206F2F3C607C2C"]
-			icon: {
-				id: "kubejs:powder/yellowcake"
-			}
-			id: "57FC1EAEE18682E5"
-			shape: "circle"
-			size: 1.0d
-			tasks: [{
-				consume_items: false
-				count: 4L
-				id: "1D41558527017855"
-				item: { count: 1, id: "kubejs:powder/yellowcake" }
-				type: "item"
-			}]
-			x: 6.0d
-			y: 5.6d
-		}
-		{
-			dependencies: [
-				"57FC1EAEE18682E5"
-				"2E4797701C350AB6"
-				"6454F90D417AA7DE"
-				"74B8E784792154B0"
-			]
-			icon: {
-				components: {
-					"tfc:heat": { }
-				}
-				id: "tfc_metallurgy:metal/dust/uranium"
-			}
-			id: "45B9C13293B69035"
-			optional: true
-			shape: "circle"
-			size: 1.0d
-			tasks: [{
-				consume_items: false
-				count: 2L
-				id: "045565D51AB4A492"
-				item: { components: { "tfc:heat": { } }, count: 1, id: "tfc_metallurgy:metal/dust/uranium" }
-				type: "item"
-			}]
-			x: 8.0d
-			y: 6.31d
-		}
-		{
-			dependencies: [
-				"39A3BB2B390D4EAA"
-				"267282D570010FB1"
-				"1FE85AB58610B959"
-				"6AAFDD1727916A4B"
-				"1042E53FF23B2F2C"
-			]
-			icon: {
-				components: {
-					"tfc:heat": { }
-				}
-				id: "tfc_metallurgy:metal/dust/tantalum"
-			}
-			id: "03513A18C0940CEF"
-			optional: true
-			shape: "circle"
-			size: 1.0d
-			tasks: [{
-				consume_items: false
-				count: 2L
-				id: "726CB006133FB4A2"
-				item: { components: { "tfc:heat": { } }, count: 1, id: "tfc_metallurgy:metal/dust/tantalum" }
-				type: "item"
-			}]
-			x: 15.2d
-			y: 1.59d
+			y: 16.0d
 		}
 		{
 			dependencies: ["1F62C2C534E37F80"]
@@ -599,73 +501,48 @@
 				type: "item"
 			}]
 			x: 2.0d
-			y: 12.74d
+			y: 19.0d
 		}
 		{
-			dependencies: [
-				"46D6404C0D514118"
-				"03131E1BAF18DAFE"
-			]
+			dependencies: ["03131E1BAF18DAFE"]
 			icon: {
 				components: {
 					"tfc:heat": { }
 				}
 				id: "tfc_metallurgy:metal/ingot/high_alloy_steel"
 			}
-			id: "11B304B8038C5F99"
-			shape: "circle"
-			size: 1.5d
+			id: "7B925EB169B12D6E"
+			shape: "gear"
+			size: 2.5d
 			tasks: [{
 				consume_items: false
-				id: "633C1F1B8ECC4F35"
+				id: "1E36D539F87493C9"
 				item: { components: { "tfc:heat": { } }, count: 1, id: "tfc_metallurgy:metal/ingot/high_alloy_steel" }
 				type: "item"
 			}]
-			x: 4.0d
-			y: 14.04d
+			x: 4.75d
+			y: 19.0d
 		}
 		{
-			dependencies: ["11B304B8038C5F99"]
+			dependencies: ["7B925EB169B12D6E"]
 			icon: {
 				components: {
 					"tfc:heat": { }
 				}
 				id: "tfc_metallurgy:metal/anvil/high_alloy_steel"
 			}
-			id: "650BF90AABDFA94B"
+			id: "396ED056A40B4066"
 			optional: true
-			shape: "circle"
-			size: 1.5d
+			shape: "square"
+			size: 0.75d
 			tasks: [{
 				consume_items: false
-				id: "14F793EA044D632E"
+				id: "67D26DF30F6EA752"
 				item: { components: { "tfc:heat": { } }, count: 1, id: "tfc_metallurgy:metal/anvil/high_alloy_steel" }
 				type: "item"
 			}]
-			x: 6.0d
-			y: 13.92d
-		}
-		{
-			dependencies: [
-				"6454F90D417AA7DE"
-				"46D6404C0D514118"
-				"0EDC1DB04E8C8910"
-			]
-			icon: {
-				id: "chemica:tungsten_carbide_ingot"
-			}
-			id: "1A2C584AF007032C"
-			optional: true
-			shape: "circle"
-			size: 1.0d
-			tasks: [{
-				consume_items: false
-				id: "04E2AEB20C97602A"
-				item: { count: 1, id: "chemica:tungsten_carbide_ingot" }
-				type: "item"
-			}]
-			x: 10.0d
-			y: 4.68d
+			x: 4.75d
+			y: 21.75d
 		}
 	]
 }

@@ -1,69 +1,52 @@
 {
 	default_hide_dependency_lines: false
 	default_quest_shape: ""
-	filename: "founding_a_settlement"
+	filename: "society"
 	group: "0B2239FCA45AFB0D"
 	icon: {
 		id: "cft:leader_staff"
 	}
-	id: "5365D6D178D41831"
+	id: "51C2F3F650A42A93"
 	images: [ ]
 	order_index: 0
-	quest_links: [
-		{
-			id: "43C9DB8A42D124C7"
-			linked_quest: "58AAD5A29308D38F"
-			shape: "circle"
-			size: 0.75d
-			x: 0.0d
-			y: 0.49d
-		}
-		{
-			id: "19F81F30111E5D71"
-			linked_quest: "5415E484EEFC90B7"
-			shape: "circle"
-			size: 0.75d
-			x: 0.0d
-			y: 1.61d
-		}
-		{
-			id: "480B846C1C7BA6E5"
-			linked_quest: "795A07CA5197307E"
-			shape: "circle"
-			size: 0.75d
-			x: 6.0d
-			y: 1.9d
-		}
-		{
-			id: "5601D6E20DD10183"
-			linked_quest: "15EB2F85BA59618E"
-			shape: "circle"
-			size: 0.75d
-			x: 10.0d
-			y: 2.53d
-		}
-	]
+	quest_links: [{
+		id: "3794E3F6E6B221D7"
+		linked_quest: "6605E3F65F40421B"
+		shape: "circle"
+		x: 0.0d
+		y: 0.0d
+	}]
 	quests: [
 		{
-			dependencies: [
-				"58AAD5A29308D38F"
-				"5415E484EEFC90B7"
-			]
+			dependencies: ["6605E3F65F40421B"]
 			icon: {
 				id: "cft:leader_staff"
 			}
 			id: "1FC6CBDDE010ADA1"
-			optional: true
-			shape: "circle"
-			size: 1.0d
+			shape: "rsquare"
+			size: 1.5d
 			tasks: [{
 				consume_items: false
 				id: "5B6C747BA7DA344E"
 				item: { count: 1, id: "cft:leader_staff" }
 				type: "item"
 			}]
-			x: 2.0d
-			y: 1.4d
+			x: 2.25d
+			y: 0.0d
+		}
+		{
+			icon: {
+				id: "cft:leader_staff"
+			}
+			id: "48BC22C8550CA7C8"
+			shape: "diamond"
+			size: 1.0d
+			tasks: [{
+				id: "4004981777C0238D"
+				type: "checkmark"
+			}]
+			x: 2.25d
+			y: 2.25d
 		}
 		{
 			dependencies: ["1FC6CBDDE010ADA1"]
@@ -71,15 +54,14 @@
 				id: "cft:leader_staff"
 			}
 			id: "6C48A50675BC6BEF"
-			optional: true
 			shape: "circle"
 			size: 1.0d
 			tasks: [{
 				id: "5DA5396BE30D2069"
 				type: "checkmark"
 			}]
-			x: 4.0d
-			y: 0.64d
+			x: 4.5d
+			y: 0.0d
 		}
 		{
 			dependencies: ["6C48A50675BC6BEF"]
@@ -87,34 +69,29 @@
 				id: "cft:leader_staff"
 			}
 			id: "0120F8322D7DEAE6"
-			optional: true
 			shape: "circle"
 			size: 1.0d
 			tasks: [{
 				id: "0A49FA70665DA601"
 				type: "checkmark"
 			}]
-			x: 6.0d
-			y: 0.64d
+			x: 6.5d
+			y: 0.0d
 		}
 		{
-			dependencies: [
-				"0120F8322D7DEAE6"
-				"795A07CA5197307E"
-			]
+			dependencies: ["0120F8322D7DEAE6"]
 			icon: {
 				id: "cft:leader_staff"
 			}
 			id: "2EEBC3F7DC2EDE02"
-			optional: true
 			shape: "circle"
 			size: 1.0d
 			tasks: [{
 				id: "76DC8C65A705A462"
 				type: "checkmark"
 			}]
-			x: 8.0d
-			y: 1.27d
+			x: 8.5d
+			y: 0.0d
 		}
 		{
 			dependencies: ["2EEBC3F7DC2EDE02"]
@@ -122,49 +99,73 @@
 				id: "cft:leader_staff"
 			}
 			id: "6AEC8A0EC4E84285"
-			optional: true
 			shape: "circle"
 			size: 1.0d
 			tasks: [{
 				id: "4E4170F3BA8C9D3A"
 				type: "checkmark"
 			}]
-			x: 10.0d
-			y: 1.27d
+			x: 10.5d
+			y: 0.0d
 		}
 		{
-			dependencies: [
-				"6AEC8A0EC4E84285"
-				"15EB2F85BA59618E"
-			]
+			dependencies: ["6AEC8A0EC4E84285"]
 			icon: {
 				id: "cft:leader_staff"
 			}
 			id: "572AC44401414CC6"
-			optional: true
 			shape: "circle"
 			size: 1.0d
 			tasks: [{
 				id: "794493912CDF3FBD"
 				type: "checkmark"
 			}]
-			x: 12.0d
-			y: 1.9d
+			x: 12.5d
+			y: 0.0d
 		}
 		{
-			dependencies: ["58AAD5A29308D38F"]
+			dependencies: ["572AC44401414CC6"]
 			icon: {
 				id: "cft:leader_staff"
 			}
-			id: "48BC22C8550CA7C8"
-			optional: true
+			id: "64CDB5D474329162"
 			shape: "circle"
 			size: 1.0d
 			tasks: [{
-				id: "4004981777C0238D"
+				id: "38E84BEA24845D56"
 				type: "checkmark"
 			}]
-			x: 2.0d
+			x: 14.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["64CDB5D474329162"]
+			icon: {
+				id: "cft:leader_staff"
+			}
+			id: "5C2F63EC356843F7"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				id: "3AEBE740F4C6CDD6"
+				type: "checkmark"
+			}]
+			x: 16.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["5C2F63EC356843F7"]
+			icon: {
+				id: "cft:leader_staff"
+			}
+			id: "25B3AF87D25C1714"
+			shape: "gear"
+			size: 2.5d
+			tasks: [{
+				id: "09A41AF4F2958F4A"
+				type: "checkmark"
+			}]
+			x: 19.25d
 			y: 0.0d
 		}
 	]

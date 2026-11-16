@@ -1,0 +1,155 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "ores"
+	group: "487F9426BD01CD7B"
+	icon: {
+		components: {
+			"tfc:heat": { }
+		}
+		id: "tfc:ore/rich_malachite"
+	}
+	id: "596C1E6B8A162C9F"
+	images: [ ]
+	order_index: 7
+	quest_links: [
+		{
+			id: "018E10DCD1893C0D"
+			linked_quest: "3B8D69CA5AD743F7"
+			shape: "circle"
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			id: "42BC650D1904CA31"
+			linked_quest: "6454F90D417AA7DE"
+			shape: "circle"
+			x: 9.25d
+			y: -3.0d
+		}
+	]
+	quests: [
+		{
+			dependencies: ["3B8D69CA5AD743F7"]
+			icon: {
+				components: {
+					"tfc:heat": { }
+				}
+				id: "tfc:ore/rich_malachite"
+			}
+			id: "4646A6CC64DA192A"
+			shape: "diamond"
+			size: 1.0d
+			tasks: [{
+				id: "2989E3C7F607E781"
+				type: "checkmark"
+			}]
+			x: 2.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["4646A6CC64DA192A"]
+			icon: {
+				id: "create:mechanical_mixer"
+			}
+			id: "7A545AABBC1E148D"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				id: "4BAFB2EAFC29F426"
+				type: "checkmark"
+			}]
+			x: 2.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["4646A6CC64DA192A"]
+			icon: {
+				id: "tfc:powder/hematite"
+			}
+			id: "3328BC1F0C80E51E"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				id: "2F133E0643ECC093"
+				item: { components: { "ftbfiltersystem:filter": "ftbfiltersystem:item_tag(materialism:powders/iron)" }, count: 1, id: "ftbfiltersystem:smart_filter" }
+				type: "item"
+			}]
+			x: 2.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["4646A6CC64DA192A"]
+			icon: {
+				id: "kubejs:powder/bauxite"
+			}
+			id: "788DC7B6BD541EEF"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				count: 8L
+				id: "6E8E3BBA66CDA57A"
+				item: { count: 1, id: "kubejs:powder/bauxite" }
+				type: "item"
+			}]
+			x: 4.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["788DC7B6BD541EEF"]
+			icon: {
+				id: "kubejs:metal/dust/copper"
+			}
+			id: "3FD5728231F2FBFB"
+			shape: "rsquare"
+			size: 1.5d
+			tasks: [{
+				consume_items: false
+				count: 8L
+				id: "0E0796A7C3EE26EE"
+				item: { count: 1, id: "kubejs:metal/dust/copper" }
+				type: "item"
+			}]
+			x: 6.25d
+			y: 0.0d
+		}
+		{
+			dependencies: ["3FD5728231F2FBFB"]
+			icon: {
+				id: "chemica:nitric_acid_bucket"
+			}
+			id: "0565DB89F4A62FA9"
+			shape: "diamond"
+			size: 1.0d
+			tasks: [{
+				id: "0CC6328C4242AE09"
+				type: "checkmark"
+			}]
+			x: 6.25d
+			y: -2.25d
+		}
+		{
+			dependencies: [
+				"3FD5728231F2FBFB"
+				"6454F90D417AA7DE"
+			]
+			icon: {
+				components: {
+					"tfc:heat": { }
+				}
+				id: "tfc_metallurgy:metal/ingot/tungsten"
+			}
+			id: "153D34E7840A527D"
+			shape: "gear"
+			size: 2.5d
+			tasks: [{
+				id: "03DC07286F711421"
+				type: "checkmark"
+			}]
+			x: 9.25d
+			y: 0.0d
+		}
+	]
+}

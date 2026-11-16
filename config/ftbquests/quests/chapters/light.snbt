@@ -1,102 +1,47 @@
 {
 	default_hide_dependency_lines: false
 	default_quest_shape: ""
-	filename: "light_metals"
-	group: "494F2A100505BD58"
+	filename: "light"
+	group: "487F9426BD01CD7B"
 	icon: {
 		id: "kubejs:powder/alumina"
 	}
 	id: "6CCAAADA618A6D71"
 	images: [ ]
-	order_index: 4
+	order_index: 8
 	quest_links: [
 		{
-			id: "56B01F229C730C24"
-			linked_quest: "10B98D1834C794B2"
+			id: "72F8F5F543D7C83A"
+			linked_quest: "788DC7B6BD541EEF"
 			shape: "circle"
-			size: 0.75d
 			x: 0.0d
-			y: 2.43d
+			y: 0.0d
+		}
+		{
+			id: "676272C7CC307643"
+			linked_quest: "7ADA597F285D8A92"
+			shape: "circle"
+			x: 0.0d
+			y: 5.0d
 		}
 		{
 			id: "25AF8677FE249DF6"
 			linked_quest: "0776ACF8377E0947"
 			shape: "circle"
-			size: 0.75d
 			x: 0.0d
-			y: 4.24d
+			y: 7.0d
 		}
 		{
-			id: "06ACD27E00090450"
-			linked_quest: "23206F2F3C607C2C"
+			id: "513ED58B79484BD9"
+			linked_quest: "3B8D69CA5AD743F7"
 			shape: "circle"
-			size: 0.75d
-			x: 2.0d
-			y: 6.2d
-		}
-		{
-			id: "68065C4ABA5AEAFE"
-			linked_quest: "35321E7E9226B41D"
-			shape: "circle"
-			size: 0.75d
-			x: 2.0d
-			y: 8.72d
-		}
-		{
-			id: "3973498711B1CADD"
-			linked_quest: "4815FCA8115F74AF"
-			shape: "circle"
-			size: 0.75d
-			x: 4.0d
-			y: 1.57d
-		}
-		{
-			id: "2145FC4D14521A0C"
-			linked_quest: "641AD4D1666F216F"
-			shape: "circle"
-			size: 0.75d
-			x: 4.0d
-			y: 9.89d
-		}
-		{
-			id: "247FE187F9331537"
-			linked_quest: "3854FCA028E7DA86"
-			shape: "circle"
-			size: 0.75d
-			x: 6.0d
-			y: 0.16d
-		}
-		{
-			id: "6483A09A94C84586"
-			linked_quest: "2255E4EC6DEC344B"
-			shape: "circle"
-			size: 0.75d
-			x: 8.0d
-			y: 1.55d
-		}
-		{
-			id: "6CE38286BB9DD7E8"
-			linked_quest: "53F9B5E99466F04C"
-			shape: "circle"
-			size: 0.75d
-			x: 8.0d
-			y: 5.8d
-		}
-		{
-			id: "2948AB677058A0B5"
-			linked_quest: "6454F90D417AA7DE"
-			shape: "circle"
-			size: 0.75d
-			x: 10.0d
-			y: 3.22d
+			x: 0.0d
+			y: 11.0d
 		}
 	]
 	quests: [
 		{
-			dependencies: [
-				"4815FCA8115F74AF"
-				"0BE69C0DFB1D1CD7"
-			]
+			dependencies: ["788DC7B6BD541EEF"]
 			icon: {
 				id: "kubejs:powder/alumina"
 			}
@@ -107,14 +52,11 @@
 				id: "343850CE75902F24"
 				type: "checkmark"
 			}]
-			x: 6.0d
-			y: 1.42d
+			x: 2.0d
+			y: 0.0d
 		}
 		{
-			dependencies: [
-				"0B780EE48CD05E58"
-				"3854FCA028E7DA86"
-			]
+			dependencies: ["0B780EE48CD05E58"]
 			icon: {
 				components: {
 					"tfc:heat": { }
@@ -131,8 +73,8 @@
 				item: { components: { "tfc:heat": { } }, count: 1, id: "kubejs:powder/aluminum_hydroxide" }
 				type: "item"
 			}]
-			x: 8.0d
-			y: 0.29d
+			x: 4.0d
+			y: 0.0d
 		}
 		{
 			dependencies: ["6B87F51D19F89C36"]
@@ -149,11 +91,10 @@
 				item: { count: 1, id: "kubejs:powder/alumina" }
 				type: "item"
 			}]
-			x: 10.0d
+			x: 6.0d
 			y: 0.0d
 		}
 		{
-			dependencies: ["2255E4EC6DEC344B"]
 			icon: {
 				id: "tfc:ore/cryolite"
 			}
@@ -166,74 +107,29 @@
 				item: { count: 1, id: "tfc:ore/cryolite" }
 				type: "item"
 			}]
-			x: 10.0d
-			y: 1.4d
+			x: 6.0d
+			y: -2.0d
 		}
 		{
 			dependencies: [
 				"6DD6D46FA3B80E2E"
 				"27C952226E154D04"
-				"10B98D1834C794B2"
-				"6454F90D417AA7DE"
 			]
 			icon: {
 				id: "kubejs:powder/alumina"
 			}
 			id: "1F62C2C534E37F80"
-			shape: "circle"
-			size: 1.5d
+			shape: "rsquare"
+			size: 2.0d
 			tasks: [{
 				id: "085E507845AC3C66"
 				type: "checkmark"
 			}]
-			x: 12.0d
-			y: 2.37d
+			x: 8.5d
+			y: 0.0d
 		}
 		{
-			dependencies: ["39A3BB2B390D4EAA"]
-			icon: {
-				id: "chemica:rutile_dust"
-			}
-			id: "6300E546FCD8A0DA"
-			shape: "circle"
-			size: 1.0d
-			tasks: [{
-				consume_items: false
-				count: 8L
-				id: "7AC8044169454DCD"
-				item: { count: 1, id: "chemica:rutile_dust" }
-				type: "item"
-			}]
-			x: 0.0d
-			y: 6.2d
-		}
-		{
-			dependencies: [
-				"6300E546FCD8A0DA"
-				"0776ACF8377E0947"
-			]
-			icon: {
-				id: "kubejs:powder/alumina"
-			}
-			id: "02AA0240CEB7F737"
-			shape: "circle"
-			size: 1.0d
-			tasks: [{
-				fluid: {
-					amount: 1000
-					id: "chemica:titanium_tetrachloride"
-				}
-				id: "0BB3BF059332A2EB"
-				type: "fluid"
-			}]
-			x: 2.0d
-			y: 4.94d
-		}
-		{
-			dependencies: [
-				"0776ACF8377E0947"
-				"10B98D1834C794B2"
-			]
+			dependencies: ["0776ACF8377E0947"]
 			icon: {
 				id: "kubejs:powder/magnesia"
 			}
@@ -256,19 +152,19 @@
 				}
 			]
 			x: 2.0d
-			y: 3.54d
+			y: 7.0d
 		}
 		{
 			dependencies: [
-				"02AA0240CEB7F737"
+				"7ADA597F285D8A92"
 				"2E4797701C350AB6"
 			]
 			icon: {
 				id: "kubejs:crude_titanium_sponge"
 			}
 			id: "5F182F730599A93F"
-			shape: "circle"
-			size: 1.5d
+			shape: "rsquare"
+			size: 2.0d
 			tasks: [{
 				consume_items: false
 				count: 2L
@@ -276,8 +172,29 @@
 				item: { count: 1, id: "kubejs:crude_titanium_sponge" }
 				type: "item"
 			}]
-			x: 4.0d
-			y: 4.04d
+			x: 2.5d
+			y: 5.0d
+		}
+		{
+			dependencies: ["5F182F730599A93F"]
+			icon: {
+				components: {
+					"tfc:heat": { }
+				}
+				id: "kubejs:zirconium_sponge"
+			}
+			id: "67A19D9014F54314"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				count: 4L
+				id: "70E48CAC0A17CB44"
+				item: { components: { "tfc:heat": { } }, count: 1, id: "kubejs:zirconium_sponge" }
+				type: "item"
+			}]
+			x: 2.5d
+			y: 2.5d
 		}
 		{
 			dependencies: ["5F182F730599A93F"]
@@ -294,8 +211,8 @@
 				item: { count: 1, id: "kubejs:titanium_sponge" }
 				type: "item"
 			}]
-			x: 6.0d
-			y: 3.71d
+			x: 5.0d
+			y: 5.0d
 		}
 		{
 			dependencies: ["00244F00EDCE135B"]
@@ -311,29 +228,26 @@
 				item: { count: 1, id: "kubejs:titanium_electrode" }
 				type: "item"
 			}]
-			x: 8.0d
-			y: 4.54d
+			x: 7.0d
+			y: 5.0d
 		}
 		{
-			dependencies: [
-				"075B0E1A415C2324"
-				"53F9B5E99466F04C"
-			]
+			dependencies: ["075B0E1A415C2324"]
 			icon: {
 				id: "kubejs:powder/alumina"
 			}
 			id: "691FF0F8B55C859C"
-			shape: "circle"
-			size: 1.0d
+			shape: "gear"
+			size: 2.5d
 			tasks: [{
 				id: "337F0DE65A227E4E"
 				type: "checkmark"
 			}]
-			x: 10.0d
-			y: 4.96d
+			x: 9.75d
+			y: 5.0d
 		}
 		{
-			dependencies: ["6300E546FCD8A0DA"]
+			dependencies: ["3B8D69CA5AD743F7"]
 			icon: {
 				id: "kubejs:powder/beta_spodumene"
 			}
@@ -348,13 +262,10 @@
 				type: "item"
 			}]
 			x: 2.0d
-			y: 7.46d
+			y: 11.0d
 		}
 		{
-			dependencies: [
-				"7835A76AB5CC95DD"
-				"35321E7E9226B41D"
-			]
+			dependencies: ["7835A76AB5CC95DD"]
 			icon: {
 				id: "kubejs:powder/lithium_carbonate"
 			}
@@ -369,13 +280,10 @@
 				type: "item"
 			}]
 			x: 4.0d
-			y: 8.63d
+			y: 11.0d
 		}
 		{
-			dependencies: [
-				"2DA56D89F1103A61"
-				"641AD4D1666F216F"
-			]
+			dependencies: ["2DA56D89F1103A61"]
 			icon: {
 				components: {
 					"tfc:heat": { }
@@ -392,13 +300,10 @@
 				type: "item"
 			}]
 			x: 6.0d
-			y: 9.26d
+			y: 11.0d
 		}
 		{
-			dependencies: [
-				"23206F2F3C607C2C"
-				"7835A76AB5CC95DD"
-			]
+			dependencies: ["3B8D69CA5AD743F7"]
 			icon: {
 				id: "kubejs:powder/beryllium_fluoride"
 			}
@@ -412,14 +317,11 @@
 				item: { count: 1, id: "kubejs:powder/beryllium_fluoride" }
 				type: "item"
 			}]
-			x: 4.0d
-			y: 6.09d
+			x: 2.0d
+			y: 13.0d
 		}
 		{
-			dependencies: [
-				"0BE69C0DFB1D1CD7"
-				"2E4797701C350AB6"
-			]
+			dependencies: ["0BE69C0DFB1D1CD7"]
 			icon: {
 				components: {
 					"tfc:heat": { }
@@ -428,38 +330,16 @@
 			}
 			id: "6595BDDFC4A9B120"
 			optional: true
-			shape: "circle"
-			size: 1.0d
+			shape: "square"
+			size: 0.75d
 			tasks: [{
 				consume_items: false
 				id: "79BDABCBFADE9B66"
 				item: { components: { "tfc:heat": { } }, count: 1, id: "tfc_metallurgy:metal/dust/beryllium" }
 				type: "item"
 			}]
-			x: 6.0d
-			y: 6.51d
-		}
-		{
-			dependencies: ["5F182F730599A93F"]
-			icon: {
-				components: {
-					"tfc:heat": { }
-				}
-				id: "kubejs:zirconium_sponge"
-			}
-			id: "67A19D9014F54314"
-			optional: true
-			shape: "circle"
-			size: 1.0d
-			tasks: [{
-				consume_items: false
-				count: 4L
-				id: "70E48CAC0A17CB44"
-				item: { components: { "tfc:heat": { } }, count: 1, id: "kubejs:zirconium_sponge" }
-				type: "item"
-			}]
-			x: 6.0d
-			y: 5.11d
+			x: 4.0d
+			y: 13.0d
 		}
 	]
 }

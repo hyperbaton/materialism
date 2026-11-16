@@ -2,101 +2,32 @@
 	default_hide_dependency_lines: false
 	default_quest_shape: ""
 	filename: "electronics"
-	group: "494F2A100505BD58"
+	group: "487F9426BD01CD7B"
 	icon: {
 		id: "tfmg:circuit_board"
 	}
 	id: "546908DF1439FA40"
 	images: [ ]
-	order_index: 11
+	order_index: 6
 	quest_links: [
 		{
-			id: "13922CB902A3CFF4"
-			linked_quest: "0776ACF8377E0947"
+			id: "2E24DDC5A55D5F99"
+			linked_quest: "5B441F4906DCBB40"
 			shape: "circle"
-			size: 0.75d
 			x: 0.0d
-			y: 0.07d
-		}
-		{
-			id: "3CE8851CDD8BB919"
-			linked_quest: "641AD4D1666F216F"
-			shape: "circle"
-			size: 0.75d
-			x: 0.0d
-			y: 1.19d
-		}
-		{
-			id: "314C5A0B46BC4EC9"
-			linked_quest: "46D52B2F8BE7381A"
-			shape: "circle"
-			size: 0.75d
-			x: 4.0d
-			y: 1.89d
-		}
-		{
-			id: "6BA35186DA37389F"
-			linked_quest: "0A50238BB214541A"
-			shape: "circle"
-			size: 0.75d
-			x: 6.0d
 			y: 0.0d
 		}
 		{
-			id: "5AE1D5DB17620879"
-			linked_quest: "3320714C9C1C23A1"
+			id: "7ABBE1A3D0166E64"
+			linked_quest: "3B50A4885DD5601D"
 			shape: "circle"
-			size: 0.75d
-			x: 6.0d
-			y: 2.52d
-		}
-		{
-			id: "1743948942F751C2"
-			linked_quest: "5F3ABFCF7A206BA4"
-			shape: "circle"
-			size: 0.75d
-			x: 8.0d
-			y: 3.22d
-		}
-		{
-			id: "26156DF40076967B"
-			linked_quest: "457B13554BABAED7"
-			shape: "circle"
-			size: 0.75d
-			x: 10.0d
-			y: 2.96d
-		}
-		{
-			id: "300F1395AADC0677"
-			linked_quest: "51A427A469BA737E"
-			shape: "circle"
-			size: 0.75d
-			x: 10.0d
-			y: 4.08d
-		}
-		{
-			id: "0391382BE7CBEFC6"
-			linked_quest: "400C00A759731B57"
-			shape: "circle"
-			size: 0.75d
-			x: 12.0d
-			y: 4.4d
-		}
-		{
-			id: "088CDAFC766E2168"
-			linked_quest: "1601BE2C7B5145FF"
-			shape: "circle"
-			size: 0.75d
-			x: 12.0d
-			y: 5.52d
+			x: 0.0d
+			y: 4.5d
 		}
 	]
 	quests: [
 		{
-			dependencies: [
-				"0776ACF8377E0947"
-				"641AD4D1666F216F"
-			]
+			dependencies: ["5B441F4906DCBB40"]
 			icon: {
 				id: "tfmg:silicon_ingot"
 			}
@@ -108,7 +39,7 @@
 				type: "checkmark"
 			}]
 			x: 2.0d
-			y: 0.63d
+			y: 0.0d
 		}
 		{
 			dependencies: ["1CEDB6ABE2820016"]
@@ -116,7 +47,7 @@
 				id: "kubejs:polysilicon"
 			}
 			id: "7AE04C072ECDE239"
-			shape: "circle"
+			shape: "rsquare"
 			size: 1.5d
 			tasks: [{
 				consume_items: false
@@ -125,13 +56,13 @@
 				item: { count: 1, id: "kubejs:polysilicon" }
 				type: "item"
 			}]
-			x: 4.0d
-			y: 0.63d
+			x: 4.25d
+			y: 0.0d
 		}
 		{
 			dependencies: [
 				"7AE04C072ECDE239"
-				"46D52B2F8BE7381A"
+				"0876427AC2E90A23"
 			]
 			icon: {
 				id: "tfmg:n_semiconductor"
@@ -153,14 +84,45 @@
 					type: "item"
 				}
 			]
-			x: 6.0d
-			y: 1.26d
+			x: 6.5d
+			y: 0.0d
 		}
 		{
-			dependencies: [
-				"37863C291329083A"
-				"0A50238BB214541A"
-			]
+			icon: {
+				id: "chemica:phosphorus_dust"
+			}
+			id: "0876427AC2E90A23"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				id: "39E8FF0D971C27DF"
+				item: { count: 1, id: "chemica:phosphorus_dust" }
+				type: "item"
+			}]
+			x: 6.5d
+			y: 2.0d
+		}
+		{
+			dependencies: ["37863C291329083A"]
+			icon: {
+				id: "electroenergetics:diode"
+			}
+			id: "4394E18CCEF6A7A2"
+			optional: true
+			shape: "square"
+			size: 0.75d
+			tasks: [{
+				consume_items: false
+				id: "5A5328613FE8A1EA"
+				item: { count: 1, id: "electroenergetics:diode" }
+				type: "item"
+			}]
+			x: 6.5d
+			y: -2.0d
+		}
+		{
+			dependencies: ["37863C291329083A"]
 			icon: {
 				id: "tfmg:transistor"
 			}
@@ -174,66 +136,64 @@
 				item: { count: 1, id: "tfmg:transistor" }
 				type: "item"
 			}]
-			x: 8.0d
-			y: 0.56d
-		}
-		{
-			dependencies: [
-				"37863C291329083A"
-				"3320714C9C1C23A1"
-			]
-			icon: {
-				id: "electroenergetics:diode"
-			}
-			id: "4394E18CCEF6A7A2"
-			optional: true
-			shape: "circle"
-			size: 1.0d
-			tasks: [{
-				consume_items: false
-				id: "5A5328613FE8A1EA"
-				item: { count: 1, id: "electroenergetics:diode" }
-				type: "item"
-			}]
-			x: 8.0d
-			y: 1.96d
+			x: 8.5d
+			y: 0.0d
 		}
 		{
 			dependencies: [
 				"1D00170C37DC4C94"
-				"5F3ABFCF7A206BA4"
+				"068BB6F63983B6F7"
 			]
 			icon: {
 				id: "tfmg:circuit_board"
 			}
 			id: "01379EB0C708704C"
-			shape: "circle"
-			size: 1.5d
+			shape: "rsquare"
+			size: 2.0d
 			tasks: [{
 				consume_items: false
 				id: "375BD13F77E4E341"
 				item: { count: 1, id: "tfmg:circuit_board" }
 				type: "item"
 			}]
-			x: 10.0d
-			y: 1.7d
+			x: 11.0d
+			y: 0.0d
 		}
 		{
 			dependencies: ["01379EB0C708704C"]
 			icon: {
-				id: "tfmg:fireproof_chemical_vat"
+				id: "computercraft:computer_normal"
 			}
-			id: "6454F90D417AA7DE"
-			shape: "circle"
-			size: 1.5d
+			id: "70B9444C12F48A8E"
+			optional: true
+			shape: "square"
+			size: 0.75d
 			tasks: [{
 				consume_items: false
-				id: "4A76CCBA99836F60"
-				item: { count: 1, id: "tfmg:fireproof_chemical_vat" }
+				id: "1CD419107002F08F"
+				item: { count: 1, id: "computercraft:computer_normal" }
 				type: "item"
 			}]
-			x: 12.0d
-			y: 1.74d
+			x: 11.0d
+			y: -2.5d
+		}
+		{
+			dependencies: ["70B9444C12F48A8E"]
+			icon: {
+				id: "create_power_loader:andesite_chunk_loader"
+			}
+			id: "11EF275C1455EC4E"
+			optional: true
+			shape: "square"
+			size: 0.75d
+			tasks: [{
+				consume_items: false
+				id: "2F7A64E45696E2A2"
+				item: { count: 1, id: "create_power_loader:andesite_chunk_loader" }
+				type: "item"
+			}]
+			x: 11.0d
+			y: -4.0d
 		}
 		{
 			dependencies: ["6454F90D417AA7DE"]
@@ -242,8 +202,8 @@
 			}
 			id: "7D5A493EDE67E8E5"
 			optional: true
-			shape: "circle"
-			size: 1.0d
+			shape: "square"
+			size: 0.75d
 			tasks: [{
 				consume_items: false
 				count: 8L
@@ -251,52 +211,168 @@
 				item: { count: 1, id: "kubejs:silicon_wafer" }
 				type: "item"
 			}]
-			x: 14.0d
-			y: 1.74d
+			x: 14.25d
+			y: 2.75d
 		}
 		{
-			dependencies: [
-				"01379EB0C708704C"
-				"457B13554BABAED7"
-				"51A427A469BA737E"
-			]
+			dependencies: ["01379EB0C708704C"]
 			icon: {
-				id: "computercraft:computer_normal"
+				id: "tfmg:fireproof_chemical_vat"
 			}
-			id: "70B9444C12F48A8E"
-			optional: true
+			id: "6454F90D417AA7DE"
+			shape: "gear"
+			size: 2.5d
+			tasks: [{
+				consume_items: false
+				id: "4A76CCBA99836F60"
+				item: { count: 1, id: "tfmg:fireproof_chemical_vat" }
+				type: "item"
+			}]
+			x: 14.25d
+			y: 0.0d
+		}
+		{
+			dependencies: ["3B50A4885DD5601D"]
+			icon: {
+				id: "create_new_age:netherite_magnet"
+			}
+			id: "04C6B486076D1CEF"
 			shape: "circle"
 			size: 1.0d
 			tasks: [{
 				consume_items: false
-				id: "1CD419107002F08F"
-				item: { count: 1, id: "computercraft:computer_normal" }
+				count: 8L
+				id: "08F87C9F07692F40"
+				item: { count: 1, id: "create_new_age:netherite_magnet" }
 				type: "item"
 			}]
-			x: 12.0d
-			y: 3.14d
+			x: 2.0d
+			y: 4.5d
 		}
 		{
-			dependencies: [
-				"70B9444C12F48A8E"
-				"1601BE2C7B5145FF"
-				"400C00A759731B57"
-			]
+			dependencies: ["04C6B486076D1CEF"]
 			icon: {
-				id: "create_power_loader:andesite_chunk_loader"
+				id: "create_new_age:reinforced_motor"
 			}
-			id: "11EF275C1455EC4E"
+			id: "608B113AC68F951A"
 			optional: true
+			shape: "square"
+			size: 0.75d
+			tasks: [{
+				consume_items: false
+				id: "54CC8D1118ACAF84"
+				item: { components: { "ftbfiltersystem:filter": "ftbfiltersystem:or(ftbfiltersystem:item(create_new_age:advanced_motor)ftbfiltersystem:item(create_new_age:reinforced_motor))" }, count: 1, id: "ftbfiltersystem:smart_filter" }
+				type: "item"
+			}]
+			x: 2.0d
+			y: 6.5d
+		}
+		{
+			dependencies: ["04C6B486076D1CEF"]
+			icon: {
+				id: "tfmg:resistor"
+			}
+			id: "7EF92D269E88AAE9"
 			shape: "circle"
 			size: 1.0d
 			tasks: [{
 				consume_items: false
-				id: "2F7A64E45696E2A2"
-				item: { count: 1, id: "create_power_loader:andesite_chunk_loader" }
+				count: 2L
+				id: "6575D37BF4C00496"
+				item: { count: 1, id: "tfmg:resistor" }
 				type: "item"
 			}]
-			x: 14.0d
-			y: 4.36d
+			x: 4.0d
+			y: 4.5d
+		}
+		{
+			dependencies: ["7EF92D269E88AAE9"]
+			icon: {
+				id: "tfmg:capacitor"
+			}
+			id: "068BB6F63983B6F7"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				count: 2L
+				id: "53201B3F75DFDD80"
+				item: { count: 1, id: "tfmg:capacitor" }
+				type: "item"
+			}]
+			x: 6.0d
+			y: 4.5d
+		}
+		{
+			dependencies: ["068BB6F63983B6F7"]
+			icon: {
+				id: "tfmg:polarizer"
+			}
+			id: "6D74C28727B21311"
+			shape: "rsquare"
+			size: 1.5d
+			tasks: [{
+				consume_items: false
+				id: "215EBB5180D57FD9"
+				item: { count: 1, id: "tfmg:polarizer" }
+				type: "item"
+			}]
+			x: 8.25d
+			y: 4.5d
+		}
+		{
+			dependencies: ["6D74C28727B21311"]
+			icon: {
+				id: "tfmg:magnet"
+			}
+			id: "4083C43A1E56A5DF"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				count: 2L
+				id: "5984A2C69BE7B835"
+				item: { count: 1, id: "tfmg:magnet" }
+				type: "item"
+			}]
+			x: 10.5d
+			y: 4.5d
+		}
+		{
+			dependencies: ["4083C43A1E56A5DF"]
+			icon: {
+				id: "create_new_age:layered_magnet"
+			}
+			id: "61F7165D8EE79AE3"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				count: 8L
+				id: "68AB6F4B97F9EB3D"
+				item: { count: 1, id: "create_new_age:layered_magnet" }
+				type: "item"
+			}]
+			x: 12.5d
+			y: 4.5d
+		}
+		{
+			dependencies: ["61F7165D8EE79AE3"]
+			icon: {
+				id: "create_new_age:fluxuated_magnetite"
+			}
+			id: "3DFE5F054BCECF9F"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				count: 8L
+				id: "1A4E5A9DFFB4BA52"
+				item: { count: 1, id: "create_new_age:fluxuated_magnetite" }
+				type: "item"
+			}]
+			x: 14.5d
+			y: 4.5d
 		}
 	]
 }

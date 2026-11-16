@@ -1,0 +1,408 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "copper"
+	group: "577AA6560051154F"
+	icon: {
+		components: {
+			"tfc:heat": { }
+		}
+		id: "tfc:metal/ingot/copper"
+	}
+	id: "6FF7B79A48B3DB3D"
+	images: [ ]
+	order_index: 1
+	quest_links: [{
+		id: "673036CEB387B0C5"
+		linked_quest: "1E09D11E3BB760BE"
+		shape: "circle"
+		x: 0.0d
+		y: 0.0d
+	}]
+	quests: [
+		{
+			dependencies: ["1E09D11E3BB760BE"]
+			icon: {
+				components: {
+					"tfc:heat": { }
+				}
+				id: "tfc:ore/small_malachite"
+			}
+			id: "5F85A814E91061BD"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				count: 10L
+				id: "3AF6D8A11D002493"
+				item: { components: { "ftbfiltersystem:filter": "ftbfiltersystem:or(ftbfiltersystem:item(tfc:ore/small_native_copper)ftbfiltersystem:item(tfc:ore/small_malachite)ftbfiltersystem:item(tfc:ore/small_tetrahedrite))" }, count: 1, id: "ftbfiltersystem:smart_filter" }
+				type: "item"
+			}]
+			x: 2.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["5F85A814E91061BD"]
+			icon: {
+				components: {
+					"tfc:heat": { }
+				}
+				id: "tfc:ore/normal_malachite"
+			}
+			id: "300538F0CC45A949"
+			shape: "diamond"
+			size: 1.0d
+			tasks: [{
+				id: "26590C4C34822FC9"
+				type: "checkmark"
+			}]
+			x: 2.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["5F85A814E91061BD"]
+			icon: {
+				id: "tfc:pan/empty"
+			}
+			id: "06A47D11DC61382D"
+			optional: true
+			shape: "square"
+			size: 0.75d
+			tasks: [{
+				consume_items: false
+				id: "73DBCBBC13FDA5E8"
+				item: { count: 1, id: "tfc:pan/empty" }
+				type: "item"
+			}]
+			x: 2.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["5F85A814E91061BD"]
+			icon: {
+				components: {
+					"tfc:heat": { }
+				}
+				id: "tfc:ceramic/unfired_ingot_mold"
+			}
+			id: "5D9CEC2405F911FD"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				id: "6DD32EB72188F5D6"
+				item: { components: { "tfc:heat": { } }, count: 1, id: "tfc:ceramic/unfired_ingot_mold" }
+				type: "item"
+			}]
+			x: 4.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["5D9CEC2405F911FD"]
+			icon: {
+				id: "tfc:ceramic/ingot_mold"
+			}
+			id: "2BC103FC65D2E80F"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				id: "2736D6F7E92A1617"
+				item: { count: 1, id: "tfc:ceramic/ingot_mold" }
+				type: "item"
+			}]
+			x: 6.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["2BC103FC65D2E80F"]
+			icon: {
+				components: {
+					"tfc:heat": { }
+				}
+				id: "tfchotornot:mittens"
+			}
+			id: "6BEC728503B8AF4B"
+			shape: "diamond"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				id: "15C9494FF490C1C6"
+				item: { components: { "tfc:heat": { } }, count: 1, id: "tfchotornot:mittens" }
+				type: "item"
+			}]
+			x: 6.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["6BEC728503B8AF4B"]
+			icon: {
+				components: {
+					"tfc:heat": { }
+				}
+				id: "tfchotornot:tongs/wood"
+			}
+			id: "3C2CD841DDF4C6D4"
+			optional: true
+			shape: "square"
+			size: 0.75d
+			tasks: [{
+				consume_items: false
+				id: "0BD8BF62FD3C2CC1"
+				item: { components: { "ftbfiltersystem:filter": "ftbfiltersystem:or(ftbfiltersystem:item(tfchotornot:tongs/bismuth)ftbfiltersystem:item(tfchotornot:tongs/bismuth_bronze)ftbfiltersystem:item(tfchotornot:tongs/black_bronze)ftbfiltersystem:item(tfchotornot:tongs/black_steel)ftbfiltersystem:item(tfchotornot:tongs/blue_steel)ftbfiltersystem:item(tfchotornot:tongs/brass)ftbfiltersystem:item(tfchotornot:tongs/bronze)ftbfiltersystem:item(tfchotornot:tongs/cast_iron)ftbfiltersystem:item(tfchotornot:tongs/copper)ftbfiltersystem:item(tfchotornot:tongs/gold)ftbfiltersystem:item(tfchotornot:tongs/nickel)ftbfiltersystem:item(tfchotornot:tongs/red_steel)ftbfiltersystem:item(tfchotornot:tongs/rose_gold)ftbfiltersystem:item(tfchotornot:tongs/silver)ftbfiltersystem:item(tfchotornot:tongs/steel)ftbfiltersystem:item(tfchotornot:tongs/sterling_silver)ftbfiltersystem:item(tfchotornot:tongs/tin)ftbfiltersystem:item(tfchotornot:tongs/wood)ftbfiltersystem:item(tfchotornot:tongs/wrought_iron)ftbfiltersystem:item(tfchotornot:tongs/zinc))" }, count: 1, id: "ftbfiltersystem:smart_filter" }
+				type: "item"
+			}]
+			x: 6.0d
+			y: 3.5d
+		}
+		{
+			dependencies: ["2BC103FC65D2E80F"]
+			icon: {
+				components: {
+					"tfc:heat": { }
+				}
+				id: "tfc:metal/ingot/copper"
+			}
+			id: "252DCBC3CE3A5C33"
+			shape: "rsquare"
+			size: 2.0d
+			tasks: [{
+				consume_items: false
+				id: "26B2CDD39B374B3C"
+				item: { components: { "tfc:heat": { } }, count: 1, id: "tfc:metal/ingot/copper" }
+				type: "item"
+			}]
+			x: 8.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["252DCBC3CE3A5C33"]
+			icon: {
+				id: "tfc:ceramic/vessel"
+			}
+			id: "77D5601EE082F689"
+			shape: "diamond"
+			size: 1.0d
+			tasks: [{
+				id: "3B6AFDBF8561637F"
+				type: "checkmark"
+			}]
+			x: 8.5d
+			y: -2.5d
+		}
+		{
+			dependencies: ["252DCBC3CE3A5C33"]
+			icon: {
+				id: "tfc:ceramic/pickaxe_head_mold"
+			}
+			id: "1E99D0D162476EE7"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				id: "3D14818D47AB0B40"
+				item: { count: 1, id: "tfc:ceramic/pickaxe_head_mold" }
+				type: "item"
+			}]
+			x: 11.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["1E99D0D162476EE7"]
+			icon: {
+				components: {
+					"tfc:heat": { }
+				}
+				id: "tfc:metal/chisel_head/copper"
+			}
+			id: "339E594BB30A4498"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				id: "593159A18565F052"
+				item: { components: { "ftbfiltersystem:filter": "ftbfiltersystem:or(ftbfiltersystem:item(tfc:metal/pickaxe_head/copper)ftbfiltersystem:item(tfc:metal/propick_head/copper)ftbfiltersystem:item(tfc:metal/saw_blade/copper)ftbfiltersystem:item(tfc:metal/chisel_head/copper))" }, count: 1, id: "ftbfiltersystem:smart_filter" }
+				type: "item"
+			}]
+			x: 13.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["339E594BB30A4498"]
+			icon: {
+				components: {
+					"tfc:heat": { }
+				}
+				id: "tfc:metal/chisel/copper"
+			}
+			id: "048F5A9A69345557"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				id: "6F02563047A1CD3F"
+				item: { components: { "ftbfiltersystem:filter": "ftbfiltersystem:item_tag(c:tools/chisel)" }, count: 1, id: "ftbfiltersystem:smart_filter" }
+				type: "item"
+			}]
+			x: 13.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["048F5A9A69345557"]
+			icon: {
+				id: "tfc:quern"
+			}
+			id: "0D809F0F7EE56D13"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				id: "4E27FAF9C41EBC50"
+				item: { count: 1, id: "tfc:quern" }
+				type: "item"
+			}]
+			x: 15.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["0D809F0F7EE56D13"]
+			icon: {
+				id: "tfc:powder/malachite"
+			}
+			id: "24FCCA662E4951DA"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				id: "593900AD802E7355"
+				item: { components: { "ftbfiltersystem:filter": "ftbfiltersystem:item_tag(materialism:powders/copper)" }, count: 1, id: "ftbfiltersystem:smart_filter" }
+				type: "item"
+			}]
+			x: 17.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["0D809F0F7EE56D13"]
+			icon: {
+				id: "kubejs:metal/dust/copper"
+			}
+			id: "704D22EC1A97FEC4"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				count: 20L
+				id: "4A7D6909A67F2041"
+				item: { count: 1, id: "kubejs:metal/dust/copper" }
+				type: "item"
+			}]
+			x: 15.0d
+			y: -3.5d
+		}
+		{
+			dependencies: ["339E594BB30A4498"]
+			icon: {
+				components: {
+					"tfc:heat": { }
+				}
+				id: "tfc:metal/saw/copper"
+			}
+			id: "793D0625A66AE2A8"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				id: "7C01C5936030E984"
+				item: { components: { "ftbfiltersystem:filter": "ftbfiltersystem:item_tag(c:tools/saw)" }, count: 1, id: "ftbfiltersystem:smart_filter" }
+				type: "item"
+			}]
+			x: 13.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["793D0625A66AE2A8"]
+			icon: {
+				id: "minecraft:bow"
+			}
+			id: "5CC3E6CA07BE0312"
+			optional: true
+			shape: "square"
+			size: 0.75d
+			tasks: [
+				{
+					consume_items: false
+					id: "39C579FA5602CC54"
+					item: { count: 1, id: "minecraft:bow" }
+					type: "item"
+				}
+				{
+					consume_items: false
+					count: 8L
+					id: "0D76925FBAD10464"
+					item: { count: 1, id: "minecraft:arrow" }
+					type: "item"
+				}
+			]
+			x: 13.0d
+			y: 3.5d
+		}
+		{
+			dependencies: ["339E594BB30A4498"]
+			icon: {
+				components: {
+					"tfc:heat": { }
+				}
+				id: "tfc:metal/pickaxe/copper"
+			}
+			id: "07E99D4D087CE8F0"
+			shape: "rsquare"
+			size: 1.5d
+			tasks: [{
+				consume_items: false
+				id: "1584DBF4B9504167"
+				item: { components: { "ftbfiltersystem:filter": "ftbfiltersystem:item_tag(c:tools/pickaxes)" }, count: 1, id: "ftbfiltersystem:smart_filter" }
+				type: "item"
+			}]
+			x: 15.25d
+			y: 0.0d
+		}
+		{
+			dependencies: ["07E99D4D087CE8F0"]
+			icon: {
+				components: {
+					"tfc:heat": { }
+				}
+				id: "tfc:metal/propick/copper"
+			}
+			id: "73B4D7C54619B949"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				id: "556D923548D5C8B1"
+				item: { components: { "ftbfiltersystem:filter": "ftbfiltersystem:item_tag(c:tools/propick)" }, count: 1, id: "ftbfiltersystem:smart_filter" }
+				type: "item"
+			}]
+			x: 17.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["73B4D7C54619B949"]
+			icon: {
+				components: {
+					"tfc:heat": { }
+				}
+				id: "tfc:metal/propick/copper"
+			}
+			id: "5D3ADCC4ECED777F"
+			shape: "gear"
+			size: 2.5d
+			tasks: [{
+				id: "4F890BF58E370DEC"
+				type: "checkmark"
+			}]
+			x: 20.25d
+			y: 0.0d
+		}
+	]
+}

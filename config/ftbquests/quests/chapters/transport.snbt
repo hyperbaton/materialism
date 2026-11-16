@@ -2,126 +2,45 @@
 	default_hide_dependency_lines: false
 	default_quest_shape: ""
 	filename: "transport"
-	group: "494F2A100505BD58"
+	group: "4DF6F75C72654E2C"
 	icon: {
 		id: "create:track"
 	}
 	id: "031B7D874776F795"
 	images: [ ]
-	order_index: 15
+	order_index: 2
 	quest_links: [
 		{
-			id: "25E723E04E50CD20"
-			linked_quest: "1542B28D2B2AE81F"
+			id: "49C7E4F3BC22BF98"
+			linked_quest: "641F53332629C0AE"
 			shape: "circle"
-			size: 0.75d
 			x: 0.0d
 			y: 0.0d
 		}
 		{
-			id: "49C7E4F3BC22BF98"
-			linked_quest: "1135582C6FA5A24D"
-			shape: "circle"
-			size: 0.75d
-			x: 0.0d
-			y: 2.03d
-		}
-		{
-			id: "46D61240BD864EEC"
-			linked_quest: "1EFA8A6BBD5D7031"
-			shape: "circle"
-			size: 0.75d
-			x: 0.0d
-			y: 3.15d
-		}
-		{
-			id: "12C9D38B3E7D002C"
-			linked_quest: "42A35D1AB65873B0"
-			shape: "circle"
-			size: 0.75d
-			x: 0.0d
-			y: 4.27d
-		}
-		{
-			id: "3943AC6F2B9D7CEE"
-			linked_quest: "520876E156CDA0F2"
-			shape: "circle"
-			size: 0.75d
-			x: 0.0d
-			y: 5.39d
-		}
-		{
-			id: "31B7AD24395877A9"
-			linked_quest: "1DC0C707DDC8A17D"
-			shape: "circle"
-			size: 0.75d
-			x: 0.0d
-			y: 6.51d
-		}
-		{
-			id: "3626B3A158F8D5C9"
-			linked_quest: "2A25435D4AD82924"
-			shape: "circle"
-			size: 0.75d
-			x: 0.0d
-			y: 7.63d
-		}
-		{
 			id: "7D4B5F5F8F0F9E97"
-			linked_quest: "400C00A759731B57"
+			linked_quest: "1762504B49554E6B"
 			shape: "circle"
-			size: 0.75d
-			x: 0.0d
-			y: 8.75d
+			x: 4.5d
+			y: 2.5d
 		}
 		{
 			id: "1A393C4B7516893E"
-			linked_quest: "0170480B29CC3824"
+			linked_quest: "72D7A1330C6A3D2E"
 			shape: "circle"
-			size: 0.75d
 			x: 0.0d
-			y: 10.29d
-		}
-		{
-			id: "5FFB752DAB06DEC7"
-			linked_quest: "23206F2F3C607C2C"
-			shape: "circle"
-			size: 0.75d
-			x: 0.0d
-			y: 13.09d
+			y: 5.5d
 		}
 	]
 	quests: [
 		{
-			dependencies: [
-				"1EFA8A6BBD5D7031"
-				"15857F56257596EE"
-				"1542B28D2B2AE81F"
-			]
-			icon: {
-				id: "railways:handcar"
-			}
-			id: "79147D3C025F735F"
-			optional: true
-			shape: "circle"
-			size: 1.0d
-			tasks: [{
-				consume_items: false
-				id: "798224DFB08F170B"
-				item: { count: 1, id: "railways:handcar" }
-				type: "item"
-			}]
-			x: 2.0d
-			y: 0.23d
-		}
-		{
-			dependencies: ["1135582C6FA5A24D"]
+			dependencies: ["641F53332629C0AE"]
 			icon: {
 				id: "create:track"
 			}
 			id: "3E5A9E3DFCF4EA22"
-			shape: "circle"
-			size: 1.0d
+			shape: "rsquare"
+			size: 1.5d
 			tasks: [{
 				consume_items: false
 				count: 16L
@@ -129,11 +48,32 @@
 				item: { count: 1, id: "create:track" }
 				type: "item"
 			}]
-			x: 2.0d
-			y: 2.27d
+			x: 2.25d
+			y: 0.0d
 		}
 		{
-			dependencies: ["400C00A759731B57"]
+			dependencies: ["3E5A9E3DFCF4EA22"]
+			icon: {
+				id: "railways:handcar"
+			}
+			id: "79147D3C025F735F"
+			optional: true
+			shape: "square"
+			size: 0.75d
+			tasks: [{
+				consume_items: false
+				id: "798224DFB08F170B"
+				item: { count: 1, id: "railways:handcar" }
+				type: "item"
+			}]
+			x: 2.25d
+			y: 2.25d
+		}
+		{
+			dependencies: [
+				"3E5A9E3DFCF4EA22"
+				"1762504B49554E6B"
+			]
 			icon: {
 				id: "create:railway_casing"
 			}
@@ -147,14 +87,11 @@
 				item: { count: 1, id: "create:railway_casing" }
 				type: "item"
 			}]
-			x: 2.0d
-			y: 9.27d
+			x: 4.5d
+			y: 0.0d
 		}
 		{
-			dependencies: [
-				"0C6E38DEB042A686"
-				"1542B28D2B2AE81F"
-			]
+			dependencies: ["0C6E38DEB042A686"]
 			icon: {
 				id: "create:track_station"
 			}
@@ -175,16 +112,64 @@
 					type: "item"
 				}
 			]
-			x: 4.0d
-			y: 2.41d
+			x: 6.5d
+			y: 0.0d
 		}
 		{
-			dependencies: [
-				"1135582C6FA5A24D"
-				"7916D148A8C25365"
-				"71496D3549A1D7AC"
-				"28E92462F94F7A45"
-			]
+			icon: {
+				id: "electroenergetics:red_electric_motor"
+			}
+			id: "6F2677DE69AB3FC6"
+			optional: true
+			shape: "square"
+			size: 0.75d
+			tasks: [{
+				consume_items: false
+				id: "4DC87F3D5CA73CFD"
+				item: { count: 1, id: "electroenergetics:red_electric_motor" }
+				type: "item"
+			}]
+			x: 6.5d
+			y: -2.0d
+		}
+		{
+			dependencies: ["6F2677DE69AB3FC6"]
+			icon: {
+				id: "electroenergetics:catenary_holder"
+			}
+			id: "7F0C78ECD419B56C"
+			optional: true
+			shape: "square"
+			size: 0.75d
+			tasks: [{
+				consume_items: false
+				count: 4L
+				id: "3A4AC525E1CA230B"
+				item: { count: 1, id: "electroenergetics:catenary_holder" }
+				type: "item"
+			}]
+			x: 8.5d
+			y: -2.0d
+		}
+		{
+			dependencies: ["7F0C78ECD419B56C"]
+			icon: {
+				id: "electroenergetics:pantograph"
+			}
+			id: "3499804F8702214E"
+			optional: true
+			shape: "square"
+			size: 0.75d
+			tasks: [{
+				consume_items: false
+				id: "04766B6145CA9675"
+				item: { components: { "ftbfiltersystem:filter": "ftbfiltersystem:or(ftbfiltersystem:item(electroenergetics:pantograph)ftbfiltersystem:item(electroenergetics:rail_contact_shoe))" }, count: 1, id: "ftbfiltersystem:smart_filter" }
+				type: "item"
+			}]
+			x: 10.5d
+			y: -2.0d
+		}
+		{
 			icon: {
 				id: "create:sturdy_sheet"
 			}
@@ -197,130 +182,90 @@
 				item: { count: 1, id: "create:sturdy_sheet" }
 				type: "item"
 			}]
-			x: 2.0d
-			y: 3.67d
+			x: 6.5d
+			y: 2.0d
 		}
 		{
-			dependencies: [
-				"401444CCB5108E24"
-				"192B14FD9C954D1B"
-			]
-			icon: {
-				id: "create:schedule"
-			}
-			id: "30A70A42790719CD"
-			shape: "circle"
-			size: 1.0d
-			tasks: [{
-				consume_items: false
-				id: "721DD9B315E29C29"
-				item: { count: 1, id: "create:schedule" }
-				type: "item"
-			}]
-			x: 6.0d
-			y: 3.5d
-		}
-		{
-			dependencies: [
-				"400C00A759731B57"
-				"1DC0C707DDC8A17D"
-				"520876E156CDA0F2"
-				"745F1FEC5A1D24E3"
-				"42A35D1AB65873B0"
-				"18687C0E4557C87A"
-				"0170480B29CC3824"
-			]
-			icon: {
-				id: "electroenergetics:red_electric_motor"
-			}
-			id: "6F2677DE69AB3FC6"
-			optional: true
-			shape: "circle"
-			size: 1.0d
-			tasks: [{
-				consume_items: false
-				id: "4DC87F3D5CA73CFD"
-				item: { count: 1, id: "electroenergetics:red_electric_motor" }
-				type: "item"
-			}]
-			x: 2.0d
-			y: 6.47d
-		}
-		{
-			dependencies: [
-				"6F2677DE69AB3FC6"
-				"5DA6B795E01FC291"
-			]
-			icon: {
-				id: "electroenergetics:catenary_holder"
-			}
-			id: "7F0C78ECD419B56C"
-			optional: true
-			shape: "circle"
-			size: 1.0d
-			tasks: [{
-				consume_items: false
-				count: 4L
-				id: "3A4AC525E1CA230B"
-				item: { count: 1, id: "electroenergetics:catenary_holder" }
-				type: "item"
-			}]
-			x: 4.0d
-			y: 6.48d
-		}
-		{
-			dependencies: ["7F0C78ECD419B56C"]
-			icon: {
-				id: "electroenergetics:pantograph"
-			}
-			id: "3499804F8702214E"
-			optional: true
-			shape: "circle"
-			size: 1.0d
-			tasks: [{
-				consume_items: false
-				id: "04766B6145CA9675"
-				item: { components: { "ftbfiltersystem:filter": "ftbfiltersystem:or(ftbfiltersystem:item(electroenergetics:pantograph)ftbfiltersystem:item(electroenergetics:rail_contact_shoe))" }, count: 1, id: "ftbfiltersystem:smart_filter" }
-				type: "item"
-			}]
-			x: 6.0d
-			y: 6.48d
-		}
-		{
-			dependencies: [
-				"401444CCB5108E24"
-				"1772AFD39460A77C"
-			]
+			dependencies: ["401444CCB5108E24"]
 			icon: {
 				id: "railways:fuel_tank"
 			}
 			id: "2BD9C7CE8C074969"
 			optional: true
-			shape: "circle"
-			size: 1.0d
+			shape: "square"
+			size: 0.75d
 			tasks: [{
 				consume_items: false
 				id: "2EB3A14C042EBABA"
 				item: { count: 1, id: "railways:fuel_tank" }
 				type: "item"
 			}]
-			x: 4.0d
-			y: 4.56d
+			x: 8.5d
+			y: 2.0d
 		}
 		{
 			dependencies: [
-				"25E70BD2E241F3B8"
-				"1EFA8A6BBD5D7031"
-				"2A25435D4AD82924"
-				"514EEC713C07EA62"
+				"192B14FD9C954D1B"
+				"401444CCB5108E24"
 			]
+			icon: {
+				id: "create:schedule"
+			}
+			id: "30A70A42790719CD"
+			shape: "gear"
+			size: 2.5d
+			tasks: [{
+				consume_items: false
+				id: "721DD9B315E29C29"
+				item: { count: 1, id: "create:schedule" }
+				type: "item"
+			}]
+			x: 9.25d
+			y: 0.0d
+		}
+		{
+			dependencies: ["72D7A1330C6A3D2E"]
+			icon: {
+				id: "aeronautics:black_envelope"
+			}
+			id: "0FAB8C9EE20D8375"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				count: 4L
+				id: "34F2A19437ABC929"
+				item: { components: { "ftbfiltersystem:filter": "ftbfiltersystem:or(ftbfiltersystem:item(aeronautics:black_envelope)ftbfiltersystem:item(aeronautics:blue_envelope)ftbfiltersystem:item(aeronautics:brown_envelope)ftbfiltersystem:item(aeronautics:cyan_envelope)ftbfiltersystem:item(aeronautics:gray_envelope)ftbfiltersystem:item(aeronautics:green_envelope)ftbfiltersystem:item(aeronautics:light_blue_envelope)ftbfiltersystem:item(aeronautics:light_gray_envelope)ftbfiltersystem:item(aeronautics:lime_envelope)ftbfiltersystem:item(aeronautics:magenta_envelope)ftbfiltersystem:item(aeronautics:orange_envelope)ftbfiltersystem:item(aeronautics:pink_envelope)ftbfiltersystem:item(aeronautics:purple_envelope)ftbfiltersystem:item(aeronautics:red_envelope)ftbfiltersystem:item(aeronautics:white_envelope)ftbfiltersystem:item(aeronautics:yellow_envelope))" }, count: 1, id: "ftbfiltersystem:smart_filter" }
+				type: "item"
+			}]
+			x: 2.0d
+			y: 5.5d
+		}
+		{
+			dependencies: ["72D7A1330C6A3D2E"]
+			icon: {
+				id: "aeronautics:levitite"
+			}
+			id: "4B0A9149EAD22D08"
+			shape: "circle"
+			size: 1.0d
+			tasks: [{
+				consume_items: false
+				id: "6BDC749B1AAB0CA9"
+				item: { count: 1, id: "aeronautics:levitite" }
+				type: "item"
+			}]
+			x: 2.0d
+			y: 7.25d
+		}
+		{
 			icon: {
 				id: "offroad:wheel_mount"
 			}
 			id: "39FA5E67F94C4C89"
 			optional: true
-			shape: "circle"
-			size: 1.0d
+			shape: "square"
+			size: 0.75d
 			tasks: [
 				{
 					consume_items: false
@@ -335,43 +280,15 @@
 					type: "item"
 				}
 			]
-			x: 2.0d
-			y: 5.07d
+			x: 4.0d
+			y: 7.25d
 		}
 		{
-			dependencies: [
-				"58AAD5A29308D38F"
-				"6D88D10DAC055DBE"
-				"0170480B29CC3824"
-			]
-			icon: {
-				id: "aeronautics:black_envelope"
-			}
-			id: "0FAB8C9EE20D8375"
-			optional: true
-			shape: "circle"
-			size: 1.0d
-			tasks: [{
-				consume_items: false
-				count: 4L
-				id: "34F2A19437ABC929"
-				item: { components: { "ftbfiltersystem:filter": "ftbfiltersystem:or(ftbfiltersystem:item(aeronautics:black_envelope)ftbfiltersystem:item(aeronautics:blue_envelope)ftbfiltersystem:item(aeronautics:brown_envelope)ftbfiltersystem:item(aeronautics:cyan_envelope)ftbfiltersystem:item(aeronautics:gray_envelope)ftbfiltersystem:item(aeronautics:green_envelope)ftbfiltersystem:item(aeronautics:light_blue_envelope)ftbfiltersystem:item(aeronautics:light_gray_envelope)ftbfiltersystem:item(aeronautics:lime_envelope)ftbfiltersystem:item(aeronautics:magenta_envelope)ftbfiltersystem:item(aeronautics:orange_envelope)ftbfiltersystem:item(aeronautics:pink_envelope)ftbfiltersystem:item(aeronautics:purple_envelope)ftbfiltersystem:item(aeronautics:red_envelope)ftbfiltersystem:item(aeronautics:white_envelope)ftbfiltersystem:item(aeronautics:yellow_envelope))" }, count: 1, id: "ftbfiltersystem:smart_filter" }
-				type: "item"
-			}]
-			x: 2.0d
-			y: 12.07d
-		}
-		{
-			dependencies: [
-				"400C00A759731B57"
-				"2A25435D4AD82924"
-				"5BA8022214FF6AF5"
-			]
+			dependencies: ["1762504B49554E6B"]
 			icon: {
 				id: "aeronautics:propeller_bearing"
 			}
 			id: "4433C839478DCF32"
-			optional: true
 			shape: "circle"
 			size: 1.0d
 			tasks: [{
@@ -380,19 +297,15 @@
 				item: { count: 1, id: "aeronautics:propeller_bearing" }
 				type: "item"
 			}]
-			x: 2.0d
-			y: 7.87d
+			x: 4.5d
+			y: 5.5d
 		}
 		{
-			dependencies: [
-				"400C00A759731B57"
-				"701590A8BA95915A"
-			]
+			dependencies: ["1762504B49554E6B"]
 			icon: {
 				id: "aeronautics:adjustable_burner"
 			}
 			id: "5A5D0574E0412953"
-			optional: true
 			shape: "circle"
 			size: 1.0d
 			tasks: [{
@@ -401,29 +314,8 @@
 				item: { count: 1, id: "aeronautics:adjustable_burner" }
 				type: "item"
 			}]
-			x: 2.0d
-			y: 10.67d
-		}
-		{
-			dependencies: [
-				"23206F2F3C607C2C"
-				"0170480B29CC3824"
-			]
-			icon: {
-				id: "aeronautics:levitite"
-			}
-			id: "4B0A9149EAD22D08"
-			optional: true
-			shape: "circle"
-			size: 1.0d
-			tasks: [{
-				consume_items: false
-				id: "6BDC749B1AAB0CA9"
-				item: { count: 1, id: "aeronautics:levitite" }
-				type: "item"
-			}]
-			x: 2.0d
-			y: 13.47d
+			x: 6.5d
+			y: 5.5d
 		}
 	]
 }
