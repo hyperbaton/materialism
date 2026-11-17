@@ -167,6 +167,7 @@ const EXPLICIT = [
     ['minerals', 'Minerals', /^(tfc:ore\/(bituminous_coal|borax|cinnabar|cryolite|graphite|gypsum|halite|lignite|saltpeter|sulfur|sylvite)|tfc_metallurgy:ore\/certus_quartz|kubejs:ore\/(fluorite|phosphorite)|tfcvolcanoes:mineral\/(?!powder\/)[a-z_]+(\/prospected)?)$/],
     ['mineral_powders', 'Mineral Powders', /^(tfc:powder\/(flux|graphite|kaolinite|lime|salt|saltpeter|soda_ash|sulfur|sylvite)|tfcvolcanoes:mineral\/powder\/[a-z_]+|chemica:(fluorite|phosphorus)_dust)$/],
     ['ore_powders', 'Ore Powders', /^tfc:powder\/(bismuthinite|cassiterite|garnierite|hematite|limonite|magnetite|malachite|native_copper|native_gold|native_silver|sphalerite|tetrahedrite)$/],
+    ['create_metal_blocks', 'Metal Blocks (Create)', /^(create:(brass|zinc)_block|createaddition:electrum_block|tfmg:(aluminum|cast_iron|lead|lithium|nickel|steel)_block|vintageimprovements:vanadium_block|createbigcannons:(bronze|cast_iron|steel|nethersteel)_block)$/],
     ['spindles', 'Spindles', /^(tfc:(spindle|ceramic\/(unfired_)?spindle_head)|tfc_metal_things:metal\/spindle(_head)?\/[a-z_]+)$/],
     ['handstones', 'Handstones', /^(tfc:handstone|tfc_metal_things:metal\/handstone\/[a-z_]+)$/],
     ['support_beams', 'Support Beams', /^((tfc|afc):wood\/(vertical_|horizontal_)?support\/[a-z_]+|tfc_metal_things:metal\/support\/[a-z_]+)$/],
