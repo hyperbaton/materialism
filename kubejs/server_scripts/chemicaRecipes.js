@@ -160,7 +160,7 @@ ServerEvents.recipes(event => {
 
   // Fluorite and phosphorite (kubejs ores, see addBlocks.js) are the source of Chemica's fluorite and phosphorus dust
   event.recipes.create.crushing(['3x chemica:fluorite_dust', CreateItem.of('chemica:fluorite_dust', 0.5)], 'kubejs:ore/fluorite').processingTime(250)
-  event.recipes.create.crushing(['3x chemica:phosphorus_dust', CreateItem.of('chemica:phosphorus_dust', 0.5), CreateItem.of('chemica:arsenic_dust', 0.03)], 'kubejs:ore/phosphorite').processingTime(250)
+  event.recipes.create.crushing(['3x chemica:phosphorus_dust', CreateItem.of('chemica:phosphorus_dust', 0.5)], 'kubejs:ore/phosphorite').processingTime(250)
 
   // The new ores can collapse like any other ore in their rock
   const rockOres = {

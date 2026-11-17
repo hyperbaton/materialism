@@ -295,12 +295,13 @@ ServerEvents.recipes(event => {
     results: [{ id: 'tfc_metallurgy:metal/boron', amount: 20 }]
   }).id(id('vat/boron_melting'))
 
-  // Cobalt: roasting in air drives off sulfur as SO2, then sulfuric acid leaches the calcine
+  // Cobalt: roasting cobaltite (CoAsS) drives off sulfur as SO2 and arsenic as white arsenic fume, then sulfuric acid leaches the calcine
   event.remove({ id: 'chemica:blasting/crushed_raw_cobalt' })
   event.custom({
     type: 'vintageimprovements:pressurizing',
     ingredients: [{ item: 'chemica:crushed_raw_cobalt' }, fluid('kubejs:oxygen', 100)],
-    results: [{ id: 'kubejs:powder/roasted_cobaltite' }, { id: 'vintageimprovements:sulfur_dioxide', amount: 100 }],
+    results: [{ id: 'kubejs:powder/roasted_cobaltite' }, { id: 'chemica:arsenic_dust', chance: 0.5 },
+      { id: 'vintageimprovements:sulfur_dioxide', amount: 100 }],
     heat_requirement: 'heated',
     processing_time: 100
   }).id(id('pressurizing/cobaltite_roasting'))
