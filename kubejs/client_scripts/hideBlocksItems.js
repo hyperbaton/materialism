@@ -213,6 +213,7 @@ RecipeViewerEvents.removeEntries('item', event => {
     // Hide aeronautics items bypassed by TFC recipes
     r('aeronautics:end_stone_powder')
     r('aeronautics:levitite_blend')
+    r('aeronautics:levitite_blend_bucket')
     r('simulated:spring')
 
     // Hide butcher items for mobs that don't exist in TFC worlds
@@ -672,7 +673,7 @@ RecipeViewerEvents.removeEntries('item', event => {
     event.remove(/^kubejs:plastic_sheet\/.*/)
     // Sequenced assembly transitional items
     ;['incomplete_caramel_apple', 'incomplete_photovoltaic_panel', 'incomplete_blast_furnace_reinforcement',
-      'wood_plating_blank', 'incomplete_daylight_detector'].forEach(item => r('kubejs:' + item))
+      'wood_plating_blank', 'incomplete_daylight_detector', 'incomplete_metal_support'].forEach(item => r('kubejs:' + item))
     r('tfmg:plastic_block')
     r('tfmg:molten_plastic_bucket')
 
@@ -726,6 +727,11 @@ RecipeViewerEvents.removeEntries('item', event => {
       'rotor', 'stator'].forEach(i => r('tfmg:' + i));
     event.remove(/^tfmg:([a-z_]+_)?multimeter$/);
     r('tfmg:unfinished_generator');
+    // Vanilla copper and iron doors (metal doors come from TFC Metal Things and Create)
+    event.remove(/^minecraft:(waxed_)?((exposed|weathered|oxidized)_)?copper_(door|trapdoor)$/)
+    r('minecraft:iron_door')
+    r('tfc:plant/dead_bush')
+    r('tfc:plant/potted/dead_bush')
     // Duplicate bio chains (see biofuelRecipes.js)
     ;['seed_oil_bucket', 'bioethanol_bucket', 'biomass', 'biomass_pellet', 'biomass_pellet_block'].forEach(i => r('createaddition:' + i));
     ;['biofuel_bucket', 'biofuel_engine', 'ash'].forEach(i => r('solarpunk:' + i));
@@ -763,4 +769,11 @@ RecipeViewerEvents.removeEntries('fluid', event => {
 
     // Create potion fluids
     event.remove('create:potion')
+    // Levitite blend (levitite is assembled with hydrogen or helium instead)
+    event.remove('aeronautics:levitite_blend')
+});
+
+// Aeronautics' blend-to-levitite conversions in Create's mystery category
+RecipeViewerEvents.removeRecipes(event => {
+    event.removeFromCategory('create:mystery_conversion', ['aeronautics:conversion_levitite', 'aeronautics:conversion_pearlescent_levitite'])
 });

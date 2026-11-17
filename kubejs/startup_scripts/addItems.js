@@ -84,6 +84,7 @@ StartupEvents.registry('item', event => {
     event.create('incomplete_blast_furnace_reinforcement').maxStackSize(1).displayName('Blast Furnace Reinforcement in Progress')
     event.create('incomplete_caramel_apple').maxStackSize(1).displayName('Caramel Apple in Progress')
     event.create('incomplete_daylight_detector').maxStackSize(1).displayName('Daylight Detector in Progress')
+    event.create('incomplete_metal_support').maxStackSize(1).displayName('Metal Support in Progress').texture('tfc:item/metal/rod/steel')
     // Intermediate item for the steam engine mechanical crafting recipe
     event.create('unlubricated_steam_engine').maxStackSize(16).displayName('Unlubricated Steam Engine')
     // Circular saw blade, used to build the mechanical saw

@@ -12,7 +12,7 @@ const DND_COLORS = COLORS.concat(['amber', 'aqua', 'beige', 'coral', 'forest', '
 
 const METAL_ALIASES = ['iron', 'golden', 'igneous_extrusive', 'igneous_intrusive', 'metamorphic', 'sedimentary']
 
-const METAL_SOURCES = /^((tfc|tfc_metallurgy|firmalife|kubejs|rnr):metal\/|tfc:stone\/|tfc_items:|tfc_metallurgy:[a-z_]+_bars$|kubejs:wire\/[a-z_]+_wire$|chemica:[a-z_]+_dust$|(vintageimprovements|createaddition):[a-z_]+_wire$)/
+const METAL_SOURCES = /^((tfc|tfc_metallurgy|firmalife|kubejs|rnr|tfc_metal_things):metal\/|tfc:stone\/|tfc_items:|tfc_metallurgy:[a-z_]+_bars$|kubejs:wire\/[a-z_]+_wire$|chemica:[a-z_]+_dust$|(vintageimprovements|createaddition):[a-z_]+_wire$)/
 
 const CBC_METALS = ['bronze', 'cast_iron', 'steel', 'nethersteel', 'wrought_iron']
 
@@ -32,12 +32,16 @@ const FAMILY_EXTRAS = [
     ['tfc:wood/button/#', /^minecraft:bamboo_button$/],
     ['tfc:wood/pressure_plate/#', /^minecraft:bamboo_pressure_plate$/],
     ['tfc:wood/sign/#', /^minecraft:bamboo_sign$/],
-    ['tfc:wood/boat/#', /^minecraft:bamboo_raft$/]
+    ['tfc:wood/boat/#', /^minecraft:bamboo_raft$/],
+    // Every metal door and fence joins the TFC Metal Things family
+    ['tfc:metal/door/#', /^(create:(andesite|brass|copper|train)_door|createdeco:(locked_)?[a-z_]+_door|tfmg:[a-z_]+_door|tfc:fireproof_door)$/],
+    ['tfc:metal/trapdoor/#', /^(createdeco:[a-z_]+_trapdoor|bellsandwhistles:(ornate_iron|metro)_trapdoor|tfmg:steel_trapdoor)$/],
+    ['tfc:metal/fence/#', /^createdeco:[a-z_]+_mesh_fence$/]
 ]
 
 function metalKey(key) {
     return key
-        .replace(/^(tfc_metallurgy|firmalife|kubejs|rnr):metal\//, 'tfc:metal/')
+        .replace(/^(tfc_metallurgy|firmalife|kubejs|rnr|tfc_metal_things):metal\//, 'tfc:metal/')
         .replace(/^tfc_metallurgy:#_bars$/, 'tfc:metal/bars/#')
         .replace(/^tfc:stone\/knife_head\//, 'tfc:metal/knife_blade/')
         .replace(/^tfc:stone\//, 'tfc:metal/')
@@ -66,14 +70,40 @@ const HERBS = ['basil', 'bay_laurel', 'cardamom', 'cilantro', 'cumin', 'oregano'
 const MCW_ROOF_SHAPES = ['roof', 'attic_roof', 'lower_roof', 'steep_roof', 'top_roof', 'upper_lower_roof',
     'upper_steep_roof', 'roof_block', 'roof_slab']
 
-const RNR_ROOF = '(wood\\/shingles\\/[a-z_]+|(terracotta|ceramic|thatch)_roof|roof_frame)'
+const GEMS = '(amethyst|diamond|emerald|lapis_lazuli|opal|pyrite|ruby|sapphire|topaz)'
+
+const GRAINS = '(barley|maize|oat|rice|rye|wheat)'
+const FISH = '(arctic_char|bluegill|burbot|calamari|cod|crappie|lake_trout|largemouth_bass|muksun|northern_pike|pacu|peacock_bass|rainbow_trout|red_piranha|salmon|shellfish|smallmouth_bass|spotted_gudgeon|tilapia|tropical_fish)'
+const BUTCHERY_FISH = '(cod_fillet|salmon|pufferfish|[a-z]+_axolotl_fillet)'
+const MEAT = '(armadillo|bear|beef|bison|camelidae|chevon|chicken|duck|fox|frog_legs|gran_feline|grouse|horse_meat|hyena|mutton|peafowl|pheasant|pork|quail|rabbit|turkey|turtle|venison|wolf)'
+const VEGETABLES = '(beet|cabbage|carrot|cassava|cattail_root|garlic|green_bean|(green|red|yellow)_bell_pepper|lentil|onion|peanut|potato|pumpkin_chunks|radish|soybean|squash|taro_root|tomato|fresh_seaweed|dried_seaweed|dried_kelp)'
+
+const RNR_ROOF ='(wood\\/shingles\\/[a-z_]+|(terracotta|ceramic|thatch)_roof|roof_frame)'
 
 const EXPLICIT = [
-    ['logs', 'Logs', /^((tfc|afc):wood\/(log|wood|stripped_log|stripped_wood)\/|minecraft:(stripped_)?bamboo_block$|tfc:golden_bamboo_block$)/],
+    ['logs', 'Logs', /^((tfc|afc):wood\/(log|wood|stripped_log|stripped_wood)\/|minecraft:(stripped_)?bamboo_block$|tfc:(golden_bamboo_block|(dried_)?cactus_wood)$)/],
+    ['sandwiches', 'Sandwiches', /^tfc:food\/[a-z]+_bread_(jam_)?sandwich$/],
+    ['cereals', 'Cereals', new RegExp('^tfc:food\\/' + GRAINS + '$')],
+    ['grains', 'Grains', new RegExp('^tfc:food\\/' + GRAINS + '_grain$')],
+    ['flours', 'Flours', new RegExp('^(tfc:food\\/' + GRAINS + '_flour|firmalife:food\\/(masa|spiced)_flour)$')],
+    ['doughs', 'Doughs', /^((tfc|firmalife):food\/[a-z_]+_dough|firmalife:food\/masa)$/],
+    ['breads', 'Breads', new RegExp('^(tfc:food\\/' + GRAINS + '_bread|firmalife:food\\/(' + GRAINS + '_(flatbread|slice)|hardtack|toast|garlic_bread|corn_tortilla))$')],
+    ['vegetables', 'Vegetables', new RegExp('^tfc:food\\/' + VEGETABLES + '$')],
+    ['fruits', 'Fruits', /^(tfc:food\/([a-z_]*berry|banana|cherry|green_apple|lemon|melon_slice|olive|orange|peach|plum|red_apple)|firmalife:food\/(fig|pineapple|nightshade_berry|(red|white)_grapes))$/],
+    ['raw_fish', 'Raw Fish', new RegExp('^(tfc:food\\/' + FISH + '|butchery:raw_' + BUTCHERY_FISH + ')$')],
+    ['cooked_fish', 'Cooked Fish', new RegExp('^(tfc:food\\/cooked_' + FISH + '|butchery:cooked_' + BUTCHERY_FISH + ')$')],
+    ['raw_meat', 'Raw Meat', new RegExp('^(tfc:food\\/' + MEAT + '|firmalife:food\\/bacon|butchery:raw_[a-z_]+)$')],
+    ['cooked_meat', 'Cooked Meat', new RegExp('^(tfc:food\\/cooked_' + MEAT + '|firmalife:food\\/cooked_bacon|butchery:cooked_[a-z_]+)$')],
+    ['spices', 'Spices', /^firmalife:spice\/[a-z_]+$/],
+    ['seeds', 'Seeds', /^(tfc|firmalife):seeds\/[a-z_]+$/],
+    ['unfired_molds', 'Unfired Molds', /^tfc:ceramic\/unfired_([a-z_]+_mold|mold_table)$/],
+    ['molds', 'Molds', /^tfc:(ceramic\/[a-z_]+_mold|mold_table)$/],
+    ['bells', 'Bells', /^(minecraft:bell|tfc:(brass|bronze)_bell|tfc_metallurgy:(beryllium_copper|florentine_bronze)_bell|create:(peculiar|haunted|desk)_bell)$/],
+    ['turtles', 'Turtles (ComputerCraft)', /^computercraft:turtle_(normal|advanced)$/],
     ['saplings', 'Tree Saplings', /^(tfc|afc):wood\/sapling\//],
-    ['fruit_saplings', 'Fruit Tree Saplings', /^(tfc|firmalife):plant\/[a-z_]+_sapling$/],
-    ['fruit_leaves', 'Fruit Tree Leaves', /^(tfc|firmalife):plant\/[a-z_]+_leaves$/],
-    ['berry_bushes', 'Berry Bushes', /^(tfc|firmalife):plant\/(?!dead_bush$)[a-z_]+_bush$/],
+    ['fruit_saplings', 'Fruit Tree Saplings', /^((tfc|firmalife):plant\/(potted\/)?[a-z_]+_sapling|jsdrinks:(coffee|tea|tea_bush)_sapling)$/],
+    ['fruit_leaves', 'Fruit Tree Leaves', /^((tfc|firmalife):plant\/[a-z_]+_leaves|jsdrinks:(plant\/)?(coffee|tea)_leaves)$/],
+    ['berry_bushes', 'Berry Bushes', /^((tfc|firmalife):plant\/(potted\/)?(?!dead_bush$)[a-z_]+_bush|jsdrinks:(plant\/)?tea_bush)$/],
     ['herbs', 'Herbs', new RegExp('^firmalife:plant\\/(' + HERBS.join('|') + ')$')],
     ['useful_plants', 'Useful Wild Plants', new RegExp('^tfc:plant\\/(' + USEFUL_PLANTS.join('|') + ')$')],
     ['flowers', 'Flowers', new RegExp('^tfc:plant\\/(' + FLOWERS.join('|') + ')$')],
@@ -130,12 +160,30 @@ const EXPLICIT = [
     ['create_windows', 'Windows (Create)', /^create:[a-z_]+_window(_pane)?$/],
     ['dnd_crushing_wheels', 'Crushing Wheels (D&D)', /^dndecor:[a-z_]+_crushing_wheel$/],
     ['dnd_millstones', 'Millstones (D&D)', /^dndecor:[a-z_]+_millstone$/],
-    ['dnd_dark_metal', 'Dark Metal (D&D)', /^dndecor:(large_)?dark_metal_/]
+    ['dnd_dark_metal', 'Dark Metal (D&D)', /^dndecor:(large_)?dark_metal_/],
+    ['gems', 'Gems', /^tfc:gem\/[a-z_]+$/],
+    ['raw_gems', 'Raw Gems', new RegExp('^tfc:ore\\/' + GEMS + '$')],
+    ['gem_powders', 'Gem Powders', new RegExp('^tfc:powder\\/' + GEMS + '$')],
+    ['minerals', 'Minerals', /^(tfc:ore\/(bituminous_coal|borax|cinnabar|cryolite|graphite|gypsum|halite|lignite|saltpeter|sulfur|sylvite)|tfc_metallurgy:ore\/certus_quartz|kubejs:ore\/(fluorite|phosphorite)|tfcvolcanoes:mineral\/(?!powder\/)[a-z_]+(\/prospected)?)$/],
+    ['mineral_powders', 'Mineral Powders', /^(tfc:powder\/(flux|graphite|kaolinite|lime|salt|saltpeter|soda_ash|sulfur|sylvite)|tfcvolcanoes:mineral\/powder\/[a-z_]+|chemica:(fluorite|phosphorus)_dust)$/],
+    ['ore_powders', 'Ore Powders', /^tfc:powder\/(bismuthinite|cassiterite|garnierite|hematite|limonite|magnetite|malachite|native_copper|native_gold|native_silver|sphalerite|tetrahedrite)$/],
+    ['spindles', 'Spindles', /^(tfc:(spindle|ceramic\/(unfired_)?spindle_head)|tfc_metal_things:metal\/spindle(_head)?\/[a-z_]+)$/],
+    ['handstones', 'Handstones', /^(tfc:handstone|tfc_metal_things:metal\/handstone\/[a-z_]+)$/],
+    ['support_beams', 'Support Beams', /^((tfc|afc):wood\/(vertical_|horizontal_)?support\/[a-z_]+|tfc_metal_things:metal\/support\/[a-z_]+)$/],
+    ['sifter_meshes', 'Meshes (Create Sifter)', /^createsifter:[a-z_]+_mesh$/],
+    ['createdeco_bars', 'Bars (Create Deco)', /^createdeco:[a-z_]+_bars(_overlay)?$/],
+    ['jeweled_crowns', 'Jeweled Crowns', /^sailorssuits:[a-z_]+_(amethyst|diamond|emerald|lapis_lazuli|opal|pyrite|ruby|sapphire|topaz)_crown$/],
+    ['crowns', 'Crowns', /^sailorssuits:[a-z_]+_crown$/],
+    ['clothing_parts', 'Clothing Parts (Sailor\'s Suits)', /^sailorssuits:(unfinished_[a-z_]+|buckle|brass_button|blue_denim)$/],
+    ['tea_leaves', 'Tea Leaves', /^jsdrinks:([a-z_]+_tea_leaf|([a-z_]+_)?puerh_tea|dried_[a-z]+_tea)$/],
+    ['coffee', 'Coffee', /^jsdrinks:([a-z_]*coffee_(bean|beans|cherry|cherries)|ground_coffee)$/]
 ]
 
 const FLUID_GROUPS = [
     ['dye_fluids', 'Dye Fluids', '#c:dyes'],
-    ['liquid_concrete', 'Liquid Concrete (TFMG)', ['tfmg:liquid_concrete'].concat(COLORS.map(c => 'tfmg:liquid_' + c + '_concrete'))]
+    ['liquid_concrete', 'Liquid Concrete (TFMG)', ['tfmg:liquid_concrete'].concat(COLORS.map(c => 'tfmg:liquid_' + c + '_concrete'))],
+    ['tea_fluids', 'Teas', ['white', 'green', 'yellow', 'red', 'puerh', 'strong_puerh'].map(t => 'jsdrinks:' + t + '_tea')],
+    ['coffee_fluids', 'Coffees', ['coffee', 'strong_coffee', 'coffee_with_milk', 'strong_coffee_with_milk'].map(c => 'jsdrinks:' + c)]
 ]
 
 function escapeRegex(s) {
@@ -239,7 +287,7 @@ RecipeViewerEvents.groupEntries('item', event => {
         ['metals', 'Metals', metals, METAL_SOURCES, metalKey],
         ['metals', 'Metals', DECO_METALS, /^(createdeco|dndecor):/],
         ['colors', 'Colors', DND_COLORS, /^dndecor:/],
-        ['colors', 'Colors', COLORS, null],
+        ['colors', 'Colors', COLORS.concat(['grey', 'light_grey']), null],
         ['rocks', 'Rocks', capture(ids, /^tfc:rock\/raw\/([a-z]+)$/), null]
     ]
 

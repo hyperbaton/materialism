@@ -168,6 +168,16 @@ ServerEvents.recipes(event => {
         ]
     ).transitionalItem('tfc_metallurgy:metal/sheet/magnesium').loops(4)
 
+    // Pearlescent levitite: the same assembly charged with helium
+    const sheet = 'tfc_metallurgy:metal/sheet/magnesium'
+    event.recipes.create.sequenced_assembly([Item.of('aeronautics:pearlescent_levitite', 1)], sheet, [
+        event.recipes.createFilling(sheet, [sheet, Fluid.of('chemica:helium', 125)]),
+        event.recipes.createDeploying(sheet, [sheet, sheet]),
+        event.recipes.createPressing(sheet, sheet),
+        event.recipes.createFilling(sheet, [sheet, Fluid.of('chemica:helium', 125)]),
+        event.recipes.createDeploying(sheet, [sheet, 'tfc_items:aluminum_screw'])
+    ]).transitionalItem(sheet).loops(4).id('kubejs:aeronautics/pearlescent_levitite')
+
     // ========================================
     // OFFROAD recipes
     // ========================================

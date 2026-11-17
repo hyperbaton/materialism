@@ -42,6 +42,9 @@ ServerEvents.recipes(event => {
     event.remove({ output: /minecraft:.*purpur.*/ });
     event.remove({ input: 'minecraft:ancient_debris'});
     event.remove({ output: 'minecraft:chain'});
+    // Vanilla copper doors and trapdoors (waxing and scraping recipes output them too) and the iron door
+    event.remove({ output: /^minecraft:(waxed_)?((exposed|weathered|oxidized)_)?copper_(door|trapdoor)$/ });
+    event.remove({ output: 'minecraft:iron_door' });
     event.remove({ output: /minecraft:.*cook.*/ });
     event.remove({ output: /minecraft:.*chorus.*/ });
     event.remove({ input: /minecraft:.*chorus.*/ });
@@ -101,6 +104,7 @@ ServerEvents.recipes(event => {
     event.remove({output: 'minecraft:crafter'});
     event.remove({output: 'minecraft:mace'});
     event.remove({id: 'minecraft:white_wool_from_string'});
+    event.remove({id: 'minecraft:iron_nugget'});
 
     // Disable Weather 2 recipes
     event.remove(/.*weather2.*/)
