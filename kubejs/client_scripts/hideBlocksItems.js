@@ -726,6 +726,9 @@ RecipeViewerEvents.removeEntries('item', event => {
       'rotor', 'stator'].forEach(i => r('tfmg:' + i));
     event.remove(/^tfmg:([a-z_]+_)?multimeter$/);
     r('tfmg:unfinished_generator');
+    // Duplicate bio chains (see biofuelRecipes.js)
+    ;['seed_oil_bucket', 'bioethanol_bucket', 'biomass', 'biomass_pellet', 'biomass_pellet_block'].forEach(i => r('createaddition:' + i));
+    ;['biofuel_bucket', 'biofuel_engine', 'ash'].forEach(i => r('solarpunk:' + i));
 });
 
 RecipeViewerEvents.removeEntries('fluid', event => {
@@ -753,6 +756,10 @@ RecipeViewerEvents.removeEntries('fluid', event => {
 
     // Electro Energetics
     event.remove('electroenergetics:plant_oil')
+    // Duplicate bio fluids (see biofuelRecipes.js)
+    event.remove('createaddition:seed_oil')
+    event.remove('createaddition:bioethanol')
+    event.remove('solarpunk:biofuel')
 
     // Create potion fluids
     event.remove('create:potion')

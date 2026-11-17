@@ -19,7 +19,7 @@ ServerEvents.recipes(event => {
   event.remove({id: 'chemica:distillation/air'})
   event.remove({id: 'chemica:vat_machine_recipe/electrolysis/powdered_obsidian'})
   event.remove({id: 'chemica:sequenced_assembly/unfinished_reinforced_iridium_plate'})
-  // Yeast: Firmalife's yeast starter replaces Chemica's yeast (see the ethanol recipe below)
+  // Yeast: Firmalife's yeast starter replaces Chemica's yeast (ethanol is fermented in biofuelRecipes.js)
   event.remove({id: 'chemica:mixing/yeast'})
   event.remove({id: 'chemica:vat_machine_recipe/vat_reaction/yeast'})
   event.remove({id: 'chemica:vat_machine_recipe/vat_reaction/ethanol'})
@@ -141,22 +141,6 @@ ServerEvents.recipes(event => {
       event.recipes.createDeploying('chemica:unfinished_tantalum_capacitor', ['chemica:unfinished_tantalum_capacitor', 'tfc:metal/sheet/copper'])
     ]
   ).transitionalItem('chemica:unfinished_tantalum_capacitor').loops(1)
-
-  // Ethanol, fermented with Firmalife's yeast starter
-  event.custom({
-    type: 'tfmg:vat_machine_recipe',
-    allowed_vat_types: ['tfmg:cast_iron_vat', 'tfmg:steel_vat', 'tfmg:firebrick_lined_vat'],
-    machines: [],
-    min_size: 1,
-    ingredients: [
-      {item: 'minecraft:sugar'},
-      {item: 'minecraft:sugar'},
-      {item: 'minecraft:sugar'},
-      {type: 'neoforge:single', amount: 100, fluid: 'firmalife:yeast_starter'}
-    ],
-    processing_time: 800,
-    results: [{amount: 1000, id: 'chemica:ethanol'}]
-  })
 
   // Chromium has no dust in the pack, so Chemica's own stays; let it melt like the others
   event.custom({
