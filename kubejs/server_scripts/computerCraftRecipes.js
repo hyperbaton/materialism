@@ -46,31 +46,33 @@ ServerEvents.recipes(event => {
         I: 'createaddition:electrum_wire'
       }
     )
-    event.recipes.create.mechanical_crafting(
-      Item.of('computercraft:pocket_computer_normal', 1), // arg 1: output
-      [
-        ' A ',
-        ' B ', // arg 2: the shape (array of strings)
-        '   '
-      ],
-      {
-        A: 'computercraft:computer_normal',
-        B: 'tfmg:accumulator'
-      }
-    )
-    event.remove('computercraft:pocket_computer_advanced_upgrade')
-    event.recipes.create.mechanical_crafting(
-      Item.of('computercraft:pocket_computer_advanced', 1), // arg 1: output
-      [
-        ' A ',
-        ' B ', // arg 2: the shape (array of strings)
-        '   '
-      ],
-      {
-        A: 'computercraft:computer_advanced',
-        B: 'tfmg:accumulator'
-      }
-    )
+    // Pocket computers: titanium shell, optical source screen, advanced circuits, tantalum capacitors, lithium battery
+    event.remove({id: 'computercraft:pocket_computer_normal'})
+    event.remove({id: 'computercraft:pocket_computer_advanced'})
+    event.remove({id: 'computercraft:pocket_computer_advanced_upgrade'})
+    const pocketParts = {
+      T: 'tfc_metallurgy:metal/sheet/titanium',
+      G: 'firmalife:reinforced_glass',
+      O: 'create_optical:optical_source',
+      A: 'chemica:advanced_circuit_board',
+      C: 'chemica:tantalum_capacitor_item',
+      K: 'chemica:polyvinyl_chloride_sheet',
+      L: 'kubejs:lithium_battery_core'
+    }
+    event.recipes.create.mechanical_crafting('computercraft:pocket_computer_normal', [
+      ' TGT ',
+      ' TOT ',
+      'CTATC',
+      'TKLKT',
+      ' TTT '
+    ], pocketParts)
+    event.recipes.create.mechanical_crafting('computercraft:pocket_computer_advanced', [
+      ' UGU ',
+      ' TOT ',
+      'CAAAC',
+      'CKLKC',
+      ' UTU '
+    ], Object.assign({U: 'tfc:metal/sheet/gold'}, pocketParts))
     event.remove('computercraft:turtle_normal')
     event.recipes.create.mechanical_crafting(
       Item.of('computercraft:turtle_normal', 1), // arg 1: output
