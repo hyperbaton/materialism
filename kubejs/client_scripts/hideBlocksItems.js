@@ -95,6 +95,7 @@ RecipeViewerEvents.removeEntries('item', event => {
     r('minecraft:cake')
     r('create:chocolate_bucket')
     r('create:bar_of_chocolate')
+    r('create:honeyed_apple')
     r('createaddition:connector')
     r('createaddition:small_light_connector')
     r('createaddition:large_connector')
@@ -136,6 +137,11 @@ RecipeViewerEvents.removeEntries('item', event => {
     event.remove('createbigcannons:molten_bronze_bucket')
     event.remove('createbigcannons:molten_steel_bucket')
     event.remove('createbigcannons:molten_nethersteel_bucket')
+    event.remove('tfc:grill')
+    event.remove('tfc:pot')
+    event.remove('tfc:stove_pot')
+    event.remove('castirongrill:cast_iron_grill')
+
 
     // Hide TFMG tools/armor/ingots
     r('tfmg:lead_axe');

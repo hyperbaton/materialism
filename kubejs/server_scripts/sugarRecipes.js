@@ -24,6 +24,20 @@ ServerEvents.recipes(event => {
             event.recipes.create.filling(caramelApple, [caramelApple, Fluid.of('firmalife:caramel', 100)])
         ]
     ).transitionalItem(caramelApple).loops(1)
+    // Create's honeyed apple duplicates the caramel apple
+    event.remove({ id: 'create:filling/honeyed_apple' })
+
+    // Caramel: butter cooked into sugar water, as in Firmalife's pot and vat
+    event.custom({
+        type: 'create:mixing',
+        ingredients: [
+            { type: 'tfc:and', children: [{ item: 'firmalife:food/butter' }, { type: 'tfc:not_rotten' }] },
+            { type: 'neoforge:single', fluid: 'firmalife:sugar_water', amount: 1000 }
+        ],
+        results: [{ id: 'firmalife:caramel', amount: 1000 }],
+        heat_requirement: 'heated',
+        processing_time: 600
+    }).id('kubejs:sugar/mixing/caramel')
 
     // Automated sugar production, mirroring the manual AFC/Firmalife processes with
 
