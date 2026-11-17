@@ -273,14 +273,17 @@ ServerEvents.recipes(event => {
     event.shapeless(EE + color + '_electrical_panel', [EE + 'electrical_panel', 'minecraft:' + color + '_dye']).id(id(color + '_electrical_panel'))
   }
 
-  // Storage: nickel-iron (Edison) cell in an aluminum case
-  const cell = 'create:andesite_casing'
+  // Storage: lead-acid battery, lead plates in sulfuric acid, charged once assembled
+  const cell = 'create:basin'
   event.recipes.create.sequenced_assembly([EE + 'accumulator'], cell, [
-    event.recipes.createDeploying(cell, [cell, 'tfc:metal/sheet/nickel']),
-    event.recipes.createDeploying(cell, [cell, steelSheet]),
-    event.recipes.createFilling(cell, [cell, Fluid.of('tfc:lye', 250)]),
-    event.recipes.createDeploying(cell, [cell, C]),
-    event.recipes.createDeploying(cell, [cell, C])
+    event.recipes.createDeploying(cell, [cell, 'tfc_metallurgy:metal/double_sheet/lead']),
+    event.recipes.createDeploying(cell, [cell, 'tfc_metallurgy:metal/double_sheet/lead']),
+    event.recipes.createFilling(cell, [cell, Fluid.of('tfmg:sulfuric_acid', 1000)]),
+    event.recipes.createDeploying(cell, [cell, 'createaddition:copper_wire']),
+    event.recipes.createDeploying(cell, [cell, 'tfc_metallurgy:metal/sheet/cobalt']),
+    event.recipes.createPressing(cell, cell),
+    event.recipes.createDeploying(cell, [cell, EE + 'double_connector']),
+    event.custom({type: 'create_new_age:energising', energy_needed: 1000, ingredients: [{item: cell}], results: [{id: cell}]})
   ]).transitionalItem(cell).loops(1).id(id('sequenced_assembly/accumulator'))
 
   // Rotating machines

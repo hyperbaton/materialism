@@ -705,30 +705,7 @@ ServerEvents.recipes(event => {
       ]
     })
   ]).transitionalItem('tfc_metallurgy:metal/sheet/nickel_silver').loops(1)
-  // tfmg:capacitor removed in 1.21 - lead acid batteries will also produce accumulator
-  event.recipes.create.sequenced_assembly([
-   Item.of('tfmg:accumulator', 1)
-  ], 'create:basin', [ // input
-   event.recipes.createDeploying('create:basin', ['create:basin', 'tfc_metallurgy:metal/double_sheet/lead']),
-   event.recipes.createDeploying('create:basin', ['create:basin', 'tfc_metallurgy:metal/double_sheet/lead']),
-   event.recipes.createFilling(
-     'create:basin',
-     ['create:basin', Fluid.of('tfmg:sulfuric_acid', 1000)]
-   ),
-   event.recipes.createDeploying('create:basin', ['create:basin', 'createaddition:copper_wire']),
-   event.recipes.createDeploying('create:basin', ['create:basin', 'tfc_metallurgy:metal/sheet/cobalt']),
-   event.recipes.create.pressing('create:basin', 'create:basin'),
-   event.custom({
-     type: 'create_new_age:energising',
-     energy_needed: 1000,
-     ingredients: [
-       { item: 'create:basin'},
-     ],
-     results: [
-       { id: 'create:basin'},
-     ]
-   })
-  ]).transitionalItem('create:basin').loops(1)
+  // The lead-acid battery is the EE accumulator (electroEnergeticsRecipes.js); TFMG's accumulator is the lithium battery
   event.recipes.create.sequenced_assembly([
    Item.of('kubejs:lithium_battery_core', 1)
   ], 'tfmg:heavy_machinery_casing', [ // input
@@ -755,7 +732,7 @@ ServerEvents.recipes(event => {
   event.remove({id: 'tfmg:crafting/materials/accumulatorfrom_lithium'})
 
   event.recipes.create.sequenced_assembly([
-    Item.of('tfmg:accumulator', 5)
+    Item.of('tfmg:accumulator', 1)
   ], 'kubejs:lithium_battery_core', [ // input
     event.recipes.createDeploying('kubejs:lithium_battery_core', ['kubejs:lithium_battery_core', 'tfc_metallurgy:metal/sheet/aluminum']),
     event.recipes.createDeploying('kubejs:lithium_battery_core', ['kubejs:lithium_battery_core', 'tfc_metallurgy:metal/sheet/titanium']),

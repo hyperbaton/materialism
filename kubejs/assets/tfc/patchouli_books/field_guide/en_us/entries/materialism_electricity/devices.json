@@ -19,7 +19,7 @@
     {
       "type": "patchouli:spotlight",
       "item": "electroenergetics:accumulator",
-      "text": "Nickel-iron $(thing)Accumulators$(0) store energy at 24 V. Wire them in series for higher voltages: ten in a row charge at 240 V."
+      "text": "$(thing)Lead-acid batteries$(0) store energy at 24 V. Wire them in series for higher voltages: ten in a row charge at 240 V."
     },
     {
       "type": "patchouli:spotlight",
