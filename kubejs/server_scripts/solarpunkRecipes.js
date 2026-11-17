@@ -436,6 +436,18 @@ ServerEvents.recipes(event => {
   accelerate('osmium_to_iridium', 'tfc_metallurgy:metal/dust/osmium', 8, 'tfc_metallurgy:metal/dust/iridium', 1, 15, 192, 24576.0, 1600)
   accelerate('neutron_doped_silicon', 'kubejs:monocrystalline_silicon', 1, 'tfmg:n_semiconductor', 4, 9, 128, 16384.0, 600)
 
+  // Ion implantation: a low-energy beam of boron or phosphorus ions dopes monocrystalline wafers
+  ;[['boron', 'tfc_metallurgy:metal/dust/boron', 'tfmg:p_semiconductor'],
+    ['phosphorus', 'chemica:phosphorus_dust', 'tfmg:n_semiconductor']].forEach(([dopant, dust, result]) => event.custom({
+    type: 'solarpunk:particle_accelerator',
+    ingredients: [{ item: 'kubejs:silicon_wafer', count: 4 }, { item: dust, count: 1 }],
+    min_diameter: 9,
+    min_speed: 64,
+    processing_time: 400,
+    stress: 8192.0,
+    result: { id: result, count: 4 }
+  }).id('kubejs:solarpunk/particle_accelerator/' + dopant + '_implantation'))
+
   // Particle accelerator pipe (beam line with dipole magnets)
   event.remove({ id: 'solarpunk:mechanical_crafting/particle_accelerator_pipe' })
   event.recipes.create.mechanical_crafting('8x solarpunk:particle_accelerator_pipe', [
