@@ -90,6 +90,11 @@ RecipeViewerEvents.removeEntries('item', event => {
     r('tfc_metallurgy:metal/graphite')
     r('tfc_metallurgy:bucket/metal/graphite')
     r('createaddition:modular_accumulator')
+    r('createaddition:electric_pump')
+    // Vanilla cake and Create chocolate (see cakeRecipes.js)
+    r('minecraft:cake')
+    r('create:chocolate_bucket')
+    r('create:bar_of_chocolate')
     r('createaddition:connector')
     r('createaddition:small_light_connector')
     r('createaddition:large_connector')
@@ -771,6 +776,8 @@ RecipeViewerEvents.removeEntries('fluid', event => {
     event.remove('create:potion')
     // Levitite blend (levitite is assembled with hydrogen or helium instead)
     event.remove('aeronautics:levitite_blend')
+    // Create chocolate (Firmalife chocolate is used instead)
+    event.remove('create:chocolate')
 });
 
 // Aeronautics' blend-to-levitite conversions in Create's mystery category

@@ -34,7 +34,16 @@ ServerEvents.recipes(event => {
     event.remove({output: 'createaddition:alternator'})
     // Remove recipes for accumulator (use TFMG batteries)
     event.remove({output: 'createaddition:modular_accumulator'})
-    
+    // Remove the electric pump (Electro Energetics has its own)
+    event.remove({output: 'createaddition:electric_pump'})
+    // Servo motor: a bearing driven by an EE motor, with valve control electronics
+    event.remove({output: 'createaddition:servo_motor'})
+    event.recipes.create.mechanical_crafting('createaddition:servo_motor', ['B', 'M', 'E'], {
+        B: 'create:mechanical_bearing',
+        M: '#electroenergetics:electric_motors',
+        E: 'create:electron_tube'
+    }).id('kubejs:createaddition/servo_motor')
+
     event.remove({output: 'createaddition:mixing/netherrack'})
     
     // Modify Tesla coil recipe
