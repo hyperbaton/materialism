@@ -858,6 +858,22 @@ ServerEvents.recipes(event => {
     heat_requirement: 'heated'
   })
 
+  // Daylight sensor: a p-n photodiode in a wooden housing behind a lens
+  event.remove({id: 'minecraft:daylight_detector'})
+  const photodiode = 'kubejs:incomplete_daylight_detector'
+  event.recipes.create.sequenced_assembly(
+    ['minecraft:daylight_detector'],
+    Ingredient.of('#minecraft:wooden_slabs'),
+    [
+      event.recipes.create.deploying(photodiode, [photodiode, 'tfmg:p_semiconductor']),
+      event.recipes.create.deploying(photodiode, [photodiode, 'tfmg:n_semiconductor']),
+      event.recipes.create.deploying(photodiode, [photodiode, Ingredient.of('#c:wires/copper')]),
+      event.recipes.create.filling(photodiode, [photodiode, Fluid.of('tfc_metallurgy:metal/solder', 10)]),
+      event.recipes.create.deploying(photodiode, [photodiode, 'tfc:lens']),
+      event.recipes.create.pressing(photodiode, photodiode)
+    ]
+  ).transitionalItem(photodiode).loops(1)
+
   // Thermite using TFC iron oxide and aluminum
   event.remove({id: 'tfmg:mixing/thermite'})
   event.custom({
