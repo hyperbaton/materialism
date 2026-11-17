@@ -1,5 +1,30 @@
 ServerEvents.recipes(event => {
 
+    // AFC sap boiling: a stick or any twig, given back unchanged
+    ;['maple', 'birch'].forEach(tree => {
+        event.remove({ id: `afc:pot/${tree}_syrup` })
+        event.custom({
+            type: 'tfc:pot',
+            ingredients: [[{ item: 'minecraft:stick' }, { tag: 'tfc:twigs' }]],
+            item_output: [{ modifiers: [{ type: 'tfc:copy_input' }] }],
+            fluid_ingredient: { fluid: `afc:${tree}_sap`, amount: 1000 },
+            duration: 1500,
+            temperature: 100,
+            fluid_output: { id: `afc:${tree}_syrup`, amount: 50 }
+        }).id(`afc:pot/${tree}_syrup`)
+    })
+
+    // Caramel apple: skewer a fresh apple, then dip it in caramel
+    const caramelApple = 'kubejs:incomplete_caramel_apple'
+    event.recipes.create.sequenced_assembly(
+        ['firmalife:food/caramel_apple'],
+        TFC.ingredient.and(Ingredient.of(['tfc:food/red_apple', 'tfc:food/green_apple']), TFC.ingredient.notRotten()),
+        [
+            event.recipes.create.deploying(caramelApple, [caramelApple, Ingredient.of('#c:rods/wooden')]),
+            event.recipes.create.filling(caramelApple, [caramelApple, Fluid.of('firmalife:caramel', 100)])
+        ]
+    ).transitionalItem(caramelApple).loops(1)
+
     // Automated sugar production, mirroring the manual AFC/Firmalife processes with
 
     event.recipes.create.mixing(

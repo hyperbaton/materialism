@@ -82,6 +82,7 @@ StartupEvents.registry('item', event => {
     });
     // Transitional item for the blast furnace reinforcement sequenced assembly
     event.create('incomplete_blast_furnace_reinforcement').maxStackSize(1).displayName('Blast Furnace Reinforcement in Progress')
+    event.create('incomplete_caramel_apple').maxStackSize(1).displayName('Caramel Apple in Progress')
     // Intermediate item for the steam engine mechanical crafting recipe
     event.create('unlubricated_steam_engine').maxStackSize(16).displayName('Unlubricated Steam Engine')
     // Circular saw blade, used to build the mechanical saw

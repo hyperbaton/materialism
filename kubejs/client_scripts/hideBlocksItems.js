@@ -670,6 +670,9 @@ RecipeViewerEvents.removeEntries('item', event => {
     r('tfmg:plastic_sheet')
     // Floppy disk transitional items
     event.remove(/^kubejs:plastic_sheet\/.*/)
+    // Sequenced assembly transitional items
+    ;['incomplete_caramel_apple', 'incomplete_photovoltaic_panel', 'incomplete_blast_furnace_reinforcement',
+      'wood_plating_blank'].forEach(item => r('kubejs:' + item))
     r('tfmg:plastic_block')
     r('tfmg:molten_plastic_bucket')
 
