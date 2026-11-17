@@ -1,0 +1,32 @@
+// Arsenic from cobaltite roasting: wood preservative and shot hardening (doping and glass fining live with their chains)
+ServerEvents.recipes(event => {
+  const id = name => 'kubejs:arsenic/' + name
+
+  // Chromated copper arsenate: copper sulfate, chromium and arsenic dissolved in water
+  event.custom({
+    type: 'create:mixing',
+    ingredients: [
+      { item: 'vintageimprovements:copper_sulfate' },
+      { item: 'chemica:chromium_dust' },
+      { item: 'chemica:arsenic_dust' },
+      { type: 'neoforge:single', fluid: 'minecraft:water', amount: 1000 }
+    ],
+    results: [{ id: 'kubejs:chromated_copper_arsenate', amount: 1000 }]
+  }).id(id('mixing/chromated_copper_arsenate'))
+  // Pressure-treated planks, the waterborne alternative to creosote
+  event.custom({
+    type: 'create:filling',
+    ingredients: [{ tag: 'minecraft:planks' }, { type: 'neoforge:single', fluid: 'kubejs:chromated_copper_arsenate', amount: 250 }],
+    results: [{ id: 'tfmg:hardened_planks' }]
+  }).id(id('filling/hardened_planks'))
+
+  // Lead shot: a pinch of arsenic lets molten lead drops form round balls
+  event.custom({
+    type: 'create:mixing',
+    ingredients: [
+      { item: 'chemica:arsenic_dust' },
+      { type: 'neoforge:single', fluid: 'tfc_metallurgy:metal/lead', amount: 100 }
+    ],
+    results: [{ id: 'createbigcannons:shot_balls', count: 2 }]
+  }).id(id('mixing/lead_shot_balls'))
+})

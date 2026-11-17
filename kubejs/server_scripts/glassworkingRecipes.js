@@ -95,6 +95,17 @@ ServerEvents.recipes(event => {
         event.recipes.create.cutting('tfc:silica_glass_batch', 'tfc:silica_glass_batch')
     ]).transitionalItem('tfc:silica_glass_batch').loops(1)
 
+    // #9b Optical glass fined with arsenic: without bubbles, one batch yields two lenses
+    event.recipes.create.sequenced_assembly([
+        Item.of('tfc:lens', 2)
+    ], Ingredient.of('tfc:silica_glass_batch'), [
+        event.recipes.create.deploying('tfc:silica_glass_batch', ['tfc:silica_glass_batch', 'chemica:arsenic_dust']),
+        event.recipes.vintageimprovements.turning('tfc:silica_glass_batch', 'tfc:silica_glass_batch'),
+        event.custom({type: 'vintageimprovements:hammering', ingredients: [{item: 'tfc:silica_glass_batch'}], results: [{id: 'tfc:silica_glass_batch'}], hammer_blows: 2, anvil_block: 'tfc:metal/anvil/steel'}),
+        event.recipes.vintageimprovements.polishing('tfc:silica_glass_batch', 'tfc:silica_glass_batch'),
+        event.recipes.create.cutting('tfc:silica_glass_batch', 'tfc:silica_glass_batch')
+    ]).transitionalItem('tfc:silica_glass_batch').loops(1).id('kubejs:glassworking/fined_lens')
+
     // #10
     event.custom({type: 'vintageimprovements:curving', ingredients: [{item: 'tfc:olivine_glass_batch'}], results: [{id: 'minecraft:green_stained_glass'}], mode: 2})
 

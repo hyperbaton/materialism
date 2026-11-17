@@ -26,8 +26,33 @@ ServerEvents.recipes(event => {
     .id(id('mixing/biomass_pulp'))
   event.recipes.create.mixing(['2x solarpunk:biomass', Fluid.of('minecraft:water', 50)], ['tfc:rotten_compost'])
     .id(id('mixing/biomass_from_rotten_compost'))
-  fermenting('rich_fertilizer', {tag: 'solarpunk:fermentation_waste', count: 1}, {fluid: 'minecraft:water', amount: 1000},
-    {id: 'solarpunk:rich_fertilizer', amount: 500}, 400)
+  // Fertilizer besides biochar slurry: compost tea and guano steeped in water
+  ;[['compost', 'tfc:compost'], ['guano', 'tfc:groundcover/guano']].forEach(([name, item]) => event.custom({
+    type: 'create:mixing',
+    ingredients: [{item: item}, {type: 'neoforge:single', fluid: 'minecraft:water', amount: 250}],
+    results: [{id: 'solarpunk:fertilizer', amount: 250}]
+  }).id(id('mixing/fertilizer_from_' + name)))
+
+  // Rich fertilizer: plain fertilizer enriched with nitrogen, phosphorus and potassium
+  event.custom({
+    type: 'create:mixing',
+    ingredients: [{item: 'tfc:powder/saltpeter'}, {item: 'minecraft:bone_meal'}, {item: 'tfc:powder/sylvite'},
+      {type: 'neoforge:single', fluid: 'solarpunk:fertilizer', amount: 1000}],
+    results: [{id: 'solarpunk:rich_fertilizer', amount: 1000}]
+  }).id(id('mixing/rich_fertilizer'))
+  // Synthetic NPK: ammonia and phosphoric acid make ammonium phosphate, sylvite adds the potash, all dissolved in water
+  event.custom({
+    type: 'tfmg:vat',
+    allowed_vat_types: ['tfmg:cast_iron', 'tfmg:steel', 'tfmg:fireproof'],
+    machines: ['tfmg:mixer'],
+    min_size: 1,
+    ingredients: [{item: 'tfc:powder/sylvite'},
+      {type: 'neoforge:single', fluid: 'minecraft:water', amount: 1000},
+      {type: 'neoforge:single', fluid: 'chemica:ammonia', amount: 100},
+      {type: 'neoforge:single', fluid: 'chemica:phosphoric_acid', amount: 100}],
+    processing_time: 200,
+    results: [{id: 'solarpunk:rich_fertilizer', amount: 1000}]
+  }).id(id('vat/rich_fertilizer'))
 
   // Biodiesel: any plant oil transesterified with ethanol, caustic soda as catalyst
   event.remove({id: 'chemica:vat_machine_recipe/mixing/biodiesel'})

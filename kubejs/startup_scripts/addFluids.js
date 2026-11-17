@@ -48,12 +48,13 @@ StartupEvents.registry('fluid', event => {
         .stillTexture('minecraft:block/water_still')
         .flowingTexture('minecraft:block/water_flow')
         .displayName('Thorium Nitrate Solution')
-    // Leach liquors of the lithium, beryllium, uranium, niobium and tantalum lines
+    // Aqueous solutions: leach liquors of the extraction lines and the CCA wood preservative
     ;[
         ['lithium_sulfate', 'Lithium Sulfate Solution', '#E4E8EC'],
         ['lithium_chloride', 'Lithium Chloride Solution', '#ECECE4'],
         ['beryllium_sulfate', 'Beryllium Sulfate Solution', '#E0ECE4'],
         ['uranyl_sulfate', 'Uranyl Sulfate Solution', '#D8E040'],
+        ['chromated_copper_arsenate', 'Chromated Copper Arsenate', '#5E8A4A'],
         ['fluoroniobic_acid', 'Fluoroniobic Acid', '#DCE4E8'],
         ['fluorotantalic_acid', 'Fluorotantalic Acid', '#E4E0EC']
     ].forEach(([id, name, tint]) => event.create(id)
