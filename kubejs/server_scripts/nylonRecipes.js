@@ -34,6 +34,15 @@ ServerEvents.recipes(event => {
     result: { id: 'kubejs:nylon_thread', count: 4 }
   }).id(id('crafting/nylon_thread'))
 
+  // Rope: thread twisted again, one for one like jute fiber
+  event.custom({
+    type: 'vintageimprovements:coiling',
+    spring_color: 'eef0f4',
+    ingredients: [{ item: 'kubejs:nylon_thread' }],
+    results: [{ id: 'tfc:rope' }],
+    processing_time: 60
+  }).id(id('coiling/rope'))
+
   // Weaving, like wool cloth from yarn
   event.custom({
     type: 'tfc:loom',
