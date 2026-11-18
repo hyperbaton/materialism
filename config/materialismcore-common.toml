@@ -50,3 +50,44 @@
 	# Default: 720000
 	# Range: > 1
 	advancedPocketComputerCapacity = 720000
+
+#Solarpunk kinetic sprinkler: irrigation, fertigation and herbicide over TFC soil
+[sprinkler]
+	#Ticks between sprays
+	# Default: 20
+	# Range: 1 ~ 12000
+	cycleTicks = 80
+	#mB sprayed per cycle, spread evenly over the covered square
+	# Default: 60
+	# Range: 1 ~ 100000
+	fluidPerCycle = 20
+	#Horizontal radius of the covered square
+	# Default: 5
+	# Range: 0 ~ 16
+	radius = 5
+	#Extra radius with rich fertilizer
+	# Default: 1
+	# Range: 0 ~ 16
+	richFertilizerExtraRadius = 1
+	#Blocks below the sprinkler it reaches
+	# Default: 5
+	# Range: 1 ~ 16
+	depth = 5
+	#Lowest hydration % of irrigated farmland
+	# Default: 60
+	# Range: 0 ~ 100
+	hydrationFloor = 60
+	#Water added to a Firmalife planter per cycle (a planter holds 1)
+	# Default: 0.1
+	# Range: 0.0 ~ 1.0
+	planterWaterPerCycle = 0.1
+	#Nitrogen, phosphorus and potassium per 1000 mB of fertilizer landing on a block
+	fertilizerNutrients = [0.8, 0.1, 0.8]
+	#Nitrogen, phosphorus and potassium per 1000 mB of rich fertilizer landing on a block
+	richFertilizerNutrients = [1.6, 1.6, 1.6]
+	#Herbicide fluids (tag materialismcore:herbicides) kill crops, wild plants and grass cover
+	herbicideEnabled = true
+	#Ticks soil stays irrigated after its sprinkler stops (runs dry or switches to herbicide); unloading and sleeping never stop it
+	# Default: 1200
+	# Range: 20 ~ 240000
+	moistureRetentionTicks = 6000

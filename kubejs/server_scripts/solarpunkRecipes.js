@@ -16,6 +16,19 @@ ServerEvents.recipes(event => {
   event.remove({ output: 'solarpunk:firebox_boiler' })
   event.remove({ output: 'solarpunk:geyser_cap' })
   event.remove({ output: 'solarpunk:kinetic_sprinkler' })
+  // Sprinkler: copper casing with a nozzle pipe at each corner, spring-loaded and riveted, fed from a copper tank below
+  event.recipes.create.mechanical_crafting('solarpunk:kinetic_sprinkler', [
+    'PRP',
+    'SCS',
+    'PRP',
+    ' T '
+  ], {
+    P: 'create:fluid_pipe',
+    R: 'tfc_items:copper_rivet',
+    S: 'vintageimprovements:brass_spring',
+    C: 'create:copper_casing',
+    T: 'create:fluid_tank'
+  }).id('kubejs:solarpunk/mechanical_crafting/kinetic_sprinkler')
   event.remove({ output: /^solarpunk:moss_(slab|stairs)$/ })
   event.remove({ output: /^solarpunk:(ash_block|(chiseled_)?(ash|salt)_brick.*|polished_(ash|salt).*|salt_(slab|stairs))$/ })
   event.remove({ id: 'solarpunk:ash_from_ash_block' })

@@ -710,7 +710,6 @@ RecipeViewerEvents.removeEntries('item', event => {
     r('solarpunk:firebox_boiler')
     r('solarpunk:geyser_vent')
     r('solarpunk:geyser_cap')
-    r('solarpunk:kinetic_sprinkler')
     r('solarpunk:moss_slab')
     r('solarpunk:moss_stairs')
     event.remove(/^solarpunk:(grow_lamp|solar_plant_bed|salt_lamp|charred_timber.*|ruined_dirt|(incomplete_)?electromagnet_coil)$/)

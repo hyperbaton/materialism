@@ -55,6 +55,7 @@ StartupEvents.registry('fluid', event => {
         ['beryllium_sulfate', 'Beryllium Sulfate Solution', '#E0ECE4'],
         ['uranyl_sulfate', 'Uranyl Sulfate Solution', '#D8E040'],
         ['chromated_copper_arsenate', 'Chromated Copper Arsenate', '#5E8A4A'],
+        ['sodium_arsenite', 'Sodium Arsenite Solution', '#D4D89A'],
         ['fluoroniobic_acid', 'Fluoroniobic Acid', '#DCE4E8'],
         ['fluorotantalic_acid', 'Fluorotantalic Acid', '#E4E0EC']
     ].forEach(([id, name, tint]) => event.create(id)

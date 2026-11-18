@@ -20,6 +20,16 @@ ServerEvents.recipes(event => {
     results: [{ id: 'tfmg:hardened_planks' }]
   }).id(id('filling/hardened_planks'))
 
+  // Sodium arsenite: arsenic dissolved in caustic soda, the sprinkler herbicide
+  event.custom({
+    type: 'create:mixing',
+    ingredients: [
+      { item: 'chemica:arsenic_dust' },
+      { type: 'neoforge:single', fluid: 'chemica:caustic_soda', amount: 250 }
+    ],
+    results: [{ id: 'kubejs:sodium_arsenite', amount: 250 }]
+  }).id(id('mixing/sodium_arsenite'))
+
   // Lead shot: a pinch of arsenic lets molten lead drops form round balls
   event.custom({
     type: 'create:mixing',
