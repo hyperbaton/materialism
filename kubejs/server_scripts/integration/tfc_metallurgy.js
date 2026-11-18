@@ -1,0 +1,172 @@
+// TFC Metallurgy fixes
+ServerEvents.recipes(event => {
+    // Invar alloy used wrought iron, which can't be obtained. Changed it to cast iron instead.
+    event.remove({ id: 'tfc_metallurgy:alloy/invar' })
+    event.custom({
+        type: 'tfc:alloy',
+        result: 'tfc_metallurgy:metal/invar',
+        contents: [
+            { min: 0.6, max: 0.7, fluid: 'tfc:metal/cast_iron' },
+            { min: 0.3, max: 0.4, fluid: 'tfc:metal/nickel' }
+        ]
+    })
+
+    // TFC Metallum's own fishing rod recipes still key off #c:string (singular), unlike
+    // base TFC's #c:strings (plural) -- TODO: transitional fix until the mod itself is updated.
+    event.replaceInput({ id: /^tfc_metallurgy:crafting\/metal\/.*_fishing_rod$/ }, '#c:string', '#c:strings')
+
+    // TFC Metallum's own constantan rod anvil recipe is missing "count": 2 on its result
+    event.remove({ id: 'tfc_metallurgy:anvil/constantan_rod' })
+    event.custom({
+        type: 'tfc:anvil',
+        ingredient: { tag: 'c:ingots/constantan' },
+        result: { count: 2, id: 'tfc_metallurgy:metal/rod/constantan' },
+        tier: 2,
+        rules: ['bend_last', 'draw_second_last', 'draw_third_last']
+    })
+    // Remove tfc items constantan rod recipes
+    event.remove({ id: 'tfc_items:anvil/constantan_rod' })
+    event.remove({ id: 'tfc_items:heating/constantan/rod' })
+
+    // Remove graphite melting recipes
+    event.remove({id: /tfc_metallurgy:heating.*graphite.*/})
+    event.remove({id: 'tfc_metallurgy:casting/graphite_ingot'})
+    event.remove({id: 'tfc_metallurgy:casting/graphite_fire_ingot'})
+    // Add graphite conforming recipes
+    event.recipes.create.compacting('tfc_metallurgy:metal/ingot/graphite', '20x tfc:powder/graphite')
+    event.recipes.create.cutting('2x tfc_metallurgy:metal/rod/graphite', 'tfc_metallurgy:metal/ingot/graphite')
+
+    // Zinc powder from sphalerite powder
+    event.recipes.create.milling('kubejs:powder/zinc', 'tfc:powder/sphalerite')
+
+    // Remove thorium recipes
+    removeToolsAndArmor('thorium')
+    removeToolsAndArmor('uranium')
+
+    // Avoid monazite being melted into thorium (use bloomery instead)
+    event.remove({id: /tfc_metallurgy:heating\/ore.*monazite/})
+    event.recipes.create.crushing('2x kubejs:powder/monazite', 'tfc_metallurgy:ore/small_monazite')
+    event.recipes.create.crushing('3x kubejs:powder/monazite', 'tfc_metallurgy:ore/poor_monazite')
+    event.recipes.create.crushing('5x kubejs:powder/monazite', 'tfc_metallurgy:ore/normal_monazite')
+    event.recipes.create.crushing('7x kubejs:powder/monazite', 'tfc_metallurgy:ore/rich_monazite')
+    // Monazite powder goes through the caustic digestion line in metals/extraction.js
+    event.remove({id: /tfc_metallurgy:heating\/ore.*uraninite/})
+    event.recipes.create.crushing('2x kubejs:powder/uraninite', 'tfc_metallurgy:ore/small_uraninite')
+    event.recipes.create.crushing('3x kubejs:powder/uraninite', 'tfc_metallurgy:ore/poor_uraninite')
+    event.recipes.create.crushing('5x kubejs:powder/uraninite', 'tfc_metallurgy:ore/normal_uraninite')
+    event.recipes.create.crushing('7x kubejs:powder/uraninite', 'tfc_metallurgy:ore/rich_uraninite')
+    // Uraninite powder goes through the acid leach line in metals/extraction.js
+    // Dusts for the base TFC metals (TFC Metallurgy only adds dusts for its own metals)
+    const baseMetalDusts = {
+        bismuth: 270, bismuth_bronze: 985, black_bronze: 1070, black_steel: 1485, blue_steel: 1540,
+        brass: 930, bronze: 950, cast_iron: 1535, copper: 1080, gold: 1060, iron: 1535, nickel: 1453,
+        red_steel: 1540, rose_gold: 960, silver: 961, sterling_silver: 950, steel: 1540, tin: 230, zinc: 420
+    }
+    Object.keys(baseMetalDusts).forEach(metal => {
+        const ingotMetal = metal === 'iron' ? 'wrought_iron' : metal
+        event.custom({
+            type: 'tfc:quern',
+            ingredient: { tag: `c:ingots/${ingotMetal}` },
+            result: { id: `kubejs:metal/dust/${metal}`, count: 20 }
+        })
+        event.custom({
+            type: 'create:crushing',
+            ingredients: [{ tag: `c:ingots/${ingotMetal}` }],
+            results: [{ id: `kubejs:metal/dust/${metal}`, count: 20 }],
+            processing_time: 100
+        })
+        event.custom({
+            type: 'tfc:heating',
+            ingredient: { tag: `c:dusts/${metal}` },
+            result_fluid: { id: `tfc:metal/${ingotMetal}`, amount: 5 },
+            temperature: baseMetalDusts[metal],
+            use_durability: false
+        })
+    })
+
+    // Create crushing for TFC Metallurgy's dusts too, mirroring its quern recipes (1 ingot -> 20 dust)
+    const metallurgyDusts = [
+        'alnico', 'aluminum', 'andesite_alloy', 'antimony', 'beryllium', 'beryllium_copper', 'blutonium',
+        'boron', 'cobalt', 'compressed_iron', 'constantan', 'electrum', 'enderium', 'ferroboron',
+        'florentine_bronze', 'graphite', 'high_alloy_steel', 'invar', 'iridium', 'lead', 'lithium', 'lumium',
+        'magnesium', 'manganese', 'mithril', 'molybdenum', 'neodymium', 'nickel_silver', 'niobium',
+        'osmiridium', 'osmium', 'pewter', 'pink_slime', 'platinum', 'refined_glowstone', 'refined_obsidian',
+        'signalum', 'solder', 'tantalum', 'thorium', 'titanium', 'tungsten', 'tungsten_steel', 'uranium',
+        'vanadium', 'zircaloy', 'zirconium'
+    ]
+    metallurgyDusts.forEach(metal => {
+        event.custom({
+            type: 'create:crushing',
+            ingredients: [{ tag: `c:ingots/${metal}` }],
+            results: [{ id: `tfc_metallurgy:metal/dust/${metal}`, count: 20 }],
+            processing_time: 100
+        })
+    })
+    
+    // Crushing magnesite
+    event.recipes.create.crushing('1x tfcvolcanoes:mineral/powder/magnesite', 'tfcvolcanoes:mineral/magnesite')
+    event.recipes.create.crushing('2x tfcvolcanoes:mineral/powder/magnesite', 'tfc_metallurgy:ore/small_magnesite')
+    event.recipes.create.crushing('3x tfcvolcanoes:mineral/powder/magnesite', 'tfc_metallurgy:ore/poor_magnesite')
+    event.recipes.create.crushing('5x tfcvolcanoes:mineral/powder/magnesite', 'tfc_metallurgy:ore/normal_magnesite')
+    event.recipes.create.crushing('7x tfcvolcanoes:mineral/powder/magnesite', 'tfc_metallurgy:ore/rich_magnesite')
+
+    function removeToolsAndArmor(metal) {
+        event.remove({output: 'tfc_metallurgy:metal/anvil/' + metal})
+        event.remove({output: 'tfc_metallurgy:metal/chain/' + metal})
+        event.remove({output: 'tfc_metallurgy:metal/lamp/' + metal})
+        event.remove({output: 'tfc_metallurgy:metal/trapdoor/' + metal})
+        event.remove({output: 'tfc_metallurgy:metal/tuyere/' + metal})
+        event.remove({output: 'tfc_metallurgy:metal/fish_hook/' + metal})
+        event.remove({output: 'tfc_metallurgy:metal/fishing_rod/' + metal})
+        event.remove({output: 'tfc_metallurgy:metal/pickaxe/' + metal})
+        event.remove({output: 'tfc_metallurgy:metal/pickaxe_head/' + metal})
+        event.remove({output: 'tfc_metallurgy:metal/propick/' + metal})
+        event.remove({output: 'tfc_metallurgy:metal/propick_head/' + metal})
+        event.remove({output: 'tfc_metallurgy:metal/axe/' + metal})
+        event.remove({output: 'tfc_metallurgy:metal/axe_head/' + metal})
+        event.remove({output: 'tfc_metallurgy:metal/shovel/' + metal})
+        event.remove({output: 'tfc_metallurgy:metal/shovel_head/' + metal})
+        event.remove({output: 'tfc_metallurgy:metal/hoe/' + metal})
+        event.remove({output: 'tfc_metallurgy:metal/hoe_head/' + metal})
+        event.remove({output: 'tfc_metallurgy:metal/chisel/' + metal})
+        event.remove({output: 'tfc_metallurgy:metal/chisel_head/' + metal})
+        event.remove({output: 'tfc_metallurgy:metal/hammer/' + metal})
+        event.remove({output: 'tfc_metallurgy:metal/hammer_head/' + metal})
+        event.remove({output: 'tfc_metallurgy:metal/saw/' + metal})
+        event.remove({output: 'tfc_metallurgy:metal/saw_blade/' + metal})
+        event.remove({output: 'tfc_metallurgy:metal/javelin/' + metal})
+        event.remove({output: 'tfc_metallurgy:metal/javelin_head/' + metal})
+        event.remove({output: 'tfc_metallurgy:metal/sword/' + metal})
+        event.remove({output: 'tfc_metallurgy:metal/sword_blade/' + metal})
+        event.remove({output: 'tfc_metallurgy:metal/mace/' + metal})
+        event.remove({output: 'tfc_metallurgy:metal/mace_head/' + metal})
+        event.remove({output: 'tfc_metallurgy:metal/knife/' + metal})
+        event.remove({output: 'tfc_metallurgy:metal/knife_blade/' + metal})
+        event.remove({output: 'tfc_metallurgy:metal/scythe/' + metal})
+        event.remove({output: 'tfc_metallurgy:metal/scythe_blade/' + metal})
+        event.remove({output: 'tfc_metallurgy:metal/shears/' + metal})
+        event.remove({output: 'tfc_metallurgy:metal/unfinished_helmet/' + metal})
+        event.remove({output: 'tfc_metallurgy:metal/helmet/' + metal})
+        event.remove({output: 'tfc_metallurgy:metal/unfinished_chestplate/' + metal})
+        event.remove({output: 'tfc_metallurgy:metal/chestplate/' + metal})
+        event.remove({output: 'tfc_metallurgy:metal/unfinished_greaves/' + metal})
+        event.remove({output: 'tfc_metallurgy:metal/greaves/' + metal})
+        event.remove({output: 'tfc_metallurgy:metal/unfinished_boots/' + metal})
+        event.remove({output: 'tfc_metallurgy:metal/boots/' + metal})
+        event.remove({output: 'tfc_metallurgy:metal/unfinished_lamp/' + metal})
+        event.remove({output: 'tfc_metallurgy:metal/shield/' + metal})
+    }
+
+    // These bars forge at tier 3 in TFC Metallurgy, but their metals need a tier 6 anvil.
+    // Collect first: adding recipes while iterating them is not safe
+    const retieredBars = []
+    event.forEachRecipe({ id: /^tfc_metallurgy:anvil\/(titanium|tungsten|tungsten_steel)_bars(_double)?$/ }, recipe => {
+        let json = JSON.parse(String(recipe.json))
+        json.tier = 6
+        retieredBars.push({ id: String(recipe.getId()), json: json })
+    })
+    retieredBars.forEach(recipe => {
+        event.remove({ id: recipe.id })
+        event.custom(recipe.json).id('kubejs:' + recipe.id.replace(':', '/'))
+    })
+})

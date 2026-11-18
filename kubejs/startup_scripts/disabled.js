@@ -141,7 +141,7 @@ const DISABLED_ITEMS = [].concat(
   ids('solarpunk:', ['lithium', 'beryllium'].map(metal => [metal + '_dust', metal + '_ingot', metal + '_nugget', metal + '_block'])
     .reduce((all, forms) => all.concat(forms), [])),
   ids('solarpunk:', ['copper', 'iron', 'gold'].map(metal => [metal + '_wire', metal + '_spool']).reduce((all, items) => all.concat(items), [])),
-  // Duplicate bio chains (see biofuelRecipes.js)
+  // Duplicate bio chains (see power/biofuel.js)
   ids('createaddition:', ['seed_oil_bucket', 'bioethanol_bucket', 'biomass', 'biomass_pellet', 'biomass_pellet_block'])
 )
 
@@ -181,7 +181,7 @@ const HIDDEN_FLUIDS = [
   'createbigcannons:molten_nethersteel', 'tfmg:molten_steel', 'tfmg:molten_plastic',
   // Chemica fluids that duplicate the pack's own (see unify.js)
   'chemica:oxygen', 'chemica:nitrogen', 'chemica:molten_titanium', 'chemica:propene', 'chemica:brine',
-  // Duplicate bio fluids (see biofuelRecipes.js)
+  // Duplicate bio fluids (see power/biofuel.js)
   'electroenergetics:plant_oil', 'createaddition:seed_oil', 'createaddition:bioethanol', 'solarpunk:biofuel',
   // Create potions and chocolate (Firmalife chocolate is used instead); levitite is assembled with hydrogen or helium instead of blend
   'create:potion', 'create:chocolate', 'aeronautics:levitite_blend'
