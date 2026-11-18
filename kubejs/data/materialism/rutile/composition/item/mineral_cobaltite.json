@@ -18,6 +18,7 @@
     }
   ],
   "contents": [
+    "chemica:crushed_raw_cobalt",
     "tfc_metallurgy:ore/normal_cobaltite",
     "tfc_metallurgy:ore/poor_cobaltite",
     "tfc_metallurgy:ore/rich_cobaltite",

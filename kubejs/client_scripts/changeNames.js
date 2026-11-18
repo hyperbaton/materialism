@@ -111,5 +111,7 @@ ClientEvents.lang("en_us", event => {
     // Electro Energetics overhead line is aluminum on a steel core
     event.renameItem('electroenergetics:iron_wire_strand', 'ACSR Conductor')
     event.renameItem('electroenergetics:iron_wire_spool', 'ACSR Conductor Spool')
+    // Crushed cobaltite ore feeds the cobalt roasting line
+    event.renameItem('chemica:crushed_raw_cobalt', 'Crushed Cobaltite')
 
 });

@@ -91,31 +91,38 @@ ServerEvents.recipes(event => {
     })
   })
 
-  // Fluid swaps. replaceInput can't touch fluids, so the few recipes using them are rewritten.
+  // Fluid swaps, and item swaps inside TFMG vat recipes. replaceInput reaches neither, so those recipes are rewritten.
   const fluidSwaps = [
     ['chemica:oxygen', 'kubejs:oxygen'],
     ['chemica:nitrogen', 'kubejs:nitrogen'],
     ['chemica:molten_titanium', 'tfc_metallurgy:metal/titanium'],
     ['chemica:hydrogen', 'tfmg:hydrogen'],
-    ['chemica:propene', 'tfmg:propylene']
+    ['chemica:propene', 'tfmg:propylene'],
+    ['chemica:brine', 'tfc:salt_water']
   ]
-  event.remove({id: 'chemica:filling/propene'})
+  const itemSwaps = Object.keys(swaps).map(item => [item, swaps[item]]).concat([['tfmg:sulfur_dust', 'tfc:powder/sulfur']])
+  // Salt electrolysis is dropped (chlor-alkali brine electrolysis covers chlorine), and TFC salt water replaces brine
+  const dropped = ['chemica:filling/propene', 'chemica:vat_machine_recipe/electrolysis/salt', 'chemica:mixing/brine']
+  dropped.forEach(recipe => event.remove({id: recipe}))
   const fluidRecipes = []
   event.forEachRecipe({mod: 'chemica'}, recipe => {
-    if (String(recipe.getId()) == 'chemica:filling/propene') return
+    if (dropped.indexOf(String(recipe.getId())) !== -1) return
     const json = String(recipe.json)
-    if (fluidSwaps.some(swap => json.indexOf('"' + swap[0] + '"') !== -1)) {
+    const vat = json.indexOf('"tfmg:vat_machine_recipe"') !== -1
+    if (fluidSwaps.concat(vat ? itemSwaps : []).some(swap => json.indexOf('"' + swap[0] + '"') !== -1)) {
       fluidRecipes.push({id: String(recipe.getId()), json: json})
     }
   })
   fluidRecipes.forEach(recipe => {
     let json = recipe.json
-    fluidSwaps.forEach(swap => {
+    fluidSwaps.concat(itemSwaps).forEach(swap => {
       json = json.split('"' + swap[0] + '"').join('"' + swap[1] + '"')
     })
     event.remove({id: recipe.id})
     event.custom(JSON.parse(json)).id('kubejs:' + recipe.id.replace(':', '/'))
   })
+  // Sodium from the persulfate chain is pressed back into ingots, matching Chemica's 1:1 crushing
+  event.recipes.create.compacting('chemica:sodium_ingot', 'chemica:sodium_dust').id('kubejs:chemica/compacting/sodium_ingot')
 
   // Recipes that asked for plates by tag, declared with the TFC sheets instead
   event.remove({id: 'chemica:deploying/coated_epoxy_circuit_board'})
@@ -184,33 +191,37 @@ ServerEvents.recipes(event => {
     {name: 'rich', dust: 7, acid: 550}
   ]
 
-  // Acid leaching: [dust, ore mod, ores, acids]
+  // Acid leaching of oxide and native ores, same metal as smelting: [dust, ore mod, ores, acids]
+  // Sulfides (galena, sphalerite, molybdenite, stibnite, tetrahedrite) are roasted first, see metalExtractionRecipes.js
   const sulfuric = 'tfmg:sulfuric_acid'
   const hydrochloric = 'chemica:hydrochloric_acid'
   const nitric = 'chemica:nitric_acid'
   const leaching = [
-    ['kubejs:metal/dust/copper', 'tfc', ['native_copper', 'malachite', 'tetrahedrite'], [sulfuric]],
+    ['kubejs:metal/dust/copper', 'tfc', ['native_copper', 'malachite'], [sulfuric]],
     ['kubejs:metal/dust/iron', 'tfc', ['hematite', 'magnetite', 'limonite'], [sulfuric]],
-    ['kubejs:metal/dust/zinc', 'tfc', ['sphalerite'], [sulfuric]],
     ['kubejs:metal/dust/nickel', 'tfc', ['garnierite'], [sulfuric]],
     ['kubejs:metal/dust/tin', 'tfc', ['cassiterite'], [hydrochloric]],
     ['kubejs:metal/dust/silver', 'tfc', ['native_silver'], [nitric]],
     ['kubejs:metal/dust/gold', 'tfc', ['native_gold'], [nitric, hydrochloric]],
-    ['tfc_metallurgy:metal/dust/lead', 'tfc_metallurgy', ['galena'], [sulfuric]],
-    ['tfc_metallurgy:metal/dust/molybdenum', 'tfc_metallurgy', ['molybdenite'], [sulfuric]],
-    ['tfc_metallurgy:metal/dust/antimony', 'tfc_metallurgy', ['stibnite'], [hydrochloric]],
     ['chemica:chromium_dust', 'firmalife', ['chromite'], [sulfuric]]
   ]
+  // Chromite (FeCr2O4) leaves its iron as iron oxide: one Fe2O3 per four chromium
+  const ironOxide = {small: [0, 0.5], poor: [0, 0.75], normal: [1, 0.25], rich: [1, 0.75]}
   leaching.forEach(entry => {
     entry[2].forEach(ore => {
       grades.forEach(grade => {
+        const results = [{id: entry[0], count: grade.dust}]
+        if (ore === 'chromite') {
+          if (ironOxide[grade.name][0] > 0) results.push({id: 'tfc:powder/hematite', count: ironOxide[grade.name][0]})
+          results.push({id: 'tfc:powder/hematite', chance: ironOxide[grade.name][1]})
+        }
         event.custom({
           type: 'tfmg:vat_machine_recipe',
           machines: ['tfmg:mixing'],
           ingredients: [{item: entry[1] + ':ore/' + grade.name + '_' + ore}].concat(
             entry[3].map(acid => ({type: 'neoforge:single', amount: grade.acid, fluid: acid}))
           ),
-          results: [{id: entry[0], count: grade.dust}, {id: entry[0], chance: 0.5}]
+          results: results
         })
       })
     })

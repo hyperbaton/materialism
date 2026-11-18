@@ -678,6 +678,7 @@ RecipeViewerEvents.removeEntries('item', event => {
     r('chemica:nitrogen_bucket')
     r('chemica:molten_titanium_bucket')
     r('chemica:propene_bucket')
+    r('chemica:brine_bucket')
     // TFMG generic plastic (replaced by Chemica plastics)
     r('tfmg:plastic_sheet')
     // Floppy disk transitional items
@@ -768,6 +769,7 @@ RecipeViewerEvents.removeEntries('fluid', event => {
     event.remove('chemica:nitrogen')
     event.remove('chemica:molten_titanium')
     event.remove('chemica:propene')
+    event.remove('chemica:brine')
     event.remove('tfmg:molten_plastic')
 
     // Electro Energetics

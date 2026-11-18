@@ -48,7 +48,7 @@ StartupEvents.registry('fluid', event => {
         .stillTexture('minecraft:block/water_still')
         .flowingTexture('minecraft:block/water_flow')
         .displayName('Thorium Nitrate Solution')
-    // Aqueous solutions: leach liquors of the extraction lines and the CCA wood preservative
+    // Liquids: leach liquors and chlorides of the extraction lines, the CCA wood preservative and the herbicide
     ;[
         ['lithium_sulfate', 'Lithium Sulfate Solution', '#E4E8EC'],
         ['lithium_chloride', 'Lithium Chloride Solution', '#ECECE4'],
@@ -57,7 +57,8 @@ StartupEvents.registry('fluid', event => {
         ['chromated_copper_arsenate', 'Chromated Copper Arsenate', '#5E8A4A'],
         ['sodium_arsenite', 'Sodium Arsenite Solution', '#D4D89A'],
         ['fluoroniobic_acid', 'Fluoroniobic Acid', '#DCE4E8'],
-        ['fluorotantalic_acid', 'Fluorotantalic Acid', '#E4E0EC']
+        ['fluorotantalic_acid', 'Fluorotantalic Acid', '#E4E0EC'],
+        ['silicon_tetrachloride', 'Silicon Tetrachloride', '#ECEEF0']
     ].forEach(([id, name, tint]) => event.create(id)
         .tint(tint)
         .stillTexture('minecraft:block/water_still')
@@ -66,4 +67,8 @@ StartupEvents.registry('fluid', event => {
     addGas('zirconium_tetrachloride', 'Zirconium Tetrachloride', '#ECE8E0')
     // Volatile osmium oxide, distilled off the leach
     addGas('osmium_tetroxide', 'Osmium Tetroxide', '#E6E0A0')
+    // Uranium enrichment feed and its centrifuge fractions
+    addGas('uranium_hexafluoride', 'Uranium Hexafluoride', '#E4E8D8')
+    addGas('enriched_uranium_hexafluoride', 'Enriched Uranium Hexafluoride', '#D4F0A8')
+    addGas('depleted_uranium_hexafluoride', 'Depleted Uranium Hexafluoride', '#C8CCC4')
 })

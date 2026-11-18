@@ -1,0 +1,21 @@
+{
+  "compositions": [
+    {
+      "elements": [
+        {
+          "amount": 1,
+          "id": "rutile:uranium"
+        },
+        {
+          "amount": 6,
+          "id": "rutile:fluorine"
+        }
+      ]
+    }
+  ],
+  "contents": [
+    "kubejs:uranium_hexafluoride",
+    "kubejs:enriched_uranium_hexafluoride",
+    "kubejs:depleted_uranium_hexafluoride"
+  ]
+}

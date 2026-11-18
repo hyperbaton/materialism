@@ -170,7 +170,7 @@ ServerEvents.recipes(event => {
     event.recipes.create.crushing([`${powder}x chemica:crushed_raw_cobalt`], `tfc_metallurgy:ore/${grade}_cobaltite`).id(id(`crushing/${grade}_cobaltite`))
   })
 
-  // Tungsten: wolframite dissolved in hot caustic soda, iron and manganese left behind
+  // Tungsten: wolframite (FeWO4) dissolved in hot caustic soda, its iron left behind as oxide
   event.custom({
     type: 'vintageimprovements:pressurizing',
     ingredients: [
@@ -178,7 +178,7 @@ ServerEvents.recipes(event => {
       { item: 'kubejs:powder/wolframite' }, { item: 'kubejs:powder/wolframite' },
       fluid('chemica:caustic_soda', 500)
     ],
-    results: [{ id: 'kubejs:sodium_tungstate', amount: 500 }, { id: 'tfmg:slag' }],
+    results: [{ id: 'kubejs:sodium_tungstate', amount: 500 }, { id: 'tfc:powder/hematite', count: 2 }],
     heat_requirement: 'heated',
     processing_time: 200
   }).id(id('pressurizing/tungstate_digestion'))
@@ -196,7 +196,7 @@ ServerEvents.recipes(event => {
     processing_time: 200,
     results: [
       { id: 'kubejs:powder/ammonium_paratungstate', count: 4 },
-      { id: 'chemica:brine', amount: 500 }
+      { id: 'tfc:salt_water', amount: 500 }
     ]
   }).id(id('vat/ammonium_paratungstate'))
   // Calcination drives off ammonia and water, leaving the yellow oxide
@@ -447,7 +447,7 @@ ServerEvents.recipes(event => {
     }).id(id(`vat/${metal}_melting`))
   })
 
-  // Thorium: monazite digested in hot caustic soda, the phosphate washed away
+  // Thorium: monazite digested in hot caustic soda; the phosphate crystallises from the liquor as trisodium phosphate
   event.custom({
     type: 'vintageimprovements:pressurizing',
     ingredients: [
@@ -457,11 +457,26 @@ ServerEvents.recipes(event => {
     ],
     results: [
       { id: 'kubejs:powder/rare_earth_hydroxide', count: 4 },
-      { id: 'chemica:waste_slurry', amount: 250 }
+      { id: 'kubejs:powder/trisodium_phosphate', count: 2 }
     ],
     heat_requirement: 'heated',
     processing_time: 200
   }).id(id('pressurizing/monazite_digestion'))
+  // Sulfuric acid frees phosphoric acid from the phosphate, for fertilizers and the rest of the chemistry
+  event.custom({
+    type: 'tfmg:vat',
+    allowed_vat_types: ['tfmg:cast_iron', 'tfmg:steel', 'tfmg:fireproof'],
+    machines: ['tfmg:mixer'],
+    min_size: 1,
+    ingredients: [
+      { item: 'kubejs:powder/trisodium_phosphate' }, { item: 'kubejs:powder/trisodium_phosphate' },
+      { item: 'kubejs:powder/trisodium_phosphate' }, { item: 'kubejs:powder/trisodium_phosphate' },
+      fluid('tfmg:sulfuric_acid', 300),
+      fluid('minecraft:water', 200)
+    ],
+    processing_time: 200,
+    results: [{ id: 'chemica:phosphoric_acid', amount: 500 }]
+  }).id(id('vat/phosphoric_acid_from_phosphate'))
   // Nitric acid dissolves the hydroxides; separation splits thorium from the rare earths
   event.custom({
     type: 'tfmg:vat',
@@ -694,6 +709,7 @@ ServerEvents.recipes(event => {
   }).id(id('vat/beryllium_reduction'))
 
   // Zirconium: the titanium line again, carbochlorination then Kroll
+  // ZrSiO4 + 4 C + 4 Cl2 -> ZrCl4 + SiCl4 + 4 CO: the silicon comes off as its chloride
   event.custom({
     type: 'tfmg:vat',
     allowed_vat_types: ['tfmg:steel', 'tfmg:fireproof'],
@@ -702,15 +718,29 @@ ServerEvents.recipes(event => {
     temperature: 900,
     ingredients: [
       { item: 'kubejs:powder/zircon' }, { item: 'kubejs:powder/zircon' },
-      { item: 'tfmg:coal_coke_dust' },
-      fluid('chemica:chlorine', 500)
+      { item: 'tfmg:coal_coke_dust' }, { item: 'tfmg:coal_coke_dust' },
+      fluid('chemica:chlorine', 1000)
     ],
     processing_time: 200,
     results: [
       { id: 'kubejs:zirconium_tetrachloride', amount: 250 },
-      { id: 'tfmg:carbon_dioxide', amount: 50 }
+      { id: 'kubejs:silicon_tetrachloride', amount: 250 },
+      { id: 'tfmg:carbon_dioxide', amount: 100 }
     ]
   }).id(id('vat/zircon_carbochlorination'))
+  // Hydrogenation: SiCl4 + H2 -> HSiCl3 + HCl, feeding the polysilicon reactor
+  event.custom({
+    type: 'tfmg:vat',
+    allowed_vat_types: ['tfmg:steel', 'tfmg:fireproof'],
+    min_size: 1,
+    temperature: 600,
+    ingredients: [fluid('kubejs:silicon_tetrachloride', 500), fluid('tfmg:hydrogen', 250)],
+    processing_time: 200,
+    results: [
+      { id: 'kubejs:trichlorosilane', amount: 500 },
+      { id: 'chemica:hydrochloric_acid', amount: 250 }
+    ]
+  }).id(id('vat/silicon_tetrachloride_hydrogenation'))
   event.custom({
     type: 'tfmg:vat',
     allowed_vat_types: ['tfmg:steel', 'tfmg:fireproof'],
@@ -795,6 +825,57 @@ ServerEvents.recipes(event => {
       { id: 'tfmg:slag' }
     ]
   }).id(id('vat/uranium_reduction'))
+  // Enrichment: fluorine turns UF4 into UF6 gas (100 mB per powder), a gas centrifuge splits off a tenth as enriched UF6
+  event.custom({
+    type: 'tfmg:vat',
+    allowed_vat_types: ['tfmg:fireproof'],
+    min_size: 1,
+    temperature: 400,
+    ingredients: [
+      { item: 'kubejs:powder/uranium_tetrafluoride' }, { item: 'kubejs:powder/uranium_tetrafluoride' },
+      { item: 'kubejs:powder/uranium_tetrafluoride' }, { item: 'kubejs:powder/uranium_tetrafluoride' },
+      fluid('chemica:fluorine', 200)
+    ],
+    processing_time: 200,
+    results: [{ id: 'kubejs:uranium_hexafluoride', amount: 400 }]
+  }).id(id('vat/uranium_fluorination'))
+  event.custom({
+    type: 'vintageimprovements:centrifugation',
+    ingredients: [fluid('kubejs:uranium_hexafluoride', 1000)],
+    results: [{ id: 'kubejs:enriched_uranium_hexafluoride', amount: 100 }, { id: 'kubejs:depleted_uranium_hexafluoride', amount: 900 }],
+    processing_time: 1200,
+    minimal_rpm: 256
+  }).id(id('centrifugation/uranium_enrichment'))
+  // Enriched UF6 is hydrolysed and reduced to UO2 fuel powder, giving its fluorine back as HF
+  event.custom({
+    type: 'tfmg:vat',
+    allowed_vat_types: ['tfmg:fireproof'],
+    min_size: 1,
+    temperature: 700,
+    ingredients: [fluid('kubejs:enriched_uranium_hexafluoride', 100), fluid('minecraft:water', 100), fluid('tfmg:hydrogen', 50)],
+    processing_time: 200,
+    results: [{ id: 'kubejs:powder/enriched_uranium_dioxide' }, { id: 'chemica:hydrofluoric_acid', amount: 100 }]
+  }).id(id('vat/enriched_uranium_dioxide'))
+  // Sintered fuel pellets, four powders each
+  event.recipes.create.compacting('kubejs:uranium_fuel_pellet', '4x kubejs:powder/enriched_uranium_dioxide')
+    .superheated().id(id('compacting/uranium_fuel_pellet'))
+  // Depleted tails become ordinary uranium metal: hydrogen back to UF4, then magnesium as above
+  event.custom({
+    type: 'tfmg:vat',
+    allowed_vat_types: ['tfmg:fireproof'],
+    min_size: 1,
+    temperature: 900,
+    ingredients: [
+      fluid('kubejs:depleted_uranium_hexafluoride', 200), fluid('tfmg:hydrogen', 100),
+      { item: 'tfc_metallurgy:metal/dust/magnesium' }, { item: 'tfc_metallurgy:metal/dust/magnesium' }
+    ],
+    processing_time: 200,
+    results: [
+      { id: 'tfc_metallurgy:metal/dust/uranium', count: 2 },
+      { id: 'chemica:hydrofluoric_acid', amount: 200 },
+      { id: 'tfmg:slag' }
+    ]
+  }).id(id('vat/depleted_uranium_reduction'))
 
   // Niobium and tantalum: columbite and tantalite don't smelt; tantalum lines the steel vat, so its whole line runs in cast iron vats
   const anyVat = ['tfmg:cast_iron', 'tfmg:steel', 'tfmg:fireproof']
@@ -803,7 +884,7 @@ ServerEvents.recipes(event => {
     ;['columbite', 'tantalite'].forEach(ore =>
       event.recipes.create.crushing([`${powder}x kubejs:powder/${ore}`], `tfc_metallurgy:ore/${grade}_${ore}`).id(id(`crushing/${grade}_${ore}`)))
   })
-  // Hot HF with sulfuric acid dissolves each as its fluoro-complex in a lead-lined vat; the gangue stays as residue
+  // Hot HF with sulfuric acid dissolves each as its fluoro-complex in a lead-lined vat; the iron (one Fe per two Nb or Ta) stays as oxide
   ;[['columbite', 'fluoroniobic_acid'], ['tantalite', 'fluorotantalic_acid']].forEach(([ore, acid]) => {
     const dust = { item: `kubejs:powder/${ore}` }
     event.custom({
@@ -814,7 +895,7 @@ ServerEvents.recipes(event => {
       temperature: 90,
       ingredients: [dust, dust, dust, dust, fluid('chemica:hydrofluoric_acid', 400), fluid('tfmg:sulfuric_acid', 100)],
       processing_time: 300,
-      results: [{ id: `kubejs:${acid}`, amount: 400 }, { id: 'tfmg:slag' }]
+      results: [{ id: `kubejs:${acid}`, amount: 400 }, { id: 'tfc:powder/hematite' }]
     }).id(id(`vat/${ore}_digestion`))
   })
   // H2TaF7 + 2 KCl -> K2TaF7 + 2 HCl, crystallised on cooling
@@ -882,4 +963,44 @@ ServerEvents.recipes(event => {
       { id: 'kubejs:powder/alumina' }
     ]
   }).id(id('vat/niobium_aluminothermy'))
+
+  // Sulfide ores are roasted in air before leaching; the SO2 goes to the acid plant and pays for the leach
+  // [ore namespace, ore, metal dust, leaching acid, mB SO2 per powder]
+  const sulfides = [
+    ['tfc_metallurgy', 'galena', 'tfc_metallurgy:metal/dust/lead', 'tfmg:sulfuric_acid', 100],
+    ['tfc', 'sphalerite', 'kubejs:metal/dust/zinc', 'tfmg:sulfuric_acid', 100],
+    ['tfc_metallurgy', 'molybdenite', 'tfc_metallurgy:metal/dust/molybdenum', 'tfmg:sulfuric_acid', 140],
+    ['tfc_metallurgy', 'stibnite', 'tfc_metallurgy:metal/dust/antimony', 'chemica:hydrochloric_acid', 100],
+    ['tfc', 'tetrahedrite', 'kubejs:metal/dust/copper', 'tfmg:sulfuric_acid', 100]
+  ]
+  // Expected count as a sure count plus a chance for the rest
+  const expected = (item, amount) => {
+    const whole = Math.floor(amount + 1e-6)
+    const rest = Math.round((amount - whole) * 100) / 100
+    const out = whole > 0 ? [{ id: item, count: whole }] : []
+    return rest > 0 ? out.concat([{ id: item, chance: rest }]) : out
+  }
+  sulfides.forEach(([namespace, ore, dust, acid, so2]) => {
+    const calcine = `kubejs:powder/roasted_${ore}`
+    grades.forEach(([grade, powder]) => {
+      // Tetrahedrite (Cu12Sb4S13) gives off its antimony as oxide fume, one part per three of copper
+      const fume = ore === 'tetrahedrite' ? expected('tfc_metallurgy:metal/dust/antimony', powder / 3) : []
+      event.custom({
+        type: 'vintageimprovements:pressurizing',
+        ingredients: [{ item: `${namespace}:ore/${grade}_${ore}` }],
+        results: [{ id: calcine, count: powder }].concat(fume, [{ id: 'vintageimprovements:sulfur_dioxide', amount: so2 * powder }]),
+        heat_requirement: 'heated',
+        processing_time: 60 + 20 * powder
+      }).id(id(`pressurizing/${grade}_${ore}_roasting`))
+    })
+    event.custom({
+      type: 'tfmg:vat',
+      allowed_vat_types: anyVat,
+      machines: ['tfmg:mixer'],
+      min_size: 1,
+      ingredients: [{ item: calcine }, { item: calcine }, { item: calcine }, { item: calcine }, fluid(acid, 300)],
+      processing_time: 200,
+      results: [{ id: dust, count: 4 }]
+    }).id(id(`vat/${ore}_calcine_leaching`))
+  })
 })

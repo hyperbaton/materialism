@@ -119,6 +119,27 @@ ServerEvents.recipes(event => {
       processing_time: 300,
       minimal_rpm: 216
     })
+    // Decanter: olive paste splits into oil and vegetation water in one pass, at the barrel and jute net yield
+    event.custom({type: 'vintageimprovements:centrifugation',
+      ingredients: [{item: 'tfc:olive_paste'}, {fluid: 'minecraft:water', amount: 200, type: 'neoforge:single'}],
+      results: [{id: 'tfc:olive_oil', amount: 40}, {id: 'minecraft:water', amount: 160}],
+      processing_time: 200
+    }).id('kubejs:vintageimprovements/centrifugation/olive_oil')
+    // Cream separator, at the cheesecloth yield
+    event.custom({type: 'vintageimprovements:centrifugation',
+      ingredients: [{type: 'neoforge:tag', tag: 'firmalife:milks', amount: 500}],
+      results: [{id: 'firmalife:cream', amount: 500}],
+      processing_time: 200
+    }).id('kubejs:vintageimprovements/centrifugation/cream')
+    // Curds spun out of curdled milk, leaving whey, as the cheesecloth does
+    ;[['tfc:curdled_milk', 'firmalife:food/milk_curd'], ['firmalife:curdled_goat_milk', 'firmalife:food/goat_curd'],
+      ['firmalife:curdled_yak_milk', 'firmalife:food/yak_curd']].forEach(([milk, curd]) => {
+      event.custom({type: 'vintageimprovements:centrifugation',
+        ingredients: [{fluid: milk, amount: 1000, type: 'neoforge:single'}],
+        results: [{id: curd}, {id: 'firmalife:whey', amount: 1000}],
+        processing_time: 300
+      }).id('kubejs:vintageimprovements/centrifugation/' + curd.split('/')[1])
+    })
 
     // Polishing recipes
     event.recipes.vintageimprovements.polishing('tfc:large_scraped_hide', 'tfc:large_soaked_hide')

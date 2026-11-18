@@ -42,6 +42,11 @@ StartupEvents.registry('item', event => {
     event.create('powder/boron_trioxide').displayName('Boron Trioxide')
     event.create('powder/magnesia').displayName('Magnesia')
     event.create('powder/roasted_cobaltite').displayName('Roasted Cobaltite')
+    // Sulfide calcines for acid leaching, and monazite's phosphate by-product
+    ;[['galena', 'Roasted Galena'], ['sphalerite', 'Roasted Sphalerite'], ['molybdenite', 'Roasted Molybdenite'],
+      ['stibnite', 'Roasted Stibnite'], ['tetrahedrite', 'Roasted Tetrahedrite']].forEach(([ore, name]) =>
+        event.create('powder/roasted_' + ore).displayName(name))
+    event.create('powder/trisodium_phosphate').displayName('Trisodium Phosphate')
     event.create('powder/ammonium_chloroplatinate').displayName('Ammonium Chloroplatinate')
     event.create('platinum_sponge').displayName('Platinum Sponge')
     event.create('powder/native_iridium').displayName('Native Iridium Powder')
@@ -61,6 +66,8 @@ StartupEvents.registry('item', event => {
     event.create('zirconium_sponge').displayName('Zirconium Sponge')
     event.create('powder/yellowcake').displayName('Yellowcake')
     event.create('powder/uranium_tetrafluoride').displayName('Uranium Tetrafluoride')
+    event.create('powder/enriched_uranium_dioxide').displayName('Enriched Uranium Dioxide')
+    event.create('uranium_fuel_pellet').displayName('Uranium Fuel Pellet')
     event.create('powder/columbite').displayName('Columbite Powder')
     event.create('powder/tantalite').displayName('Tantalite Powder')
     event.create('powder/potassium_fluorotantalate').displayName('Potassium Fluorotantalate')

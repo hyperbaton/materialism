@@ -600,18 +600,9 @@ ServerEvents.recipes(event => {
       processing_time: 100,
       mode: 3
     })
-    event.custom({type: 'vintageimprovements:centrifugation',
-      ingredients: [
-        {item: 'tfc_metallurgy:metal/ingot/uranium'},
-        {fluid: 'tfmg:sulfuric_acid', amount: 500, type: 'neoforge:single'}
-      ],
-      results: [{id: 'create_new_age:radioactive_thorium', chance: 0.5}],
-      processing_time: 500,
-      minimal_rpm: 256
-    })
-
+    // Fuel rods take irradiated thorium or enriched uranium pellets (metalExtractionRecipes.js)
     event.remove('create_new_age:sequenced_assembly/nuclear_fuel')
-    event.recipes.create.sequenced_assembly(
+    ;['create_new_age:radioactive_thorium', 'kubejs:uranium_fuel_pellet'].forEach(fissile => event.recipes.create.sequenced_assembly(
       [
           Item.of('create_new_age:nuclear_fuel', 1)
       ],
@@ -619,7 +610,7 @@ ServerEvents.recipes(event => {
       [
           event.recipes.createDeploying(
             'tfc_metallurgy:metal/double_sheet/zircaloy',
-            ['tfc_metallurgy:metal/double_sheet/zircaloy', 'create_new_age:radioactive_thorium']
+            ['tfc_metallurgy:metal/double_sheet/zircaloy', fissile]
           ),
           event.recipes.create.pressing('tfc_metallurgy:metal/double_sheet/zircaloy', 'tfc_metallurgy:metal/double_sheet/zircaloy'),
           event.recipes.createDeploying(
@@ -629,7 +620,7 @@ ServerEvents.recipes(event => {
           event.custom({type: 'vintageimprovements:curving', ingredients: [{item: 'tfc_metallurgy:metal/double_sheet/zircaloy'}], results: [{id: 'tfc_metallurgy:metal/double_sheet/zircaloy'}], mode: 3})
       ]
     ).transitionalItem('tfc_metallurgy:metal/double_sheet/zircaloy')
-    .loops(1);
+    .loops(1).id('kubejs:new_age/sequenced_assembly/nuclear_fuel_' + fissile.split(':')[1]))
 
     // Circuit fabrication
     // TODO: Item.of('#tfc:silica_sand') doesn't work — tags need Ingredient format, not Item.of. Also #tfc:silica_sand may be empty.
