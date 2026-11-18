@@ -14,6 +14,7 @@
     }
   ],
   "contents": [
+    "createaddition:electrum_nugget",
     "createaddition:electrum_spool",
     "createaddition:electrum_wire",
     "tfc_items:electrum_foil",

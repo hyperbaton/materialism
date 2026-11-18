@@ -10,6 +10,7 @@
     }
   ],
   "contents": [
+    "chemica:chromium_nugget",
     "firmalife:metal/block/chromium",
     "firmalife:metal/block/chromium_slab",
     "firmalife:metal/block/chromium_stairs",

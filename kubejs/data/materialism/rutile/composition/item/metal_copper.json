@@ -10,6 +10,7 @@
     }
   ],
   "contents": [
+    "create:copper_nugget",
     "createaddition:copper_spool",
     "createaddition:copper_wire",
     "kubejs:metal/dust/copper",

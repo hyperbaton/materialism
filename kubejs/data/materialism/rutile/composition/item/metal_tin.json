@@ -10,6 +10,7 @@
     }
   ],
   "contents": [
+    "chemica:tin_nugget",
     "kubejs:metal/dust/tin",
     "tfc:metal/block/tin",
     "tfc:metal/block/tin_slab",

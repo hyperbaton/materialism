@@ -27,6 +27,13 @@ function heatedResult(id) {
   return { type: 'heated', copy_heat: true, internal: { id: id } }
 }
 
+// Metal nuggets: an ingot cut with a chisel, by hand or by a deployer, gives 10; each melts back into 10 mB (pass no fluid when another recipe melts it)
+function addNuggets(event, nugget, ingot, fluid, temperature) {
+  event.shapeless('10x ' + nugget, [ingot, '#tfc:chisels']).damageIngredient(Ingredient.of('#tfc:chisels'))
+  if (fluid) event.custom({ type: 'tfc:heating', ingredient: { item: nugget }, result_fluid: { amount: 10, id: fluid }, temperature: temperature })
+  event.custom({ type: 'create:deploying', ingredients: [{ item: ingot }, { tag: 'tfc:chisels' }], results: [{ id: nugget, count: 10 }] })
+}
+
 // Fermentation vat batch (Materialism Core); set the id on the result
 function fermenting(event, ingredient, fluid, result, time) {
   return event.custom({ type: 'materialismcore:fermenting', ingredient: ingredient, fluid_ingredient: fluid, result: result, processing_time: time })

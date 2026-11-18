@@ -10,6 +10,7 @@
     }
   ],
   "contents": [
+    "chemica:molybdenum_nugget",
     "tfc_metallurgy:metal/block/molybdenum",
     "tfc_metallurgy:metal/double_ingot/molybdenum",
     "tfc_metallurgy:metal/double_sheet/molybdenum",

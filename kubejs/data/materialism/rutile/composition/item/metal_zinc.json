@@ -10,6 +10,7 @@
     }
   ],
   "contents": [
+    "create:zinc_nugget",
     "kubejs:metal/dust/zinc",
     "tfc:metal/block/zinc",
     "tfc:metal/block/zinc_slab",

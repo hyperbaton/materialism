@@ -10,6 +10,7 @@
     }
   ],
   "contents": [
+    "chemica:tantalum_nugget",
     "tfc_metallurgy:metal/block/tantalum",
     "tfc_metallurgy:metal/double_ingot/tantalum",
     "tfc_metallurgy:metal/double_sheet/tantalum",

@@ -10,6 +10,7 @@
     }
   ],
   "contents": [
+    "chemica:antimony_nugget",
     "tfc_metallurgy:metal/block/antimony",
     "tfc_metallurgy:metal/double_ingot/antimony",
     "tfc_metallurgy:metal/double_sheet/antimony",

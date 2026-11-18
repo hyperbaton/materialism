@@ -1,0 +1,22 @@
+{
+  "compositions": [
+    {
+      "elements": [
+        {
+          "amount": 19,
+          "id": "rutile:iron"
+        },
+        {
+          "amount": 1,
+          "id": "rutile:carbon"
+        }
+      ]
+    }
+  ],
+  "contents": [
+    "tfmg:steel_block",
+    "tfmg:steel_ingot",
+    "tfmg:steel_nugget",
+    "tfmg:heavy_plate"
+  ]
+}

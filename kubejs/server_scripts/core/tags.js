@@ -79,7 +79,9 @@ ServerEvents.tags('item', event => {
   ;['salt', 'soda_ash', 'ash', 'charcoal_dust', 'electrum_grit', 'platinum_block', 'constantan_dust', 'graphite_ingot', 'graphite_sheet',
     'quartz_dust', 'yeast', 'reinforced_iridium_plate'].forEach(item => event.removeAllTagsFrom('chemica:' + item))
   ;['antimony', 'cobalt', 'iridium', 'magnesium', 'molybdenum', 'platinum', 'tantalum', 'titanium', 'tungsten', 'vanadium', 'silver', 'tin']
-    .forEach(metal => event.removeAllTagsFrom('chemica:' + metal + '_ingot', 'chemica:' + metal + '_nugget'))
+    .forEach(metal => event.removeAllTagsFrom('chemica:' + metal + '_ingot'))
+  // Chemica's nuggets are the pack's (metals/nuggets.js), except vanadium's: Vintage Improvements has it
+  event.removeAllTagsFrom('chemica:vanadium_nugget')
   ;['antimony', 'cobalt', 'iridium', 'magnesium', 'platinum', 'tantalum', 'titanium', 'tungsten', 'vanadium', 'copper', 'iron', 'gold', 'nickel',
     'silver', 'tin', 'zinc'].forEach(metal => event.removeAllTagsFrom('chemica:' + metal + '_dust'))
   ;['iridium', 'magnesium', 'silver', 'tantalum', 'tin', 'titanium'].forEach(metal => event.removeAllTagsFrom('chemica:' + metal + '_sheet'))

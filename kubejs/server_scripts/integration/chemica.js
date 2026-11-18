@@ -25,7 +25,10 @@ ServerEvents.recipes(event => {
   event.remove({id: 'chemica:vat_machine_recipe/vat_reaction/ethanol'})
   event.remove({id: 'chemica:compacting/tungsten_carbide_dust'})
 
-  // Item and fluid swaps are in unify.js
+  // Item and fluid swaps are in unify.js; recipe-specific ones here
+  swapInputs(event, [
+    ['chemica:mixing/platinum_catalyst', 'minecraft:iron_nugget', 'kubejs:metal/dust/iron']
+  ])
 
   // Casting basin and arc furnace: Chemica uses 90 mB per ingot, the pack uses 100 mB
   event.forEachRecipe({id: /^chemica:(casting\/.*|vat_machine_recipe\/arc_furnace_.*)/}, recipe => {

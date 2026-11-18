@@ -24,24 +24,17 @@ const UNIFY_ITEMS = [
   ['chemica:crushed_graphite', 'tfc:powder/graphite', 'both'],
   ['chemica:graphite_ingot', 'tfc_metallurgy:metal/ingot/graphite', 'both'],
   ['chemica:graphite_sheet', 'tfc_metallurgy:metal/sheet/graphite', 'both'],
-  ['chemica:chromium_nugget', 'chemica:chromium_dust', 'both'],
-  ['chemica:silver_nugget', 'kubejs:metal/dust/silver', 'both'],
-  ['minecraft:iron_nugget', 'kubejs:metal/dust/iron', 'both'],
-  ['minecraft:gold_nugget', 'kubejs:metal/dust/gold', 'both'],
-  ['tfmg:aluminum_nugget', 'tfc_metallurgy:metal/dust/aluminum', 'both'],
   ['tfmg:aluminum_ingot', 'tfc_metallurgy:metal/ingot/aluminum', 'both'],
   ['tfmg:nickel_ingot', 'tfc:metal/ingot/nickel', 'both'],
   ['tfmg:constantan_ingot', 'tfc_metallurgy:metal/ingot/constantan', 'both'],
   ['tfmg:lead_ingot', 'tfc_metallurgy:metal/ingot/lead', 'both'],
   ['create:zinc_ingot', 'tfc:metal/ingot/zinc', 'both'],
   ['create:copper_sheet', 'tfc:metal/sheet/copper', 'both'],
-  ['create:iron_sheet', 'tfc:metal/sheet/wrought_iron', 'both'],
-  ['create:copper_nugget', 'kubejs:metal/dust/copper', 'both']
+  ['create:iron_sheet', 'tfc:metal/sheet/wrought_iron', 'both']
 ]
 // Chemica metals TFC Metallurgy has (no molybdenum dust, sheets only for some), and the base metal dusts the pack adds
 ;['antimony', 'cobalt', 'iridium', 'magnesium', 'molybdenum', 'platinum', 'tantalum', 'titanium', 'tungsten', 'vanadium'].forEach(metal => {
   UNIFY_ITEMS.push(['chemica:' + metal + '_ingot', 'tfc_metallurgy:metal/ingot/' + metal, 'both'])
-  UNIFY_ITEMS.push(['chemica:' + metal + '_nugget', 'tfc_metallurgy:metal/dust/' + metal, 'both'])
   if (metal != 'molybdenum') UNIFY_ITEMS.push(['chemica:' + metal + '_dust', 'tfc_metallurgy:metal/dust/' + metal, 'both'])
 })
 ;['iridium', 'magnesium', 'tantalum', 'titanium'].forEach(metal =>

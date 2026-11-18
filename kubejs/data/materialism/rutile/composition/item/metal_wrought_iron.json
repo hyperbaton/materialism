@@ -10,6 +10,7 @@
     }
   ],
   "contents": [
+    "minecraft:iron_nugget",
     "tfc:metal/anvil/wrought_iron",
     "tfc:metal/axe/wrought_iron",
     "tfc:metal/axe_head/wrought_iron",

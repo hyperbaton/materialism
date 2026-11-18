@@ -10,6 +10,7 @@
     }
   ],
   "contents": [
+    "chemica:titanium_nugget",
     "tfc_metallurgy:metal/anvil/titanium",
     "tfc_metallurgy:metal/axe/titanium",
     "tfc_metallurgy:metal/axe_head/titanium",

@@ -10,6 +10,7 @@
     }
   ],
   "contents": [
+    "chemica:tungsten_nugget",
     "tfc_metallurgy:metal/anvil/tungsten",
     "tfc_metallurgy:metal/axe/tungsten",
     "tfc_metallurgy:metal/axe_head/tungsten",

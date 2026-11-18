@@ -10,6 +10,7 @@
     }
   ],
   "contents": [
+    "chemica:cobalt_nugget",
     "tfc_metallurgy:metal/anvil/cobalt",
     "tfc_metallurgy:metal/axe/cobalt",
     "tfc_metallurgy:metal/axe_head/cobalt",

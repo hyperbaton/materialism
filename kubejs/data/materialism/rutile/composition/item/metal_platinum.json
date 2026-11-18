@@ -10,6 +10,7 @@
     }
   ],
   "contents": [
+    "chemica:platinum_nugget",
     "tfc_metallurgy:metal/block/platinum",
     "tfc_metallurgy:metal/double_ingot/platinum",
     "tfc_metallurgy:metal/double_sheet/platinum",

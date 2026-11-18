@@ -13,6 +13,7 @@
     "createaddition:gold_spool",
     "createaddition:gold_wire",
     "kubejs:metal/dust/gold",
+    "minecraft:gold_nugget",
     "tfc:metal/block/gold",
     "tfc:metal/block/gold_slab",
     "tfc:metal/block/gold_stairs",

@@ -21,44 +21,6 @@ ServerEvents.recipes(event => {
   event.remove({ output: 'tfmg:steel_ingot' })
   event.remove({ output: 'tfmg:cast_iron_sheet' })
 
-  // Nugget standardization: TFMG's own ingots are removed, so their nuggets
-  //  are re-anchored onto the TFC or tfc_metallurgy ingot.
-  event.remove({ id: 'tfmg:crafting/materials/aluminum_ingot_from_compacting' })
-  event.remove({ id: 'tfmg:crafting/materials/aluminum_nugget_from_decompacting' })
-  event.shapeless('10x tfmg:aluminum_nugget', ['tfc_metallurgy:metal/ingot/aluminum', '#tfc:chisels']).damageIngredient(Ingredient.of('#tfc:chisels'))
-  event.custom({ type: 'tfc:heating', ingredient: { item: 'tfmg:aluminum_nugget' }, result_fluid: { amount: 10, id: 'tfc_metallurgy:metal/aluminum' }, temperature: 660 })
-  event.custom({ type: 'create:deploying', ingredients: [{ item: 'tfc_metallurgy:metal/ingot/aluminum' }, { tag: 'tfc:chisels' }], results: [{ id: 'tfmg:aluminum_nugget', count: 10 }] })
-
-  event.remove({ id: 'tfmg:crafting/materials/lead_ingot_from_compacting' })
-  event.remove({ id: 'tfmg:crafting/materials/lead_nugget_from_decompacting' })
-  event.shapeless('10x tfmg:lead_nugget', ['tfc_metallurgy:metal/ingot/lead', '#tfc:chisels']).damageIngredient(Ingredient.of('#tfc:chisels'))
-  event.custom({ type: 'tfc:heating', ingredient: { item: 'tfmg:lead_nugget' }, result_fluid: { amount: 10, id: 'tfc_metallurgy:metal/lead' }, temperature: 328 })
-  event.custom({ type: 'create:deploying', ingredients: [{ item: 'tfc_metallurgy:metal/ingot/lead' }, { tag: 'tfc:chisels' }], results: [{ id: 'tfmg:lead_nugget', count: 10 }] })
-
-  event.remove({ id: 'tfmg:crafting/materials/lithium_ingot_from_compacting' })
-  event.remove({ id: 'tfmg:crafting/materials/lithium_nugget_from_decompacting' })
-  event.shapeless('10x tfmg:lithium_nugget', ['tfc_metallurgy:metal/ingot/lithium', '#tfc:chisels']).damageIngredient(Ingredient.of('#tfc:chisels'))
-  event.custom({ type: 'tfc:heating', ingredient: { item: 'tfmg:lithium_nugget' }, result_fluid: { amount: 10, id: 'tfc_metallurgy:metal/lithium' }, temperature: 328 })
-  event.custom({ type: 'create:deploying', ingredients: [{ item: 'tfc_metallurgy:metal/ingot/lithium' }, { tag: 'tfc:chisels' }], results: [{ id: 'tfmg:lithium_nugget', count: 10 }] })
-
-  event.remove({ id: 'tfmg:crafting/materials/nickel_ingot_from_compacting' })
-  event.remove({ id: 'tfmg:crafting/materials/nickel_nugget_from_decompacting' })
-  event.shapeless('10x tfmg:nickel_nugget', ['tfc:metal/ingot/nickel', '#tfc:chisels']).damageIngredient(Ingredient.of('#tfc:chisels'))
-  event.custom({ type: 'tfc:heating', ingredient: { item: 'tfmg:nickel_nugget' }, result_fluid: { amount: 10, id: 'tfc:metal/nickel' }, temperature: 1453 })
-  event.custom({ type: 'create:deploying', ingredients: [{ item: 'tfc:metal/ingot/nickel' }, { tag: 'tfc:chisels' }], results: [{ id: 'tfmg:nickel_nugget', count: 10 }] })
-
-  event.remove({ id: 'tfmg:crafting/materials/steel_ingot_from_compacting' })
-  event.remove({ id: 'tfmg:crafting/materials/steel_nugget_from_decompacting' })
-  event.shapeless('10x tfmg:steel_nugget', ['tfc:metal/ingot/steel', '#tfc:chisels']).damageIngredient(Ingredient.of('#tfc:chisels'))
-  event.custom({ type: 'tfc:heating', ingredient: { item: 'tfmg:steel_nugget' }, result_fluid: { amount: 10, id: 'tfc:metal/cast_iron' }, temperature: 1535 })
-  event.custom({ type: 'create:deploying', ingredients: [{ item: 'tfc:metal/ingot/steel' }, { tag: 'tfc:chisels' }], results: [{ id: 'tfmg:steel_nugget', count: 10 }] })
-
-  // Cast iron: keep tfmg's nugget as canonical (createbigcannons's duplicate is hidden instead)
-  event.remove({ id: 'tfmg:crafting/materials/cast_iron_ingot_from_compacting' })
-  event.remove({ id: 'tfmg:crafting/materials/cast_iron_nugget_from_decompacting' })
-  event.shapeless('10x tfmg:cast_iron_nugget', ['tfc:metal/ingot/cast_iron', '#tfc:chisels']).damageIngredient(Ingredient.of('#tfc:chisels'))
-  event.custom({ type: 'tfc:heating', ingredient: { item: 'tfmg:cast_iron_nugget' }, result_fluid: { amount: 10, id: 'tfc:metal/cast_iron' }, temperature: 1535 })
-  event.custom({ type: 'create:deploying', ingredients: [{ item: 'tfc:metal/ingot/cast_iron' }, { tag: 'tfc:chisels' }], results: [{ id: 'tfmg:cast_iron_nugget', count: 10 }] })
 
   // Remove wires, using vintageimprovement or carfts and additions ones
   event.remove('tfmg:stonecutting/aluminum_wire')

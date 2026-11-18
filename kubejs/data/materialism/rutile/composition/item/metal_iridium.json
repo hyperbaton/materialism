@@ -10,6 +10,7 @@
     }
   ],
   "contents": [
+    "chemica:iridium_nugget",
     "tfc_metallurgy:metal/block/iridium",
     "tfc_metallurgy:metal/double_ingot/iridium",
     "tfc_metallurgy:metal/double_sheet/iridium",

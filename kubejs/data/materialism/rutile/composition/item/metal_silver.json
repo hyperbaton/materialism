@@ -10,6 +10,7 @@
     }
   ],
   "contents": [
+    "chemica:silver_nugget",
     "kubejs:metal/dust/silver",
     "tfc:metal/block/silver",
     "tfc:metal/block/silver_slab",
