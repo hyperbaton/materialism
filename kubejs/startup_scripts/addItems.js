@@ -80,6 +80,11 @@ StartupEvents.registry('item', event => {
     event.create('monocrystalline_silicon').maxStackSize(16).displayName('Monocrystalline Silicon Ingot')
     event.create('incomplete_photovoltaic_panel').maxStackSize(1).displayName('Photovoltaic Panel in Progress')
     event.create('wood_plating_blank').maxStackSize(1).displayName('Wood Plating in Progress')
+    // Melt-spun nylon: extruded filament, drawn for strength, twisted into thread (nylonRecipes.js)
+    event.create('nylon_filament').displayName('Nylon Filament')
+    event.create('drawn_nylon_filament').displayName('Drawn Nylon Filament')
+    event.create('nylon_thread').displayName('Nylon Thread')
+    event.create('nylon_cloth').displayName('Nylon Cloth')
     const dyeColors = [
       "white", "orange", "magenta", "light_blue", "yellow", "lime", "pink", "gray",
       "light_gray", "cyan", "purple", "blue", "brown", "green", "red", "black"

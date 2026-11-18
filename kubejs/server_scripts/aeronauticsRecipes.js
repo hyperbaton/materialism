@@ -101,7 +101,7 @@ ServerEvents.recipes(event => {
         }
     )
 
-    // Envelope recipes: replace minecraft:stick with magnesium rod
+    // Envelopes: nylon cloth stretched over a magnesium rod frame; colored in world with dye, so only white is made
     const envelopeColors = [
         'white', 'orange', 'magenta', 'light_blue', 'yellow', 'lime',
         'pink', 'gray', 'light_gray', 'cyan', 'purple', 'blue',
@@ -109,19 +109,12 @@ ServerEvents.recipes(event => {
     ]
     envelopeColors.forEach(color => {
         event.remove({id: `aeronautics:${color}_envelope`})
-        event.shaped(`4x aeronautics:${color}_envelope`,
-            ['WL', 'LW'],
-            {
-                W: `minecraft:${color}_wool`,
-                L: 'tfc_metallurgy:metal/rod/magnesium'
-            }
-        )
         event.remove({id: `aeronautics:deploying/deploying_envelope_${color}`})
-        event.recipes.create.deploying(
-            [Item.of(`aeronautics:${color}_envelope`, 2)],
-            [`minecraft:${color}_wool`, 'tfc_metallurgy:metal/rod/magnesium']
-        )
     })
+    event.recipes.create.deploying(
+        [Item.of('aeronautics:white_envelope', 4)],
+        ['kubejs:nylon_cloth', 'tfc_metallurgy:metal/rod/magnesium']
+    ).id('kubejs:aeronautics/deploying/white_envelope')
 
     // Mounted Potato Cannon: replace dried_kelp_block with rubber
     event.remove({id: 'aeronautics:mechanical_crafting/mounted_potato_cannon'})

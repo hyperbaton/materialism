@@ -14,6 +14,7 @@
 			id: "15A36EE45961F623"
 			linked_quest: "6CF2CE946DFD4FDC"
 			shape: "circle"
+			size: 1.0d
 			x: 0.0d
 			y: 0.0d
 		}
@@ -21,6 +22,7 @@
 			id: "34DFADA3D1B1AA15"
 			linked_quest: "6131B6489C98424E"
 			shape: "circle"
+			size: 1.0d
 			x: 0.0d
 			y: 6.0d
 		}
@@ -34,31 +36,32 @@
 			id: "769AE59AEDC4D448"
 			shape: "diamond"
 			size: 1.0d
-			tasks: [{
-				id: "33130C70B6BC7124"
-				type: "checkmark"
-			}]
+			tasks: [
+				{
+					id: "33130C70B6BC7124"
+					type: "checkmark"
+				}
+			]
 			x: 0.0d
 			y: -2.0d
 		}
 		{
 			dependencies: ["6CF2CE946DFD4FDC"]
 			icon: {
-				components: {
-					"tfc:heat": { }
-				}
 				id: "createaddition:copper_wire"
 			}
 			id: "1002FC2978C93276"
 			shape: "circle"
 			size: 1.0d
-			tasks: [{
-				consume_items: false
-				count: 16L
-				id: "01E5BE79D9DB5851"
-				item: { components: { "tfc:heat": { } }, count: 1, id: "createaddition:copper_wire" }
-				type: "item"
-			}]
+			tasks: [
+				{
+					consume_items: false
+					count: 16L
+					id: "01E5BE79D9DB5851"
+					item: { count: 1, id: "createaddition:copper_wire" }
+					type: "item"
+				}
+			]
 			x: 2.0d
 			y: 0.0d
 		}
@@ -70,34 +73,35 @@
 			id: "24C7CB06BECAA84D"
 			shape: "circle"
 			size: 1.0d
-			tasks: [{
-				consume_items: false
-				count: 4L
-				id: "115B9287F8AF4CE2"
-				item: { count: 1, id: "electroenergetics:empty_spool" }
-				type: "item"
-			}]
+			tasks: [
+				{
+					consume_items: false
+					count: 4L
+					id: "115B9287F8AF4CE2"
+					item: { count: 1, id: "electroenergetics:empty_spool" }
+					type: "item"
+				}
+			]
 			x: 2.0d
 			y: -1.75d
 		}
 		{
-			dependencies: [
-				"1002FC2978C93276"
-				"24C7CB06BECAA84D"
-			]
+			dependencies: ["1002FC2978C93276", "24C7CB06BECAA84D"]
 			icon: {
 				id: "electroenergetics:copper_wire_spool"
 			}
 			id: "1DC0C707DDC8A17D"
 			shape: "circle"
 			size: 1.0d
-			tasks: [{
-				consume_items: false
-				count: 2L
-				id: "7C3BCB947A3DF31A"
-				item: { count: 1, id: "electroenergetics:copper_wire_spool" }
-				type: "item"
-			}]
+			tasks: [
+				{
+					consume_items: false
+					count: 2L
+					id: "7C3BCB947A3DF31A"
+					item: { count: 1, id: "electroenergetics:copper_wire_spool" }
+					type: "item"
+				}
+			]
 			x: 4.0d
 			y: 0.0d
 		}
@@ -109,13 +113,15 @@
 			id: "42A35D1AB65873B0"
 			shape: "circle"
 			size: 1.0d
-			tasks: [{
-				consume_items: false
-				count: 4L
-				id: "0B1051EBE0E06B2E"
-				item: { count: 1, id: "electroenergetics:connector" }
-				type: "item"
-			}]
+			tasks: [
+				{
+					consume_items: false
+					count: 4L
+					id: "0B1051EBE0E06B2E"
+					item: { count: 1, id: "electroenergetics:connector" }
+					type: "item"
+				}
+			]
 			x: 2.0d
 			y: 1.75d
 		}
@@ -127,34 +133,34 @@
 			id: "520876E156CDA0F2"
 			shape: "circle"
 			size: 1.0d
-			tasks: [{
-				consume_items: false
-				count: 4L
-				id: "78B58943D5638288"
-				item: { count: 1, id: "electroenergetics:transformer_core_lamination" }
-				type: "item"
-			}]
+			tasks: [
+				{
+					consume_items: false
+					count: 4L
+					id: "78B58943D5638288"
+					item: { count: 1, id: "electroenergetics:transformer_core_lamination" }
+					type: "item"
+				}
+			]
 			x: 2.0d
 			y: 3.5d
 		}
 		{
-			dependencies: [
-				"1DC0C707DDC8A17D"
-				"42A35D1AB65873B0"
-				"520876E156CDA0F2"
-			]
+			dependencies: ["1DC0C707DDC8A17D", "42A35D1AB65873B0", "520876E156CDA0F2"]
 			icon: {
 				id: "electroenergetics:converter"
 			}
 			id: "301F3ABE79A6E71C"
 			shape: "rsquare"
 			size: 1.5d
-			tasks: [{
-				consume_items: false
-				id: "33D2FE660BE2B051"
-				item: { count: 1, id: "electroenergetics:converter" }
-				type: "item"
-			}]
+			tasks: [
+				{
+					consume_items: false
+					id: "33D2FE660BE2B051"
+					item: { count: 1, id: "electroenergetics:converter" }
+					type: "item"
+				}
+			]
 			x: 6.5d
 			y: 0.0d
 		}
@@ -166,13 +172,15 @@
 			id: "415B059787BCE3D5"
 			shape: "circle"
 			size: 1.0d
-			tasks: [{
-				consume_items: false
-				count: 2L
-				id: "642CAD814E2511AB"
-				item: { count: 1, id: "tfmg:silicon_ingot" }
-				type: "item"
-			}]
+			tasks: [
+				{
+					consume_items: false
+					count: 2L
+					id: "642CAD814E2511AB"
+					item: { count: 1, id: "tfmg:silicon_ingot" }
+					type: "item"
+				}
+			]
 			x: 2.0d
 			y: 6.0d
 		}
@@ -184,13 +192,15 @@
 			id: "66528BEC40683B2B"
 			shape: "circle"
 			size: 1.0d
-			tasks: [{
-				consume_items: false
-				count: 2L
-				id: "4FDE2AED6967CE2D"
-				item: { count: 1, id: "tfmg:magnetic_alloy_ingot" }
-				type: "item"
-			}]
+			tasks: [
+				{
+					consume_items: false
+					count: 2L
+					id: "4FDE2AED6967CE2D"
+					item: { count: 1, id: "tfmg:magnetic_alloy_ingot" }
+					type: "item"
+				}
+			]
 			x: 4.0d
 			y: 6.0d
 		}
@@ -202,13 +212,15 @@
 			id: "33CE7FE82A19CE7B"
 			shape: "circle"
 			size: 1.0d
-			tasks: [{
-				consume_items: false
-				count: 8L
-				id: "48ED15CBCDAB76C7"
-				item: { count: 1, id: "tfmg:electromagnetic_coil" }
-				type: "item"
-			}]
+			tasks: [
+				{
+					consume_items: false
+					count: 8L
+					id: "48ED15CBCDAB76C7"
+					item: { count: 1, id: "tfmg:electromagnetic_coil" }
+					type: "item"
+				}
+			]
 			x: 6.0d
 			y: 6.0d
 		}
@@ -220,12 +232,14 @@
 			id: "47900981E1A6F408"
 			shape: "rsquare"
 			size: 1.5d
-			tasks: [{
-				consume_items: false
-				id: "353A13B666B40164"
-				item: { count: 1, id: "create_new_age:generator_coil" }
-				type: "item"
-			}]
+			tasks: [
+				{
+					consume_items: false
+					id: "353A13B666B40164"
+					item: { count: 1, id: "create_new_age:generator_coil" }
+					type: "item"
+				}
+			]
 			x: 8.25d
 			y: 6.0d
 		}
@@ -236,12 +250,14 @@
 			id: "0DE36789532A32C8"
 			shape: "circle"
 			size: 1.0d
-			tasks: [{
-				consume_items: false
-				id: "1309505910CE22D4"
-				item: { count: 1, id: "create_new_age:carbon_brushes" }
-				type: "item"
-			}]
+			tasks: [
+				{
+					consume_items: false
+					id: "1309505910CE22D4"
+					item: { count: 1, id: "create_new_age:carbon_brushes" }
+					type: "item"
+				}
+			]
 			x: 7.5d
 			y: 2.5d
 		}
@@ -272,26 +288,22 @@
 			y: 2.5d
 		}
 		{
-			dependencies: [
-				"301F3ABE79A6E71C"
-				"47900981E1A6F408"
-				"0DE36789532A32C8"
-				"0EF1C3B4B0ECAD4A"
-			]
+			dependencies: ["301F3ABE79A6E71C", "47900981E1A6F408", "0DE36789532A32C8", "0EF1C3B4B0ECAD4A"]
 			icon: {
 				id: "materialismcore:galvanic_cell"
 			}
 			id: "1C87D51F077F0648"
 			shape: "rsquare"
 			size: 2.0d
-			tasks: [{
-				id: "771841866EF337D1"
-				observation_type: "block"
-				observe_type: 0
-				timer: 0L
-				to_observe: "create_new_age:generator_coil"
-				type: "observation"
-			}]
+			tasks: [
+				{
+					id: "771841866EF337D1"
+					observe_type: 0
+					timer: 0L
+					to_observe: "create_new_age:generator_coil"
+					type: "observation"
+				}
+			]
 			x: 9.25d
 			y: 0.0d
 		}
@@ -303,10 +315,12 @@
 			id: "10B98D1834C794B2"
 			shape: "diamond"
 			size: 1.0d
-			tasks: [{
-				id: "46676E5A9FBDD1E0"
-				type: "checkmark"
-			}]
+			tasks: [
+				{
+					id: "46676E5A9FBDD1E0"
+					type: "checkmark"
+				}
+			]
 			x: 9.25d
 			y: -2.5d
 		}
@@ -318,12 +332,14 @@
 			id: "3B50A4885DD5601D"
 			shape: "circle"
 			size: 1.0d
-			tasks: [{
-				consume_items: false
-				id: "3DB7D97A0E0F0D7E"
-				item: { count: 1, id: "create_new_age:basic_energiser" }
-				type: "item"
-			}]
+			tasks: [
+				{
+					consume_items: false
+					id: "3DB7D97A0E0F0D7E"
+					item: { count: 1, id: "create_new_age:basic_energiser" }
+					type: "item"
+				}
+			]
 			x: 11.75d
 			y: -2.5d
 		}
@@ -335,13 +351,15 @@
 			id: "34526F2A32AD50EF"
 			shape: "circle"
 			size: 1.0d
-			tasks: [{
-				consume_items: false
-				count: 8L
-				id: "536C2727AF37CC40"
-				item: { count: 1, id: "create_new_age:redstone_magnet" }
-				type: "item"
-			}]
+			tasks: [
+				{
+					consume_items: false
+					count: 8L
+					id: "536C2727AF37CC40"
+					item: { count: 1, id: "create_new_age:redstone_magnet" }
+					type: "item"
+				}
+			]
 			x: 13.75d
 			y: -2.5d
 		}
@@ -353,12 +371,14 @@
 			id: "012191E920B74F40"
 			shape: "circle"
 			size: 1.0d
-			tasks: [{
-				consume_items: false
-				id: "7CA94B23F4E6D887"
-				item: { count: 1, id: "tfmg:voltmeter" }
-				type: "item"
-			}]
+			tasks: [
+				{
+					consume_items: false
+					id: "7CA94B23F4E6D887"
+					item: { count: 1, id: "tfmg:voltmeter" }
+					type: "item"
+				}
+			]
 			x: 15.75d
 			y: -2.5d
 		}
@@ -371,12 +391,14 @@
 			optional: true
 			shape: "square"
 			size: 0.75d
-			tasks: [{
-				consume_items: false
-				id: "6EF051FDF917D51A"
-				item: { count: 1, id: "create_new_age:basic_motor_extension" }
-				type: "item"
-			}]
+			tasks: [
+				{
+					consume_items: false
+					id: "6EF051FDF917D51A"
+					item: { count: 1, id: "create_new_age:basic_motor_extension" }
+					type: "item"
+				}
+			]
 			x: 12.5d
 			y: 2.75d
 		}
@@ -388,12 +410,14 @@
 			id: "580A43FA01E8D98A"
 			shape: "gear"
 			size: 2.5d
-			tasks: [{
-				consume_items: false
-				id: "37345E56635185E1"
-				item: { count: 1, id: "create_new_age:basic_motor" }
-				type: "item"
-			}]
+			tasks: [
+				{
+					consume_items: false
+					id: "37345E56635185E1"
+					item: { count: 1, id: "create_new_age:basic_motor" }
+					type: "item"
+				}
+			]
 			x: 12.5d
 			y: 0.0d
 		}

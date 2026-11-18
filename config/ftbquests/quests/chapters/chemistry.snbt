@@ -14,6 +14,7 @@
 			id: "1BA2D86BB5FDBCEA"
 			linked_quest: "6131B6489C98424E"
 			shape: "circle"
+			size: 1.0d
 			x: 0.0d
 			y: 0.0d
 		}
@@ -21,6 +22,7 @@
 			id: "58D90DEECE01857D"
 			linked_quest: "1C87D51F077F0648"
 			shape: "circle"
+			size: 1.0d
 			x: 12.0d
 			y: 5.0d
 		}
@@ -34,13 +36,15 @@
 			id: "01F1A23F32EF34B3"
 			shape: "circle"
 			size: 1.0d
-			tasks: [{
-				consume_items: false
-				count: 4L
-				id: "00AF927980107A81"
-				item: { count: 1, id: "tfmg:slag" }
-				type: "item"
-			}]
+			tasks: [
+				{
+					consume_items: false
+					count: 4L
+					id: "00AF927980107A81"
+					item: { count: 1, id: "tfmg:slag" }
+					type: "item"
+				}
+			]
 			x: 2.0d
 			y: 0.0d
 		}
@@ -52,12 +56,14 @@
 			id: "45855358BC584855"
 			shape: "circle"
 			size: 1.0d
-			tasks: [{
-				consume_items: false
-				id: "603DBF2A8AC0A50C"
-				item: { count: 1, id: "vintageimprovements:vanadium_nugget" }
-				type: "item"
-			}]
+			tasks: [
+				{
+					consume_items: false
+					id: "603DBF2A8AC0A50C"
+					item: { count: 1, id: "vintageimprovements:vanadium_nugget" }
+					type: "item"
+				}
+			]
 			x: 4.0d
 			y: 0.0d
 		}
@@ -69,10 +75,12 @@
 			id: "29F12A51E7A13B5A"
 			shape: "circle"
 			size: 1.0d
-			tasks: [{
-				id: "6C4DF11E7B852FE9"
-				type: "checkmark"
-			}]
+			tasks: [
+				{
+					id: "6C4DF11E7B852FE9"
+					type: "checkmark"
+				}
+			]
 			x: 6.0d
 			y: 0.0d
 		}
@@ -84,10 +92,12 @@
 			id: "72FA8D26A907117F"
 			shape: "circle"
 			size: 1.0d
-			tasks: [{
-				id: "79E0F1EDAD817AB1"
-				type: "checkmark"
-			}]
+			tasks: [
+				{
+					id: "79E0F1EDAD817AB1"
+					type: "checkmark"
+				}
+			]
 			x: 8.0d
 			y: 0.0d
 		}
@@ -99,10 +109,12 @@
 			id: "3B8D69CA5AD743F7"
 			shape: "rsquare"
 			size: 2.0d
-			tasks: [{
-				id: "2AC58F00B7D78268"
-				type: "checkmark"
-			}]
+			tasks: [
+				{
+					id: "2AC58F00B7D78268"
+					type: "checkmark"
+				}
+			]
 			x: 10.5d
 			y: 0.0d
 		}
@@ -114,12 +126,14 @@
 			id: "1D7F69AC334C7B2F"
 			shape: "circle"
 			size: 1.0d
-			tasks: [{
-				consume_items: false
-				id: "5C7701941BE9ADAE"
-				item: { count: 1, id: "vintageimprovements:copper_sulfate" }
-				type: "item"
-			}]
+			tasks: [
+				{
+					consume_items: false
+					id: "5C7701941BE9ADAE"
+					item: { count: 1, id: "vintageimprovements:copper_sulfate" }
+					type: "item"
+				}
+			]
 			x: 9.5d
 			y: -2.5d
 		}
@@ -131,20 +145,19 @@
 			id: "334C3814FAD890A1"
 			shape: "circle"
 			size: 1.0d
-			tasks: [{
-				consume_items: false
-				id: "017C41F1B65DD605"
-				item: { count: 1, id: "kubejs:zinc_sulfate" }
-				type: "item"
-			}]
+			tasks: [
+				{
+					consume_items: false
+					id: "017C41F1B65DD605"
+					item: { count: 1, id: "kubejs:zinc_sulfate" }
+					type: "item"
+				}
+			]
 			x: 11.5d
 			y: -2.5d
 		}
 		{
-			dependencies: [
-				"1D7F69AC334C7B2F"
-				"334C3814FAD890A1"
-			]
+			dependencies: ["1D7F69AC334C7B2F", "334C3814FAD890A1"]
 			icon: {
 				id: "materialismcore:galvanic_cell"
 			}
@@ -152,12 +165,14 @@
 			optional: true
 			shape: "square"
 			size: 0.75d
-			tasks: [{
-				consume_items: false
-				id: "335F42D5393CE924"
-				item: { count: 1, id: "materialismcore:galvanic_cell" }
-				type: "item"
-			}]
+			tasks: [
+				{
+					consume_items: false
+					id: "335F42D5393CE924"
+					item: { count: 1, id: "materialismcore:galvanic_cell" }
+					type: "item"
+				}
+			]
 			x: 9.5d
 			y: -4.0d
 		}
@@ -169,10 +184,12 @@
 			id: "641AD4D1666F216F"
 			shape: "circle"
 			size: 1.0d
-			tasks: [{
-				id: "75BF3898CBCCBA42"
-				type: "checkmark"
-			}]
+			tasks: [
+				{
+					id: "75BF3898CBCCBA42"
+					type: "checkmark"
+				}
+			]
 			x: 13.0d
 			y: 0.0d
 		}
@@ -183,54 +200,51 @@
 			id: "05589774C48B40A3"
 			shape: "circle"
 			size: 1.0d
-			tasks: [{
-				consume_items: false
-				id: "42862D9AF71B8310"
-				item: { count: 1, id: "chemica:fluorite_dust" }
-				type: "item"
-			}]
+			tasks: [
+				{
+					consume_items: false
+					id: "42862D9AF71B8310"
+					item: { count: 1, id: "chemica:fluorite_dust" }
+					type: "item"
+				}
+			]
 			x: 15.0d
 			y: -2.0d
 		}
 		{
-			dependencies: [
-				"641AD4D1666F216F"
-				"05589774C48B40A3"
-			]
+			dependencies: ["641AD4D1666F216F", "05589774C48B40A3"]
 			icon: {
 				id: "vintageimprovements:vanadium_nugget"
 			}
 			id: "267282D570010FB1"
 			shape: "circle"
 			size: 1.0d
-			tasks: [{
-				id: "6F9495A91A8FFA5E"
-				type: "checkmark"
-			}]
+			tasks: [
+				{
+					id: "6F9495A91A8FFA5E"
+					type: "checkmark"
+				}
+			]
 			x: 15.0d
 			y: 0.0d
 		}
 		{
-			dependencies: [
-				"267282D570010FB1"
-				"1FE85AB58610B959"
-			]
+			dependencies: ["267282D570010FB1", "1FE85AB58610B959"]
 			icon: {
-				components: {
-					"tfc:heat": { }
-				}
 				id: "tfc_metallurgy:metal/dust/tantalum"
 			}
 			id: "2D5A7B5C8AE69F70"
 			shape: "circle"
 			size: 1.0d
-			tasks: [{
-				consume_items: false
-				count: 2L
-				id: "028ABE68ABD15F63"
-				item: { components: { "tfc:heat": { } }, count: 1, id: "tfc_metallurgy:metal/dust/tantalum" }
-				type: "item"
-			}]
+			tasks: [
+				{
+					consume_items: false
+					count: 2L
+					id: "028ABE68ABD15F63"
+					item: { count: 1, id: "tfc_metallurgy:metal/dust/tantalum" }
+					type: "item"
+				}
+			]
 			x: 17.0d
 			y: 0.0d
 		}
@@ -242,12 +256,14 @@
 			id: "5B441F4906DCBB40"
 			shape: "rsquare"
 			size: 2.0d
-			tasks: [{
-				consume_items: false
-				id: "6FFB3CC6FBC41097"
-				item: { count: 1, id: "tfmg:steel_chemical_vat" }
-				type: "item"
-			}]
+			tasks: [
+				{
+					consume_items: false
+					id: "6FFB3CC6FBC41097"
+					item: { count: 1, id: "tfmg:steel_chemical_vat" }
+					type: "item"
+				}
+			]
 			x: 19.5d
 			y: 0.0d
 		}
@@ -258,32 +274,32 @@
 			id: "65FB2BEEF17B63F8"
 			shape: "circle"
 			size: 1.0d
-			tasks: [{
-				consume_items: false
-				count: 8L
-				id: "79F7168C7BEA05ED"
-				item: { count: 1, id: "chemica:rutile_dust" }
-				type: "item"
-			}]
+			tasks: [
+				{
+					consume_items: false
+					count: 8L
+					id: "79F7168C7BEA05ED"
+					item: { count: 1, id: "chemica:rutile_dust" }
+					type: "item"
+				}
+			]
 			x: 22.0d
 			y: -2.0d
 		}
 		{
-			dependencies: [
-				"5B441F4906DCBB40"
-				"65FB2BEEF17B63F8"
-				"0776ACF8377E0947"
-			]
+			dependencies: ["5B441F4906DCBB40", "65FB2BEEF17B63F8", "0776ACF8377E0947"]
 			icon: {
 				id: "vintageimprovements:vanadium_nugget"
 			}
 			id: "7ADA597F285D8A92"
 			shape: "circle"
 			size: 1.0d
-			tasks: [{
-				id: "1D435C3C8D450A2A"
-				type: "checkmark"
-			}]
+			tasks: [
+				{
+					id: "1D435C3C8D450A2A"
+					type: "checkmark"
+				}
+			]
 			x: 22.0d
 			y: 0.0d
 		}
@@ -295,13 +311,15 @@
 			id: "0A50238BB214541A"
 			shape: "gear"
 			size: 2.5d
-			tasks: [{
-				consume_items: false
-				count: 4L
-				id: "19FA671F1BF1D46D"
-				item: { count: 1, id: "chemica:polyethylene_sheet" }
-				type: "item"
-			}]
+			tasks: [
+				{
+					consume_items: false
+					count: 4L
+					id: "19FA671F1BF1D46D"
+					item: { count: 1, id: "chemica:polyethylene_sheet" }
+					type: "item"
+				}
+			]
 			x: 24.75d
 			y: 0.0d
 		}
@@ -313,10 +331,12 @@
 			id: "23206F2F3C607C2C"
 			shape: "circle"
 			size: 1.0d
-			tasks: [{
-				id: "5020577DF556B1A3"
-				type: "checkmark"
-			}]
+			tasks: [
+				{
+					id: "5020577DF556B1A3"
+					type: "checkmark"
+				}
+			]
 			x: 14.0d
 			y: 5.0d
 		}
@@ -328,10 +348,12 @@
 			id: "1FE85AB58610B959"
 			shape: "circle"
 			size: 1.0d
-			tasks: [{
-				id: "3695D7159C1D5865"
-				type: "checkmark"
-			}]
+			tasks: [
+				{
+					id: "3695D7159C1D5865"
+					type: "checkmark"
+				}
+			]
 			x: 16.0d
 			y: 5.0d
 		}
@@ -343,10 +365,12 @@
 			id: "0776ACF8377E0947"
 			shape: "circle"
 			size: 1.0d
-			tasks: [{
-				id: "5A1CC9D34119E881"
-				type: "checkmark"
-			}]
+			tasks: [
+				{
+					id: "5A1CC9D34119E881"
+					type: "checkmark"
+				}
+			]
 			x: 18.0d
 			y: 5.0d
 		}
@@ -358,10 +382,12 @@
 			id: "0D7BFE9BA7B656E1"
 			shape: "circle"
 			size: 1.0d
-			tasks: [{
-				id: "512612621F4A4D19"
-				type: "checkmark"
-			}]
+			tasks: [
+				{
+					id: "512612621F4A4D19"
+					type: "checkmark"
+				}
+			]
 			x: 18.0d
 			y: 7.0d
 		}
@@ -373,11 +399,52 @@
 			id: "747B1F410BD783E2"
 			shape: "circle"
 			size: 1.0d
-			tasks: [{
-				id: "1A84EF05E876FE12"
-				type: "checkmark"
-			}]
+			tasks: [
+				{
+					id: "1A84EF05E876FE12"
+					type: "checkmark"
+				}
+			]
 			x: 20.0d
+			y: 5.0d
+		}
+		{
+			dependencies: ["747B1F410BD783E2"]
+			icon: {
+				id: "chemica:nylon_salt"
+			}
+			id: "7286A599149315E4"
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{
+					consume_items: false
+					count: 4L
+					id: "187C6548015EE0FA"
+					item: { count: 1, id: "chemica:nylon_salt" }
+					type: "item"
+				}
+			]
+			x: 22.0d
+			y: 5.0d
+		}
+		{
+			dependencies: ["7286A599149315E4"]
+			icon: {
+				id: "kubejs:nylon_cloth"
+			}
+			id: "5B3A1CB7F3C8606C"
+			shape: "circle"
+			size: 1.0d
+			tasks: [
+				{
+					consume_items: false
+					id: "20E1D18BC11DCB46"
+					item: { count: 1, id: "kubejs:nylon_cloth" }
+					type: "item"
+				}
+			]
+			x: 24.0d
 			y: 5.0d
 		}
 	]

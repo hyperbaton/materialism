@@ -14,6 +14,7 @@
 			id: "12C51673D6A430A3"
 			linked_quest: "7897D552FAE9A14E"
 			shape: "circle"
+			size: 1.0d
 			x: 0.0d
 			y: 0.0d
 		}
@@ -21,6 +22,7 @@
 			id: "1C33141B99C8F22D"
 			linked_quest: "2972B973AE95E687"
 			shape: "circle"
+			size: 1.0d
 			x: 16.75d
 			y: -2.5d
 		}
@@ -34,13 +36,15 @@
 			id: "525BFFAF21C13104"
 			shape: "circle"
 			size: 1.0d
-			tasks: [{
-				consume_items: false
-				count: 2L
-				id: "7793F2124520B12D"
-				item: { count: 1, id: "tfmg:steel_casing" }
-				type: "item"
-			}]
+			tasks: [
+				{
+					consume_items: false
+					count: 2L
+					id: "7793F2124520B12D"
+					item: { count: 1, id: "tfmg:steel_casing" }
+					type: "item"
+				}
+			]
 			x: 2.0d
 			y: 0.0d
 		}
@@ -52,12 +56,14 @@
 			id: "481BE4A7DDA74CB8"
 			shape: "circle"
 			size: 1.0d
-			tasks: [{
-				consume_items: false
-				id: "59DDA8D953A9E8AC"
-				item: { count: 1, id: "tfmg:steel_fluid_tank" }
-				type: "item"
-			}]
+			tasks: [
+				{
+					consume_items: false
+					id: "59DDA8D953A9E8AC"
+					item: { count: 1, id: "tfmg:steel_fluid_tank" }
+					type: "item"
+				}
+			]
 			x: 4.0d
 			y: 0.0d
 		}
@@ -69,12 +75,14 @@
 			id: "72F7FFB6EAFABC67"
 			shape: "rsquare"
 			size: 1.5d
-			tasks: [{
-				consume_items: false
-				id: "3E370673DBE0C82F"
-				item: { count: 1, id: "tfmg:cast_iron_chemical_vat" }
-				type: "item"
-			}]
+			tasks: [
+				{
+					consume_items: false
+					id: "3E370673DBE0C82F"
+					item: { count: 1, id: "tfmg:cast_iron_chemical_vat" }
+					type: "item"
+				}
+			]
 			x: 6.25d
 			y: 0.0d
 		}
@@ -86,12 +94,14 @@
 			id: "53667460FB59917C"
 			shape: "circle"
 			size: 1.0d
-			tasks: [{
-				consume_items: false
-				id: "7DA7623944805F47"
-				item: { count: 1, id: "tfmg:steel_mechanism" }
-				type: "item"
-			}]
+			tasks: [
+				{
+					consume_items: false
+					id: "7DA7623944805F47"
+					item: { count: 1, id: "tfmg:steel_mechanism" }
+					type: "item"
+				}
+			]
 			x: 8.5d
 			y: 0.0d
 		}
@@ -103,13 +113,15 @@
 			id: "553C132D558BF2E0"
 			shape: "circle"
 			size: 1.0d
-			tasks: [{
-				consume_items: false
-				count: 2L
-				id: "6A8886176A6EB9E5"
-				item: { count: 1, id: "tfmg:heavy_machinery_casing" }
-				type: "item"
-			}]
+			tasks: [
+				{
+					consume_items: false
+					count: 2L
+					id: "6A8886176A6EB9E5"
+					item: { count: 1, id: "tfmg:heavy_machinery_casing" }
+					type: "item"
+				}
+			]
 			x: 10.5d
 			y: 0.0d
 		}
@@ -121,12 +133,14 @@
 			id: "424A36670604FA40"
 			shape: "circle"
 			size: 1.0d
-			tasks: [{
-				consume_items: false
-				id: "0F5DEEFD4DB4D405"
-				item: { count: 1, id: "tfmg:coke_oven" }
-				type: "item"
-			}]
+			tasks: [
+				{
+					consume_items: false
+					id: "0F5DEEFD4DB4D405"
+					item: { count: 1, id: "tfmg:coke_oven" }
+					type: "item"
+				}
+			]
 			x: 12.5d
 			y: 0.0d
 		}
@@ -138,13 +152,15 @@
 			id: "0456EB0CE1ABAAC7"
 			shape: "circle"
 			size: 1.0d
-			tasks: [{
-				consume_items: false
-				count: 4L
-				id: "0019DBE04D48B29B"
-				item: { count: 1, id: "tfmg:coal_coke" }
-				type: "item"
-			}]
+			tasks: [
+				{
+					consume_items: false
+					count: 4L
+					id: "0019DBE04D48B29B"
+					item: { count: 1, id: "tfmg:coal_coke" }
+					type: "item"
+				}
+			]
 			x: 14.5d
 			y: 0.0d
 		}
@@ -174,22 +190,21 @@
 			y: 2.0d
 		}
 		{
-			dependencies: [
-				"0456EB0CE1ABAAC7"
-				"2972B973AE95E687"
-			]
+			dependencies: ["0456EB0CE1ABAAC7", "2972B973AE95E687"]
 			icon: {
 				id: "tfmg:blast_furnace_output"
 			}
 			id: "6131B6489C98424E"
 			shape: "rsquare"
 			size: 1.5d
-			tasks: [{
-				consume_items: false
-				id: "48F4DA1C30F36C06"
-				item: { count: 1, id: "tfmg:blast_furnace_output" }
-				type: "item"
-			}]
+			tasks: [
+				{
+					consume_items: false
+					id: "48F4DA1C30F36C06"
+					item: { count: 1, id: "tfmg:blast_furnace_output" }
+					type: "item"
+				}
+			]
 			x: 16.75d
 			y: 0.0d
 		}
@@ -201,12 +216,14 @@
 			id: "125CA15540D4B2CE"
 			shape: "circle"
 			size: 1.0d
-			tasks: [{
-				consume_items: false
-				id: "16AFFB835B2A1654"
-				item: { count: 1, id: "tfmg:casting_basin" }
-				type: "item"
-			}]
+			tasks: [
+				{
+					consume_items: false
+					id: "16AFFB835B2A1654"
+					item: { count: 1, id: "tfmg:casting_basin" }
+					type: "item"
+				}
+			]
 			x: 16.75d
 			y: 2.25d
 		}
@@ -218,14 +235,15 @@
 			id: "64CAB6A19D0597BE"
 			shape: "circle"
 			size: 1.0d
-			tasks: [{
-				id: "7306F02BAE42D21E"
-				observation_type: "block"
-				observe_type: 0
-				timer: 0L
-				to_observe: "kubejs:oil_seep"
-				type: "observation"
-			}]
+			tasks: [
+				{
+					id: "7306F02BAE42D21E"
+					observe_type: 0
+					timer: 0L
+					to_observe: "kubejs:oil_seep"
+					type: "observation"
+				}
+			]
 			x: 19.0d
 			y: 0.0d
 		}
@@ -237,12 +255,14 @@
 			id: "146D1F996AA15438"
 			shape: "rsquare"
 			size: 2.0d
-			tasks: [{
-				consume_items: false
-				id: "6443AEB4EBE20190"
-				item: { count: 1, id: "tfmg:pumpjack_base" }
-				type: "item"
-			}]
+			tasks: [
+				{
+					consume_items: false
+					id: "6443AEB4EBE20190"
+					item: { count: 1, id: "tfmg:pumpjack_base" }
+					type: "item"
+				}
+			]
 			x: 21.5d
 			y: 0.0d
 		}
@@ -254,10 +274,12 @@
 			id: "7BFBBF1AECE1685A"
 			shape: "circle"
 			size: 1.0d
-			tasks: [{
-				id: "0F5CD42FBDE5C613"
-				type: "checkmark"
-			}]
+			tasks: [
+				{
+					id: "0F5CD42FBDE5C613"
+					type: "checkmark"
+				}
+			]
 			x: 24.0d
 			y: 0.0d
 		}
@@ -269,12 +291,14 @@
 			id: "36F1DB5800AFAB91"
 			shape: "gear"
 			size: 2.5d
-			tasks: [{
-				consume_items: false
-				id: "4C158AAEF85DB817"
-				item: { count: 1, id: "tfmg:steel_distillation_controller" }
-				type: "item"
-			}]
+			tasks: [
+				{
+					consume_items: false
+					id: "4C158AAEF85DB817"
+					item: { count: 1, id: "tfmg:steel_distillation_controller" }
+					type: "item"
+				}
+			]
 			x: 26.75d
 			y: 0.0d
 		}
@@ -287,12 +311,14 @@
 			optional: true
 			shape: "square"
 			size: 0.75d
-			tasks: [{
-				consume_items: false
-				id: "6B65B066885185C2"
-				item: { count: 1, id: "tfmg:firebox" }
-				type: "item"
-			}]
+			tasks: [
+				{
+					consume_items: false
+					id: "6B65B066885185C2"
+					item: { count: 1, id: "tfmg:firebox" }
+					type: "item"
+				}
+			]
 			x: 26.75d
 			y: 2.75d
 		}

@@ -9,13 +9,16 @@
 	id: "140DECE8B8D1EB61"
 	images: [ ]
 	order_index: 4
-	quest_links: [{
-		id: "719B9736C5590DF4"
-		linked_quest: "1C87D51F077F0648"
-		shape: "circle"
-		x: 0.0d
-		y: 0.0d
-	}]
+	quest_links: [
+		{
+			id: "719B9736C5590DF4"
+			linked_quest: "1C87D51F077F0648"
+			shape: "circle"
+			size: 1.0d
+			x: 0.0d
+			y: 0.0d
+		}
+	]
 	quests: [
 		{
 			dependencies: ["1C87D51F077F0648"]
@@ -25,10 +28,12 @@
 			id: "5A32AE66513D4EC2"
 			shape: "diamond"
 			size: 1.0d
-			tasks: [{
-				id: "3143B6804394D52F"
-				type: "checkmark"
-			}]
+			tasks: [
+				{
+					id: "3143B6804394D52F"
+					type: "checkmark"
+				}
+			]
 			x: 2.0d
 			y: 0.0d
 		}
@@ -40,13 +45,15 @@
 			id: "51A427A469BA737E"
 			shape: "circle"
 			size: 1.0d
-			tasks: [{
-				consume_items: false
-				count: 4L
-				id: "55CAE07E69B89119"
-				item: { count: 1, id: "chemica:rubber_strip" }
-				type: "item"
-			}]
+			tasks: [
+				{
+					consume_items: false
+					count: 4L
+					id: "55CAE07E69B89119"
+					item: { count: 1, id: "chemica:rubber_strip" }
+					type: "item"
+				}
+			]
 			x: 4.0d
 			y: 0.0d
 		}
@@ -58,12 +65,14 @@
 			id: "0C99B6A0089FB629"
 			shape: "circle"
 			size: 1.0d
-			tasks: [{
-				consume_items: false
-				id: "37A7D0ABA80A59EE"
-				item: { count: 1, id: "electroenergetics:wire_spool" }
-				type: "item"
-			}]
+			tasks: [
+				{
+					consume_items: false
+					id: "37A7D0ABA80A59EE"
+					item: { count: 1, id: "electroenergetics:wire_spool" }
+					type: "item"
+				}
+			]
 			x: 6.0d
 			y: 0.0d
 		}
@@ -75,13 +84,15 @@
 			id: "0F3DC65FB68165F8"
 			shape: "circle"
 			size: 1.0d
-			tasks: [{
-				consume_items: false
-				count: 3L
-				id: "696113DC43E8A1C9"
-				item: { count: 1, id: "electroenergetics:pole_mount" }
-				type: "item"
-			}]
+			tasks: [
+				{
+					consume_items: false
+					count: 3L
+					id: "696113DC43E8A1C9"
+					item: { count: 1, id: "electroenergetics:pole_mount" }
+					type: "item"
+				}
+			]
 			x: 2.0d
 			y: -2.0d
 		}
@@ -93,13 +104,15 @@
 			id: "57B7A443029C4D63"
 			shape: "circle"
 			size: 1.0d
-			tasks: [{
-				consume_items: false
-				count: 4L
-				id: "4B718E8B77FEAB19"
-				item: { count: 1, id: "electroenergetics:insulator" }
-				type: "item"
-			}]
+			tasks: [
+				{
+					consume_items: false
+					count: 4L
+					id: "4B718E8B77FEAB19"
+					item: { count: 1, id: "electroenergetics:insulator" }
+					type: "item"
+				}
+			]
 			x: 4.0d
 			y: -2.0d
 		}
@@ -110,12 +123,14 @@
 			id: "24BE5BDD0EF344D2"
 			shape: "circle"
 			size: 1.0d
-			tasks: [{
-				consume_items: false
-				id: "42FF198586EA4E4B"
-				item: { count: 1, id: "electroenergetics:iron_wire_spool" }
-				type: "item"
-			}]
+			tasks: [
+				{
+					consume_items: false
+					id: "42FF198586EA4E4B"
+					item: { count: 1, id: "electroenergetics:iron_wire_spool" }
+					type: "item"
+				}
+			]
 			x: 6.0d
 			y: -2.0d
 		}
@@ -128,12 +143,14 @@
 			optional: true
 			shape: "square"
 			size: 0.75d
-			tasks: [{
-				consume_items: false
-				id: "1508881EBC8EF4F5"
-				item: { count: 1, id: "electroenergetics:glass_insulator_spool" }
-				type: "item"
-			}]
+			tasks: [
+				{
+					consume_items: false
+					id: "1508881EBC8EF4F5"
+					item: { count: 1, id: "electroenergetics:glass_insulator_spool" }
+					type: "item"
+				}
+			]
 			x: 6.0d
 			y: -4.0d
 		}
@@ -146,13 +163,15 @@
 			optional: true
 			shape: "square"
 			size: 0.75d
-			tasks: [{
-				consume_items: false
-				count: 8L
-				id: "1028D6E5FD934DED"
-				item: { count: 1, id: "electroenergetics:concrete_pole" }
-				type: "item"
-			}]
+			tasks: [
+				{
+					consume_items: false
+					count: 8L
+					id: "1028D6E5FD934DED"
+					item: { count: 1, id: "electroenergetics:concrete_pole" }
+					type: "item"
+				}
+			]
 			x: 6.0d
 			y: 2.0d
 		}
@@ -164,12 +183,14 @@
 			id: "5DA6B795E01FC291"
 			shape: "circle"
 			size: 1.0d
-			tasks: [{
-				consume_items: false
-				id: "32E3440E34160EC2"
-				item: { count: 1, id: "electroenergetics:ground_rod" }
-				type: "item"
-			}]
+			tasks: [
+				{
+					consume_items: false
+					id: "32E3440E34160EC2"
+					item: { count: 1, id: "electroenergetics:ground_rod" }
+					type: "item"
+				}
+			]
 			x: 8.0d
 			y: 0.0d
 		}
@@ -181,12 +202,14 @@
 			id: "61F3825395213EFA"
 			shape: "circle"
 			size: 1.0d
-			tasks: [{
-				consume_items: false
-				id: "6245495628CA9196"
-				item: { count: 1, id: "electroenergetics:resistive_heater" }
-				type: "item"
-			}]
+			tasks: [
+				{
+					consume_items: false
+					id: "6245495628CA9196"
+					item: { count: 1, id: "electroenergetics:resistive_heater" }
+					type: "item"
+				}
+			]
 			x: 8.0d
 			y: -2.0d
 		}
@@ -198,13 +221,15 @@
 			id: "0120F3539E65904F"
 			shape: "circle"
 			size: 1.0d
-			tasks: [{
-				consume_items: false
-				count: 4L
-				id: "611B1863E93B8CAC"
-				item: { count: 1, id: "electroenergetics:bulb" }
-				type: "item"
-			}]
+			tasks: [
+				{
+					consume_items: false
+					count: 4L
+					id: "611B1863E93B8CAC"
+					item: { count: 1, id: "electroenergetics:bulb" }
+					type: "item"
+				}
+			]
 			x: 2.0d
 			y: 2.0d
 		}
@@ -216,13 +241,15 @@
 			id: "22B49234755C04AF"
 			shape: "circle"
 			size: 1.0d
-			tasks: [{
-				consume_items: false
-				count: 2L
-				id: "550912A3DFC32EB5"
-				item: { count: 1, id: "electroenergetics:fuse" }
-				type: "item"
-			}]
+			tasks: [
+				{
+					consume_items: false
+					count: 2L
+					id: "550912A3DFC32EB5"
+					item: { count: 1, id: "electroenergetics:fuse" }
+					type: "item"
+				}
+			]
 			x: 10.0d
 			y: 0.0d
 		}
@@ -235,12 +262,14 @@
 			optional: true
 			shape: "square"
 			size: 0.75d
-			tasks: [{
-				consume_items: false
-				id: "7CFA00797E7C4624"
-				item: { count: 1, id: "electroenergetics:cut_off_switch" }
-				type: "item"
-			}]
+			tasks: [
+				{
+					consume_items: false
+					id: "7CFA00797E7C4624"
+					item: { count: 1, id: "electroenergetics:cut_off_switch" }
+					type: "item"
+				}
+			]
 			x: 10.0d
 			y: -2.0d
 		}
@@ -253,12 +282,14 @@
 			optional: true
 			shape: "square"
 			size: 0.75d
-			tasks: [{
-				consume_items: false
-				id: "2CC41B4EE2F71FB1"
-				item: { count: 1, id: "electroenergetics:miniature_circuit_breaker" }
-				type: "item"
-			}]
+			tasks: [
+				{
+					consume_items: false
+					id: "2CC41B4EE2F71FB1"
+					item: { count: 1, id: "electroenergetics:miniature_circuit_breaker" }
+					type: "item"
+				}
+			]
 			x: 10.0d
 			y: 2.0d
 		}
@@ -270,12 +301,14 @@
 			id: "29527B589DA406BB"
 			shape: "circle"
 			size: 1.0d
-			tasks: [{
-				consume_items: false
-				id: "5B2317850217A849"
-				item: { components: { "ftbfiltersystem:filter": "ftbfiltersystem:or(ftbfiltersystem:item(electroenergetics:ammeter)ftbfiltersystem:item(electroenergetics:clamp_meter))" }, count: 1, id: "ftbfiltersystem:smart_filter" }
-				type: "item"
-			}]
+			tasks: [
+				{
+					consume_items: false
+					id: "5B2317850217A849"
+					item: { components: { "ftbfiltersystem:filter": "ftbfiltersystem:or(ftbfiltersystem:item(electroenergetics:ammeter)ftbfiltersystem:item(electroenergetics:clamp_meter))" }, count: 1, id: "ftbfiltersystem:smart_filter" }
+					type: "item"
+				}
+			]
 			x: 12.0d
 			y: 0.0d
 		}
@@ -288,12 +321,14 @@
 			optional: true
 			shape: "square"
 			size: 0.75d
-			tasks: [{
-				consume_items: false
-				id: "5AD49863E64AA265"
-				item: { count: 1, id: "electroenergetics:voltmeter" }
-				type: "item"
-			}]
+			tasks: [
+				{
+					consume_items: false
+					id: "5AD49863E64AA265"
+					item: { count: 1, id: "electroenergetics:voltmeter" }
+					type: "item"
+				}
+			]
 			x: 12.0d
 			y: 2.0d
 		}
@@ -305,13 +340,15 @@
 			id: "3E6DBBC64CC3DDC8"
 			shape: "circle"
 			size: 1.0d
-			tasks: [{
-				consume_items: false
-				count: 4L
-				id: "0C0A817C4600B1AC"
-				item: { count: 1, id: "electroenergetics:accumulator" }
-				type: "item"
-			}]
+			tasks: [
+				{
+					consume_items: false
+					count: 4L
+					id: "0C0A817C4600B1AC"
+					item: { count: 1, id: "electroenergetics:accumulator" }
+					type: "item"
+				}
+			]
 			x: 14.0d
 			y: 0.0d
 		}
@@ -323,12 +360,14 @@
 			optional: true
 			shape: "square"
 			size: 0.75d
-			tasks: [{
-				consume_items: false
-				id: "520F0E0FB9914AF1"
-				item: { count: 1, id: "electroenergetics:electric_pump" }
-				type: "item"
-			}]
+			tasks: [
+				{
+					consume_items: false
+					id: "520F0E0FB9914AF1"
+					item: { count: 1, id: "electroenergetics:electric_pump" }
+					type: "item"
+				}
+			]
 			x: 14.0d
 			y: -2.0d
 		}
@@ -340,10 +379,12 @@
 			id: "457B13554BABAED7"
 			shape: "circle"
 			size: 1.0d
-			tasks: [{
-				id: "0785C9927BB43EB5"
-				type: "checkmark"
-			}]
+			tasks: [
+				{
+					id: "0785C9927BB43EB5"
+					type: "checkmark"
+				}
+			]
 			x: 16.0d
 			y: 0.0d
 		}
@@ -355,12 +396,14 @@
 			id: "344D06A670281885"
 			shape: "circle"
 			size: 1.0d
-			tasks: [{
-				consume_items: false
-				id: "5256EA85C0E2EF3A"
-				item: { count: 1, id: "electroenergetics:heavily_insulated_wire_spool" }
-				type: "item"
-			}]
+			tasks: [
+				{
+					consume_items: false
+					id: "5256EA85C0E2EF3A"
+					item: { count: 1, id: "electroenergetics:heavily_insulated_wire_spool" }
+					type: "item"
+				}
+			]
 			x: 16.0d
 			y: -2.0d
 		}
@@ -372,12 +415,14 @@
 			id: "0B39E1A1A5256A14"
 			shape: "circle"
 			size: 1.0d
-			tasks: [{
-				consume_items: false
-				id: "70486D4EBF45CBCE"
-				item: { count: 1, id: "electroenergetics:transformer_core" }
-				type: "item"
-			}]
+			tasks: [
+				{
+					consume_items: false
+					id: "70486D4EBF45CBCE"
+					item: { count: 1, id: "electroenergetics:transformer_core" }
+					type: "item"
+				}
+			]
 			x: 18.0d
 			y: 0.0d
 		}
@@ -389,12 +434,14 @@
 			id: "73794CFAE794A739"
 			shape: "gear"
 			size: 2.5d
-			tasks: [{
-				consume_items: false
-				id: "0F1765E4DEE8D228"
-				item: { count: 1, id: "electroenergetics:transformer" }
-				type: "item"
-			}]
+			tasks: [
+				{
+					consume_items: false
+					id: "0F1765E4DEE8D228"
+					item: { count: 1, id: "electroenergetics:transformer" }
+					type: "item"
+				}
+			]
 			x: 20.75d
 			y: 0.0d
 		}
@@ -407,12 +454,14 @@
 			optional: true
 			shape: "square"
 			size: 0.75d
-			tasks: [{
-				consume_items: false
-				id: "79D8D83D27410E57"
-				item: { count: 1, id: "electroenergetics:sulfur_hexafluoride_breaker" }
-				type: "item"
-			}]
+			tasks: [
+				{
+					consume_items: false
+					id: "79D8D83D27410E57"
+					item: { count: 1, id: "electroenergetics:sulfur_hexafluoride_breaker" }
+					type: "item"
+				}
+			]
 			x: 20.75d
 			y: -2.75d
 		}
@@ -425,13 +474,15 @@
 			optional: true
 			shape: "square"
 			size: 0.75d
-			tasks: [{
-				consume_items: false
-				count: 4L
-				id: "5B1F1308978A2262"
-				item: { count: 1, id: "electroenergetics:radiator_panel" }
-				type: "item"
-			}]
+			tasks: [
+				{
+					consume_items: false
+					count: 4L
+					id: "5B1F1308978A2262"
+					item: { count: 1, id: "electroenergetics:radiator_panel" }
+					type: "item"
+				}
+			]
 			x: 20.75d
 			y: 2.75d
 		}

@@ -9,7 +9,8 @@
 	id: "72088DC60A8C296A"
 	images: [ ]
 	order_index: 0
-	quest_links: [ ]
+	quest_links: [
+	]
 	quests: [
 		{
 			icon: {
@@ -18,10 +19,12 @@
 			id: "30CB4A45168F0D0D"
 			shape: "rsquare"
 			size: 2.0d
-			tasks: [{
-				id: "77890B44FE9E2312"
-				type: "checkmark"
-			}]
+			tasks: [
+				{
+					id: "77890B44FE9E2312"
+					type: "checkmark"
+				}
+			]
 			x: 0.0d
 			y: 0.0d
 		}
@@ -33,10 +36,12 @@
 			id: "343EF2C36FA226ED"
 			shape: "diamond"
 			size: 1.0d
-			tasks: [{
-				id: "12DCE6BE06466A45"
-				type: "checkmark"
-			}]
+			tasks: [
+				{
+					id: "12DCE6BE06466A45"
+					type: "checkmark"
+				}
+			]
 			x: 2.5d
 			y: 0.0d
 		}
@@ -48,10 +53,12 @@
 			id: "5284FFE7C905956E"
 			shape: "diamond"
 			size: 1.0d
-			tasks: [{
-				id: "49C4AE016262215D"
-				type: "checkmark"
-			}]
+			tasks: [
+				{
+					id: "49C4AE016262215D"
+					type: "checkmark"
+				}
+			]
 			x: 4.5d
 			y: 0.0d
 		}
@@ -63,10 +70,12 @@
 			id: "320B62CBA91D29EA"
 			shape: "diamond"
 			size: 1.0d
-			tasks: [{
-				id: "0CBF8AE75811B34F"
-				type: "checkmark"
-			}]
+			tasks: [
+				{
+					id: "0CBF8AE75811B34F"
+					type: "checkmark"
+				}
+			]
 			x: 6.5d
 			y: 0.0d
 		}
@@ -78,373 +87,335 @@
 			id: "0800028CAC1608BE"
 			shape: "hexagon"
 			size: 1.0d
-			tasks: [{
-				id: "55E2F5C189C551B2"
-				type: "checkmark"
-			}]
+			tasks: [
+				{
+					id: "55E2F5C189C551B2"
+					type: "checkmark"
+				}
+			]
 			x: 0.0d
 			y: 3.0d
 		}
 		{
-			dependencies: [
-				"0800028CAC1608BE"
-				"1E09D11E3BB760BE"
-			]
+			dependencies: ["0800028CAC1608BE", "1E09D11E3BB760BE"]
 			icon: {
-				components: {
-					"tfc:heat": { }
-				}
 				id: "tfc:metal/ingot/copper"
 			}
 			id: "5E86C5B0155AC3BC"
 			shape: "hexagon"
 			size: 1.0d
-			tasks: [{
-				id: "292D41D6AAFE063C"
-				type: "checkmark"
-			}]
+			tasks: [
+				{
+					id: "292D41D6AAFE063C"
+					type: "checkmark"
+				}
+			]
 			x: 2.0d
 			y: 3.0d
 		}
 		{
-			dependencies: [
-				"5E86C5B0155AC3BC"
-				"252DCBC3CE3A5C33"
-			]
+			dependencies: ["5E86C5B0155AC3BC", "252DCBC3CE3A5C33"]
 			icon: {
-				components: {
-					"tfc:heat": { }
-				}
 				id: "tfc:metal/anvil/bronze"
 			}
 			id: "1F15DFD8AD1CE3B9"
 			shape: "hexagon"
 			size: 1.0d
-			tasks: [{
-				id: "3B9764CA4090FFC0"
-				type: "checkmark"
-			}]
+			tasks: [
+				{
+					id: "3B9764CA4090FFC0"
+					type: "checkmark"
+				}
+			]
 			x: 4.0d
 			y: 3.0d
 		}
 		{
-			dependencies: [
-				"1F15DFD8AD1CE3B9"
-				"793D0625A66AE2A8"
-			]
+			dependencies: ["1F15DFD8AD1CE3B9", "793D0625A66AE2A8"]
 			icon: {
 				id: "tfc:wood/barrel/oak"
 			}
 			id: "57ADC6BFF6D90F0E"
 			shape: "hexagon"
 			size: 1.0d
-			tasks: [{
-				id: "11C2A1E45A6DDFBF"
-				type: "checkmark"
-			}]
+			tasks: [
+				{
+					id: "11C2A1E45A6DDFBF"
+					type: "checkmark"
+				}
+			]
 			x: 6.0d
 			y: 3.0d
 		}
 		{
-			dependencies: [
-				"57ADC6BFF6D90F0E"
-				"350143738DB87511"
-			]
+			dependencies: ["57ADC6BFF6D90F0E", "350143738DB87511"]
 			icon: {
-				components: {
-					"tfc:food": {
-						creation_date: 7545600L
-					}
-					"tfc:heat": { }
-				}
 				id: "tfc:food/wheat_bread"
 			}
 			id: "3152D4D0490E2E2F"
 			shape: "hexagon"
 			size: 1.0d
-			tasks: [{
-				id: "02B87CCF013FAEFA"
-				type: "checkmark"
-			}]
+			tasks: [
+				{
+					id: "02B87CCF013FAEFA"
+					type: "checkmark"
+				}
+			]
 			x: 8.0d
 			y: 3.0d
 		}
 		{
-			dependencies: [
-				"3152D4D0490E2E2F"
-				"543A21150BF1147D"
-			]
+			dependencies: ["3152D4D0490E2E2F", "543A21150BF1147D"]
 			icon: {
-				components: {
-					"tfc:heat": { }
-				}
 				id: "tfc:metal/ingot/steel"
 			}
 			id: "2C5813BD42BA0502"
 			shape: "hexagon"
 			size: 1.0d
-			tasks: [{
-				id: "6FAA4A304E3769DC"
-				type: "checkmark"
-			}]
+			tasks: [
+				{
+					id: "6FAA4A304E3769DC"
+					type: "checkmark"
+				}
+			]
 			x: 10.0d
 			y: 3.0d
 		}
 		{
-			dependencies: [
-				"2C5813BD42BA0502"
-				"5D3ADCC4ECED777F"
-			]
+			dependencies: ["2C5813BD42BA0502", "5D3ADCC4ECED777F"]
 			icon: {
 				id: "create:electron_tube"
 			}
 			id: "0C7AE9B338FF1C99"
 			shape: "hexagon"
 			size: 1.0d
-			tasks: [{
-				id: "0177B1F6236F3C14"
-				type: "checkmark"
-			}]
+			tasks: [
+				{
+					id: "0177B1F6236F3C14"
+					type: "checkmark"
+				}
+			]
 			x: 12.0d
 			y: 3.0d
 		}
 		{
-			dependencies: [
-				"0C7AE9B338FF1C99"
-				"20654EEC7D64AB53"
-			]
+			dependencies: ["0C7AE9B338FF1C99", "20654EEC7D64AB53"]
 			icon: {
 				id: "create:cogwheel"
 			}
 			id: "01C170325F6A5B98"
 			shape: "hexagon"
 			size: 1.0d
-			tasks: [{
-				id: "723098D4D5EEDD5C"
-				type: "checkmark"
-			}]
+			tasks: [
+				{
+					id: "723098D4D5EEDD5C"
+					type: "checkmark"
+				}
+			]
 			x: 14.0d
 			y: 3.0d
 		}
 		{
 			dependencies: ["782C0FFB11135737"]
 			icon: {
-				components: {
-					"tfc:heat": { }
-				}
 				id: "tfc:metal/anvil/red_steel"
 			}
 			id: "0D1A87ACA67D7CED"
 			shape: "hexagon"
 			size: 1.0d
-			tasks: [{
-				id: "33DC680CC1B4356F"
-				type: "checkmark"
-			}]
+			tasks: [
+				{
+					id: "33DC680CC1B4356F"
+					type: "checkmark"
+				}
+			]
 			x: 0.0d
 			y: 5.5d
 		}
 		{
-			dependencies: [
-				"0D1A87ACA67D7CED"
-				"7897D552FAE9A14E"
-			]
+			dependencies: ["0D1A87ACA67D7CED", "7897D552FAE9A14E"]
 			icon: {
 				id: "vintageimprovements:steel_spring"
 			}
 			id: "0202CF51CCBF270A"
 			shape: "hexagon"
 			size: 1.0d
-			tasks: [{
-				id: "6B9D9ED7310C9CED"
-				type: "checkmark"
-			}]
+			tasks: [
+				{
+					id: "6B9D9ED7310C9CED"
+					type: "checkmark"
+				}
+			]
 			x: 2.0d
 			y: 5.5d
 		}
 		{
-			dependencies: [
-				"0202CF51CCBF270A"
-				"7897D552FAE9A14E"
-			]
+			dependencies: ["0202CF51CCBF270A", "7897D552FAE9A14E"]
 			icon: {
 				id: "tfmg:heavy_machinery_casing"
 			}
 			id: "05DDC84517618FA1"
 			shape: "hexagon"
 			size: 1.0d
-			tasks: [{
-				id: "5167018FEC7A575B"
-				type: "checkmark"
-			}]
+			tasks: [
+				{
+					id: "5167018FEC7A575B"
+					type: "checkmark"
+				}
+			]
 			x: 4.0d
 			y: 5.5d
 		}
 		{
-			dependencies: [
-				"05DDC84517618FA1"
-				"6CF2CE946DFD4FDC"
-			]
+			dependencies: ["05DDC84517618FA1", "6CF2CE946DFD4FDC"]
 			icon: {
 				id: "create_new_age:generator_coil"
 			}
 			id: "776BC27E26363F39"
 			shape: "hexagon"
 			size: 1.0d
-			tasks: [{
-				id: "115C024C2053327F"
-				type: "checkmark"
-			}]
+			tasks: [
+				{
+					id: "115C024C2053327F"
+					type: "checkmark"
+				}
+			]
 			x: 6.0d
 			y: 5.5d
 		}
 		{
-			dependencies: [
-				"776BC27E26363F39"
-				"1C87D51F077F0648"
-			]
+			dependencies: ["776BC27E26363F39", "1C87D51F077F0648"]
 			icon: {
 				id: "electroenergetics:transformer"
 			}
 			id: "3964A93899BCD358"
 			shape: "hexagon"
 			size: 1.0d
-			tasks: [{
-				id: "5262D6AC36337351"
-				type: "checkmark"
-			}]
+			tasks: [
+				{
+					id: "5262D6AC36337351"
+					type: "checkmark"
+				}
+			]
 			x: 8.0d
 			y: 5.5d
 		}
 		{
-			dependencies: [
-				"3964A93899BCD358"
-				"6131B6489C98424E"
-			]
+			dependencies: ["3964A93899BCD358", "6131B6489C98424E"]
 			icon: {
 				id: "vintageimprovements:vanadium_nugget"
 			}
 			id: "594E19B848BC5DFF"
 			shape: "hexagon"
 			size: 1.0d
-			tasks: [{
-				id: "0202317DC81E726E"
-				type: "checkmark"
-			}]
+			tasks: [
+				{
+					id: "0202317DC81E726E"
+					type: "checkmark"
+				}
+			]
 			x: 10.0d
 			y: 5.5d
 		}
 		{
-			dependencies: [
-				"594E19B848BC5DFF"
-				"5B441F4906DCBB40"
-			]
+			dependencies: ["594E19B848BC5DFF", "5B441F4906DCBB40"]
 			icon: {
 				id: "tfmg:circuit_board"
 			}
 			id: "35E77205BB96E459"
 			shape: "hexagon"
 			size: 1.0d
-			tasks: [{
-				id: "6E6BBC586B02FCE9"
-				type: "checkmark"
-			}]
+			tasks: [
+				{
+					id: "6E6BBC586B02FCE9"
+					type: "checkmark"
+				}
+			]
 			x: 12.0d
 			y: 5.5d
 		}
 		{
-			dependencies: [
-				"35E77205BB96E459"
-				"3B8D69CA5AD743F7"
-			]
+			dependencies: ["35E77205BB96E459", "3B8D69CA5AD743F7"]
 			icon: {
-				components: {
-					"tfc:heat": { }
-				}
 				id: "tfc:ore/rich_malachite"
 			}
 			id: "2D72DECB106E563C"
 			shape: "hexagon"
 			size: 1.0d
-			tasks: [{
-				id: "49BF06F8B97496CE"
-				type: "checkmark"
-			}]
+			tasks: [
+				{
+					id: "49BF06F8B97496CE"
+					type: "checkmark"
+				}
+			]
 			x: 14.0d
 			y: 5.5d
 		}
 		{
-			dependencies: [
-				"2D72DECB106E563C"
-				"788DC7B6BD541EEF"
-			]
+			dependencies: ["2D72DECB106E563C", "788DC7B6BD541EEF"]
 			icon: {
 				id: "kubejs:powder/alumina"
 			}
 			id: "3726253373B8F091"
 			shape: "hexagon"
 			size: 1.0d
-			tasks: [{
-				id: "72FC56A7EA66393B"
-				type: "checkmark"
-			}]
+			tasks: [
+				{
+					id: "72FC56A7EA66393B"
+					type: "checkmark"
+				}
+			]
 			x: 16.0d
 			y: 5.5d
 		}
 		{
-			dependencies: [
-				"3726253373B8F091"
-				"788DC7B6BD541EEF"
-			]
+			dependencies: ["3726253373B8F091", "788DC7B6BD541EEF"]
 			icon: {
-				components: {
-					"tfc:heat": { }
-				}
 				id: "tfc_metallurgy:metal/dust/tungsten"
 			}
 			id: "783AAC21B793E1A9"
 			shape: "hexagon"
 			size: 1.0d
-			tasks: [{
-				id: "07A3D6E666DADB14"
-				type: "checkmark"
-			}]
+			tasks: [
+				{
+					id: "07A3D6E666DADB14"
+					type: "checkmark"
+				}
+			]
 			x: 18.0d
 			y: 5.5d
 		}
 		{
-			dependencies: [
-				"783AAC21B793E1A9"
-				"2972B973AE95E687"
-			]
+			dependencies: ["783AAC21B793E1A9", "2972B973AE95E687"]
 			icon: {
 				id: "solarpunk:solar_power_tower"
 			}
 			id: "6139F5006D4841F9"
 			shape: "hexagon"
 			size: 1.0d
-			tasks: [{
-				id: "75CA4569A428418C"
-				type: "checkmark"
-			}]
+			tasks: [
+				{
+					id: "75CA4569A428418C"
+					type: "checkmark"
+				}
+			]
 			x: 20.0d
 			y: 5.5d
 		}
 		{
-			dependencies: [
-				"6139F5006D4841F9"
-				"67A19D9014F54314"
-			]
+			dependencies: ["6139F5006D4841F9", "67A19D9014F54314"]
 			icon: {
 				id: "create_new_age:reactor_rod"
 			}
 			id: "618C52C266D993E0"
 			shape: "hexagon"
 			size: 1.0d
-			tasks: [{
-				id: "0E1AE498D7BBF151"
-				type: "checkmark"
-			}]
+			tasks: [
+				{
+					id: "0E1AE498D7BBF151"
+					type: "checkmark"
+				}
+			]
 			x: 22.0d
 			y: 5.5d
 		}
@@ -456,10 +427,12 @@
 			id: "3F920B998CF24A25"
 			shape: "hexagon"
 			size: 1.0d
-			tasks: [{
-				id: "0CF82BCB07F89F9D"
-				type: "checkmark"
-			}]
+			tasks: [
+				{
+					id: "0CF82BCB07F89F9D"
+					type: "checkmark"
+				}
+			]
 			x: 0.0d
 			y: 8.0d
 		}
@@ -471,10 +444,12 @@
 			id: "11A7133F6159B538"
 			shape: "hexagon"
 			size: 1.0d
-			tasks: [{
-				id: "60953ABF32FE3574"
-				type: "checkmark"
-			}]
+			tasks: [
+				{
+					id: "60953ABF32FE3574"
+					type: "checkmark"
+				}
+			]
 			x: 2.0d
 			y: 8.0d
 		}
@@ -486,10 +461,12 @@
 			id: "7FFA2E7EAE495CAF"
 			shape: "hexagon"
 			size: 1.0d
-			tasks: [{
-				id: "0CE01CB3920ED24B"
-				type: "checkmark"
-			}]
+			tasks: [
+				{
+					id: "0CE01CB3920ED24B"
+					type: "checkmark"
+				}
+			]
 			x: 4.0d
 			y: 8.0d
 		}
@@ -501,10 +478,12 @@
 			id: "63E08BEE0D1D03B2"
 			shape: "hexagon"
 			size: 1.0d
-			tasks: [{
-				id: "183547C5EB6B9C33"
-				type: "checkmark"
-			}]
+			tasks: [
+				{
+					id: "183547C5EB6B9C33"
+					type: "checkmark"
+				}
+			]
 			x: 6.0d
 			y: 8.0d
 		}
@@ -516,10 +495,12 @@
 			id: "4201413A13803B27"
 			shape: "hexagon"
 			size: 1.0d
-			tasks: [{
-				id: "31391C57F0B6E0E7"
-				type: "checkmark"
-			}]
+			tasks: [
+				{
+					id: "31391C57F0B6E0E7"
+					type: "checkmark"
+				}
+			]
 			x: 8.0d
 			y: 8.0d
 		}

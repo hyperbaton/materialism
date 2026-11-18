@@ -4,9 +4,6 @@
 	filename: "forge"
 	group: "577AA6560051154F"
 	icon: {
-		components: {
-			"tfc:heat": { }
-		}
 		id: "tfc:metal/anvil/bronze"
 	}
 	id: "4F8D8F7E93FD13E7"
@@ -17,6 +14,7 @@
 			id: "185209B427AF1ABF"
 			linked_quest: "252DCBC3CE3A5C33"
 			shape: "circle"
+			size: 1.0d
 			x: 0.0d
 			y: 0.0d
 		}
@@ -24,6 +22,7 @@
 			id: "0C56789DE347B1B9"
 			linked_quest: "350143738DB87511"
 			shape: "circle"
+			size: 1.0d
 			x: 0.0d
 			y: 4.5d
 		}
@@ -31,6 +30,7 @@
 			id: "67FC8108E8D27930"
 			linked_quest: "0D809F0F7EE56D13"
 			shape: "circle"
+			size: 1.0d
 			x: 0.0d
 			y: 6.0d
 		}
@@ -44,34 +44,34 @@
 			id: "511EABEA0E823FBC"
 			shape: "circle"
 			size: 1.0d
-			tasks: [{
-				advancement: "tfc:story/stone_anvil"
-				criterion: ""
-				id: "3327521978B7E779"
-				type: "advancement"
-			}]
+			tasks: [
+				{
+					advancement: "tfc:story/stone_anvil"
+					criterion: ""
+					id: "3327521978B7E779"
+					type: "advancement"
+				}
+			]
 			x: 2.0d
 			y: 0.0d
 		}
 		{
 			dependencies: ["511EABEA0E823FBC"]
 			icon: {
-				components: {
-					"ftbquests:missing_item": "tfc:charcoal_pile"
-				}
-				id: "ftbquests:missing_item"
+				id: "minecraft:charcoal"
 			}
 			id: "1975673D8698942D"
 			shape: "circle"
 			size: 1.0d
-			tasks: [{
-				id: "6BAED26CF1684FAC"
-				observation_type: "block"
-				observe_type: 0
-				timer: 0L
-				to_observe: "tfc:charcoal_pile"
-				type: "observation"
-			}]
+			tasks: [
+				{
+					id: "6BAED26CF1684FAC"
+					observe_type: 0
+					timer: 0L
+					to_observe: "tfc:charcoal_pile"
+					type: "observation"
+				}
+			]
 			x: 4.0d
 			y: 0.0d
 		}
@@ -83,13 +83,15 @@
 			id: "54DE10867CF49C2E"
 			shape: "circle"
 			size: 1.0d
-			tasks: [{
-				consume_items: false
-				count: 8L
-				id: "6E953D435085FA58"
-				item: { count: 1, id: "minecraft:charcoal" }
-				type: "item"
-			}]
+			tasks: [
+				{
+					consume_items: false
+					count: 8L
+					id: "6E953D435085FA58"
+					item: { count: 1, id: "minecraft:charcoal" }
+					type: "item"
+				}
+			]
 			x: 6.0d
 			y: 0.0d
 		}
@@ -101,163 +103,155 @@
 			id: "6285A50D84BBC917"
 			shape: "rsquare"
 			size: 1.5d
-			tasks: [{
-				advancement: "tfc:story/forge"
-				criterion: ""
-				id: "0159B3AB39A0E733"
-				type: "advancement"
-			}]
+			tasks: [
+				{
+					advancement: "tfc:story/forge"
+					criterion: ""
+					id: "0159B3AB39A0E733"
+					type: "advancement"
+				}
+			]
 			x: 8.25d
 			y: 0.0d
 		}
 		{
 			dependencies: ["6285A50D84BBC917"]
 			icon: {
-				components: {
-					"tfc:heat": { }
-				}
 				id: "tfc:metal/anvil/bronze"
 			}
 			id: "74D154BE8FF2868F"
 			shape: "diamond"
 			size: 1.0d
-			tasks: [{
-				id: "2C88616B06803099"
-				type: "checkmark"
-			}]
+			tasks: [
+				{
+					id: "2C88616B06803099"
+					type: "checkmark"
+				}
+			]
 			x: 8.25d
 			y: -2.25d
 		}
 		{
 			dependencies: ["6285A50D84BBC917"]
 			icon: {
-				components: {
-					"tfc:heat": { }
-				}
 				id: "tfc:powder/flux"
 			}
 			id: "3D30067DA7362B13"
 			shape: "circle"
 			size: 1.0d
-			tasks: [{
-				consume_items: false
-				count: 4L
-				id: "68450897BF9B3818"
-				item: { components: { "tfc:heat": { } }, count: 1, id: "tfc:powder/flux" }
-				type: "item"
-			}]
+			tasks: [
+				{
+					consume_items: false
+					count: 4L
+					id: "68450897BF9B3818"
+					item: { count: 1, id: "tfc:powder/flux" }
+					type: "item"
+				}
+			]
 			x: 10.5d
 			y: 0.0d
 		}
 		{
 			dependencies: ["3D30067DA7362B13"]
 			icon: {
-				components: {
-					"tfc:heat": { }
-				}
 				id: "tfc:metal/double_ingot/copper"
 			}
 			id: "39C301D72E8E48BF"
 			shape: "circle"
 			size: 1.0d
-			tasks: [{
-				consume_items: false
-				count: 7L
-				id: "11AE0EFBB57BD4B3"
-				item: { components: { "tfc:heat": { } }, count: 1, id: "tfc:metal/double_ingot/copper" }
-				type: "item"
-			}]
+			tasks: [
+				{
+					consume_items: false
+					count: 7L
+					id: "11AE0EFBB57BD4B3"
+					item: { count: 1, id: "tfc:metal/double_ingot/copper" }
+					type: "item"
+				}
+			]
 			x: 12.5d
 			y: 0.0d
 		}
 		{
 			dependencies: ["39C301D72E8E48BF"]
 			icon: {
-				components: {
-					"tfc:heat": { }
-				}
 				id: "tfc:metal/anvil/copper"
 			}
 			id: "37503E08F44B82E2"
 			shape: "rsquare"
 			size: 2.0d
-			tasks: [{
-				consume_items: false
-				id: "6320054A97A9DBF0"
-				item: { components: { "tfc:heat": { } }, count: 1, id: "tfc:metal/anvil/copper" }
-				type: "item"
-			}]
+			tasks: [
+				{
+					consume_items: false
+					id: "6320054A97A9DBF0"
+					item: { count: 1, id: "tfc:metal/anvil/copper" }
+					type: "item"
+				}
+			]
 			x: 15.0d
 			y: 0.0d
 		}
 		{
 			dependencies: ["37503E08F44B82E2"]
 			icon: {
-				components: {
-					"tfc:heat": { }
-				}
 				id: "tfc:metal/sheet/copper"
 			}
 			id: "58AAD5A29308D38F"
 			shape: "circle"
 			size: 1.0d
-			tasks: [{
-				consume_items: false
-				id: "10ACA49B5DD1811E"
-				item: { components: { "tfc:heat": { } }, count: 1, id: "tfc:metal/sheet/copper" }
-				type: "item"
-			}]
+			tasks: [
+				{
+					consume_items: false
+					id: "10ACA49B5DD1811E"
+					item: { count: 1, id: "tfc:metal/sheet/copper" }
+					type: "item"
+				}
+			]
 			x: 17.5d
 			y: 0.0d
 		}
 		{
 			dependencies: ["58AAD5A29308D38F"]
 			icon: {
-				components: {
-					"tfc:heat": { }
-				}
 				id: "tfc:metal/mace/copper"
 			}
 			id: "026EECE401439DB5"
 			optional: true
 			shape: "square"
 			size: 0.75d
-			tasks: [{
-				consume_items: false
-				id: "5972FC763E59BFFF"
-				item: { components: { "ftbfiltersystem:filter": "ftbfiltersystem:or(ftbfiltersystem:item(tfc:metal/sword/copper)ftbfiltersystem:item(tfc:metal/mace/copper))" }, count: 1, id: "ftbfiltersystem:smart_filter" }
-				type: "item"
-			}]
+			tasks: [
+				{
+					consume_items: false
+					id: "5972FC763E59BFFF"
+					item: { components: { "ftbfiltersystem:filter": "ftbfiltersystem:or(ftbfiltersystem:item(tfc:metal/sword/copper)ftbfiltersystem:item(tfc:metal/mace/copper))" }, count: 1, id: "ftbfiltersystem:smart_filter" }
+					type: "item"
+				}
+			]
 			x: 16.5d
 			y: -2.0d
 		}
 		{
 			dependencies: ["026EECE401439DB5"]
 			icon: {
-				components: {
-					"tfc:heat": { }
-				}
 				id: "tfc:metal/shield/copper"
 			}
 			id: "21734D0CC9C13EB8"
 			optional: true
 			shape: "square"
 			size: 0.75d
-			tasks: [{
-				consume_items: false
-				id: "1E9C37F8373AF7F2"
-				item: { components: { "ftbfiltersystem:filter": "ftbfiltersystem:item_tag(c:tools/shield)" }, count: 1, id: "ftbfiltersystem:smart_filter" }
-				type: "item"
-			}]
+			tasks: [
+				{
+					consume_items: false
+					id: "1E9C37F8373AF7F2"
+					item: { components: { "ftbfiltersystem:filter": "ftbfiltersystem:item_tag(c:tools/shield)" }, count: 1, id: "ftbfiltersystem:smart_filter" }
+					type: "item"
+				}
+			]
 			x: 16.5d
 			y: -3.5d
 		}
 		{
 			dependencies: ["58AAD5A29308D38F"]
 			icon: {
-				components: {
-					"tfc:heat": { }
-				}
 				id: "tfc:metal/helmet/copper"
 			}
 			id: "7B50FDAF814170F8"
@@ -296,119 +290,113 @@
 		{
 			dependencies: ["58AAD5A29308D38F"]
 			icon: {
-				components: {
-					"tfc:heat": { }
-				}
 				id: "tfc:metal/anvil/bronze"
 			}
 			id: "708071FC9FC41E46"
 			shape: "diamond"
 			size: 1.0d
-			tasks: [{
-				id: "7969A2FDB8292E4A"
-				type: "checkmark"
-			}]
+			tasks: [
+				{
+					id: "7969A2FDB8292E4A"
+					type: "checkmark"
+				}
+			]
 			x: 17.5d
 			y: 2.0d
 		}
 		{
 			dependencies: ["58AAD5A29308D38F"]
 			icon: {
-				components: {
-					"tfc:heat": { }
-				}
 				id: "tfc:metal/ingot/bismuth"
 			}
 			id: "0E03EF51188423A6"
 			shape: "circle"
 			size: 1.0d
-			tasks: [{
-				consume_items: false
-				id: "51CE9A82150D42DF"
-				item: { components: { "ftbfiltersystem:filter": "ftbfiltersystem:or(ftbfiltersystem:item(tfc:metal/ingot/tin)ftbfiltersystem:item(tfc:metal/ingot/bismuth)ftbfiltersystem:item(tfc:metal/ingot/zinc))" }, count: 1, id: "ftbfiltersystem:smart_filter" }
-				type: "item"
-			}]
+			tasks: [
+				{
+					consume_items: false
+					id: "51CE9A82150D42DF"
+					item: { components: { "ftbfiltersystem:filter": "ftbfiltersystem:or(ftbfiltersystem:item(tfc:metal/ingot/tin)ftbfiltersystem:item(tfc:metal/ingot/bismuth)ftbfiltersystem:item(tfc:metal/ingot/zinc))" }, count: 1, id: "ftbfiltersystem:smart_filter" }
+					type: "item"
+				}
+			]
 			x: 19.5d
 			y: 0.0d
 		}
 		{
 			dependencies: ["0E03EF51188423A6"]
 			icon: {
-				components: {
-					"tfc:heat": { }
-				}
 				id: "tfc:metal/ingot/bismuth_bronze"
 			}
 			id: "00D2ECE08990E88F"
 			shape: "circle"
 			size: 1.0d
-			tasks: [{
-				consume_items: false
-				id: "24411895EA9D838C"
-				item: { components: { "ftbfiltersystem:filter": "ftbfiltersystem:or(ftbfiltersystem:item(tfc:metal/ingot/bronze)ftbfiltersystem:item(tfc:metal/ingot/bismuth_bronze)ftbfiltersystem:item(tfc:metal/ingot/black_bronze))" }, count: 1, id: "ftbfiltersystem:smart_filter" }
-				type: "item"
-			}]
+			tasks: [
+				{
+					consume_items: false
+					id: "24411895EA9D838C"
+					item: { components: { "ftbfiltersystem:filter": "ftbfiltersystem:or(ftbfiltersystem:item(tfc:metal/ingot/bronze)ftbfiltersystem:item(tfc:metal/ingot/bismuth_bronze)ftbfiltersystem:item(tfc:metal/ingot/black_bronze))" }, count: 1, id: "ftbfiltersystem:smart_filter" }
+					type: "item"
+				}
+			]
 			x: 21.5d
 			y: 0.0d
 		}
 		{
 			dependencies: ["00D2ECE08990E88F"]
 			icon: {
-				components: {
-					"tfc:heat": { }
-				}
 				id: "tfc:metal/double_ingot/bismuth_bronze"
 			}
 			id: "3F5F75D9CD82D6FC"
 			shape: "circle"
 			size: 1.0d
-			tasks: [{
-				consume_items: false
-				count: 7L
-				id: "530D8840FA8FBE48"
-				item: { components: { "ftbfiltersystem:filter": "ftbfiltersystem:or(ftbfiltersystem:item(tfc:metal/double_ingot/bronze)ftbfiltersystem:item(tfc:metal/double_ingot/bismuth_bronze)ftbfiltersystem:item(tfc:metal/double_ingot/black_bronze))" }, count: 1, id: "ftbfiltersystem:smart_filter" }
-				type: "item"
-			}]
+			tasks: [
+				{
+					consume_items: false
+					count: 7L
+					id: "530D8840FA8FBE48"
+					item: { components: { "ftbfiltersystem:filter": "ftbfiltersystem:or(ftbfiltersystem:item(tfc:metal/double_ingot/bronze)ftbfiltersystem:item(tfc:metal/double_ingot/bismuth_bronze)ftbfiltersystem:item(tfc:metal/double_ingot/black_bronze))" }, count: 1, id: "ftbfiltersystem:smart_filter" }
+					type: "item"
+				}
+			]
 			x: 23.5d
 			y: 0.0d
 		}
 		{
 			dependencies: ["3F5F75D9CD82D6FC"]
 			icon: {
-				components: {
-					"tfc:heat": { }
-				}
 				id: "tfc:metal/anvil/bismuth_bronze"
 			}
 			id: "543A21150BF1147D"
 			shape: "rsquare"
 			size: 2.0d
-			tasks: [{
-				consume_items: false
-				id: "5B505210D3133A13"
-				item: { components: { "ftbfiltersystem:filter": "ftbfiltersystem:or(ftbfiltersystem:item(tfc:metal/anvil/bronze)ftbfiltersystem:item(tfc:metal/anvil/bismuth_bronze)ftbfiltersystem:item(tfc:metal/anvil/black_bronze))" }, count: 1, id: "ftbfiltersystem:smart_filter" }
-				type: "item"
-			}]
+			tasks: [
+				{
+					consume_items: false
+					id: "5B505210D3133A13"
+					item: { components: { "ftbfiltersystem:filter": "ftbfiltersystem:or(ftbfiltersystem:item(tfc:metal/anvil/bronze)ftbfiltersystem:item(tfc:metal/anvil/bismuth_bronze)ftbfiltersystem:item(tfc:metal/anvil/black_bronze))" }, count: 1, id: "ftbfiltersystem:smart_filter" }
+					type: "item"
+				}
+			]
 			x: 26.0d
 			y: 0.0d
 		}
 		{
 			dependencies: ["350143738DB87511"]
 			icon: {
-				components: {
-					"tfc:heat": { }
-				}
 				id: "tfc:kaolin_clay"
 			}
 			id: "3D02D1AA0305AAD1"
 			shape: "circle"
 			size: 1.0d
-			tasks: [{
-				consume_items: false
-				id: "47F8220549F3E6E7"
-				item: { components: { "ftbfiltersystem:filter": "ftbfiltersystem:or(ftbfiltersystem:item(tfc:kaolin_clay)ftbfiltersystem:item(tfc:pink_kaolin_clay)ftbfiltersystem:item(tfc:red_kaolin_clay)ftbfiltersystem:item(tfc:white_kaolin_clay))" }, count: 1, id: "ftbfiltersystem:smart_filter" }
-				type: "item"
-			}]
+			tasks: [
+				{
+					consume_items: false
+					id: "47F8220549F3E6E7"
+					item: { components: { "ftbfiltersystem:filter": "ftbfiltersystem:or(ftbfiltersystem:item(tfc:kaolin_clay)ftbfiltersystem:item(tfc:pink_kaolin_clay)ftbfiltersystem:item(tfc:red_kaolin_clay)ftbfiltersystem:item(tfc:white_kaolin_clay))" }, count: 1, id: "ftbfiltersystem:smart_filter" }
+					type: "item"
+				}
+			]
 			x: 2.0d
 			y: 4.5d
 		}
@@ -420,12 +408,14 @@
 			id: "517F0D9EBE97DBAA"
 			shape: "circle"
 			size: 1.0d
-			tasks: [{
-				consume_items: false
-				id: "16B9FCB95A16DF15"
-				item: { count: 1, id: "tfc:powder/kaolinite" }
-				type: "item"
-			}]
+			tasks: [
+				{
+					consume_items: false
+					id: "16B9FCB95A16DF15"
+					item: { count: 1, id: "tfc:powder/kaolinite" }
+					type: "item"
+				}
+			]
 			x: 4.0d
 			y: 4.5d
 		}
@@ -437,72 +427,71 @@
 			id: "6556C2658162F2C6"
 			shape: "circle"
 			size: 1.0d
-			tasks: [{
-				consume_items: false
-				id: "5F816AC737CF8A00"
-				item: { count: 1, id: "tfc:ore/graphite" }
-				type: "item"
-			}]
+			tasks: [
+				{
+					consume_items: false
+					id: "5F816AC737CF8A00"
+					item: { count: 1, id: "tfc:ore/graphite" }
+					type: "item"
+				}
+			]
 			x: 2.0d
 			y: 6.0d
 		}
 		{
 			dependencies: ["6556C2658162F2C6"]
 			icon: {
-				components: {
-					"tfc:heat": { }
-				}
 				id: "tfc:powder/graphite"
 			}
 			id: "223C2D959E62E53A"
 			shape: "circle"
 			size: 1.0d
-			tasks: [{
-				consume_items: false
-				id: "2484C69981F8308E"
-				item: { components: { "tfc:heat": { } }, count: 1, id: "tfc:powder/graphite" }
-				type: "item"
-			}]
+			tasks: [
+				{
+					consume_items: false
+					id: "2484C69981F8308E"
+					item: { count: 1, id: "tfc:powder/graphite" }
+					type: "item"
+				}
+			]
 			x: 4.0d
 			y: 6.0d
 		}
 		{
-			dependencies: [
-				"517F0D9EBE97DBAA"
-				"223C2D959E62E53A"
-			]
+			dependencies: ["517F0D9EBE97DBAA", "223C2D959E62E53A"]
 			icon: {
 				id: "tfc:fire_clay"
 			}
 			id: "624694ACBF6DD012"
 			shape: "rsquare"
 			size: 1.5d
-			tasks: [{
-				consume_items: false
-				id: "72545895299B54C6"
-				item: { count: 1, id: "tfc:fire_clay" }
-				type: "item"
-			}]
+			tasks: [
+				{
+					consume_items: false
+					id: "72545895299B54C6"
+					item: { count: 1, id: "tfc:fire_clay" }
+					type: "item"
+				}
+			]
 			x: 6.25d
 			y: 4.5d
 		}
 		{
 			dependencies: ["624694ACBF6DD012"]
 			icon: {
-				components: {
-					"tfc:heat": { }
-				}
 				id: "tfc:ceramic/unfired_crucible"
 			}
 			id: "4CF5920CF36A5940"
 			shape: "circle"
 			size: 1.0d
-			tasks: [{
-				consume_items: false
-				id: "6AF75D59352547E7"
-				item: { components: { "tfc:heat": { } }, count: 1, id: "tfc:ceramic/unfired_crucible" }
-				type: "item"
-			}]
+			tasks: [
+				{
+					consume_items: false
+					id: "6AF75D59352547E7"
+					item: { count: 1, id: "tfc:ceramic/unfired_crucible" }
+					type: "item"
+				}
+			]
 			x: 8.5d
 			y: 4.5d
 		}
@@ -514,12 +503,14 @@
 			id: "3098513E73B5CE56"
 			shape: "gear"
 			size: 2.5d
-			tasks: [{
-				consume_items: false
-				id: "22EC4392A7A4AC2C"
-				item: { count: 1, id: "tfc:crucible" }
-				type: "item"
-			}]
+			tasks: [
+				{
+					consume_items: false
+					id: "22EC4392A7A4AC2C"
+					item: { count: 1, id: "tfc:crucible" }
+					type: "item"
+				}
+			]
 			x: 11.25d
 			y: 4.5d
 		}

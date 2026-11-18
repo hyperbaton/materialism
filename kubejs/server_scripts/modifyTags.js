@@ -38,6 +38,9 @@ ServerEvents.tags('item', event => {
     event.add('c:strings', 'tfc_items:leather_strap')
     event.add('c:strings', 'tfc_items:plant_string')
     event.add('c:strings', 'tfc_items:bamboo_string')
+    event.add('c:strings', 'kubejs:nylon_thread')
+    // Strings the silk cloth loom takes: every string but nylon thread, which weaves into nylon cloth
+    event.add('kubejs:silk_cloth_strings', ['minecraft:string', 'tfc_items:leather_strap', 'tfc_items:plant_string', 'tfc_items:bamboo_string'])
 
     // Access the tag content and log it
     const tagContent = event.get('create:sandpaper').getObjectIds();

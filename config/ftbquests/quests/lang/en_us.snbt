@@ -1267,15 +1267,21 @@
 	quest.1FE85AB58610B959.title: "Liquid Air"
 	quest.1FE85AB58610B959.quest_subtitle: "Everything in the sky"
 	quest.1FE85AB58610B959.quest_desc: ["Pressurize air with cooling fluid, which you mix from water and ethylene, then distil it into nitrogen, oxygen, argon and more."]
-	quest.0776ACF8377E0947.title: "Brine and Chlorine"
+	quest.0776ACF8377E0947.title: "Salt Water and Chlorine"
 	quest.0776ACF8377E0947.quest_subtitle: "Salt water, split"
-	quest.0776ACF8377E0947.quest_desc: ["Mix salt and water into brine, then run it through an electrode vat. It gives chlorine, hydrogen and caustic soda."]
+	quest.0776ACF8377E0947.quest_desc: ["Run salt water through an electrode vat. It gives chlorine, hydrogen and caustic soda."]
 	quest.0D7BFE9BA7B656E1.title: "Caustic Soda"
-	quest.0D7BFE9BA7B656E1.quest_subtitle: "From brine electrolysis"
-	quest.0D7BFE9BA7B656E1.quest_desc: ["Electrolysing brine gives chlorine, hydrogen and caustic soda. The Bayer process and several others run on it."]
+	quest.0D7BFE9BA7B656E1.quest_subtitle: "From salt water electrolysis"
+	quest.0D7BFE9BA7B656E1.quest_desc: ["Electrolysing salt water gives chlorine, hydrogen and caustic soda. The Bayer process and several others run on it."]
 	quest.747B1F410BD783E2.title: "Nitric Acid"
 	quest.747B1F410BD783E2.quest_subtitle: "Ammonia, oxidised"
 	quest.747B1F410BD783E2.quest_desc: ["Ammonia burnt over a platinum catalyst gives nitrogen dioxide, and water turns it into nitric acid. Platinum, silver and thorium all need it."]
+	quest.7286A599149315E4.title: "Nylon"
+	quest.7286A599149315E4.quest_subtitle: "Two halves of a polymer"
+	quest.7286A599149315E4.quest_desc: ["Nitric acid oxidises cyclohexanol into adipic acid. Hydrogen, ethylene and ammonia over a nickel catalyst give hexamethylenediamine. Mix the two solutions in a vat into nylon salt crystals and crush them.", "", "Superheated compacting melts nylon salt into molten nylon."]
+	quest.5B3A1CB7F3C8606C.title: "Nylon Cloth"
+	quest.5B3A1CB7F3C8606C.quest_subtitle: "Melt-spun, drawn and woven"
+	quest.5B3A1CB7F3C8606C.quest_desc: ["A brass extruder over a molten nylon source and a water quench spins ten filaments per bucket. A rolling mill draws them, which makes them strong, and a coiling machine or a spindle twists them into thread.", "", "Nylon thread works as any string. Sixteen of them weave into nylon cloth on a loom.", "", "&7Airship envelopes are made from nylon cloth."]
 	chapter.546908DF1439FA40.title: "Electronics \\& Magnets"
 	chapter.546908DF1439FA40.chapter_subtitle: ["Silicon to the circuit board on the top line, resistors, capacitors and the stronger magnets on the bottom one. Together they build the fireproof vat."]
 	quest.1CEDB6ABE2820016.title: "Trichlorosilane"
@@ -1692,7 +1698,7 @@
 	quest.30A70A42790719CD.quest_desc: ["Sturdy sheet and paper make four schedules. Now your trains don't need you aboard."]
 	quest.0FAB8C9EE20D8375.title: "Envelopes"
 	quest.0FAB8C9EE20D8375.quest_subtitle: "Lift, at last"
-	quest.0FAB8C9EE20D8375.quest_desc: ["Wool stiffened with magnesium rods. Envelopes give your first airship its body."]
+	quest.0FAB8C9EE20D8375.quest_desc: ["Nylon cloth stretched over magnesium rods. Envelopes come out white; right-click them with dye to paint them. They give your first airship its body."]
 	task.34F2A19437ABC929.title: "Any Hot Air Envelope"
 	quest.4B0A9149EAD22D08.title: "Levitite"
 	quest.4B0A9149EAD22D08.quest_subtitle: "Filled with hydrogen"
