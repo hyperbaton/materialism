@@ -14,7 +14,6 @@
 			id: "2E24DDC5A55D5F99"
 			linked_quest: "5B441F4906DCBB40"
 			shape: "circle"
-			size: 1.0d
 			x: 0.0d
 			y: 0.0d
 		}
@@ -22,7 +21,6 @@
 			id: "7ABBE1A3D0166E64"
 			linked_quest: "3B50A4885DD5601D"
 			shape: "circle"
-			size: 1.0d
 			x: 0.0d
 			y: 4.5d
 		}
@@ -36,12 +34,10 @@
 			id: "1CEDB6ABE2820016"
 			shape: "circle"
 			size: 1.0d
-			tasks: [
-				{
-					id: "7C9AC0FCA51AAA05"
-					type: "checkmark"
-				}
-			]
+			tasks: [{
+				id: "7C9AC0FCA51AAA05"
+				type: "checkmark"
+			}]
 			x: 2.0d
 			y: 0.0d
 		}
@@ -53,20 +49,21 @@
 			id: "7AE04C072ECDE239"
 			shape: "rsquare"
 			size: 1.5d
-			tasks: [
-				{
-					consume_items: false
-					count: 4L
-					id: "5B47EF5F4DE7745D"
-					item: { count: 1, id: "kubejs:polysilicon" }
-					type: "item"
-				}
-			]
+			tasks: [{
+				consume_items: false
+				count: 4L
+				id: "5B47EF5F4DE7745D"
+				item: { count: 1, id: "kubejs:polysilicon" }
+				type: "item"
+			}]
 			x: 4.25d
 			y: 0.0d
 		}
 		{
-			dependencies: ["7AE04C072ECDE239", "0876427AC2E90A23"]
+			dependencies: [
+				"7AE04C072ECDE239"
+				"0876427AC2E90A23"
+			]
 			icon: {
 				id: "tfmg:n_semiconductor"
 			}
@@ -97,14 +94,12 @@
 			id: "0876427AC2E90A23"
 			shape: "circle"
 			size: 1.0d
-			tasks: [
-				{
-					consume_items: false
-					id: "39E8FF0D971C27DF"
-					item: { count: 1, id: "chemica:phosphorus_dust" }
-					type: "item"
-				}
-			]
+			tasks: [{
+				consume_items: false
+				id: "39E8FF0D971C27DF"
+				item: { count: 1, id: "chemica:phosphorus_dust" }
+				type: "item"
+			}]
 			x: 6.5d
 			y: 2.0d
 		}
@@ -117,14 +112,12 @@
 			optional: true
 			shape: "square"
 			size: 0.75d
-			tasks: [
-				{
-					consume_items: false
-					id: "5A5328613FE8A1EA"
-					item: { count: 1, id: "electroenergetics:diode" }
-					type: "item"
-				}
-			]
+			tasks: [{
+				consume_items: false
+				id: "5A5328613FE8A1EA"
+				item: { count: 1, id: "electroenergetics:diode" }
+				type: "item"
+			}]
 			x: 6.5d
 			y: -2.0d
 		}
@@ -136,34 +129,33 @@
 			id: "1D00170C37DC4C94"
 			shape: "circle"
 			size: 1.0d
-			tasks: [
-				{
-					consume_items: false
-					count: 4L
-					id: "2493747BE3E6AD15"
-					item: { count: 1, id: "tfmg:transistor" }
-					type: "item"
-				}
-			]
+			tasks: [{
+				consume_items: false
+				count: 4L
+				id: "2493747BE3E6AD15"
+				item: { count: 1, id: "tfmg:transistor" }
+				type: "item"
+			}]
 			x: 8.5d
 			y: 0.0d
 		}
 		{
-			dependencies: ["1D00170C37DC4C94", "068BB6F63983B6F7"]
+			dependencies: [
+				"1D00170C37DC4C94"
+				"068BB6F63983B6F7"
+			]
 			icon: {
 				id: "tfmg:circuit_board"
 			}
 			id: "01379EB0C708704C"
 			shape: "rsquare"
 			size: 2.0d
-			tasks: [
-				{
-					consume_items: false
-					id: "375BD13F77E4E341"
-					item: { count: 1, id: "tfmg:circuit_board" }
-					type: "item"
-				}
-			]
+			tasks: [{
+				consume_items: false
+				id: "375BD13F77E4E341"
+				item: { count: 1, id: "tfmg:circuit_board" }
+				type: "item"
+			}]
 			x: 11.0d
 			y: 0.0d
 		}
@@ -176,14 +168,12 @@
 			optional: true
 			shape: "square"
 			size: 0.75d
-			tasks: [
-				{
-					consume_items: false
-					id: "1CD419107002F08F"
-					item: { count: 1, id: "computercraft:computer_normal" }
-					type: "item"
-				}
-			]
+			tasks: [{
+				consume_items: false
+				id: "1CD419107002F08F"
+				item: { count: 1, id: "computercraft:computer_normal" }
+				type: "item"
+			}]
 			x: 11.0d
 			y: -2.5d
 		}
@@ -196,14 +186,12 @@
 			optional: true
 			shape: "square"
 			size: 0.75d
-			tasks: [
-				{
-					consume_items: false
-					id: "2F7A64E45696E2A2"
-					item: { count: 1, id: "create_power_loader:andesite_chunk_loader" }
-					type: "item"
-				}
-			]
+			tasks: [{
+				consume_items: false
+				id: "2F7A64E45696E2A2"
+				item: { count: 1, id: "create_power_loader:andesite_chunk_loader" }
+				type: "item"
+			}]
 			x: 11.0d
 			y: -4.0d
 		}
@@ -216,15 +204,13 @@
 			optional: true
 			shape: "square"
 			size: 0.75d
-			tasks: [
-				{
-					consume_items: false
-					count: 8L
-					id: "7FAB505D7FFA1AF2"
-					item: { count: 1, id: "kubejs:silicon_wafer" }
-					type: "item"
-				}
-			]
+			tasks: [{
+				consume_items: false
+				count: 8L
+				id: "7FAB505D7FFA1AF2"
+				item: { count: 1, id: "kubejs:silicon_wafer" }
+				type: "item"
+			}]
 			x: 14.25d
 			y: 2.75d
 		}
@@ -236,14 +222,12 @@
 			id: "6454F90D417AA7DE"
 			shape: "gear"
 			size: 2.5d
-			tasks: [
-				{
-					consume_items: false
-					id: "4A76CCBA99836F60"
-					item: { count: 1, id: "tfmg:fireproof_chemical_vat" }
-					type: "item"
-				}
-			]
+			tasks: [{
+				consume_items: false
+				id: "4A76CCBA99836F60"
+				item: { count: 1, id: "tfmg:fireproof_chemical_vat" }
+				type: "item"
+			}]
 			x: 14.25d
 			y: 0.0d
 		}
@@ -255,15 +239,13 @@
 			id: "04C6B486076D1CEF"
 			shape: "circle"
 			size: 1.0d
-			tasks: [
-				{
-					consume_items: false
-					count: 8L
-					id: "08F87C9F07692F40"
-					item: { count: 1, id: "create_new_age:netherite_magnet" }
-					type: "item"
-				}
-			]
+			tasks: [{
+				consume_items: false
+				count: 8L
+				id: "08F87C9F07692F40"
+				item: { count: 1, id: "create_new_age:netherite_magnet" }
+				type: "item"
+			}]
 			x: 2.0d
 			y: 4.5d
 		}
@@ -276,14 +258,12 @@
 			optional: true
 			shape: "square"
 			size: 0.75d
-			tasks: [
-				{
-					consume_items: false
-					id: "54CC8D1118ACAF84"
-					item: { components: { "ftbfiltersystem:filter": "ftbfiltersystem:or(ftbfiltersystem:item(create_new_age:advanced_motor)ftbfiltersystem:item(create_new_age:reinforced_motor))" }, count: 1, id: "ftbfiltersystem:smart_filter" }
-					type: "item"
-				}
-			]
+			tasks: [{
+				consume_items: false
+				id: "54CC8D1118ACAF84"
+				item: { components: { "ftbfiltersystem:filter": "ftbfiltersystem:or(ftbfiltersystem:item(create_new_age:advanced_motor)ftbfiltersystem:item(create_new_age:reinforced_motor))" }, count: 1, id: "ftbfiltersystem:smart_filter" }
+				type: "item"
+			}]
 			x: 2.0d
 			y: 6.5d
 		}
@@ -295,15 +275,13 @@
 			id: "7EF92D269E88AAE9"
 			shape: "circle"
 			size: 1.0d
-			tasks: [
-				{
-					consume_items: false
-					count: 2L
-					id: "6575D37BF4C00496"
-					item: { count: 1, id: "tfmg:resistor" }
-					type: "item"
-				}
-			]
+			tasks: [{
+				consume_items: false
+				count: 2L
+				id: "6575D37BF4C00496"
+				item: { count: 1, id: "tfmg:resistor" }
+				type: "item"
+			}]
 			x: 4.0d
 			y: 4.5d
 		}
@@ -315,15 +293,13 @@
 			id: "068BB6F63983B6F7"
 			shape: "circle"
 			size: 1.0d
-			tasks: [
-				{
-					consume_items: false
-					count: 2L
-					id: "53201B3F75DFDD80"
-					item: { count: 1, id: "tfmg:capacitor" }
-					type: "item"
-				}
-			]
+			tasks: [{
+				consume_items: false
+				count: 2L
+				id: "53201B3F75DFDD80"
+				item: { count: 1, id: "tfmg:capacitor" }
+				type: "item"
+			}]
 			x: 6.0d
 			y: 4.5d
 		}
@@ -335,14 +311,12 @@
 			id: "6D74C28727B21311"
 			shape: "rsquare"
 			size: 1.5d
-			tasks: [
-				{
-					consume_items: false
-					id: "215EBB5180D57FD9"
-					item: { count: 1, id: "tfmg:polarizer" }
-					type: "item"
-				}
-			]
+			tasks: [{
+				consume_items: false
+				id: "215EBB5180D57FD9"
+				item: { count: 1, id: "tfmg:polarizer" }
+				type: "item"
+			}]
 			x: 8.25d
 			y: 4.5d
 		}
@@ -354,15 +328,13 @@
 			id: "4083C43A1E56A5DF"
 			shape: "circle"
 			size: 1.0d
-			tasks: [
-				{
-					consume_items: false
-					count: 2L
-					id: "5984A2C69BE7B835"
-					item: { count: 1, id: "tfmg:magnet" }
-					type: "item"
-				}
-			]
+			tasks: [{
+				consume_items: false
+				count: 2L
+				id: "5984A2C69BE7B835"
+				item: { count: 1, id: "tfmg:magnet" }
+				type: "item"
+			}]
 			x: 10.5d
 			y: 4.5d
 		}
@@ -374,15 +346,13 @@
 			id: "61F7165D8EE79AE3"
 			shape: "circle"
 			size: 1.0d
-			tasks: [
-				{
-					consume_items: false
-					count: 8L
-					id: "68AB6F4B97F9EB3D"
-					item: { count: 1, id: "create_new_age:layered_magnet" }
-					type: "item"
-				}
-			]
+			tasks: [{
+				consume_items: false
+				count: 8L
+				id: "68AB6F4B97F9EB3D"
+				item: { count: 1, id: "create_new_age:layered_magnet" }
+				type: "item"
+			}]
 			x: 12.5d
 			y: 4.5d
 		}
@@ -394,15 +364,13 @@
 			id: "3DFE5F054BCECF9F"
 			shape: "circle"
 			size: 1.0d
-			tasks: [
-				{
-					consume_items: false
-					count: 8L
-					id: "1A4E5A9DFFB4BA52"
-					item: { count: 1, id: "create_new_age:fluxuated_magnetite" }
-					type: "item"
-				}
-			]
+			tasks: [{
+				consume_items: false
+				count: 8L
+				id: "1A4E5A9DFFB4BA52"
+				item: { count: 1, id: "create_new_age:fluxuated_magnetite" }
+				type: "item"
+			}]
 			x: 14.5d
 			y: 4.5d
 		}

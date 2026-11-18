@@ -14,7 +14,6 @@
 			id: "72F8F5F543D7C83A"
 			linked_quest: "788DC7B6BD541EEF"
 			shape: "circle"
-			size: 1.0d
 			x: 0.0d
 			y: 0.0d
 		}
@@ -22,7 +21,6 @@
 			id: "676272C7CC307643"
 			linked_quest: "7ADA597F285D8A92"
 			shape: "circle"
-			size: 1.0d
 			x: 0.0d
 			y: 5.0d
 		}
@@ -30,7 +28,6 @@
 			id: "25AF8677FE249DF6"
 			linked_quest: "0776ACF8377E0947"
 			shape: "circle"
-			size: 1.0d
 			x: 0.0d
 			y: 7.0d
 		}
@@ -38,7 +35,6 @@
 			id: "513ED58B79484BD9"
 			linked_quest: "3B8D69CA5AD743F7"
 			shape: "circle"
-			size: 1.0d
 			x: 0.0d
 			y: 11.0d
 		}
@@ -52,32 +48,31 @@
 			id: "0B780EE48CD05E58"
 			shape: "circle"
 			size: 1.0d
-			tasks: [
-				{
-					id: "343850CE75902F24"
-					type: "checkmark"
-				}
-			]
+			tasks: [{
+				id: "343850CE75902F24"
+				type: "checkmark"
+			}]
 			x: 2.0d
 			y: 0.0d
 		}
 		{
 			dependencies: ["0B780EE48CD05E58"]
 			icon: {
+				components: {
+					"tfc:heat": { }
+				}
 				id: "kubejs:powder/aluminum_hydroxide"
 			}
 			id: "6B87F51D19F89C36"
 			shape: "circle"
 			size: 1.0d
-			tasks: [
-				{
-					consume_items: false
-					count: 4L
-					id: "39737CDF6E1C7404"
-					item: { count: 1, id: "kubejs:powder/aluminum_hydroxide" }
-					type: "item"
-				}
-			]
+			tasks: [{
+				consume_items: false
+				count: 4L
+				id: "39737CDF6E1C7404"
+				item: { components: { "tfc:heat": { } }, count: 1, id: "kubejs:powder/aluminum_hydroxide" }
+				type: "item"
+			}]
 			x: 4.0d
 			y: 0.0d
 		}
@@ -89,15 +84,13 @@
 			id: "6DD6D46FA3B80E2E"
 			shape: "circle"
 			size: 1.0d
-			tasks: [
-				{
-					consume_items: false
-					count: 3L
-					id: "706175ADE39B7FC9"
-					item: { count: 1, id: "kubejs:powder/alumina" }
-					type: "item"
-				}
-			]
+			tasks: [{
+				consume_items: false
+				count: 3L
+				id: "706175ADE39B7FC9"
+				item: { count: 1, id: "kubejs:powder/alumina" }
+				type: "item"
+			}]
 			x: 6.0d
 			y: 0.0d
 		}
@@ -108,31 +101,30 @@
 			id: "27C952226E154D04"
 			shape: "circle"
 			size: 1.0d
-			tasks: [
-				{
-					consume_items: false
-					id: "469C92EE1258C1C7"
-					item: { count: 1, id: "tfc:ore/cryolite" }
-					type: "item"
-				}
-			]
+			tasks: [{
+				consume_items: false
+				id: "469C92EE1258C1C7"
+				item: { count: 1, id: "tfc:ore/cryolite" }
+				type: "item"
+			}]
 			x: 6.0d
 			y: -2.0d
 		}
 		{
-			dependencies: ["6DD6D46FA3B80E2E", "27C952226E154D04"]
+			dependencies: [
+				"6DD6D46FA3B80E2E"
+				"27C952226E154D04"
+			]
 			icon: {
 				id: "kubejs:powder/alumina"
 			}
 			id: "1F62C2C534E37F80"
 			shape: "rsquare"
 			size: 2.0d
-			tasks: [
-				{
-					id: "085E507845AC3C66"
-					type: "checkmark"
-				}
-			]
+			tasks: [{
+				id: "085E507845AC3C66"
+				type: "checkmark"
+			}]
 			x: 8.5d
 			y: 0.0d
 		}
@@ -155,7 +147,7 @@
 				{
 					consume_items: false
 					id: "1268D55E51178FAC"
-					item: { count: 1, id: "tfc_metallurgy:metal/ingot/magnesium" }
+					item: { components: { "tfc:heat": { } }, count: 1, id: "tfc_metallurgy:metal/ingot/magnesium" }
 					type: "item"
 				}
 			]
@@ -163,42 +155,44 @@
 			y: 7.0d
 		}
 		{
-			dependencies: ["7ADA597F285D8A92", "2E4797701C350AB6"]
+			dependencies: [
+				"7ADA597F285D8A92"
+				"2E4797701C350AB6"
+			]
 			icon: {
 				id: "kubejs:crude_titanium_sponge"
 			}
 			id: "5F182F730599A93F"
 			shape: "rsquare"
 			size: 2.0d
-			tasks: [
-				{
-					consume_items: false
-					count: 2L
-					id: "755F7645C661C098"
-					item: { count: 1, id: "kubejs:crude_titanium_sponge" }
-					type: "item"
-				}
-			]
+			tasks: [{
+				consume_items: false
+				count: 2L
+				id: "755F7645C661C098"
+				item: { count: 1, id: "kubejs:crude_titanium_sponge" }
+				type: "item"
+			}]
 			x: 2.5d
 			y: 5.0d
 		}
 		{
 			dependencies: ["5F182F730599A93F"]
 			icon: {
+				components: {
+					"tfc:heat": { }
+				}
 				id: "kubejs:zirconium_sponge"
 			}
 			id: "67A19D9014F54314"
 			shape: "circle"
 			size: 1.0d
-			tasks: [
-				{
-					consume_items: false
-					count: 4L
-					id: "70E48CAC0A17CB44"
-					item: { count: 1, id: "kubejs:zirconium_sponge" }
-					type: "item"
-				}
-			]
+			tasks: [{
+				consume_items: false
+				count: 4L
+				id: "70E48CAC0A17CB44"
+				item: { components: { "tfc:heat": { } }, count: 1, id: "kubejs:zirconium_sponge" }
+				type: "item"
+			}]
 			x: 2.5d
 			y: 2.5d
 		}
@@ -210,15 +204,13 @@
 			id: "00244F00EDCE135B"
 			shape: "circle"
 			size: 1.0d
-			tasks: [
-				{
-					consume_items: false
-					count: 10L
-					id: "0F25F332451A2051"
-					item: { count: 1, id: "kubejs:titanium_sponge" }
-					type: "item"
-				}
-			]
+			tasks: [{
+				consume_items: false
+				count: 10L
+				id: "0F25F332451A2051"
+				item: { count: 1, id: "kubejs:titanium_sponge" }
+				type: "item"
+			}]
 			x: 5.0d
 			y: 5.0d
 		}
@@ -230,14 +222,12 @@
 			id: "075B0E1A415C2324"
 			shape: "circle"
 			size: 1.0d
-			tasks: [
-				{
-					consume_items: false
-					id: "3B3C6E36EFF84B8E"
-					item: { count: 1, id: "kubejs:titanium_electrode" }
-					type: "item"
-				}
-			]
+			tasks: [{
+				consume_items: false
+				id: "3B3C6E36EFF84B8E"
+				item: { count: 1, id: "kubejs:titanium_electrode" }
+				type: "item"
+			}]
 			x: 7.0d
 			y: 5.0d
 		}
@@ -249,12 +239,10 @@
 			id: "691FF0F8B55C859C"
 			shape: "gear"
 			size: 2.5d
-			tasks: [
-				{
-					id: "337F0DE65A227E4E"
-					type: "checkmark"
-				}
-			]
+			tasks: [{
+				id: "337F0DE65A227E4E"
+				type: "checkmark"
+			}]
 			x: 9.75d
 			y: 5.0d
 		}
@@ -266,15 +254,13 @@
 			id: "7835A76AB5CC95DD"
 			shape: "circle"
 			size: 1.0d
-			tasks: [
-				{
-					consume_items: false
-					count: 4L
-					id: "5581A58B04B23914"
-					item: { count: 1, id: "kubejs:powder/beta_spodumene" }
-					type: "item"
-				}
-			]
+			tasks: [{
+				consume_items: false
+				count: 4L
+				id: "5581A58B04B23914"
+				item: { count: 1, id: "kubejs:powder/beta_spodumene" }
+				type: "item"
+			}]
 			x: 2.0d
 			y: 11.0d
 		}
@@ -286,34 +272,33 @@
 			id: "2DA56D89F1103A61"
 			shape: "circle"
 			size: 1.0d
-			tasks: [
-				{
-					consume_items: false
-					count: 4L
-					id: "539F6B898D27B674"
-					item: { count: 1, id: "kubejs:powder/lithium_carbonate" }
-					type: "item"
-				}
-			]
+			tasks: [{
+				consume_items: false
+				count: 4L
+				id: "539F6B898D27B674"
+				item: { count: 1, id: "kubejs:powder/lithium_carbonate" }
+				type: "item"
+			}]
 			x: 4.0d
 			y: 11.0d
 		}
 		{
 			dependencies: ["2DA56D89F1103A61"]
 			icon: {
+				components: {
+					"tfc:heat": { }
+				}
 				id: "tfc_metallurgy:metal/ingot/lithium"
 			}
 			id: "213E6442F9704F1C"
 			shape: "circle"
 			size: 1.0d
-			tasks: [
-				{
-					consume_items: false
-					id: "7328E055690F47F2"
-					item: { count: 1, id: "tfc_metallurgy:metal/ingot/lithium" }
-					type: "item"
-				}
-			]
+			tasks: [{
+				consume_items: false
+				id: "7328E055690F47F2"
+				item: { components: { "tfc:heat": { } }, count: 1, id: "tfc_metallurgy:metal/ingot/lithium" }
+				type: "item"
+			}]
 			x: 6.0d
 			y: 11.0d
 		}
@@ -325,35 +310,34 @@
 			id: "0BE69C0DFB1D1CD7"
 			shape: "circle"
 			size: 1.0d
-			tasks: [
-				{
-					consume_items: false
-					count: 2L
-					id: "0102DA8EED04E698"
-					item: { count: 1, id: "kubejs:powder/beryllium_fluoride" }
-					type: "item"
-				}
-			]
+			tasks: [{
+				consume_items: false
+				count: 2L
+				id: "0102DA8EED04E698"
+				item: { count: 1, id: "kubejs:powder/beryllium_fluoride" }
+				type: "item"
+			}]
 			x: 2.0d
 			y: 13.0d
 		}
 		{
 			dependencies: ["0BE69C0DFB1D1CD7"]
 			icon: {
+				components: {
+					"tfc:heat": { }
+				}
 				id: "tfc_metallurgy:metal/dust/beryllium"
 			}
 			id: "6595BDDFC4A9B120"
 			optional: true
 			shape: "square"
 			size: 0.75d
-			tasks: [
-				{
-					consume_items: false
-					id: "79BDABCBFADE9B66"
-					item: { count: 1, id: "tfc_metallurgy:metal/dust/beryllium" }
-					type: "item"
-				}
-			]
+			tasks: [{
+				consume_items: false
+				id: "79BDABCBFADE9B66"
+				item: { components: { "tfc:heat": { } }, count: 1, id: "tfc_metallurgy:metal/dust/beryllium" }
+				type: "item"
+			}]
 			x: 4.0d
 			y: 13.0d
 		}

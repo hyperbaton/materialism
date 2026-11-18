@@ -9,16 +9,13 @@
 	id: "51C2F3F650A42A93"
 	images: [ ]
 	order_index: 0
-	quest_links: [
-		{
-			id: "3794E3F6E6B221D7"
-			linked_quest: "6605E3F65F40421B"
-			shape: "circle"
-			size: 1.0d
-			x: 0.0d
-			y: 0.0d
-		}
-	]
+	quest_links: [{
+		id: "3794E3F6E6B221D7"
+		linked_quest: "6605E3F65F40421B"
+		shape: "circle"
+		x: 0.0d
+		y: 0.0d
+	}]
 	quests: [
 		{
 			dependencies: ["6605E3F65F40421B"]
@@ -28,14 +25,12 @@
 			id: "1FC6CBDDE010ADA1"
 			shape: "rsquare"
 			size: 1.5d
-			tasks: [
-				{
-					consume_items: false
-					id: "5B6C747BA7DA344E"
-					item: { count: 1, id: "cft:leader_staff" }
-					type: "item"
-				}
-			]
+			tasks: [{
+				consume_items: false
+				id: "5B6C747BA7DA344E"
+				item: { count: 1, id: "cft:leader_staff" }
+				type: "item"
+			}]
 			x: 2.25d
 			y: 0.0d
 		}
@@ -46,12 +41,10 @@
 			id: "48BC22C8550CA7C8"
 			shape: "diamond"
 			size: 1.0d
-			tasks: [
-				{
-					id: "4004981777C0238D"
-					type: "checkmark"
-				}
-			]
+			tasks: [{
+				id: "4004981777C0238D"
+				type: "checkmark"
+			}]
 			x: 2.25d
 			y: 2.25d
 		}
@@ -63,12 +56,10 @@
 			id: "6C48A50675BC6BEF"
 			shape: "circle"
 			size: 1.0d
-			tasks: [
-				{
-					id: "5DA5396BE30D2069"
-					type: "checkmark"
-				}
-			]
+			tasks: [{
+				id: "5DA5396BE30D2069"
+				type: "checkmark"
+			}]
 			x: 4.5d
 			y: 0.0d
 		}
@@ -80,12 +71,10 @@
 			id: "0120F8322D7DEAE6"
 			shape: "circle"
 			size: 1.0d
-			tasks: [
-				{
-					id: "0A49FA70665DA601"
-					type: "checkmark"
-				}
-			]
+			tasks: [{
+				id: "0A49FA70665DA601"
+				type: "checkmark"
+			}]
 			x: 6.5d
 			y: 0.0d
 		}
@@ -97,12 +86,10 @@
 			id: "2EEBC3F7DC2EDE02"
 			shape: "circle"
 			size: 1.0d
-			tasks: [
-				{
-					id: "76DC8C65A705A462"
-					type: "checkmark"
-				}
-			]
+			tasks: [{
+				id: "76DC8C65A705A462"
+				type: "checkmark"
+			}]
 			x: 8.5d
 			y: 0.0d
 		}
@@ -114,12 +101,10 @@
 			id: "6AEC8A0EC4E84285"
 			shape: "circle"
 			size: 1.0d
-			tasks: [
-				{
-					id: "4E4170F3BA8C9D3A"
-					type: "checkmark"
-				}
-			]
+			tasks: [{
+				id: "4E4170F3BA8C9D3A"
+				type: "checkmark"
+			}]
 			x: 10.5d
 			y: 0.0d
 		}
@@ -131,12 +116,10 @@
 			id: "572AC44401414CC6"
 			shape: "circle"
 			size: 1.0d
-			tasks: [
-				{
-					id: "794493912CDF3FBD"
-					type: "checkmark"
-				}
-			]
+			tasks: [{
+				id: "794493912CDF3FBD"
+				type: "checkmark"
+			}]
 			x: 12.5d
 			y: 0.0d
 		}
@@ -148,12 +131,10 @@
 			id: "64CDB5D474329162"
 			shape: "circle"
 			size: 1.0d
-			tasks: [
-				{
-					id: "38E84BEA24845D56"
-					type: "checkmark"
-				}
-			]
+			tasks: [{
+				id: "38E84BEA24845D56"
+				type: "checkmark"
+			}]
 			x: 14.5d
 			y: 0.0d
 		}
@@ -165,12 +146,10 @@
 			id: "5C2F63EC356843F7"
 			shape: "circle"
 			size: 1.0d
-			tasks: [
-				{
-					id: "3AEBE740F4C6CDD6"
-					type: "checkmark"
-				}
-			]
+			tasks: [{
+				id: "3AEBE740F4C6CDD6"
+				type: "checkmark"
+			}]
 			x: 16.5d
 			y: 0.0d
 		}
@@ -182,12 +161,10 @@
 			id: "25B3AF87D25C1714"
 			shape: "gear"
 			size: 2.5d
-			tasks: [
-				{
-					id: "09A41AF4F2958F4A"
-					type: "checkmark"
-				}
-			]
+			tasks: [{
+				id: "09A41AF4F2958F4A"
+				type: "checkmark"
+			}]
 			x: 19.25d
 			y: 0.0d
 		}

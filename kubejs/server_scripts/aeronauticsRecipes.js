@@ -240,13 +240,8 @@ ServerEvents.recipes(event => {
     // SIMULATED recipes
     // ========================================
 
-    // Replace simulated:spring globally with VI steel spring
+    // Simulated's spring is retired for the VI steel spring (unify.js)
     event.remove({id: 'simulated:spring'})
-    event.replaceInput(
-        {input: 'simulated:spring'},
-        'simulated:spring',
-        'vintageimprovements:steel_spring'
-    )
 
     // Iron Handle
     event.remove({id: 'simulated:iron_handle'})
@@ -391,6 +386,8 @@ ServerEvents.recipes(event => {
         }
     )
     event.replaceInput({id: 'simulated:optical_sensor'}, 'minecraft:amethyst_shard', 'vintageimprovements:laser_item')
+    // Vanilla pistons are disabled
+    event.replaceInput({id: 'simulated:mechanical_crafting/docking_connector'}, 'minecraft:piston', 'create:mechanical_piston')
 
     // Redstone Magnet: tiered recipes based on New Age magnet tiers
     // Better magnets = fewer blocks needed, more output

@@ -9,7 +9,6 @@ ServerEvents.recipes(event => {
   // Aluminium sheet: standardise on tfc_metallurgy's. Stop TFMG from producing its own,
   // and swap it for the tfc_metallurgy sheet wherever it's used as an input.
   event.remove({ output: 'tfmg:aluminum_sheet' })
-  event.replaceInput({}, 'tfmg:aluminum_sheet', 'tfc_metallurgy:metal/sheet/aluminum')
 
   event.remove({id: /.*tfmg:.*axe.*/})
   event.remove({id: /.*tfmg:.*sword.*/})
@@ -21,7 +20,6 @@ ServerEvents.recipes(event => {
   event.remove({ output: 'tfmg:cast_iron_ingot' })
   event.remove({ output: 'tfmg:steel_ingot' })
   event.remove({ output: 'tfmg:cast_iron_sheet' })
-  event.replaceInput({}, 'tfmg:heavy_plate', 'tfc:metal/sheet/steel')
 
   // Nugget standardization: TFMG's own ingots are removed, so their nuggets
   //  are re-anchored onto the TFC or tfc_metallurgy ingot.
@@ -66,8 +64,6 @@ ServerEvents.recipes(event => {
   event.remove('tfmg:stonecutting/aluminum_wire')
   event.remove('tfmg:stonecutting/copper_wire')
   event.remove('tfmg:stonecutting/constantan_wire')
-
-  event.replaceInput({}, 'tfmg:industrial_aluminum_casing', 'tfmg:steel_casing')
 
   // Remove vat recipes for deleted outputs
   event.remove({id: 'tfmg:vat/nethersteel'})
@@ -182,72 +178,21 @@ ServerEvents.recipes(event => {
       { id: 'tfmg:heavy_machinery_casing' },
     ],
   })
-  // Replace tfmg bars
-  event.replaceInput(
-    { input: 'tfmg:aluminum_bars' }, // Arg 1: the filter
-    'tfmg:aluminum_bars',            // Arg 2: the item to replace
-    'create:andesite_bars'         // Arg 3: the item to replace it with
-  )
-  // Replace tfmg steel ingot for tfc steel ingot
-  event.replaceInput(
-    { input: 'tfmg:steel_ingot' }, // Arg 1: the filter
-    'tfmg:steel_ingot',            // Arg 2: the item to replace
-    'tfc:metal/ingot/steel'         // Arg 3: the item to replace it with
-  )
-  // Replace all tfmg sulfur dust with tfc sulfur powder
-  event.replaceInput(
-    { input: 'tfmg:sulfur_dust' },
-    'tfmg:sulfur_dust',
-    'tfc:powder/sulfur'
-  )
-  event.replaceOutput(
-    { output: 'tfmg:sulfur_dust' },
-    'tfmg:sulfur_dust',
-    'tfc:powder/sulfur'
-  )
-  // Replace vintageimprovements sulfur items with tfc equivalents
+  // VI sulfur items are retired for TFC sulfur powder (unify.js)
   event.remove({id: 'tfmg:crushing/sulfur'})
-  event.replaceInput(
-    { input: 'vintageimprovements:sulfur' },
-    'vintageimprovements:sulfur',
-    'tfc:powder/sulfur'
-  )
-  event.replaceInput(
-    { input: 'vintageimprovements:sulfur_chunk' },
-    'vintageimprovements:sulfur_chunk',
-    'tfc:powder/sulfur'
-  )
   event.remove({output: 'vintageimprovements:sulfur'})
   event.remove({output: 'vintageimprovements:sulfur_chunk'})
-  // Replace TFMG copper sulfate for vintageimprovements' (has more uses)
-  // (original galvanic cell recipe no longer exists in TFMG 1.21, replaced below)
-  // Replace all wires with C&A or vintage ones
-  event.replaceInput(
-    { input: 'tfmg:copper_wire' }, // Arg 1: the filter
-    'tfmg:copper_wire',            // Arg 2: the item to replace
-    'createaddition:copper_wire'         // Arg 3: the item to replace it with
-  )
   // TODO: tfmg:copper_cable no longer exists in TFMG 1.21
   //event.replaceInput(
   //  { output: 'tfmg:copper_cable' },
   //  'minecraft:stick',
   //  'createaddition:spool'
   //)
-  event.replaceInput(
-    { id: 'tfmg:crafting/copper_wire' }, // Arg 1: the filter
-    'minecraft:leather',            // Arg 2: the item to replace
-    'afc:rubber_bar'         // Arg 3: the item to replace it with
-  )
   // Replace TFMG constantan with TFC Metallurgy constantan
   event.remove({id: 'tfmg:mixing/constantan'})
   event.remove({output: 'tfmg:constantan_ingot'})
   event.remove({output: 'tfmg:constantan_nugget'})
   event.remove({output: 'tfmg:constantan_block'})
-  event.replaceInput(
-    { input: 'tfmg:constantan_ingot' },
-    'tfmg:constantan_ingot',
-    'tfc_metallurgy:metal/ingot/constantan'
-  )
   // Replace vanilla copper ingot in remaining TFMG recipes
   event.replaceInput(
     { id: 'tfmg:crafting/materials/cable_connector' },
@@ -301,11 +246,6 @@ ServerEvents.recipes(event => {
 
   // Remove bauxite powder recipe and replace usage with bauxite block
   event.remove({id: 'create:crushing/bauxite'})
-  event.replaceInput(
-    { input: 'tfmg:bauxite_powder' },
-    'tfmg:bauxite_powder',
-    'tfmg:bauxite'
-  )
 
   // Replace gravel and sand in asphalt mixture recipes with TFC tags
   event.replaceInput(
@@ -324,69 +264,19 @@ ServerEvents.recipes(event => {
     '#c:gravels'
   )
 
-  // Replace tfmg:screw with tfc_items:steel_screw globally
-  event.replaceInput(
-    { input: 'tfmg:screw' },
-    'tfmg:screw',
-    'tfc_items:steel_screw'
-  )
-
   // Replace tfmg:aluminum_bars with create:andesite_bars (renamed to "Aluminum Bars")
   event.remove({id: 'tfmg:aluminum_bars_from_ingots_aluminum_stonecutting'})
-  event.replaceInput(
-    { input: 'tfmg:aluminum_bars' },
-    'tfmg:aluminum_bars',
-    'create:andesite_bars'
-  )
 
   // Replace tfmg:steel_bars with tfc:metal/bars/steel
   event.remove({id: 'tfmg:steel_bars_from_ingots_steel_stonecutting'})
-  event.replaceInput(
-    { input: 'tfmg:steel_bars' },
-    'tfmg:steel_bars',
-    'tfc:metal/bars/steel'
-  )
 
   // Replace tfmg:nickel_sheet with tfc:metal/sheet/nickel
   event.remove({id: 'tfmg:pressing/nickel_ingot'})
-  event.replaceInput(
-    { input: 'tfmg:nickel_sheet' },
-    'tfmg:nickel_sheet',
-    'tfc:metal/sheet/nickel'
-  )
-  event.replaceOutput(
-    { output: 'tfmg:nickel_sheet' },
-    'tfmg:nickel_sheet',
-    'tfc:metal/sheet/nickel'
-  )
-
-  // Replace tfmg:lead_ingot with tfc_metallurgy lead
-  event.replaceInput(
-    { input: 'tfmg:lead_ingot' },
-    'tfmg:lead_ingot',
-    'tfc_metallurgy:metal/ingot/lead'
-  )
 
   // Remove create_new_age blank and copper circuit items/recipes
   event.remove({output: 'create_new_age:blank_circuit'})
   event.remove({output: 'create_new_age:copper_circuit'})
 
-  // Make heavy plates out of tungsten steel (heavily used on TFMG recipes)
-  // TODO: Consider adding heating requisite to make it harder :P
-  // Update: decided to remove them
-  // event.replaceInput(
-  //   { id: 'tfmg:sequenced_assembly/heavy_plate' }, // Arg 1: the filter
-  //   '#createbigcannons:ingot_steel',            // Arg 2: the item to replace
-  //   'tfc_metallurgy:metal/ingot/tungsten_steel'         // Arg 3: the item to replace it with
-  // )
-  // Use TFC firebricks instead of TFMG ones
-  // Using fire_bricks instead of fire_brick increases the cost
-  // at a point where you can automatize most of the process.
-  event.replaceInput(
-    { input: 'tfmg:fireproof_brick' }, // Arg 1: the filter
-    'tfmg:fireproof_brick',            // Arg 2: the item to replace
-    'tfc:fire_bricks'         // Arg 3: the item to replace it with
-  )
   // Replace vanilla string requirements
   event.replaceInput(
     { id: 'tfmg:crafting/materials/pumpjack_crank' }, // Arg 1: the filter
@@ -398,17 +288,7 @@ ServerEvents.recipes(event => {
     'minecraft:string',            // Arg 2: the item to replace
     'tfc:rope'         // Arg 3: the item to replace it with
   )
-  event.replaceInput(
-    { id: 'tfmg:crafting/polarizer' }, // Arg 1: the filter
-    'minecraft:copper_ingot',            // Arg 2: the item to replace
-    'tfc:metal/ingot/copper' // Arg 3: the item to replace it with
-  )
   // Use TFC steel as product of TFMG blast furnace and casting
-  event.replaceOutput(
-    { id: 'tfmg:casting/steel'},
-    'tfmg:steel_ingot',
-    'tfc:metal/ingot/steel'
-  )
   event.remove({id: 'tfmg:casting/amogus'})
   // Casting basin: TFMG's own ingot recipes take 90 mB and its slag block takes 20 mB. Use 100 mB
   // everywhere, so they line up with the 100 mB ingots of TFC
@@ -450,17 +330,6 @@ ServerEvents.recipes(event => {
     'minecraft:sand',            // Arg 2: the item to replace
     '#c:sands/silica' // Arg 3: the item to replace it with
   )
-  event.replaceInput(
-    { id: 'tfmg:mixing/liquid_concrete' }, // Arg 1: the filter
-    'minecraft:gravel',            // Arg 2: the item to replace
-    '#c:gravels'    // Arg 3: the item to replace it with
-  )
-  event.replaceInput(
-    { id: 'tfmg:mixing/liquid_concrete' }, // Arg 1: the filter
-    'minecraft:sand',            // Arg 2: the item to replace
-    '#c:sands/silica' // Arg 3: the item to replace it with
-  )
-
   event.replaceInput(
     { id: 'tfmg:mixing/concrete_mixture_from_slag' },
     'minecraft:gravel',
@@ -505,48 +374,17 @@ ServerEvents.recipes(event => {
     'large_switch', 'electric_motor', 'heavy_electric_motor', 'potentiometer', 'encased_potentiometer', 'rotor', 'stator', 'multimeter']
   ;['white', 'orange', 'magenta', 'light_blue', 'yellow', 'lime', 'pink', 'gray', 'light_gray', 'cyan', 'purple', 'blue',
     'brown', 'green', 'red', 'black'].forEach(c => retiredElectrics.push(c + '_multimeter'))
-  event.replaceInput({}, 'tfmg:cable_tube', 'electroenergetics:insulated_wire')
-  event.replaceInput({}, 'tfmg:steel_casing_cable_hub', 'tfmg:steel_casing')
   // Electrical switch: insulated leads and silver contacts
   event.replaceInput({id: 'tfmg:crafting/materials/electrical_switch'}, 'tfmg:electric_post', 'electroenergetics:heavily_insulated_wire')
   event.replaceInput({id: 'tfmg:crafting/materials/electrical_switch'}, '#c:dusts/redstone', 'tfc_items:silver_rivet')
   retiredElectrics.forEach(i => event.remove({output: 'tfmg:' + i}))
   // Diodes come from Electro Energetics
   event.remove({output: 'tfmg:electric_diode'})
-  // Synthetic rubber merged into the AFC rubber bar
-  event.replaceInput({}, 'tfmg:rubber_sheet', 'afc:rubber_bar')
-  event.replaceOutput({}, 'tfmg:rubber_sheet', 'afc:rubber_bar')
   event.remove({id: 'chemica:cutting/rubber_strip'})
   event.recipes.create.cutting('2x chemica:rubber_strip', 'afc:rubber_bar').id('kubejs:cutting/rubber_strip')
   // Use TFC gravel and sand for asphalt
-  event.replaceInput(
-    { id: 'tfmg:mixing/liquid_asphalt' }, // Arg 1: the filter
-    'minecraft:sand',            // Arg 2: the item to replace
-    '#c:sands/silica' // Arg 3: the item to replace it with
-  )
-  event.replaceInput(
-    { id: 'tfmg:mixing/liquid_asphalt' }, // Arg 1: the filter
-    'minecraft:gravel',            // Arg 2: the item to replace
-    '#c:gravels'    // Arg 3: the item to replace it with
-  )
-  event.replaceInput(
-    { id: 'tfmg:crafting/nickel_block' }, // Arg 1: the filter
-    'tfmg:nickel_ingot',            // Arg 2: the item to replace
-    'tfc:metal/ingot/nickel' // Arg 3: the item to replace it with
-  )
   // Use TFC cast iron
   event.remove({id: 'tfmg:mixing/cast_iron_ingot'})
-  event.replaceInput(
-    { input: 'tfmg:cast_iron_ingot' }, // Arg 1: the filter
-    'tfmg:cast_iron_ingot',            // Arg 2: the item to replace
-    'tfc:metal/ingot/cast_iron' // Arg 3: the item to replace it with
-  )
-  event.replaceOutput(
-    { id: 'tfmg:crafting/cast_iron_from_block' }, // Arg 1: the filter
-    'tfmg:cast_iron_ingot',            // Arg 2: the item to replace
-    'tfc:metal/ingot/cast_iron' // Arg 3: the item to replace it with
-  )
-
   // Bauxite and galena compacting recipes
   event.recipes.create.compacting('tfmg:bauxite', Ingredient.of('tfc_metallurgy:ore/rich_bauxite', 3))
   event.recipes.create.compacting('tfmg:bauxite', Ingredient.of('tfc_metallurgy:ore/normal_bauxite', 4))
@@ -560,7 +398,6 @@ ServerEvents.recipes(event => {
     .resultFluid(Fluid.of('tfc_metallurgy:metal/aluminum', 20))
   event.recipes.tfc.heating('tfmg:galena', 328)
     .resultFluid(Fluid.of('tfc_metallurgy:metal/lead', 100))
-  
 
   // Electrical components
   // Resistor item
@@ -740,7 +577,6 @@ ServerEvents.recipes(event => {
     })
   ]).transitionalItem('kubejs:lithium_battery_core').loops(1)
 
-
   event.remove({id: 'tfmg:turbine_blade'})
   event.recipes.create.sequenced_assembly([
     Item.of('tfmg:turbine_blade', 1)
@@ -786,7 +622,7 @@ ServerEvents.recipes(event => {
   )
 
   event.replaceInput(
-    { id: 'tfmg:mechanical_crafting/lithium_blade' }, // Arg 1: the filter
+    { id: 'tfmg:crafting/materials/lithium_blade' }, // Arg 1: the filter
     'tfmg:steel_sword',            // Arg 2: the item to replace
     'tfc:metal/sword/steel'         // Arg 3: the item to replace it with
   )

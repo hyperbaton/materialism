@@ -9,7 +9,6 @@ ServerEvents.recipes(event => {
     event.remove({id: 'vintageimprovements:coiling/netherite_wire'})
     event.remove({id: 'vintageimprovements:coiling/nethersteel_wire'})
 
-    
     event.remove({id: 'vintageimprovements:pressing/andesite_alloy'})
     event.remove({id: 'vintageimprovements:hammering/netherite_ingot'})
     event.remove({id: 'vintageimprovements:hammering/nethersteel_ingot'})
@@ -25,12 +24,6 @@ ServerEvents.recipes(event => {
 
     event.remove({id: /vintageimprovements:pressing\/\w+_ingot/})
     event.remove({id: /vintageimprovements:rolling\/\w+_ingot/})
-
-    event.replaceInput(
-      { input: 'vintageimprovements:iron_spring' }, // Arg 1: the filter
-      'vintageimprovements:iron_spring',            // Arg 2: the item to replace
-      'vintageimprovements:steel_spring'         // Arg 3: the item to replace it with
-    )
 
     // Lathe recipes
     event.recipes.vintageimprovements.turning('vintageimprovements:w_shaped_curving_head', 'tfc:metal/block/steel').processingTime(300)
@@ -194,16 +187,6 @@ ServerEvents.recipes(event => {
       'tfc:metal/block/steel'         // Arg 3: the item to replace it with
     )
     event.replaceInput(
-      { id: 'createdeco:zinc_support_wedge' }, // Arg 1: the filter
-      'createdeco:zinc_sheet',            // Arg 2: the item to replace
-      'tfc:metal/sheet/zinc'         // Arg 3: the item to replace it with
-    )
-    event.replaceInput(
-      { id: 'vintageimprovements:craft/vacuum_chamber' }, // Arg 1: the filter
-      'create:andesite_alloy',            // Arg 2: the item to replace
-      'tfc:metal/sheet/steel'         // Arg 3: the item to replace it with
-    )
-    event.replaceInput(
       { id: 'vintageimprovements:craft/vacuum_chamber' }, // Arg 1: the filter
       'create:andesite_alloy',            // Arg 2: the item to replace
       'tfc:metal/sheet/steel'         // Arg 3: the item to replace it with
@@ -226,11 +209,6 @@ ServerEvents.recipes(event => {
     // Replace TFMG lime by TFC lime
     event.remove({id: 'tfmg:crushing/limesand'})
     event.remove({id: 'tfmg:milling/limesand'})
-    event.replaceInput(
-      { input: 'tfmg:limesand' }, // Arg 1: the filter
-      'tfmg:limesand',            // Arg 2: the item to replace
-      'tfc:powder/lime'         // Arg 3: the item to replace it with
-    )
 
     event.recipes.create.sequenced_assembly(
         [

@@ -37,9 +37,8 @@ ServerEvents.recipes(event => {
         speed_limits: 1
     })
 
-    // minecraft:string is superseded by #c:strings (wool yarn, plant/bamboo string, etc.)
+    // minecraft:string is superseded by #c:strings (wool yarn, plant/bamboo string, etc.; swapped in unify.js)
     event.remove({ output: 'minecraft:string' })
-    event.replaceInput({}, 'minecraft:string', '#c:strings')
 
    const cereals = [
         'wheat',
@@ -380,13 +379,6 @@ ServerEvents.recipes(event => {
             )
         })
     }
-
-    // Replace minecraft:iron_bars with tfc:metal/bars/wrought_iron
-    event.replaceInput(
-        { input: 'minecraft:iron_bars' },
-        'minecraft:iron_bars',
-        'tfc:metal/bars/wrought_iron'
-    )
 
     // Make reinforced fire bricks by applying sheets
     event.remove('tfc:crafting/reinforced_fire_bricks_from_iron')

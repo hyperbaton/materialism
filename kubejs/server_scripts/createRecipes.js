@@ -257,20 +257,12 @@ ServerEvents.recipes(event => {
       '#c:tools/chisel'
   ]).damageIngredient(Ingredient.of('#c:tools/chisel'))
 
-    event.replaceInput(
-      { id: 'create:crafting/materials/electron_tube' }, // Arg 1: the filter
-      'create:polished_rose_quartz',            // Arg 2: the item to replace
-      'tfc:lamp_glass'         // Arg 3: the item to replace it with
-    )
     // Replace all create kelp recipes
     replaceKelpWithRubber('create:crafting/logistics/brass_tunnel')
     replaceKelpWithRubber('create:crafting/logistics/brass_funnel')
     replaceKelpWithRubber('create:crafting/kinetics/spout')
     replaceKelpWithRubber('create:crafting/logistics/andesite_funnel')
     replaceKelpWithRubber('create:crafting/logistics/andesite_tunnel')
-    replaceKelpWithRubber('interiors:kelp_chair')
-    replaceKelpWithRubber('interiors:kelp_floor_chair')
-    replaceKelpWithRubber('interiors:kelp_seat')
     //replaceKelpWithRubber('create:crafting/kinetics/belt_connector')
 
     // Replace andesite alloy in recipes
@@ -300,12 +292,10 @@ ServerEvents.recipes(event => {
     replaceAndesiteAlloyWith('create:andesite_bars_from_andesite_alloy_stonecutting', 'tfc_metallurgy:metal/rod/aluminum')
     replaceAndesiteAlloyWith('create:andesite_scaffolding_from_andesite_alloy_stonecutting', 'tfc_metallurgy:metal/ingot/aluminum')
     replaceAndesiteAlloyWith('create:crafting/kinetics/hand_crank', 'tfc:metal/rod/steel')
-    replaceAndesiteAlloyWith('woodencog:crafting/kinetics/metal_bracket', 'tfc_metallurgy:metal/sheet/aluminum')
 
     // --- De-andesite batch ---
     // Table cloth (base andesite variant) -> aluminium sheet
     event.replaceInput({ id: /create:.*table_cloth.*$/ }, 'create:andesite_alloy', 'tfc_metallurgy:metal/sheet/aluminum')
-    replaceAndesiteAlloyWith('create:andesite_table_cloth_from_andesite_alloy_stonecutting', 'tfc_metallurgy:metal/sheet/aluminum')
     // Postboxes (all colours) -> aluminium sheet
     event.replaceInput({ id: /create:crafting\/logistics\/[a-z_]*postbox$/ }, 'create:andesite_alloy', 'tfc_metallurgy:metal/sheet/aluminum')
 
@@ -383,6 +373,8 @@ ServerEvents.recipes(event => {
 
     // Desk Bell: the hidden gold plate -> a TFC brass bell
     event.replaceInput({ id: 'create:crafting/logistics/desk_bell' }, '#c:plates/gold', 'tfc:brass_bell')
+    // Pulse Timer: certus quartz instead of vanilla amethyst
+    event.replaceInput({ id: 'create:crafting/logistics/pulse_timer' }, 'minecraft:amethyst_shard', 'tfc_metallurgy:ore/certus_quartz')
 
     // Cardboard chain: explicit pulp recipe (4x straw + water in a Mixer) so it's always
     // craftable and JEI-visible, independent of the #create:pulpifiable tag (which the
@@ -645,17 +637,6 @@ ServerEvents.recipes(event => {
     )
 
     // Recipes with bars
-    event.replaceInput(
-      { id: 'create:crafting/kinetics/item_drain' }, // Arg 1: the filter
-      'minecraft:iron_bars',            // Arg 2: the item to replace
-      'tfc:metal/bars/wrought_iron'         // Arg 3: the item to replace it with
-    )
-    event.replaceInput(
-      { input: 'create:andesite_bars' }, // Arg 1: the filter
-      'create:andesite_bars',            // Arg 2: the item to replace
-      'tfc:metal/bars/steel'         // Arg 3: the item to replace it with
-    )
-
     // Steam engine: two recipes. If beryllium copper is used, the resulting machine is more durable, which is modeled by having
     // the recipe yield two instead of one.
     event.remove({id: 'create:crafting/kinetics/steam_engine'})
@@ -694,11 +675,6 @@ ServerEvents.recipes(event => {
       ['kubejs:unlubricated_steam_engine', Fluid.of('tfmg:lubrication_oil', 1000)]
     )
     
-    event.replaceInput(
-      { id: 'create:crafting/curiosities/peculiar_bell' }, // Arg 1: the filter
-      'create:brass_block',            // Arg 2: the item to replace
-      'tfc:metal/block/brass'         // Arg 3: the item to replace it with
-    )
     event.replaceInput(
       { id: 'create:crafting/schematics/schematicannon' }, // Arg 1: the filter
       'minecraft:iron_block',            // Arg 2: the item to replace
@@ -950,18 +926,6 @@ ServerEvents.recipes(event => {
       'tfc:glue'         // Arg 3: the item to replace it with
     )
 
-    // Recipes with barrels and other blocks
-    // TODO: Candidate to more complex processing
-    event.replaceInput(
-      { id: 'create:crafting/kinetics/item_vault' }, // Arg 1: the filter
-      'minecraft:barrel',            // Arg 2: the item to replace
-      '#c:chests'         // Arg 3: the item to replace it with
-    )
-    event.replaceInput(
-      { id: 'create:crafting/kinetics/item_vault' }, // Arg 1: the filter
-      'tfc:metal/sheet/steel',            // Arg 2: the item to replace
-      'tfc_metallurgy:metal/sheet/titanium'         // Arg 3: the item to replace it with
-    )
     // Item Vault recipe
     event.remove({output: 'create:item_vault'})
     event.shaped(
@@ -985,53 +949,11 @@ ServerEvents.recipes(event => {
     event.remove({input: 'minecraft:copper_ingot', type: 'create:stonecutting'})
 
     event.replaceInput(
-        { input: 'create:brass_sheet' }, // Arg 1: the filter
-        'create:brass_sheet',            // Arg 2: the item to replace
-        'tfc:metal/sheet/brass'         // Arg 3: the item to replace it with
-      )
-
-    event.replaceInput(
-        { input: 'create:copper_sheet' }, // Arg 1: the filter
-        'create:copper_sheet',            // Arg 2: the item to replace
-        'tfc:metal/sheet/copper'         // Arg 3: the item to replace it with
-      )
-
-    event.replaceInput(
         { input: 'minecraft:copper_ingot', mod: 'create' }, // Arg 1: the filter
         'minecraft:copper_ingot',            // Arg 2: the item to replace
         'tfc:metal/ingot/copper'         // Arg 3: the item to replace it with
       )
 
-    event.replaceInput(
-        { input: 'create:iron_sheet' }, // Arg 1: the filter
-        'create:iron_sheet',            // Arg 2: the item to replace
-        'tfc:metal/sheet/steel'         // Arg 3: the item to replace it with
-      )
-
-    event.replaceInput(
-        { input: 'create:golden_sheet' }, // Arg 1: the filter
-        'create:golden_sheet',            // Arg 2: the item to replace
-        'tfc:metal/sheet/gold'         // Arg 3: the item to replace it with
-      )
-
-    event.replaceInput(
-        { input: 'create:zinc_ingot' }, // Arg 1: the filter
-        'create:zinc_ingot',            // Arg 2: the item to replace
-        'tfc:metal/ingot/zinc'         // Arg 3: the item to replace it with
-      )
-
-    event.replaceInput(
-        { input: 'minecraft:copper_block' }, // Arg 1: the filter
-        'minecraft:copper_block',            // Arg 2: the item to replace
-        'tfc:metal/block/copper'         // Arg 3: the item to replace it with
-      )
-
-    // TODO: Remove create sandpaper from modpack
-    event.replaceInput(
-        { input: 'create:sand_paper' }, // Arg 1: the filter
-        'create:sand_paper',            // Arg 2: the item to replace
-        'tfc:sandpaper'         // Arg 3: the item to replace it with
-      )
     event.recipes.tfc.anvil('create:brass_hand', 'tfc:metal/double_sheet/brass', ['hit_not_last', 'upset_any'])
         .tier(3)
     event.recipes.tfc.anvil('create:propeller', 'tfc:metal/double_sheet/steel', ['hit_not_last', 'upset_any'])

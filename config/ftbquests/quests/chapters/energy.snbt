@@ -14,7 +14,6 @@
 			id: "062778C4F898F8F8"
 			linked_quest: "2972B973AE95E687"
 			shape: "circle"
-			size: 1.0d
 			x: 0.0d
 			y: 0.0d
 		}
@@ -22,7 +21,6 @@
 			id: "25C21E812152EAEF"
 			linked_quest: "7B925EB169B12D6E"
 			shape: "circle"
-			size: 1.0d
 			x: 2.0d
 			y: -2.5d
 		}
@@ -30,7 +28,6 @@
 			id: "598AD42E0E5E5710"
 			linked_quest: "641F53332629C0AE"
 			shape: "circle"
-			size: 1.0d
 			x: 0.0d
 			y: 5.5d
 		}
@@ -38,7 +35,6 @@
 			id: "6085ECCD7E835C34"
 			linked_quest: "7AE04C072ECDE239"
 			shape: "circle"
-			size: 1.0d
 			x: 0.0d
 			y: 11.0d
 		}
@@ -52,12 +48,10 @@
 			id: "23A5CFEA457F1F62"
 			shape: "circle"
 			size: 1.0d
-			tasks: [
-				{
-					id: "49EABB8CDD393F72"
-					type: "checkmark"
-				}
-			]
+			tasks: [{
+				id: "49EABB8CDD393F72"
+				type: "checkmark"
+			}]
 			x: 2.0d
 			y: 0.0d
 		}
@@ -69,15 +63,13 @@
 			id: "01F2690CE13F7276"
 			shape: "circle"
 			size: 1.0d
-			tasks: [
-				{
-					consume_items: false
-					count: 16L
-					id: "2F505FE524EC421C"
-					item: { count: 1, id: "solarpunk:turbine_casing" }
-					type: "item"
-				}
-			]
+			tasks: [{
+				consume_items: false
+				count: 16L
+				id: "2F505FE524EC421C"
+				item: { count: 1, id: "solarpunk:turbine_casing" }
+				type: "item"
+			}]
 			x: 4.0d
 			y: -2.5d
 		}
@@ -89,15 +81,13 @@
 			id: "48E81759EDAD81A0"
 			shape: "circle"
 			size: 1.0d
-			tasks: [
-				{
-					consume_items: false
-					count: 4L
-					id: "0BEAC8A665B1155E"
-					item: { count: 1, id: "solarpunk:turbine_rotor" }
-					type: "item"
-				}
-			]
+			tasks: [{
+				consume_items: false
+				count: 4L
+				id: "0BEAC8A665B1155E"
+				item: { count: 1, id: "solarpunk:turbine_rotor" }
+				type: "item"
+			}]
 			x: 6.0d
 			y: -2.5d
 		}
@@ -108,15 +98,13 @@
 			id: "0470C401872C7BDE"
 			shape: "circle"
 			size: 1.0d
-			tasks: [
-				{
-					consume_items: false
-					count: 8L
-					id: "5E2160D01515F18A"
-					item: { count: 1, id: "solarpunk:andesite_turbine_blade" }
-					type: "item"
-				}
-			]
+			tasks: [{
+				consume_items: false
+				count: 8L
+				id: "5E2160D01515F18A"
+				item: { count: 1, id: "solarpunk:andesite_turbine_blade" }
+				type: "item"
+			}]
 			x: 6.0d
 			y: 2.0d
 		}
@@ -128,15 +116,14 @@
 			id: "6A60B4068374A0F3"
 			shape: "rsquare"
 			size: 2.0d
-			tasks: [
-				{
-					id: "2D5D8A485C778CDB"
-					observe_type: 0
-					timer: 0L
-					to_observe: "solarpunk:turbine_rotor"
-					type: "observation"
-				}
-			]
+			tasks: [{
+				id: "2D5D8A485C778CDB"
+				observation_type: "block"
+				observe_type: 0
+				timer: 0L
+				to_observe: "solarpunk:turbine_rotor"
+				type: "observation"
+			}]
 			x: 8.5d
 			y: 0.0d
 		}
@@ -149,15 +136,13 @@
 			optional: true
 			shape: "square"
 			size: 0.75d
-			tasks: [
-				{
-					consume_items: false
-					count: 8L
-					id: "0CD0BB0F1BDE9F17"
-					item: { count: 1, id: "solarpunk:brass_turbine_blade" }
-					type: "item"
-				}
-			]
+			tasks: [{
+				consume_items: false
+				count: 8L
+				id: "0CD0BB0F1BDE9F17"
+				item: { count: 1, id: "solarpunk:brass_turbine_blade" }
+				type: "item"
+			}]
 			x: 8.5d
 			y: -2.5d
 		}
@@ -169,14 +154,12 @@
 			id: "1761BACEFA463842"
 			shape: "circle"
 			size: 1.0d
-			tasks: [
-				{
-					consume_items: false
-					id: "7580245FA29B892B"
-					item: { components: { "ftbfiltersystem:filter": "ftbfiltersystem:or(ftbfiltersystem:item(tfmg:brick_smokestack)ftbfiltersystem:item(tfmg:concrete_smokestack)ftbfiltersystem:item(tfmg:metal_smokestack)ftbfiltersystem:item(tfmg:exhaust))" }, count: 1, id: "ftbfiltersystem:smart_filter" }
-					type: "item"
-				}
-			]
+			tasks: [{
+				consume_items: false
+				id: "7580245FA29B892B"
+				item: { components: { "ftbfiltersystem:filter": "ftbfiltersystem:or(ftbfiltersystem:item(tfmg:brick_smokestack)ftbfiltersystem:item(tfmg:concrete_smokestack)ftbfiltersystem:item(tfmg:metal_smokestack)ftbfiltersystem:item(tfmg:exhaust))" }, count: 1, id: "ftbfiltersystem:smart_filter" }
+				type: "item"
+			}]
 			x: 11.0d
 			y: 0.0d
 		}
@@ -187,31 +170,30 @@
 			id: "72C74CF6B77A4EC0"
 			shape: "circle"
 			size: 1.0d
-			tasks: [
-				{
-					consume_items: false
-					id: "565E207D56B64A89"
-					item: { count: 1, id: "tfmg:freezer" }
-					type: "item"
-				}
-			]
+			tasks: [{
+				consume_items: false
+				id: "565E207D56B64A89"
+				item: { count: 1, id: "tfmg:freezer" }
+				type: "item"
+			}]
 			x: 11.0d
 			y: 2.0d
 		}
 		{
-			dependencies: ["1761BACEFA463842", "72C74CF6B77A4EC0"]
+			dependencies: [
+				"1761BACEFA463842"
+				"72C74CF6B77A4EC0"
+			]
 			icon: {
 				id: "solarpunk:solar_power_tower"
 			}
 			id: "6E932E4E635F7ED8"
 			shape: "gear"
 			size: 2.5d
-			tasks: [
-				{
-					id: "1A62245116F23D41"
-					type: "checkmark"
-				}
-			]
+			tasks: [{
+				id: "1A62245116F23D41"
+				type: "checkmark"
+			}]
 			x: 13.75d
 			y: 0.0d
 		}
@@ -224,14 +206,12 @@
 			optional: true
 			shape: "square"
 			size: 0.75d
-			tasks: [
-				{
-					consume_items: false
-					id: "09EFA48E5C73D503"
-					item: { count: 1, id: "solarpunk:solar_heater" }
-					type: "item"
-				}
-			]
+			tasks: [{
+				consume_items: false
+				id: "09EFA48E5C73D503"
+				item: { count: 1, id: "solarpunk:solar_heater" }
+				type: "item"
+			}]
 			x: 2.0d
 			y: 3.75d
 		}
@@ -243,15 +223,13 @@
 			id: "0D49A9D5E9610F2A"
 			shape: "circle"
 			size: 1.0d
-			tasks: [
-				{
-					consume_items: false
-					count: 8L
-					id: "083CCDC3D2FB351F"
-					item: { count: 1, id: "solarpunk:solar_mirror" }
-					type: "item"
-				}
-			]
+			tasks: [{
+				consume_items: false
+				count: 8L
+				id: "083CCDC3D2FB351F"
+				item: { count: 1, id: "solarpunk:solar_mirror" }
+				type: "item"
+			}]
 			x: 2.0d
 			y: 5.5d
 		}
@@ -264,14 +242,12 @@
 			optional: true
 			shape: "square"
 			size: 0.75d
-			tasks: [
-				{
-					consume_items: false
-					id: "359BA64F3A268568"
-					item: { count: 1, id: "solarpunk:kinetic_battery" }
-					type: "item"
-				}
-			]
+			tasks: [{
+				consume_items: false
+				id: "359BA64F3A268568"
+				item: { count: 1, id: "solarpunk:kinetic_battery" }
+				type: "item"
+			}]
 			x: 2.0d
 			y: 7.25d
 		}
@@ -284,14 +260,12 @@
 			optional: true
 			shape: "square"
 			size: 0.75d
-			tasks: [
-				{
-					consume_items: false
-					id: "5C00653ECFB01A61"
-					item: { count: 1, id: "create_new_age:stirling_engine" }
-					type: "item"
-				}
-			]
+			tasks: [{
+				consume_items: false
+				id: "5C00653ECFB01A61"
+				item: { count: 1, id: "create_new_age:stirling_engine" }
+				type: "item"
+			}]
 			x: 4.0d
 			y: 7.25d
 		}
@@ -329,19 +303,20 @@
 			id: "6C28D7A89DD34BB6"
 			shape: "rsquare"
 			size: 1.5d
-			tasks: [
-				{
-					consume_items: false
-					id: "665ECD8AB4FA49E6"
-					item: { count: 1, id: "solarpunk:solar_power_tower" }
-					type: "item"
-				}
-			]
+			tasks: [{
+				consume_items: false
+				id: "665ECD8AB4FA49E6"
+				item: { count: 1, id: "solarpunk:solar_power_tower" }
+				type: "item"
+			}]
 			x: 4.25d
 			y: 5.5d
 		}
 		{
-			dependencies: ["6C28D7A89DD34BB6", "1C73D637E54DC9A0"]
+			dependencies: [
+				"6C28D7A89DD34BB6"
+				"1C73D637E54DC9A0"
+			]
 			icon: {
 				id: "solarpunk:heat_battery"
 			}
@@ -349,14 +324,12 @@
 			optional: true
 			shape: "square"
 			size: 0.75d
-			tasks: [
-				{
-					consume_items: false
-					id: "273A4D1CEDF38084"
-					item: { count: 1, id: "solarpunk:heat_battery" }
-					type: "item"
-				}
-			]
+			tasks: [{
+				consume_items: false
+				id: "273A4D1CEDF38084"
+				item: { count: 1, id: "solarpunk:heat_battery" }
+				type: "item"
+			}]
 			x: 6.5d
 			y: 5.5d
 		}
@@ -368,14 +341,12 @@
 			optional: true
 			shape: "square"
 			size: 0.75d
-			tasks: [
-				{
-					consume_items: false
-					id: "63F69FB0C682402A"
-					item: { count: 1, id: "solarpunk:crystallizer" }
-					type: "item"
-				}
-			]
+			tasks: [{
+				consume_items: false
+				id: "63F69FB0C682402A"
+				item: { count: 1, id: "solarpunk:crystallizer" }
+				type: "item"
+			}]
 			x: 6.5d
 			y: 3.5d
 		}
@@ -387,15 +358,13 @@
 			id: "63B0B96E5A00B3DF"
 			shape: "circle"
 			size: 1.0d
-			tasks: [
-				{
-					consume_items: false
-					count: 4L
-					id: "5824A9F7396E14EA"
-					item: { count: 1, id: "solarpunk:photovoltaic_cell" }
-					type: "item"
-				}
-			]
+			tasks: [{
+				consume_items: false
+				count: 4L
+				id: "5824A9F7396E14EA"
+				item: { count: 1, id: "solarpunk:photovoltaic_cell" }
+				type: "item"
+			}]
 			x: 2.0d
 			y: 11.0d
 		}
@@ -407,14 +376,12 @@
 			id: "035116722B0053DB"
 			shape: "rsquare"
 			size: 1.5d
-			tasks: [
-				{
-					consume_items: false
-					id: "1BF1749663C6E64A"
-					item: { count: 1, id: "solarpunk:brass_solar_panel" }
-					type: "item"
-				}
-			]
+			tasks: [{
+				consume_items: false
+				id: "1BF1749663C6E64A"
+				item: { count: 1, id: "solarpunk:brass_solar_panel" }
+				type: "item"
+			}]
 			x: 4.25d
 			y: 11.0d
 		}

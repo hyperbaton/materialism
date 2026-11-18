@@ -667,15 +667,3 @@ ServerEvents.recipes(event => {
     }).id(`kubejs:solarpunk/${metal}_filigree_railing`)
   })
 })
-
-// Remove hidden duplicates from shared tags
-ServerEvents.tags('item', event => {
-  const duplicates = [
-    'salt',
-    'lithium_ore', 'deepslate_lithium_ore', 'raw_lithium',
-    'lithium_dust', 'lithium_ingot', 'lithium_nugget', 'lithium_block',
-    'beryllium_dust', 'beryllium_ingot', 'beryllium_nugget', 'beryllium_block',
-    'copper_wire', 'iron_wire', 'gold_wire'
-  ]
-  duplicates.forEach(item => event.removeAllTagsFrom('solarpunk:' + item))
-})

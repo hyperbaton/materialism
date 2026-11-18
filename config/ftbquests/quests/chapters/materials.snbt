@@ -14,7 +14,6 @@
 			id: "1E0553C51160CBD9"
 			linked_quest: "5D3ADCC4ECED777F"
 			shape: "circle"
-			size: 1.0d
 			x: 0.0d
 			y: 0.0d
 		}
@@ -22,7 +21,6 @@
 			id: "6D22BE6BD1F7778E"
 			linked_quest: "5BDD335BAEB5D3CD"
 			shape: "circle"
-			size: 1.0d
 			x: 0.0d
 			y: -6.0d
 		}
@@ -30,7 +28,6 @@
 			id: "10B40910BD77BCDF"
 			linked_quest: "58AAD5A29308D38F"
 			shape: "circle"
-			size: 1.0d
 			x: 4.5d
 			y: 14.5d
 		}
@@ -44,12 +41,10 @@
 			id: "0460407FB725556B"
 			shape: "rsquare"
 			size: 1.5d
-			tasks: [
-				{
-					id: "4CC46B683CD66CF9"
-					type: "checkmark"
-				}
-			]
+			tasks: [{
+				id: "4CC46B683CD66CF9"
+				type: "checkmark"
+			}]
 			x: 2.25d
 			y: 0.0d
 		}
@@ -61,12 +56,10 @@
 			id: "4C23FBD65921720F"
 			shape: "diamond"
 			size: 1.0d
-			tasks: [
-				{
-					id: "0DF8BBCAF4D83E7F"
-					type: "checkmark"
-				}
-			]
+			tasks: [{
+				id: "0DF8BBCAF4D83E7F"
+				type: "checkmark"
+			}]
 			x: 2.25d
 			y: -2.25d
 		}
@@ -78,114 +71,117 @@
 			id: "208D27F30FA1D14F"
 			shape: "circle"
 			size: 1.0d
-			tasks: [
-				{
-					consume_items: false
-					count: 4L
-					id: "145D926B7A9879F1"
-					item: { count: 1, id: "tfc:powder/sulfur" }
-					type: "item"
-				}
-			]
+			tasks: [{
+				consume_items: false
+				count: 4L
+				id: "145D926B7A9879F1"
+				item: { count: 1, id: "tfc:powder/sulfur" }
+				type: "item"
+			}]
 			x: 4.5d
 			y: -3.0d
 		}
 		{
 			dependencies: ["0460407FB725556B"]
 			icon: {
+				components: {
+					"tfc:heat": { }
+				}
 				id: "tfc_metallurgy:metal/ingot/magnesium"
 			}
 			id: "72D7A1330C6A3D2E"
 			shape: "circle"
 			size: 1.0d
-			tasks: [
-				{
-					consume_items: false
-					id: "2F0020F12E336621"
-					item: { count: 1, id: "tfc_metallurgy:metal/ingot/magnesium" }
-					type: "item"
-				}
-			]
+			tasks: [{
+				consume_items: false
+				id: "2F0020F12E336621"
+				item: { components: { "tfc:heat": { } }, count: 1, id: "tfc_metallurgy:metal/ingot/magnesium" }
+				type: "item"
+			}]
 			x: 4.5d
 			y: -1.5d
 		}
 		{
 			dependencies: ["0460407FB725556B"]
 			icon: {
+				components: {
+					"tfc:heat": { }
+				}
 				id: "tfc_metallurgy:metal/ingot/aluminum"
 			}
 			id: "02509A4F39B4C224"
 			shape: "circle"
 			size: 1.0d
-			tasks: [
-				{
-					consume_items: false
-					count: 4L
-					id: "626D5823181CFEC8"
-					item: { count: 1, id: "tfc_metallurgy:metal/ingot/aluminum" }
-					type: "item"
-				}
-			]
+			tasks: [{
+				consume_items: false
+				count: 4L
+				id: "626D5823181CFEC8"
+				item: { components: { "tfc:heat": { } }, count: 1, id: "tfc_metallurgy:metal/ingot/aluminum" }
+				type: "item"
+			}]
 			x: 4.5d
 			y: 0.0d
 		}
 		{
 			dependencies: ["02509A4F39B4C224"]
 			icon: {
+				components: {
+					"tfc:heat": { }
+				}
 				id: "tfc_metallurgy:metal/double_ingot/aluminum"
 			}
 			id: "479178035CB8D3ED"
 			shape: "circle"
 			size: 1.0d
-			tasks: [
-				{
-					consume_items: false
-					count: 2L
-					id: "6AE1DC319FF663F0"
-					item: { count: 1, id: "tfc_metallurgy:metal/double_ingot/aluminum" }
-					type: "item"
-				}
-			]
+			tasks: [{
+				consume_items: false
+				count: 2L
+				id: "6AE1DC319FF663F0"
+				item: { components: { "tfc:heat": { } }, count: 1, id: "tfc_metallurgy:metal/double_ingot/aluminum" }
+				type: "item"
+			}]
 			x: 6.5d
 			y: 0.0d
 		}
 		{
 			dependencies: ["479178035CB8D3ED"]
 			icon: {
+				components: {
+					"tfc:heat": { }
+				}
 				id: "tfc_metallurgy:metal/anvil/aluminum"
 			}
 			id: "4A9A9BDDD4400F8D"
 			optional: true
 			shape: "square"
 			size: 0.75d
-			tasks: [
-				{
-					consume_items: false
-					id: "4C2BF4B8BE546F4B"
-					item: { count: 1, id: "tfc_metallurgy:metal/anvil/aluminum" }
-					type: "item"
-				}
-			]
+			tasks: [{
+				consume_items: false
+				id: "4C2BF4B8BE546F4B"
+				item: { components: { "tfc:heat": { } }, count: 1, id: "tfc_metallurgy:metal/anvil/aluminum" }
+				type: "item"
+			}]
 			x: 6.5d
 			y: -2.0d
 		}
 		{
 			dependencies: ["479178035CB8D3ED"]
 			icon: {
+				components: {
+					"tfc:heat": { }
+				}
 				id: "tfc_metallurgy:metal/sheet/aluminum"
 			}
 			id: "450365DB1F257FFF"
 			shape: "circle"
 			size: 1.0d
-			tasks: [
-				{
-					consume_items: false
-					count: 4L
-					id: "1BD473286EA29F8B"
-					item: { count: 1, id: "tfc_metallurgy:metal/sheet/aluminum" }
-					type: "item"
-				}
-			]
+			tasks: [{
+				consume_items: false
+				count: 4L
+				id: "1BD473286EA29F8B"
+				item: { components: { "tfc:heat": { } }, count: 1, id: "tfc_metallurgy:metal/sheet/aluminum" }
+				type: "item"
+			}]
 			x: 8.5d
 			y: 0.0d
 		}
@@ -197,15 +193,13 @@
 			id: "5A8D6EAEB53794F6"
 			shape: "rsquare"
 			size: 2.0d
-			tasks: [
-				{
-					consume_items: false
-					count: 4L
-					id: "25E43993B3C1D1EE"
-					item: { count: 1, id: "create:andesite_casing" }
-					type: "item"
-				}
-			]
+			tasks: [{
+				consume_items: false
+				count: 4L
+				id: "25E43993B3C1D1EE"
+				item: { count: 1, id: "create:andesite_casing" }
+				type: "item"
+			}]
 			x: 11.0d
 			y: 0.0d
 		}
@@ -217,14 +211,12 @@
 			id: "47E432D0FA44F238"
 			shape: "circle"
 			size: 1.0d
-			tasks: [
-				{
-					consume_items: false
-					id: "4770DB1CF77BFA71"
-					item: { count: 1, id: "afc:tree_tap" }
-					type: "item"
-				}
-			]
+			tasks: [{
+				consume_items: false
+				id: "4770DB1CF77BFA71"
+				item: { count: 1, id: "afc:tree_tap" }
+				type: "item"
+			}]
 			x: 2.0d
 			y: -6.0d
 		}
@@ -236,32 +228,31 @@
 			id: "7DB2EE2840BB029A"
 			shape: "circle"
 			size: 1.0d
-			tasks: [
-				{
-					id: "58EEC4ABF8B28283"
-					type: "checkmark"
-				}
-			]
+			tasks: [{
+				id: "58EEC4ABF8B28283"
+				type: "checkmark"
+			}]
 			x: 4.0d
 			y: -6.0d
 		}
 		{
-			dependencies: ["7DB2EE2840BB029A", "208D27F30FA1D14F"]
+			dependencies: [
+				"7DB2EE2840BB029A"
+				"208D27F30FA1D14F"
+			]
 			icon: {
 				id: "afc:rubber_bar"
 			}
 			id: "385F2C711E0C9E42"
 			shape: "rsquare"
 			size: 1.5d
-			tasks: [
-				{
-					consume_items: false
-					count: 4L
-					id: "3BEC8174682079D8"
-					item: { count: 1, id: "afc:rubber_bar" }
-					type: "item"
-				}
-			]
+			tasks: [{
+				consume_items: false
+				count: 4L
+				id: "3BEC8174682079D8"
+				item: { count: 1, id: "afc:rubber_bar" }
+				type: "item"
+			}]
 			x: 6.25d
 			y: -6.0d
 		}
@@ -273,15 +264,13 @@
 			id: "73A58EBD0FE94273"
 			shape: "circle"
 			size: 1.0d
-			tasks: [
-				{
-					consume_items: false
-					count: 6L
-					id: "0DED188392952211"
-					item: { count: 1, id: "minecraft:redstone" }
-					type: "item"
-				}
-			]
+			tasks: [{
+				consume_items: false
+				count: 6L
+				id: "0DED188392952211"
+				item: { count: 1, id: "minecraft:redstone" }
+				type: "item"
+			}]
 			x: 4.5d
 			y: 2.0d
 		}
@@ -293,15 +282,13 @@
 			id: "3DEE7B23096092E6"
 			shape: "circle"
 			size: 1.0d
-			tasks: [
-				{
-					consume_items: false
-					count: 4L
-					id: "21B5402DB64D91DC"
-					item: { count: 1, id: "tfc_metallurgy:ore/certus_quartz" }
-					type: "item"
-				}
-			]
+			tasks: [{
+				consume_items: false
+				count: 4L
+				id: "21B5402DB64D91DC"
+				item: { count: 1, id: "tfc_metallurgy:ore/certus_quartz" }
+				type: "item"
+			}]
 			x: 4.5d
 			y: 4.5d
 		}
@@ -313,34 +300,37 @@
 			id: "0F254FB358D48BF4"
 			shape: "circle"
 			size: 1.0d
-			tasks: [
-				{
-					consume_items: false
-					count: 2L
-					id: "52664798358B98E7"
-					item: { count: 1, id: "kubejs:certus_quartz_powder" }
-					type: "item"
-				}
-			]
+			tasks: [{
+				consume_items: false
+				count: 2L
+				id: "52664798358B98E7"
+				item: { count: 1, id: "kubejs:certus_quartz_powder" }
+				type: "item"
+			}]
 			x: 6.5d
 			y: 4.5d
 		}
 		{
-			dependencies: ["0F254FB358D48BF4", "73A58EBD0FE94273", "7DE994478C778AEC"]
+			dependencies: [
+				"0F254FB358D48BF4"
+				"73A58EBD0FE94273"
+				"7DE994478C778AEC"
+			]
 			icon: {
+				components: {
+					"tfc:heat": { }
+				}
 				id: "kubejs:redstone_imbued_quartz_powder"
 			}
 			id: "05B6B23713DC8B26"
 			shape: "circle"
 			size: 1.0d
-			tasks: [
-				{
-					consume_items: false
-					id: "07B68DA43DDC263A"
-					item: { count: 1, id: "kubejs:redstone_imbued_quartz_powder" }
-					type: "item"
-				}
-			]
+			tasks: [{
+				consume_items: false
+				id: "07B68DA43DDC263A"
+				item: { components: { "tfc:heat": { } }, count: 1, id: "kubejs:redstone_imbued_quartz_powder" }
+				type: "item"
+			}]
 			x: 8.5d
 			y: 4.5d
 		}
@@ -351,15 +341,13 @@
 			id: "7DE994478C778AEC"
 			shape: "circle"
 			size: 1.0d
-			tasks: [
-				{
-					consume_items: false
-					count: 2L
-					id: "23FD6400FE2F0761"
-					item: { count: 1, id: "firmalife:beeswax" }
-					type: "item"
-				}
-			]
+			tasks: [{
+				consume_items: false
+				count: 2L
+				id: "23FD6400FE2F0761"
+				item: { count: 1, id: "firmalife:beeswax" }
+				type: "item"
+			}]
 			x: 10.0d
 			y: 2.5d
 		}
@@ -371,14 +359,12 @@
 			id: "5FFEFB0DF6C16F9F"
 			shape: "circle"
 			size: 1.0d
-			tasks: [
-				{
-					consume_items: false
-					id: "19B15658CDDEE73B"
-					item: { count: 1, id: "create:rose_quartz" }
-					type: "item"
-				}
-			]
+			tasks: [{
+				consume_items: false
+				id: "19B15658CDDEE73B"
+				item: { count: 1, id: "create:rose_quartz" }
+				type: "item"
+			}]
 			x: 10.5d
 			y: 4.5d
 		}
@@ -390,72 +376,74 @@
 			id: "7C57F831181D8E8E"
 			shape: "circle"
 			size: 1.0d
-			tasks: [
-				{
-					consume_items: false
-					id: "764D72CD6485A376"
-					item: { count: 1, id: "create:polished_rose_quartz" }
-					type: "item"
-				}
-			]
+			tasks: [{
+				consume_items: false
+				id: "764D72CD6485A376"
+				item: { count: 1, id: "create:polished_rose_quartz" }
+				type: "item"
+			}]
 			x: 12.5d
 			y: 4.5d
 		}
 		{
 			dependencies: ["0460407FB725556B"]
 			icon: {
+				components: {
+					"tfc:heat": { }
+				}
 				id: "tfc:metal/ingot/nickel"
 			}
 			id: "201B77EE75BE5DCC"
 			shape: "circle"
 			size: 1.0d
-			tasks: [
-				{
-					consume_items: false
-					count: 4L
-					id: "72D99559B713073A"
-					item: { count: 1, id: "tfc:metal/ingot/nickel" }
-					type: "item"
-				}
-			]
+			tasks: [{
+				consume_items: false
+				count: 4L
+				id: "72D99559B713073A"
+				item: { components: { "tfc:heat": { } }, count: 1, id: "tfc:metal/ingot/nickel" }
+				type: "item"
+			}]
 			x: 4.5d
 			y: 7.5d
 		}
 		{
-			dependencies: ["7C57F831181D8E8E", "45E755A928CFBE4F", "201B77EE75BE5DCC"]
+			dependencies: [
+				"7C57F831181D8E8E"
+				"45E755A928CFBE4F"
+				"201B77EE75BE5DCC"
+			]
 			icon: {
 				id: "create:electron_tube"
 			}
 			id: "3BA7D54018B8DA09"
 			shape: "gear"
 			size: 2.5d
-			tasks: [
-				{
-					consume_items: false
-					count: 2L
-					id: "1D5EE30A4EEA1367"
-					item: { count: 1, id: "create:electron_tube" }
-					type: "item"
-				}
-			]
+			tasks: [{
+				consume_items: false
+				count: 2L
+				id: "1D5EE30A4EEA1367"
+				item: { count: 1, id: "create:electron_tube" }
+				type: "item"
+			}]
 			x: 15.25d
 			y: 4.5d
 		}
 		{
 			icon: {
+				components: {
+					"tfc:heat": { }
+				}
 				id: "tfc:silica_glass_batch"
 			}
 			id: "0938534D1B173701"
 			shape: "circle"
 			size: 1.0d
-			tasks: [
-				{
-					consume_items: false
-					id: "04A37DE43E4F5523"
-					item: { components: { "ftbfiltersystem:filter": "ftbfiltersystem:item_tag(tfc:glass_batches)" }, count: 1, id: "ftbfiltersystem:smart_filter" }
-					type: "item"
-				}
-			]
+			tasks: [{
+				consume_items: false
+				id: "04A37DE43E4F5523"
+				item: { components: { "ftbfiltersystem:filter": "ftbfiltersystem:item_tag(tfc:glass_batches)" }, count: 1, id: "ftbfiltersystem:smart_filter" }
+				type: "item"
+			}]
 			x: 4.5d
 			y: 10.5d
 		}
@@ -467,33 +455,32 @@
 			id: "53DE53289A7E9A53"
 			shape: "circle"
 			size: 1.0d
-			tasks: [
-				{
-					consume_items: false
-					id: "39B514F17D88F048"
-					item: { components: { "ftbfiltersystem:filter": "ftbfiltersystem:item_tag(c:tools/blowpipe)" }, count: 1, id: "ftbfiltersystem:smart_filter" }
-					type: "item"
-				}
-			]
+			tasks: [{
+				consume_items: false
+				id: "39B514F17D88F048"
+				item: { components: { "ftbfiltersystem:filter": "ftbfiltersystem:item_tag(c:tools/blowpipe)" }, count: 1, id: "ftbfiltersystem:smart_filter" }
+				type: "item"
+			}]
 			x: 6.5d
 			y: 10.5d
 		}
 		{
 			dependencies: ["53DE53289A7E9A53"]
 			icon: {
+				components: {
+					"tfc:heat": { }
+				}
 				id: "tfc:ceramic_blowpipe_with_glass"
 			}
 			id: "75CA15FE92C5FED1"
 			shape: "circle"
 			size: 1.0d
-			tasks: [
-				{
-					consume_items: false
-					id: "14FF266B39C7F41A"
-					item: { components: { "ftbfiltersystem:filter": "ftbfiltersystem:or(ftbfiltersystem:item(tfc:blowpipe_with_glass)ftbfiltersystem:item(tfc:ceramic_blowpipe_with_glass))" }, count: 1, id: "ftbfiltersystem:smart_filter" }
-					type: "item"
-				}
-			]
+			tasks: [{
+				consume_items: false
+				id: "14FF266B39C7F41A"
+				item: { components: { "ftbfiltersystem:filter": "ftbfiltersystem:or(ftbfiltersystem:item(tfc:blowpipe_with_glass)ftbfiltersystem:item(tfc:ceramic_blowpipe_with_glass))" }, count: 1, id: "ftbfiltersystem:smart_filter" }
+				type: "item"
+			}]
 			x: 8.5d
 			y: 10.5d
 		}
@@ -505,93 +492,96 @@
 			id: "45E755A928CFBE4F"
 			shape: "circle"
 			size: 1.0d
-			tasks: [
-				{
-					consume_items: false
-					id: "04432AD790C811A8"
-					item: { count: 1, id: "tfc:lamp_glass" }
-					type: "item"
-				}
-			]
+			tasks: [{
+				consume_items: false
+				id: "04432AD790C811A8"
+				item: { count: 1, id: "tfc:lamp_glass" }
+				type: "item"
+			}]
 			x: 8.5d
 			y: 8.5d
 		}
 		{
-			dependencies: ["75CA15FE92C5FED1", "0BCCF8E580290C51", "7EDC10CBD2F47713"]
+			dependencies: [
+				"75CA15FE92C5FED1"
+				"0BCCF8E580290C51"
+				"7EDC10CBD2F47713"
+			]
 			icon: {
 				id: "minecraft:glass_pane"
 			}
 			id: "4F75BAA3E75E2139"
 			shape: "rsquare"
 			size: 1.5d
-			tasks: [
-				{
-					consume_items: false
-					count: 4L
-					id: "7CEEB0119424303E"
-					item: { count: 1, id: "minecraft:glass_pane" }
-					type: "item"
-				}
-			]
+			tasks: [{
+				consume_items: false
+				count: 4L
+				id: "7CEEB0119424303E"
+				item: { count: 1, id: "minecraft:glass_pane" }
+				type: "item"
+			}]
 			x: 10.75d
 			y: 10.5d
 		}
 		{
 			dependencies: ["58AAD5A29308D38F"]
 			icon: {
+				components: {
+					"tfc:heat": { }
+				}
 				id: "tfc:metal/ingot/brass"
 			}
 			id: "5B9EC2C565E27DDD"
 			shape: "rsquare"
 			size: 1.5d
-			tasks: [
-				{
-					consume_items: false
-					count: 4L
-					id: "49F3F9BF785E8ECA"
-					item: { count: 1, id: "tfc:metal/ingot/brass" }
-					type: "item"
-				}
-			]
+			tasks: [{
+				consume_items: false
+				count: 4L
+				id: "49F3F9BF785E8ECA"
+				item: { components: { "tfc:heat": { } }, count: 1, id: "tfc:metal/ingot/brass" }
+				type: "item"
+			}]
 			x: 6.75d
 			y: 14.5d
 		}
 		{
 			dependencies: ["5B9EC2C565E27DDD"]
 			icon: {
+				components: {
+					"tfc:heat": { }
+				}
 				id: "tfc:metal/block/brass"
 			}
 			id: "0BCCF8E580290C51"
 			shape: "circle"
 			size: 1.0d
-			tasks: [
-				{
-					consume_items: false
-					count: 4L
-					id: "4706383658B510C0"
-					item: { count: 1, id: "tfc:metal/block/brass" }
-					type: "item"
-				}
-			]
+			tasks: [{
+				consume_items: false
+				count: 4L
+				id: "4706383658B510C0"
+				item: { components: { "tfc:heat": { } }, count: 1, id: "tfc:metal/block/brass" }
+				type: "item"
+			}]
 			x: 9.25d
 			y: 12.5d
 		}
 		{
 			dependencies: ["5B9EC2C565E27DDD"]
 			icon: {
+				components: {
+					"tfc:heat": { }
+				}
 				id: "tfc:gem_saw"
 			}
 			id: "7EDC10CBD2F47713"
 			shape: "circle"
 			size: 1.0d
-			tasks: [
-				{
-					consume_items: false
-					id: "347A1B0C15121BAC"
-					item: { count: 1, id: "tfc:gem_saw" }
-					type: "item"
-				}
-			]
+			tasks: [{
+				consume_items: false
+				id: "347A1B0C15121BAC"
+				item: { components: { "tfc:heat": { } }, count: 1, id: "tfc:gem_saw" }
+				type: "item"
+			}]
 			x: 11.25d
 			y: 12.5d
 		}
@@ -603,14 +593,12 @@
 			id: "21ED8DF6429A34A8"
 			shape: "circle"
 			size: 1.0d
-			tasks: [
-				{
-					consume_items: false
-					id: "7393CA742E1CEC07"
-					item: { count: 1, id: "create:brass_casing" }
-					type: "item"
-				}
-			]
+			tasks: [{
+				consume_items: false
+				id: "7393CA742E1CEC07"
+				item: { count: 1, id: "create:brass_casing" }
+				type: "item"
+			}]
 			x: 9.0d
 			y: 14.5d
 		}
@@ -622,14 +610,12 @@
 			id: "688C9952BD7DAC7A"
 			shape: "circle"
 			size: 1.0d
-			tasks: [
-				{
-					consume_items: false
-					id: "5ADB142DB8697E34"
-					item: { count: 1, id: "create:brass_hand" }
-					type: "item"
-				}
-			]
+			tasks: [{
+				consume_items: false
+				id: "5ADB142DB8697E34"
+				item: { count: 1, id: "create:brass_hand" }
+				type: "item"
+			}]
 			x: 9.0d
 			y: 16.25d
 		}
@@ -641,33 +627,32 @@
 			id: "54336AEB6B41ECF4"
 			shape: "circle"
 			size: 1.0d
-			tasks: [
-				{
-					consume_items: false
-					id: "183AEA41F804C867"
-					item: { count: 1, id: "create:copper_casing" }
-					type: "item"
-				}
-			]
+			tasks: [{
+				consume_items: false
+				id: "183AEA41F804C867"
+				item: { count: 1, id: "create:copper_casing" }
+				type: "item"
+			}]
 			x: 4.5d
 			y: 16.25d
 		}
 		{
 			icon: {
+				components: {
+					"tfc:heat": { }
+				}
 				id: "tfc:metal/ingot/gold"
 			}
 			id: "6605E3F65F40421B"
 			shape: "circle"
 			size: 1.0d
-			tasks: [
-				{
-					consume_items: false
-					count: 2L
-					id: "6A93C207B8CC03F5"
-					item: { count: 1, id: "tfc:metal/ingot/gold" }
-					type: "item"
-				}
-			]
+			tasks: [{
+				consume_items: false
+				count: 2L
+				id: "6A93C207B8CC03F5"
+				item: { components: { "tfc:heat": { } }, count: 1, id: "tfc:metal/ingot/gold" }
+				type: "item"
+			}]
 			x: 6.75d
 			y: 16.75d
 		}
@@ -678,14 +663,12 @@
 			id: "2924A19257733F39"
 			shape: "circle"
 			size: 1.0d
-			tasks: [
-				{
-					consume_items: false
-					id: "52F722DAB8654FF3"
-					item: { count: 1, id: "create:basin" }
-					type: "item"
-				}
-			]
+			tasks: [{
+				consume_items: false
+				id: "52F722DAB8654FF3"
+				item: { count: 1, id: "create:basin" }
+				type: "item"
+			}]
 			x: 11.25d
 			y: 14.5d
 		}

@@ -17,11 +17,6 @@ ServerEvents.recipes(event => {
         'tfc:metal/rod/wrought_iron'         // Arg 3: the item to replace it with
       )
       event.replaceInput(
-        { id: 'createbigcannons:wrought_iron_drop_mortar_end_mirrored' }, // Arg 1: the filter
-        'minecraft:iron_bars',            // Arg 2: the item to replace
-        'tfc:metal/bars/wrought_iron'         // Arg 3: the item to replace it with
-      )
-      event.replaceInput(
         { id: 'createbigcannons:wrought_iron_drop_mortar_end' }, // Arg 1: the filter
         'minecraft:iron_bars',            // Arg 2: the item to replace
         'tfc:metal/bars/wrought_iron'         // Arg 3: the item to replace it with
@@ -67,7 +62,7 @@ ServerEvents.recipes(event => {
         'tfc:powder/sulfur'         // Arg 3: the item to replace it with
       )
       event.replaceInput(
-        { id: 'createbigcannons:cannon_welder_mirrored' }, // Arg 1: the filter
+        { id: 'minecraft:cannon_welder_mirrored' }, // Arg 1: the filter
         'create:blaze_burner',            // Arg 2: the item to replace
         'tfc:powder/sulfur'         // Arg 3: the item to replace it with
       )
@@ -75,11 +70,6 @@ ServerEvents.recipes(event => {
         { id: 'createbigcannons:cannon_drill' }, // Arg 1: the filter
         'minecraft:iron_ingot',            // Arg 2: the item to replace
         'tfc_metallurgy:metal/double_sheet/titanium'         // Arg 3: the item to replace it with
-      )
-      event.replaceInput(
-        { input: 'createbigcannons:recoil_spring' }, // Arg 1: the filter
-        'createbigcannons:recoil_spring',            // Arg 2: the item to replace
-        'vintageimprovements:steel_spring'         // Arg 3: the item to replace it with
       )
 
       // Basin foundry lid: steel sheets instead of andesite alloy
@@ -119,12 +109,6 @@ ServerEvents.recipes(event => {
           temperature: temperature
         })
       })
-
-      event.replaceInput(
-        { input: 'createbigcannons:nethersteel_ingot' },
-        'createbigcannons:nethersteel_ingot',
-        'tfc_metallurgy:metal/ingot/tungsten_steel'
-      )
 
       // Cast iron nugget: duplicates tfmg:cast_iron_nugget (which is kept as canonical).
       // Its own ingot/fluid are already dead above, so just drop its remaining recipes

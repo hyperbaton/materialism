@@ -93,17 +93,6 @@ ServerEvents.recipes(event => {
         });
     }
 
-    // Replace metal inputs
-    event.replaceInput(
-      { input: 'createdeco:andesite_sheet' }, // Arg 1: the filter
-      'createdeco:andesite_sheet',            // Arg 2: the item to replace
-      'tfc_metallurgy:metal/sheet/aluminum'   // Arg 3: the item to replace it with
-    )
-    event.replaceInput(
-      { input: 'createdeco:zinc_sheet' }, // Arg 1: the filter
-      'createdeco:zinc_sheet',            // Arg 2: the item to replace
-      'tfc:metal/sheet/zinc'   // Arg 3: the item to replace it with
-    )
     event.replaceInput(
       { id: 'createdeco:iron_hull' }, // Arg 1: the filter
       'minecraft:iron_block',            // Arg 2: the item to replace
@@ -113,16 +102,6 @@ ServerEvents.recipes(event => {
       { id: 'createdeco:copper_hull' }, // Arg 1: the filter
       'minecraft:copper_block',            // Arg 2: the item to replace
       'tfc:metal/block/copper'   // Arg 3: the item to replace it with
-    )
-    event.replaceInput(
-      { id: 'createdeco:brass_hull' }, // Arg 1: the filter
-      'create:brass_block',            // Arg 2: the item to replace
-      'tfc:metal/block/brass'   // Arg 3: the item to replace it with
-    )
-    event.replaceInput(
-      { id: 'createdeco:zinc_hull' }, // Arg 1: the filter
-      'create:zinc_block',            // Arg 2: the item to replace
-      'tfc:metal/block/zinc'   // Arg 3: the item to replace it with
     )
     event.replaceInput(
       { id: 'createdeco:brass_support' }, // Arg 1: the filter
@@ -145,23 +124,17 @@ ServerEvents.recipes(event => {
       'tfc:metal/sheet/brass'   // Arg 3: the item to replace it with
     )
     event.replaceInput(
-      { id: 'createdeco:copper_door' }, // Arg 1: the filter
-      'minecraft:copper_ingot',            // Arg 2: the item to replace
-      'tfc:metal/sheet/copper'   // Arg 3: the item to replace it with
-    )
-    event.replaceInput(
       { id: 'createdeco:zinc_door' }, // Arg 1: the filter
       'create:zinc_ingot',            // Arg 2: the item to replace
       'tfc:metal/sheet/zinc'   // Arg 3: the item to replace it with
     )
     event.replaceInput(
-      { id: 'createdeco:brass_bars' }, // Arg 1: the filter
+      { output: 'createdeco:brass_bars' }, // Arg 1: the filter
       'create:brass_ingot',            // Arg 2: the item to replace
       'tfc:metal/ingot/brass'   // Arg 3: the item to replace it with
     )
     replaceAndesiteAlloyWith('createdeco:andesite_door', 'tfc_metallurgy:metal/sheet/aluminum')
     replaceAndesiteAlloyWith('createdeco:andesite_trapdoor', 'tfc_metallurgy:metal/sheet/aluminum')
-    replaceAndesiteAlloyWith('createdeco:andesite_bars', 'tfc_metallurgy:metal/ingot/aluminum')
     replaceAndesiteAlloyWith('createdeco:andesite_support', 'tfc_metallurgy:metal/rod/aluminum')
 
     function replaceAndesiteAlloyWith(recipeId, replacer){
@@ -192,13 +165,11 @@ ServerEvents.recipes(event => {
     // Remaining andesite-alloy forms (as c: tags) used by createdeco andesite blocks
     // -> aluminium. Covers hull, mesh_fence, sheet_metal, catwalks and the lamp base plate.
     event.replaceInput({ mod: 'createdeco' }, '#c:plates/andesite_alloy',         'tfc_metallurgy:metal/sheet/aluminum')
-    event.replaceInput({ mod: 'createdeco' }, '#c:ingots/andesite_alloy',         'tfc_metallurgy:metal/ingot/aluminum')
     event.replaceInput({ mod: 'createdeco' }, '#c:storage_blocks/andesite_alloy', 'tfc_metallurgy:metal/block/aluminum')
 
     // Catwalk stairs use createdeco's own andesite_bars (which has no recipe) -> use the
     // craftable aluminium bars instead so the stairs are obtainable.
     event.replaceInput({ id: 'createdeco:andesite_catwalk_stairs' }, 'createdeco:andesite_bars', 'create:andesite_bars')
-
 
     // Cut stone recipes
     event.recipes.create.sequenced_assembly(

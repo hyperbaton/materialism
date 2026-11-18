@@ -25,56 +25,7 @@ ServerEvents.recipes(event => {
   event.remove({id: 'chemica:vat_machine_recipe/vat_reaction/ethanol'})
   event.remove({id: 'chemica:compacting/tungsten_carbide_dust'})
 
-  // Item swaps: Chemica item -> pack item
-  const swaps = {
-    'chemica:chromium_ingot': 'firmalife:metal/ingot/chromium',
-    'chemica:silver_ingot': 'tfc:metal/ingot/silver',
-    'chemica:tin_ingot': 'tfc:metal/ingot/tin',
-    'chemica:silver_sheet': 'tfc:metal/sheet/silver',
-    'chemica:tin_sheet': 'tfc:metal/sheet/tin',
-    'chemica:constantan_dust': 'tfc_metallurgy:metal/dust/constantan',
-    'chemica:electrum_grit': 'tfc_metallurgy:metal/dust/electrum',
-    'chemica:platinum_block': 'tfc_metallurgy:metal/block/platinum',
-    'chemica:salt': 'tfc:powder/salt',
-    'chemica:soda_ash': 'tfc:powder/soda_ash',
-    'chemica:ash': 'tfc:powder/wood_ash',
-    'chemica:charcoal_dust': 'tfc:powder/charcoal',
-    'tfmg:nitrate_dust': 'tfc:powder/saltpeter',
-    'chemica:crushed_graphite': 'tfc:powder/graphite',
-    'chemica:graphite_ingot': 'tfc_metallurgy:metal/ingot/graphite',
-    'chemica:graphite_sheet': 'tfc_metallurgy:metal/sheet/graphite',
-    'chemica:chromium_nugget': 'chemica:chromium_dust',
-    'chemica:silver_nugget': 'kubejs:metal/dust/silver',
-    'minecraft:iron_nugget': 'kubejs:metal/dust/iron',
-    'minecraft:gold_nugget': 'kubejs:metal/dust/gold',
-    'tfmg:aluminum_nugget': 'tfc_metallurgy:metal/dust/aluminum',
-    'tfmg:aluminum_ingot': 'tfc_metallurgy:metal/ingot/aluminum',
-    'tfmg:nickel_ingot': 'tfc:metal/ingot/nickel',
-    'tfmg:constantan_ingot': 'tfc_metallurgy:metal/ingot/constantan',
-    'tfmg:lead_ingot': 'tfc_metallurgy:metal/ingot/lead',
-    'create:zinc_ingot': 'tfc:metal/ingot/zinc',
-    'create:copper_sheet': 'tfc:metal/sheet/copper',
-    'create:iron_sheet': 'tfc:metal/sheet/wrought_iron',
-    'create:copper_nugget': 'kubejs:metal/dust/copper'
-  }
-  // Metals that TFC Metallurgy has. Chemica has no molybdenum dust or sheet, and sheets only for some
-  const tfcmMetals = ['antimony', 'cobalt', 'iridium', 'magnesium', 'molybdenum', 'platinum', 'tantalum', 'titanium', 'tungsten', 'vanadium']
-  tfcmMetals.forEach(metal => {
-    swaps['chemica:' + metal + '_ingot'] = 'tfc_metallurgy:metal/ingot/' + metal
-    swaps['chemica:' + metal + '_nugget'] = 'tfc_metallurgy:metal/dust/' + metal
-    if (metal != 'molybdenum') swaps['chemica:' + metal + '_dust'] = 'tfc_metallurgy:metal/dust/' + metal
-  })
-  ;['iridium', 'magnesium', 'tantalum', 'titanium'].forEach(metal => {
-    swaps['chemica:' + metal + '_sheet'] = 'tfc_metallurgy:metal/sheet/' + metal
-  })
-  // Base TFC metals: the dusts are the ones we added
-  ;['copper', 'iron', 'gold', 'nickel', 'silver', 'tin', 'zinc'].forEach(metal => {
-    swaps['chemica:' + metal + '_dust'] = 'kubejs:metal/dust/' + metal
-  })
-  Object.keys(swaps).forEach(item => {
-    event.replaceInput({}, item, swaps[item])
-    event.replaceOutput({}, item, swaps[item])
-  })
+  // Item and fluid swaps are in unify.js
 
   // Casting basin and arc furnace: Chemica uses 90 mB per ingot, the pack uses 100 mB
   event.forEachRecipe({id: /^chemica:(casting\/.*|vat_machine_recipe\/arc_furnace_.*)/}, recipe => {
@@ -91,36 +42,8 @@ ServerEvents.recipes(event => {
     })
   })
 
-  // Fluid swaps, and item swaps inside TFMG vat recipes. replaceInput reaches neither, so those recipes are rewritten.
-  const fluidSwaps = [
-    ['chemica:oxygen', 'kubejs:oxygen'],
-    ['chemica:nitrogen', 'kubejs:nitrogen'],
-    ['chemica:molten_titanium', 'tfc_metallurgy:metal/titanium'],
-    ['chemica:hydrogen', 'tfmg:hydrogen'],
-    ['chemica:propene', 'tfmg:propylene'],
-    ['chemica:brine', 'tfc:salt_water']
-  ]
-  const itemSwaps = Object.keys(swaps).map(item => [item, swaps[item]]).concat([['tfmg:sulfur_dust', 'tfc:powder/sulfur']])
-  // Salt electrolysis is dropped (chlor-alkali brine electrolysis covers chlorine), and TFC salt water replaces brine
-  const dropped = ['chemica:filling/propene', 'chemica:vat_machine_recipe/electrolysis/salt', 'chemica:mixing/brine']
-  dropped.forEach(recipe => event.remove({id: recipe}))
-  const fluidRecipes = []
-  event.forEachRecipe({mod: 'chemica'}, recipe => {
-    if (dropped.indexOf(String(recipe.getId())) !== -1) return
-    const json = String(recipe.json)
-    const vat = json.indexOf('"tfmg:vat_machine_recipe"') !== -1
-    if (fluidSwaps.concat(vat ? itemSwaps : []).some(swap => json.indexOf('"' + swap[0] + '"') !== -1)) {
-      fluidRecipes.push({id: String(recipe.getId()), json: json})
-    }
-  })
-  fluidRecipes.forEach(recipe => {
-    let json = recipe.json
-    fluidSwaps.concat(itemSwaps).forEach(swap => {
-      json = json.split('"' + swap[0] + '"').join('"' + swap[1] + '"')
-    })
-    event.remove({id: recipe.id})
-    event.custom(JSON.parse(json)).id('kubejs:' + recipe.id.replace(':', '/'))
-  })
+  // Salt electrolysis is dropped (salt water electrolysis covers chlorine); TFC salt water replaces brine (unify.js)
+  ;['chemica:filling/propene', 'chemica:vat_machine_recipe/electrolysis/salt', 'chemica:mixing/brine'].forEach(recipe => event.remove({id: recipe}))
   // Sodium from the persulfate chain is pressed back into ingots, matching Chemica's 1:1 crushing
   event.recipes.create.compacting('chemica:sodium_ingot', 'chemica:sodium_dust').id('kubejs:chemica/compacting/sodium_ingot')
 
@@ -226,19 +149,4 @@ ServerEvents.recipes(event => {
       })
     })
   })
-})
-
-// Hidden duplicates must not stay in the shared c: tags, or tag recipes would still accept them
-ServerEvents.tags('item', event => {
-  const duplicates = ['salt', 'soda_ash', 'ash', 'charcoal_dust', 'electrum_grit', 'platinum_block', 'constantan_dust', 'graphite_ingot', 'graphite_sheet', 'quartz_dust', 'yeast', 'reinforced_iridium_plate']
-  duplicates.forEach(item => event.removeAllTagsFrom('chemica:' + item))
-  const metals = ['antimony', 'cobalt', 'iridium', 'magnesium', 'molybdenum', 'platinum', 'tantalum', 'titanium', 'tungsten', 'vanadium', 'silver', 'tin']
-  metals.forEach(metal => {
-    ;['ingot', 'nugget'].forEach(form => event.removeAllTagsFrom('chemica:' + metal + '_' + form))
-  })
-  ;['antimony', 'cobalt', 'iridium', 'magnesium', 'platinum', 'tantalum', 'titanium', 'tungsten', 'vanadium', 'copper', 'iron', 'gold', 'nickel', 'silver', 'tin', 'zinc']
-    .forEach(metal => event.removeAllTagsFrom('chemica:' + metal + '_dust'))
-  ;['iridium', 'magnesium', 'silver', 'tantalum', 'tin', 'titanium'].forEach(metal => event.removeAllTagsFrom('chemica:' + metal + '_sheet'))
-  // Chemica's brine recipe looks salt up by tag
-  event.add('c:dusts/salt', 'tfc:powder/salt')
 })

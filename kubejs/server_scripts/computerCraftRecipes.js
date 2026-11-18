@@ -88,7 +88,7 @@ ServerEvents.recipes(event => {
         C: 'create:item_vault',
         D: 'create:mechanical_arm',
         E: 'tfmg:steel_cogwheel',
-        F: 'tfmg:steel_casing_cable_hub',
+        F: 'tfmg:steel_casing',
         H: 'vintageimprovements:constantan_spring',
         I: 'tfc_metallurgy:metal/sheet/titanium',
         J: 'minecraft:daylight_detector',
@@ -112,7 +112,7 @@ ServerEvents.recipes(event => {
         C: 'create:item_vault',
         D: 'create:mechanical_arm',
         E: 'tfmg:steel_cogwheel',
-        F: 'tfmg:steel_casing_cable_hub',
+        F: 'tfmg:steel_casing',
         H: 'vintageimprovements:constantan_spring',
         I: 'tfc_metallurgy:metal/sheet/titanium',
         J: 'minecraft:daylight_detector',
@@ -120,12 +120,7 @@ ServerEvents.recipes(event => {
         L: 'create_new_age:advanced_motor'
       }
     )
-    // TODO: This doesn't work. I must find a way of applying upgrades to turtles
-    event.replaceInput(
-      { id: 'computercraft:turtle_upgrade' }, // Arg 1: the filter
-      'minecraft:diamond_shovel',            // Arg 2: the item to replace
-      'tfc_metallurgy:metal/shovel/tungsten_steel'         // Arg 3: the item to replace it with
-    )
+    // TODO: turtle upgrades are a special recipe without ingredients, so the diamond shovel can't be swapped here
     event.remove('computercraft:wired_modem')
     event.recipes.create.mechanical_crafting(
       Item.of('computercraft:wired_modem', 1),

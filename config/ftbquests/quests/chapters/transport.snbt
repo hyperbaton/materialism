@@ -14,7 +14,6 @@
 			id: "49C7E4F3BC22BF98"
 			linked_quest: "641F53332629C0AE"
 			shape: "circle"
-			size: 1.0d
 			x: 0.0d
 			y: 0.0d
 		}
@@ -22,7 +21,6 @@
 			id: "7D4B5F5F8F0F9E97"
 			linked_quest: "1762504B49554E6B"
 			shape: "circle"
-			size: 1.0d
 			x: 4.5d
 			y: 2.5d
 		}
@@ -30,7 +28,6 @@
 			id: "1A393C4B7516893E"
 			linked_quest: "72D7A1330C6A3D2E"
 			shape: "circle"
-			size: 1.0d
 			x: 0.0d
 			y: 5.5d
 		}
@@ -44,15 +41,13 @@
 			id: "3E5A9E3DFCF4EA22"
 			shape: "rsquare"
 			size: 1.5d
-			tasks: [
-				{
-					consume_items: false
-					count: 16L
-					id: "44ACFB9E3B487610"
-					item: { count: 1, id: "create:track" }
-					type: "item"
-				}
-			]
+			tasks: [{
+				consume_items: false
+				count: 16L
+				id: "44ACFB9E3B487610"
+				item: { count: 1, id: "create:track" }
+				type: "item"
+			}]
 			x: 2.25d
 			y: 0.0d
 		}
@@ -65,34 +60,33 @@
 			optional: true
 			shape: "square"
 			size: 0.75d
-			tasks: [
-				{
-					consume_items: false
-					id: "798224DFB08F170B"
-					item: { count: 1, id: "railways:handcar" }
-					type: "item"
-				}
-			]
+			tasks: [{
+				consume_items: false
+				id: "798224DFB08F170B"
+				item: { count: 1, id: "railways:handcar" }
+				type: "item"
+			}]
 			x: 2.25d
 			y: 2.25d
 		}
 		{
-			dependencies: ["3E5A9E3DFCF4EA22", "1762504B49554E6B"]
+			dependencies: [
+				"3E5A9E3DFCF4EA22"
+				"1762504B49554E6B"
+			]
 			icon: {
 				id: "create:railway_casing"
 			}
 			id: "0C6E38DEB042A686"
 			shape: "circle"
 			size: 1.0d
-			tasks: [
-				{
-					consume_items: false
-					count: 4L
-					id: "3DCB38BC6809792E"
-					item: { count: 1, id: "create:railway_casing" }
-					type: "item"
-				}
-			]
+			tasks: [{
+				consume_items: false
+				count: 4L
+				id: "3DCB38BC6809792E"
+				item: { count: 1, id: "create:railway_casing" }
+				type: "item"
+			}]
 			x: 4.5d
 			y: 0.0d
 		}
@@ -129,14 +123,12 @@
 			optional: true
 			shape: "square"
 			size: 0.75d
-			tasks: [
-				{
-					consume_items: false
-					id: "4DC87F3D5CA73CFD"
-					item: { count: 1, id: "electroenergetics:red_electric_motor" }
-					type: "item"
-				}
-			]
+			tasks: [{
+				consume_items: false
+				id: "4DC87F3D5CA73CFD"
+				item: { count: 1, id: "electroenergetics:red_electric_motor" }
+				type: "item"
+			}]
 			x: 6.5d
 			y: -2.0d
 		}
@@ -149,15 +141,13 @@
 			optional: true
 			shape: "square"
 			size: 0.75d
-			tasks: [
-				{
-					consume_items: false
-					count: 4L
-					id: "3A4AC525E1CA230B"
-					item: { count: 1, id: "electroenergetics:catenary_holder" }
-					type: "item"
-				}
-			]
+			tasks: [{
+				consume_items: false
+				count: 4L
+				id: "3A4AC525E1CA230B"
+				item: { count: 1, id: "electroenergetics:catenary_holder" }
+				type: "item"
+			}]
 			x: 8.5d
 			y: -2.0d
 		}
@@ -170,14 +160,12 @@
 			optional: true
 			shape: "square"
 			size: 0.75d
-			tasks: [
-				{
-					consume_items: false
-					id: "04766B6145CA9675"
-					item: { components: { "ftbfiltersystem:filter": "ftbfiltersystem:or(ftbfiltersystem:item(electroenergetics:pantograph)ftbfiltersystem:item(electroenergetics:rail_contact_shoe))" }, count: 1, id: "ftbfiltersystem:smart_filter" }
-					type: "item"
-				}
-			]
+			tasks: [{
+				consume_items: false
+				id: "04766B6145CA9675"
+				item: { components: { "ftbfiltersystem:filter": "ftbfiltersystem:or(ftbfiltersystem:item(electroenergetics:pantograph)ftbfiltersystem:item(electroenergetics:rail_contact_shoe))" }, count: 1, id: "ftbfiltersystem:smart_filter" }
+				type: "item"
+			}]
 			x: 10.5d
 			y: -2.0d
 		}
@@ -188,14 +176,12 @@
 			id: "401444CCB5108E24"
 			shape: "circle"
 			size: 1.0d
-			tasks: [
-				{
-					consume_items: false
-					id: "50583984359679D8"
-					item: { count: 1, id: "create:sturdy_sheet" }
-					type: "item"
-				}
-			]
+			tasks: [{
+				consume_items: false
+				id: "50583984359679D8"
+				item: { count: 1, id: "create:sturdy_sheet" }
+				type: "item"
+			}]
 			x: 6.5d
 			y: 2.0d
 		}
@@ -208,53 +194,53 @@
 			optional: true
 			shape: "square"
 			size: 0.75d
-			tasks: [
-				{
-					consume_items: false
-					id: "2EB3A14C042EBABA"
-					item: { count: 1, id: "railways:fuel_tank" }
-					type: "item"
-				}
-			]
+			tasks: [{
+				consume_items: false
+				id: "2EB3A14C042EBABA"
+				item: { count: 1, id: "railways:fuel_tank" }
+				type: "item"
+			}]
 			x: 8.5d
 			y: 2.0d
 		}
 		{
-			dependencies: ["192B14FD9C954D1B", "401444CCB5108E24"]
+			dependencies: [
+				"192B14FD9C954D1B"
+				"401444CCB5108E24"
+			]
 			icon: {
 				id: "create:schedule"
 			}
 			id: "30A70A42790719CD"
 			shape: "gear"
 			size: 2.5d
-			tasks: [
-				{
-					consume_items: false
-					id: "721DD9B315E29C29"
-					item: { count: 1, id: "create:schedule" }
-					type: "item"
-				}
-			]
+			tasks: [{
+				consume_items: false
+				id: "721DD9B315E29C29"
+				item: { count: 1, id: "create:schedule" }
+				type: "item"
+			}]
 			x: 9.25d
 			y: 0.0d
 		}
 		{
-			dependencies: ["72D7A1330C6A3D2E", "5B3A1CB7F3C8606C"]
+			dependencies: [
+				"72D7A1330C6A3D2E"
+				"5B3A1CB7F3C8606C"
+			]
 			icon: {
 				id: "aeronautics:black_envelope"
 			}
 			id: "0FAB8C9EE20D8375"
 			shape: "circle"
 			size: 1.0d
-			tasks: [
-				{
-					consume_items: false
-					count: 4L
-					id: "34F2A19437ABC929"
-					item: { components: { "ftbfiltersystem:filter": "ftbfiltersystem:or(ftbfiltersystem:item(aeronautics:black_envelope)ftbfiltersystem:item(aeronautics:blue_envelope)ftbfiltersystem:item(aeronautics:brown_envelope)ftbfiltersystem:item(aeronautics:cyan_envelope)ftbfiltersystem:item(aeronautics:gray_envelope)ftbfiltersystem:item(aeronautics:green_envelope)ftbfiltersystem:item(aeronautics:light_blue_envelope)ftbfiltersystem:item(aeronautics:light_gray_envelope)ftbfiltersystem:item(aeronautics:lime_envelope)ftbfiltersystem:item(aeronautics:magenta_envelope)ftbfiltersystem:item(aeronautics:orange_envelope)ftbfiltersystem:item(aeronautics:pink_envelope)ftbfiltersystem:item(aeronautics:purple_envelope)ftbfiltersystem:item(aeronautics:red_envelope)ftbfiltersystem:item(aeronautics:white_envelope)ftbfiltersystem:item(aeronautics:yellow_envelope))" }, count: 1, id: "ftbfiltersystem:smart_filter" }
-					type: "item"
-				}
-			]
+			tasks: [{
+				consume_items: false
+				count: 4L
+				id: "34F2A19437ABC929"
+				item: { components: { "ftbfiltersystem:filter": "ftbfiltersystem:or(ftbfiltersystem:item(aeronautics:black_envelope)ftbfiltersystem:item(aeronautics:blue_envelope)ftbfiltersystem:item(aeronautics:brown_envelope)ftbfiltersystem:item(aeronautics:cyan_envelope)ftbfiltersystem:item(aeronautics:gray_envelope)ftbfiltersystem:item(aeronautics:green_envelope)ftbfiltersystem:item(aeronautics:light_blue_envelope)ftbfiltersystem:item(aeronautics:light_gray_envelope)ftbfiltersystem:item(aeronautics:lime_envelope)ftbfiltersystem:item(aeronautics:magenta_envelope)ftbfiltersystem:item(aeronautics:orange_envelope)ftbfiltersystem:item(aeronautics:pink_envelope)ftbfiltersystem:item(aeronautics:purple_envelope)ftbfiltersystem:item(aeronautics:red_envelope)ftbfiltersystem:item(aeronautics:white_envelope)ftbfiltersystem:item(aeronautics:yellow_envelope))" }, count: 1, id: "ftbfiltersystem:smart_filter" }
+				type: "item"
+			}]
 			x: 2.0d
 			y: 5.5d
 		}
@@ -266,14 +252,12 @@
 			id: "4B0A9149EAD22D08"
 			shape: "circle"
 			size: 1.0d
-			tasks: [
-				{
-					consume_items: false
-					id: "6BDC749B1AAB0CA9"
-					item: { count: 1, id: "aeronautics:levitite" }
-					type: "item"
-				}
-			]
+			tasks: [{
+				consume_items: false
+				id: "6BDC749B1AAB0CA9"
+				item: { count: 1, id: "aeronautics:levitite" }
+				type: "item"
+			}]
 			x: 2.0d
 			y: 7.25d
 		}
@@ -310,14 +294,12 @@
 			id: "4433C839478DCF32"
 			shape: "circle"
 			size: 1.0d
-			tasks: [
-				{
-					consume_items: false
-					id: "7FE8F72601C9A528"
-					item: { count: 1, id: "aeronautics:propeller_bearing" }
-					type: "item"
-				}
-			]
+			tasks: [{
+				consume_items: false
+				id: "7FE8F72601C9A528"
+				item: { count: 1, id: "aeronautics:propeller_bearing" }
+				type: "item"
+			}]
 			x: 4.5d
 			y: 5.5d
 		}
@@ -329,14 +311,12 @@
 			id: "5A5D0574E0412953"
 			shape: "circle"
 			size: 1.0d
-			tasks: [
-				{
-					consume_items: false
-					id: "4420D870997D5AA5"
-					item: { count: 1, id: "aeronautics:adjustable_burner" }
-					type: "item"
-				}
-			]
+			tasks: [{
+				consume_items: false
+				id: "4420D870997D5AA5"
+				item: { count: 1, id: "aeronautics:adjustable_burner" }
+				type: "item"
+			}]
 			x: 6.5d
 			y: 5.5d
 		}

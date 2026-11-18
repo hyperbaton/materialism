@@ -4,6 +4,12 @@
 	filename: "kitchen"
 	group: "577AA6560051154F"
 	icon: {
+		components: {
+			"tfc:food": {
+				creation_date: 8114400L
+			}
+			"tfc:heat": { }
+		}
 		id: "tfc:food/wheat_bread"
 	}
 	id: "6F16368DBECD0DF0"
@@ -14,7 +20,6 @@
 			id: "4AA8204723AE285F"
 			linked_quest: "350143738DB87511"
 			shape: "circle"
-			size: 1.0d
 			x: 0.0d
 			y: 0.0d
 		}
@@ -22,7 +27,6 @@
 			id: "083C9F3EDC79F5CE"
 			linked_quest: "793D0625A66AE2A8"
 			shape: "circle"
-			size: 1.0d
 			x: 0.0d
 			y: 5.5d
 		}
@@ -30,7 +34,6 @@
 			id: "5F94419B12924736"
 			linked_quest: "7F2AA28BA5AF974D"
 			shape: "circle"
-			size: 1.0d
 			x: 0.0d
 			y: 11.0d
 		}
@@ -43,12 +46,10 @@
 			id: "3E5FC387D3058DB7"
 			shape: "diamond"
 			size: 1.0d
-			tasks: [
-				{
-					id: "41ECCE478D3A55F8"
-					type: "checkmark"
-				}
-			]
+			tasks: [{
+				id: "41ECCE478D3A55F8"
+				type: "checkmark"
+			}]
 			x: 0.0d
 			y: 2.0d
 		}
@@ -79,17 +80,18 @@
 		{
 			dependencies: ["350143738DB87511"]
 			icon: {
+				components: {
+					"tfc:heat": { }
+				}
 				id: "tfc:metal/hoe/copper"
 			}
 			id: "57368A5DB1A6E55F"
 			shape: "circle"
 			size: 1.0d
-			tasks: [
-				{
-					id: "1CD87B60C48C5F40"
-					type: "checkmark"
-				}
-			]
+			tasks: [{
+				id: "1CD87B60C48C5F40"
+				type: "checkmark"
+			}]
 			x: 2.0d
 			y: 0.0d
 		}
@@ -101,14 +103,12 @@
 			id: "01C50AEAAF53CA9B"
 			shape: "circle"
 			size: 1.0d
-			tasks: [
-				{
-					consume_items: false
-					id: "732F2BFC4A54926D"
-					item: { count: 1, id: "tfc:composter" }
-					type: "item"
-				}
-			]
+			tasks: [{
+				consume_items: false
+				id: "732F2BFC4A54926D"
+				item: { count: 1, id: "tfc:composter" }
+				type: "item"
+			}]
 			x: 2.0d
 			y: -2.0d
 		}
@@ -121,14 +121,12 @@
 			optional: true
 			shape: "square"
 			size: 0.75d
-			tasks: [
-				{
-					consume_items: false
-					id: "6F7AA0587E35293A"
-					item: { count: 1, id: "firmalife:watering_can" }
-					type: "item"
-				}
-			]
+			tasks: [{
+				consume_items: false
+				id: "6F7AA0587E35293A"
+				item: { count: 1, id: "firmalife:watering_can" }
+				type: "item"
+			}]
 			x: 3.5d
 			y: -2.0d
 		}
@@ -141,14 +139,12 @@
 			optional: true
 			shape: "square"
 			size: 0.75d
-			tasks: [
-				{
-					consume_items: false
-					id: "0B2BA31F733A1BC2"
-					item: { components: { "ftbfiltersystem:filter": "ftbfiltersystem:item_tag(tfcastikorcarts:plow)" }, count: 1, id: "ftbfiltersystem:smart_filter" }
-					type: "item"
-				}
-			]
+			tasks: [{
+				consume_items: false
+				id: "0B2BA31F733A1BC2"
+				item: { components: { "ftbfiltersystem:filter": "ftbfiltersystem:item_tag(tfcastikorcarts:plow)" }, count: 1, id: "ftbfiltersystem:smart_filter" }
+				type: "item"
+			}]
 			x: 2.0d
 			y: 2.0d
 		}
@@ -160,90 +156,101 @@
 			id: "632860AB69C89D7A"
 			shape: "circle"
 			size: 1.0d
-			tasks: [
-				{
-					consume_items: false
-					id: "4C8E4DC058E6934D"
-					item: { count: 1, id: "firmalife:drying_mat" }
-					type: "item"
-				}
-			]
+			tasks: [{
+				consume_items: false
+				id: "4C8E4DC058E6934D"
+				item: { count: 1, id: "firmalife:drying_mat" }
+				type: "item"
+			}]
 			x: 3.5d
 			y: 2.0d
 		}
 		{
 			dependencies: ["57368A5DB1A6E55F"]
 			icon: {
+				components: {
+					"tfc:food": {
+						creation_date: 8114400L
+					}
+				}
 				id: "tfc:food/barley_grain"
 			}
 			id: "00692C25ECDC24CF"
 			shape: "circle"
 			size: 1.0d
-			tasks: [
-				{
-					consume_items: false
-					id: "175E0E0966B0C3BD"
-					item: { components: { "ftbfiltersystem:filter": "ftbfiltersystem:or(ftbfiltersystem:item(tfc:food/barley_grain)ftbfiltersystem:item(tfc:food/maize_grain)ftbfiltersystem:item(tfc:food/oat_grain)ftbfiltersystem:item(tfc:food/rice_grain)ftbfiltersystem:item(tfc:food/rye_grain)ftbfiltersystem:item(tfc:food/wheat_grain))" }, count: 1, id: "ftbfiltersystem:smart_filter" }
-					type: "item"
-				}
-			]
+			tasks: [{
+				consume_items: false
+				id: "175E0E0966B0C3BD"
+				item: { components: { "ftbfiltersystem:filter": "ftbfiltersystem:or(ftbfiltersystem:item(tfc:food/barley_grain)ftbfiltersystem:item(tfc:food/maize_grain)ftbfiltersystem:item(tfc:food/oat_grain)ftbfiltersystem:item(tfc:food/rice_grain)ftbfiltersystem:item(tfc:food/rye_grain)ftbfiltersystem:item(tfc:food/wheat_grain))" }, count: 1, id: "ftbfiltersystem:smart_filter" }
+				type: "item"
+			}]
 			x: 4.0d
 			y: 0.0d
 		}
 		{
 			dependencies: ["00692C25ECDC24CF"]
 			icon: {
+				components: {
+					"tfc:food": {
+						creation_date: 8114400L
+					}
+				}
 				id: "tfc:food/barley_flour"
 			}
 			id: "5083D752EE15991F"
 			shape: "circle"
 			size: 1.0d
-			tasks: [
-				{
-					consume_items: false
-					id: "4E2C069A74F524C1"
-					item: { components: { "ftbfiltersystem:filter": "ftbfiltersystem:item_tag(c:foods/flour)" }, count: 1, id: "ftbfiltersystem:smart_filter" }
-					type: "item"
-				}
-			]
+			tasks: [{
+				consume_items: false
+				id: "4E2C069A74F524C1"
+				item: { components: { "ftbfiltersystem:filter": "ftbfiltersystem:item_tag(c:foods/flour)" }, count: 1, id: "ftbfiltersystem:smart_filter" }
+				type: "item"
+			}]
 			x: 6.0d
 			y: 0.0d
 		}
 		{
 			dependencies: ["5083D752EE15991F"]
 			icon: {
+				components: {
+					"tfc:food": {
+						creation_date: 8114400L
+					}
+					"tfc:heat": { }
+				}
 				id: "tfc:food/barley_dough"
 			}
 			id: "2CC8FC77F958A017"
 			shape: "circle"
 			size: 1.0d
-			tasks: [
-				{
-					consume_items: false
-					id: "2C935DA2690FE346"
-					item: { components: { "ftbfiltersystem:filter": "ftbfiltersystem:or(ftbfiltersystem:item(tfc:food/wheat_dough)ftbfiltersystem:item(tfc:food/barley_dough)ftbfiltersystem:item(tfc:food/oat_dough)ftbfiltersystem:item(tfc:food/rye_dough)ftbfiltersystem:item(tfc:food/rice_dough)ftbfiltersystem:item(tfc:food/maize_dough))" }, count: 1, id: "ftbfiltersystem:smart_filter" }
-					type: "item"
-				}
-			]
+			tasks: [{
+				consume_items: false
+				id: "2C935DA2690FE346"
+				item: { components: { "ftbfiltersystem:filter": "ftbfiltersystem:or(ftbfiltersystem:item(tfc:food/wheat_dough)ftbfiltersystem:item(tfc:food/barley_dough)ftbfiltersystem:item(tfc:food/oat_dough)ftbfiltersystem:item(tfc:food/rye_dough)ftbfiltersystem:item(tfc:food/rice_dough)ftbfiltersystem:item(tfc:food/maize_dough))" }, count: 1, id: "ftbfiltersystem:smart_filter" }
+				type: "item"
+			}]
 			x: 8.0d
 			y: 0.0d
 		}
 		{
 			dependencies: ["2CC8FC77F958A017"]
 			icon: {
+				components: {
+					"tfc:food": {
+						creation_date: 8114400L
+					}
+				}
 				id: "firmalife:food/barley_flatbread"
 			}
 			id: "2C65EDAB655EA590"
 			shape: "rsquare"
 			size: 1.5d
-			tasks: [
-				{
-					consume_items: false
-					id: "06D751939BEAE9AF"
-					item: { components: { "ftbfiltersystem:filter": "ftbfiltersystem:item_tag(firmalife:foods/flatbreads)" }, count: 1, id: "ftbfiltersystem:smart_filter" }
-					type: "item"
-				}
-			]
+			tasks: [{
+				consume_items: false
+				id: "06D751939BEAE9AF"
+				item: { components: { "ftbfiltersystem:filter": "ftbfiltersystem:item_tag(firmalife:foods/flatbreads)" }, count: 1, id: "ftbfiltersystem:smart_filter" }
+				type: "item"
+			}]
 			x: 10.25d
 			y: 0.0d
 		}
@@ -254,33 +261,34 @@
 			id: "3EDE7C41BD17EF02"
 			shape: "circle"
 			size: 1.0d
-			tasks: [
-				{
-					consume_items: false
-					id: "2971FBBC57AE3272"
-					item: { count: 1, id: "tfc:ceramic/pot" }
-					type: "item"
-				}
-			]
+			tasks: [{
+				consume_items: false
+				id: "2971FBBC57AE3272"
+				item: { count: 1, id: "tfc:ceramic/pot" }
+				type: "item"
+			}]
 			x: 10.25d
 			y: -2.25d
 		}
 		{
 			dependencies: ["3EDE7C41BD17EF02"]
 			icon: {
+				components: {
+					"tfc:food": {
+						creation_date: 8114400L
+					}
+				}
 				id: "tfc:food/dairy_soup"
 			}
 			id: "47126BE81ECEF098"
 			shape: "circle"
 			size: 1.0d
-			tasks: [
-				{
-					consume_items: false
-					id: "53EDFEFF1AAA1770"
-					item: { components: { "ftbfiltersystem:filter": "ftbfiltersystem:or(ftbfiltersystem:item(tfc:food/dairy_soup)ftbfiltersystem:item(tfc:food/fruit_soup)ftbfiltersystem:item(tfc:food/grain_soup)ftbfiltersystem:item(tfc:food/protein_soup)ftbfiltersystem:item(tfc:food/vegetables_soup))" }, count: 1, id: "ftbfiltersystem:smart_filter" }
-					type: "item"
-				}
-			]
+			tasks: [{
+				consume_items: false
+				id: "53EDFEFF1AAA1770"
+				item: { components: { "ftbfiltersystem:filter": "ftbfiltersystem:or(ftbfiltersystem:item(tfc:food/dairy_soup)ftbfiltersystem:item(tfc:food/fruit_soup)ftbfiltersystem:item(tfc:food/grain_soup)ftbfiltersystem:item(tfc:food/protein_soup)ftbfiltersystem:item(tfc:food/vegetables_soup))" }, count: 1, id: "ftbfiltersystem:smart_filter" }
+				type: "item"
+			}]
 			x: 10.25d
 			y: -3.75d
 		}
@@ -292,31 +300,36 @@
 			id: "6C082622A7E0F297"
 			shape: "circle"
 			size: 1.0d
-			tasks: [
-				{
-					id: "7F44AC10CAB32059"
-					type: "checkmark"
-				}
-			]
+			tasks: [{
+				id: "7F44AC10CAB32059"
+				type: "checkmark"
+			}]
 			x: 12.5d
 			y: 0.0d
 		}
 		{
-			dependencies: ["6C082622A7E0F297", "0A253AABD7DDBB64"]
+			dependencies: [
+				"6C082622A7E0F297"
+				"0A253AABD7DDBB64"
+			]
 			icon: {
+				components: {
+					"tfc:food": {
+						creation_date: 8114400L
+					}
+					"tfc:heat": { }
+				}
 				id: "firmalife:food/barley_dough"
 			}
 			id: "552159A3BB45BCDD"
 			shape: "circle"
 			size: 1.0d
-			tasks: [
-				{
-					consume_items: false
-					id: "2C90543F5B454958"
-					item: { components: { "ftbfiltersystem:filter": "ftbfiltersystem:or(ftbfiltersystem:item(firmalife:food/wheat_dough)ftbfiltersystem:item(firmalife:food/barley_dough)ftbfiltersystem:item(firmalife:food/oat_dough)ftbfiltersystem:item(firmalife:food/rye_dough)ftbfiltersystem:item(firmalife:food/rice_dough)ftbfiltersystem:item(firmalife:food/maize_dough))" }, count: 1, id: "ftbfiltersystem:smart_filter" }
-					type: "item"
-				}
-			]
+			tasks: [{
+				consume_items: false
+				id: "2C90543F5B454958"
+				item: { components: { "ftbfiltersystem:filter": "ftbfiltersystem:or(ftbfiltersystem:item(firmalife:food/wheat_dough)ftbfiltersystem:item(firmalife:food/barley_dough)ftbfiltersystem:item(firmalife:food/oat_dough)ftbfiltersystem:item(firmalife:food/rye_dough)ftbfiltersystem:item(firmalife:food/rice_dough)ftbfiltersystem:item(firmalife:food/maize_dough))" }, count: 1, id: "ftbfiltersystem:smart_filter" }
+				type: "item"
+			}]
 			x: 14.5d
 			y: 0.0d
 		}
@@ -327,14 +340,12 @@
 			id: "0A253AABD7DDBB64"
 			shape: "circle"
 			size: 1.0d
-			tasks: [
-				{
-					consume_items: false
-					id: "326F44382AEE5347"
-					item: { components: { "ftbfiltersystem:filter": "ftbfiltersystem:item_tag(tfc:foods/sweeteners)" }, count: 1, id: "ftbfiltersystem:smart_filter" }
-					type: "item"
-				}
-			]
+			tasks: [{
+				consume_items: false
+				id: "326F44382AEE5347"
+				item: { components: { "ftbfiltersystem:filter": "ftbfiltersystem:item_tag(tfc:foods/sweeteners)" }, count: 1, id: "ftbfiltersystem:smart_filter" }
+				type: "item"
+			}]
 			x: 14.5d
 			y: 2.0d
 		}
@@ -369,40 +380,50 @@
 			y: -2.0d
 		}
 		{
-			dependencies: ["552159A3BB45BCDD", "678487C51E9C1F84"]
+			dependencies: [
+				"552159A3BB45BCDD"
+				"678487C51E9C1F84"
+			]
 			icon: {
+				components: {
+					"tfc:food": {
+						creation_date: 8114400L
+					}
+					"tfc:heat": { }
+				}
 				id: "tfc:food/barley_bread"
 			}
 			id: "2EB8CBC82AC8B5A2"
 			shape: "rsquare"
 			size: 2.0d
-			tasks: [
-				{
-					consume_items: false
-					id: "3849BC61F299946A"
-					item: { components: { "ftbfiltersystem:filter": "ftbfiltersystem:item_tag(c:foods/bread)" }, count: 1, id: "ftbfiltersystem:smart_filter" }
-					type: "item"
-				}
-			]
+			tasks: [{
+				consume_items: false
+				id: "3849BC61F299946A"
+				item: { components: { "ftbfiltersystem:filter": "ftbfiltersystem:item_tag(c:foods/bread)" }, count: 1, id: "ftbfiltersystem:smart_filter" }
+				type: "item"
+			}]
 			x: 17.0d
 			y: 0.0d
 		}
 		{
 			dependencies: ["2EB8CBC82AC8B5A2"]
 			icon: {
+				components: {
+					"tfc:food": {
+						creation_date: 8114400L
+					}
+				}
 				id: "tfc:food/barley_bread_jam_sandwich"
 			}
 			id: "0514543B6C3575DB"
 			shape: "gear"
 			size: 2.5d
-			tasks: [
-				{
-					consume_items: false
-					id: "6560715183F3A91D"
-					item: { components: { "ftbfiltersystem:filter": "ftbfiltersystem:or(ftbfiltersystem:item(tfc:food/barley_bread_jam_sandwich)ftbfiltersystem:item(tfc:food/barley_bread_sandwich)ftbfiltersystem:item(tfc:food/maize_bread_jam_sandwich)ftbfiltersystem:item(tfc:food/maize_bread_sandwich)ftbfiltersystem:item(tfc:food/oat_bread_jam_sandwich)ftbfiltersystem:item(tfc:food/oat_bread_sandwich)ftbfiltersystem:item(tfc:food/rice_bread_jam_sandwich)ftbfiltersystem:item(tfc:food/rice_bread_sandwich)ftbfiltersystem:item(tfc:food/rye_bread_jam_sandwich)ftbfiltersystem:item(tfc:food/rye_bread_sandwich)ftbfiltersystem:item(tfc:food/wheat_bread_jam_sandwich)ftbfiltersystem:item(tfc:food/wheat_bread_sandwich))" }, count: 1, id: "ftbfiltersystem:smart_filter" }
-					type: "item"
-				}
-			]
+			tasks: [{
+				consume_items: false
+				id: "6560715183F3A91D"
+				item: { components: { "ftbfiltersystem:filter": "ftbfiltersystem:or(ftbfiltersystem:item(tfc:food/barley_bread_jam_sandwich)ftbfiltersystem:item(tfc:food/barley_bread_sandwich)ftbfiltersystem:item(tfc:food/maize_bread_jam_sandwich)ftbfiltersystem:item(tfc:food/maize_bread_sandwich)ftbfiltersystem:item(tfc:food/oat_bread_jam_sandwich)ftbfiltersystem:item(tfc:food/oat_bread_sandwich)ftbfiltersystem:item(tfc:food/rice_bread_jam_sandwich)ftbfiltersystem:item(tfc:food/rice_bread_sandwich)ftbfiltersystem:item(tfc:food/rye_bread_jam_sandwich)ftbfiltersystem:item(tfc:food/rye_bread_sandwich)ftbfiltersystem:item(tfc:food/wheat_bread_jam_sandwich)ftbfiltersystem:item(tfc:food/wheat_bread_sandwich))" }, count: 1, id: "ftbfiltersystem:smart_filter" }
+				type: "item"
+			}]
 			x: 20.25d
 			y: 0.0d
 		}
@@ -414,14 +435,12 @@
 			id: "32AAC8F2AA2C2E0B"
 			shape: "circle"
 			size: 1.0d
-			tasks: [
-				{
-					consume_items: false
-					id: "01F98F40177F318F"
-					item: { count: 1, id: "tfc:nest_box" }
-					type: "item"
-				}
-			]
+			tasks: [{
+				consume_items: false
+				id: "01F98F40177F318F"
+				item: { count: 1, id: "tfc:nest_box" }
+				type: "item"
+			}]
 			x: 2.0d
 			y: 5.5d
 		}
@@ -433,15 +452,13 @@
 			id: "14BF9FB7BE332D67"
 			shape: "circle"
 			size: 1.0d
-			tasks: [
-				{
-					consume_items: false
-					count: 8L
-					id: "08C90D3376582A2F"
-					item: { count: 1, id: "tfc:wool_yarn" }
-					type: "item"
-				}
-			]
+			tasks: [{
+				consume_items: false
+				count: 8L
+				id: "08C90D3376582A2F"
+				item: { count: 1, id: "tfc:wool_yarn" }
+				type: "item"
+			}]
 			x: 2.0d
 			y: 7.5d
 		}
@@ -453,15 +470,13 @@
 			id: "3613EF037DEC492E"
 			shape: "circle"
 			size: 1.0d
-			tasks: [
-				{
-					consume_items: false
-					count: 4L
-					id: "264A3437346465A6"
-					item: { count: 1, id: "tfc:wool_cloth" }
-					type: "item"
-				}
-			]
+			tasks: [{
+				consume_items: false
+				count: 4L
+				id: "264A3437346465A6"
+				item: { count: 1, id: "tfc:wool_cloth" }
+				type: "item"
+			}]
 			x: 4.0d
 			y: 7.5d
 		}
@@ -511,14 +526,12 @@
 			id: "0BF1D0DDE255A8AD"
 			shape: "circle"
 			size: 1.0d
-			tasks: [
-				{
-					consume_items: false
-					id: "2DEDB24A99721BBF"
-					item: { components: { "ftbfiltersystem:filter": "ftbfiltersystem:or(ftbfiltersystem:item(butchery:acacia_butchers_table)ftbfiltersystem:item(butchery:birch_butchers_table)ftbfiltersystem:item(butchery:dark_oak_butchers_table)ftbfiltersystem:item(butchery:jungle_butchers_table)ftbfiltersystem:item(butchery:mangrove_butchers_table)ftbfiltersystem:item(butchery:metal_butchers_table)ftbfiltersystem:item(butchery:oak_butchers_table)ftbfiltersystem:item(butchery:spruce_butchers_table))" }, count: 1, id: "ftbfiltersystem:smart_filter" }
-					type: "item"
-				}
-			]
+			tasks: [{
+				consume_items: false
+				id: "2DEDB24A99721BBF"
+				item: { components: { "ftbfiltersystem:filter": "ftbfiltersystem:or(ftbfiltersystem:item(butchery:acacia_butchers_table)ftbfiltersystem:item(butchery:birch_butchers_table)ftbfiltersystem:item(butchery:dark_oak_butchers_table)ftbfiltersystem:item(butchery:jungle_butchers_table)ftbfiltersystem:item(butchery:mangrove_butchers_table)ftbfiltersystem:item(butchery:metal_butchers_table)ftbfiltersystem:item(butchery:oak_butchers_table)ftbfiltersystem:item(butchery:spruce_butchers_table))" }, count: 1, id: "ftbfiltersystem:smart_filter" }
+				type: "item"
+			}]
 			x: 4.0d
 			y: 5.5d
 		}
@@ -530,14 +543,12 @@
 			id: "29B24E7CD08803F7"
 			shape: "circle"
 			size: 1.0d
-			tasks: [
-				{
-					consume_items: false
-					id: "472974329BC18F7C"
-					item: { count: 1, id: "firmalife:rennet" }
-					type: "item"
-				}
-			]
+			tasks: [{
+				consume_items: false
+				id: "472974329BC18F7C"
+				item: { count: 1, id: "firmalife:rennet" }
+				type: "item"
+			}]
 			x: 6.0d
 			y: 5.5d
 		}
@@ -548,33 +559,37 @@
 			id: "2AD2369395C5D0F7"
 			shape: "circle"
 			size: 1.0d
-			tasks: [
-				{
-					consume_items: false
-					id: "619A3239C66FA86D"
-					item: { count: 1, id: "firmalife:cheesecloth" }
-					type: "item"
-				}
-			]
+			tasks: [{
+				consume_items: false
+				id: "619A3239C66FA86D"
+				item: { count: 1, id: "firmalife:cheesecloth" }
+				type: "item"
+			}]
 			x: 6.0d
 			y: 3.5d
 		}
 		{
-			dependencies: ["29B24E7CD08803F7", "2AD2369395C5D0F7"]
+			dependencies: [
+				"29B24E7CD08803F7"
+				"2AD2369395C5D0F7"
+			]
 			icon: {
+				components: {
+					"tfc:food": {
+						creation_date: 8114400L
+					}
+				}
 				id: "firmalife:food/goat_curd"
 			}
 			id: "5E4C2E7116AF4C33"
 			shape: "circle"
 			size: 1.0d
-			tasks: [
-				{
-					consume_items: false
-					id: "60C58D85D3E217E0"
-					item: { components: { "ftbfiltersystem:filter": "ftbfiltersystem:or(ftbfiltersystem:item(firmalife:food/goat_curd)ftbfiltersystem:item(firmalife:food/milk_curd)ftbfiltersystem:item(firmalife:food/yak_curd))" }, count: 1, id: "ftbfiltersystem:smart_filter" }
-					type: "item"
-				}
-			]
+			tasks: [{
+				consume_items: false
+				id: "60C58D85D3E217E0"
+				item: { components: { "ftbfiltersystem:filter": "ftbfiltersystem:or(ftbfiltersystem:item(firmalife:food/goat_curd)ftbfiltersystem:item(firmalife:food/milk_curd)ftbfiltersystem:item(firmalife:food/yak_curd))" }, count: 1, id: "ftbfiltersystem:smart_filter" }
+				type: "item"
+			}]
 			x: 8.0d
 			y: 5.5d
 		}
@@ -586,85 +601,98 @@
 			id: "5520E413C1D06631"
 			shape: "rsquare"
 			size: 1.5d
-			tasks: [
-				{
-					consume_items: false
-					id: "45EB131EB7946901"
-					item: { components: { "ftbfiltersystem:filter": "ftbfiltersystem:item_tag(firmalife:foods/cheese_wheels)" }, count: 1, id: "ftbfiltersystem:smart_filter" }
-					type: "item"
-				}
-			]
+			tasks: [{
+				consume_items: false
+				id: "45EB131EB7946901"
+				item: { components: { "ftbfiltersystem:filter": "ftbfiltersystem:item_tag(firmalife:foods/cheese_wheels)" }, count: 1, id: "ftbfiltersystem:smart_filter" }
+				type: "item"
+			}]
 			x: 10.25d
 			y: 5.5d
 		}
 		{
 			dependencies: ["7F2AA28BA5AF974D"]
 			icon: {
+				components: {
+					"tfc:food": {
+						creation_date: 8114400L
+					}
+					"tfc:heat": { }
+				}
 				id: "tfc:food/wheat_bread"
 			}
 			id: "21D7D3F69C69CE68"
 			shape: "circle"
 			size: 1.0d
-			tasks: [
-				{
-					id: "56D41FD67B5D255F"
-					type: "checkmark"
-				}
-			]
+			tasks: [{
+				id: "56D41FD67B5D255F"
+				type: "checkmark"
+			}]
 			x: 2.0d
 			y: 11.0d
 		}
 		{
 			dependencies: ["21D7D3F69C69CE68"]
 			icon: {
+				components: {
+					"tfc:food": {
+						creation_date: 8114400L
+					}
+					"tfc:heat": { }
+				}
 				id: "tfc:food/wheat_bread"
 			}
 			id: "70D012101DBA240F"
 			shape: "circle"
 			size: 1.0d
-			tasks: [
-				{
-					id: "3CAE5259A620B072"
-					type: "checkmark"
-				}
-			]
+			tasks: [{
+				id: "3CAE5259A620B072"
+				type: "checkmark"
+			}]
 			x: 4.0d
 			y: 11.0d
 		}
 		{
 			dependencies: ["70D012101DBA240F"]
 			icon: {
+				components: {
+					"tfc:food": {
+						creation_date: 8114400L
+					}
+					"tfc:heat": { }
+				}
 				id: "tfc:food/wheat_bread"
 			}
 			id: "70E133B60DB03C45"
 			optional: true
 			shape: "square"
 			size: 0.75d
-			tasks: [
-				{
-					id: "014763A6180E1175"
-					type: "checkmark"
-				}
-			]
+			tasks: [{
+				id: "014763A6180E1175"
+				type: "checkmark"
+			}]
 			x: 6.0d
 			y: 11.0d
 		}
 		{
 			dependencies: ["7F2AA28BA5AF974D"]
 			icon: {
+				components: {
+					"tfc:food": {
+						creation_date: 8114400L
+					}
+				}
 				id: "tfc:jar/banana"
 			}
 			id: "49A7FEC73A8756E3"
 			shape: "circle"
 			size: 1.0d
-			tasks: [
-				{
-					consume_items: false
-					id: "61649104D8225A14"
-					item: { components: { "ftbfiltersystem:filter": "ftbfiltersystem:item_tag(tfc:foods/sealed_preserves)" }, count: 1, id: "ftbfiltersystem:smart_filter" }
-					type: "item"
-				}
-			]
+			tasks: [{
+				consume_items: false
+				id: "61649104D8225A14"
+				item: { components: { "ftbfiltersystem:filter": "ftbfiltersystem:item_tag(tfc:foods/sealed_preserves)" }, count: 1, id: "ftbfiltersystem:smart_filter" }
+				type: "item"
+			}]
 			x: 2.0d
 			y: 12.75d
 		}

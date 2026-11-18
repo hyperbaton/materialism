@@ -10,9 +10,9 @@ const COLORS = ['white', 'orange', 'magenta', 'light_blue', 'yellow', 'lime', 'p
 const DND_COLORS = COLORS.concat(['amber', 'aqua', 'beige', 'coral', 'forest', 'ginger', 'indigo', 'maroon',
     'mint', 'navy', 'olive', 'rose', 'slate', 'tan', 'teal', 'verdant'])
 
-const METAL_ALIASES = ['iron', 'golden', 'igneous_extrusive', 'igneous_intrusive', 'metamorphic', 'sedimentary']
+const METAL_ALIASES = ['iron', 'golden', 'igneous_extrusive', 'igneous_intrusive', 'metamorphic', 'sedimentary', 'obsidian']
 
-const METAL_SOURCES = /^((tfc|tfc_metallurgy|firmalife|kubejs|rnr|tfc_metal_things):metal\/|tfc:stone\/|tfc_items:|tfc_metallurgy:[a-z_]+_bars$|kubejs:wire\/[a-z_]+_wire$|chemica:[a-z_]+_dust$|(vintageimprovements|createaddition):[a-z_]+_wire$)/
+const METAL_SOURCES = /^((tfc|tfc_metallurgy|firmalife|kubejs|rnr|tfc_metal_things):metal\/|tfc:(stone\/|obsidian_)|tfc_items:|tfc_metallurgy:[a-z_]+_bars$|kubejs:wire\/[a-z_]+_wire$|chemica:[a-z_]+_dust$|(vintageimprovements|createaddition):[a-z_]+_wire$)/
 
 const CBC_METALS = ['bronze', 'cast_iron', 'steel', 'nethersteel', 'wrought_iron']
 
@@ -45,6 +45,9 @@ function metalKey(key) {
         .replace(/^tfc_metallurgy:#_bars$/, 'tfc:metal/bars/#')
         .replace(/^tfc:stone\/knife_head\//, 'tfc:metal/knife_blade/')
         .replace(/^tfc:stone\//, 'tfc:metal/')
+        .replace(/^tfc:#_knife_head$/, 'tfc:metal/knife_blade/#')
+        .replace(/^tfc:#_macuahuitl$/, 'tfc:metal/sword/#')
+        .replace(/^tfc:#_([a-z_]+)$/, 'tfc:metal/$1/#')
         .replace(/^kubejs:wire\/#_wire$/, 'tfc:metal/wire/#')
         .replace(/^chemica:#_dust$/, 'tfc:metal/dust/#')
         .replace(/^(tfc_items|vintageimprovements|createaddition):#_([a-z_]+)$/, 'tfc:metal/$2/#')
@@ -164,7 +167,7 @@ const EXPLICIT = [
     ['gems', 'Gems', /^tfc:gem\/[a-z_]+$/],
     ['raw_gems', 'Raw Gems', new RegExp('^tfc:ore\\/' + GEMS + '$')],
     ['gem_powders', 'Gem Powders', new RegExp('^tfc:powder\\/' + GEMS + '$')],
-    ['minerals', 'Minerals', /^(tfc:ore\/(bituminous_coal|borax|cinnabar|cryolite|graphite|gypsum|halite|lignite|saltpeter|sulfur|sylvite)|tfc_metallurgy:ore\/certus_quartz|kubejs:ore\/(fluorite|phosphorite)|tfcvolcanoes:mineral\/(?!powder\/)[a-z_]+(\/prospected)?)$/],
+    ['minerals', 'Minerals', /^(tfc:ore\/(bituminous_coal|borax|cinnabar|cryolite|graphite|gypsum|halite|lignite|saltpeter|sulfur|sylvite)|tfc_metallurgy:ore\/certus_quartz|tfc:groundcover\/(obsidian_shard|pumice)|kubejs:ore\/(fluorite|phosphorite)|tfcvolcanoes:mineral\/(?!powder\/)[a-z_]+(\/prospected)?)$/],
     ['mineral_powders', 'Mineral Powders', /^(tfc:powder\/(flux|graphite|kaolinite|lime|salt|saltpeter|soda_ash|sulfur|sylvite)|tfcvolcanoes:mineral\/powder\/[a-z_]+|chemica:(fluorite|phosphorus)_dust)$/],
     ['ore_powders', 'Ore Powders', /^tfc:powder\/(bismuthinite|cassiterite|garnierite|hematite|limonite|magnetite|malachite|native_copper|native_gold|native_silver|sphalerite|tetrahedrite)$/],
     ['create_metal_blocks', 'Metal Blocks (Create)', /^(create:(brass|zinc)_block|createaddition:electrum_block|tfmg:(aluminum|cast_iron|lead|lithium|nickel|steel)_block|vintageimprovements:vanadium_block|createbigcannons:(bronze|cast_iron|steel|nethersteel)_block)$/],

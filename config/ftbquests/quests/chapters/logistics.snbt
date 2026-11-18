@@ -9,16 +9,13 @@
 	id: "47F53FBD6F007B8F"
 	images: [ ]
 	order_index: 0
-	quest_links: [
-		{
-			id: "7BCBCF3AB31B84DA"
-			linked_quest: "6C243AC6C9FA913E"
-			shape: "circle"
-			size: 1.0d
-			x: 0.0d
-			y: 0.0d
-		}
-	]
+	quest_links: [{
+		id: "7BCBCF3AB31B84DA"
+		linked_quest: "6C243AC6C9FA913E"
+		shape: "circle"
+		x: 0.0d
+		y: 0.0d
+	}]
 	quests: [
 		{
 			dependencies: ["6C243AC6C9FA913E"]
@@ -29,14 +26,12 @@
 			optional: true
 			shape: "square"
 			size: 0.75d
-			tasks: [
-				{
-					consume_items: false
-					id: "12181D6D5542294F"
-					item: { count: 1, id: "create:smart_chute" }
-					type: "item"
-				}
-			]
+			tasks: [{
+				consume_items: false
+				id: "12181D6D5542294F"
+				item: { count: 1, id: "create:smart_chute" }
+				type: "item"
+			}]
 			x: 2.0d
 			y: -2.0d
 		}
@@ -49,14 +44,12 @@
 			optional: true
 			shape: "square"
 			size: 0.75d
-			tasks: [
-				{
-					consume_items: false
-					id: "28B3FB148E10DE26"
-					item: { count: 1, id: "create:weighted_ejector" }
-					type: "item"
-				}
-			]
+			tasks: [{
+				consume_items: false
+				id: "28B3FB148E10DE26"
+				item: { count: 1, id: "create:weighted_ejector" }
+				type: "item"
+			}]
 			x: 2.0d
 			y: 2.0d
 		}
@@ -95,14 +88,12 @@
 			id: "51D8E4A505697E76"
 			shape: "rsquare"
 			size: 1.5d
-			tasks: [
-				{
-					consume_items: false
-					id: "4C017EAC4F4CEAA2"
-					item: { count: 1, id: "create:mechanical_arm" }
-					type: "item"
-				}
-			]
+			tasks: [{
+				consume_items: false
+				id: "4C017EAC4F4CEAA2"
+				item: { count: 1, id: "create:mechanical_arm" }
+				type: "item"
+			}]
 			x: 4.25d
 			y: 0.0d
 		}
@@ -140,14 +131,12 @@
 			optional: true
 			shape: "square"
 			size: 0.75d
-			tasks: [
-				{
-					consume_items: false
-					id: "42AE7066322215B0"
-					item: { count: 1, id: "create:clipboard" }
-					type: "item"
-				}
-			]
+			tasks: [{
+				consume_items: false
+				id: "42AE7066322215B0"
+				item: { count: 1, id: "create:clipboard" }
+				type: "item"
+			}]
 			x: 4.25d
 			y: 2.25d
 		}
@@ -159,14 +148,12 @@
 			id: "1D4B2D722504DEF9"
 			shape: "circle"
 			size: 1.0d
-			tasks: [
-				{
-					consume_items: false
-					id: "15F5D7A095566EF3"
-					item: { count: 1, id: "create:cardboard" }
-					type: "item"
-				}
-			]
+			tasks: [{
+				consume_items: false
+				id: "15F5D7A095566EF3"
+				item: { count: 1, id: "create:cardboard" }
+				type: "item"
+			}]
 			x: 6.5d
 			y: 0.0d
 		}
@@ -178,14 +165,12 @@
 			id: "4EBC6001522188A9"
 			shape: "rsquare"
 			size: 1.5d
-			tasks: [
-				{
-					consume_items: false
-					id: "5F82D106C29A6D1A"
-					item: { count: 1, id: "create:packager" }
-					type: "item"
-				}
-			]
+			tasks: [{
+				consume_items: false
+				id: "5F82D106C29A6D1A"
+				item: { count: 1, id: "create:packager" }
+				type: "item"
+			}]
 			x: 8.75d
 			y: 0.0d
 		}
@@ -197,14 +182,12 @@
 			id: "07DD8605854F9197"
 			shape: "circle"
 			size: 1.0d
-			tasks: [
-				{
-					consume_items: false
-					id: "34BB7F352F331797"
-					item: { count: 1, id: "create:item_vault" }
-					type: "item"
-				}
-			]
+			tasks: [{
+				consume_items: false
+				id: "34BB7F352F331797"
+				item: { count: 1, id: "create:item_vault" }
+				type: "item"
+			}]
 			x: 11.0d
 			y: 0.0d
 		}
@@ -216,14 +199,12 @@
 			id: "7CB8A7EE27913BA0"
 			shape: "circle"
 			size: 1.0d
-			tasks: [
-				{
-					consume_items: false
-					id: "73E90196BF026139"
-					item: { count: 1, id: "create:package_frogport" }
-					type: "item"
-				}
-			]
+			tasks: [{
+				consume_items: false
+				id: "73E90196BF026139"
+				item: { count: 1, id: "create:package_frogport" }
+				type: "item"
+			}]
 			x: 13.0d
 			y: 0.0d
 		}
@@ -261,14 +242,12 @@
 			optional: true
 			shape: "square"
 			size: 0.75d
-			tasks: [
-				{
-					consume_items: false
-					id: "21796223A2E9068F"
-					item: { count: 1, id: "create:redstone_requester" }
-					type: "item"
-				}
-			]
+			tasks: [{
+				consume_items: false
+				id: "21796223A2E9068F"
+				item: { count: 1, id: "create:redstone_requester" }
+				type: "item"
+			}]
 			x: 15.5d
 			y: 2.5d
 		}
@@ -280,14 +259,12 @@
 			id: "48A945D370E7A101"
 			shape: "gear"
 			size: 2.5d
-			tasks: [
-				{
-					consume_items: false
-					id: "40707DD9CAF96134"
-					item: { count: 1, id: "create:factory_gauge" }
-					type: "item"
-				}
-			]
+			tasks: [{
+				consume_items: false
+				id: "40707DD9CAF96134"
+				item: { count: 1, id: "create:factory_gauge" }
+				type: "item"
+			}]
 			x: 18.75d
 			y: 0.0d
 		}

@@ -78,11 +78,6 @@ ServerEvents.recipes(event => {
 
     // Remove C&A capacitors
     event.remove({output: 'createaddition:capacitor'})
-    event.replaceInput(
-       {input: 'createaddition:capacitor'},
-       'createaddition:capacitor',
-       'tfmg:capacitor_item'
-    )
 
     // Remove C&A electrum
     event.remove({id: 'createaddition:mixing/electrum'})

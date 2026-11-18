@@ -61,11 +61,6 @@ ServerEvents.recipes(event => {
         ]
     ).transitionalItem('create_optical:incomplete_polarizing_filter')
     .loops(1);
-    event.replaceInput(
-       { input: 'create_optical:copper_coil' },
-       'create_optical:copper_coil',
-       'tfmg:large_coil'
-    )
     event.shaped(
        Item.of('create_optical:zinc_coil', 1),
        [
@@ -125,11 +120,6 @@ ServerEvents.recipes(event => {
         ]
     ).transitionalItem('create_optical:incomplete_mirror')
     .loops(1);
-    event.replaceInput(
-        { id: 'create_optical:optical_sensor' }, // Arg 1: the filter
-        '#c:stones',            // Arg 2: the item to replace
-        'tfc:metal/sheet/steel'         // Arg 3: the item to replace it with
-        )
     event.remove('create_optical:sequenced_assembly/rose_quartz_catalyst_coil')
     event.shaped(
        Item.of('create_optical:rose_quartz_catalyst_coil', 1),

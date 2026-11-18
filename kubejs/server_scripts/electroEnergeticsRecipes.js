@@ -346,6 +346,4 @@ ServerEvents.tags('item', event => {
   // Bulbs are repaired with a new tungsten filament
   event.removeAll('electroenergetics:bulb_repair_item')
   event.add('electroenergetics:bulb_repair_item', 'kubejs:wire/tungsten_wire')
-  // Its bare wires duplicate the rolling mill ones
-  ;['copper_wire', 'electrum_wire', 'iron_wire'].forEach(wire => event.removeAllTagsFrom('electroenergetics:' + wire))
 })

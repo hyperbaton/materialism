@@ -1,101 +1,18 @@
+// The world's ore veins: the pack's own (materialism-core) plus TFC's dikes, gem veins and geodes; every other mod vein is dropped
 ServerEvents.tags('worldgen/placed_feature', event => {
-    // Remove Firmalife veins
-    event.remove('tfc:in_biome/veins', 'firmalife:vein/normal_chromite')
-    event.remove('tfc:in_biome/veins', 'firmalife:vein/deep_chromite')
-    // Remove TFC veins
-    event.remove('tfc:in_biome/veins', 'tfc:vein/bituminous_coal')
-    event.remove('tfc:in_biome/veins', 'tfc:vein/borax')
-    // Native TFC actually splits cinnabar into two tag entries (normal_cinnabar + a
-    // mountain-biome-only montane_cinnabar); 'tfc:vein/cinnabar' was never a real entry, so this
-    // removal was a silent no-op and both native veins kept spawning alongside our own -- that's
-    // the "many small cinnabar veins" showing up on top of the one intended big deep vein.
-    event.remove('tfc:in_biome/veins', 'tfc:vein/normal_cinnabar')
-    event.remove('tfc:in_biome/veins', 'tfc:vein/montane_cinnabar')
-    event.remove('tfc:in_biome/veins', 'tfc:vein/cryolite')
-    // Every other metal below also has a native "montane_" (mountain-biome) variant that was
-    // never removed, same bug as cinnabar above -- left spawning as an uncontrolled extra source
-    // alongside our own surface_/deep_ replacements.
-    event.remove('tfc:in_biome/veins', 'tfc:vein/montane_bismuthinite')
-    event.remove('tfc:in_biome/veins', 'tfc:vein/montane_cassiterite')
-    event.remove('tfc:in_biome/veins', 'tfc:vein/montane_hematite')
-    event.remove('tfc:in_biome/veins', 'tfc:vein/montane_limonite')
-    event.remove('tfc:in_biome/veins', 'tfc:vein/montane_magnetite')
-    event.remove('tfc:in_biome/veins', 'tfc:vein/montane_malachite')
-    event.remove('tfc:in_biome/veins', 'tfc:vein/montane_native_copper')
-    event.remove('tfc:in_biome/veins', 'tfc:vein/montane_native_silver')
-    event.remove('tfc:in_biome/veins', 'tfc:vein/montane_sphalerite')
-    event.remove('tfc:in_biome/veins', 'tfc:vein/montane_tetrahedrite')
-    event.remove('tfc:in_biome/veins', 'tfc:vein/gabbro_garnierite')
-    event.remove('tfc:in_biome/veins', 'tfc:vein/graphite')
-    //event.remove('tfc:in_biome/veins', 'tfc:vein/kaolin_disc')
-    event.remove('tfc:in_biome/veins', 'tfc:vein/lignite')
-    event.remove('tfc:in_biome/veins', 'tfc:vein/normal_bismuthinite')
-    event.remove('tfc:in_biome/veins', 'tfc:vein/normal_garnierite')
-    event.remove('tfc:in_biome/veins', 'tfc:vein/normal_malachite')
-    event.remove('tfc:in_biome/veins', 'tfc:vein/normal_native_gold')
-    event.remove('tfc:in_biome/veins', 'tfc:vein/normal_native_silver')
-    event.remove('tfc:in_biome/veins', 'tfc:vein/normal_sphalerite')
-    event.remove('tfc:in_biome/veins', 'tfc:vein/normal_tetrahedrite')
-    event.remove('tfc:in_biome/veins', 'tfc:vein/rich_native_gold')
-    event.remove('tfc:in_biome/veins', 'tfc:vein/saltpeter')
-    event.remove('tfc:in_biome/veins', 'tfc:vein/sulfur')
-    event.remove('tfc:in_biome/veins', 'tfc:vein/surface_bismuthinite')
-    event.remove('tfc:in_biome/veins', 'tfc:vein/surface_cassiterite')
-    event.remove('tfc:in_biome/veins', 'tfc:vein/surface_hematite')
-    event.remove('tfc:in_biome/veins', 'tfc:vein/surface_limonite')
-    event.remove('tfc:in_biome/veins', 'tfc:vein/surface_magnetite')
-    event.remove('tfc:in_biome/veins', 'tfc:vein/surface_malachite')
-    event.remove('tfc:in_biome/veins', 'tfc:vein/surface_native_copper')
-    event.remove('tfc:in_biome/veins', 'tfc:vein/surface_native_silver')
-    event.remove('tfc:in_biome/veins', 'tfc:vein/surface_sphalerite')
-    event.remove('tfc:in_biome/veins', 'tfc:vein/surface_tetrahedrite')
-    event.remove('tfc:in_biome/veins', 'tfc:vein/sylvite')
-    event.remove('tfc:in_biome/veins', 'tfc:vein/gravel')
-    event.remove('tfc:in_biome/veins', 'tfc:vein/fake_native_gold')
-    event.remove('tfc:in_biome/veins', 'tfc:vein/gypsum')
-    event.remove('tfc:in_biome/veins', 'tfc:vein/halite')
-    event.remove('tfc:in_biome/veins', 'tfc:vein/lapis_lazuli')
-    event.remove('tfc:in_biome/veins', 'tfc:vein/tuff_sulfur')
-    // Remove TFC Metallurgy veins
-    event.remove('tfc:in_biome/veins', 'tfc_metallurgy:vein/certus_quartz')
-    event.remove('tfc:in_biome/veins', 'tfc_metallurgy:vein/deep_bertrandite')
-    event.remove('tfc:in_biome/veins', 'tfc_metallurgy:vein/deep_cobaltite')
-    event.remove('tfc:in_biome/veins', 'tfc_metallurgy:vein/deep_galena')
-    event.remove('tfc:in_biome/veins', 'tfc_metallurgy:vein/deep_native_osmium')
-    event.remove('tfc:in_biome/veins', 'tfc_metallurgy:vein/deep_rutile')
-    event.remove('tfc:in_biome/veins', 'tfc_metallurgy:vein/deep_stibnite')
-    event.remove('tfc:in_biome/veins', 'tfc_metallurgy:vein/deep_uraninite')
-    event.remove('tfc:in_biome/veins', 'tfc_metallurgy:vein/deep_wolframite')
-    event.remove('tfc:in_biome/veins', 'tfc_metallurgy:vein/normal_bauxite')
-    event.remove('tfc:in_biome/veins', 'tfc_metallurgy:vein/normal_bertrandite')
-    event.remove('tfc:in_biome/veins', 'tfc_metallurgy:vein/normal_cobaltite')
-    event.remove('tfc:in_biome/veins', 'tfc_metallurgy:vein/normal_galena')
-    event.remove('tfc:in_biome/veins', 'tfc_metallurgy:vein/normal_kernite')
-    event.remove('tfc:in_biome/veins', 'tfc_metallurgy:vein/normal_monazite')
-    event.remove('tfc:in_biome/veins', 'tfc_metallurgy:vein/normal_native_osmium')
-    event.remove('tfc:in_biome/veins', 'tfc_metallurgy:vein/normal_native_platinum')
-    event.remove('tfc:in_biome/veins', 'tfc_metallurgy:vein/normal_rutile')
-    event.remove('tfc:in_biome/veins', 'tfc_metallurgy:vein/normal_stibnite')
-    event.remove('tfc:in_biome/veins', 'tfc_metallurgy:vein/normal_uraninite')
-    event.remove('tfc:in_biome/veins', 'tfc_metallurgy:vein/normal_wolframite')
-    event.remove('tfc:in_biome/veins', 'tfc_metallurgy:vein/surface_bauxite')
-    event.remove('tfc:in_biome/veins', 'tfc_metallurgy:vein/surface_cobaltite')
-    event.remove('tfc:in_biome/veins', 'tfc_metallurgy:vein/surface_galena')
-    event.remove('tfc:in_biome/veins', 'tfc_metallurgy:vein/surface_native_platinum')
-    event.remove('tfc:in_biome/veins', 'tfc_metallurgy:vein/surface_rutile')
-    event.remove('tfc:in_biome/veins', 'tfc_metallurgy:vein/surface_uraninite')
-    event.remove('tfc:in_biome/veins', 'tfc_metallurgy:vein/surface_wolframite')
-    event.remove('tfc:in_biome/veins', 'tfc_metallurgy:vein/surface_magnesite')
-    event.remove('tfc:in_biome/veins', 'tfc_metallurgy:vein/surface_pyrolusite')
-    event.remove('tfc:in_biome/veins', 'tfc_metallurgy:vein/surface_spodumene')
-    event.remove('tfc:in_biome/veins', 'tfc_metallurgy:vein/surface_zircon')
-    event.remove('tfc:in_biome/veins', 'tfc_metallurgy:vein/normal_magnesite')
-    event.remove('tfc:in_biome/veins', 'tfc_metallurgy:vein/normal_pyrolusite')
-    event.remove('tfc:in_biome/veins', 'tfc_metallurgy:vein/deep_spodumene')
-    event.remove('tfc:in_biome/veins', 'tfc_metallurgy:vein/deep_zircon')
-    event.remove('tfc:in_biome/veins', 'tfc_metallurgy:vein/deep_coltan')
-    event.remove('tfc:in_biome/veins', 'tfc_metallurgy:vein/surface_coltan')
-    event.remove('tfc:in_biome/veins', 'tfc_metallurgy:vein/deep_molybdenite')
-    event.remove('tfc:in_biome/veins', 'tfc_metallurgy:vein/normal_molybdenite')
-    event.remove('tfc:in_biome/veins', 'tfc_metallurgy:vein/surface_molybdenite')
+  event.removeAll('tfc:in_biome/veins')
+  event.add('tfc:in_biome/veins', ['tfc:vein/granite_dike', 'tfc:vein/diorite_dike', 'tfc:vein/gabbro_dike', 'tfc:vein/diamond', 'tfc:vein/emerald',
+    'tfc:vein/deep_ruby', 'tfc:geode'])
+  event.add('tfc:in_biome/veins', [
+    'surface_native_copper', 'surface_malachite', 'surface_cassiterite', 'surface_bismuthinite', 'surface_tetrahedrite',
+    'surface_sphalerite', 'surface_hematite', 'surface_limonite', 'surface_magnetite', 'surface_native_silver',
+    'surface_graphite', 'deep_hematite', 'deep_magnetite', 'deep_limonite', 'deep_native_copper', 'deep_malachite',
+    'deep_cassiterite', 'deep_tetrahedrite', 'deep_bismuthinite', 'deep_sphalerite', 'deep_native_gold', 'deep_native_silver',
+    'deep_garnierite', 'deep_graphite', 'cinnabar', 'cryolite', 'lapis_lazuli', 'fake_native_gold', 'bituminous_coal', 'lignite',
+    'halite', 'saltpeter', 'sylvite', 'borax', 'sulfur', 'gypsum', 'amethyst', 'opal', 'gravel', 'deep_bauxite',
+    'deep_bertrandite', 'deep_native_platinum', 'deep_rutile', 'deep_stibnite', 'deep_wolframite', 'deep_uraninite',
+    'deep_monazite', 'deep_magnesite', 'deep_pyrolusite', 'deep_spodumene', 'deep_zircon', 'deep_kernite', 'deep_galena',
+    'deep_cobaltite', 'deep_native_osmium', 'certus_quartz', 'deep_chromite', 'oil_deposit', 'deep_coltan', 'deep_molybdenite',
+    'fluorite', 'phosphorite'
+  ].map(vein => 'materialism:vein/' + vein))
 })
