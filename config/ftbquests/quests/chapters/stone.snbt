@@ -227,10 +227,7 @@
 		{
 			dependencies: ["3F366ACAF62928BC"]
 			icon: {
-				components: {
-					"ftbquests:missing_item": "tfc_textile_legacy:raw_boots"
-				}
-				id: "ftbquests:missing_item"
+				id: "textile:raw_chestplate"
 			}
 			id: "20EC2F4EC5239449"
 			optional: true
@@ -239,7 +236,7 @@
 			tasks: [{
 				consume_items: false
 				id: "4FFA87E68FF451B4"
-				item: { components: { "ftbfiltersystem:filter": "ftbfiltersystem:or(ftbfiltersystem:item(tfc_textile_legacy:raw_boots)ftbfiltersystem:item(tfc_textile_legacy:raw_chestplate)ftbfiltersystem:item(tfc_textile_legacy:raw_helmet)ftbfiltersystem:item(tfc_textile_legacy:raw_leggings))" }, count: 1, id: "ftbfiltersystem:smart_filter" }
+				item: { components: { "ftbfiltersystem:filter": "ftbfiltersystem:or(ftbfiltersystem:item(textile:raw_chestplate)ftbfiltersystem:item(textile:raw_helmet)ftbfiltersystem:item(textile:raw_leggings))" }, count: 1, id: "ftbfiltersystem:smart_filter" }
 				type: "item"
 			}]
 			x: 12.25d

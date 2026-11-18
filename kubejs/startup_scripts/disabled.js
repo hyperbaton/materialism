@@ -84,6 +84,9 @@ const DISABLED_ITEMS = [].concat(
     /butchery:.*villager.*/, /butchery:.*humanmeat.*/, /butchery:.*playercorpse.*/, /butchery:.*diorite.*/],
   ids('butchery:', ['icey_bone', 'icey_bone_meal', 'honey_stomach', 'poison_sac', 'skin_rack', 'freezer', 'photos', 'cling_film', 'coin',
     'deep_smithing_template', 'diamond_cleaver', 'diamond_hacksaw', 'diamond_hammer', 'diamond_skinning_knife']),
+  // Cold Sweat: hoglin hide and armor (no hoglins in TFC worlds), Nether soul items and waterskins
+  [/cold_sweat:hoglin_.*/],
+  ids('cold_sweat:', ['soulspring_lamp', 'soul_sprout', 'waterskin', 'filled_waterskin']),
   // Astikor carts of vanilla woods, and of AFC species without their own wood
   [/^astikorcartsredux:/],
   ['acacia_koa', 'atlas_cedar', 'bald_cypress', 'balsam_fir', 'bigleaf_maple', 'black_beech', 'black_oak', 'black_spruce', 'chinquapin', 'coast_redwood',

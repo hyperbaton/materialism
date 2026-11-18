@@ -639,10 +639,7 @@
 		{
 			dependencies: ["542826EFD29183A5"]
 			icon: {
-				components: {
-					"ftbquests:missing_item": "tfc_textile_legacy:raw_chestplate"
-				}
-				id: "ftbquests:missing_item"
+				id: "textile:tiger_chestplate"
 			}
 			id: "56CCEB2F6FE95F04"
 			optional: true
@@ -651,7 +648,7 @@
 			tasks: [{
 				consume_items: false
 				id: "0C492FC00C341178"
-				item: { components: { "ftbfiltersystem:filter": "ftbfiltersystem:or(ftbfiltersystem:item(tfc_textile_legacy:black_bear_chestplate)ftbfiltersystem:item(tfc_textile_legacy:caribou_chestplate)ftbfiltersystem:item(tfc_textile_legacy:cougar_chestplate)ftbfiltersystem:item(tfc_textile_legacy:direwolf_chestplate)ftbfiltersystem:item(tfc_textile_legacy:grizzly_bear_chestplate)ftbfiltersystem:item(tfc_textile_legacy:lion_chestplate)ftbfiltersystem:item(tfc_textile_legacy:panther_chestplate)ftbfiltersystem:item(tfc_textile_legacy:polar_bear_chestplate)ftbfiltersystem:item(tfc_textile_legacy:raw_chestplate)ftbfiltersystem:item(tfc_textile_legacy:sabertooth_chestplate)ftbfiltersystem:item(tfc_textile_legacy:tiger_chestplate))" }, count: 1, id: "ftbfiltersystem:smart_filter" }
+				item: { components: { "ftbfiltersystem:filter": "ftbfiltersystem:item_tag(textile:fur_clothes)" }, count: 1, id: "ftbfiltersystem:smart_filter" }
 				type: "item"
 			}]
 			x: 23.5d

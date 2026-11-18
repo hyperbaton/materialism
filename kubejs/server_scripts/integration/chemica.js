@@ -27,7 +27,10 @@ ServerEvents.recipes(event => {
 
   // Item and fluid swaps are in unify.js; recipe-specific ones here
   swapInputs(event, [
-    ['chemica:mixing/platinum_catalyst', 'minecraft:iron_nugget', 'kubejs:metal/dust/iron']
+    // Catalysts are made from dusts
+    ['chemica:mixing/platinum_catalyst', 'minecraft:iron_nugget', 'kubejs:metal/dust/iron'],
+    ['chemica:mixing/iron_catalyst', 'chemica:silver_nugget', 'kubejs:metal/dust/silver'],
+    ['chemica:mixing/nickel_catalyst', 'tfmg:aluminum_nugget', 'tfc_metallurgy:metal/dust/aluminum']
   ])
 
   // Casting basin and arc furnace: Chemica uses 90 mB per ingot, the pack uses 100 mB

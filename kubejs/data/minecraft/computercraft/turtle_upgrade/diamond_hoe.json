@@ -1,0 +1,8 @@
+{
+  "type": "computercraft:tool",
+  "adjective": {
+    "translate": "upgrade.minecraft.diamond_hoe.adjective"
+  },
+  "breakable": "computercraft:turtle_hoe_harvestable",
+  "item": "tfc_metallurgy:metal/hoe/high_alloy_steel"
+}

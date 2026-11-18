@@ -136,8 +136,8 @@
 	quest.3F366ACAF62928BC.quest_desc: ["Hunt a large animal and take its hide. This is also your first step towards leather."]
 	quest.20EC2F4EC5239449.title: "Primitive Insulation"
 	quest.20EC2F4EC5239449.quest_subtitle: "Raw hide, tied on"
-	quest.20EC2F4EC5239449.quest_desc: ["Raw hides tied into rough clothes. Better than nothing in the first winter."]
-	task.4FFA87E68FF451B4.title: "Any Primitive Insulation"
+	quest.20EC2F4EC5239449.quest_desc: ["Stuff a raw hide with straw into primitive insulation, then knap it into rough clothes. Better than nothing in the first winter."]
+	task.4FFA87E68FF451B4.title: "Any Primitive Clothing"
 	quest.1B09FBBAAEF21F2C.title: "A Javelin"
 	quest.1B09FBBAAEF21F2C.quest_subtitle: "Stone, thrown"
 	quest.1B09FBBAAEF21F2C.quest_desc: ["Knap a javelin head. It hits hard and you can pick it up again."]
@@ -458,8 +458,8 @@
 	quest.542826EFD29183A5.quest_desc: ["Leather armour lined with string keeps the cold out."]
 	quest.56CCEB2F6FE95F04.title: "Predator Furs"
 	quest.56CCEB2F6FE95F04.quest_subtitle: "Hardcore fur coats"
-	quest.56CCEB2F6FE95F04.quest_desc: ["Furs from bears, big cats and wolves make the warmest clothes. Each animal's fur is sewn onto leather armour."]
-	task.0C492FC00C341178.title: "Any Predator Furs"
+	quest.56CCEB2F6FE95F04.quest_desc: ["Furs from bears, big cats, wolves, caribou and bison make the warmest clothes. Each animal's fur is sewn onto leather armour with string."]
+	task.0C492FC00C341178.title: "Any Fur Clothing"
 	quest.0B3BF61984FAB761.title: "A Saddle"
 	quest.0B3BF61984FAB761.quest_subtitle: "Tame a horse"
 	quest.0B3BF61984FAB761.quest_desc: ["Tame a horse, then saddle it. A horse makes long prospecting trips possible."]

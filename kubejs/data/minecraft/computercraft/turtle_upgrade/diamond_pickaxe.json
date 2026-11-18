@@ -1,0 +1,7 @@
+{
+  "type": "computercraft:tool",
+  "adjective": {
+    "translate": "upgrade.minecraft.diamond_pickaxe.adjective"
+  },
+  "item": "tfc_metallurgy:metal/pickaxe/high_alloy_steel"
+}
