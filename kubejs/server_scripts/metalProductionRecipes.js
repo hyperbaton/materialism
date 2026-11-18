@@ -67,7 +67,7 @@ ServerEvents.recipes(event => {
     tfcMetals.forEach(metal =>
         event.custom({
             type: 'tfmg:casting',
-            ingredients: [{ type: 'neoforge:single', amount: 100, fluid: `tfc:metal/${metal}` }],
+            ingredients: [fluidIn(`tfc:metal/${metal}`, 100)],
             processing_time: 100,
             results: [{ id: `tfc:metal/ingot/${metal}` }]
         })
@@ -75,7 +75,7 @@ ServerEvents.recipes(event => {
     tfcMetallurgyMetals.forEach(metal =>
         event.custom({
             type: 'tfmg:casting',
-            ingredients: [{ type: 'neoforge:single', amount: 100, fluid: `tfc_metallurgy:metal/${metal}` }],
+            ingredients: [fluidIn(`tfc_metallurgy:metal/${metal}`, 100)],
             processing_time: 100,
             results: [{ id: `tfc_metallurgy:metal/ingot/${metal}` }]
         })
@@ -83,7 +83,7 @@ ServerEvents.recipes(event => {
     firmalifeMetals.forEach(metal =>
         event.custom({
             type: 'tfmg:casting',
-            ingredients: [{ type: 'neoforge:single', amount: 100, fluid: `firmalife:metal/${metal}` }],
+            ingredients: [fluidIn(`firmalife:metal/${metal}`, 100)],
             processing_time: 100,
             results: [{ id: `firmalife:metal/ingot/${metal}` }]
         })
@@ -91,14 +91,14 @@ ServerEvents.recipes(event => {
     tfcIron.forEach(metal =>
         event.custom({
             type: 'tfmg:casting',
-            ingredients: [{ type: 'neoforge:single', amount: 100, fluid: `tfc:metal/${metal}` }],
+            ingredients: [fluidIn(`tfc:metal/${metal}`, 100)],
             processing_time: 100,
             results: [{ id: `tfc:metal/ingot/cast_iron` }]
         })
     )
     event.custom({
         type: 'tfmg:casting',
-        ingredients: [{ type: 'neoforge:single', amount: 100, fluid: `tfc:metal/pig_iron` }],
+        ingredients: [fluidIn(`tfc:metal/pig_iron`, 100)],
         processing_time: 100,
         results: [{ id: `tfc:metal/ingot/pig_iron` }]
     })
@@ -138,13 +138,6 @@ ServerEvents.recipes(event => {
     addMetalPartsRecipes('zirconium', 1110, 1480)
 
     // Woodencog-style metalworking
-    function heatedIngredient(item, minTemp, maxTemp) {
-        if (maxTemp === undefined) maxTemp = 3000
-        return { type: 'woodencog:heated', ingredient: { item: item }, min_temp: minTemp, max_temp: maxTemp }
-    }
-    function heatedResult(id) {
-        return { type: 'heated', copy_heat: true, internal: { id: id } }
-    }
     function addDoubleIngot(namespace, metalName, weldingTemperature) {
         event.custom({
             type: 'woodencog:heated_compacting',
@@ -415,7 +408,7 @@ ServerEvents.recipes(event => {
             ingredients: [
                 weld.first,
                 weld.second,
-                { type: 'neoforge:single', fluid: SOLDER, amount: solderAmount(weld.id) }
+                fluidIn(SOLDER, solderAmount(weld.id))
             ],
             results: [weld.result]
         }).id('kubejs:solder_welding/' + weld.id.replace(':', '/'))

@@ -28,8 +28,6 @@ ServerEvents.recipes(event => {
     // Lathe recipes
     event.recipes.vintageimprovements.turning('vintageimprovements:w_shaped_curving_head', 'tfc:metal/block/steel').processingTime(300)
     event.recipes.vintageimprovements.turning('vintageimprovements:v_shaped_curving_head', 'tfc:metal/block/steel').processingTime(300)
-    // Screw from tfmg removed in favour of tfc_items screws
-    //event.recipes.vintageimprovements.turning('4x tfmg:screw', 'tfc:metal/rod/steel').processingTime(300)
     event.recipes.vintageimprovements.turning('2x tfmg:rebar', 'tfc:metal/rod/steel').processingTime(300)
     // Pipes to be made with the lathe
     event.remove({output: 'create:fluid_pipe'})
@@ -74,8 +72,8 @@ ServerEvents.recipes(event => {
     event.custom({type: 'vintageimprovements:pressurizing',
       ingredients: [
         {item: 'tfc:powder/sphalerite'},
-        {fluid: 'tfmg:sulfuric_acid', amount: 200, type: 'neoforge:single'},
-        {fluid: 'minecraft:water', amount: 200, type: 'neoforge:single'}
+        fluidIn('tfmg:sulfuric_acid', 200),
+        fluidIn('minecraft:water', 200)
       ],
       results: [{id: 'kubejs:zinc_sulfate'}],
       secondary_fluid_input: 1
@@ -86,8 +84,8 @@ ServerEvents.recipes(event => {
     event.remove({id: 'tfmg:mixing/sulfuric_acid'})
     event.custom({type: 'vintageimprovements:pressurizing',
       ingredients: [
-        {fluid: 'vintageimprovements:sulfur_trioxide', amount: 1000, type: 'neoforge:single'},
-        {fluid: 'minecraft:water', amount: 1000, type: 'neoforge:single'}
+        fluidIn('vintageimprovements:sulfur_trioxide', 1000),
+        fluidIn('minecraft:water', 1000)
       ],
       results: [{id: 'tfmg:sulfuric_acid', amount: 1000}],
       secondary_fluid_input: 1
@@ -95,8 +93,8 @@ ServerEvents.recipes(event => {
     event.custom({type: 'vintageimprovements:pressurizing',
       ingredients: [
         {tag: 'materialism:powders/copper'},
-        {fluid: 'tfmg:sulfuric_acid', amount: 200, type: 'neoforge:single'},
-        {fluid: 'minecraft:water', amount: 200, type: 'neoforge:single'}
+        fluidIn('tfmg:sulfuric_acid', 200),
+        fluidIn('minecraft:water', 200)
       ],
       results: [{id: 'vintageimprovements:copper_sulfate'}],
       secondary_fluid_input: 1
@@ -106,7 +104,7 @@ ServerEvents.recipes(event => {
     event.custom({type: 'vintageimprovements:centrifugation',
       ingredients: [
         {item: 'tfcvolcanoes:mineral/powder/bastnasite'},
-        {fluid: 'tfmg:sulfuric_acid', amount: 100, type: 'neoforge:single'}
+        fluidIn('tfmg:sulfuric_acid', 100)
       ],
       results: [{id: 'kubejs:powder/neodymium', chance: 0.2}],
       processing_time: 300,
@@ -114,7 +112,7 @@ ServerEvents.recipes(event => {
     })
     // Decanter: olive paste splits into oil and vegetation water in one pass, at the barrel and jute net yield
     event.custom({type: 'vintageimprovements:centrifugation',
-      ingredients: [{item: 'tfc:olive_paste'}, {fluid: 'minecraft:water', amount: 200, type: 'neoforge:single'}],
+      ingredients: [{item: 'tfc:olive_paste'}, fluidIn('minecraft:water', 200)],
       results: [{id: 'tfc:olive_oil', amount: 40}, {id: 'minecraft:water', amount: 160}],
       processing_time: 200
     }).id('kubejs:vintageimprovements/centrifugation/olive_oil')
@@ -128,7 +126,7 @@ ServerEvents.recipes(event => {
     ;[['tfc:curdled_milk', 'firmalife:food/milk_curd'], ['firmalife:curdled_goat_milk', 'firmalife:food/goat_curd'],
       ['firmalife:curdled_yak_milk', 'firmalife:food/yak_curd']].forEach(([milk, curd]) => {
       event.custom({type: 'vintageimprovements:centrifugation',
-        ingredients: [{fluid: milk, amount: 1000, type: 'neoforge:single'}],
+        ingredients: [fluidIn(milk, 1000)],
         results: [{id: curd}, {id: 'firmalife:whey', amount: 1000}],
         processing_time: 300
       }).id('kubejs:vintageimprovements/centrifugation/' + curd.split('/')[1])
@@ -150,7 +148,7 @@ ServerEvents.recipes(event => {
         {item: 'tfmg:slag'},
         {item: 'tfc:powder/salt'},
         {item: 'tfc:powder/saltpeter'},
-        {fluid: 'minecraft:water', amount: 200, type: 'neoforge:single'}
+        fluidIn('minecraft:water', 200)
       ],
       results: [{id: 'vintageimprovements:vanadium_nugget', chance: 0.1}],
       secondary_fluid_input: 0,
@@ -161,7 +159,7 @@ ServerEvents.recipes(event => {
         {item: 'tfmg:slag'},
         {item: 'tfc:powder/salt'},
         {item: 'tfc:powder/saltpeter'},
-        {fluid: 'tfmg:sulfuric_acid', amount: 200, type: 'neoforge:single'}
+        fluidIn('tfmg:sulfuric_acid', 200)
       ],
       results: [{id: 'vintageimprovements:vanadium_nugget', chance: 0.3}],
       secondary_fluid_input: 0,
@@ -176,36 +174,14 @@ ServerEvents.recipes(event => {
     event.custom({ type: 'tfc:heating', ingredient: { item: 'vintageimprovements:vanadium_nugget' }, result_fluid: { amount: 10, id: 'tfc_metallurgy:metal/vanadium' }, temperature: 625 })
     event.custom({ type: 'create:deploying', ingredients: [{ item: 'tfc_metallurgy:metal/ingot/vanadium' }, { tag: 'tfc:chisels' }], results: [{ id: 'vintageimprovements:vanadium_nugget', count: 10 }] })
 
-    event.replaceInput(
-      { id: 'vintageimprovements:turning/convex_curving_head' }, // Arg 1: the filter
-      'minecraft:iron_block',            // Arg 2: the item to replace
-      'tfc:metal/block/steel'         // Arg 3: the item to replace it with
-    )
-    event.replaceInput(
-      { id: 'vintageimprovements:turning/concave_curving_head' }, // Arg 1: the filter
-      'minecraft:iron_block',            // Arg 2: the item to replace
-      'tfc:metal/block/steel'         // Arg 3: the item to replace it with
-    )
-    event.replaceInput(
-      { id: 'vintageimprovements:craft/vacuum_chamber' }, // Arg 1: the filter
-      'create:andesite_alloy',            // Arg 2: the item to replace
-      'tfc:metal/sheet/steel'         // Arg 3: the item to replace it with
-    )
-    event.replaceInput(
-      { id: 'vintageimprovements:mechanical_crafting/lathe' }, // Arg 1: the filter
-      'create:andesite_alloy',            // Arg 2: the item to replace
-      'tfc_metallurgy:metal/sheet/tungsten_steel'         // Arg 3: the item to replace it with
-    )
-    event.replaceInput(
-      { id: 'vintageimprovements:mechanical_crafting/lathe' }, // Arg 1: the filter
-      'minecraft:iron_block',            // Arg 2: the item to replace
-      'tfc:metal/block/steel'         // Arg 3: the item to replace it with
-    )
-    event.replaceInput(
-      { id: 'vintageimprovements:mechanical_crafting/helve_hammer' }, // Arg 1: the filter
-      'minecraft:iron_block',            // Arg 2: the item to replace
-      'tfc:metal/block/steel'         // Arg 3: the item to replace it with
-    )
+    swapInputs(event, [
+      ['vintageimprovements:turning/convex_curving_head', 'minecraft:iron_block', 'tfc:metal/block/steel'],
+      ['vintageimprovements:turning/concave_curving_head', 'minecraft:iron_block', 'tfc:metal/block/steel'],
+      ['vintageimprovements:craft/vacuum_chamber', 'create:andesite_alloy', 'tfc:metal/sheet/steel'],
+      ['vintageimprovements:mechanical_crafting/lathe', 'create:andesite_alloy', 'tfc_metallurgy:metal/sheet/tungsten_steel'],
+      ['vintageimprovements:mechanical_crafting/lathe', 'minecraft:iron_block', 'tfc:metal/block/steel'],
+      ['vintageimprovements:mechanical_crafting/helve_hammer', 'minecraft:iron_block', 'tfc:metal/block/steel']
+    ])
     // Replace TFMG lime by TFC lime
     event.remove({id: 'tfmg:crushing/limesand'})
     event.remove({id: 'tfmg:milling/limesand'})

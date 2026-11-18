@@ -1,20 +1,13 @@
 // One bio path: Chemica liquid fuels (ethanol, biodiesel), Solarpunk solid biomass, fermentation in the Solarpunk vat
 ServerEvents.recipes(event => {
   const id = name => 'kubejs:biofuel/' + name
-  const fermenting = (name, ingredient, fluid, result, time) => event.custom({
-    type: 'materialismcore:fermenting',
-    ingredient: ingredient,
-    fluid_ingredient: fluid,
-    result: result,
-    processing_time: time
-  }).id(id('fermenting/' + name))
 
   // Fermentation vat (materialismcore:fermenting); amounts per batch, one batch per 2x2x4 of vat
-  fermenting('ethanol', {tag: 'tfc:foods/sweeteners', count: 3}, {fluid: 'firmalife:yeast_starter', amount: 100},
-    {id: 'chemica:ethanol', amount: 1000}, 800)
+  fermenting(event, {tag: 'tfc:foods/sweeteners', count: 3}, {fluid: 'firmalife:yeast_starter', amount: 100},
+    {id: 'chemica:ethanol', amount: 1000}, 800).id(id('fermenting/ethanol'))
   // Cellulosic ethanol from densified biomass: slower and poorer than sugar
-  fermenting('ethanol_from_pellets', {item: 'solarpunk:biomass_pellet', count: 1}, {fluid: 'minecraft:water', amount: 500},
-    {id: 'chemica:ethanol', amount: 250}, 1200)
+  fermenting(event, {item: 'solarpunk:biomass_pellet', count: 1}, {fluid: 'minecraft:water', amount: 500},
+    {id: 'chemica:ethanol', amount: 250}, 1200).id(id('fermenting/ethanol_from_pellets'))
 
   // Biomass from any organic waste: dry browns are shredded, wet greens (fresh or rotten) are pulped
   event.remove({id: /^solarpunk:(crushing|milling)\/(crops|leaves)_to_biomass$/})
@@ -29,7 +22,7 @@ ServerEvents.recipes(event => {
   // Fertilizer besides biochar slurry: compost tea and guano steeped in water
   ;[['compost', 'tfc:compost'], ['guano', 'tfc:groundcover/guano']].forEach(([name, item]) => event.custom({
     type: 'create:mixing',
-    ingredients: [{item: item}, {type: 'neoforge:single', fluid: 'minecraft:water', amount: 250}],
+    ingredients: [{item: item}, fluidIn('minecraft:water', 250)],
     results: [{id: 'solarpunk:fertilizer', amount: 250}]
   }).id(id('mixing/fertilizer_from_' + name)))
 
@@ -37,7 +30,7 @@ ServerEvents.recipes(event => {
   event.custom({
     type: 'create:mixing',
     ingredients: [{item: 'tfc:powder/saltpeter'}, {item: 'minecraft:bone_meal'}, {item: 'tfc:powder/sylvite'},
-      {type: 'neoforge:single', fluid: 'solarpunk:fertilizer', amount: 1000}],
+      fluidIn('solarpunk:fertilizer', 1000)],
     results: [{id: 'solarpunk:rich_fertilizer', amount: 1000}]
   }).id(id('mixing/rich_fertilizer'))
   // Synthetic NPK: ammonia and phosphoric acid make ammonium phosphate, sylvite adds the potash, all dissolved in water
@@ -47,9 +40,9 @@ ServerEvents.recipes(event => {
     machines: ['tfmg:mixer'],
     min_size: 1,
     ingredients: [{item: 'tfc:powder/sylvite'},
-      {type: 'neoforge:single', fluid: 'minecraft:water', amount: 1000},
-      {type: 'neoforge:single', fluid: 'chemica:ammonia', amount: 100},
-      {type: 'neoforge:single', fluid: 'chemica:phosphoric_acid', amount: 100}],
+      fluidIn('minecraft:water', 1000),
+      fluidIn('chemica:ammonia', 100),
+      fluidIn('chemica:phosphoric_acid', 100)],
     processing_time: 200,
     results: [{id: 'solarpunk:rich_fertilizer', amount: 1000}]
   }).id(id('vat/rich_fertilizer'))
@@ -63,7 +56,7 @@ ServerEvents.recipes(event => {
     min_size: 1,
     ingredients: [
       {type: 'neoforge:tag', tag: 'c:plantoil', amount: 1000},
-      {type: 'neoforge:single', fluid: 'chemica:ethanol', amount: 500},
+      fluidIn('chemica:ethanol', 500),
       {item: 'chemica:caustic_soda_dust'}
     ],
     processing_time: 300,

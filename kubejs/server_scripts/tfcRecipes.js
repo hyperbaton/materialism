@@ -112,11 +112,9 @@ ServerEvents.recipes(event => {
     })
 
     event.remove('tfc:crafting/powderkeg_from_barrel')
-    event.replaceInput(
-       { id: 'tfc:crafting/powderkeg' },
-       '#tfc:lumber',
-       'tfmg:hardened_planks'
-    )
+    swapInputs(event, [
+      ['tfc:crafting/powderkeg', '#tfc:lumber', 'tfmg:hardened_planks']
+    ])
 
     // Milling grain into flour with Create's millstone
     cereals.forEach(cereal => {
@@ -139,7 +137,7 @@ ServerEvents.recipes(event => {
             {item: 'tfc:olive_paste'},
             {item: 'tfc:olive_paste'},
             {item: 'tfc:olive_paste'},
-            {type: 'neoforge:single', fluid: 'minecraft:water', amount: 1000}
+            fluidIn('minecraft:water', 1000)
         ],
         results: [{amount: 1000, id: 'tfc:olive_oil_water'}],
         heat_requirement: 'heated',
@@ -150,7 +148,7 @@ ServerEvents.recipes(event => {
     event.custom({
         type: 'create:mixing',
         ingredients: [
-            {type: 'neoforge:single', fluid: 'firmalife:yeast_starter', amount: 100},
+            fluidIn('firmalife:yeast_starter', 100),
             {type: 'tfc:and', children: [{tag: 'firmalife:feeds_yeast'}, {type: 'tfc:not_rotten'}]}
         ],
         results: [{amount: 600, id: 'firmalife:yeast_starter'}]
@@ -178,7 +176,7 @@ ServerEvents.recipes(event => {
                 ingredients: [
                     {item: `tfc:food/${cereal}_flour`},
                     {tag: 'tfc:foods/sweeteners'},
-                    {type: 'neoforge:single', fluid: 'firmalife:yeast_starter', amount: 100}
+                    fluidIn('firmalife:yeast_starter', 100)
                 ],
                 results: [{id: `firmalife:food/${cereal}_dough`, count: 4}],
                 processing_time: 500
@@ -186,23 +184,6 @@ ServerEvents.recipes(event => {
         });
     }
     addCuttingCerealRecipes(event, cereals);
-    // TODO: Uncomment this when sliceanddice is fixed
-    /*function addCuttingCerealRecipes(event, cereals) {
-        cereals.forEach(cereal => {
-            event.custom({
-                type: 'sliceanddice:cutting',
-                ingredients: [
-                    { item: `tfc:food/${cereal}` }
-                ],
-                results: [
-                    { item: `tfc:food/${cereal}_grain` }
-                ],
-                tool: {
-                    tag: '#tfc:knives'
-                }
-            })
-        });
-    }*/
     function addCuttingCerealRecipes(event, cereals) {
         cereals.forEach(cereal => {
             event.recipes.vintageimprovements.vibrating([`tfc:food/${cereal}_grain`, 'tfc:straw'], `tfc:food/${cereal}`)
@@ -214,7 +195,7 @@ ServerEvents.recipes(event => {
             {tag: 'c:foods/dough'},
             {item: 'tfc:powder/salt'},
             {item: 'firmalife:spice/basil_leaves'},
-            {type: 'neoforge:single', fluid: 'firmalife:soybean_oil', amount: 100}
+            fluidIn('firmalife:soybean_oil', 100)
         ],
         results: [{id: 'firmalife:food/pizza_dough', count: 4}],
         processing_time: 5000
@@ -225,7 +206,7 @@ ServerEvents.recipes(event => {
             {tag: 'c:foods/dough'},
             {item: 'tfc:powder/salt'},
             {item: 'firmalife:spice/basil_leaves'},
-            {type: 'neoforge:single', fluid: 'tfc:olive_oil', amount: 100}
+            fluidIn('tfc:olive_oil', 100)
         ],
         results: [{id: 'firmalife:food/pizza_dough', count: 4}],
         processing_time: 5000
@@ -236,7 +217,7 @@ ServerEvents.recipes(event => {
             {item: 'firmalife:food/butter'},
             {tag: 'firmalife:feeds_yeast'},
             {tag: 'tfc:foods/sweeteners'},
-            {type: 'neoforge:single', fluid: 'minecraft:water', amount: 1000}
+            fluidIn('minecraft:water', 1000)
         ],
         results: [{id: 'firmalife:food/pie_dough'}],
         processing_time: 5000
@@ -249,7 +230,7 @@ ServerEvents.recipes(event => {
             {item: 'tfc:food/pumpkin_chunks'},
             {tag: 'firmalife:feeds_yeast'},
             {tag: 'tfc:foods/sweeteners'},
-            {type: 'neoforge:single', fluid: 'minecraft:water', amount: 1000}
+            fluidIn('minecraft:water', 1000)
         ],
         results: [{id: 'firmalife:food/pumpkin_pie_dough'}],
         processing_time: 5000
@@ -262,7 +243,7 @@ ServerEvents.recipes(event => {
             {item: 'firmalife:food/butter'},
             {tag: 'firmalife:feeds_yeast'},
             {tag: 'tfc:foods/sweeteners'},
-            {type: 'neoforge:single', fluid: 'minecraft:water', amount: 1000}
+            fluidIn('minecraft:water', 1000)
         ],
         results: [{id: 'firmalife:food/cookie_dough', count: 4}],
         processing_time: 5000
@@ -280,57 +261,12 @@ ServerEvents.recipes(event => {
         ingredients: [
             {tag: 'firmalife:feeds_yeast'},
             {item: 'tfc:powder/salt'},
-            {type: 'neoforge:single', fluid: 'minecraft:water', amount: 1000}
+            fluidIn('minecraft:water', 1000)
         ],
         results: [{id: 'firmalife:food/hardtack_dough', count: 4}],
         processing_time: 3000
     })
 
-    // TODO: artisanal mod fluids (apple_juice, sugarcane_juice, etc.) no longer exist in 1.21
-    /*
-    // Proper alcohols
-    event.remove('woodencog:mixing/barrel/cider')
-    event.recipes.create.compacting(['artisanal:food/fruit_mash', Fluid.of('artisanal:apple_juice', 200)], TFC.ingredient.notRotten('tfc:food/red_apple'))
-    event.recipes.create.compacting(['artisanal:food/fruit_mash', Fluid.of('artisanal:apple_juice', 200)], TFC.ingredient.notRotten('tfc:food/green_apple'))
-    event.recipes.vintageimprovements.pressurizing(Fluid.of('tfc:cider'), Fluid.of('artisanal:apple_juice')).processingTime(24000)
-    event.recipes.vintageimprovements.pressurizing(Fluid.of('tfcagedalcohol:aged_cider'), Fluid.of('tfc:cider')).processingTime(120000)
-    event.recipes.vintageimprovements.pressurizing(Fluid.of('tfcagedalcohol:aged_beer'), Fluid.of('tfc:beer')).processingTime(120000)
-    event.recipes.vintageimprovements.pressurizing(Fluid.of('tfcagedalcohol:aged_rum'), Fluid.of('tfc:rum')).processingTime(120000)
-    event.recipes.vintageimprovements.pressurizing(Fluid.of('tfcagedalcohol:aged_sake'), Fluid.of('tfc:sake')).processingTime(120000)
-    event.recipes.vintageimprovements.pressurizing(Fluid.of('tfcagedalcohol:aged_vodka'), Fluid.of('tfc:vodka')).processingTime(120000)
-    event.recipes.vintageimprovements.pressurizing(Fluid.of('tfcagedalcohol:aged_whiskey'), Fluid.of('tfc:whiskey')).processingTime(120000)
-    event.recipes.vintageimprovements.pressurizing(Fluid.of('tfcagedalcohol:aged_corn_whiskey'), Fluid.of('tfc:corn_whiskey')).processingTime(120000)
-    event.recipes.vintageimprovements.pressurizing(Fluid.of('tfcagedalcohol:aged_rye_whiskey'), Fluid.of('tfc:rye_whiskey')).processingTime(120000)
-    event.remove('woodencog:mixing/barrel/rum')
-    event.recipes.create.mixing('artisanal:food/cleaned_sugarcane', ['tfc:food/sugarcane', Fluid.of('minecraft:water', 100)]).processingTime(4000)
-    event.recipes.create.mixing('artisanal:food/cleaned_sugarcane', ['tfc:food/sugarcane', Fluid.of('artisanal:soapy_water', 100)]).processingTime(100)
-    event.recipes.create.compacting([Fluid.of('artisanal:sugarcane_juice', 200)], TFC.ingredient.notRotten('artisanal:food/cleaned_sugarcane'))
-    event.recipes.create.mixing(['artisanal:dirty_burlap_cloth', Fluid.of('artisanal:filtered_sugarcane_juice', 500)],
-        ['tfc:burlap_cloth', Fluid.of('artisanal:sugarcane_juice', 500)]).processingTime(100)
-    event.recipes.create.mixing(['artisanal:dirty_silk_cloth', Fluid.of('artisanal:filtered_sugarcane_juice', 500)],
-        ['tfc:silk_cloth', Fluid.of('artisanal:sugarcane_juice', 500)]).processingTime(100)
-    event.recipes.create.mixing(['artisanal:dirty_wool_cloth', Fluid.of('artisanal:filtered_sugarcane_juice', 500)],
-        ['tfc:wool_cloth', Fluid.of('artisanal:sugarcane_juice', 500)]).processingTime(100)
-    event.recipes.create.mixing(['tfc:dirty_jute_net', Fluid.of('artisanal:filtered_sugarcane_juice', 500)],
-        ['tfc:jute_net', Fluid.of('artisanal:sugarcane_juice', 500)]).processingTime(100)
-    event.recipes.vintageimprovements.pressurizing(Fluid.of('artisanal:alkalized_sugarcane_juice', 500), [Fluid.of('artisanal:filtered_sugarcane_juice', 500), 'tfc:powder/lime'])
-        .processingTime(4000)
-    event.recipes.create.mixing(['artisanal:dirty_burlap_cloth', Fluid.of('artisanal:clarified_sugarcane_juice', 500)],
-        ['tfc:burlap_cloth', Fluid.of('artisanal:alkalized_sugarcane_juice', 500)]).processingTime(100)
-    event.recipes.create.mixing(['artisanal:dirty_silk_cloth', Fluid.of('artisanal:clarified_sugarcane_juice', 500)],
-        ['tfc:silk_cloth', Fluid.of('artisanal:alkalized_sugarcane_juice', 500)]).processingTime(100)
-    event.recipes.create.mixing(['artisanal:dirty_wool_cloth', Fluid.of('artisanal:clarified_sugarcane_juice', 500)],
-        ['tfc:wool_cloth', Fluid.of('artisanal:alkalized_sugarcane_juice', 500)]).processingTime(100)
-    event.recipes.create.mixing(['tfc:dirty_jute_net', Fluid.of('artisanal:clarified_sugarcane_juice', 500)],
-        ['tfc:jute_net', Fluid.of('artisanal:alkalized_sugarcane_juice', 500)]).processingTime(100)
-    event.recipes.vintageimprovements.pressurizing([Fluid.of('artisanal:molasses', 20), 'artisanal:perishable_sugar'], Fluid.of('artisanal:filtered_sugarcane_juice', 200))
-        .processingTime(2000).heated()
-    event.recipes.vintageimprovements.pressurizing([Fluid.of('artisanal:molasses', 20), 'artisanal:perishable_sugar'], Fluid.of('artisanal:sugarcane_juice', 200))
-        .processingTime(2000).heated()
-    event.recipes.vintageimprovements.pressurizing([Fluid.of('artisanal:molasses', 20), 'artisanal:non_perishable_sugar'], Fluid.of('artisanal:clarified_sugarcane_juice', 200))
-        .processingTime(2000).heated()
-    event.recipes.vintageimprovements.pressurizing(Fluid.of('tfc:rum'), Fluid.of('artisanal:molasses')).processingTime(24000)
-    */
 
     // Phosphorus recipes
     event.custom({type: 'vintageimprovements:pressurizing',
@@ -354,9 +290,6 @@ ServerEvents.recipes(event => {
       heat_requirement: 'superheated',
       processing_time: 500
     })
-    // TODO: createbb:white_phosphorus no longer exists in CreateBigCannons 1.21
-    //event.remove('createbb:phase1/limestone_tag_crushing')
-    //event.recipes.create.crushing('createbb:white_phosphorus', 'tfc:pure_phosphorus')
 
     // Cut gems with vintageimprovements polishing
     const gemTypes = [
@@ -407,33 +340,8 @@ ServerEvents.recipes(event => {
         [Item.of('tfc:ceramic/unfired_fire_ingot_mold', 2)], 
         '5x tfc:fire_clay'
     )
-    // This kind of recipe can't be done: it can only take 1 input. Maybe it can be done with a create sequenced assembly: deploy and press.
-    // event.custom({
-    //     type: 'vintageimprovements:curving',
-    //     ingredients: [
-    //         { item: 'tfc:fire_clay' },
-    //         { item: 'tfc:fire_clay' },
-    //         { item: 'tfc:fire_clay' },
-    //         { item: 'tfc:fire_clay' },
-    //         { item: 'tfc:fire_clay' }
-    //     ],
-    //     results: [
-    //         { 
-    //             id: 'tfc:ceramic/unfired_mold_table',
-    //             count: 1
-    //         }
-    //     ],
-    //     mode: 4
-    // })
 
     // Automated welding for the high-carbon steels
-    function heatedIngredient(item, minTemp, maxTemp) {
-        if (maxTemp === undefined) maxTemp = 3000
-        return { type: 'woodencog:heated', ingredient: { item: item }, min_temp: minTemp, max_temp: maxTemp }
-    }
-    function heatedResult(id) {
-        return { type: 'heated', copy_heat: true, internal: { id: id } }
-    }
     const steelWelds = [
         { first: 'tfc:metal/ingot/weak_steel', second: 'tfc:metal/ingot/pig_iron', result: 'tfc:metal/ingot/high_carbon_black_steel', meltTemp: 1540 },
         { first: 'tfc:metal/ingot/weak_blue_steel', second: 'tfc:metal/ingot/black_steel', result: 'tfc:metal/ingot/high_carbon_blue_steel', meltTemp: 1540 },
@@ -480,7 +388,7 @@ ServerEvents.recipes(event => {
         {item: 'tfc:blubber'},
         {item: 'tfc:blubber'},
         {item: 'tfc:blubber'},
-        {type: 'neoforge:single', fluid: 'minecraft:water', amount: 1000}
+        fluidIn('minecraft:water', 1000)
         ],
         results: [
         {amount: 1000, id: 'tfc:tallow'}
@@ -496,7 +404,7 @@ ServerEvents.recipes(event => {
         {item: 'butchery:animal_fat'},
         {item: 'butchery:animal_fat'},
         {item: 'butchery:animal_fat'},
-        {type: 'neoforge:single', fluid: 'minecraft:water', amount: 1000}
+        fluidIn('minecraft:water', 1000)
         ],
         results: [
         {amount: 1000, id: 'tfc:tallow'}

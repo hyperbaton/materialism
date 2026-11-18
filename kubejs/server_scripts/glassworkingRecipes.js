@@ -489,7 +489,6 @@ ServerEvents.recipes(event => {
     ]).transitionalItem('tfc:silica_glass_batch').loops(1)
     
     // #54
-    // TODO: butcher:jar no longer exists (butcher mod not in 1.21)
     event.recipes.create.sequenced_assembly([
         Item.of('minecraft:glass_bottle', 1)
       ], '#tfc:glass_batches_tier_2', [ // input

@@ -32,13 +32,6 @@ ServerEvents.recipes(event => {
     }
 
     // Woodencog-style metalworking helpers
-    function heatedIngredient(item, minTemp, maxTemp) {
-        if (maxTemp === undefined) maxTemp = 3000
-        return { type: 'woodencog:heated', ingredient: { item: item }, min_temp: minTemp, max_temp: maxTemp }
-    }
-    function heatedResult(id) {
-        return { type: 'heated', copy_heat: true, internal: { id: id } }
-    }
 
     // tfc_items wires: prefer the wire textures already coming from vintageimprovements,
     // createaddition, or (for wrought iron) createaddition's iron_wire, over tfc_items' own,

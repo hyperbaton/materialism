@@ -1,13 +1,11 @@
 // TFC Advanced Drinks: machine versions of the pot, barrel and processing steps (heating steps already run in a smoking fan via WoodenCog)
 ServerEvents.recipes(event => {
   const id = name => 'kubejs:drinks/' + name
-  const fresh = item => ({type: 'tfc:and', children: [{item: item}, {type: 'tfc:not_rotten'}]})
-  const water = amount => ({type: 'neoforge:single', fluid: 'minecraft:water', amount: amount})
 
   // Brewing: same ratios as the pot, slow in a heated mixer
   const brew = (name, ingredients, result) => event.custom({
     type: 'create:mixing',
-    ingredients: ingredients.concat([water(500)]),
+    ingredients: ingredients.concat([fluidIn('minecraft:water', 500)]),
     results: [{id: 'jsdrinks:' + result, amount: 500}],
     heat_requirement: 'heated',
     processing_time: 1200
@@ -22,7 +20,7 @@ ServerEvents.recipes(event => {
   ;['coffee', 'strong_coffee'].forEach(coffee => event.custom({
     type: 'create:mixing',
     ingredients: [
-      {type: 'neoforge:single', fluid: 'jsdrinks:' + coffee, amount: 500},
+      fluidIn('jsdrinks:' + coffee, 500),
       {type: 'neoforge:tag', tag: 'firmalife:milks', amount: 100}
     ],
     results: [{id: `jsdrinks:${coffee}_with_milk`, amount: 600}]
@@ -54,11 +52,6 @@ ServerEvents.recipes(event => {
     event.custom({type: 'tfc:barrel_sealed', duration: json.duration, input_fluid: json.input_fluid,
       input_item: json.input_item, output_fluid: json.output_fluid}).id(id('barrel/rum'))
   })
-  brews.forEach(json => event.custom({
-    type: 'materialismcore:fermenting',
-    ingredient: json.input_item,
-    fluid_ingredient: json.input_fluid,
-    result: json.output_fluid,
-    processing_time: Math.round(json.duration * 0.8)
-  }).id(id('fermenting/' + json.source.replace(':', '/'))))
+  brews.forEach(json => fermenting(event, json.input_item, json.input_fluid, json.output_fluid, Math.round(json.duration * 0.8))
+    .id(id('fermenting/' + json.source.replace(':', '/'))))
 })

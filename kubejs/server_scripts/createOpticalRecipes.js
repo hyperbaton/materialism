@@ -25,7 +25,7 @@ ServerEvents.recipes(event => {
                 type: 'vintageimprovements:vacuumizing',
                 ingredients: [
                     { item: 'create_optical:incomplete_optical_device' },
-                    { type: 'neoforge:single', amount: 500, fluid: 'minecraft:water' }
+                    fluidIn('minecraft:water', 500)
                 ],
                 results: [{ id: 'create_optical:incomplete_optical_device' }]
             })

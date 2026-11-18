@@ -32,7 +32,7 @@ ServerEvents.recipes(event => {
         type: 'create:mixing',
         ingredients: [
             { type: 'tfc:and', children: [{ item: 'firmalife:food/butter' }, { type: 'tfc:not_rotten' }] },
-            { type: 'neoforge:single', fluid: 'firmalife:sugar_water', amount: 1000 }
+            fluidIn('firmalife:sugar_water', 1000)
         ],
         results: [{ id: 'firmalife:caramel', amount: 1000 }],
         heat_requirement: 'heated',

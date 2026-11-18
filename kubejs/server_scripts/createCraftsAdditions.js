@@ -47,21 +47,11 @@ ServerEvents.recipes(event => {
     event.remove({output: 'createaddition:mixing/netherrack'})
     
     // Modify Tesla coil recipe
-    event.replaceInput(
-      {id: 'createaddition:mechanical_crafting/tesla_coil'},
-      'create:andesite_alloy',
-      'tfc_metallurgy:metal/rod/aluminum'
-    )
-    event.replaceInput(
-     {id: 'createaddition:mechanical_crafting/tesla_coil'},
-     'createaddition:copper_spool',
-     'tfmg:large_coil'
-    )
-    event.replaceInput(
-     {id: 'createaddition:crafting/portable_energy_interface'},
-     'createaddition:copper_spool',
-     'tfmg:cable_tube'
-    )
+    swapInputs(event, [
+      ['createaddition:mechanical_crafting/tesla_coil', 'create:andesite_alloy', 'tfc_metallurgy:metal/rod/aluminum'],
+      ['createaddition:mechanical_crafting/tesla_coil', 'createaddition:copper_spool', 'tfmg:large_coil'],
+      ['createaddition:crafting/portable_energy_interface', 'createaddition:copper_spool', 'tfmg:cable_tube']
+    ])
 
     // Remove recipes for connectors
     event.remove({output: 'createaddition:connector'})
@@ -70,11 +60,9 @@ ServerEvents.recipes(event => {
     event.remove({output: 'createaddition:redstone_relay'})
 
     // Improve recipe for rolling mill
-    event.replaceInput(
-        {id: 'createaddition:crafting/rolling_mill'},
-        'create:andesite_alloy',
-        'tfc:metal/rod/steel'
-    )
+    swapInputs(event, [
+      ['createaddition:crafting/rolling_mill', 'create:andesite_alloy', 'tfc:metal/rod/steel']
+    ])
 
     // Remove C&A capacitors
     event.remove({output: 'createaddition:capacitor'})

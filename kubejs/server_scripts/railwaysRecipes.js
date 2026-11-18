@@ -91,6 +91,8 @@ ServerEvents.recipes(event => {
     // Locometal boilers (all 64: base/iron/copper/brass-wrapped x 16 colors) share the
     // same 2 vanilla ingredients: 5x blaze rod -> titanium rod, 1x bucket -> fluid tank.
     // ============================================================
-    event.replaceInput({ id: /^railways:mechanical_crafting\/.*locometal_boiler$/ }, 'minecraft:blaze_rod', 'tfc_metallurgy:metal/rod/titanium')
-    event.replaceInput({ id: /^railways:mechanical_crafting\/.*locometal_boiler$/ }, 'minecraft:bucket', 'create:fluid_tank')
+    swapInputs(event, [
+      [{ id: /^railways:mechanical_crafting\/.*locometal_boiler$/ }, 'minecraft:blaze_rod', 'tfc_metallurgy:metal/rod/titanium'],
+      [{ id: /^railways:mechanical_crafting\/.*locometal_boiler$/ }, 'minecraft:bucket', 'create:fluid_tank']
+    ])
 })

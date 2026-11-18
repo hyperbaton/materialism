@@ -141,17 +141,6 @@ ServerEvents.recipes(event => {
   // Change sulfuric acid recipes for vintageimprovements ones:
   event.remove('tfmg:mixing/copper_sulfate')
   event.remove('tfmg:mixing/zinc_sulfate')
-  // Zinc sulfate recipe (item reimplemented via KubeJS, mirrors copper sulfate pressurizing)
-  // event.custom({
-  //   type: 'vintageimprovements:pressurizing',
-  //   ingredients: [
-  //     {amount: 200, tag: 'c:sulfuric_acid', type: 'neoforge:tag'},
-  //     {fluid: 'minecraft:water', amount: 200, type: 'neoforge:single'},
-  //     {item: 'tfc:metal/ingot/zinc'}
-  //   ],
-  //   results: [{id: 'kubejs:zinc_sulfate'}],
-  //   processing_time: 800
-  // })
   // Remove parts cutting (done with lathe)
   event.remove('tfmg:stonecutting/screw')
   event.remove('tfmg:stonecutting/rebar')
@@ -182,65 +171,25 @@ ServerEvents.recipes(event => {
   event.remove({id: 'tfmg:crushing/sulfur'})
   event.remove({output: 'vintageimprovements:sulfur'})
   event.remove({output: 'vintageimprovements:sulfur_chunk'})
-  // TODO: tfmg:copper_cable no longer exists in TFMG 1.21
-  //event.replaceInput(
-  //  { output: 'tfmg:copper_cable' },
-  //  'minecraft:stick',
-  //  'createaddition:spool'
-  //)
   // Replace TFMG constantan with TFC Metallurgy constantan
   event.remove({id: 'tfmg:mixing/constantan'})
   event.remove({output: 'tfmg:constantan_ingot'})
   event.remove({output: 'tfmg:constantan_nugget'})
   event.remove({output: 'tfmg:constantan_block'})
   // Replace vanilla copper ingot in remaining TFMG recipes
-  event.replaceInput(
-    { id: 'tfmg:crafting/materials/cable_connector' },
-    'minecraft:copper_ingot',
-    'tfc:metal/ingot/copper'
-  )
-  // Replace steel nuggets with tfc_items steel rivets
-  event.replaceInput(
-    { id: 'tfmg:crafting/materials/cable_connector' },
-    '#c:nuggets/steel',
-    'tfc_items:steel_rivet'
-  )
-  event.replaceInput(
-    { id: 'tfmg:crafting/materials/cable_tube' },
-    '#c:nuggets/steel',
-    'tfc_items:steel_rivet'
-  )
-  event.replaceInput(
-    { id: 'tfmg:crafting/materials/fire_extinguisher' },
-    '#c:nuggets/steel',
-    'tfc_items:steel_rivet'
-  )
-  event.replaceInput(
-    { id: 'tfmg:crafting/materials/glass_insulator_segment' },
-    '#c:nuggets/steel',
-    'tfc_items:steel_rivet'
-  )
-  event.replaceInput(
-    { id: 'tfmg:crafting/materials/oil_can' },
-    '#c:nuggets/steel',
-    'tfc_items:steel_rivet'
-  )
-  event.replaceInput(
-    { id: 'tfmg:crafting/materials/unfinished_electromagnetic_coil' },
-    '#c:nuggets/steel',
-    'tfc_items:steel_ring'
-  )
-  event.replaceInput(
-    { id: /tfmg.*/ },
-    '#c:nuggets/steel',
-    'tfc_items:steel_rivet'
-  )
-  // Replace kelp in concrete hose with rubber
-  event.replaceInput(
-    { id: 'tfmg:crafting/materials/concrete_hose' },
-    'minecraft:dried_kelp_block',
-    'afc:rubber_bar'
-  )
+  swapInputs(event, [
+    ['tfmg:crafting/materials/cable_connector', 'minecraft:copper_ingot', 'tfc:metal/ingot/copper'],
+    // Replace steel nuggets with tfc_items steel rivets
+    ['tfmg:crafting/materials/cable_connector', '#c:nuggets/steel', 'tfc_items:steel_rivet'],
+    ['tfmg:crafting/materials/cable_tube', '#c:nuggets/steel', 'tfc_items:steel_rivet'],
+    ['tfmg:crafting/materials/fire_extinguisher', '#c:nuggets/steel', 'tfc_items:steel_rivet'],
+    ['tfmg:crafting/materials/glass_insulator_segment', '#c:nuggets/steel', 'tfc_items:steel_rivet'],
+    ['tfmg:crafting/materials/oil_can', '#c:nuggets/steel', 'tfc_items:steel_rivet'],
+    ['tfmg:crafting/materials/unfinished_electromagnetic_coil', '#c:nuggets/steel', 'tfc_items:steel_ring'],
+    [{ id: /tfmg.*/ }, '#c:nuggets/steel', 'tfc_items:steel_rivet'],
+    // Replace kelp in concrete hose with rubber
+    ['tfmg:crafting/materials/concrete_hose', 'minecraft:dried_kelp_block', 'afc:rubber_bar']
+  ])
   // Remove TFMG gunpowder recipe (replaced elsewhere)
   event.remove({id: 'tfmg:mixing/gunpowder'})
 
@@ -248,21 +197,11 @@ ServerEvents.recipes(event => {
   event.remove({id: 'create:crushing/bauxite'})
 
   // Replace gravel and sand in asphalt mixture recipes with TFC tags
-  event.replaceInput(
-    { id: 'tfmg:mixing/asphalt_mixture' },
-    'minecraft:gravel',
-    '#c:gravels'
-  )
-  event.replaceInput(
-    { id: 'tfmg:mixing/asphalt_mixture' },
-    'minecraft:sand',
-    '#c:sands/silica'
-  )
-  event.replaceInput(
-    { id: 'tfmg:mixing/asphalt_mixture_from_slag' },
-    'minecraft:gravel',
-    '#c:gravels'
-  )
+  swapInputs(event, [
+    ['tfmg:mixing/asphalt_mixture', 'minecraft:gravel', '#c:gravels'],
+    ['tfmg:mixing/asphalt_mixture', 'minecraft:sand', '#c:sands/silica'],
+    ['tfmg:mixing/asphalt_mixture_from_slag', 'minecraft:gravel', '#c:gravels']
+  ])
 
   // Replace tfmg:aluminum_bars with create:andesite_bars (renamed to "Aluminum Bars")
   event.remove({id: 'tfmg:aluminum_bars_from_ingots_aluminum_stonecutting'})
@@ -278,16 +217,10 @@ ServerEvents.recipes(event => {
   event.remove({output: 'create_new_age:copper_circuit'})
 
   // Replace vanilla string requirements
-  event.replaceInput(
-    { id: 'tfmg:crafting/materials/pumpjack_crank' }, // Arg 1: the filter
-    'minecraft:string',            // Arg 2: the item to replace
-    'tfc:rope'         // Arg 3: the item to replace it with
-  )
-  event.replaceInput(
-    { id: 'tfmg:crafting/materials/pumpjack_base' }, // Arg 1: the filter
-    'minecraft:string',            // Arg 2: the item to replace
-    'tfc:rope'         // Arg 3: the item to replace it with
-  )
+  swapInputs(event, [
+    ['tfmg:crafting/materials/pumpjack_crank', 'minecraft:string', 'tfc:rope'],
+    ['tfmg:crafting/materials/pumpjack_base', 'minecraft:string', 'tfc:rope']
+  ])
   // Use TFC steel as product of TFMG blast furnace and casting
   event.remove({id: 'tfmg:casting/amogus'})
   // Casting basin: TFMG's own ingot recipes take 90 mB and its slag block takes 20 mB. Use 100 mB
@@ -320,26 +253,16 @@ ServerEvents.recipes(event => {
     ]
   ).transitionalItem('tfmg:steel_casing').loops(1)
   // Use TFC gravel for concrete
-  event.replaceInput(
-    { id: 'tfmg:mixing/concrete_mixture' }, // Arg 1: the filter
-    'minecraft:gravel',            // Arg 2: the item to replace
-    '#c:gravels'    // Arg 3: the item to replace it with
-  )
-  event.replaceInput(
-    { id: 'tfmg:mixing/concrete_mixture' }, // Arg 1: the filter
-    'minecraft:sand',            // Arg 2: the item to replace
-    '#c:sands/silica' // Arg 3: the item to replace it with
-  )
-  event.replaceInput(
-    { id: 'tfmg:mixing/concrete_mixture_from_slag' },
-    'minecraft:gravel',
-    '#c:gravels'
-  )
+  swapInputs(event, [
+    ['tfmg:mixing/concrete_mixture', 'minecraft:gravel', '#c:gravels'],
+    ['tfmg:mixing/concrete_mixture', 'minecraft:sand', '#c:sands/silica'],
+    ['tfmg:mixing/concrete_mixture_from_slag', 'minecraft:gravel', '#c:gravels']
+  ])
   // Vat concrete, keeping the proportions of the mixing chain (a mixture batch is 250 mB water -> 1000 mB)
   const vatConcrete = (ingredients, water, result, minSize) => {
     event.custom({
       type: 'tfmg:vat',
-      ingredients: ingredients.concat([{type: 'neoforge:single', amount: water, fluid: 'minecraft:water'}]),
+      ingredients: ingredients.concat([fluidIn('minecraft:water', water)]),
       machines: ['tfmg:mixer'],
       min_size: minSize,
       results: [{amount: result, id: 'tfmg:liquid_concrete'}]
@@ -375,8 +298,10 @@ ServerEvents.recipes(event => {
   ;['white', 'orange', 'magenta', 'light_blue', 'yellow', 'lime', 'pink', 'gray', 'light_gray', 'cyan', 'purple', 'blue',
     'brown', 'green', 'red', 'black'].forEach(c => retiredElectrics.push(c + '_multimeter'))
   // Electrical switch: insulated leads and silver contacts
-  event.replaceInput({id: 'tfmg:crafting/materials/electrical_switch'}, 'tfmg:electric_post', 'electroenergetics:heavily_insulated_wire')
-  event.replaceInput({id: 'tfmg:crafting/materials/electrical_switch'}, '#c:dusts/redstone', 'tfc_items:silver_rivet')
+  swapInputs(event, [
+    ['tfmg:crafting/materials/electrical_switch', 'tfmg:electric_post', 'electroenergetics:heavily_insulated_wire'],
+    ['tfmg:crafting/materials/electrical_switch', '#c:dusts/redstone', 'tfc_items:silver_rivet']
+  ])
   retiredElectrics.forEach(i => event.remove({output: 'tfmg:' + i}))
   // Diodes come from Electro Energetics
   event.remove({output: 'tfmg:electric_diode'})
@@ -484,30 +409,6 @@ ServerEvents.recipes(event => {
     event.recipes.vintageimprovements.vacuumizing(freezer, [freezer]),
     event.recipes.createFilling(freezer, [freezer, Fluid.of('tfmg:lpg', 1000)])
   ]).transitionalItem(freezer).loops(2).id('kubejs:tfmg/sequenced_assembly/freezer')
-  // TODO: tfmg:electric_casing, tfmg:copper_cable no longer exist in TFMG 1.21
-  /*event.remove({id: 'tfmg:crafting/electric_casing'})
-  event.recipes.create.sequenced_assembly([
-    CreateItem.of('tfmg:electric_casing', 90.0),
-    CreateItem.of('tfmg:heavy_machinery_casing', 5.0),
-    CreateItem.of('tfmg:capacitor_item', 3.0),
-    CreateItem.of('tfmg:resistor', 2.0)
-  ], 'tfmg:heavy_machinery_casing', [
-    event.recipes.createDeploying('tfmg:heavy_machinery_casing', ['tfmg:heavy_machinery_casing', 'tfmg:copper_cable']),
-    event.recipes.createDeploying('tfmg:heavy_machinery_casing', ['tfmg:heavy_machinery_casing', 'tfmg:resistor']),
-    event.recipes.createDeploying('tfmg:heavy_machinery_casing', ['tfmg:heavy_machinery_casing', 'tfmg:capacitor_item']),
-    event.recipes.createDeploying('tfmg:heavy_machinery_casing', ['tfmg:heavy_machinery_casing', 'create:electron_tube']),
-    event.recipes.createPressing('tfmg:heavy_machinery_casing', 'tfmg:heavy_machinery_casing'),
-    event.custom({
-      type: 'create_new_age:energising',
-      energy_needed: 1500,
-      ingredients: [
-        { item: 'tfmg:heavy_machinery_casing'},
-      ],
-      results: [
-        { id: 'tfmg:heavy_machinery_casing'},
-      ]
-    })
-  ]).transitionalItem('tfmg:heavy_machinery_casing').loops(2)*/
   // Lightbulb
   event.remove({id: 'tfmg:crafting/materials/light_bulb'})
   event.recipes.create.sequenced_assembly([
@@ -616,16 +517,10 @@ ServerEvents.recipes(event => {
     'tfmg:cinderflourblock',
     'tfmg:red_concrete'
   )
-  event.replaceInput({id: 'tfmg:crafting/materials/cinderflour_block'},
-    'minecraft:nether_wart_block',
-    'tfmg:liquid_concrete_bucket'
-  )
-
-  event.replaceInput(
-    { id: 'tfmg:crafting/materials/lithium_blade' }, // Arg 1: the filter
-    'tfmg:steel_sword',            // Arg 2: the item to replace
-    'tfc:metal/sword/steel'         // Arg 3: the item to replace it with
-  )
+  swapInputs(event, [
+    ['tfmg:crafting/materials/cinderflour_block', 'minecraft:nether_wart_block', 'tfmg:liquid_concrete_bucket'],
+    ['tfmg:crafting/materials/lithium_blade', 'tfmg:steel_sword', 'tfc:metal/sword/steel']
+  ])
 
   event.shaped('tfmg:lead_flywheel', 
     [ 'III',
@@ -654,7 +549,7 @@ ServerEvents.recipes(event => {
     type: 'create:mixing',
     ingredients: [
       {item: 'kubejs:polysilicon'},
-      {type: 'neoforge:single', fluid: 'tfc_metallurgy:metal/boron', amount: 50}
+      fluidIn('tfc_metallurgy:metal/boron', 50)
     ],
     results: [{id: 'tfmg:p_semiconductor'}],
     heat_requirement: 'heated'
@@ -694,7 +589,7 @@ ServerEvents.recipes(event => {
   event.custom({
     type: 'vintageimprovements:pressurizing',
     ingredients: [
-      {type: 'neoforge:single', amount: 1000, fluid: 'tfmg:air'}
+      fluidIn('tfmg:air', 1000)
     ],
     secondary_fluid_input: {id: 'tfmg:cooling_fluid', amount: 100},
     results: [{id: 'kubejs:liquid_air', amount: 200}],
@@ -711,7 +606,7 @@ ServerEvents.recipes(event => {
     min_current: 10,
     energy: 1200 * 30000,
     ingredients: [
-      {type: 'neoforge:single', amount: 2000, fluid: 'tfmg:air'}
+      fluidIn('tfmg:air', 2000)
     ],
     processing_time: 600,
     results: [{id: 'kubejs:liquid_air', amount: 400}]
@@ -720,7 +615,7 @@ ServerEvents.recipes(event => {
   event.custom({
     type: 'tfmg:distillation',
     ingredients: [
-      {type: 'neoforge:single', amount: 200, fluid: 'kubejs:liquid_air'}
+      fluidIn('kubejs:liquid_air', 200)
     ],
     results: [
       {amount: 6, id: 'tfmg:carbon_dioxide'},
@@ -757,16 +652,16 @@ ServerEvents.recipes(event => {
       ].concat(options.extraResults || [])
     })
   }
-  const water300 = {type: 'neoforge:single', amount: 300, fluid: 'minecraft:water'}
+  const water300 = fluidIn('minecraft:water', 300)
 
   // Pure water: very slow, and it takes the highest voltage to drive current through it
   electrolysis([water300], 1200, 200, 100, {minCurrent: 7})
 
   // Salt water: the dissolved sodium ions make it much faster, but the electrodes corrode, so less gas is collected
-  electrolysis([{type: 'neoforge:single', amount: 300, fluid: 'tfc:salt_water'}], 300, 150, 75, {wear: 5})
+  electrolysis([fluidIn('tfc:salt_water', 300)], 300, 150, 75, {wear: 5})
 
   // Sulfuric acid: even faster at full yield, but a little acid is lost as mist
-  electrolysis([water300, {type: 'neoforge:single', amount: 20, fluid: 'tfmg:sulfuric_acid'}], 150, 200, 100,
+  electrolysis([water300, fluidIn('tfmg:sulfuric_acid', 20)], 150, 200, 100,
     {extraResults: [{amount: 16, id: 'tfmg:sulfuric_acid'}]})
 
   // Metal dust catalysts: the cheaper the metal, the slower it is, the more current it needs and
@@ -790,10 +685,10 @@ ServerEvents.recipes(event => {
     min_current: 7,
     temperature: 1300,
     ingredients: [
-      {type: 'neoforge:single', amount: 200, fluid: 'tfc:metal/weak_steel'},
-      {type: 'neoforge:single', amount: 40, fluid: 'firmalife:metal/chromium'},
-      {type: 'neoforge:single', amount: 40, fluid: 'tfc_metallurgy:metal/molybdenum'},
-      {type: 'neoforge:single', amount: 20, fluid: 'kubejs:nitrogen'},
+      fluidIn('tfc:metal/weak_steel', 200),
+      fluidIn('firmalife:metal/chromium', 40),
+      fluidIn('tfc_metallurgy:metal/molybdenum', 40),
+      fluidIn('kubejs:nitrogen', 20),
       {item: 'tfc_metallurgy:metal/dust/vanadium'},
       {item: 'tfc_metallurgy:metal/dust/manganese'},
       {item: 'tfc_metallurgy:metal/dust/cobalt'},
@@ -882,9 +777,11 @@ ServerEvents.recipes(event => {
   ]).transitionalItem(napalmCase).loops(1)
 
   // TFMG items that used generic plastic
-  event.replaceInput({ id: 'tfmg:crafting/materials/empty_circuit_board' }, 'tfmg:plastic_sheet', 'chemica:cured_epoxy_sheet')
-  event.replaceInput({ id: 'tfmg:crafting/materials/cooling_fluid_bottle' }, 'tfmg:plastic_sheet', 'chemica:polyethylene_sheet')
-  event.replaceInput({ id: 'tfmg:crafting/materials/lithium_charge' }, 'tfmg:plastic_sheet', 'chemica:polyethylene_sheet')
+  swapInputs(event, [
+    ['tfmg:crafting/materials/empty_circuit_board', 'tfmg:plastic_sheet', 'chemica:cured_epoxy_sheet'],
+    ['tfmg:crafting/materials/cooling_fluid_bottle', 'tfmg:plastic_sheet', 'chemica:polyethylene_sheet'],
+    ['tfmg:crafting/materials/lithium_charge', 'tfmg:plastic_sheet', 'chemica:polyethylene_sheet']
+  ])
   // Generic plastic production (replaced by Chemica plastics)
   ;['tfmg:casting/plastic_sheet', 'tfmg:crafting/materials/plastic_block', 'tfmg:crafting/materials/plastic_sheet',
     'tfmg:melting/melt_plastic_ingot', 'tfmg:vat/plastic_from_ethylene', 'tfmg:vat/plastic_from_propylene']
@@ -934,7 +831,7 @@ ServerEvents.recipes(event => {
   event.custom({
     type: 'tfmg:hot_blast',
     ingredients: [
-      {type: 'neoforge:single', amount: 25, fluid: 'tfmg:air'},
+      fluidIn('tfmg:air', 25),
       {type: 'neoforge:tag', amount: 20, tag: 'tfmg:blast_stove_fuel'}
     ],
     processing_time: 200,
@@ -965,7 +862,7 @@ ServerEvents.recipes(event => {
   event.custom({
     type: 'create:mixing',
     ingredients: [
-      {type: 'neoforge:single', fluid: 'tfc:tallow', amount: 1000}
+      fluidIn('tfc:tallow', 1000)
     ],
     results: [
       {amount: 100, id: 'tfmg:lubrication_oil'}

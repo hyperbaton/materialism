@@ -12,7 +12,6 @@ TFCEvents.data(event => {
 ServerEvents.recipes(event => {
   const id = name => 'kubejs:extraction/' + name
   const grades = [['small', 2], ['poor', 3], ['normal', 5], ['rich', 7]]
-  const fluid = (f, amount) => ({ type: 'neoforge:single', fluid: f, amount: amount })
   const power = 30000
 
   // Bauxite and rutile no longer reduce by plain heat; the bloomery keeps reading rutile's melt
@@ -46,7 +45,7 @@ ServerEvents.recipes(event => {
     ingredients: [
       { item: 'kubejs:powder/bauxite' }, { item: 'kubejs:powder/bauxite' },
       { item: 'kubejs:powder/bauxite' }, { item: 'kubejs:powder/bauxite' },
-      fluid('chemica:caustic_soda', 500)
+      fluidIn('chemica:caustic_soda', 500)
     ],
     results: [{ id: 'kubejs:sodium_aluminate', amount: 500 }, { id: 'tfc:mud/oxisol' }],
     heat_requirement: 'heated',
@@ -58,7 +57,7 @@ ServerEvents.recipes(event => {
     allowed_vat_types: ['tfmg:steel', 'tfmg:fireproof'],
     machines: ['tfmg:freezer'],
     min_size: 1,
-    ingredients: [fluid('kubejs:sodium_aluminate', 500)],
+    ingredients: [fluidIn('kubejs:sodium_aluminate', 500)],
     processing_time: 200,
     results: [
       { id: 'kubejs:powder/aluminum_hydroxide', count: 4 },
@@ -104,7 +103,7 @@ ServerEvents.recipes(event => {
     ingredients: [
       { item: 'chemica:rutile_dust' }, { item: 'chemica:rutile_dust' },
       { item: 'tfmg:coal_coke_dust' },
-      fluid('chemica:chlorine', 500)
+      fluidIn('chemica:chlorine', 500)
     ],
     processing_time: 200,
     results: [
@@ -119,9 +118,9 @@ ServerEvents.recipes(event => {
     min_size: 1,
     temperature: 850,
     ingredients: [
-      fluid('chemica:titanium_tetrachloride', 500),
-      fluid('tfc_metallurgy:metal/magnesium', 20),
-      fluid('chemica:argon', 50)
+      fluidIn('chemica:titanium_tetrachloride', 500),
+      fluidIn('tfc_metallurgy:metal/magnesium', 20),
+      fluidIn('chemica:argon', 50)
     ],
     processing_time: 400,
     results: [
@@ -139,7 +138,7 @@ ServerEvents.recipes(event => {
     min_current: 6,
     energy: 200 * power,
     electrode_wear: 1,
-    ingredients: [fluid('kubejs:magnesium_chloride', 500)],
+    ingredients: [fluidIn('kubejs:magnesium_chloride', 500)],
     processing_time: 200,
     results: [
       { id: 'tfc_metallurgy:metal/magnesium', amount: 20 },
@@ -158,7 +157,7 @@ ServerEvents.recipes(event => {
     temperature: 1700,
     min_current: 7,
     energy: 100 * power,
-    ingredients: [{ item: 'kubejs:titanium_electrode' }, fluid('chemica:argon', 150)],
+    ingredients: [{ item: 'kubejs:titanium_electrode' }, fluidIn('chemica:argon', 150)],
     processing_time: 100,
     results: [{ id: 'tfc_metallurgy:metal/titanium', amount: 100 }]
   }).id(id('vat/titanium_remelting'))
@@ -176,7 +175,7 @@ ServerEvents.recipes(event => {
     ingredients: [
       { item: 'kubejs:powder/wolframite' }, { item: 'kubejs:powder/wolframite' },
       { item: 'kubejs:powder/wolframite' }, { item: 'kubejs:powder/wolframite' },
-      fluid('chemica:caustic_soda', 500)
+      fluidIn('chemica:caustic_soda', 500)
     ],
     results: [{ id: 'kubejs:sodium_tungstate', amount: 500 }, { id: 'tfc:powder/hematite', count: 2 }],
     heat_requirement: 'heated',
@@ -189,9 +188,9 @@ ServerEvents.recipes(event => {
     machines: ['tfmg:mixer'],
     min_size: 1,
     ingredients: [
-      fluid('kubejs:sodium_tungstate', 500),
-      fluid('chemica:ammonia', 125),
-      fluid('chemica:hydrochloric_acid', 125)
+      fluidIn('kubejs:sodium_tungstate', 500),
+      fluidIn('chemica:ammonia', 125),
+      fluidIn('chemica:hydrochloric_acid', 125)
     ],
     processing_time: 200,
     results: [
@@ -215,7 +214,7 @@ ServerEvents.recipes(event => {
     ingredients: [
       { item: 'kubejs:powder/tungsten_trioxide' }, { item: 'kubejs:powder/tungsten_trioxide' },
       { item: 'kubejs:powder/tungsten_trioxide' }, { item: 'kubejs:powder/tungsten_trioxide' },
-      fluid('tfmg:hydrogen', 300)
+      fluidIn('tfmg:hydrogen', 300)
     ],
     processing_time: 200,
     results: [
@@ -233,7 +232,7 @@ ServerEvents.recipes(event => {
     temperature: 1200,
     min_current: 8,
     energy: 200 * power,
-    ingredients: [{ item: 'kubejs:tungsten_green_bar' }, fluid('tfmg:hydrogen', 100)],
+    ingredients: [{ item: 'kubejs:tungsten_green_bar' }, fluidIn('tfmg:hydrogen', 100)],
     processing_time: 200,
     results: [{ id: 'tfc_metallurgy:metal/ingot/tungsten' }]
   }).id(id('vat/tungsten_sintering'))
@@ -248,8 +247,8 @@ ServerEvents.recipes(event => {
     ingredients: [
       { item: 'kubejs:powder/kernite' }, { item: 'kubejs:powder/kernite' },
       { item: 'kubejs:powder/kernite' }, { item: 'kubejs:powder/kernite' },
-      fluid('minecraft:water', 500),
-      fluid('tfmg:sulfuric_acid', 125)
+      fluidIn('minecraft:water', 500),
+      fluidIn('tfmg:sulfuric_acid', 125)
     ],
     processing_time: 200,
     results: [{ id: 'kubejs:powder/boric_acid', count: 4 }]
@@ -289,7 +288,7 @@ ServerEvents.recipes(event => {
     ingredients: [
       { item: 'tfc_metallurgy:metal/dust/boron' }, { item: 'tfc_metallurgy:metal/dust/boron' },
       { item: 'tfc_metallurgy:metal/dust/boron' }, { item: 'tfc_metallurgy:metal/dust/boron' },
-      fluid('chemica:argon', 50)
+      fluidIn('chemica:argon', 50)
     ],
     processing_time: 50,
     results: [{ id: 'tfc_metallurgy:metal/boron', amount: 20 }]
@@ -299,7 +298,7 @@ ServerEvents.recipes(event => {
   event.remove({ id: 'chemica:blasting/crushed_raw_cobalt' })
   event.custom({
     type: 'vintageimprovements:pressurizing',
-    ingredients: [{ item: 'chemica:crushed_raw_cobalt' }, fluid('kubejs:oxygen', 100)],
+    ingredients: [{ item: 'chemica:crushed_raw_cobalt' }, fluidIn('kubejs:oxygen', 100)],
     results: [{ id: 'kubejs:powder/roasted_cobaltite' }, { id: 'chemica:arsenic_dust', chance: 0.5 },
       { id: 'vintageimprovements:sulfur_dioxide', amount: 100 }],
     heat_requirement: 'heated',
@@ -313,7 +312,7 @@ ServerEvents.recipes(event => {
     ingredients: [
       { item: 'kubejs:powder/roasted_cobaltite' }, { item: 'kubejs:powder/roasted_cobaltite' },
       { item: 'kubejs:powder/roasted_cobaltite' }, { item: 'kubejs:powder/roasted_cobaltite' },
-      fluid('tfmg:sulfuric_acid', 300)
+      fluidIn('tfmg:sulfuric_acid', 300)
     ],
     processing_time: 200,
     results: [{ id: 'tfc_metallurgy:metal/dust/cobalt', count: 4 }]
@@ -330,8 +329,8 @@ ServerEvents.recipes(event => {
       temperature: 80,
       ingredients: [
         { item: `tfc_metallurgy:ore/${grade}_native_platinum` },
-        fluid('chemica:nitric_acid', aquaRegia[grade]),
-        fluid('chemica:hydrochloric_acid', aquaRegia[grade])
+        fluidIn('chemica:nitric_acid', aquaRegia[grade]),
+        fluidIn('chemica:hydrochloric_acid', aquaRegia[grade])
       ],
       processing_time: 100 + 20 * units,
       results: [
@@ -346,7 +345,7 @@ ServerEvents.recipes(event => {
     allowed_vat_types: ['tfmg:steel', 'tfmg:fireproof'],
     machines: ['tfmg:mixer'],
     min_size: 1,
-    ingredients: [fluid('kubejs:chloroplatinic_acid', 500), fluid('chemica:ammonia', 100)],
+    ingredients: [fluidIn('kubejs:chloroplatinic_acid', 500), fluidIn('chemica:ammonia', 100)],
     processing_time: 200,
     results: [{ id: 'kubejs:powder/ammonium_chloroplatinate', count: 4 }]
   }).id(id('vat/ammonium_chloroplatinate'))
@@ -381,8 +380,8 @@ ServerEvents.recipes(event => {
       ingredients: [
         { item: `kubejs:powder/${ore}` }, { item: `kubejs:powder/${ore}` }, { item: `kubejs:powder/${ore}` },
         { item: 'tfc:powder/saltpeter' },
-        fluid('chemica:caustic_soda', 300),
-        fluid('chemica:chlorine', 300)
+        fluidIn('chemica:caustic_soda', 300),
+        fluidIn('chemica:chlorine', 300)
       ],
       processing_time: 300,
       results: [
@@ -397,7 +396,7 @@ ServerEvents.recipes(event => {
     allowed_vat_types: ['tfmg:steel', 'tfmg:fireproof'],
     min_size: 1,
     temperature: 400,
-    ingredients: [fluid('kubejs:osmium_tetroxide', 400), fluid('tfmg:hydrogen', 400)],
+    ingredients: [fluidIn('kubejs:osmium_tetroxide', 400), fluidIn('tfmg:hydrogen', 400)],
     processing_time: 200,
     results: [
       { id: 'tfc_metallurgy:metal/dust/osmium', count: 4 },
@@ -410,7 +409,7 @@ ServerEvents.recipes(event => {
     allowed_vat_types: ['tfmg:steel', 'tfmg:fireproof'],
     machines: ['tfmg:mixer'],
     min_size: 1,
-    ingredients: [fluid('kubejs:iridium_chloride', 400), fluid('chemica:ammonia', 100)],
+    ingredients: [fluidIn('kubejs:iridium_chloride', 400), fluidIn('chemica:ammonia', 100)],
     processing_time: 200,
     results: [{ id: 'kubejs:powder/ammonium_hexachloroiridate', count: 4 }]
   }).id(id('vat/ammonium_hexachloroiridate'))
@@ -422,7 +421,7 @@ ServerEvents.recipes(event => {
     ingredients: [
       { item: 'kubejs:powder/ammonium_hexachloroiridate' }, { item: 'kubejs:powder/ammonium_hexachloroiridate' },
       { item: 'kubejs:powder/ammonium_hexachloroiridate' }, { item: 'kubejs:powder/ammonium_hexachloroiridate' },
-      fluid('tfmg:hydrogen', 200)
+      fluidIn('tfmg:hydrogen', 200)
     ],
     processing_time: 200,
     results: [
@@ -441,7 +440,7 @@ ServerEvents.recipes(event => {
       temperature: 1700,
       min_current: 7,
       energy: 60 * power,
-      ingredients: [dust, dust, dust, dust, fluid('chemica:argon', 50)],
+      ingredients: [dust, dust, dust, dust, fluidIn('chemica:argon', 50)],
       processing_time: 60,
       results: [{ id: `tfc_metallurgy:metal/${metal}`, amount: 20 }]
     }).id(id(`vat/${metal}_melting`))
@@ -453,7 +452,7 @@ ServerEvents.recipes(event => {
     ingredients: [
       { item: 'kubejs:powder/monazite' }, { item: 'kubejs:powder/monazite' },
       { item: 'kubejs:powder/monazite' }, { item: 'kubejs:powder/monazite' },
-      fluid('chemica:caustic_soda', 500)
+      fluidIn('chemica:caustic_soda', 500)
     ],
     results: [
       { id: 'kubejs:powder/rare_earth_hydroxide', count: 4 },
@@ -471,8 +470,8 @@ ServerEvents.recipes(event => {
     ingredients: [
       { item: 'kubejs:powder/trisodium_phosphate' }, { item: 'kubejs:powder/trisodium_phosphate' },
       { item: 'kubejs:powder/trisodium_phosphate' }, { item: 'kubejs:powder/trisodium_phosphate' },
-      fluid('tfmg:sulfuric_acid', 300),
-      fluid('minecraft:water', 200)
+      fluidIn('tfmg:sulfuric_acid', 300),
+      fluidIn('minecraft:water', 200)
     ],
     processing_time: 200,
     results: [{ id: 'chemica:phosphoric_acid', amount: 500 }]
@@ -486,7 +485,7 @@ ServerEvents.recipes(event => {
     ingredients: [
       { item: 'kubejs:powder/rare_earth_hydroxide' }, { item: 'kubejs:powder/rare_earth_hydroxide' },
       { item: 'kubejs:powder/rare_earth_hydroxide' }, { item: 'kubejs:powder/rare_earth_hydroxide' },
-      fluid('chemica:nitric_acid', 400)
+      fluidIn('chemica:nitric_acid', 400)
     ],
     processing_time: 300,
     results: [
@@ -501,7 +500,7 @@ ServerEvents.recipes(event => {
     allowed_vat_types: ['tfmg:steel', 'tfmg:fireproof'],
     min_size: 1,
     temperature: 500,
-    ingredients: [fluid('kubejs:thorium_nitrate', 400)],
+    ingredients: [fluidIn('kubejs:thorium_nitrate', 400)],
     processing_time: 200,
     results: [
       { id: 'kubejs:powder/thoria', count: 4 },
@@ -517,7 +516,7 @@ ServerEvents.recipes(event => {
     ingredients: [
       { item: 'kubejs:powder/thoria' }, { item: 'kubejs:powder/thoria' },
       { item: 'kubejs:powder/thoria' }, { item: 'kubejs:powder/thoria' },
-      fluid('chemica:hydrofluoric_acid', 400)
+      fluidIn('chemica:hydrofluoric_acid', 400)
     ],
     processing_time: 200,
     results: [
@@ -575,7 +574,7 @@ ServerEvents.recipes(event => {
     ingredients: [
       { item: 'kubejs:powder/magnesia' }, { item: 'kubejs:powder/magnesia' },
       { item: 'kubejs:powder/magnesia' }, { item: 'kubejs:powder/magnesia' },
-      fluid('chemica:chlorine', 1000)
+      fluidIn('chemica:chlorine', 1000)
     ],
     processing_time: 200,
     results: [
@@ -600,8 +599,8 @@ ServerEvents.recipes(event => {
     ingredients: [
       { item: 'kubejs:powder/beta_spodumene' }, { item: 'kubejs:powder/beta_spodumene' },
       { item: 'kubejs:powder/beta_spodumene' }, { item: 'kubejs:powder/beta_spodumene' },
-      fluid('tfmg:sulfuric_acid', 250),
-      fluid('minecraft:water', 500)
+      fluidIn('tfmg:sulfuric_acid', 250),
+      fluidIn('minecraft:water', 500)
     ],
     processing_time: 200,
     results: [
@@ -617,7 +616,7 @@ ServerEvents.recipes(event => {
     min_size: 1,
     temperature: 90,
     ingredients: [
-      fluid('kubejs:lithium_sulfate', 500),
+      fluidIn('kubejs:lithium_sulfate', 500),
       { item: 'tfc:powder/soda_ash' }, { item: 'tfc:powder/soda_ash' }
     ],
     processing_time: 200,
@@ -631,7 +630,7 @@ ServerEvents.recipes(event => {
     ingredients: [
       { item: 'kubejs:powder/lithium_carbonate' }, { item: 'kubejs:powder/lithium_carbonate' },
       { item: 'kubejs:powder/lithium_carbonate' }, { item: 'kubejs:powder/lithium_carbonate' },
-      fluid('chemica:hydrochloric_acid', 500)
+      fluidIn('chemica:hydrochloric_acid', 500)
     ],
     processing_time: 200,
     results: [
@@ -649,7 +648,7 @@ ServerEvents.recipes(event => {
     min_current: 6,
     energy: 200 * power,
     electrode_wear: 1,
-    ingredients: [fluid('kubejs:lithium_chloride', 500), { item: 'tfc:powder/sylvite' }],
+    ingredients: [fluidIn('kubejs:lithium_chloride', 500), { item: 'tfc:powder/sylvite' }],
     processing_time: 200,
     results: [
       { id: 'tfc_metallurgy:metal/lithium', amount: 20 },
@@ -668,7 +667,7 @@ ServerEvents.recipes(event => {
     ingredients: [
       { item: 'kubejs:powder/bertrandite' }, { item: 'kubejs:powder/bertrandite' },
       { item: 'kubejs:powder/bertrandite' }, { item: 'kubejs:powder/bertrandite' },
-      fluid('tfmg:sulfuric_acid', 400)
+      fluidIn('tfmg:sulfuric_acid', 400)
     ],
     processing_time: 200,
     results: [{ id: 'kubejs:beryllium_sulfate', amount: 400 }]
@@ -679,9 +678,9 @@ ServerEvents.recipes(event => {
     machines: ['tfmg:mixer'],
     min_size: 1,
     ingredients: [
-      fluid('kubejs:beryllium_sulfate', 400),
-      fluid('chemica:ammonia', 100),
-      fluid('chemica:hydrofluoric_acid', 200)
+      fluidIn('kubejs:beryllium_sulfate', 400),
+      fluidIn('chemica:ammonia', 100),
+      fluidIn('chemica:hydrofluoric_acid', 200)
     ],
     processing_time: 200,
     results: [{ id: 'kubejs:powder/ammonium_fluoroberyllate', count: 4 }]
@@ -719,7 +718,7 @@ ServerEvents.recipes(event => {
     ingredients: [
       { item: 'kubejs:powder/zircon' }, { item: 'kubejs:powder/zircon' },
       { item: 'tfmg:coal_coke_dust' }, { item: 'tfmg:coal_coke_dust' },
-      fluid('chemica:chlorine', 1000)
+      fluidIn('chemica:chlorine', 1000)
     ],
     processing_time: 200,
     results: [
@@ -734,7 +733,7 @@ ServerEvents.recipes(event => {
     allowed_vat_types: ['tfmg:steel', 'tfmg:fireproof'],
     min_size: 1,
     temperature: 600,
-    ingredients: [fluid('kubejs:silicon_tetrachloride', 500), fluid('tfmg:hydrogen', 250)],
+    ingredients: [fluidIn('kubejs:silicon_tetrachloride', 500), fluidIn('tfmg:hydrogen', 250)],
     processing_time: 200,
     results: [
       { id: 'kubejs:trichlorosilane', amount: 500 },
@@ -747,9 +746,9 @@ ServerEvents.recipes(event => {
     min_size: 1,
     temperature: 850,
     ingredients: [
-      fluid('kubejs:zirconium_tetrachloride', 500),
-      fluid('tfc_metallurgy:metal/magnesium', 20),
-      fluid('chemica:argon', 50)
+      fluidIn('kubejs:zirconium_tetrachloride', 500),
+      fluidIn('tfc_metallurgy:metal/magnesium', 20),
+      fluidIn('chemica:argon', 50)
     ],
     processing_time: 400,
     results: [
@@ -776,8 +775,8 @@ ServerEvents.recipes(event => {
     ingredients: [
       { item: 'kubejs:powder/uraninite' }, { item: 'kubejs:powder/uraninite' },
       { item: 'kubejs:powder/uraninite' }, { item: 'kubejs:powder/uraninite' },
-      fluid('tfmg:sulfuric_acid', 300),
-      fluid('kubejs:oxygen', 100)
+      fluidIn('tfmg:sulfuric_acid', 300),
+      fluidIn('kubejs:oxygen', 100)
     ],
     processing_time: 200,
     results: [{ id: 'kubejs:uranyl_sulfate', amount: 400 }]
@@ -788,7 +787,7 @@ ServerEvents.recipes(event => {
     allowed_vat_types: ['tfmg:steel', 'tfmg:fireproof'],
     machines: ['tfmg:mixer'],
     min_size: 1,
-    ingredients: [fluid('kubejs:uranyl_sulfate', 400), fluid('chemica:ammonia', 100)],
+    ingredients: [fluidIn('kubejs:uranyl_sulfate', 400), fluidIn('chemica:ammonia', 100)],
     processing_time: 200,
     results: [{ id: 'kubejs:powder/yellowcake', count: 4 }]
   }).id(id('vat/yellowcake'))
@@ -801,8 +800,8 @@ ServerEvents.recipes(event => {
     ingredients: [
       { item: 'kubejs:powder/yellowcake' }, { item: 'kubejs:powder/yellowcake' },
       { item: 'kubejs:powder/yellowcake' }, { item: 'kubejs:powder/yellowcake' },
-      fluid('tfmg:hydrogen', 200),
-      fluid('chemica:hydrofluoric_acid', 400)
+      fluidIn('tfmg:hydrogen', 200),
+      fluidIn('chemica:hydrofluoric_acid', 400)
     ],
     processing_time: 300,
     results: [
@@ -834,14 +833,14 @@ ServerEvents.recipes(event => {
     ingredients: [
       { item: 'kubejs:powder/uranium_tetrafluoride' }, { item: 'kubejs:powder/uranium_tetrafluoride' },
       { item: 'kubejs:powder/uranium_tetrafluoride' }, { item: 'kubejs:powder/uranium_tetrafluoride' },
-      fluid('chemica:fluorine', 200)
+      fluidIn('chemica:fluorine', 200)
     ],
     processing_time: 200,
     results: [{ id: 'kubejs:uranium_hexafluoride', amount: 400 }]
   }).id(id('vat/uranium_fluorination'))
   event.custom({
     type: 'vintageimprovements:centrifugation',
-    ingredients: [fluid('kubejs:uranium_hexafluoride', 1000)],
+    ingredients: [fluidIn('kubejs:uranium_hexafluoride', 1000)],
     results: [{ id: 'kubejs:enriched_uranium_hexafluoride', amount: 100 }, { id: 'kubejs:depleted_uranium_hexafluoride', amount: 900 }],
     processing_time: 1200,
     minimal_rpm: 256
@@ -852,7 +851,7 @@ ServerEvents.recipes(event => {
     allowed_vat_types: ['tfmg:fireproof'],
     min_size: 1,
     temperature: 700,
-    ingredients: [fluid('kubejs:enriched_uranium_hexafluoride', 100), fluid('minecraft:water', 100), fluid('tfmg:hydrogen', 50)],
+    ingredients: [fluidIn('kubejs:enriched_uranium_hexafluoride', 100), fluidIn('minecraft:water', 100), fluidIn('tfmg:hydrogen', 50)],
     processing_time: 200,
     results: [{ id: 'kubejs:powder/enriched_uranium_dioxide' }, { id: 'chemica:hydrofluoric_acid', amount: 100 }]
   }).id(id('vat/enriched_uranium_dioxide'))
@@ -866,7 +865,7 @@ ServerEvents.recipes(event => {
     min_size: 1,
     temperature: 900,
     ingredients: [
-      fluid('kubejs:depleted_uranium_hexafluoride', 200), fluid('tfmg:hydrogen', 100),
+      fluidIn('kubejs:depleted_uranium_hexafluoride', 200), fluidIn('tfmg:hydrogen', 100),
       { item: 'tfc_metallurgy:metal/dust/magnesium' }, { item: 'tfc_metallurgy:metal/dust/magnesium' }
     ],
     processing_time: 200,
@@ -893,7 +892,7 @@ ServerEvents.recipes(event => {
       machines: ['tfmg:mixer'],
       min_size: 1,
       temperature: 90,
-      ingredients: [dust, dust, dust, dust, fluid('chemica:hydrofluoric_acid', 400), fluid('tfmg:sulfuric_acid', 100)],
+      ingredients: [dust, dust, dust, dust, fluidIn('chemica:hydrofluoric_acid', 400), fluidIn('tfmg:sulfuric_acid', 100)],
       processing_time: 300,
       results: [{ id: `kubejs:${acid}`, amount: 400 }, { id: 'tfc:powder/hematite' }]
     }).id(id(`vat/${ore}_digestion`))
@@ -904,7 +903,7 @@ ServerEvents.recipes(event => {
     allowed_vat_types: anyVat,
     machines: ['tfmg:freezer'],
     min_size: 1,
-    ingredients: [fluid('kubejs:fluorotantalic_acid', 400), { item: 'tfc:powder/sylvite' }, { item: 'tfc:powder/sylvite' }],
+    ingredients: [fluidIn('kubejs:fluorotantalic_acid', 400), { item: 'tfc:powder/sylvite' }, { item: 'tfc:powder/sylvite' }],
     processing_time: 200,
     results: [
       { id: 'kubejs:powder/potassium_fluorotantalate', count: 4 },
@@ -920,7 +919,7 @@ ServerEvents.recipes(event => {
     ingredients: [
       { item: 'kubejs:powder/potassium_fluorotantalate' }, { item: 'kubejs:powder/potassium_fluorotantalate' },
       { item: 'chemica:sodium_dust' }, { item: 'chemica:sodium_dust' },
-      fluid('chemica:argon', 50)
+      fluidIn('chemica:argon', 50)
     ],
     processing_time: 200,
     results: [
@@ -934,7 +933,7 @@ ServerEvents.recipes(event => {
     allowed_vat_types: anyVat,
     machines: ['tfmg:mixer'],
     min_size: 1,
-    ingredients: [fluid('kubejs:fluoroniobic_acid', 400), fluid('chemica:ammonia', 200)],
+    ingredients: [fluidIn('kubejs:fluoroniobic_acid', 400), fluidIn('chemica:ammonia', 200)],
     processing_time: 200,
     results: [
       { id: 'kubejs:powder/niobium_hydroxide', count: 4 },
@@ -998,7 +997,7 @@ ServerEvents.recipes(event => {
       allowed_vat_types: anyVat,
       machines: ['tfmg:mixer'],
       min_size: 1,
-      ingredients: [{ item: calcine }, { item: calcine }, { item: calcine }, { item: calcine }, fluid(acid, 300)],
+      ingredients: [{ item: calcine }, { item: calcine }, { item: calcine }, { item: calcine }, fluidIn(acid, 300)],
       processing_time: 200,
       results: [{ id: dust, count: 4 }]
     }).id(id(`vat/${ore}_calcine_leaching`))

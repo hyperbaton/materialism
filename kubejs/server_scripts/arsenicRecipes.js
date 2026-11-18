@@ -9,14 +9,14 @@ ServerEvents.recipes(event => {
       { item: 'vintageimprovements:copper_sulfate' },
       { item: 'chemica:chromium_dust' },
       { item: 'chemica:arsenic_dust' },
-      { type: 'neoforge:single', fluid: 'minecraft:water', amount: 1000 }
+      fluidIn('minecraft:water', 1000)
     ],
     results: [{ id: 'kubejs:chromated_copper_arsenate', amount: 1000 }]
   }).id(id('mixing/chromated_copper_arsenate'))
   // Pressure-treated planks, the waterborne alternative to creosote
   event.custom({
     type: 'create:filling',
-    ingredients: [{ tag: 'minecraft:planks' }, { type: 'neoforge:single', fluid: 'kubejs:chromated_copper_arsenate', amount: 250 }],
+    ingredients: [{ tag: 'minecraft:planks' }, fluidIn('kubejs:chromated_copper_arsenate', 250)],
     results: [{ id: 'tfmg:hardened_planks' }]
   }).id(id('filling/hardened_planks'))
 
@@ -25,7 +25,7 @@ ServerEvents.recipes(event => {
     type: 'create:mixing',
     ingredients: [
       { item: 'chemica:arsenic_dust' },
-      { type: 'neoforge:single', fluid: 'chemica:caustic_soda', amount: 250 }
+      fluidIn('chemica:caustic_soda', 250)
     ],
     results: [{ id: 'kubejs:sodium_arsenite', amount: 250 }]
   }).id(id('mixing/sodium_arsenite'))
@@ -35,7 +35,7 @@ ServerEvents.recipes(event => {
     type: 'create:mixing',
     ingredients: [
       { item: 'chemica:arsenic_dust' },
-      { type: 'neoforge:single', fluid: 'tfc_metallurgy:metal/lead', amount: 100 }
+      fluidIn('tfc_metallurgy:metal/lead', 100)
     ],
     results: [{ id: 'createbigcannons:shot_balls', count: 2 }]
   }).id(id('mixing/lead_shot_balls'))

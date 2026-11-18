@@ -383,7 +383,7 @@ ServerEvents.recipes(event => {
           ),
           event.custom({type: 'vintageimprovements:curving', ingredients: [{item: 'tfc:metal/sheet/copper'}], results: [{id: 'tfc:metal/sheet/copper'}], mode: 3}),
           event.custom({type: 'vintageimprovements:vacuumizing',
-            ingredients: [{item: 'tfc:metal/sheet/copper'}, {fluid: 'tfmg:cooling_fluid', amount: 1000, type: 'neoforge:single'}],
+            ingredients: [{item: 'tfc:metal/sheet/copper'}, fluidIn('tfmg:cooling_fluid', 1000)],
             results: [{id: 'tfc:metal/sheet/copper'}],
             heat_requirement: 'heated'
           }),
@@ -391,7 +391,6 @@ ServerEvents.recipes(event => {
       ]
     ).transitionalItem('tfc:metal/sheet/copper')
     .loops(1);
-    // TODO: revisit base item if Design n Decor copper_gas_tank is added later
     event.remove({ id: 'create_new_age:shaped/heat_pump' });
     event.recipes.create.sequenced_assembly(
       [
@@ -622,65 +621,6 @@ ServerEvents.recipes(event => {
     ).transitionalItem('tfc_metallurgy:metal/double_sheet/zircaloy')
     .loops(1).id('kubejs:new_age/sequenced_assembly/nuclear_fuel_' + fissile.split(':')[1]))
 
-    // Circuit fabrication
-    // TODO: Item.of('#tfc:silica_sand') doesn't work — tags need Ingredient format, not Item.of. Also #tfc:silica_sand may be empty.
-    //event.recipes.create.sequenced_assembly(
-    //  [
-    //      Item.of('kubejs:silicon_wafer', 5)
-    //  ],
-    //  Item.of('#tfc:silica_sand', 5),
-    //  [
-    //    event.recipes.vintageimprovements.pressurizing('#tfc:silica_sand', 'tfcweather:sand/sand_layer/white').heated().processingTime(10),
-    //    event.recipes.create.pressing('tfcweather:sand/sand_layer/white', 'tfcweather:sand/sand_layer/white'),
-    //    event.recipes.vintageimprovements.pressurizing('#tfc:silica_sand', 'tfcweather:sand/sand_layer/white').heated().processingTime(20),
-    //    event.recipes.create.cutting('tfcweather:sand/sand_layer/white', 'tfcweather:sand/sand_layer/white')
-    //  ]
-    //).transitionalItem('tfcweather:sand/sand_layer/white')
-    //.loops(1);
-    // Blank circuit
-    // event.remove('create_new_age:pressing/blank_circuit')
-    // event.recipes.create.sequenced_assembly(
-    //   [
-    //       Item.of('create_new_age:blank_circuit', 1)
-    //   ],
-    //   // Input item
-    //   'kubejs:silicon_wafer',
-    //   [
-    //     event.recipes.create.filling('kubejs:silicon_wafer', ['kubejs:silicon_wafer', Fluid.of('tfc_metallurgy:metal/boron', 50)]),
-    //     event.recipes.createDeploying('kubejs:silicon_wafer', ['kubejs:silicon_wafer', 'tfc:pure_phosphorus']),
-    //     event.recipes.create.filling('kubejs:silicon_wafer', ['kubejs:silicon_wafer', Fluid.of('chemica:epoxy_resin', 100)]),
-    //     /*event.recipes.create_optical.focusing(
-    //       ['kubejs:silicon_wafer'],
-    //       ['kubejs:silicon_wafer'],
-    //       500,
-    //       2
-    //     ),*/
-    //     event.recipes.vintageimprovements.laser_cutting('kubejs:silicon_wafer', 'kubejs:silicon_wafer').energyCost(1000),
-    //     event.recipes.create.filling('kubejs:silicon_wafer', ['kubejs:silicon_wafer', Fluid.of('minecraft:water', 100)]),
-    //     event.recipes.vintageimprovements.vibrating('kubejs:silicon_wafer','kubejs:silicon_wafer').processingTime(500),
-    //     event.recipes.create.filling('kubejs:silicon_wafer', ['kubejs:silicon_wafer', Fluid.of('minecraft:water', 100)])
-    //   ]
-    // ).transitionalItem('kubejs:silicon_wafer')
-    // .loops(1);
-    // event.remove('create_new_age:deploying/copper_circuit')
-    // event.recipes.create.sequenced_assembly(
-    //   [
-    //       CreateItem.of('create_new_age:copper_circuit', 85.0),
-    //       CreateItem.of('createaddition:copper_wire', 5.0),
-    //       CreateItem.of('tfmg:resistor', 5.0),
-    //       CreateItem.of('tfmg:capacitor_item', 5.0)
-    //   ],
-    //   // Input item
-    //   'create_new_age:blank_circuit',
-    //   [
-    //     event.recipes.createDeploying('create_new_age:blank_circuit', ['create_new_age:blank_circuit', 'createaddition:copper_wire']),
-    //     event.recipes.createDeploying('create_new_age:blank_circuit', ['create_new_age:blank_circuit', 'tfmg:resistor']),
-    //     event.recipes.createDeploying('create_new_age:blank_circuit', ['create_new_age:blank_circuit', 'tfmg:capacitor_item']),
-    //     event.recipes.createDeploying('create_new_age:blank_circuit', ['create_new_age:blank_circuit', 'createaddition:copper_wire']),
-    //     event.recipes.vintageimprovements.polishing('create_new_age:blank_circuit', 'create_new_age:blank_circuit')
-    //   ]
-    // ).transitionalItem('create_new_age:blank_circuit')
-    // .loops(3);
 
     // Lamp post: steel rods instead of andesite alloy
     event.replaceInput({ id: 'create_new_age:shaped/lamp_post' }, 'create:andesite_alloy', 'tfc:metal/rod/steel')

@@ -140,13 +140,6 @@ ServerEvents.recipes(event => {
         }
     })
 
-    // --- Sponge: wool cloth + knife (damaged) --- Is vanilla sponge obtainable in tfc?
-    // event.remove('butchery:spongerecipe')
-    // event.remove('butchery:wetspongerecipe')
-    // event.shapeless('butchery:sponge', [
-    //     'minecraft:sponge',
-    //     '#butchery:knives'
-    // ]).damageIngredient(Ingredient.of('#butchery:knives'))
 
     // --- Rag: burlap cloth ---
     event.remove('butchery:ragrecipe')
@@ -278,16 +271,15 @@ ServerEvents.recipes(event => {
     })
 
     // --- Barrels of bones/cod/salmon: use TFC barrels instead of the vanilla one ---
-    event.replaceInput({ mod: 'butchery' }, 'minecraft:barrel', '#tfc:barrels')
-
-    // --- Head mounts: vanilla gold → TFC gold ---
-    event.replaceInput({ mod: 'butchery' }, 'minecraft:gold_ingot', 'tfc:metal/ingot/gold')
-
-    // --- Canopies: vanilla iron ingot → aluminum rods ---
-    event.replaceInput({ output: /^butchery:canopy_/ }, 'minecraft:iron_ingot', 'tfc_metallurgy:metal/rod/aluminum')
-
-    // --- Butcher statue: vanilla smooth stone slab → TFC stone slabs ---
-    event.replaceInput({ id: 'butchery:butcherstatuerecipe' }, 'minecraft:smooth_stone_slab', '#c:stones/smooth_slabs')
+    swapInputs(event, [
+      [{ mod: 'butchery' }, 'minecraft:barrel', '#tfc:barrels'],
+      // --- Head mounts: vanilla gold → TFC gold ---
+      [{ mod: 'butchery' }, 'minecraft:gold_ingot', 'tfc:metal/ingot/gold'],
+      // --- Canopies: vanilla iron ingot → aluminum rods ---
+      [{ output: /^butchery:canopy_/ }, 'minecraft:iron_ingot', 'tfc_metallurgy:metal/rod/aluminum'],
+      // --- Butcher statue: vanilla smooth stone slab → TFC stone slabs ---
+      ['butchery:butcherstatuerecipe', 'minecraft:smooth_stone_slab', '#c:stones/smooth_slabs']
+    ])
 
     // --- Spike trap: sequenced assembly — smooth stone slab + black steel spikes (rods) ---
     event.remove('butchery:spiketraprecipe')

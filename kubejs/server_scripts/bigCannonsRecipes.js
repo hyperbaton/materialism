@@ -11,73 +11,24 @@ ServerEvents.recipes(event => {
     event.remove({output: 'createbigcannons:molten_steel'})
     event.remove({output: 'createbigcannons:molten_nethersteel'})
 
-    event.replaceInput(
-        { id: 'createbigcannons:wrought_iron_cannon_end' }, // Arg 1: the filter
-        'minecraft:iron_ingot',            // Arg 2: the item to replace
-        'tfc:metal/rod/wrought_iron'         // Arg 3: the item to replace it with
-      )
-      event.replaceInput(
-        { id: 'createbigcannons:wrought_iron_drop_mortar_end' }, // Arg 1: the filter
-        'minecraft:iron_bars',            // Arg 2: the item to replace
-        'tfc:metal/bars/wrought_iron'         // Arg 3: the item to replace it with
-      )
-      event.replaceInput(
-        { id: 'createbigcannons:worm_head' }, // Arg 1: the filter
-        'minecraft:iron_bars',            // Arg 2: the item to replace
-        'tfc:metal/bars/steel'         // Arg 3: the item to replace it with
-      )
-      event.replaceInput(
-        { id: 'createbigcannons:solid_shot' }, // Arg 1: the filter
-        'minecraft:iron_nugget',            // Arg 2: the item to replace
-        'tfc:metal/rod/wrought_iron'         // Arg 3: the item to replace it with
-      )
-      event.replaceInput(
-        { id: 'createbigcannons:empty_powder_charge' }, // Arg 1: the filter
-        'minecraft:string',            // Arg 2: the item to replace
-        'tfc:wool_yarn'         // Arg 3: the item to replace it with
-      )
-      event.replaceInput(
-        { id: 'createbigcannons:mixing/congealed_nitro_no_nether' }, // Arg 1: the filter
-        'minecraft:slime_ball',            // Arg 2: the item to replace
-        'tfc:glue'         // Arg 3: the item to replace it with
-      )
-      event.replaceInput(
-        { id: 'createbigcannons:proximity_fuze' }, // Arg 1: the filter
-        'minecraft:quartz',            // Arg 2: the item to replace
-        'create:electron_tube'         // Arg 3: the item to replace it with
-      )
-      event.replaceInput(
-        { id: 'createbigcannons:proximity_fuze' }, // Arg 1: the filter
-        'minecraft:iron_bars',            // Arg 2: the item to replace
-        'tfc:metal/bars/steel'         // Arg 3: the item to replace it with
-      )
-      event.replaceInput(
-        { id: 'createbigcannons:proximity_fuze' }, // Arg 1: the filter
-        'minecraft:iron_ingot',            // Arg 2: the item to replace
-        'tfc:metal/sheet/steel'         // Arg 3: the item to replace it with
-      )
-      event.replaceInput(
-        { id: 'createbigcannons:cannon_welder' }, // Arg 1: the filter
-        'create:blaze_burner',            // Arg 2: the item to replace
-        'tfc:powder/sulfur'         // Arg 3: the item to replace it with
-      )
-      event.replaceInput(
-        { id: 'minecraft:cannon_welder_mirrored' }, // Arg 1: the filter
-        'create:blaze_burner',            // Arg 2: the item to replace
-        'tfc:powder/sulfur'         // Arg 3: the item to replace it with
-      )
-      event.replaceInput(
-        { id: 'createbigcannons:cannon_drill' }, // Arg 1: the filter
-        'minecraft:iron_ingot',            // Arg 2: the item to replace
-        'tfc_metallurgy:metal/double_sheet/titanium'         // Arg 3: the item to replace it with
-      )
-
-      // Basin foundry lid: steel sheets instead of andesite alloy
-      event.replaceInput(
-        { id: 'createbigcannons:basin_foundry_lid' },
-        'create:andesite_alloy',
-        'tfc:metal/sheet/steel'
-      )
+    swapInputs(event, [
+      ['createbigcannons:wrought_iron_cannon_end', 'minecraft:iron_ingot', 'tfc:metal/rod/wrought_iron']
+    ])
+      swapInputs(event, [
+        ['createbigcannons:wrought_iron_drop_mortar_end', 'minecraft:iron_bars', 'tfc:metal/bars/wrought_iron'],
+        ['createbigcannons:worm_head', 'minecraft:iron_bars', 'tfc:metal/bars/steel'],
+        ['createbigcannons:solid_shot', 'minecraft:iron_nugget', 'tfc:metal/rod/wrought_iron'],
+        ['createbigcannons:empty_powder_charge', 'minecraft:string', 'tfc:wool_yarn'],
+        ['createbigcannons:mixing/congealed_nitro_no_nether', 'minecraft:slime_ball', 'tfc:glue'],
+        ['createbigcannons:proximity_fuze', 'minecraft:quartz', 'create:electron_tube'],
+        ['createbigcannons:proximity_fuze', 'minecraft:iron_bars', 'tfc:metal/bars/steel'],
+        ['createbigcannons:proximity_fuze', 'minecraft:iron_ingot', 'tfc:metal/sheet/steel'],
+        ['createbigcannons:cannon_welder', 'create:blaze_burner', 'tfc:powder/sulfur'],
+        ['minecraft:cannon_welder_mirrored', 'create:blaze_burner', 'tfc:powder/sulfur'],
+        ['createbigcannons:cannon_drill', 'minecraft:iron_ingot', 'tfc_metallurgy:metal/double_sheet/titanium'],
+        // Basin foundry lid: steel sheets instead of andesite alloy
+        ['createbigcannons:basin_foundry_lid', 'create:andesite_alloy', 'tfc:metal/sheet/steel']
+      ])
 
       // Replace the metal block recipes with TFC's plated blocks, and add a dedicated 900mB heating recipe for each
       ;[
@@ -99,7 +50,7 @@ ServerEvents.recipes(event => {
         event.remove({id: `createbigcannons:compacting/forge_${block.split(':')[1]}`})
         event.custom({
           type: 'create:compacting',
-          ingredients: [{type: 'neoforge:single', amount: 900, fluid: fluid}],
+          ingredients: [fluidIn(fluid, 900)],
           results: [{id: block}]
         })
         event.custom({

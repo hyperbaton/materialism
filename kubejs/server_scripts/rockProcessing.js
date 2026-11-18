@@ -109,22 +109,6 @@
     event.remove({output: /createsifter.*pebble/})
     event.remove({output: /createsifter.*piece/})
 
-    // Sifting recipes
-    /*event.remove('createsifter:sifting/sand_brass_mesh')
-    event.remove('createsifter:sifting/soul_sand_brass_mesh')
-    event.remove('createsifter:sifting/gravel_andesite_mesh')
-    event.remove('createsifter:sifting/dirt_string_mesh_waterlogged')
-    event.remove('createsifter:sifting/gravel_zinc_mesh')
-    event.remove('createsifter:sifting/soul_sand_advanced_brass_mesh')
-    event.remove('createsifter:sifting/sand_string_mesh')
-    event.remove('createsifter:sifting/sand_zinc_mesh')
-    event.remove('createsifter:sifting/sand_andesite_mesh')
-    event.remove('createsifter:sifting/sand_zinc_mesh')
-    event.remove('createsifter:sifting/sand_zinc_mesh')
-    event.remove('createsifter:sifting/sand_zinc_mesh')
-    event.remove('createsifter:sifting/sand_zinc_mesh')
-    event.remove('createsifter:sifting/dirt_string_mesh_waterlogged')
-    event.remove('createsifter:sifting/sand_string_mesh')*/
     event.remove('createsifter:advanced_brass_mesh_crushed_netherrack_merged')
     event.remove('createsifter:brass_mesh_crushed_netherrack_merged')
     event.remove('createsifter:andesite_mesh_sand_merged')

@@ -78,7 +78,7 @@ ServerEvents.recipes(event => {
     type: 'create:mixing',
     ingredients: [
       { item: 'tfmg:silicon_ingot' },
-      { type: 'neoforge:single', fluid: 'chemica:hydrochloric_acid', amount: 300 }
+      fluidIn('chemica:hydrochloric_acid', 300)
     ],
     results: [
       { id: 'kubejs:trichlorosilane', amount: 250 },
@@ -95,8 +95,8 @@ ServerEvents.recipes(event => {
     min_current: 6,
     temperature: 1100,
     ingredients: [
-      { type: 'neoforge:single', fluid: 'kubejs:trichlorosilane', amount: 250 },
-      { type: 'neoforge:single', fluid: 'tfmg:hydrogen', amount: 50 }
+      fluidIn('kubejs:trichlorosilane', 250),
+      fluidIn('tfmg:hydrogen', 50)
     ],
     processing_time: 400,
     energy: 400 * 30000,
@@ -114,8 +114,8 @@ ServerEvents.recipes(event => {
     min_current: 6,
     temperature: 1100,
     ingredients: [
-      { type: 'neoforge:single', fluid: 'kubejs:trichlorosilane', amount: 1000 },
-      { type: 'neoforge:single', fluid: 'tfmg:hydrogen', amount: 200 }
+      fluidIn('kubejs:trichlorosilane', 1000),
+      fluidIn('tfmg:hydrogen', 200)
     ],
     processing_time: 1200,
     energy: 1200 * 30000,
@@ -138,7 +138,7 @@ ServerEvents.recipes(event => {
       { item: 'kubejs:polysilicon' },
       { item: 'kubejs:polysilicon' },
       { item: 'kubejs:polysilicon' },
-      { type: 'neoforge:single', fluid: 'chemica:argon', amount: 25 }
+      fluidIn('chemica:argon', 25)
     ],
     processing_time: 800,
     energy: 800 * 30000,
@@ -426,7 +426,7 @@ ServerEvents.recipes(event => {
   event.remove({ id: 'solarpunk:mixing/water_to_deuterium' })
   event.custom({
     type: 'tfmg:distillation',
-    ingredients: [{ type: 'neoforge:single', fluid: 'chemica:liquid_hydrogen', amount: 1000 }],
+    ingredients: [fluidIn('chemica:liquid_hydrogen', 1000)],
     results: [
       { id: 'tfmg:hydrogen', amount: 975 },
       { id: 'solarpunk:deuterium', amount: 25 }
@@ -609,7 +609,7 @@ ServerEvents.recipes(event => {
     allowed_vat_types: ['tfmg:steel'],
     machines: ['tfmg:freezer'],
     min_size: 4,
-    ingredients: [{ type: 'neoforge:single', fluid: 'chemica:steam', amount: 1000 }],
+    ingredients: [fluidIn('chemica:steam', 1000)],
     processing_time: 20,
     results: [{ id: 'minecraft:water', amount: 1000 }]
   }).id('kubejs:solarpunk/vat/steam_condensing')

@@ -22,7 +22,7 @@ ServerEvents.recipes(event => {
     event.shaped(block, ['###', '###', '###'], { '#': `${ns}:metal/block/${metal}` }).id(`kubejs:metal_blocks/${name}`)
     event.custom({
       type: 'create:compacting',
-      ingredients: [{ type: 'neoforge:single', amount: 900, fluid: fluid }],
+      ingredients: [fluidIn(fluid, 900)],
       results: [{ id: block }]
     }).id(`kubejs:metal_blocks/compacting/${name}`)
     event.custom({

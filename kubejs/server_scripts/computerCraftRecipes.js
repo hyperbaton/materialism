@@ -15,8 +15,6 @@ ServerEvents.recipes(event => {
           C: 'chemica:polyvinyl_chloride_sheet',
           D: 'railways:smokestack_diesel',
           E: 'electroenergetics:insulated_wire',
-          // TODO: Find replacement for missing item
-          //F: 'tfmg:electric_casing',
           F: 'tfmg:electrical_switch',
           G: 'create_optical:optical_source',
           H: 'firmalife:reinforced_glass'
@@ -38,8 +36,6 @@ ServerEvents.recipes(event => {
         C: 'chemica:polyvinyl_chloride_sheet',
         D: 'railways:smokestack_diesel',
         E: 'electroenergetics:insulated_wire',
-        // TODO: Find replacement for missing item
-        //E: 'tfmg:electric_casing',
         F: 'tfmg:electrical_switch',
         G: 'create_optical:optical_source',
         H: 'firmalife:reinforced_glass',
@@ -227,8 +223,6 @@ ServerEvents.recipes(event => {
         P: 'chemica:polyvinyl_chloride_sheet',
         C: 'create:mechanical_press',
         A: 'tfc_metallurgy:metal/sheet/aluminum',
-        // TODO: Find replacement for missing item
-        //E: 'tfmg:electric_casing',
         E: 'tfmg:electrical_switch',
         R: 'minecraft:red_dye',
         G: 'minecraft:green_dye',
@@ -250,8 +244,6 @@ ServerEvents.recipes(event => {
         C: 'create:turntable',
         D: 'create:precision_mechanism',
         A: 'tfc_metallurgy:metal/sheet/aluminum',
-        // TODO: Find replacement for missing item
-        //E: 'tfmg:electric_casing',
         E: 'tfmg:electrical_switch',
       }
     )
@@ -268,8 +260,6 @@ ServerEvents.recipes(event => {
         P: 'chemica:polyvinyl_chloride_sheet',
         C: 'minecraft:note_block',
         A: 'tfc_metallurgy:metal/sheet/aluminum',
-        // TODO: Find replacement for missing item
-        //E: 'tfmg:electric_casing',
         E: 'tfmg:electrical_switch',
       }
     )
@@ -296,7 +286,6 @@ event.remove({ output: 'computercraft:disk' });
         event.recipes.create.pressing(`kubejs:plastic_sheet/${color}`, `kubejs:plastic_sheet/${color}`),
         event.recipes.create.deploying(`kubejs:plastic_sheet/${color}`, [`kubejs:plastic_sheet/${color}`, 'tfc:powder/magnetite']),
         event.recipes.create.pressing(`kubejs:plastic_sheet/${color}`, `kubejs:plastic_sheet/${color}`),
-        //event.recipes.tfmg.polarizing(`kubejs:plastic_sheet/${color}`, `kubejs:plastic_sheet/${color}`, 500),
         event.recipes.create.deploying(`kubejs:plastic_sheet/${color}`, [`kubejs:plastic_sheet/${color}`, 'minecraft:paper'])
       ]
     ).transitionalItem(`kubejs:plastic_sheet/${color}`).loops(1);

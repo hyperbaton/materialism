@@ -5,7 +5,6 @@ TFCEvents.data(event => {
 
 ServerEvents.recipes(event => {
   const id = name => 'kubejs:cakes/' + name
-  const fresh = item => ({ type: 'tfc:and', children: [item, { type: 'tfc:not_rotten' }] })
   const flour = fresh({ tag: 'c:foods/flour' })
   const egg = fresh({ item: 'minecraft:egg' })
   const sweetener = { tag: 'tfc:foods/sweeteners' }
@@ -27,7 +26,7 @@ ServerEvents.recipes(event => {
   }).id(id('crafting/cake_base'))
   event.custom({
     type: 'create:mixing',
-    ingredients: [flour, flour, flour, egg, sweetener, sweetener, { type: 'neoforge:single', fluid: 'minecraft:water', amount: 100 }],
+    ingredients: [flour, flour, flour, egg, sweetener, sweetener, fluidIn('minecraft:water', 100)],
     results: [{ id: base }]
   }).id(id('mixing/cake_base'))
 
@@ -54,14 +53,14 @@ ServerEvents.recipes(event => {
   // Chocolate cake and glazed berries use Firmalife chocolate
   event.custom({
     type: 'create:filling',
-    ingredients: [{ item: baked }, { type: 'neoforge:single', fluid: 'firmalife:chocolate', amount: 500 }],
+    ingredients: [{ item: baked }, fluidIn('firmalife:chocolate', 500)],
     results: [{ id: 'createaddition:chocolate_cake' }]
   }).id(id('filling/chocolate_cake'))
   const berries = ['blackberry', 'blueberry', 'bunchberry', 'cloudberry', 'cranberry', 'elderberry', 'gooseberry',
     'raspberry', 'snowberry', 'strawberry', 'wintergreen_berry'].map(b => ({ item: 'tfc:food/' + b }))
   event.custom({
     type: 'create:filling',
-    ingredients: [fresh(berries), { type: 'neoforge:single', fluid: 'firmalife:chocolate', amount: 100 }],
+    ingredients: [fresh(berries), fluidIn('firmalife:chocolate', 100)],
     results: [{ id: 'create:chocolate_glazed_berries' }]
   }).id(id('filling/chocolate_glazed_berries'))
 

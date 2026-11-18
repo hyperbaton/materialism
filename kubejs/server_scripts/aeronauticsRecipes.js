@@ -253,10 +253,9 @@ ServerEvents.recipes(event => {
             R: 'tfc_items:wrought_iron_ring'
         }
     )
-    event.replaceInput({id: 'simulated:copper_handle'},
-        'create:copper_nugget',
-        'tfc_items:copper_foil'
-    )
+    swapInputs(event, [
+      ['simulated:copper_handle', 'create:copper_nugget', 'tfc_items:copper_foil']
+    ])
 
     // Throttle Lever
     event.remove({id: 'simulated:throttle_lever'})
@@ -385,9 +384,11 @@ ServerEvents.recipes(event => {
             C: 'create:andesite_casing'
         }
     )
-    event.replaceInput({id: 'simulated:optical_sensor'}, 'minecraft:amethyst_shard', 'vintageimprovements:laser_item')
-    // Vanilla pistons are disabled
-    event.replaceInput({id: 'simulated:mechanical_crafting/docking_connector'}, 'minecraft:piston', 'create:mechanical_piston')
+    swapInputs(event, [
+      ['simulated:optical_sensor', 'minecraft:amethyst_shard', 'vintageimprovements:laser_item'],
+      // Vanilla pistons are disabled
+      ['simulated:mechanical_crafting/docking_connector', 'minecraft:piston', 'create:mechanical_piston']
+    ])
 
     // Redstone Magnet: tiered recipes based on New Age magnet tiers
     // Better magnets = fewer blocks needed, more output

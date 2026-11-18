@@ -142,7 +142,7 @@ ServerEvents.recipes(event => {
           type: 'tfmg:vat_machine_recipe',
           machines: ['tfmg:mixing'],
           ingredients: [{item: entry[1] + ':ore/' + grade.name + '_' + ore}].concat(
-            entry[3].map(acid => ({type: 'neoforge:single', amount: grade.acid, fluid: acid}))
+            entry[3].map(acid => (fluidIn(acid, grade.acid)))
           ),
           results: results
         })

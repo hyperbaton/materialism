@@ -1,39 +1,15 @@
 ServerEvents.recipes(event => {
-    event.replaceInput(
-      { output: 'bellsandwhistles:andesite_bogie_steps' }, // Arg 1: the filter
-      'create:andesite_alloy',            // Arg 2: the item to replace
-      'tfc_metallurgy:metal/rod/aluminum'   // Arg 3: the item to replace it with
-    )
-    event.replaceInput(
-      { output: 'bellsandwhistles:andesite_grab_rails' }, // Arg 1: the filter
-      'create:andesite_alloy',            // Arg 2: the item to replace
-      'tfc_metallurgy:metal/rod/aluminum'   // Arg 3: the item to replace it with
-    )
-    event.replaceInput(
-      { output: 'bellsandwhistles:andesite_door_step' }, // Arg 1: the filter
-      'create:andesite_alloy',            // Arg 2: the item to replace
-      'tfc_metallurgy:metal/rod/aluminum'   // Arg 3: the item to replace it with
-    )
+    swapInputs(event, [
+      [{ output: 'bellsandwhistles:andesite_bogie_steps' }, 'create:andesite_alloy', 'tfc_metallurgy:metal/rod/aluminum'],
+      [{ output: 'bellsandwhistles:andesite_grab_rails' }, 'create:andesite_alloy', 'tfc_metallurgy:metal/rod/aluminum'],
+      [{ output: 'bellsandwhistles:andesite_door_step' }, 'create:andesite_alloy', 'tfc_metallurgy:metal/rod/aluminum']
+    ])
     event.remove({output: 'bellsandwhistles:headlight'})
-    event.replaceInput(
-      { output: 'bellsandwhistles:station_platform' }, // Arg 1: the filter
-      'minecraft:smooth_stone',            // Arg 2: the item to replace
-      'tfmg:concrete'   // Arg 3: the item to replace it with
-    )
-    event.replaceInput(
-      { output: 'bellsandwhistles:station_platform' }, // Arg 1: the filter
-      'minecraft:smooth_stone_slab',            // Arg 2: the item to replace
-      'tfmg:concrete_slab'   // Arg 3: the item to replace it with
-    )
-    event.replaceInput(
-      { id: 'bellsandwhistles:pilots/andesite_pilot' }, // Arg 1: the filter
-      'create:andesite_alloy',            // Arg 2: the item to replace
-      'tfc_metallurgy:metal/sheet/aluminum'   // Arg 3: the item to replace it with
-    )
-    event.replaceInput(
-      { id: 'bellsandwhistles:pilots/andesite_pilot' }, // Arg 1: the filter
-      'minecraft:andesite',            // Arg 2: the item to replace
-      'tfc_metallurgy:metal/rod/aluminum'   // Arg 3: the item to replace it with
-    )
+    swapInputs(event, [
+      [{ output: 'bellsandwhistles:station_platform' }, 'minecraft:smooth_stone', 'tfmg:concrete'],
+      [{ output: 'bellsandwhistles:station_platform' }, 'minecraft:smooth_stone_slab', 'tfmg:concrete_slab'],
+      ['bellsandwhistles:pilots/andesite_pilot', 'create:andesite_alloy', 'tfc_metallurgy:metal/sheet/aluminum'],
+      ['bellsandwhistles:pilots/andesite_pilot', 'minecraft:andesite', 'tfc_metallurgy:metal/rod/aluminum']
+    ])
 }
 )

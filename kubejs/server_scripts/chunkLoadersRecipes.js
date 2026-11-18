@@ -16,8 +16,6 @@ ServerEvents.recipes(event => {
             L: 'vintageimprovements:laser_item',
             B: 'tfmg:accumulator',
             M: 'create_new_age:netherite_magnet',
-            // TODO: Find replacement for missing item
-            //E: 'tfmg:electric_casing',
             E: 'tfmg:electrical_switch',
             C: 'computercraft:computer_normal',
             G: 'create_new_age:reactor_glass',
@@ -50,8 +48,6 @@ ServerEvents.recipes(event => {
             L: 'vintageimprovements:laser_item',
             B: 'tfmg:accumulator',
             M: 'create_new_age:netherite_magnet',
-            // TODO: Find replacement for missing item
-            //E: 'tfmg:electric_casing',
             E: 'tfmg:electrical_switch',
             C: 'computercraft:computer_advanced',
             G: 'create_new_age:reactor_glass',
